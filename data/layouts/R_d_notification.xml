@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_Chatting" anchorX="0" anchorY="0" positionX="-1" positionY="56" z="-1" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{2,2}" ninePatchInset="{{1,1},{2,2}}">
+    <ElementNode type="NinePatch" elementID="ID_9PATCH_1" anchorX="0" anchorY="0" positionX="7" positionY="-47" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{1056,560}" ninePatchInset="{{12,12},{2,2}}" />
+    <ElementNode type="NinePatch" elementID="ID_chat_bg" anchorX="0" anchorY="0" positionX="17" positionY="464" z="0" scaleX="1" scaleY="1" imageName="9_Back_03.png" ninePatchSize="{530,44}" ninePatchInset="{{20,20},{1,2}}">
+      <ElementNode type="Image" elementID="ID_IMAGE_4" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_pen_01.png" />
+      <ElementNode type="Label" elementID="ID_LABEL_3" anchorX="0" anchorY="0" positionX="46" positionY="3" z="0" scaleX="1" scaleY="1" labelContent="chat....." fontStyle="0" fontSize="26" fontColor="{255,222,173}" areaSizeX="450" areaSizeY="32" alignment="0" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+    </ElementNode>
+    <ElementNode type="Button" elementID="ID_Btn_chat_esc" anchorX="0" anchorY="0" positionX="987" positionY="455" z="0" scaleX="1" scaleY="1" imageName="9_btn_09.png">
+      <ElementNode type="Image" elementID="ID_IMAGE_x" anchorX="0" anchorY="0" positionX="8" positionY="10" z="0" scaleX="0.8" scaleY="0.8" imageName="K_esc_01.png" />
+    </ElementNode>
+    <ElementNode type="NinePatchButton" elementID="ID_Btn_ch" anchorX="0" anchorY="0" positionX="658" positionY="455" z="0" scaleX="1" scaleY="1" imageName="9_btn_08.png" ninePatchSize="{140,60}" ninePatchInset="{{28,28},{2,2}}">
+      <ElementNode type="Image" elementID="ID_IMAGE_5" anchorX="0" anchorY="0" positionX="91" positionY="-19" z="0" scaleX="1" scaleY="1" imageName="B_arrow_03.png" />
+      <ElementNode type="Label" elementID="ID_LABEL_2" anchorX="0" anchorY="0" positionX="15" positionY="9" z="0" scaleX="1" scaleY="1" labelContent="24 CH" fontStyle="1" fontSize="26" fontColor="{255,215,0}" areaSizeX="90" areaSizeY="40" alignment="1" lineAlignment="1" effect="2" effectOffset="2" effectColor="{47,79,79}" />
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_areaNotiSlot_chatting" anchorX="0" anchorY="0" positionX="7" positionY="-4" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{804,460}" ninePatchInset="{{1,1},{2,2}}" />
+    <ElementNode type="NinePatchButton" elementID="ID_Btn_send" anchorX="0" anchorY="0" positionX="527" positionY="455" z="0" scaleX="1" scaleY="1" imageName="9_btn_05.png" ninePatchSize="{130,60}" ninePatchInset="{{28,28},{2,2}}">
+      <ElementNode type="Label" elementID="ID_LABEL_send" anchorX="0" anchorY="0" positionX="18" positionY="9" z="0" scaleX="1" scaleY="1" labelContent="SEND" fontStyle="1" fontSize="26" fontColor="{255,244,167}" areaSizeX="90" areaSizeY="40" alignment="1" lineAlignment="1" effect="2" effectOffset="2" effectColor="{139,69,19}" />
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_slide_chat" anchorX="0" anchorY="0" positionX="1047" positionY="-40" z="0" scaleX="1" scaleY="1" imageName="9_slide_01.png" ninePatchSize="{10,490}" ninePatchInset="{{0,5},{10,2}}">
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_2" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_slide_02.png" ninePatchSize="{10,490}" ninePatchInset="{{0,5},{10,2}}" />
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_chanel_bg" anchorX="0" anchorY="0" positionX="790" positionY="-20" z="0" scaleX="1" scaleY="1" imageName="9_Back_01.png" ninePatchSize="{200,540}" ninePatchInset="{{84,126},{2,2}}" />
+  </ElementNode>
+</root>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_frameSize" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{400,82}" ninePatchInset="{{1,1},{2,2}}">
+    <ElementNode type="NinePatchButton" elementID="ID_stoneSlot" anchorX="0" anchorY="0" positionX="2" positionY="2" z="0" scaleX="1" scaleY="1" imageName="9_frame_01.png" ninePatchSize="{396,80}" ninePatchInset="{{20,20},{2,2}}">
+      <ElementNode type="Label" elementID="ID_stoneName" anchorX="0" anchorY="0" positionX="78" positionY="10" z="0" scaleX="1" scaleY="1" labelContent="Stone Name" fontStyle="1" fontSize="22" fontColor="{255,255,255}" areaSizeX="198" areaSizeY="60" alignment="0" lineAlignment="1" effect="2" effectOffset="2" effectColor="{70,40,0}" />
+      <ElementNode type="Label" elementID="ID_numText" anchorX="0" anchorY="0" positionX="276" positionY="20" z="0" scaleX="1" scaleY="1" labelContent="000" fontStyle="1" fontSize="28" fontColor="{0,255,255}" areaSizeX="60" areaSizeY="40" alignment="0" lineAlignment="1" effect="2" effectOffset="2" effectColor="{0,23,80}" />
+      <ElementNode type="NinePatch" elementID="ID_stoneIcon_70%" anchorX="0" anchorY="0" positionX="8" positionY="10" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{64,64}" ninePatchInset="{{1,1},{2,2}}" />
+      <ElementNode type="NinePatch" elementID="ID_select" anchorX="0" anchorY="0" positionX="2" positionY="5" z="0" scaleX="1" scaleY="1" imageName="9_frame_06.png" ninePatchSize="{388,72}" ninePatchInset="{{20,20},{2,2}}" />
+      <ElementNode type="NinePatch" elementID="ID_stoneLock" anchorX="0" anchorY="0" positionX="1" positionY="4" z="0" scaleX="1" scaleY="1" imageName="9_Back_13.png" ninePatchSize="{390,74}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_1" anchorX="0" anchorY="0" positionX="336" positionY="14" z="0" scaleX="0.64" scaleY="0.64" imageName="I_lock_02.png" />
+      </ElementNode>
+      <ElementNode type="Image" elementID="ID_tagNew" anchorX="0" anchorY="0" positionX="354" positionY="42" z="0" scaleX="1" scaleY="1" imageName="K_new_02.png" />
+    </ElementNode>
+  </ElementNode>
+</root>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_pageSize" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{850,560}" ninePatchInset="{{1,1},{2,2}}">
+    <ElementNode type="NinePatch" elementID="ID_manage" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_Back_01.png" ninePatchSize="{850,560}" ninePatchInset="{{84,126},{2,2}}">
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_5" anchorX="0" anchorY="0" positionX="64" positionY="32" z="0" scaleX="1" scaleY="1" imageName="9_Back_02.png" ninePatchSize="{730,494}" ninePatchInset="{{15,15},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_slide" anchorX="0" anchorY="0" positionX="708" positionY="6" z="0" scaleX="1" scaleY="1" imageName="9_slide_01.png" ninePatchSize="{10,476}" ninePatchInset="{{0,5},{10,2}}">
+          <ElementNode type="NinePatch" elementID="ID_bar" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_slide_02.png" ninePatchSize="{10,476}" ninePatchInset="{{0,5},{10,2}}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_ID_arrayPosition" anchorX="0" anchorY="0" positionX="0" positionY="6" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{708,476}" ninePatchInset="{{1,1},{2,2}}" />
+        <ElementNode type="NinePatch" elementID="ID_NoSelection" anchorX="0" anchorY="0" positionX="2" positionY="2" z="0" scaleX="1" scaleY="1" imageName="9_Back_08.png" ninePatchSize="{726,490}" ninePatchInset="{{20,20},{2,2}}">
+          <ElementNode type="NinePatchButton" elementID="ID_9BUTTON_1" anchorX="0" anchorY="0" positionX="128" positionY="196" z="0" scaleX="1" scaleY="1" imageName="9_frame_01.png" ninePatchSize="{460,96}" ninePatchInset="{{20,20},{2,2}}">
+            <ElementNode type="Label" elementID="ID_LABEL_1" anchorX="0" anchorY="0" positionX="0" positionY="28" z="0" scaleX="1" scaleY="1" labelContent="No friends available" fontStyle="1" fontSize="30" fontColor="{255,220,125}" areaSizeX="460" areaSizeY="40" alignment="1" effect="1" effectOffset="3" effectColor="{80,40,0}" />
+          </ElementNode>
+        </ElementNode>
+      </ElementNode>
+    </ElementNode>
+  </ElementNode>
+</root>

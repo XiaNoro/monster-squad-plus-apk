@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_9PATCH_1" anchorX="0" anchorY="0" positionX="775" positionY="-14" z="0" imageName="9_Back_01.png" ninePatchSize="{290,610}" ninePatchInset="{{84,126},{2,2}}">
+    <ElementNode type="NinePatchButton" elementID="ID_9BUTTON_1" anchorX="0" anchorY="0" positionX="2" positionY="276" z="0" imageName="9_tap02_d.png" ninePatchSize="{276,96}" ninePatchInset="{{36,33},{2,1}}">
+      <ElementNode type="Label" elementID="ID_LABEL_1" anchorX="0" anchorY="0" positionX="8" positionY="20" z="0" labelContent="Highest Rank Order" fontStyle="1" fontSize="38" fontColor="{80,45,10}" areaSizeX="260" areaSizeY="50" alignment="1" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+    </ElementNode>
+  </ElementNode>
+</root>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_Info" anchorX="0" anchorY="0" positionX="578" positionY="80" z="0" scaleX="1" scaleY="1" imageName="9_Back_01.png" ninePatchSize="{474,500}" ninePatchInset="{{84,126},{2,2}}">
+    <ElementNode type="NinePatch" elementID="ID_teaminfo" anchorX="0" anchorY="0" positionX="28" positionY="120" z="0" scaleX="1" scaleY="1" imageName="9_Back_02.png" ninePatchSize="{416,360}" ninePatchInset="{{8,8},{2,2}}">
+      <ElementNode type="NinePatch" elementID="ID_leader" anchorX="0" anchorY="0" positionX="10" positionY="259" z="0" scaleX="1" scaleY="1" imageName="9_Back_11.png" ninePatchSize="{92,92}" ninePatchInset="{{8,8},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_Monicon" anchorX="0" anchorY="0" positionX="-3" positionY="-13" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{98,108}" ninePatchInset="{{1,1},{2,2}}" />
+        <ElementNode type="NinePatch" elementID="ID_skill1" anchorX="0" anchorY="0" positionX="103" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_Back_11.png" ninePatchSize="{40,40}" ninePatchInset="{{8,8},{2,2}}">
+          <ElementNode type="NinePatch" elementID="ID_leaderSkill1" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{40,40}" ninePatchInset="{{1,1},{2,2}}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_skill2" anchorX="0" anchorY="0" positionX="145" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_Back_11.png" ninePatchSize="{40,40}" ninePatchInset="{{8,8},{2,2}}">
+          <ElementNode type="NinePatch" elementID="ID_leaderSkill2" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{40,40}" ninePatchInset="{{1,1},{2,2}}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_skill3" anchorX="0" anchorY="0" positionX="187" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_Back_11.png" ninePatchSize="{40,40}" ninePatchInset="{{8,8},{2,2}}">
+          <ElementNode type="NinePatch" elementID="ID_leaderSkill3" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{40,40}" ninePatchInset="{{1,1},{2,2}}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_skill4" anchorX="0" anchorY="0" positionX="229" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_Back_11.png" ninePatchSize="{40,40}" ninePatchInset="{{8,8},{2,2}}">
+          <ElementNode type="NinePatch" elementID="ID_leaderSkill4" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{40,40}" ninePatchInset="{{1,1},{2,2}}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_skill5" anchorX="0" anchorY="0" positionX="271" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_Back_11.png" ninePatchSize="{40,40}" ninePatchInset="{{8,8},{2,2}}">
+          <ElementNode type="NinePatch" elementID="ID_leaderSkill5" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{40,40}" ninePatchInset="{{1,1},{2,2}}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_teamRank" anchorX="0" anchorY="0" positionX="103" positionY="46" z="0" scaleX="1" scaleY="1" imageName="9_Back_11.png" ninePatchSize="{208,44}" ninePatchInset="{{8,8},{2,2}}">
+          <ElementNode type="Image" elementID="ID_rankImage" anchorX="0" anchorY="0" positionX="0" positionY="-2" z="0" scaleX="0.8" scaleY="0.8" imageName="T_rankA+_01.png" />
+          <ElementNode type="Image" elementID="ID_IMAGE_14" anchorX="0" anchorY="0" positionX="125" positionY="3" z="0" scaleX="0.8" scaleY="0.8" imageName="T_type_01.png" />
+          <ElementNode type="Image" elementID="ID_IMAGE_22" anchorX="0" anchorY="0" positionX="125" positionY="3" z="0" scaleX="0.8" scaleY="0.8" imageName="T_type_02.png" />
+          <ElementNode type="Image" elementID="ID_IMAGE_23" anchorX="0" anchorY="0" positionX="125" positionY="3" z="0" scaleX="0.8" scaleY="0.8" imageName="T_type_03.png" />
+        </ElementNode>
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_SupportA" anchorX="0" anchorY="0" positionX="10" positionY="146" z="0" scaleX="1" scaleY="1" imageName="9_Back_11.png" ninePatchSize="{92,92}" ninePatchInset="{{8,8},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_Monicon_1" anchorX="0" anchorY="0" positionX="-3" positionY="-13" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{98,108}" ninePatchInset="{{1,1},{2,2}}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_SupportB" anchorX="0" anchorY="0" positionX="111" positionY="146" z="0" scaleX="1" scaleY="1" imageName="9_Back_11.png" ninePatchSize="{92,92}" ninePatchInset="{{8,8},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_Monicon_2" anchorX="0" anchorY="0" positionX="-3" positionY="-13" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{98,108}" ninePatchInset="{{1,1},{2,2}}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_SupportC" anchorX="0" anchorY="0" positionX="213" positionY="146" z="0" scaleX="1" scaleY="1" imageName="9_Back_11.png" ninePatchSize="{92,92}" ninePatchInset="{{8,8},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_Monicon_3" anchorX="0" anchorY="0" positionX="-3" positionY="-13" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{98,108}" ninePatchInset="{{1,1},{2,2}}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_SupportD" anchorX="0" anchorY="0" positionX="314" positionY="146" z="0" scaleX="1" scaleY="1" imageName="9_Back_11.png" ninePatchSize="{92,92}" ninePatchInset="{{8,8},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_Monicon_4" anchorX="0" anchorY="0" positionX="-3" positionY="-13" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{98,108}" ninePatchInset="{{1,1},{2,2}}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_efText" anchorX="0" anchorY="0" positionX="10" positionY="11" z="0" scaleX="1" scaleY="1" imageName="9_Back_11.png" ninePatchSize="{396,114}" ninePatchInset="{{8,8},{2,2}}">
+        <ElementNode type="Label" elementID="ID_ef1Text_1" anchorX="0" anchorY="0" positionX="0" positionY="81" z="0" scaleX="1" scaleY="1" labelContent="- Leader Offense +20%" fontStyle="1" fontSize="18" fontColor="{45,20,0}" areaSizeX="396" areaSizeY="24" alignment="0" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        <ElementNode type="Label" elementID="ID_ef2Text_1" anchorX="0" anchorY="0" positionX="0" positionY="57" z="0" scaleX="1" scaleY="1" labelContent="- Water Monster Defense +10%" fontStyle="1" fontSize="18" fontColor="{45,20,0}" areaSizeX="396" areaSizeY="24" alignment="0" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        <ElementNode type="Label" elementID="ID_ef3Text_1" anchorX="0" anchorY="0" positionX="0" positionY="33" z="0" scaleX="1" scaleY="1" labelContent="- Increases chance of eating tuna" fontStyle="1" fontSize="18" fontColor="{45,20,0}" areaSizeX="396" areaSizeY="24" alignment="0" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        <ElementNode type="Label" elementID="ID_ef4Text_1" anchorX="0" anchorY="0" positionX="0" positionY="9" z="0" scaleX="1" scaleY="1" labelContent="- Leader Offense +20%" fontStyle="1" fontSize="18" fontColor="{45,20,0}" areaSizeX="396" areaSizeY="24" alignment="0" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_stageinfo" anchorX="0" anchorY="0" positionX="28" positionY="23" z="0" scaleX="1" scaleY="1" imageName="9_Back_02.png" ninePatchSize="{416,90}" ninePatchInset="{{8,8},{2,2}}">
+      <ElementNode type="NinePatch" elementID="ID_stage" anchorX="0" anchorY="0" positionX="10" positionY="10" z="0" scaleX="1" scaleY="1" imageName="9_Back_11.png" ninePatchSize="{205,70}" ninePatchInset="{{8,8},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_1" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" labelContent="Stage 5 / 12" fontStyle="1" fontSize="30" fontColor="{255,255,0}" areaSizeX="205" areaSizeY="70" alignment="1" lineAlignment="1" effect="2" effectOffset="3" effectColor="{78,37,0}" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_9BUTTON_1" anchorX="0" anchorY="0" positionX="222" positionY="1" z="0" scaleX="1" scaleY="1" imageName="9_btn_06.png" ninePatchSize="{190,88}" ninePatchInset="{{48,45},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_2" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" labelContent="입장" fontStyle="1" fontSize="28" fontColor="{255,255,255}" areaSizeX="190" areaSizeY="88" alignment="1" lineAlignment="1" effect="2" effectOffset="2" effectColor="{0,64,0}" />
+      </ElementNode>
+    </ElementNode>
+  </ElementNode>
+  <ElementNode type="NinePatch" elementID="ID_MonList" anchorX="0" anchorY="0" positionX="12" positionY="80" z="0" scaleX="1" scaleY="1" imageName="9_Back_01.png" ninePatchSize="{564,500}" ninePatchInset="{{84,126},{2,2}}">
+    <ElementNode type="NinePatch" elementID="ID_mon01" anchorX="0" anchorY="0" positionX="16" positionY="377" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{102,108}" ninePatchInset="{{1,1},{2,2}}" />
+    <ElementNode type="NinePatch" elementID="ID_mon02" anchorX="0" anchorY="0" positionX="122" positionY="377" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{102,108}" ninePatchInset="{{1,1},{2,2}}" />
+    <ElementNode type="NinePatch" elementID="ID_mon03" anchorX="0" anchorY="0" positionX="228" positionY="377" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{102,108}" ninePatchInset="{{1,1},{2,2}}" />
+    <ElementNode type="NinePatch" elementID="ID_mon04" anchorX="0" anchorY="0" positionX="334" positionY="377" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{102,108}" ninePatchInset="{{1,1},{2,2}}" />
+    <ElementNode type="NinePatch" elementID="ID_mon05" anchorX="0" anchorY="0" positionX="440" positionY="377" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{102,108}" ninePatchInset="{{1,1},{2,2}}" />
+    <ElementNode type="NinePatch" elementID="ID_mon06" anchorX="0" anchorY="0" positionX="16" positionY="258" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{102,108}" ninePatchInset="{{1,1},{2,2}}" />
+    <ElementNode type="NinePatch" elementID="ID_mon07" anchorX="0" anchorY="0" positionX="122" positionY="258" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{102,108}" ninePatchInset="{{1,1},{2,2}}" />
+    <ElementNode type="NinePatch" elementID="ID_mon08" anchorX="0" anchorY="0" positionX="228" positionY="258" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{102,108}" ninePatchInset="{{1,1},{2,2}}" />
+    <ElementNode type="NinePatch" elementID="ID_mon09" anchorX="0" anchorY="0" positionX="334" positionY="258" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{102,108}" ninePatchInset="{{1,1},{2,2}}" />
+    <ElementNode type="NinePatch" elementID="ID_mon10" anchorX="0" anchorY="0" positionX="440" positionY="258" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{102,108}" ninePatchInset="{{1,1},{2,2}}" />
+    <ElementNode type="NinePatch" elementID="ID_mon11" anchorX="0" anchorY="0" positionX="16" positionY="139" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{102,108}" ninePatchInset="{{1,1},{2,2}}" />
+    <ElementNode type="NinePatch" elementID="ID_mon12" anchorX="0" anchorY="0" positionX="122" positionY="139" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{102,108}" ninePatchInset="{{1,1},{2,2}}" />
+    <ElementNode type="NinePatch" elementID="ID_mon13" anchorX="0" anchorY="0" positionX="228" positionY="139" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{102,108}" ninePatchInset="{{1,1},{2,2}}" />
+    <ElementNode type="NinePatch" elementID="ID_mon14" anchorX="0" anchorY="0" positionX="334" positionY="139" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{102,108}" ninePatchInset="{{1,1},{2,2}}" />
+    <ElementNode type="NinePatch" elementID="ID_mon15" anchorX="0" anchorY="0" positionX="440" positionY="139" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{102,108}" ninePatchInset="{{1,1},{2,2}}" />
+    <ElementNode type="NinePatch" elementID="ID_mon16" anchorX="0" anchorY="0" positionX="16" positionY="20" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{102,108}" ninePatchInset="{{1,1},{2,2}}" />
+    <ElementNode type="NinePatch" elementID="ID_mon17" anchorX="0" anchorY="0" positionX="122" positionY="20" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{102,108}" ninePatchInset="{{1,1},{2,2}}" />
+    <ElementNode type="NinePatch" elementID="ID_mon18" anchorX="0" anchorY="0" positionX="228" positionY="20" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{102,108}" ninePatchInset="{{1,1},{2,2}}" />
+    <ElementNode type="NinePatch" elementID="ID_mon19" anchorX="0" anchorY="0" positionX="334" positionY="20" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{102,108}" ninePatchInset="{{1,1},{2,2}}" />
+    <ElementNode type="NinePatch" elementID="ID_mon20" anchorX="0" anchorY="0" positionX="440" positionY="20" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{102,108}" ninePatchInset="{{1,1},{2,2}}" />
+  </ElementNode>
+  <ElementNode type="NinePatch" elementID="ID_Road" anchorX="0" anchorY="0" positionX="125" positionY="23" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{300,150}" ninePatchInset="{{1,1},{2,2}}">
+    <ElementNode type="NinePatch" elementID="ID_9PATCH_Road" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{200,200}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Image" elementID="ID_IMAGE_Road1" anchorX="0" anchorY="0" positionX="33" positionY="-2" z="0" scaleX="1" scaleY="1" imageName="I_track_d.png" />
+      <ElementNode type="Image" elementID="ID_IMAGE_Road2" anchorX="0" anchorY="0" positionX="101" positionY="-2" z="0" scaleX="1" scaleY="1" imageName="I_track2_d.png" />
+      <ElementNode type="Image" elementID="ID_IMAGE_Road3" anchorX="0" anchorY="0" positionX="169" positionY="-1" z="0" scaleX="1" scaleY="1" imageName="I_track_d.png" />
+      <ElementNode type="Image" elementID="ID_IMAGE_Road4" anchorX="0" anchorY="0" positionX="241" positionY="-2" z="0" scaleX="1" scaleY="1" imageName="I_track2_d.png" />
+      <ElementNode type="Image" elementID="ID_IMAGE_Road5" anchorX="0" anchorY="0" positionX="309" positionY="-1" z="0" scaleX="1" scaleY="1" imageName="I_track_d.png" />
+      <ElementNode type="Image" elementID="ID_IMAGE_Road6" anchorX="0" anchorY="0" positionX="373" positionY="-2" z="0" scaleX="1" scaleY="1" imageName="I_track2_d.png" />
+      <ElementNode type="Image" elementID="ID_IMAGE_Road7" anchorX="0" anchorY="0" positionX="441" positionY="-1" z="0" scaleX="1" scaleY="1" imageName="I_track_d.png" />
+      <ElementNode type="Image" elementID="ID_IMAGE_Road8" anchorX="0" anchorY="0" positionX="521" positionY="-2" z="0" scaleX="1" scaleY="1" imageName="I_track2_d.png" />
+      <ElementNode type="Image" elementID="ID_IMAGE_Road9" anchorX="0" anchorY="0" positionX="585" positionY="-1" z="0" scaleX="1" scaleY="1" imageName="I_track_d.png" />
+      <ElementNode type="Image" elementID="ID_IMAGE_Road10" anchorX="0" anchorY="0" positionX="651" positionY="-2" z="0" scaleX="1" scaleY="1" imageName="I_track2_d.png" />
+      <ElementNode type="Image" elementID="ID_IMAGE_Road11" anchorX="0" anchorY="0" positionX="717" positionY="-1" z="0" scaleX="1" scaleY="1" imageName="I_track_d.png" />
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_Moster12" anchorX="0" anchorY="0" positionX="748" positionY="-17" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{200,200}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Image" elementID="ID_MosterOFF_12" anchorX="0" anchorY="0" positionX="-10" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_kingmonster_d.png" />
+      <ElementNode type="Image" elementID="ID_MosterON_12" anchorX="0" anchorY="0" positionX="-8" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_kingmonster.png">
+        <ElementNode type="Image" elementID="ID_IMAGE_12" anchorX="0" anchorY="0" positionX="-1" positionY="2" z="0" scaleX="1.3" scaleY="1.3" imageName="I_firepointer.png" />
+        <ElementNode type="Image" elementID="ID_pointing_12" anchorX="0" anchorY="0" positionX="21" positionY="54" z="0" scaleX="1" scaleY="1" imageName="I_pointer.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_Moster11" anchorX="0" anchorY="0" positionX="676" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{200,200}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Image" elementID="ID_MosterOFF_11" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_smallmonster_d.png" />
+      <ElementNode type="Image" elementID="ID_MosterON_11" anchorX="0" anchorY="0" positionX="1" positionY="1" z="0" scaleX="1" scaleY="1" imageName="I_smallmonster.png">
+        <ElementNode type="Image" elementID="ID_IMAGE_11" anchorX="0" anchorY="0" positionX="-3" positionY="-3" z="0" scaleX="1" scaleY="1" imageName="I_firepointer.png" />
+        <ElementNode type="Image" elementID="ID_pointing_11" anchorX="0" anchorY="0" positionX="12" positionY="30" z="0" scaleX="1" scaleY="1" imageName="I_pointer.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_Moster10" anchorX="0" anchorY="0" positionX="616" positionY="-17" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{200,200}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Image" elementID="ID_MosterOFF_10" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_smallmonster_d.png" />
+      <ElementNode type="Image" elementID="ID_MosterON_10" anchorX="0" anchorY="0" positionX="1" positionY="1" z="0" scaleX="1" scaleY="1" imageName="I_smallmonster.png">
+        <ElementNode type="Image" elementID="ID_IMAGE_10" anchorX="0" anchorY="0" positionX="-3" positionY="-3" z="0" scaleX="1" scaleY="1" imageName="I_firepointer.png" />
+        <ElementNode type="Image" elementID="ID_pointing_10" anchorX="0" anchorY="0" positionX="12" positionY="30" z="0" scaleX="1" scaleY="1" imageName="I_pointer.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_Moster09" anchorX="0" anchorY="0" positionX="552" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{200,200}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Image" elementID="ID_MosterOFF_09" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_smallmonster_d.png" />
+      <ElementNode type="Image" elementID="ID_MosterON_09" anchorX="0" anchorY="0" positionX="1" positionY="1" z="0" scaleX="1" scaleY="1" imageName="I_smallmonster.png">
+        <ElementNode type="Image" elementID="ID_IMAGE_09" anchorX="0" anchorY="0" positionX="-3" positionY="-3" z="0" scaleX="1" scaleY="1" imageName="I_firepointer.png" />
+        <ElementNode type="Image" elementID="ID_pointing_09" anchorX="0" anchorY="0" positionX="12" positionY="30" z="0" scaleX="1" scaleY="1" imageName="I_pointer.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_Moster08" anchorX="0" anchorY="0" positionX="478" positionY="-17" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{200,200}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Image" elementID="ID_MosterOFF_08" anchorX="0" anchorY="0" positionX="-9" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_kingmonster_d.png" />
+      <ElementNode type="Image" elementID="ID_MosterON_08" anchorX="0" anchorY="0" positionX="-8" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_kingmonster.png">
+        <ElementNode type="Image" elementID="ID_IMAGE_08" anchorX="0" anchorY="0" positionX="-1" positionY="2" z="0" scaleX="1.3" scaleY="1.3" imageName="I_firepointer.png" />
+        <ElementNode type="Image" elementID="ID_pointing_08" anchorX="0" anchorY="0" positionX="21" positionY="54" z="0" scaleX="1" scaleY="1" imageName="I_pointer.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_Moster07" anchorX="0" anchorY="0" positionX="408" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{200,200}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Image" elementID="ID_MosterOFF_07" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_smallmonster_d.png" />
+      <ElementNode type="Image" elementID="ID_MosterON_07" anchorX="0" anchorY="0" positionX="1" positionY="1" z="0" scaleX="1" scaleY="1" imageName="I_smallmonster.png">
+        <ElementNode type="Image" elementID="ID_IMAGE_07" anchorX="0" anchorY="0" positionX="-3" positionY="-3" z="0" scaleX="1" scaleY="1" imageName="I_firepointer.png" />
+        <ElementNode type="Image" elementID="ID_pointing_07" anchorX="0" anchorY="0" positionX="12" positionY="30" z="0" scaleX="1" scaleY="1" imageName="I_pointer.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_Moster06" anchorX="0" anchorY="0" positionX="344" positionY="-17" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{200,200}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Image" elementID="ID_MosterOFF_06" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_smallmonster_d.png" />
+      <ElementNode type="Image" elementID="ID_MosterON_06" anchorX="0" anchorY="0" positionX="1" positionY="1" z="0" scaleX="1" scaleY="1" imageName="I_smallmonster.png">
+        <ElementNode type="Image" elementID="ID_IMAGE_06" anchorX="0" anchorY="0" positionX="-3" positionY="-3" z="0" scaleX="1" scaleY="1" imageName="I_firepointer.png" />
+        <ElementNode type="Image" elementID="ID_pointing_06" anchorX="0" anchorY="0" positionX="12" positionY="30" z="0" scaleX="1" scaleY="1" imageName="I_pointer.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_Moster05" anchorX="0" anchorY="0" positionX="276" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{200,200}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Image" elementID="ID_MosterOFF_05" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_smallmonster_d.png" />
+      <ElementNode type="Image" elementID="ID_MosterON_05" anchorX="0" anchorY="0" positionX="1" positionY="1" z="0" scaleX="1" scaleY="1" imageName="I_smallmonster.png">
+        <ElementNode type="Image" elementID="ID_IMAGE_05" anchorX="0" anchorY="0" positionX="-3" positionY="-3" z="0" scaleX="1" scaleY="1" imageName="I_firepointer.png" />
+        <ElementNode type="Image" elementID="ID_pointing_05" anchorX="0" anchorY="0" positionX="12" positionY="30" z="0" scaleX="1" scaleY="1" imageName="I_pointer.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_Moster04" anchorX="0" anchorY="0" positionX="204" positionY="-17" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{200,200}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Image" elementID="ID_MosterOFF_04" anchorX="0" anchorY="0" positionX="-8" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_kingmonster_d.png" />
+      <ElementNode type="Image" elementID="ID_MosterON_04" anchorX="0" anchorY="0" positionX="-8" positionY="1" z="0" scaleX="1" scaleY="1" imageName="I_kingmonster.png">
+        <ElementNode type="Image" elementID="ID_IMAGE_04" anchorX="0" anchorY="0" positionX="-1" positionY="2" z="0" scaleX="1.3" scaleY="1.3" imageName="I_firepointer.png" />
+        <ElementNode type="Image" elementID="ID_pointing_04" anchorX="0" anchorY="0" positionX="21" positionY="54" z="0" scaleX="1" scaleY="1" imageName="I_pointer.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_Moster03" anchorX="0" anchorY="0" positionX="136" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{200,200}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Image" elementID="ID_MosterOFF_03" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_smallmonster_d.png" />
+      <ElementNode type="Image" elementID="ID_MosterON_03" anchorX="0" anchorY="0" positionX="1" positionY="1" z="0" scaleX="1" scaleY="1" imageName="I_smallmonster.png">
+        <ElementNode type="Image" elementID="ID_IMAGE_03" anchorX="0" anchorY="0" positionX="-3" positionY="-3" z="0" scaleX="1" scaleY="1" imageName="I_firepointer.png" />
+        <ElementNode type="Image" elementID="ID_pointing_03" anchorX="0" anchorY="0" positionX="12" positionY="30" z="0" scaleX="1" scaleY="1" imageName="I_pointer.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_Moster02" anchorX="0" anchorY="0" positionX="68" positionY="-17" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{200,200}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Image" elementID="ID_MosterOFF_02" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_smallmonster_d.png" />
+      <ElementNode type="Image" elementID="ID_MosterON_02" anchorX="0" anchorY="0" positionX="1" positionY="1" z="0" scaleX="1" scaleY="1" imageName="I_smallmonster.png">
+        <ElementNode type="Image" elementID="ID_IMAGE_02" anchorX="0" anchorY="0" positionX="-3" positionY="-3" z="0" scaleX="1" scaleY="1" imageName="I_firepointer.png" />
+        <ElementNode type="Image" elementID="ID_pointing_02" anchorX="0" anchorY="0" positionX="12" positionY="30" z="0" scaleX="1" scaleY="1" imageName="I_pointer.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_Moster01" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{200,200}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Image" elementID="ID_MosterOFF_01" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_smallmonster_d.png" />
+      <ElementNode type="Image" elementID="ID_MosterON_01" anchorX="0" anchorY="0" positionX="1" positionY="1" z="0" scaleX="1" scaleY="1" imageName="I_smallmonster.png">
+        <ElementNode type="Image" elementID="ID_IMAGE_01" anchorX="0" anchorY="0" positionX="-3" positionY="-3" z="0" scaleX="1" scaleY="1" imageName="I_firepointer.png" />
+        <ElementNode type="Image" elementID="ID_pointing_01" anchorX="0" anchorY="0" positionX="12" positionY="30" z="0" scaleX="1" scaleY="1" imageName="I_pointer.png" />
+      </ElementNode>
+    </ElementNode>
+  </ElementNode>
+</root>

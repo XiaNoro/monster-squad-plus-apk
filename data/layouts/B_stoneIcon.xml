@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_frameSize" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{92,92}" ninePatchInset="{{1,1},{2,2}}">
+    <ElementNode type="Image" elementID="ID_stoneEmpty" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="B_monEmpty_04.png" />
+    <ElementNode type="Image" elementID="ID_att" anchorX="0" anchorY="0" positionX="0" positionY="0" z="2" scaleX="1" scaleY="1" imageName="M_attStone_01.png" />
+    <ElementNode type="NinePatch" elementID="ID_rank" anchorX="0" anchorY="0" positionX="-2" positionY="58" z="2" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{36,36}" ninePatchInset="{{1,1},{2,2}}" />
+    <ElementNode type="Label" elementID="ID_numStone" anchorX="0" anchorY="0" positionX="22" positionY="2" z="2" scaleX="1" scaleY="1" labelContent="0" fontStyle="1" fontSize="22" fontColor="{255,255,255}" areaSizeX="66" areaSizeY="30" alignment="2" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,13,46}" />
+    <ElementNode type="NinePatch" elementID="ID_check" anchorX="0" anchorY="0" positionX="0" positionY="0" z="3" scaleX="1" scaleY="1" imageName="9_frame_03.png" ninePatchSize="{92,92}" ninePatchInset="{{16,16},{2,2}}" />
+    <ElementNode type="NinePatch" elementID="ID_select" anchorX="0" anchorY="0" positionX="0" positionY="0" z="3" scaleX="1" scaleY="1" imageName="9_frame_03.png" ninePatchSize="{92,92}" ninePatchInset="{{16,16},{2,2}}">
+      <ElementNode type="Label" elementID="ID_txtSelect" anchorX="0" anchorY="0" positionX="0" positionY="28" z="0" scaleX="1" scaleY="1" labelContent="Select" fontStyle="1" fontSize="24" fontColor="{255,255,0}" areaSizeX="92" areaSizeY="30" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_type" anchorX="0" anchorY="0" positionX="62" positionY="64" z="2" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{26,22}" ninePatchInset="{{1,1},{2,2}}" />
+  </ElementNode>
+</root>

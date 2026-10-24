@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_9PATCH_2" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_black60.png" ninePatchSize="{1066,640}" ninePatchInset="{{1,1},{2,2}}">
+    <ElementNode type="NinePatch" elementID="ID_Dialog" anchorX="0" anchorY="0" positionX="50" positionY="40" z="0" scaleX="1" scaleY="1" imageName="9_Back_19.png" ninePatchSize="{978,558}" ninePatchInset="{{50,50},{2,2}}">
+      <ElementNode type="NinePatch" elementID="ID_baseback" anchorX="0" anchorY="0" positionX="12" positionY="16" z="0" scaleX="1" scaleY="1" imageName="9_Back_01.png" ninePatchSize="{950,464}" ninePatchInset="{{84,126},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_title" anchorX="0" anchorY="0" positionX="272" positionY="468" z="0" scaleX="1" scaleY="1" imageName="9_frame_04.png" ninePatchSize="{400,56}" ninePatchInset="{{32,0},{2,56}}">
+          <ElementNode type="Label" elementID="ID_titleText" anchorX="0" anchorY="0" positionX="48" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="View Rewards" fontStyle="1" fontSize="30" fontColor="{255,220,125}" areaSizeX="300" areaSizeY="40" alignment="1" lineAlignment="0" effect="1" effectOffset="3" effectColor="{80,40,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatchButton" elementID="ID_btnEsc" anchorX="0.5" anchorY="0.5" positionX="870" positionY="496" z="0" scaleX="1" scaleY="1" imageName="9_btn_05.png" ninePatchSize="{106,60}" ninePatchInset="{{28,28},{2,2}}">
+          <ElementNode type="Image" elementID="ID_IMAGE_1" anchorX="0" anchorY="0" positionX="24" positionY="4" z="0" scaleX="1" scaleY="1" imageName="K_esc_01.png" />
+        </ElementNode>
+        <ElementNode type="Button" elementID="ID_btnPage1" anchorX="0.5" anchorY="0.5" positionX="24" positionY="234" z="1" scaleX="0.8" scaleY="1" imageName="B_arrow_01.png" />
+        <ElementNode type="Button" elementID="ID_btnPage2" anchorX="0.5" anchorY="0.5" positionX="926" positionY="234" z="1" scaleX="0.8" scaleY="1" imageName="B_arrow_02.png" />
+        <ElementNode type="NinePatch" elementID="ID_page_1" anchorX="0" anchorY="0" positionX="50" positionY="32" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{850,414}" ninePatchInset="{{1,1},{2,2}}">
+          <ElementNode type="Label" elementID="ID_timeText" anchorX="0" anchorY="0" positionX="26" positionY="366" z="1" scaleX="1" scaleY="1" labelContent="Rewards can be received once a week. Calculation will be made Sunday 00:00(UTC)  and can be received Sunday morning." fontStyle="0" fontSize="18" fontColor="{60,43,5}" areaSizeX="800" areaSizeY="48" alignment="1" lineAlignment="1" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+          <ElementNode type="NinePatch" elementID="ID_entryReward_1" anchorX="0" anchorY="0" positionX="4" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_Back_02.png" ninePatchSize="{328,364}" ninePatchInset="{{15,15},{2,2}}">
+            <ElementNode type="Label" elementID="ID_detailText" anchorX="0" anchorY="0" positionX="12" positionY="322" z="0" scaleX="1" scaleY="1" labelContent="[Rank Reward]" fontStyle="1" fontSize="24" fontColor="{125,70,20}" areaSizeX="240" areaSizeY="30" alignment="0" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+            <ElementNode type="NinePatch" elementID="rank_1" anchorX="0" anchorY="0" positionX="8" positionY="286" z="0" scaleX="1" scaleY="1" imageName="9_Back_11.png" ninePatchSize="{312,36}" ninePatchInset="{{8,8},{2,2}}">
+              <ElementNode type="Label" elementID="ID_rankText_1" anchorX="0" anchorY="0" positionX="8" positionY="0" z="0" scaleX="1" scaleY="1" labelContent="1st" fontStyle="0" fontSize="18" fontColor="{255,220,125}" areaSizeX="120" areaSizeY="34" alignment="0" lineAlignment="1" effect="2" effectOffset="2" effectColor="{75,25,10}" />
+              <ElementNode type="Label" elementID="ID_honorText_1" anchorX="0" anchorY="0" positionX="208" positionY="0" z="0" scaleX="1" scaleY="1" labelContent="300 Points" fontStyle="0" fontSize="18" fontColor="{255,220,125}" areaSizeX="100" areaSizeY="34" alignment="2" lineAlignment="1" effect="2" effectOffset="2" effectColor="{75,25,10}" />
+              <ElementNode type="Image" elementID="ID_IMAGE_11" anchorX="0" anchorY="0" positionX="180" positionY="2" z="0" scaleX="0.8" scaleY="0.8" imageName="I_honor_01.png" />
+              <ElementNode type="Image" elementID="ID_IMAGE_3" anchorX="0" anchorY="0" positionX="132" positionY="0" z="0" scaleX="0.9" scaleY="0.9" imageName="K_rankS_01.png" />
+            </ElementNode>
+            <ElementNode type="NinePatch" elementID="rank_2" anchorX="0" anchorY="0" positionX="8" positionY="246" z="0" scaleX="1" scaleY="1" imageName="9_Back_11.png" ninePatchSize="{312,36}" ninePatchInset="{{8,8},{2,2}}">
+              <ElementNode type="Label" elementID="ID_rankText_2" anchorX="0" anchorY="0" positionX="8" positionY="0" z="0" scaleX="1" scaleY="1" labelContent="2nd~10th" fontStyle="0" fontSize="18" fontColor="{255,220,125}" areaSizeX="120" areaSizeY="34" alignment="0" lineAlignment="1" effect="2" effectOffset="2" effectColor="{75,25,10}" />
+              <ElementNode type="Label" elementID="ID_honorText_2" anchorX="0" anchorY="0" positionX="208" positionY="0" z="0" scaleX="1" scaleY="1" labelContent="250 Points" fontStyle="0" fontSize="18" fontColor="{255,220,125}" areaSizeX="100" areaSizeY="34" alignment="2" lineAlignment="1" effect="2" effectOffset="2" effectColor="{75,25,10}" />
+              <ElementNode type="Image" elementID="ID_IMAGE_22" anchorX="0" anchorY="0" positionX="180" positionY="2" z="0" scaleX="0.8" scaleY="0.8" imageName="I_honor_01.png" />
+              <ElementNode type="Image" elementID="ID_IMAGE_4" anchorX="0" anchorY="0" positionX="132" positionY="0" z="0" scaleX="0.9" scaleY="0.9" imageName="K_rankS_02.png" />
+            </ElementNode>
+            <ElementNode type="NinePatch" elementID="rank_3" anchorX="0" anchorY="0" positionX="8" positionY="206" z="0" scaleX="1" scaleY="1" imageName="9_Back_11.png" ninePatchSize="{312,36}" ninePatchInset="{{8,8},{2,2}}">
+              <ElementNode type="Label" elementID="ID_rankText_3" anchorX="0" anchorY="0" positionX="8" positionY="0" z="0" scaleX="1" scaleY="1" labelContent="11th~50th" fontStyle="0" fontSize="18" fontColor="{255,220,125}" areaSizeX="120" areaSizeY="34" alignment="0" lineAlignment="1" effect="2" effectOffset="2" effectColor="{75,25,10}" />
+              <ElementNode type="Label" elementID="ID_honorText_3" anchorX="0" anchorY="0" positionX="208" positionY="0" z="0" scaleX="1" scaleY="1" labelContent="200 Points" fontStyle="0" fontSize="18" fontColor="{255,220,125}" areaSizeX="100" areaSizeY="34" alignment="2" lineAlignment="1" effect="2" effectOffset="2" effectColor="{75,25,10}" />
+              <ElementNode type="Image" elementID="ID_IMAGE_33" anchorX="0" anchorY="0" positionX="180" positionY="2" z="0" scaleX="0.8" scaleY="0.8" imageName="I_honor_01.png" />
+              <ElementNode type="Image" elementID="ID_IMAGE_5" anchorX="0" anchorY="0" positionX="132" positionY="0" z="0" scaleX="0.9" scaleY="0.9" imageName="K_rankS_03.png" />
+            </ElementNode>
+            <ElementNode type="NinePatch" elementID="rank_4" anchorX="0" anchorY="0" positionX="8" positionY="166" z="0" scaleX="1" scaleY="1" imageName="9_Back_11.png" ninePatchSize="{312,36}" ninePatchInset="{{8,8},{2,2}}">
+              <ElementNode type="Label" elementID="ID_rankText_4" anchorX="0" anchorY="0" positionX="8" positionY="0" z="0" scaleX="1" scaleY="1" labelContent="Within 1%" fontStyle="0" fontSize="18" fontColor="{255,220,125}" areaSizeX="120" areaSizeY="34" alignment="0" lineAlignment="1" effect="2" effectOffset="2" effectColor="{75,25,10}" />
+              <ElementNode type="Label" elementID="ID_honorText_4" anchorX="0" anchorY="0" positionX="208" positionY="0" z="0" scaleX="1" scaleY="1" labelContent="160 Points" fontStyle="0" fontSize="18" fontColor="{255,220,125}" areaSizeX="100" areaSizeY="34" alignment="2" lineAlignment="1" effect="2" effectOffset="2" effectColor="{75,25,10}" />
+              <ElementNode type="Image" elementID="ID_IMAGE_44" anchorX="0" anchorY="0" positionX="180" positionY="2" z="0" scaleX="0.8" scaleY="0.8" imageName="I_honor_01.png" />
+              <ElementNode type="Image" elementID="ID_IMAGE_6" anchorX="0" anchorY="0" positionX="132" positionY="0" z="0" scaleX="0.9" scaleY="0.9" imageName="K_rankS_04.png" />
+            </ElementNode>
+            <ElementNode type="NinePatch" elementID="rank_5" anchorX="0" anchorY="0" positionX="8" positionY="126" z="0" scaleX="1" scaleY="1" imageName="9_Back_11.png" ninePatchSize="{312,36}" ninePatchInset="{{8,8},{2,2}}">
+              <ElementNode type="Label" elementID="ID_rankText_5" anchorX="0" anchorY="0" positionX="8" positionY="0" z="0" scaleX="1" scaleY="1" labelContent="Within 10%" fontStyle="0" fontSize="18" fontColor="{255,220,125}" areaSizeX="120" areaSizeY="34" alignment="0" lineAlignment="1" effect="2" effectOffset="2" effectColor="{75,25,10}" />
+              <ElementNode type="Label" elementID="ID_honorText_5" anchorX="0" anchorY="0" positionX="208" positionY="0" z="0" scaleX="1" scaleY="1" labelContent="120 Points" fontStyle="0" fontSize="18" fontColor="{255,220,125}" areaSizeX="100" areaSizeY="34" alignment="2" lineAlignment="1" effect="2" effectOffset="2" effectColor="{75,25,10}" />
+              <ElementNode type="Image" elementID="ID_IMAGE_55" anchorX="0" anchorY="0" positionX="180" positionY="2" z="0" scaleX="0.8" scaleY="0.8" imageName="I_honor_01.png" />
+              <ElementNode type="Image" elementID="ID_IMAGE_7" anchorX="0" anchorY="0" positionX="132" positionY="0" z="0" scaleX="0.9" scaleY="0.9" imageName="K_rankS_05.png" />
+            </ElementNode>
+            <ElementNode type="NinePatch" elementID="rank_6" anchorX="0" anchorY="0" positionX="8" positionY="86" z="0" scaleX="1" scaleY="1" imageName="9_Back_11.png" ninePatchSize="{312,36}" ninePatchInset="{{8,8},{2,2}}">
+              <ElementNode type="Label" elementID="ID_rankText_6" anchorX="0" anchorY="0" positionX="8" positionY="0" z="0" scaleX="1" scaleY="1" labelContent="Within 20%" fontStyle="0" fontSize="18" fontColor="{255,220,125}" areaSizeX="120" areaSizeY="34" alignment="0" lineAlignment="1" effect="2" effectOffset="2" effectColor="{75,25,10}" />
+              <ElementNode type="Label" elementID="ID_honorText_6" anchorX="0" anchorY="0" positionX="208" positionY="0" z="0" scaleX="1" scaleY="1" labelContent="80 Points" fontStyle="0" fontSize="18" fontColor="{255,220,125}" areaSizeX="100" areaSizeY="34" alignment="2" lineAlignment="1" effect="2" effectOffset="2" effectColor="{75,25,10}" />
+              <ElementNode type="Image" elementID="ID_IMAGE_66" anchorX="0" anchorY="0" positionX="180" positionY="2" z="0" scaleX="0.8" scaleY="0.8" imageName="I_honor_01.png" />
+              <ElementNode type="Image" elementID="ID_IMAGE_8" anchorX="0" anchorY="0" positionX="132" positionY="0" z="0" scaleX="0.9" scaleY="0.9" imageName="K_rankS_06.png" />
+            </ElementNode>
+            <ElementNode type="NinePatch" elementID="rank_7" anchorX="0" anchorY="0" positionX="8" positionY="46" z="0" scaleX="1" scaleY="1" imageName="9_Back_11.png" ninePatchSize="{312,36}" ninePatchInset="{{8,8},{2,2}}">
+              <ElementNode type="Label" elementID="ID_rankText_7" anchorX="0" anchorY="0" positionX="8" positionY="0" z="0" scaleX="1" scaleY="1" labelContent="Within 30%" fontStyle="0" fontSize="18" fontColor="{255,220,125}" areaSizeX="120" areaSizeY="34" alignment="0" lineAlignment="1" effect="2" effectOffset="2" effectColor="{75,25,10}" />
+              <ElementNode type="Label" elementID="ID_honorText_7" anchorX="0" anchorY="0" positionX="208" positionY="0" z="0" scaleX="1" scaleY="1" labelContent="60 Points" fontStyle="0" fontSize="18" fontColor="{255,220,125}" areaSizeX="100" areaSizeY="34" alignment="2" lineAlignment="1" effect="2" effectOffset="2" effectColor="{75,25,10}" />
+              <ElementNode type="Image" elementID="ID_IMAGE_77" anchorX="0" anchorY="0" positionX="180" positionY="2" z="0" scaleX="0.8" scaleY="0.8" imageName="I_honor_01.png" />
+              <ElementNode type="Image" elementID="ID_IMAGE_9" anchorX="0" anchorY="0" positionX="132" positionY="0" z="0" scaleX="0.9" scaleY="0.9" imageName="K_rankS_07.png" />
+            </ElementNode>
+            <ElementNode type="NinePatch" elementID="rank_8" anchorX="0" anchorY="0" positionX="8" positionY="6" z="0" scaleX="1" scaleY="1" imageName="9_Back_11.png" ninePatchSize="{312,36}" ninePatchInset="{{8,8},{2,2}}">
+              <ElementNode type="Label" elementID="ID_rankText_8" anchorX="0" anchorY="0" positionX="8" positionY="0" z="0" scaleX="1" scaleY="1" labelContent="Within 50%" fontStyle="0" fontSize="18" fontColor="{255,220,125}" areaSizeX="120" areaSizeY="34" alignment="0" lineAlignment="1" effect="2" effectOffset="2" effectColor="{75,25,10}" />
+              <ElementNode type="Label" elementID="ID_honorText_8" anchorX="0" anchorY="0" positionX="208" positionY="0" z="0" scaleX="1" scaleY="1" labelContent="40 Points" fontStyle="0" fontSize="18" fontColor="{255,220,125}" areaSizeX="100" areaSizeY="34" alignment="2" lineAlignment="1" effect="2" effectOffset="2" effectColor="{75,25,10}" />
+              <ElementNode type="Image" elementID="ID_IMAGE_88" anchorX="0" anchorY="0" positionX="180" positionY="2" z="0" scaleX="0.8" scaleY="0.8" imageName="I_honor_01.png" />
+            </ElementNode>
+          </ElementNode>
+          <ElementNode type="NinePatch" elementID="ID_imageSlot" anchorX="0" anchorY="0" positionX="340" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_frame_01.png" ninePatchSize="{510,364}" ninePatchInset="{{20,20},{2,2}}">
+            <ElementNode type="NinePatch" elementID="ID_imageBack" anchorX="0" anchorY="0" positionX="12" positionY="14" z="0" scaleX="1" scaleY="1" imageName="9_Back_08.png" ninePatchSize="{482,340}" ninePatchInset="{{20,20},{2,2}}" />
+            <ElementNode type="NinePatch" elementID="ID_ID_arrayPosition" anchorX="0" anchorY="0" positionX="16" positionY="18" z="1" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{474,332}" ninePatchInset="{{1,1},{2,2}}" />
+            <ElementNode type="NinePatch" elementID="ID_9PATCH_1" anchorX="0" anchorY="0" positionX="24" positionY="24" z="2" scaleX="1" scaleY="1" imageName="9_Back_13.png" ninePatchSize="{456,36}" ninePatchInset="{{12,12},{2,2}}">
+              <ElementNode type="Label" elementID="ID_bottomText" anchorX="0" anchorY="0" positionX="20" positionY="0" z="0" scaleX="1" scaleY="1" labelContent="Check out New monsters in Store &gt; Honor page" fontStyle="1" fontSize="19" fontColor="{205,225,140}" areaSizeX="436" areaSizeY="36" alignment="0" lineAlignment="1" effect="0" effectOffset="0" effectColor="{255,255,255}" />
+            </ElementNode>
+            <ElementNode type="Label" elementID="ID_imageTitle" anchorX="0" anchorY="0" positionX="77" positionY="266" z="2" scaleX="1" scaleY="1" labelContent="Collect Honor Points to get New Monsters! " fontStyle="1" fontSize="28" fontColor="{225,255,140}" areaSizeX="340" areaSizeY="80" alignment="1" lineAlignment="1" effect="2" effectOffset="2" effectColor="{5,55,15}" />
+          </ElementNode>
+        </ElementNode>
+      </ElementNode>
+    </ElementNode>
+  </ElementNode>
+</root>

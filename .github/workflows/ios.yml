@@ -1,0 +1,57 @@
+name: iOS build
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  GODOT_VERSION: 4.7.2
+
+jobs:
+  ios:
+    runs-on: macos-15
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Godot and iOS template
+        run: |
+          base=https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable
+          curl -sSfL -o godot.zip "$base/Godot_v${GODOT_VERSION}-stable_macos.universal.zip"
+          unzip -q godot.zip
+          curl -sSfL -o templates.tpz "$base/Godot_v${GODOT_VERSION}-stable_export_templates.tpz"
+          unzip -q templates.tpz templates/ios.zip templates/version.txt
+          dest="$HOME/Library/Application Support/Godot/export_templates/$(cat templates/version.txt)"
+          mkdir -p "$dest"
+          mv templates/ios.zip templates/version.txt "$dest/"
+          rm -rf godot.zip templates.tpz templates
+
+      - name: Export Xcode project
+        run: |
+          godot=./Godot.app/Contents/MacOS/Godot
+          $godot --headless --path . --import || true
+          mkdir -p ios
+          $godot --headless --path . --export-release iOS ios/MonsterSquadPlus.ipa
+          test -d ios/MonsterSquadPlus.xcodeproj
+
+      - name: Build unsigned IPA
+        run: |
+          xcodebuild -project ios/MonsterSquadPlus.xcodeproj -scheme MonsterSquadPlus \
+            -configuration Release -sdk iphoneos -destination generic/platform=iOS \
+            -derivedDataPath dd CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" \
+            build | tail -n 40
+          mkdir Payload
+          cp -R dd/Build/Products/Release-iphoneos/MonsterSquadPlus.app Payload/
+          version=$(sed -n 's/^config\/version="\(.*\)"/\1/p' project.godot)
+          echo "VERSION=$version" >> "$GITHUB_ENV"
+          zip -qry "MonsterSquadPlus-$version.ipa" Payload
+
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release delete "ios-$VERSION" --yes --cleanup-tag || true
+          gh release create "ios-$VERSION" "MonsterSquadPlus-$VERSION.ipa" \
+            --title "iOS $VERSION" --notes "Unsigned test build. Install with Sideloadly or AltStore."

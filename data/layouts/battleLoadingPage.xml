@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_9PATCH_1" anchorX="0" anchorY="0" positionX="0" positionY="0" z="-2" imageName="9_empty_02.png" ninePatchSize="{960,640}" ninePatchInset="{{1,1},{2,2}}">
+    <ElementNode type="Label" elementID="ID_LABEL_1" anchorX="0.5" anchorY="0.5" positionX="480" positionY="550" z="0" labelContent="준비하고 있어요;;" fontStyle="1" fontSize="40" fontColor="{0,128,255}" areaSizeX="500" areaSizeY="50" alignment="1" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+    <ElementNode type="NinePatch" elementID="ID_9PATCH_actor" anchorX="0" anchorY="0" positionX="319" positionY="215" z="0" imageName="9_empty_02.png" ninePatchSize="{100,100}" ninePatchInset="{{1,1},{2,2}}" />
+    <ElementNode type="NinePatch" elementID="ID_9PATCH_info" anchorX="1" anchorY="1" positionX="885" positionY="384" z="0" imageName="9_empty_02.png" ninePatchSize="{10,10}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_gradeP" anchorX="0" anchorY="0" positionX="0" positionY="-40" z="0" imageName="9_empty_02.png" ninePatchSize="{10,10}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_grade0" anchorX="1" anchorY="1" positionX="0" positionY="0" z="0" imageName="I_grade_02.png" />
+        <ElementNode type="Image" elementID="ID_IMAGE_grade1" anchorX="1" anchorY="1" positionX="-26" positionY="0" z="0" imageName="I_grade_02.png" />
+        <ElementNode type="Image" elementID="ID_IMAGE_grade2" anchorX="1" anchorY="1" positionX="-52" positionY="0" z="0" imageName="I_grade_02.png" />
+        <ElementNode type="Image" elementID="ID_IMAGE_grade3" anchorX="1" anchorY="1" positionX="-78" positionY="0" z="0" imageName="I_grade_02.png" />
+        <ElementNode type="Image" elementID="ID_IMAGE_grade4" anchorX="1" anchorY="1" positionX="-104" positionY="0" z="0" imageName="I_grade_02.png" />
+        <ElementNode type="Image" elementID="ID_IMAGE_grade5" anchorX="1" anchorY="1" positionX="-130" positionY="0" z="0" imageName="I_grade_02.png" />
+      </ElementNode>
+      <ElementNode type="Label" elementID="ID_LABEL_name" anchorX="1" anchorY="1" positionX="0" positionY="10" z="0" labelContent="코딩몬" fontStyle="1" fontSize="28" fontColor="{128,128,128}" areaSizeX="200" areaSizeY="50" alignment="2" effect="1" effectOffset="0" effectColor="{0,0,0}" />
+      <ElementNode type="Image" elementID="ID_IMAGE_hpP" anchorX="1" anchorY="1" positionX="0" positionY="-80" z="0" imageName="I__stat_01.png">
+        <ElementNode type="Label" elementID="ID_LABEL_2" anchorX="1" anchorY="1" positionX="-5" positionY="27" z="0" labelContent="hp" fontStyle="1" fontSize="25" fontColor="{128,128,128}" areaSizeX="200" areaSizeY="50" alignment="2" effect="1" effectOffset="0" effectColor="{0,0,0}" />
+      </ElementNode>
+      <ElementNode type="Image" elementID="ID_IMAGE_apP" anchorX="1" anchorY="1" positionX="0" positionY="-120" z="0" imageName="I__stat_02.png">
+        <ElementNode type="Label" elementID="ID_LABEL_3" anchorX="1" anchorY="1" positionX="-5" positionY="27" z="0" labelContent="ap" fontStyle="1" fontSize="25" fontColor="{128,128,128}" areaSizeX="200" areaSizeY="50" alignment="2" effect="1" effectOffset="0" effectColor="{0,0,0}" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="Label" elementID="ID_LABEL_tip" anchorX="0.5" anchorY="0.5" positionX="480" positionY="60" z="0" labelContent="LivingPoint" fontStyle="1" fontSize="25" fontColor="{255,255,255}" areaSizeX="800" areaSizeY="100" alignment="1" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+    <ElementNode type="NinePatch" elementID="ID_9PATCH_dim" anchorX="0" anchorY="0" positionX="0" positionY="140" z="-1" imageName="darkness.png" ninePatchSize="{960,500}" ninePatchInset="{{120,80},{1,1}}" />
+    <ElementNode type="NinePatch" elementID="ID_9PATCH_black" anchorX="0" anchorY="0" positionX="0" positionY="0" z="-1" imageName="9_black60.png" ninePatchSize="{960,140}" ninePatchInset="{{1,1},{2,2}}" />
+  </ElementNode>
+</root>

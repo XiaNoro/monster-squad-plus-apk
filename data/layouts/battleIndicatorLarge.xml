@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_9PATCH_BACK" anchorX="0.5" anchorY="0" positionX="0" positionY="0" z="0" imageName="9_graphBack_05.png" ninePatchSize="{148,10}" ninePatchInset="{{5,0},{2,10}}">
+    <ElementNode type="Image" elementID="ID_IMAGE_LABEL_BACK" anchorX="0" anchorY="0" positionX="-10" positionY="0" z="-1" imageName="I_back_03.png">
+      <ElementNode type="Label" elementID="ID_LABEL_ROLE" anchorX="0" anchorY="0" positionX="16" positionY="6" z="0" labelContent="Leader" fontStyle="1" fontSize="16" fontColor="{255,255,255}" areaSizeX="68" areaSizeY="18" alignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+    </ElementNode>
+  </ElementNode>
+</root>

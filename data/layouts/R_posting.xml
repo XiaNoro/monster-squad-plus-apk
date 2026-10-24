@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_9PATCH_1" anchorX="0" anchorY="0" positionX="264" positionY="8" z="0" scaleX="1" scaleY="1" imageName="9_Back_13.png" ninePatchSize="{540,102}" ninePatchInset="{{12,12},{2,2}}">
+    <ElementNode type="Button" elementID="ID_btnKakaoStory" anchorX="0" anchorY="0" positionX="294" positionY="12" z="0" scaleX="1" scaleY="1" imageName="B_kakaoStory_02.png">
+      <ElementNode type="Label" elementID="ID_LABEL_1" anchorX="0.5" anchorY="0.5" positionX="140" positionY="54" z="0" scaleX="1" scaleY="1" labelContent=" " fontStyle="1" fontSize="20" fontColor="{90,44,10}" areaSizeX="130" areaSizeY="22" alignment="1" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+      <ElementNode type="Label" elementID="ID_LABEL_1_1" anchorX="0.5" anchorY="0.5" positionX="140" positionY="28" z="0" scaleX="1" scaleY="1" labelContent=" " fontStyle="1" fontSize="20" fontColor="{90,44,10}" areaSizeX="130" areaSizeY="24" alignment="1" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+    </ElementNode>
+    <ElementNode type="NinePatchButton" elementID="ID_btnCancel" anchorX="0" anchorY="0" positionX="34" positionY="8" z="0" scaleX="1" scaleY="1" imageName="9_btn_01.png" ninePatchSize="{210,88}" ninePatchInset="{{48,43},{2,2}}">
+      <ElementNode type="Label" elementID="ID_LABEL_2" anchorX="0.5" anchorY="0.5" positionX="104" positionY="44" z="0" scaleX="1" scaleY="1" labelContent="Cancel" fontStyle="1" fontSize="30" fontColor="{255,255,255}" areaSizeX="210" areaSizeY="30" alignment="1" effect="2" effectOffset="2" effectColor="{94,38,0}" />
+    </ElementNode>
+  </ElementNode>
+</root>

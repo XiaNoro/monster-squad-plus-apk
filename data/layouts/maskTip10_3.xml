@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="Image" elementID="ID_MaskTip" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png">
+    <ElementNode type="NinePatchButton" elementID="ID_9BUTTON_All" anchorX="0" anchorY="0" positionX="0" positionY="0" z="2" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{1066,640}" ninePatchInset="{{1,1},{2,2}}" />
+    <ElementNode type="NinePatch" elementID="ID_maskTip10_3" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{1066,640}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_10_3_1" anchorX="0" anchorY="0" positionX="160" positionY="450" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{452,102}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_10_3_1" anchorX="0" anchorY="0" positionX="6" positionY="56" z="0" scaleX="1" scaleY="1" labelContent="Edit Team" fontStyle="0" fontSize="30" fontColor="{255,226,0}" areaSizeX="440" areaSizeY="40" alignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+        <ElementNode type="Label" elementID="ID_LABEL_10_3_2" anchorX="0" anchorY="0" positionX="6" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Edit your team before entering the Tower" fontStyle="0" fontSize="22" fontColor="{255,138,0}" areaSizeX="440" areaSizeY="40" alignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_10_3_2" anchorX="0" anchorY="0" positionX="160" positionY="250" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{452,142}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_10_3_3" anchorX="0" anchorY="0" positionX="6" positionY="96" z="0" scaleX="1" scaleY="1" labelContent="Clear information" fontStyle="0" fontSize="30" fontColor="{255,226,0}" areaSizeX="440" areaSizeY="40" alignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+        <ElementNode type="Label" elementID="ID_LABEL_10_3_4" anchorX="0" anchorY="0" positionX="6" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Shows the floors you have cleared so farEntering will start from the next floor.Resets each week." fontStyle="0" fontSize="22" fontColor="{255,138,0}" areaSizeX="440" areaSizeY="80" alignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_10_3_3" anchorX="0" anchorY="0" positionX="160" positionY="80" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{452,132}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_10_3_5" anchorX="0" anchorY="0" positionX="6" positionY="86" z="0" scaleX="1" scaleY="1" labelContent="Entrance Ticket" fontStyle="0" fontSize="30" fontColor="{255,226,0}" areaSizeX="440" areaSizeY="40" alignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+        <ElementNode type="Label" elementID="ID_LABEL_10_3_6" anchorX="0" anchorY="0" positionX="6" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Enter the Tower by using a Key.Every 120 minutes, one key is restored." fontStyle="0" fontSize="22" fontColor="{255,138,0}" areaSizeX="440" areaSizeY="70" alignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="Image" elementID="ID_IMAGE_BG" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" />
+  </ElementNode>
+</root>

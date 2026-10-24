@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="Image" elementID="ID_con" anchorX="0.5" anchorY="0.5" positionX="534" positionY="320" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png">
+    <ElementNode type="Image" elementID="ID_posUI" anchorX="0.5" anchorY="0.5" positionX="129" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png">
+      <ElementNode type="NinePatchButton" elementID="ID_btnEsc" anchorX="0.5" anchorY="0.5" positionX="-24" positionY="-240" z="0" scaleX="1" scaleY="1" imageName="9_btn_01.png" ninePatchSize="{210,88}" ninePatchInset="{{48,43},{2,2}}">
+        <ElementNode type="Label" elementID="ID_txtEsc" anchorX="0.5" anchorY="0.5" positionX="104" positionY="44" z="0" scaleX="1" scaleY="1" labelContent="Leave" fontStyle="1" fontSize="30" fontColor="{255,255,255}" areaSizeX="200" areaSizeY="88" alignment="1" lineAlignment="1" effect="2" effectOffset="2" effectColor="{95,40,0}" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnAgain" anchorX="0.5" anchorY="0.5" positionX="-264" positionY="-240" z="0" scaleX="1" scaleY="1" imageName="9_btn_06.png" ninePatchSize="{210,88}" ninePatchInset="{{48,43},{2,2}}">
+        <ElementNode type="Label" elementID="ID_txtAgain" anchorX="0.5" anchorY="0.5" positionX="104" positionY="44" z="0" scaleX="1" scaleY="1" labelContent="Again" fontStyle="1" fontSize="30" fontColor="{255,255,255}" areaSizeX="200" areaSizeY="88" alignment="1" lineAlignment="1" effect="2" effectOffset="2" effectColor="{0,64,0}" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnNext" anchorX="0.5" anchorY="0.5" positionX="-502" positionY="-240" z="0" scaleX="1" scaleY="1" imageName="9_btn_02.png" ninePatchSize="{210,88}" ninePatchInset="{{48,43},{2,2}}">
+        <ElementNode type="Label" elementID="ID_txtNext" anchorX="0.5" anchorY="0.5" positionX="104" positionY="44" z="0" scaleX="1" scaleY="1" labelContent="Next Field" fontStyle="1" fontSize="30" fontColor="{255,255,255}" areaSizeX="200" areaSizeY="88" alignment="1" lineAlignment="1" effect="2" effectOffset="2" effectColor="{15,60,110}" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnShare" anchorX="0" anchorY="0" positionX="112" positionY="-270" z="0" scaleX="1" scaleY="1" imageName="9_btn_11.png" ninePatchSize="{240,62}" ninePatchInset="{{54,0},{2,62}}">
+        <ElementNode type="Label" elementID="ID_txtShare" anchorX="0" anchorY="0" positionX="58" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Share" fontStyle="1" fontSize="22" fontColor="{255,255,255}" areaSizeX="174" areaSizeY="50" alignment="1" lineAlignment="1" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="Image" elementID="ID_posFront" anchorX="0.5" anchorY="0.5" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="9_empty_02.png" />
+    <ElementNode type="Image" elementID="ID_posBack" anchorX="0.5" anchorY="0.5" positionX="0" positionY="0" z="-1" scaleX="1" scaleY="1" imageName="9_empty_02.png" />
+    <ElementNode type="Label" elementID="ID_txttuch" anchorX="0" anchorY="0" positionX="-358" positionY="268" z="0" scaleX="1" scaleY="1" labelContent="몬스터를 터치하면 판매할 수 있습니다." fontStyle="0" fontSize="22" fontColor="{255,255,128}" areaSizeX="700" areaSizeY="40" alignment="1" lineAlignment="1" effect="0" effectOffset="0" effectColor="{255,255,255}" />
+  </ElementNode>
+</root>

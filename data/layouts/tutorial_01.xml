@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="Image" elementID="ID_MaskTip" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png">
+    <ElementNode type="NinePatchButton" elementID="ID_9BUTTON_All" anchorX="0" anchorY="0" positionX="0" positionY="0" z="2" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{1066,640}" ninePatchInset="{{1,1},{2,2}}" />
+    <ElementNode type="NinePatch" elementID="ID_tutorial_01" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{1066,640}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Label" elementID="ID_LABEL_tutorial01_1" anchorX="0" anchorY="0" positionX="329" positionY="156" z="0" scaleX="1" scaleY="1" labelContent="Firepaw" fontStyle="0" fontSize="30" fontColor="{255,226,0}" areaSizeX="620" areaSizeY="40" alignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      <ElementNode type="Label" elementID="ID_LABEL_tutorial01_2" anchorX="0" anchorY="0" positionX="329" positionY="36" z="0" scaleX="1" scaleY="1" labelContent="Welcome to Monster Squad!" fontStyle="0" fontSize="30" fontColor="{255,255,255}" areaSizeX="620" areaSizeY="110" alignment="0" effect="0" effectOffset="0" effectColor="{255,255,255}" />
+    </ElementNode>
+    <ElementNode type="Image" elementID="ID_IMAGE_BG" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" />
+  </ElementNode>
+</root>

@@ -1,0 +1,822 @@
+[
+	{
+		"cube": "normal",
+		"element": "water",
+		"id": "teardrop",
+		"image": "https://static.wikia.nocookie.net/monster-squad/images/a/a9/Teardrop.png/revision/latest?cb=20151027001845",
+		"name": "Teardrop",
+		"passives": [
+			{
+				"element": "water",
+				"pct": 0.03,
+				"stat": "hp"
+			},
+			{
+				"element": "water",
+				"pct": 0.03,
+				"stat": "atk"
+			},
+			{
+				"element": "water",
+				"pct": 0.03,
+				"stat": "def"
+			}
+		],
+		"stars": 1,
+		"stats": {
+			"atk": 45,
+			"def": 8,
+			"hp": 215,
+			"rec": 48
+		}
+	},
+	{
+		"cube": "normal",
+		"element": "water",
+		"id": "dewdrop",
+		"image": "https://static.wikia.nocookie.net/monster-squad/images/c/c8/Dewdrop.png/revision/latest?cb=20151027002114",
+		"name": "Dewdrop",
+		"passives": [
+			{
+				"element": "water",
+				"pct": 0.05,
+				"stat": "hp"
+			},
+			{
+				"element": "water",
+				"pct": 0.05,
+				"stat": "atk"
+			},
+			{
+				"element": "water",
+				"pct": 0.05,
+				"stat": "def"
+			}
+		],
+		"stars": 2,
+		"stats": {
+			"atk": 60,
+			"def": 10,
+			"hp": 300,
+			"rec": 66
+		}
+	},
+	{
+		"cube": "normal",
+		"element": "water",
+		"id": "pluie",
+		"image": "https://static.wikia.nocookie.net/monster-squad/images/2/20/Pluie.png/revision/latest?cb=20151009194614",
+		"name": "Pluie",
+		"passives": [
+			{
+				"element": "water",
+				"pct": 0.1,
+				"stat": "hp"
+			},
+			{
+				"element": "water",
+				"pct": 0.1,
+				"stat": "atk"
+			},
+			{
+				"element": "water",
+				"pct": 0.1,
+				"stat": "def"
+			}
+		],
+		"stars": 3,
+		"stats": {
+			"atk": 90,
+			"def": 15,
+			"hp": 430,
+			"rec": 95
+		}
+	},
+	{
+		"cube": "normal",
+		"element": "nature",
+		"id": "cici",
+		"image": "https://static.wikia.nocookie.net/monster-squad/images/4/42/CiCi.png/revision/latest?cb=20151009194333",
+		"name": "CiCi",
+		"passives": [
+			{
+				"element": "nature",
+				"pct": 0.03,
+				"stat": "hp"
+			},
+			{
+				"element": "nature",
+				"pct": 0.03,
+				"stat": "atk"
+			},
+			{
+				"element": "nature",
+				"pct": 0.03,
+				"stat": "def"
+			}
+		],
+		"stars": 1,
+		"stats": {
+			"atk": 45,
+			"def": 8,
+			"hp": 215,
+			"rec": 48
+		}
+	},
+	{
+		"cube": "normal",
+		"element": "nature",
+		"id": "deedee",
+		"image": "https://static.wikia.nocookie.net/monster-squad/images/2/27/DeeDee.png/revision/latest?cb=20151009194350",
+		"name": "DeeDee",
+		"passives": [
+			{
+				"element": "nature",
+				"pct": 0.05,
+				"stat": "hp"
+			},
+			{
+				"element": "nature",
+				"pct": 0.05,
+				"stat": "atk"
+			},
+			{
+				"element": "nature",
+				"pct": 0.05,
+				"stat": "def"
+			}
+		],
+		"stars": 2,
+		"stats": {
+			"atk": 60,
+			"def": 10,
+			"hp": 300,
+			"rec": 66
+		}
+	},
+	{
+		"cube": "normal",
+		"element": "nature",
+		"id": "liilii",
+		"image": "https://static.wikia.nocookie.net/monster-squad/images/1/1b/LiiLii.png/revision/latest?cb=20151027002759",
+		"name": "LiiLii",
+		"passives": [
+			{
+				"element": "nature",
+				"pct": 0.1,
+				"stat": "hp"
+			},
+			{
+				"element": "nature",
+				"pct": 0.1,
+				"stat": "atk"
+			},
+			{
+				"element": "nature",
+				"pct": 0.1,
+				"stat": "def"
+			}
+		],
+		"stars": 3,
+		"stats": {
+			"atk": 90,
+			"def": 15,
+			"hp": 430,
+			"rec": 95
+		}
+	},
+	{
+		"cube": "normal",
+		"element": "fire",
+		"id": "spark",
+		"image": "https://static.wikia.nocookie.net/monster-squad/images/c/cd/Spark.png/revision/latest?cb=20151027172249",
+		"name": "Spark",
+		"passives": [
+			{
+				"element": "fire",
+				"pct": 0.03,
+				"stat": "hp"
+			},
+			{
+				"element": "fire",
+				"pct": 0.03,
+				"stat": "atk"
+			},
+			{
+				"element": "fire",
+				"pct": 0.03,
+				"stat": "def"
+			}
+		],
+		"stars": 1,
+		"stats": {
+			"atk": 45,
+			"def": 8,
+			"hp": 215,
+			"rec": 48
+		}
+	},
+	{
+		"cube": "normal",
+		"element": "fire",
+		"id": "flame",
+		"image": "https://static.wikia.nocookie.net/monster-squad/images/9/9f/Flame.png/revision/latest?cb=20151009194232",
+		"name": "Flame",
+		"passives": [
+			{
+				"element": "fire",
+				"pct": 0.05,
+				"stat": "hp"
+			},
+			{
+				"element": "fire",
+				"pct": 0.05,
+				"stat": "atk"
+			},
+			{
+				"element": "fire",
+				"pct": 0.05,
+				"stat": "def"
+			}
+		],
+		"stars": 2,
+		"stats": {
+			"atk": 60,
+			"def": 10,
+			"hp": 300,
+			"rec": 66
+		}
+	},
+	{
+		"cube": "normal",
+		"element": "fire",
+		"id": "fireball",
+		"image": "https://static.wikia.nocookie.net/monster-squad/images/a/ae/Fireball.png/revision/latest?cb=20151027172518",
+		"name": "Fireball",
+		"passives": [
+			{
+				"element": "fire",
+				"pct": 0.1,
+				"stat": "hp"
+			},
+			{
+				"element": "fire",
+				"pct": 0.1,
+				"stat": "atk"
+			},
+			{
+				"element": "fire",
+				"pct": 0.1,
+				"stat": "def"
+			}
+		],
+		"stars": 3,
+		"stats": {
+			"atk": 90,
+			"def": 15,
+			"hp": 430,
+			"rec": 95
+		}
+	},
+	{
+		"cube": "normal",
+		"element": "all",
+		"id": "mim",
+		"image": "https://static.wikia.nocookie.net/monster-squad/images/2/27/Mim.png/revision/latest?cb=20151009194418",
+		"name": "Mim",
+		"passives": [
+			{
+				"element": "normal",
+				"pct": 0.03,
+				"stat": "hp"
+			},
+			{
+				"element": "normal",
+				"pct": 0.03,
+				"stat": "atk"
+			},
+			{
+				"element": "normal",
+				"pct": 0.03,
+				"stat": "def"
+			}
+		],
+		"stars": 1,
+		"stats": {
+			"atk": 45,
+			"def": 8,
+			"hp": 215,
+			"rec": 48
+		}
+	},
+	{
+		"cube": "normal",
+		"element": "all",
+		"id": "mimling",
+		"image": "https://static.wikia.nocookie.net/monster-squad/images/e/e8/Mimling.png/revision/latest?cb=20151009194435",
+		"name": "Mimling",
+		"passives": [
+			{
+				"element": "normal",
+				"pct": 0.05,
+				"stat": "hp"
+			},
+			{
+				"element": "normal",
+				"pct": 0.05,
+				"stat": "atk"
+			},
+			{
+				"element": "normal",
+				"pct": 0.05,
+				"stat": "def"
+			}
+		],
+		"stars": 2,
+		"stats": {
+			"atk": 60,
+			"def": 10,
+			"hp": 300,
+			"rec": 66
+		}
+	},
+	{
+		"cube": "normal",
+		"element": "water",
+		"id": "mimzy",
+		"image": "https://static.wikia.nocookie.net/monster-squad/images/7/7b/Mimzy.png/revision/latest?cb=20151009194453",
+		"name": "Mimzy",
+		"passives": [
+			{
+				"element": "normal",
+				"pct": 0.1,
+				"stat": "hp"
+			},
+			{
+				"element": "normal",
+				"pct": 0.1,
+				"stat": "atk"
+			},
+			{
+				"element": "normal",
+				"pct": 0.1,
+				"stat": "def"
+			}
+		],
+		"stars": 3,
+		"stats": {
+			"atk": 90,
+			"def": 15,
+			"hp": 430,
+			"rec": 95
+		}
+	},
+	{
+		"cube": "rare",
+		"element": "all",
+		"id": "bejami",
+		"image": "https://static.wikia.nocookie.net/monster-squad/images/f/f9/Bejami.png/revision/latest?cb=20151027173010",
+		"name": "Bejami",
+		"passives": [
+			{
+				"element": "normal",
+				"pct": 0.1,
+				"stat": "hp"
+			},
+			{
+				"element": "normal",
+				"pct": 0.1,
+				"stat": "atk"
+			},
+			{
+				"element": "normal",
+				"pct": 0.1,
+				"stat": "def"
+			},
+			{
+				"element": "normal",
+				"pct": 0.03,
+				"stat": "crit"
+			},
+			{
+				"element": "all",
+				"pct": 0.1,
+				"stat": "hp"
+			},
+			{
+				"element": "all",
+				"pct": 0.1,
+				"stat": "atk"
+			},
+			{
+				"element": "all",
+				"pct": 0.1,
+				"stat": "def"
+			},
+			{
+				"element": "all",
+				"pct": 0.03,
+				"stat": "crit"
+			}
+		],
+		"stars": 4,
+		"stats": {
+			"atk": 90,
+			"def": 15,
+			"hp": 430,
+			"rec": 95
+		}
+	},
+	{
+		"cube": "rare",
+		"element": "fire",
+		"id": "meep",
+		"image": "https://static.wikia.nocookie.net/monster-squad/images/a/a3/Meep.png/revision/latest?cb=20151027173103",
+		"name": "Meep",
+		"passives": [
+			{
+				"element": "fire",
+				"pct": 0.1,
+				"stat": "hp"
+			},
+			{
+				"element": "fire",
+				"pct": 0.1,
+				"stat": "atk"
+			},
+			{
+				"element": "fire",
+				"pct": 0.1,
+				"stat": "def"
+			},
+			{
+				"element": "fire",
+				"pct": 0.03,
+				"stat": "crit"
+			},
+			{
+				"element": "all",
+				"pct": 0.1,
+				"stat": "hp"
+			},
+			{
+				"element": "all",
+				"pct": 0.1,
+				"stat": "atk"
+			},
+			{
+				"element": "all",
+				"pct": 0.1,
+				"stat": "def"
+			},
+			{
+				"element": "all",
+				"pct": 0.03,
+				"stat": "crit"
+			}
+		],
+		"stars": 4,
+		"stats": {
+			"atk": 90,
+			"def": 15,
+			"hp": 430,
+			"rec": 95
+		}
+	},
+	{
+		"cube": "rare",
+		"element": "nature",
+		"id": "poppie",
+		"image": "https://static.wikia.nocookie.net/monster-squad/images/6/67/Poppie.png/revision/latest?cb=20151027173206",
+		"name": "Poppie",
+		"passives": [
+			{
+				"element": "nature",
+				"pct": 0.1,
+				"stat": "hp"
+			},
+			{
+				"element": "nature",
+				"pct": 0.1,
+				"stat": "atk"
+			},
+			{
+				"element": "nature",
+				"pct": 0.1,
+				"stat": "def"
+			},
+			{
+				"element": "nature",
+				"pct": 0.03,
+				"stat": "crit"
+			},
+			{
+				"element": "all",
+				"pct": 0.1,
+				"stat": "hp"
+			},
+			{
+				"element": "all",
+				"pct": 0.1,
+				"stat": "atk"
+			},
+			{
+				"element": "all",
+				"pct": 0.1,
+				"stat": "def"
+			},
+			{
+				"element": "all",
+				"pct": 0.1,
+				"stat": "crit"
+			}
+		],
+		"stars": 4,
+		"stats": {
+			"atk": 90,
+			"def": 15,
+			"hp": 430,
+			"rec": 95
+		}
+	},
+	{
+		"cube": "rare",
+		"element": "water",
+		"id": "woofles",
+		"image": "https://static.wikia.nocookie.net/monster-squad/images/6/6b/Woofles.png/revision/latest?cb=20151027173317",
+		"name": "Woofles",
+		"passives": [
+			{
+				"element": "water",
+				"pct": 0.1,
+				"stat": "hp"
+			},
+			{
+				"element": "water",
+				"pct": 0.03,
+				"stat": "crit"
+			},
+			{
+				"element": "all",
+				"pct": 0.1,
+				"stat": "hp"
+			},
+			{
+				"element": "all",
+				"pct": 0.1,
+				"stat": "atk"
+			},
+			{
+				"element": "all",
+				"pct": 0.1,
+				"stat": "def"
+			}
+		],
+		"stars": 4,
+		"stats": {
+			"atk": 90,
+			"def": 15,
+			"hp": 430,
+			"rec": 95
+		}
+	},
+	{
+		"cube": "rare",
+		"element": "all",
+		"id": "boogie",
+		"image": "https://static.wikia.nocookie.net/monster-squad/images/4/4d/Boogie.png/revision/latest?cb=20151027173400",
+		"name": "Boogie",
+		"passives": [
+			{
+				"element": "normal",
+				"pct": 0.1,
+				"stat": "hp"
+			},
+			{
+				"element": "normal",
+				"pct": 0.1,
+				"stat": "atk"
+			},
+			{
+				"element": "normal",
+				"pct": 0.1,
+				"stat": "def"
+			},
+			{
+				"element": "normal",
+				"pct": 0.03,
+				"stat": "crit"
+			},
+			{
+				"element": "all",
+				"pct": 0.1,
+				"stat": "hp"
+			},
+			{
+				"element": "all",
+				"pct": 0.1,
+				"stat": "atk"
+			},
+			{
+				"element": "all",
+				"pct": 0.1,
+				"stat": "def"
+			},
+			{
+				"element": "all",
+				"pct": 0.03,
+				"stat": "crit"
+			}
+		],
+		"stars": 4,
+		"stats": {
+			"atk": 90,
+			"def": 95,
+			"hp": 430,
+			"rec": 11
+		}
+	},
+	{
+		"cube": "rare",
+		"element": "fire",
+		"id": "lucerna",
+		"image": "https://static.wikia.nocookie.net/monster-squad/images/e/ef/Lucerna.png/revision/latest?cb=20151027173447",
+		"name": "Lucerna",
+		"passives": [
+			{
+				"element": "fire",
+				"pct": 0.1,
+				"stat": "hp"
+			},
+			{
+				"element": "fire",
+				"pct": 0.1,
+				"stat": "atk"
+			},
+			{
+				"element": "fire",
+				"pct": 0.1,
+				"stat": "def"
+			},
+			{
+				"element": "fire",
+				"pct": 0.03,
+				"stat": "crit"
+			},
+			{
+				"element": "all",
+				"pct": 0.1,
+				"stat": "hp"
+			},
+			{
+				"element": "all",
+				"pct": 0.1,
+				"stat": "atk"
+			},
+			{
+				"element": "all",
+				"pct": 0.1,
+				"stat": "def"
+			},
+			{
+				"element": "all",
+				"pct": 0.03,
+				"stat": "crit"
+			}
+		],
+		"stars": 4,
+		"stats": {
+			"atk": 90,
+			"def": 15,
+			"hp": 430,
+			"rec": 95
+		}
+	},
+	{
+		"cube": "rare",
+		"element": "nature",
+		"id": "gir",
+		"image": "https://static.wikia.nocookie.net/monster-squad/images/0/00/Gir.png/revision/latest?cb=20151027173540",
+		"name": "Gir",
+		"passives": [
+			{
+				"element": "nature",
+				"pct": 0.1,
+				"stat": "hp"
+			},
+			{
+				"element": "nature",
+				"pct": 0.1,
+				"stat": "atk"
+			},
+			{
+				"element": "nature",
+				"pct": 0.1,
+				"stat": "def"
+			},
+			{
+				"element": "nature",
+				"pct": 0.03,
+				"stat": "crit"
+			},
+			{
+				"element": "all",
+				"pct": 0.1,
+				"stat": "hp"
+			},
+			{
+				"element": "all",
+				"pct": 0.1,
+				"stat": "atk"
+			},
+			{
+				"element": "all",
+				"pct": 0.1,
+				"stat": "def"
+			},
+			{
+				"element": "all",
+				"pct": 0.03,
+				"stat": "crit"
+			}
+		],
+		"stars": 4,
+		"stats": {
+			"atk": 90,
+			"def": 15,
+			"hp": 430,
+			"rec": 95
+		}
+	},
+	{
+		"cube": "rare",
+		"element": "water",
+		"id": "nessy",
+		"image": "https://static.wikia.nocookie.net/monster-squad/images/0/09/Nessy.png/revision/latest?cb=20151027173619",
+		"name": "Nessy",
+		"passives": [
+			{
+				"element": "water",
+				"pct": 0.1,
+				"stat": "hp"
+			},
+			{
+				"element": "water",
+				"pct": 0.1,
+				"stat": "atk"
+			},
+			{
+				"element": "water",
+				"pct": 0.1,
+				"stat": "def"
+			},
+			{
+				"element": "water",
+				"pct": 0.03,
+				"stat": "crit"
+			},
+			{
+				"element": "all",
+				"pct": 0.1,
+				"stat": "hp"
+			},
+			{
+				"element": "all",
+				"pct": 0.1,
+				"stat": "atk"
+			},
+			{
+				"element": "all",
+				"pct": 0.1,
+				"stat": "def"
+			},
+			{
+				"element": "all",
+				"pct": 0.03,
+				"stat": "crit"
+			}
+		],
+		"stars": 4,
+		"stats": {
+			"atk": 90,
+			"def": 15,
+			"hp": 430,
+			"rec": 95
+		}
+	},
+	{
+		"cube": "rare",
+		"element": "all",
+		"id": "reaper",
+		"image": "https://static.wikia.nocookie.net/monster-squad/images/6/6a/Reaper.png/revision/latest?cb=20151027173853",
+		"name": "Reaper",
+		"passives": [],
+		"stars": 4,
+		"stats": {
+			"atk": 90,
+			"def": 15,
+			"hp": 430,
+			"rec": 95
+		}
+	}
+]

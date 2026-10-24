@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_9PATCH_2" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_black60.png" ninePatchSize="{1066,640}" ninePatchInset="{{1,1},{2,2}}">
+    <ElementNode type="NinePatch" elementID="ID_Dialog" anchorX="0" anchorY="0" positionX="230" positionY="148" z="0" scaleX="1" scaleY="1" imageName="9_Back_19.png" ninePatchSize="{606,344}" ninePatchInset="{{50,50},{2,2}}">
+      <ElementNode type="NinePatch" elementID="ID_baseback" anchorX="0" anchorY="0" positionX="12" positionY="16" z="0" scaleX="1" scaleY="1" imageName="9_Back_01.png" ninePatchSize="{580,252}" ninePatchInset="{{84,126},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_title" anchorX="0" anchorY="0" positionX="24" positionY="256" z="0" scaleX="1" scaleY="1" imageName="9_frame_04.png" ninePatchSize="{350,56}" ninePatchInset="{{32,0},{2,56}}">
+          <ElementNode type="Label" elementID="ID_titleText" anchorX="0" anchorY="0" positionX="24" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Select an Arena" fontStyle="1" fontSize="30" fontColor="{255,220,125}" areaSizeX="300" areaSizeY="40" alignment="0" lineAlignment="0" effect="1" effectOffset="3" effectColor="{80,40,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatchButton" elementID="ID_btnEsc" anchorX="0.5" anchorY="0.5" positionX="508" positionY="284" z="0" scaleX="1" scaleY="1" imageName="9_btn_05.png" ninePatchSize="{102,60}" ninePatchInset="{{28,28},{2,2}}">
+          <ElementNode type="Image" elementID="ID_IMAGE_1" anchorX="0" anchorY="0" positionX="22" positionY="4" z="0" scaleX="1" scaleY="1" imageName="K_esc_01.png" />
+        </ElementNode>
+        <ElementNode type="NinePatchButton" elementID="ID_btnPVP1" anchorX="0.5" anchorY="0.5" positionX="160" positionY="128" z="0" scaleX="1" scaleY="1" imageName="9_btn_01.png" ninePatchSize="{216,148}" ninePatchInset="{{48,43},{2,2}}">
+          <ElementNode type="Label" elementID="ID_LABEL_5" anchorX="0" anchorY="0" positionX="6" positionY="10" z="1" scaleX="1" scaleY="1" labelContent="Arena1" fontStyle="1" fontSize="28" fontColor="{255,255,255}" areaSizeX="200" areaSizeY="40" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{94,38,0}" />
+          <ElementNode type="Image" elementID="ID_IMAGE_2" anchorX="0.5" anchorY="0.5" positionX="108" positionY="82" z="0" scaleX="1" scaleY="1" imageName="B_pvp_02.png" />
+          <ElementNode type="Image" elementID="ID_alert1" anchorX="0" anchorY="0" positionX="0" positionY="100" z="1" scaleX="1.4" scaleY="1.4" imageName="K_alert_01.png" />
+        </ElementNode>
+        <ElementNode type="NinePatchButton" elementID="ID_btnPVP2" anchorX="0.5" anchorY="0.5" positionX="418" positionY="128" z="0" scaleX="1" scaleY="1" imageName="9_btn_01.png" ninePatchSize="{216,148}" ninePatchInset="{{48,43},{2,2}}">
+          <ElementNode type="Label" elementID="ID_LABEL_6" anchorX="0" anchorY="0" positionX="6" positionY="10" z="1" scaleX="1" scaleY="1" labelContent="Arena2" fontStyle="1" fontSize="28" fontColor="{255,255,255}" areaSizeX="200" areaSizeY="40" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{94,38,0}" />
+          <ElementNode type="Image" elementID="ID_IMAGE_2_1" anchorX="0.5" anchorY="0.5" positionX="108" positionY="86" z="0" scaleX="1" scaleY="1" imageName="B_pvp_03.png" />
+          <ElementNode type="Image" elementID="ID_alert2" anchorX="0" anchorY="0" positionX="0" positionY="100" z="1" scaleX="1.4" scaleY="1.4" imageName="K_alert_01.png" />
+        </ElementNode>
+      </ElementNode>
+    </ElementNode>
+  </ElementNode>
+</root>

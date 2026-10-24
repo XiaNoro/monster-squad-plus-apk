@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="Image" elementID="ID_main" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png">
+    <ElementNode type="Image" elementID="ID_IMAGE_Leader" anchorX="0.5" anchorY="0.5" positionX="644" positionY="216" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" />
+    <ElementNode type="Image" elementID="ID_IMAGE_monC" anchorX="0.5" anchorY="0.5" positionX="208" positionY="216" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" />
+    <ElementNode type="Image" elementID="ID_IMAGE_monB" anchorX="0" anchorY="0" positionX="466" positionY="362" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" />
+    <ElementNode type="Image" elementID="ID_IMAGE_monA" anchorX="0" anchorY="0" positionX="416" positionY="152" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" />
+    <ElementNode type="Button" elementID="ID_btnPost" anchorX="0" anchorY="0" positionX="248" positionY="544" z="0" scaleX="1" scaleY="1" imageName="B_post_01.png">
+      <ElementNode type="Label" elementID="ID_LABEL_2" anchorX="0" anchorY="0" positionX="40" positionY="10" z="0" scaleX="1" scaleY="1" labelContent="Brag" fontStyle="1" fontSize="20" fontColor="{255,253,203}" areaSizeX="82" areaSizeY="22" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{110,62,0}" />
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_teamRank" anchorX="0" anchorY="0" positionX="846" positionY="490" z="0" scaleX="1" scaleY="1" imageName="9_Back_13.png" ninePatchSize="{214,76}" ninePatchInset="{{12,12},{2,2}}">
+      <ElementNode type="Label" elementID="ID_LABEL_3" anchorX="0" anchorY="0" positionX="8" positionY="48" z="0" scaleX="1" scaleY="1" labelContent="Team Rank" fontStyle="1" fontSize="18" fontColor="{250,250,175}" areaSizeX="100" areaSizeY="22" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+      <ElementNode type="NinePatch" elementID="ID_rankImage" anchorX="0" anchorY="0" positionX="76" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{120,60}" ninePatchInset="{{1,1},{2,2}}" />
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_teamType" anchorX="0" anchorY="0" positionX="846" positionY="414" z="0" scaleX="1" scaleY="1" imageName="9_Back_13.png" ninePatchSize="{214,70}" ninePatchInset="{{12,12},{2,2}}">
+      <ElementNode type="Label" elementID="ID_LABEL_3_1" anchorX="0" anchorY="0" positionX="6" positionY="42" z="0" scaleX="1" scaleY="1" labelContent="Team Type" fontStyle="1" fontSize="18" fontColor="{250,250,175}" areaSizeX="100" areaSizeY="22" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+      <ElementNode type="NinePatch" elementID="ID_typeAttack" anchorX="0" anchorY="0" positionX="-49" positionY="-3" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{20,20}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_4" anchorX="0" anchorY="0" positionX="117" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Attacker" fontStyle="1" fontSize="28" fontColor="{255,145,30}" areaSizeX="148" areaSizeY="36" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+        <ElementNode type="Image" elementID="ID_IMAGE_2" anchorX="0" anchorY="0" positionX="66" positionY="4" z="0" scaleX="1" scaleY="1" imageName="T_type_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_typeDefence" anchorX="0" anchorY="0" positionX="-49" positionY="-3" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{20,20}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_5" anchorX="0" anchorY="0" positionX="116" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Defender" fontStyle="1" fontSize="28" fontColor="{195,215,30}" areaSizeX="148" areaSizeY="36" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+        <ElementNode type="Image" elementID="ID_IMAGE_3" anchorX="0" anchorY="0" positionX="66" positionY="4" z="0" scaleX="1" scaleY="1" imageName="T_type_02.png" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_typeSupport" anchorX="0" anchorY="0" positionX="-49" positionY="-3" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{20,20}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_6" anchorX="0" anchorY="0" positionX="115" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Supporter" fontStyle="1" fontSize="28" fontColor="{45,220,205}" areaSizeX="148" areaSizeY="36" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+        <ElementNode type="Image" elementID="ID_IMAGE_4" anchorX="0" anchorY="0" positionX="66" positionY="4" z="0" scaleX="1" scaleY="1" imageName="T_type_03.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatchButton" elementID="ID_btnBattle" anchorX="0" anchorY="0" positionX="846" positionY="150" z="0" scaleX="1" scaleY="1" imageName="9_btn_01.png" ninePatchSize="{214,90}" ninePatchInset="{{48,43},{2,2}}">
+      <ElementNode type="Image" elementID="ID_IMAGE_5_1" anchorX="0" anchorY="0" positionX="8" positionY="4" z="0" scaleX="0.7" scaleY="0.7" imageName="B_pvp_01.png" />
+      <ElementNode type="Label" elementID="ID_LABEL_1_1" anchorX="0" anchorY="0" positionX="70" positionY="28" z="0" scaleX="1" scaleY="1" labelContent="Arena" fontStyle="1" fontSize="28" fontColor="{255,255,255}" areaSizeX="140" areaSizeY="34" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{94,38,0}" />
+      <ElementNode type="Image" elementID="ID_IMAGE_6" anchorX="0.5" anchorY="0.5" positionX="28" positionY="62" z="0" scaleX="1.4" scaleY="1.4" imageName="K_alert_01.png" />
+    </ElementNode>
+    <ElementNode type="NinePatchButton" elementID="ID_btnStory" anchorX="0" anchorY="0" positionX="846" positionY="6" z="0" scaleX="1" scaleY="1" imageName="9_btn_03.png" ninePatchSize="{214,140}" ninePatchInset="{{48,43},{2,2}}">
+      <ElementNode type="Image" elementID="ID_IMAGE_5" anchorX="0" anchorY="0" positionX="32" positionY="20" z="0" scaleX="1" scaleY="1" imageName="B_story_01.png" />
+      <ElementNode type="Label" elementID="ID_LABEL_1" anchorX="0" anchorY="0" positionX="0" positionY="14" z="0" scaleX="1" scaleY="1" labelContent="Begin Quest" fontStyle="1" fontSize="28" fontColor="{255,255,255}" areaSizeX="214" areaSizeY="34" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{40,0,77}" />
+      <ElementNode type="Image" elementID="ID_IMAGE_15" anchorX="0" anchorY="0" positionX="122" positionY="74" z="0" scaleX="0.64" scaleY="0.64" imageName="K0_eventTag_01.png" />
+    </ElementNode>
+    <ElementNode type="NinePatchButton" elementID="ID_hotTime" anchorX="0" anchorY="0" positionX="846" positionY="336" z="0" scaleX="1" scaleY="1" imageName="9_frame_04.png" ninePatchSize="{214,72}" ninePatchInset="{{32,27},{2,1}}">
+      <ElementNode type="Image" elementID="ID_IMAGE_7" anchorX="0" anchorY="0" positionX="14" positionY="8" z="0" scaleX="1" scaleY="1" imageName="K_event_01.png" />
+    </ElementNode>
+    <ElementNode type="NinePatchButton" elementID="ID_btnTower" anchorX="0" anchorY="0" positionX="846" positionY="244" z="0" scaleX="1" scaleY="1" imageName="9_btn_06.png" ninePatchSize="{214,90}" ninePatchInset="{{48,43},{2,2}}">
+      <ElementNode type="Image" elementID="ID_IMAGE_5_1_1" anchorX="0" anchorY="0" positionX="8" positionY="8" z="0" scaleX="1" scaleY="1" imageName="I_tower_01.png" />
+      <ElementNode type="Label" elementID="ID_LABEL_1_1_1" anchorX="0" anchorY="0" positionX="58" positionY="28" z="0" scaleX="1" scaleY="1" labelContent="Sky Tower" fontStyle="1" fontSize="26" fontColor="{255,255,255}" areaSizeX="140" areaSizeY="34" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,64,0}" />
+      <ElementNode type="Image" elementID="ID_IMAGE_lock1" anchorX="0" anchorY="0" positionX="82" positionY="16" z="0" scaleX="1.4" scaleY="1.4" imageName="I_lock_03.png" />
+    </ElementNode>
+    <ElementNode type="Button" elementID="ID_btnMessage" anchorX="0" anchorY="0" positionX="6" positionY="466" z="0" scaleX="1" scaleY="1" imageName="B_message_01.png">
+      <ElementNode type="Image" elementID="ID_IMAGE_1_1" anchorX="0" anchorY="0" positionX="42" positionY="34" z="0" scaleX="1" scaleY="1" imageName="K_new_02.png" />
+    </ElementNode>
+    <ElementNode type="Button" elementID="ID_btnMission" anchorX="0" anchorY="0" positionX="6" positionY="382" z="0" scaleX="1" scaleY="1" imageName="B_mission_01.png">
+      <ElementNode type="Image" elementID="ID_IMAGE_1" anchorX="0" anchorY="0" positionX="52" positionY="52" z="0" scaleX="0.6" scaleY="0.6" imageName="K_alert_01.png" />
+      <ElementNode type="Image" elementID="ID_IMAGE_14" anchorX="0" anchorY="0" positionX="42" positionY="42" z="0" scaleX="1" scaleY="1" imageName="K_new_02.png" />
+    </ElementNode>
+    <ElementNode type="Button" elementID="ID_btnIsland" anchorX="0" anchorY="0" positionX="6" positionY="298" z="0" scaleX="1" scaleY="1" imageName="B_mission_03.png">
+      <ElementNode type="Image" elementID="ID_IMAGE_13" anchorX="0" anchorY="0" positionX="42" positionY="42" z="0" scaleX="1" scaleY="1" imageName="K_new_02.png" />
+      <ElementNode type="Image" elementID="ID_IMAGE_12" anchorX="0" anchorY="0" positionX="52" positionY="52" z="0" scaleX="0.6" scaleY="0.6" imageName="K_alert_01.png" />
+      <ElementNode type="NinePatch" elementID="ID_questStart_1" anchorX="0" anchorY="0" positionX="100" positionY="6" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{280,64}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_8_2" anchorX="0" anchorY="0" positionX="-12" positionY="22" z="0" scaleX="1" scaleY="1" imageName="I_triangle_01.png" />
+        <ElementNode type="Label" elementID="ID_LABEL_7_2" anchorX="0" anchorY="0" positionX="52" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="txt" fontStyle="0" fontSize="20" fontColor="{255,235,116}" areaSizeX="220" areaSizeY="60" alignment="1" lineAlignment="1" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+        <ElementNode type="Image" elementID="ID_IMAGE_9_2" anchorX="0" anchorY="0" positionX="6" positionY="12" z="0" scaleX="1" scaleY="1" imageName="I_mon_02.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="Button" elementID="ID_btnBeginner" anchorX="0" anchorY="0" positionX="6" positionY="214" z="0" scaleX="1" scaleY="1" imageName="B_mission_04.png">
+      <ElementNode type="Image" elementID="ID_IMAGE_11" anchorX="0" anchorY="0" positionX="52" positionY="52" z="0" scaleX="0.6" scaleY="0.6" imageName="K_alert_01.png" />
+      <ElementNode type="Image" elementID="ID_IMAGE_10" anchorX="0" anchorY="0" positionX="42" positionY="42" z="0" scaleX="1" scaleY="1" imageName="K_new_02.png" />
+      <ElementNode type="NinePatch" elementID="ID_questStart_2" anchorX="0" anchorY="0" positionX="100" positionY="6" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{280,64}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_8" anchorX="0" anchorY="0" positionX="-12" positionY="22" z="0" scaleX="1" scaleY="1" imageName="I_triangle_01.png" />
+        <ElementNode type="Label" elementID="ID_LABEL_7" anchorX="0" anchorY="0" positionX="52" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="txt" fontStyle="0" fontSize="20" fontColor="{255,235,116}" areaSizeX="220" areaSizeY="60" alignment="1" lineAlignment="1" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+        <ElementNode type="Image" elementID="ID_IMAGE_9" anchorX="0" anchorY="0" positionX="6" positionY="12" z="0" scaleX="1" scaleY="1" imageName="I_mon_02.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="Button" elementID="ID_btnCoupon" anchorX="0" anchorY="0" positionX="6" positionY="130" z="0" scaleX="1" scaleY="1" imageName="I_coupon_01.png" />
+    <ElementNode type="Button" elementID="ID_btnAchieve" anchorX="0" anchorY="0" positionX="6" positionY="130" z="0" scaleX="1" scaleY="1" imageName="B_mission_05.png" />
+    <ElementNode type="Button" elementID="ID_btnDailyJem" anchorX="0" anchorY="0" positionX="117" positionY="467" z="0" scaleX="1" scaleY="1" imageName="I_present_02.png">
+      <ElementNode type="Image" elementID="ID_IMAGE_16" anchorX="0" anchorY="0" positionX="29" positionY="22" z="0" scaleX="1" scaleY="1" imageName="I_alert_02.png" />
+    </ElementNode>
+  </ElementNode>
+</root>

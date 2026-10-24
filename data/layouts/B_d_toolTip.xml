@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_achieveToolTip" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" imageName="9_Back_12.png" ninePatchSize="{484,116}" ninePatchInset="{{12,12},{2,2}}">
+    <ElementNode type="Label" elementID="ID_achieveNameText" anchorX="0" anchorY="0" positionX="20" positionY="76" z="0" labelContent="밀림의 섬 큐몬 제거" fontStyle="1" fontSize="22" fontColor="{255,255,255}" areaSizeX="400" areaSizeY="28" alignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+    <ElementNode type="Label" elementID="ID_achieveText" anchorX="0" anchorY="0" positionX="20" positionY="0" z="0" labelContent="살라만다(1/5), 화염슬라임(2/5), 두더지(3/5)," fontStyle="1" fontSize="20" fontColor="{255,220,135}" areaSizeX="440" areaSizeY="74" alignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+  </ElementNode>
+  <ElementNode type="NinePatch" elementID="ID_skillToolTip" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" imageName="9_Back_12.png" ninePatchSize="{400,84}" ninePatchInset="{{12,12},{2,2}}">
+    <ElementNode type="Label" elementID="ID_skillNameText" anchorX="0" anchorY="0" positionX="20" positionY="46" z="0" labelContent="화염 스플레시" fontStyle="1" fontSize="22" fontColor="{255,255,0}" areaSizeX="200" areaSizeY="28" alignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+    <ElementNode type="Label" elementID="ID_manaText" anchorX="0" anchorY="0" positionX="236" positionY="46" z="0" labelContent="마나소비 15" fontStyle="1" fontSize="22" fontColor="{130,245,255}" areaSizeX="150" areaSizeY="28" alignment="2" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+    <ElementNode type="Label" elementID="ID_skillText" anchorX="0" anchorY="0" positionX="20" positionY="0" z="0" labelContent="150% 공격력으로 적 1개체를 공격" fontStyle="1" fontSize="20" fontColor="{255,220,135}" areaSizeX="370" areaSizeY="40" alignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+  </ElementNode>
+</root>

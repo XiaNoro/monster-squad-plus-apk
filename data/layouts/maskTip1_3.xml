@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="Image" elementID="ID_MaskTip" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png">
+    <ElementNode type="NinePatchButton" elementID="ID_9BUTTON_All" anchorX="0" anchorY="0" positionX="0" positionY="0" z="2" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{1066,640}" ninePatchInset="{{1,1},{2,2}}" />
+    <ElementNode type="NinePatch" elementID="ID_maskTip1_3" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{1066,640}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_1_3_1" anchorX="0" anchorY="0" positionX="146" positionY="355" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{330,142}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_1_3_1" anchorX="0" anchorY="0" positionX="6" positionY="95" z="0" scaleX="1" scaleY="1" labelContent="MISSION" fontStyle="0" fontSize="30" fontColor="{255,216,0}" areaSizeX="318" areaSizeY="40" alignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+        <ElementNode type="Label" elementID="ID_LABEL_1_3_2" anchorX="0" anchorY="0" positionX="6" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="You can view Mission details or Receive Mission Rewards. " fontStyle="0" fontSize="22" fontColor="{255,162,0}" areaSizeX="318" areaSizeY="76" alignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_1_3_2" anchorX="0" anchorY="0" positionX="14" positionY="94" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{468,142}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_1_3_3" anchorX="0" anchorY="0" positionX="6" positionY="95" z="0" scaleX="1" scaleY="1" labelContent="MESSAGES" fontStyle="0" fontSize="30" fontColor="{255,216,0}" areaSizeX="456" areaSizeY="40" alignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+        <ElementNode type="Label" elementID="ID_LABEL_1_3_4" anchorX="0" anchorY="0" positionX="6" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="You can check messages with gifts.Messages will be deleted after a period of time. " fontStyle="0" fontSize="22" fontColor="{255,162,0}" areaSizeX="456" areaSizeY="76" alignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_1_3_3" anchorX="0" anchorY="0" positionX="565" positionY="420" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{294,88}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_1_3_5" anchorX="0" anchorY="0" positionX="6" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Touch the Cube-Mon to view its information.  " fontStyle="0" fontSize="22" fontColor="{255,162,0}" areaSizeX="282" areaSizeY="76" alignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="Image" elementID="ID_IMAGE_BG" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" />
+  </ElementNode>
+</root>

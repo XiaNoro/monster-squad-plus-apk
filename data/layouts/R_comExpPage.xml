@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_monster" anchorX="0" anchorY="0" positionX="38" positionY="8" z="0" scaleX="1" scaleY="1" imageName="9_Back_01.png" ninePatchSize="{488,560}" ninePatchInset="{{84,126},{2,2}}">
+    <ElementNode type="NinePatch" elementID="ID_9PATCH_4" anchorX="0" anchorY="0" positionX="44" positionY="484" z="0" scaleX="1" scaleY="1" imageName="9_Back_03.png" ninePatchSize="{220,52}" ninePatchInset="{{20,20},{1,2}}">
+      <ElementNode type="Label" elementID="ID_LABEL_3" anchorX="0" anchorY="0" positionX="7" positionY="1" z="0" scaleX="1" scaleY="1" labelContent="Select Material" fontStyle="1" fontSize="28" fontColor="{255,220,125}" areaSizeX="210" areaSizeY="40" alignment="0" lineAlignment="0" effect="1" effectOffset="3" effectColor="{80,40,0}" />
+    </ElementNode>
+    <ElementNode type="NinePatchButton" elementID="ID_btnAlign" anchorX="0.5" anchorY="0.5" positionX="368" positionY="512" z="0" scaleX="1" scaleY="1" imageName="9_btn_10.png" ninePatchSize="{150,60}" ninePatchInset="{{38,0},{2,56}}">
+      <ElementNode type="Label" elementID="ID_LABEL_4" anchorX="0" anchorY="0" positionX="4" positionY="12" z="0" scaleX="1" scaleY="1" labelContent="Arrange / Level" fontStyle="1" fontSize="20" fontColor="{75,35,0}" areaSizeX="140" areaSizeY="30" alignment="1" lineAlignment="0" effect="0" effectOffset="2" effectColor="{95,40,0}" />
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_9PATCH_5" anchorX="0" anchorY="0" positionX="32" positionY="84" z="0" scaleX="1" scaleY="1" imageName="9_Back_02.png" ninePatchSize="{426,390}" ninePatchInset="{{15,15},{2,2}}">
+      <ElementNode type="NinePatch" elementID="ID_slide" anchorX="0" anchorY="0" positionX="410" positionY="6" z="0" scaleX="1" scaleY="1" imageName="9_slide_01.png" ninePatchSize="{10,378}" ninePatchInset="{{0,5},{10,2}}">
+        <ElementNode type="NinePatch" elementID="ID_bar" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_slide_02.png" ninePatchSize="{10,378}" ninePatchInset="{{0,5},{10,2}}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_ID_arrayPosition" anchorX="0" anchorY="0" positionX="4" positionY="6" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{400,378}" ninePatchInset="{{1,1},{2,2}}" />
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_9PATCH_4_1" anchorX="0" anchorY="0" positionX="124" positionY="28" z="0" scaleX="1" scaleY="1" imageName="9_Back_03.png" ninePatchSize="{220,40}" ninePatchInset="{{20,20},{1,2}}">
+      <ElementNode type="Label" elementID="ID_numText" anchorX="0" anchorY="0" positionX="46" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="80" fontStyle="1" fontSize="24" fontColor="{255,255,255}" areaSizeX="70" areaSizeY="30" alignment="2" lineAlignment="0" effect="1" effectOffset="2" effectColor="{80,40,0}" />
+      <ElementNode type="Image" elementID="ID_IMAGE_1" anchorX="0" anchorY="0" positionX="-16" positionY="-10" z="0" scaleX="1" scaleY="1" imageName="I_mon_01.png" />
+    </ElementNode>
+  </ElementNode>
+  <ElementNode type="NinePatch" elementID="ID_upgrade" anchorX="0" anchorY="0" positionX="540" positionY="8" z="0" scaleX="1" scaleY="1" imageName="9_Back_01.png" ninePatchSize="{488,560}" ninePatchInset="{{84,126},{2,2}}">
+    <ElementNode type="NinePatch" elementID="ID_title" anchorX="0" anchorY="0" positionX="44" positionY="484" z="0" scaleX="1" scaleY="1" imageName="9_Back_03.png" ninePatchSize="{400,52}" ninePatchInset="{{20,20},{1,2}}">
+      <ElementNode type="Label" elementID="ID_titleName" anchorX="0" anchorY="0" positionX="20" positionY="4" z="0" scaleX="1" scaleY="1" labelContent="Exp Boost" fontStyle="1" fontSize="30" fontColor="{255,220,125}" areaSizeX="200" areaSizeY="40" alignment="0" lineAlignment="0" effect="1" effectOffset="3" effectColor="{80,40,0}" />
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_ev1" anchorX="0" anchorY="0" positionX="36" positionY="294" z="0" scaleX="1" scaleY="1" imageName="9_Back_08.png" ninePatchSize="{190,180}" ninePatchInset="{{20,20},{2,2}}">
+      <ElementNode type="Image" elementID="ID_mon1Sh" anchorX="0.5" anchorY="0.5" positionX="92" positionY="34" z="0" scaleX="1" scaleY="1" imageName="I_shadow_02.png" />
+      <ElementNode type="Image" elementID="ID_mon1Grade1" anchorX="0" anchorY="0" positionX="14" positionY="150" z="1" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+      <ElementNode type="Image" elementID="ID_mon1Grade2" anchorX="0" anchorY="0" positionX="34" positionY="150" z="1" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+      <ElementNode type="Image" elementID="ID_mon1Grade3" anchorX="0" anchorY="0" positionX="54" positionY="150" z="1" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+      <ElementNode type="Image" elementID="ID_mon1Grade4" anchorX="0" anchorY="0" positionX="74" positionY="150" z="1" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+      <ElementNode type="Image" elementID="ID_mon1Grade5" anchorX="0" anchorY="0" positionX="94" positionY="150" z="1" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+      <ElementNode type="Image" elementID="ID_mon1Grade6" anchorX="0" anchorY="0" positionX="114" positionY="150" z="1" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+      <ElementNode type="Label" elementID="ID_level" anchorX="0" anchorY="0" positionX="66" positionY="6" z="2" scaleX="1" scaleY="1" labelContent="Lv.00/00" fontStyle="1" fontSize="20" fontColor="{255,145,5}" areaSizeX="110" areaSizeY="26" alignment="2" lineAlignment="0" effect="2" effectOffset="2" effectColor="{65,35,0}" />
+      <ElementNode type="Label" elementID="ID_stNum" anchorX="0" anchorY="0" positionX="9" positionY="6" z="2" scaleX="1" scaleY="1" labelContent="+2" fontStyle="1" fontSize="20" fontColor="{130,210,235}" areaSizeX="50" areaSizeY="26" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{50,20,90}" />
+      <ElementNode type="Image" elementID="ID_maxLevel" anchorX="0" anchorY="0" positionX="142" positionY="136" z="1" scaleX="1" scaleY="1" imageName="K_level30_01.png" />
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_monMatl" anchorX="0" anchorY="0" positionX="230" positionY="296" z="0" scaleX="1" scaleY="1" imageName="9_Back_02.png" ninePatchSize="{222,176}" ninePatchInset="{{15,15},{2,2}}">
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_2" anchorX="0" anchorY="0" positionX="80" positionY="8" z="0" scaleX="1" scaleY="1" imageName="9_Back_10.png" ninePatchSize="{134,160}" ninePatchInset="{{15,15},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_matl1" anchorX="0" anchorY="0" positionX="8" positionY="128" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{126,26}" ninePatchInset="{{1,1},{2,2}}">
+          <ElementNode type="Label" elementID="ID_num1" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" labelContent="1" fontStyle="1" fontSize="18" fontColor="{255,220,125}" areaSizeX="30" areaSizeY="24" alignment="1" lineAlignment="0" effect="1" effectOffset="2" effectColor="{80,40,0}" />
+          <ElementNode type="Image" elementID="ID_grade1" anchorX="0" anchorY="0" positionX="28" positionY="4" z="0" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+          <ElementNode type="Label" elementID="ID_textMalt1" anchorX="0" anchorY="0" positionX="68" positionY="0" z="0" scaleX="1" scaleY="1" labelContent="x 000" fontStyle="1" fontSize="19" fontColor="{255,255,255}" areaSizeX="58" areaSizeY="24" alignment="0" lineAlignment="0" effect="1" effectOffset="2" effectColor="{0,0,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_matl2" anchorX="0" anchorY="0" positionX="8" positionY="104" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{126,26}" ninePatchInset="{{1,1},{2,2}}">
+          <ElementNode type="Label" elementID="ID_num2" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" labelContent="2" fontStyle="1" fontSize="18" fontColor="{255,220,125}" areaSizeX="30" areaSizeY="24" alignment="1" lineAlignment="0" effect="1" effectOffset="2" effectColor="{80,40,0}" />
+          <ElementNode type="Image" elementID="ID_grade2" anchorX="0" anchorY="0" positionX="28" positionY="4" z="0" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+          <ElementNode type="Label" elementID="ID_textMalt2" anchorX="0" anchorY="0" positionX="68" positionY="0" z="0" scaleX="1" scaleY="1" labelContent="x 000" fontStyle="1" fontSize="19" fontColor="{255,255,255}" areaSizeX="58" areaSizeY="24" alignment="0" lineAlignment="0" effect="1" effectOffset="2" effectColor="{0,0,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_matl3" anchorX="0" anchorY="0" positionX="8" positionY="80" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{126,26}" ninePatchInset="{{1,1},{2,2}}">
+          <ElementNode type="Label" elementID="ID_num3" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" labelContent="3" fontStyle="1" fontSize="18" fontColor="{255,220,125}" areaSizeX="30" areaSizeY="24" alignment="1" lineAlignment="0" effect="1" effectOffset="2" effectColor="{80,40,0}" />
+          <ElementNode type="Image" elementID="ID_grade3" anchorX="0" anchorY="0" positionX="28" positionY="4" z="0" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+          <ElementNode type="Label" elementID="ID_textMalt3" anchorX="0" anchorY="0" positionX="68" positionY="0" z="0" scaleX="1" scaleY="1" labelContent="x 000" fontStyle="1" fontSize="19" fontColor="{255,255,255}" areaSizeX="58" areaSizeY="24" alignment="0" lineAlignment="0" effect="1" effectOffset="2" effectColor="{0,0,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_matl4" anchorX="0" anchorY="0" positionX="8" positionY="56" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{126,26}" ninePatchInset="{{1,1},{2,2}}">
+          <ElementNode type="Label" elementID="ID_num4" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" labelContent="4" fontStyle="1" fontSize="18" fontColor="{255,220,125}" areaSizeX="30" areaSizeY="24" alignment="1" lineAlignment="0" effect="1" effectOffset="2" effectColor="{80,40,0}" />
+          <ElementNode type="Image" elementID="ID_grade4" anchorX="0" anchorY="0" positionX="28" positionY="4" z="0" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+          <ElementNode type="Label" elementID="ID_textMalt4" anchorX="0" anchorY="0" positionX="68" positionY="0" z="0" scaleX="1" scaleY="1" labelContent="x 000" fontStyle="1" fontSize="19" fontColor="{255,255,255}" areaSizeX="58" areaSizeY="24" alignment="0" lineAlignment="0" effect="1" effectOffset="2" effectColor="{0,0,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_matl5" anchorX="0" anchorY="0" positionX="8" positionY="32" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{126,26}" ninePatchInset="{{1,1},{2,2}}">
+          <ElementNode type="Label" elementID="ID_num5" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" labelContent="5" fontStyle="1" fontSize="18" fontColor="{255,220,125}" areaSizeX="30" areaSizeY="24" alignment="1" lineAlignment="0" effect="1" effectOffset="2" effectColor="{80,40,0}" />
+          <ElementNode type="Image" elementID="ID_grade5" anchorX="0" anchorY="0" positionX="28" positionY="4" z="0" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+          <ElementNode type="Label" elementID="ID_textMalt5" anchorX="0" anchorY="0" positionX="68" positionY="0" z="0" scaleX="1" scaleY="1" labelContent="x 000" fontStyle="1" fontSize="19" fontColor="{255,255,255}" areaSizeX="58" areaSizeY="24" alignment="0" lineAlignment="0" effect="1" effectOffset="2" effectColor="{0,0,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_matl6" anchorX="0" anchorY="0" positionX="8" positionY="8" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{126,26}" ninePatchInset="{{1,1},{2,2}}">
+          <ElementNode type="Label" elementID="ID_num6" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" labelContent="6" fontStyle="1" fontSize="18" fontColor="{255,220,125}" areaSizeX="30" areaSizeY="24" alignment="1" lineAlignment="0" effect="1" effectOffset="2" effectColor="{80,40,0}" />
+          <ElementNode type="Image" elementID="ID_grade6" anchorX="0" anchorY="0" positionX="28" positionY="4" z="0" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+          <ElementNode type="Label" elementID="ID_textMalt6" anchorX="0" anchorY="0" positionX="68" positionY="0" z="0" scaleX="1" scaleY="1" labelContent="x 000" fontStyle="1" fontSize="19" fontColor="{255,255,255}" areaSizeX="58" areaSizeY="24" alignment="0" lineAlignment="0" effect="1" effectOffset="2" effectColor="{0,0,0}" />
+        </ElementNode>
+      </ElementNode>
+      <ElementNode type="Image" elementID="ID_IMAGE_2" anchorX="0" anchorY="0" positionX="20" positionY="70" z="0" scaleX="1" scaleY="1" imageName="K_add_01.png" />
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_1" anchorX="0" anchorY="0" positionX="6" positionY="142" z="0" scaleX="1" scaleY="1" imageName="9_Back_10.png" ninePatchSize="{70,26}" ninePatchInset="{{15,15},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_1" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" labelContent="Matl" fontStyle="1" fontSize="18" fontColor="{255,220,125}" areaSizeX="70" areaSizeY="22" alignment="1" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_monEx" anchorX="0" anchorY="0" positionX="36" positionY="134" z="0" scaleX="1" scaleY="1" imageName="9_Back_02.png" ninePatchSize="{416,66}" ninePatchInset="{{15,15},{2,2}}">
+      <ElementNode type="Label" elementID="ID_TextEx" anchorX="0" anchorY="0" positionX="36" positionY="0" z="0" scaleX="1" scaleY="1" labelContent="Please select a monster to use..." fontStyle="1" fontSize="18" fontColor="{45,20,0}" areaSizeX="370" areaSizeY="60" alignment="0" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_levelUp" anchorX="0" anchorY="0" positionX="36" positionY="209" z="0" scaleX="1" scaleY="1" imageName="9_Back_02.png" ninePatchSize="{416,78}" ninePatchInset="{{15,15},{2,2}}">
+      <ElementNode type="NinePatch" elementID="ID_level1" anchorX="0" anchorY="0" positionX="4" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{180,78}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_exp1" anchorX="0" anchorY="0" positionX="10" positionY="6" z="1" scaleX="1" scaleY="1" imageName="9_gage_01.png" ninePatchSize="{160,26}" ninePatchInset="{{16,0},{2,26}}">
+          <ElementNode type="NinePatch" elementID="ID_expGraph1" anchorX="0" anchorY="0" positionX="4" positionY="3" z="0" scaleX="1" scaleY="1" imageName="9_gage_07.png" ninePatchSize="{152,20}" ninePatchInset="{{10,0},{2,1}}" />
+          <ElementNode type="Label" elementID="ID_expText1" anchorX="0" anchorY="0" positionX="38" positionY="-2" z="1" scaleX="1" scaleY="1" labelContent="00.0%" fontStyle="1" fontSize="20" fontColor="{255,255,255}" areaSizeX="84" areaSizeY="26" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{100,45,15}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_expNum1" anchorX="0" anchorY="0" positionX="10" positionY="36" z="0" scaleX="1" scaleY="1" imageName="9_Back_10.png" ninePatchSize="{160,34}" ninePatchInset="{{15,15},{2,2}}">
+          <ElementNode type="Label" elementID="ID_lvText1" anchorX="0" anchorY="0" positionX="24" positionY="2" z="2" scaleX="1" scaleY="1" labelContent="Lv.00" fontStyle="1" fontSize="24" fontColor="{255,145,5}" areaSizeX="110" areaSizeY="28" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{65,35,0}" />
+        </ElementNode>
+      </ElementNode>
+      <ElementNode type="Image" elementID="ID_IMAGE_5" anchorX="0" anchorY="0" positionX="186" positionY="18" z="0" scaleX="1" scaleY="1" imageName="I_arrow_01.png" />
+      <ElementNode type="NinePatch" elementID="ID_level2" anchorX="0" anchorY="0" positionX="232" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{180,78}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_exp2" anchorX="0" anchorY="0" positionX="10" positionY="6" z="1" scaleX="1" scaleY="1" imageName="9_gage_01.png" ninePatchSize="{160,26}" ninePatchInset="{{16,0},{2,26}}">
+          <ElementNode type="NinePatch" elementID="ID_expGraph2" anchorX="0" anchorY="0" positionX="4" positionY="3" z="0" scaleX="1" scaleY="1" imageName="9_gage_07.png" ninePatchSize="{152,20}" ninePatchInset="{{10,0},{2,1}}" />
+          <ElementNode type="Label" elementID="ID_expText2" anchorX="0" anchorY="0" positionX="38" positionY="-2" z="1" scaleX="1" scaleY="1" labelContent="00.0%" fontStyle="1" fontSize="20" fontColor="{255,255,255}" areaSizeX="84" areaSizeY="26" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{100,45,15}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_expNum2" anchorX="0" anchorY="0" positionX="10" positionY="36" z="0" scaleX="1" scaleY="1" imageName="9_Back_10.png" ninePatchSize="{160,34}" ninePatchInset="{{15,15},{2,2}}">
+          <ElementNode type="Label" elementID="ID_lvText2" anchorX="0" anchorY="0" positionX="24" positionY="2" z="2" scaleX="1" scaleY="1" labelContent="Lv.00" fontStyle="1" fontSize="24" fontColor="{255,145,5}" areaSizeX="110" areaSizeY="28" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{65,35,0}" />
+        </ElementNode>
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_expensive" anchorX="0" anchorY="0" positionX="40" positionY="27" z="0" scaleX="1" scaleY="1" imageName="9_Back_08.png" ninePatchSize="{170,94}" ninePatchInset="{{20,20},{2,2}}">
+      <ElementNode type="Image" elementID="ID_IMAGE_3" anchorX="0" anchorY="0" positionX="-4" positionY="54" z="0" scaleX="1" scaleY="1" imageName="I_money_01.png" />
+      <ElementNode type="Label" elementID="ID_LABEL_6" anchorX="0" anchorY="0" positionX="24" positionY="56" z="0" scaleX="1" scaleY="1" labelContent="Boost Cost" fontStyle="1" fontSize="22" fontColor="{255,255,128}" areaSizeX="140" areaSizeY="30" alignment="1" lineAlignment="0" effect="1" effectOffset="1" effectColor="{128,64,0}" />
+      <ElementNode type="Label" elementID="ID_goldText" anchorX="0" anchorY="0" positionX="5" positionY="8" z="0" scaleX="1" scaleY="1" labelContent="000,000" fontStyle="1" fontSize="30" fontColor="{255,255,0}" areaSizeX="160" areaSizeY="38" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{128,64,64}" />
+    </ElementNode>
+    <ElementNode type="NinePatchButton" elementID="ID_btnComSt" anchorX="0.5" anchorY="0.5" positionX="338" positionY="74" z="0" scaleX="1" scaleY="1" imageName="9_btn_02.png" ninePatchSize="{220,94}" ninePatchInset="{{48,43},{2,2}}">
+      <ElementNode type="Label" elementID="ID_LABEL_5" anchorX="0" anchorY="0" positionX="0" positionY="24" z="1" scaleX="1" scaleY="1" labelContent="Exp Boost" fontStyle="1" fontSize="30" fontColor="{255,255,255}" areaSizeX="220" areaSizeY="40" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{15,60,110}" />
+      <ElementNode type="NinePatch" elementID="ID_eventTag_St" anchorX="0" anchorY="0" positionX="134" positionY="62" z="0" scaleX="0.84" scaleY="0.84" imageName="9_btn_14.png" ninePatchSize="{68,62}" ninePatchInset="{{46,12},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_4" anchorX="0" anchorY="0" positionX="8" positionY="30" z="0" scaleX="1" scaleY="1" imageName="I_star_02.png" />
+        <ElementNode type="Label" elementID="ID_LABEL_2" anchorX="0" anchorY="0" positionX="0" positionY="12" z="0" scaleX="1" scaleY="1" labelContent="Event" fontStyle="1" fontSize="20" fontColor="{242,205,77}" areaSizeX="68" areaSizeY="26" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+      </ElementNode>
+    </ElementNode>
+  </ElementNode>
+</root>

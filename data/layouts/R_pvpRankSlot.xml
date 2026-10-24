@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_9BUTTON_frameSize" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{404,100}" ninePatchInset="{{1,1},{2,2}}">
+    <ElementNode type="NinePatch" elementID="ID_9PATCH_5" anchorX="0" anchorY="0" positionX="10" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_Back_08.png" ninePatchSize="{100,100}" ninePatchInset="{{20,20},{2,2}}">
+      <ElementNode type="NinePatch" elementID="ID_leaderIcon" anchorX="0" anchorY="0" positionX="4" positionY="4" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{92,92}" ninePatchInset="{{1,1},{2,2}}" />
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_btnSlot" anchorX="0" anchorY="0" positionX="110" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_frame_01.png" ninePatchSize="{288,98}" ninePatchInset="{{20,20},{2,2}}">
+      <ElementNode type="Label" elementID="ID_friendName" anchorX="0" anchorY="0" positionX="30" positionY="50" z="1" scaleX="1" scaleY="1" labelContent="세빌리아베이비" fontStyle="1" fontSize="20" fontColor="{255,255,255}" areaSizeX="180" areaSizeY="30" alignment="0" effect="2" effectOffset="2" effectColor="{70,40,0}" />
+      <ElementNode type="Label" elementID="ID_friendScore" anchorX="0" anchorY="0" positionX="30" positionY="12" z="1" scaleX="1" scaleY="1" labelContent="00.0% (0000 Pts)" fontStyle="1" fontSize="22" fontColor="{60,45,5}" areaSizeX="240" areaSizeY="30" alignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+      <ElementNode type="Button" elementID="ID_btnInvite" anchorX="0" anchorY="0" positionX="184" positionY="6" z="0" scaleX="1" scaleY="1" imageName="K_visit_01.png" />
+      <ElementNode type="NinePatch" elementID="ID_myIcon" anchorX="0" anchorY="0" positionX="0" positionY="4" z="1" scaleX="1" scaleY="1" imageName="9_frame_06.png" ninePatchSize="{284,94}" ninePatchInset="{{20,20},{2,2}}" />
+      <ElementNode type="NinePatch" elementID="ID_rank" anchorX="0" anchorY="0" positionX="-4" positionY="44" z="2" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{20,20}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Image" elementID="ID_rank1st" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="rankingB_01.png" />
+        <ElementNode type="Image" elementID="ID_rank2nd" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="rankingB_02.png" />
+        <ElementNode type="Image" elementID="ID_rank3rd" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="rankingB_03.png" />
+      </ElementNode>
+    </ElementNode>
+  </ElementNode>
+</root>

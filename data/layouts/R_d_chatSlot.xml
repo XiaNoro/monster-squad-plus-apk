@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_chatSlot" anchorX="0" anchorY="0" positionX="7" positionY="10" z="2" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{1034,36}" ninePatchInset="{{1,1},{2,2}}">
+    <ElementNode type="Label" elementID="ID_chat_txt1" anchorX="0" anchorY="0" positionX="0" positionY="-2" z="2" scaleX="1" scaleY="1" labelContent="KunKun obtained " fontStyle="1" fontSize="18" fontColor="{255,249,214}" areaSizeX="1034" areaSizeY="30" alignment="0" lineAlignment="1" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+  </ElementNode>
+</root>

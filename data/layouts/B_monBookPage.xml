@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_monBook" anchorX="0" anchorY="0" positionX="68" positionY="8" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{934,560}" ninePatchInset="{{1,1},{2,2}}">
+    <ElementNode type="NinePatch" elementID="ID_monster" anchorX="0" anchorY="0" positionX="100" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_Back_01.png" ninePatchSize="{834,560}" ninePatchInset="{{84,126},{2,2}}">
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_4" anchorX="0" anchorY="0" positionX="58" positionY="484" z="0" scaleX="1" scaleY="1" imageName="9_Back_03.png" ninePatchSize="{260,52}" ninePatchInset="{{20,20},{1,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_3" anchorX="0" anchorY="0" positionX="20" positionY="4" z="0" scaleX="1" scaleY="1" labelContent="Monster List" fontStyle="1" fontSize="30" fontColor="{255,220,125}" areaSizeX="200" areaSizeY="40" alignment="0" effect="1" effectOffset="3" effectColor="{80,40,0}" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnAlign" anchorX="0" anchorY="0" positionX="644" positionY="482" z="0" scaleX="1" scaleY="1" imageName="9_btn_10.png" ninePatchSize="{150,60}" ninePatchInset="{{38,0},{2,56}}">
+        <ElementNode type="Label" elementID="ID_LABEL_4" anchorX="0" anchorY="0" positionX="4" positionY="12" z="0" scaleX="1" scaleY="1" labelContent="Arrange / Level" fontStyle="1" fontSize="20" fontColor="{75,35,0}" areaSizeX="140" areaSizeY="30" alignment="1" effect="0" effectOffset="2" effectColor="{95,40,0}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_5" anchorX="0" anchorY="0" positionX="44" positionY="30" z="0" scaleX="1" scaleY="1" imageName="9_Back_02.png" ninePatchSize="{750,414}" ninePatchInset="{{15,15},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_slide" anchorX="0" anchorY="0" positionX="730" positionY="6" z="0" scaleX="1" scaleY="1" imageName="9_slide_01.png" ninePatchSize="{10,400}" ninePatchInset="{{0,5},{10,2}}">
+          <ElementNode type="NinePatch" elementID="ID_bar" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_slide_02.png" ninePatchSize="{10,400}" ninePatchInset="{{0,5},{10,2}}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_ID_arrayPosition" anchorX="0" anchorY="0" positionX="19" positionY="8" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{700,400}" ninePatchInset="{{1,1},{2,2}}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_4_1" anchorX="0" anchorY="0" positionX="352" positionY="484" z="0" scaleX="1" scaleY="1" imageName="9_Back_03.png" ninePatchSize="{200,52}" ninePatchInset="{{20,20},{1,2}}">
+        <ElementNode type="Label" elementID="ID_numText" anchorX="0" anchorY="0" positionX="38" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="80" fontStyle="1" fontSize="30" fontColor="{255,255,255}" areaSizeX="70" areaSizeY="34" alignment="2" effect="1" effectOffset="2" effectColor="{80,40,0}" />
+        <ElementNode type="Label" elementID="ID_maxText" anchorX="0" anchorY="0" positionX="108" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="/500" fontStyle="1" fontSize="30" fontColor="{255,220,125}" areaSizeX="100" areaSizeY="34" alignment="0" effect="1" effectOffset="2" effectColor="{80,40,0}" />
+        <ElementNode type="Image" elementID="ID_IMAGE_1" anchorX="0" anchorY="0" positionX="-16" positionY="-4" z="0" scaleX="1" scaleY="1" imageName="I_mon_01.png" />
+      </ElementNode>
+      <ElementNode type="Label" elementID="ID_exText" anchorX="0" anchorY="0" positionX="78" positionY="448" z="0" scaleX="1" scaleY="1" labelContent="You will get 3~15 Gems every time you get a monster to Lv. 30 for the first time!" fontStyle="0" fontSize="18" fontColor="{105,50,15}" areaSizeX="700" areaSizeY="22" alignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+    </ElementNode>
+    <ElementNode type="NinePatchButton" elementID="ID_btnAtt1" anchorX="0" anchorY="0" positionX="0" positionY="450" z="-1" scaleX="1" scaleY="1" imageName="9_tap02_n.png" ninePatchSize="{120,90}" ninePatchInset="{{36,33},{2,1}}">
+      <ElementNode type="Image" elementID="ID_IMAGE_2" anchorX="0" anchorY="0" positionX="21" positionY="12" z="0" scaleX="1" scaleY="1" imageName="A_all_01.png" />
+    </ElementNode>
+    <ElementNode type="NinePatchButton" elementID="ID_btnAtt2" anchorX="0" anchorY="0" positionX="0" positionY="358" z="-1" scaleX="1" scaleY="1" imageName="9_tap02_n.png" ninePatchSize="{120,90}" ninePatchInset="{{36,33},{2,1}}">
+      <ElementNode type="Image" elementID="ID_IMAGE_16" anchorX="0" anchorY="0" positionX="24" positionY="16" z="0" scaleX="1" scaleY="1" imageName="A_fire_04.png" />
+    </ElementNode>
+    <ElementNode type="NinePatchButton" elementID="ID_btnAtt3" anchorX="0" anchorY="0" positionX="0" positionY="266" z="-1" scaleX="1" scaleY="1" imageName="9_tap02_n.png" ninePatchSize="{120,90}" ninePatchInset="{{36,33},{2,1}}">
+      <ElementNode type="Image" elementID="ID_IMAGE_17" anchorX="0" anchorY="0" positionX="24" positionY="16" z="0" scaleX="1" scaleY="1" imageName="A_water_04.png" />
+    </ElementNode>
+    <ElementNode type="NinePatchButton" elementID="ID_btnAtt4" anchorX="0" anchorY="0" positionX="0" positionY="174" z="-1" scaleX="1" scaleY="1" imageName="9_tap02_n.png" ninePatchSize="{120,90}" ninePatchInset="{{36,33},{2,1}}">
+      <ElementNode type="Image" elementID="ID_IMAGE_18" anchorX="0" anchorY="0" positionX="24" positionY="16" z="0" scaleX="1" scaleY="1" imageName="A_natural_04.png" />
+    </ElementNode>
+    <ElementNode type="NinePatchButton" elementID="ID_btnAtt5" anchorX="0" anchorY="0" positionX="0" positionY="82" z="-1" scaleX="1" scaleY="1" imageName="9_tap02_n.png" ninePatchSize="{120,90}" ninePatchInset="{{36,33},{2,1}}">
+      <ElementNode type="Image" elementID="ID_IMAGE_19" anchorX="0" anchorY="0" positionX="24" positionY="16" z="0" scaleX="1" scaleY="1" imageName="A_balance_04.png" />
+    </ElementNode>
+  </ElementNode>
+</root>

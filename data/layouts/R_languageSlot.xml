@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_frameSize" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{248,98}" ninePatchInset="{{1,1},{2,2}}">
+    <ElementNode type="NinePatch" elementID="ID_9PATCH_1" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{248,98}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="NinePatchButton" elementID="ID_9BUTTON_1" anchorX="0" anchorY="0" positionX="10" positionY="10" z="0" scaleX="1" scaleY="1" imageName="9_btn_05.png" ninePatchSize="{228,78}" ninePatchInset="{{28,28},{2,2}}">
+        <ElementNode type="Image" elementID="ID_check_1" anchorX="0" anchorY="0" positionX="10" positionY="8" z="2" scaleX="1.1" scaleY="1.1" imageName="I_check02.png" />
+        <ElementNode type="Image" elementID="ID_frameLS_1" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="9_empty_02.png" />
+      </ElementNode>
+    </ElementNode>
+  </ElementNode>
+</root>

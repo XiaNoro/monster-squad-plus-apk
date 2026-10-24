@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="Image" elementID="ID_MaskTip" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png">
+    <ElementNode type="NinePatchButton" elementID="ID_9BUTTON_All" anchorX="0" anchorY="0" positionX="0" positionY="0" z="2" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{1066,640}" ninePatchInset="{{1,1},{2,2}}" />
+    <ElementNode type="NinePatch" elementID="ID_maskTip5_5" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{1066,640}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="NinePatch" elementID="ID_detail_label_bg_2" anchorX="0" anchorY="0" positionX="90" positionY="364" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{480,52}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_detail_label_2" anchorX="0" anchorY="0" positionX="8" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Increases a monster’s level cap." fontStyle="0" fontSize="28" fontColor="{255,138,0}" areaSizeX="460" areaSizeY="40" alignment="0" lineAlignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_detail_label_bg_1" anchorX="0" anchorY="0" positionX="739" positionY="482" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{316,52}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_detail_label_1" anchorX="0" anchorY="0" positionX="8" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Pet Monster" fontStyle="0" fontSize="28" fontColor="{255,138,0}" areaSizeX="300" areaSizeY="40" alignment="0" lineAlignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_detail_label_bg_2_1" anchorX="0" anchorY="0" positionX="87" positionY="249" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{480,52}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_detail_label_2_1" anchorX="0" anchorY="0" positionX="8" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Increases a monster’s level cap." fontStyle="0" fontSize="28" fontColor="{255,138,0}" areaSizeX="460" areaSizeY="40" alignment="0" lineAlignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_detail_label_bg_2_1_1" anchorX="0" anchorY="0" positionX="87" positionY="145" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{480,94}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_detail_label_2_1_1" anchorX="0" anchorY="0" positionX="8" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Increases a monster’sIncreases a monster’s level cap." fontStyle="0" fontSize="28" fontColor="{255,138,0}" areaSizeX="460" areaSizeY="80" alignment="0" lineAlignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_detail_label_bg_2_1_1_1" anchorX="0" anchorY="0" positionX="87" positionY="17" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{480,118}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_detail_label_2_1_1_1" anchorX="0" anchorY="0" positionX="8" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Increases a monster’s level cap.Increases a monster’s level cap.Increases a monster’s." fontStyle="0" fontSize="28" fontColor="{255,138,0}" areaSizeX="460" areaSizeY="104" alignment="0" lineAlignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="Image" elementID="ID_IMAGE_BG" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" />
+  </ElementNode>
+</root>

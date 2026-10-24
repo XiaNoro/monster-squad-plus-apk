@@ -1,0 +1,803 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_slideSize" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{9582,526}" ninePatchInset="{{1,1},{2,2}}">
+    <ElementNode type="NinePatch" elementID="ID_land1" anchorX="0" anchorY="0" positionX="14" positionY="236" z="1" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,290}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Button" elementID="ID_btnLand1" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="S_land_01.png" />
+      <ElementNode type="Image" elementID="ID_shadow1" anchorX="0" anchorY="0" positionX="100" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_shadow_04.png" />
+      <ElementNode type="NinePatch" elementID="ID_info1" anchorX="0" anchorY="0" positionX="70" positionY="-2" z="3" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{200,66}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_eventTime1" anchorX="0" anchorY="0" positionX="-60" positionY="36" z="0" scaleX="1" scaleY="1" imageName="9_frame_08.png" ninePatchSize="{320,28}" ninePatchInset="{{76,2},{2,2}}">
+          <ElementNode type="Label" elementID="ID_timeText1" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Time Left: 05:23" fontStyle="1" fontSize="20" fontColor="{255,220,85}" areaSizeX="320" areaSizeY="24" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{56,16,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_landNameLabel1" anchorX="0" anchorY="0" positionX="-30" positionY="2" z="0" scaleX="1" scaleY="1" imageName="9_frame_07.png" ninePatchSize="{260,32}" ninePatchInset="{{16,0},{2,32}}">
+          <ElementNode type="Label" elementID="ID_landNameText1" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Sprout Island" fontStyle="1" fontSize="24" fontColor="{40,26,0}" areaSizeX="260" areaSizeY="28" alignment="1" lineAlignment="0" effect="0" effectOffset="3" effectColor="{0,0,0}" />
+        </ElementNode>
+        <ElementNode type="Button" elementID="ID_btnEvent1" anchorX="0" anchorY="0" positionX="-40" positionY="170" z="1" scaleX="1" scaleY="1" imageName="K_eventTag_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpen1" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_Open1" anchorX="0.5" anchorY="0.5" positionX="170" positionY="82" z="3" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+          <ElementNode type="Image" elementID="ID_IMAGE_crystal1" anchorX="0" anchorY="0" positionX="8" positionY="10" z="0" scaleX="0.4" scaleY="0.4" imageName="I2_crystal_02.png" />
+          <ElementNode type="Label" elementID="ID_LABEL_1" anchorX="0" anchorY="0" positionX="34" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="OPEN" fontStyle="1" fontSize="22" fontColor="{232,122,255}" areaSizeX="70" areaSizeY="30" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+          <ElementNode type="Image" elementID="ID_IMAGE_lock1" anchorX="0" anchorY="0" positionX="32" positionY="38" z="0" scaleX="1" scaleY="1" imageName="I_lock_01.png" />
+        </ElementNode>
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_lock1" anchorX="0.5" anchorY="0.5" positionX="170" positionY="148" z="4" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lock1_1" anchorX="0" anchorY="0" positionX="28" positionY="18" z="0" scaleX="1.2" scaleY="1.2" imageName="I_lock_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpenT_1" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lockT_1" anchorX="0" anchorY="0" positionX="-6" positionY="46" z="0" scaleX="1" scaleY="1" imageName="I2_lock_02.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_land2" anchorX="0" anchorY="0" positionX="332" positionY="6" z="1" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,290}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Button" elementID="ID_btnLand2" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="S_land_02.png" />
+      <ElementNode type="Image" elementID="ID_shadow2" anchorX="0" anchorY="0" positionX="100" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_shadow_03.png" />
+      <ElementNode type="NinePatch" elementID="ID_info2" anchorX="0" anchorY="0" positionX="70" positionY="-2" z="3" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{200,66}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_eventTime2" anchorX="0" anchorY="0" positionX="-60" positionY="36" z="0" scaleX="1" scaleY="1" imageName="9_frame_08.png" ninePatchSize="{320,28}" ninePatchInset="{{76,2},{2,2}}">
+          <ElementNode type="Label" elementID="ID_timeText2" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Time Left: 05:23" fontStyle="1" fontSize="20" fontColor="{255,220,85}" areaSizeX="320" areaSizeY="24" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{56,16,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_landNameLabel2" anchorX="0" anchorY="0" positionX="-30" positionY="2" z="0" scaleX="1" scaleY="1" imageName="9_frame_07.png" ninePatchSize="{260,32}" ninePatchInset="{{16,0},{2,32}}">
+          <ElementNode type="Label" elementID="ID_landNameText2" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Lake Island" fontStyle="1" fontSize="24" fontColor="{40,26,0}" areaSizeX="260" areaSizeY="28" alignment="1" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        </ElementNode>
+        <ElementNode type="Button" elementID="ID_btnEvent2" anchorX="0" anchorY="0" positionX="-40" positionY="170" z="1" scaleX="1" scaleY="1" imageName="K_eventTag_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpen2" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_Open2" anchorX="0.5" anchorY="0.5" positionX="170" positionY="82" z="3" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+          <ElementNode type="Image" elementID="ID_IMAGE_crystal2" anchorX="0" anchorY="0" positionX="8" positionY="10" z="0" scaleX="0.4" scaleY="0.4" imageName="I2_crystal_02.png" />
+          <ElementNode type="Label" elementID="ID_LABEL_2" anchorX="0" anchorY="0" positionX="34" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="OPEN" fontStyle="1" fontSize="22" fontColor="{232,122,255}" areaSizeX="70" areaSizeY="30" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+          <ElementNode type="Image" elementID="ID_IMAGE_lock2" anchorX="0" anchorY="0" positionX="32" positionY="38" z="0" scaleX="1" scaleY="1" imageName="I_lock_01.png" />
+        </ElementNode>
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_lock2" anchorX="0.5" anchorY="0.5" positionX="170" positionY="148" z="4" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lock1_2" anchorX="0" anchorY="0" positionX="28" positionY="18" z="0" scaleX="1.2" scaleY="1.2" imageName="I_lock_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpenT_2" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lockT_2" anchorX="0" anchorY="0" positionX="-6" positionY="46" z="0" scaleX="1" scaleY="1" imageName="I2_lock_02.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_land3" anchorX="0" anchorY="0" positionX="650" positionY="236" z="1" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,290}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Button" elementID="ID_btnLand3" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="S_land_03.png" />
+      <ElementNode type="Image" elementID="ID_shadow3" anchorX="0" anchorY="0" positionX="100" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_shadow_03.png" />
+      <ElementNode type="NinePatch" elementID="ID_info3" anchorX="0" anchorY="0" positionX="70" positionY="-2" z="3" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{200,66}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_eventTime3" anchorX="0" anchorY="0" positionX="-60" positionY="36" z="0" scaleX="1" scaleY="1" imageName="9_frame_08.png" ninePatchSize="{320,28}" ninePatchInset="{{76,2},{2,2}}">
+          <ElementNode type="Label" elementID="ID_timeText3" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Time Left: 05:23" fontStyle="1" fontSize="20" fontColor="{255,220,85}" areaSizeX="320" areaSizeY="24" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{56,16,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_landNameLabel3" anchorX="0" anchorY="0" positionX="-30" positionY="2" z="0" scaleX="1" scaleY="1" imageName="9_frame_07.png" ninePatchSize="{260,32}" ninePatchInset="{{16,0},{2,32}}">
+          <ElementNode type="Label" elementID="ID_landNameText3" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Jungle Island" fontStyle="1" fontSize="24" fontColor="{40,26,0}" areaSizeX="260" areaSizeY="28" alignment="1" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        </ElementNode>
+        <ElementNode type="Button" elementID="ID_btnEvent3" anchorX="0" anchorY="0" positionX="-40" positionY="170" z="1" scaleX="1" scaleY="1" imageName="K_eventTag_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpen3" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_Open3" anchorX="0.5" anchorY="0.5" positionX="170" positionY="82" z="3" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+          <ElementNode type="Image" elementID="ID_IMAGE_crystal3" anchorX="0" anchorY="0" positionX="8" positionY="10" z="0" scaleX="0.4" scaleY="0.4" imageName="I2_crystal_02.png" />
+          <ElementNode type="Label" elementID="ID_LABEL_3" anchorX="0" anchorY="0" positionX="34" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="OPEN" fontStyle="1" fontSize="22" fontColor="{232,122,255}" areaSizeX="70" areaSizeY="30" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+          <ElementNode type="Image" elementID="ID_IMAGE_lock3" anchorX="0" anchorY="0" positionX="32" positionY="38" z="0" scaleX="1" scaleY="1" imageName="I_lock_01.png" />
+        </ElementNode>
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_lock3" anchorX="0.5" anchorY="0.5" positionX="170" positionY="148" z="4" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lock1_3" anchorX="0" anchorY="0" positionX="28" positionY="18" z="0" scaleX="1.2" scaleY="1.2" imageName="I_lock_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpenT_3" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lockT_3" anchorX="0" anchorY="0" positionX="-6" positionY="46" z="0" scaleX="1" scaleY="1" imageName="I2_lock_02.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_land4" anchorX="0" anchorY="0" positionX="968" positionY="6" z="1" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,290}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Button" elementID="ID_btnLand4" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="S_land_04.png" />
+      <ElementNode type="Image" elementID="ID_shadow4" anchorX="0" anchorY="0" positionX="100" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_shadow_03.png" />
+      <ElementNode type="NinePatch" elementID="ID_info4" anchorX="0" anchorY="0" positionX="70" positionY="-2" z="3" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{200,66}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_eventTime4" anchorX="0" anchorY="0" positionX="-60" positionY="36" z="0" scaleX="1" scaleY="1" imageName="9_frame_08.png" ninePatchSize="{320,28}" ninePatchInset="{{76,2},{2,2}}">
+          <ElementNode type="Label" elementID="ID_timeText4" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Time Left: 05:23" fontStyle="1" fontSize="20" fontColor="{255,220,85}" areaSizeX="320" areaSizeY="24" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{56,16,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_landNameLabel4" anchorX="0" anchorY="0" positionX="-30" positionY="2" z="0" scaleX="1" scaleY="1" imageName="9_frame_07.png" ninePatchSize="{260,32}" ninePatchInset="{{16,0},{2,32}}">
+          <ElementNode type="Label" elementID="ID_landNameText4" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Volcano Isle" fontStyle="1" fontSize="24" fontColor="{40,26,0}" areaSizeX="260" areaSizeY="28" alignment="1" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        </ElementNode>
+        <ElementNode type="Button" elementID="ID_btnEvent4" anchorX="0" anchorY="0" positionX="-40" positionY="170" z="1" scaleX="1" scaleY="1" imageName="K_eventTag_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpen4" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_Open4" anchorX="0.5" anchorY="0.5" positionX="170" positionY="82" z="3" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+          <ElementNode type="Image" elementID="ID_IMAGE_crystal4" anchorX="0" anchorY="0" positionX="8" positionY="10" z="0" scaleX="0.4" scaleY="0.4" imageName="I2_crystal_02.png" />
+          <ElementNode type="Label" elementID="ID_LABEL_4" anchorX="0" anchorY="0" positionX="34" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="OPEN" fontStyle="1" fontSize="22" fontColor="{232,122,255}" areaSizeX="70" areaSizeY="30" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+          <ElementNode type="Image" elementID="ID_IMAGE_lock4" anchorX="0" anchorY="0" positionX="32" positionY="38" z="0" scaleX="1" scaleY="1" imageName="I_lock_01.png" />
+        </ElementNode>
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_lock4" anchorX="0.5" anchorY="0.5" positionX="170" positionY="148" z="4" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lock1_4" anchorX="0" anchorY="0" positionX="28" positionY="18" z="0" scaleX="1.2" scaleY="1.2" imageName="I_lock_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpenT_4" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lockT_4" anchorX="0" anchorY="0" positionX="-6" positionY="46" z="0" scaleX="1" scaleY="1" imageName="I2_lock_02.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_land5" anchorX="0" anchorY="0" positionX="1286" positionY="236" z="1" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,290}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Button" elementID="ID_btnLand5" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="S_land_05.png" />
+      <ElementNode type="Image" elementID="ID_shadow5" anchorX="0" anchorY="0" positionX="100" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_shadow_03.png" />
+      <ElementNode type="NinePatch" elementID="ID_info5" anchorX="0" anchorY="0" positionX="70" positionY="-2" z="3" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{200,66}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_eventTime5" anchorX="0" anchorY="0" positionX="-60" positionY="36" z="0" scaleX="1" scaleY="1" imageName="9_frame_08.png" ninePatchSize="{320,28}" ninePatchInset="{{76,2},{2,2}}">
+          <ElementNode type="Label" elementID="ID_timeText5" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Time Left: 05:23" fontStyle="1" fontSize="20" fontColor="{255,220,85}" areaSizeX="320" areaSizeY="24" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{56,16,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_landNameLabel5" anchorX="0" anchorY="0" positionX="-30" positionY="2" z="0" scaleX="1" scaleY="1" imageName="9_frame_07.png" ninePatchSize="{260,32}" ninePatchInset="{{16,0},{2,32}}">
+          <ElementNode type="Label" elementID="ID_landNameText5" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Icicle Island" fontStyle="1" fontSize="24" fontColor="{40,26,0}" areaSizeX="260" areaSizeY="28" alignment="1" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        </ElementNode>
+        <ElementNode type="Button" elementID="ID_btnEvent5" anchorX="0" anchorY="0" positionX="-40" positionY="170" z="1" scaleX="1" scaleY="1" imageName="K_eventTag_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpen5" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_Open5" anchorX="0.5" anchorY="0.5" positionX="170" positionY="82" z="3" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+          <ElementNode type="Image" elementID="ID_IMAGE_crystal5" anchorX="0" anchorY="0" positionX="8" positionY="10" z="0" scaleX="0.4" scaleY="0.4" imageName="I2_crystal_02.png" />
+          <ElementNode type="Label" elementID="ID_LABEL_5" anchorX="0" anchorY="0" positionX="34" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="OPEN" fontStyle="1" fontSize="22" fontColor="{232,122,255}" areaSizeX="70" areaSizeY="30" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+          <ElementNode type="Image" elementID="ID_IMAGE_lock5" anchorX="0" anchorY="0" positionX="32" positionY="38" z="0" scaleX="1" scaleY="1" imageName="I_lock_01.png" />
+        </ElementNode>
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_lock5" anchorX="0.5" anchorY="0.5" positionX="170" positionY="148" z="4" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lock1_5" anchorX="0" anchorY="0" positionX="28" positionY="18" z="0" scaleX="1.2" scaleY="1.2" imageName="I_lock_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpenT_5" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lockT_5" anchorX="0" anchorY="0" positionX="-6" positionY="46" z="0" scaleX="1" scaleY="1" imageName="I2_lock_02.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_land6" anchorX="0" anchorY="0" positionX="1604" positionY="6" z="1" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,290}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Button" elementID="ID_btnLand6" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="S_land_06.png" />
+      <ElementNode type="Image" elementID="ID_shadow6" anchorX="0" anchorY="0" positionX="100" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_shadow_03.png" />
+      <ElementNode type="NinePatch" elementID="ID_info6" anchorX="0" anchorY="0" positionX="70" positionY="-2" z="3" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{200,66}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_eventTime6" anchorX="0" anchorY="0" positionX="-60" positionY="36" z="0" scaleX="1" scaleY="1" imageName="9_frame_08.png" ninePatchSize="{320,28}" ninePatchInset="{{76,2},{2,2}}">
+          <ElementNode type="Label" elementID="ID_timeText6" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Time Left: 05:23" fontStyle="1" fontSize="20" fontColor="{255,220,85}" areaSizeX="320" areaSizeY="24" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{56,16,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_landNameLabel6" anchorX="0" anchorY="0" positionX="-30" positionY="2" z="0" scaleX="1" scaleY="1" imageName="9_frame_07.png" ninePatchSize="{260,32}" ninePatchInset="{{16,0},{2,32}}">
+          <ElementNode type="Label" elementID="ID_landNameText6" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Desert Isle" fontStyle="1" fontSize="24" fontColor="{40,26,0}" areaSizeX="260" areaSizeY="28" alignment="1" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        </ElementNode>
+        <ElementNode type="Button" elementID="ID_btnEvent6" anchorX="0" anchorY="0" positionX="-40" positionY="170" z="1" scaleX="1" scaleY="1" imageName="K_eventTag_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpen6" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_Open6" anchorX="0.5" anchorY="0.5" positionX="170" positionY="82" z="3" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+          <ElementNode type="Image" elementID="ID_IMAGE_crystal6" anchorX="0" anchorY="0" positionX="8" positionY="10" z="0" scaleX="0.4" scaleY="0.4" imageName="I2_crystal_02.png" />
+          <ElementNode type="Label" elementID="ID_LABEL_6" anchorX="0" anchorY="0" positionX="34" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="OPEN" fontStyle="1" fontSize="22" fontColor="{232,122,255}" areaSizeX="70" areaSizeY="30" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+          <ElementNode type="Image" elementID="ID_IMAGE_lock6" anchorX="0" anchorY="0" positionX="32" positionY="38" z="0" scaleX="1" scaleY="1" imageName="I_lock_01.png" />
+        </ElementNode>
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_lock6" anchorX="0.5" anchorY="0.5" positionX="170" positionY="148" z="4" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lock1_6" anchorX="0" anchorY="0" positionX="28" positionY="18" z="0" scaleX="1.2" scaleY="1.2" imageName="I_lock_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpenT_6" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lockT_6" anchorX="0" anchorY="0" positionX="-6" positionY="46" z="0" scaleX="1" scaleY="1" imageName="I2_lock_02.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_land7" anchorX="0" anchorY="0" positionX="1922" positionY="236" z="1" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,290}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Button" elementID="ID_btnLand7" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="S_land_07.png" />
+      <ElementNode type="Image" elementID="ID_shadow7" anchorX="0" anchorY="0" positionX="100" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_shadow_03.png" />
+      <ElementNode type="NinePatch" elementID="ID_info7" anchorX="0" anchorY="0" positionX="70" positionY="-2" z="3" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{200,66}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_eventTime7" anchorX="0" anchorY="0" positionX="-60" positionY="36" z="0" scaleX="1" scaleY="1" imageName="9_frame_08.png" ninePatchSize="{320,28}" ninePatchInset="{{76,2},{2,2}}">
+          <ElementNode type="Label" elementID="ID_timeText7" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Time Left: 05:23" fontStyle="1" fontSize="20" fontColor="{255,220,85}" areaSizeX="320" areaSizeY="24" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{56,16,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_landNameLabel7" anchorX="0" anchorY="0" positionX="-30" positionY="2" z="0" scaleX="1" scaleY="1" imageName="9_frame_07.png" ninePatchSize="{260,32}" ninePatchInset="{{16,0},{2,32}}">
+          <ElementNode type="Label" elementID="ID_landNameText7" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Dino Gorge" fontStyle="1" fontSize="24" fontColor="{40,26,0}" areaSizeX="260" areaSizeY="28" alignment="1" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        </ElementNode>
+        <ElementNode type="Button" elementID="ID_btnEvent7" anchorX="0" anchorY="0" positionX="-40" positionY="170" z="1" scaleX="1" scaleY="1" imageName="K_eventTag_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpen7" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_Open7" anchorX="0.5" anchorY="0.5" positionX="170" positionY="82" z="3" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+          <ElementNode type="Image" elementID="ID_IMAGE_crystal7" anchorX="0" anchorY="0" positionX="8" positionY="10" z="0" scaleX="0.4" scaleY="0.4" imageName="I2_crystal_02.png" />
+          <ElementNode type="Label" elementID="ID_LABEL_7" anchorX="0" anchorY="0" positionX="34" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="OPEN" fontStyle="1" fontSize="22" fontColor="{232,122,255}" areaSizeX="70" areaSizeY="30" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+          <ElementNode type="Image" elementID="ID_IMAGE_lock7" anchorX="0" anchorY="0" positionX="32" positionY="38" z="0" scaleX="1" scaleY="1" imageName="I_lock_01.png" />
+        </ElementNode>
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_lock7" anchorX="0.5" anchorY="0.5" positionX="170" positionY="148" z="4" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lock1_7" anchorX="0" anchorY="0" positionX="28" positionY="18" z="0" scaleX="1.2" scaleY="1.2" imageName="I_lock_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpenT_7" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lockT_7" anchorX="0" anchorY="0" positionX="-6" positionY="46" z="0" scaleX="1" scaleY="1" imageName="I2_lock_02.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_land8" anchorX="0" anchorY="0" positionX="2240" positionY="6" z="1" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,290}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Button" elementID="ID_btnLand8" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="S_land_08.png" />
+      <ElementNode type="Image" elementID="ID_shadow8" anchorX="0" anchorY="0" positionX="100" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_shadow_03.png" />
+      <ElementNode type="NinePatch" elementID="ID_info8" anchorX="0" anchorY="0" positionX="70" positionY="-2" z="3" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{200,66}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_eventTime8" anchorX="0" anchorY="0" positionX="-60" positionY="36" z="0" scaleX="1" scaleY="1" imageName="9_frame_08.png" ninePatchSize="{320,28}" ninePatchInset="{{76,2},{2,2}}">
+          <ElementNode type="Label" elementID="ID_timeText8" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Time Left: 05:23" fontStyle="1" fontSize="20" fontColor="{255,220,85}" areaSizeX="320" areaSizeY="24" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{56,16,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_landNameLabel8" anchorX="0" anchorY="0" positionX="-30" positionY="2" z="0" scaleX="1" scaleY="1" imageName="9_frame_07.png" ninePatchSize="{260,32}" ninePatchInset="{{16,0},{2,32}}">
+          <ElementNode type="Label" elementID="ID_landNameText8" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Event Island" fontStyle="1" fontSize="24" fontColor="{40,26,0}" areaSizeX="260" areaSizeY="28" alignment="1" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        </ElementNode>
+        <ElementNode type="Button" elementID="ID_btnEvent8" anchorX="0" anchorY="0" positionX="-40" positionY="170" z="1" scaleX="1" scaleY="1" imageName="K_eventTag_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpen8" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_Open8" anchorX="0.5" anchorY="0.5" positionX="170" positionY="82" z="3" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+          <ElementNode type="Image" elementID="ID_IMAGE_crystal8" anchorX="0" anchorY="0" positionX="8" positionY="10" z="0" scaleX="0.4" scaleY="0.4" imageName="I2_crystal_02.png" />
+          <ElementNode type="Label" elementID="ID_LABEL_8" anchorX="0" anchorY="0" positionX="34" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="OPEN" fontStyle="1" fontSize="22" fontColor="{232,122,255}" areaSizeX="70" areaSizeY="30" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+          <ElementNode type="Image" elementID="ID_IMAGE_lock8" anchorX="0" anchorY="0" positionX="32" positionY="38" z="0" scaleX="1" scaleY="1" imageName="I_lock_01.png" />
+        </ElementNode>
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_lock8" anchorX="0.5" anchorY="0.5" positionX="170" positionY="148" z="4" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lock1_8" anchorX="0" anchorY="0" positionX="28" positionY="18" z="0" scaleX="1.2" scaleY="1.2" imageName="I_lock_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpenT_8" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lockT_8" anchorX="0" anchorY="0" positionX="-6" positionY="46" z="0" scaleX="1" scaleY="1" imageName="I2_lock_02.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_land9" anchorX="0" anchorY="0" positionX="2558" positionY="236" z="1" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,290}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Button" elementID="ID_btnLand9" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="S_land_09.png" />
+      <ElementNode type="Image" elementID="ID_shadow9" anchorX="0" anchorY="0" positionX="100" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_shadow_03.png" />
+      <ElementNode type="NinePatch" elementID="ID_info9" anchorX="0" anchorY="0" positionX="70" positionY="-2" z="3" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{200,66}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_eventTime9" anchorX="0" anchorY="0" positionX="-60" positionY="36" z="0" scaleX="1" scaleY="1" imageName="9_frame_08.png" ninePatchSize="{320,28}" ninePatchInset="{{76,2},{2,2}}">
+          <ElementNode type="Label" elementID="ID_timeText9" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Time Left: 05:23" fontStyle="1" fontSize="20" fontColor="{255,220,85}" areaSizeX="320" areaSizeY="24" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{56,16,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_landNameLabel9" anchorX="0" anchorY="0" positionX="-30" positionY="2" z="0" scaleX="1" scaleY="1" imageName="9_frame_07.png" ninePatchSize="{260,32}" ninePatchInset="{{16,0},{2,32}}">
+          <ElementNode type="Label" elementID="ID_landNameText9" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Event Island" fontStyle="1" fontSize="24" fontColor="{40,26,0}" areaSizeX="260" areaSizeY="28" alignment="1" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        </ElementNode>
+        <ElementNode type="Button" elementID="ID_btnEvent9" anchorX="0" anchorY="0" positionX="-40" positionY="170" z="1" scaleX="1" scaleY="1" imageName="K_eventTag_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpen9" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_Open9" anchorX="0.5" anchorY="0.5" positionX="170" positionY="82" z="3" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+          <ElementNode type="Image" elementID="ID_IMAGE_crystal9" anchorX="0" anchorY="0" positionX="8" positionY="10" z="0" scaleX="0.4" scaleY="0.4" imageName="I2_crystal_02.png" />
+          <ElementNode type="Label" elementID="ID_LABEL_9" anchorX="0" anchorY="0" positionX="34" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="OPEN" fontStyle="1" fontSize="22" fontColor="{232,122,255}" areaSizeX="70" areaSizeY="30" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+          <ElementNode type="Image" elementID="ID_IMAGE_lock9" anchorX="0" anchorY="0" positionX="32" positionY="38" z="0" scaleX="1" scaleY="1" imageName="I_lock_01.png" />
+        </ElementNode>
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_lock9" anchorX="0.5" anchorY="0.5" positionX="170" positionY="148" z="4" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lock1_9" anchorX="0" anchorY="0" positionX="28" positionY="18" z="0" scaleX="1.2" scaleY="1.2" imageName="I_lock_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpenT_9" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lockT_9" anchorX="0" anchorY="0" positionX="-6" positionY="46" z="0" scaleX="1" scaleY="1" imageName="I2_lock_02.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_land10" anchorX="0" anchorY="0" positionX="2876" positionY="6" z="1" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,290}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Button" elementID="ID_btnLand10" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="S_land_10.png" />
+      <ElementNode type="Image" elementID="ID_shadow10" anchorX="0" anchorY="0" positionX="100" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_shadow_03.png" />
+      <ElementNode type="NinePatch" elementID="ID_info10" anchorX="0" anchorY="0" positionX="70" positionY="-2" z="3" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{200,66}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_eventTime10" anchorX="0" anchorY="0" positionX="-60" positionY="36" z="0" scaleX="1" scaleY="1" imageName="9_frame_08.png" ninePatchSize="{320,28}" ninePatchInset="{{76,2},{2,2}}">
+          <ElementNode type="Label" elementID="ID_timeText10" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Time Left: 05:23" fontStyle="1" fontSize="20" fontColor="{255,220,85}" areaSizeX="320" areaSizeY="24" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{56,16,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_landNameLabel10" anchorX="0" anchorY="0" positionX="-30" positionY="2" z="0" scaleX="1" scaleY="1" imageName="9_frame_07.png" ninePatchSize="{260,32}" ninePatchInset="{{16,0},{2,32}}">
+          <ElementNode type="Label" elementID="ID_landNameText10" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Event Island" fontStyle="1" fontSize="24" fontColor="{40,26,0}" areaSizeX="260" areaSizeY="28" alignment="1" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        </ElementNode>
+        <ElementNode type="Button" elementID="ID_btnEvent10" anchorX="0" anchorY="0" positionX="-40" positionY="170" z="1" scaleX="1" scaleY="1" imageName="K_eventTag_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpen10" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_Open10" anchorX="0.5" anchorY="0.5" positionX="170" positionY="82" z="3" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+          <ElementNode type="Image" elementID="ID_IMAGE_crystal10" anchorX="0" anchorY="0" positionX="8" positionY="10" z="0" scaleX="0.4" scaleY="0.4" imageName="I2_crystal_02.png" />
+          <ElementNode type="Label" elementID="ID_LABEL_10" anchorX="0" anchorY="0" positionX="34" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="OPEN" fontStyle="1" fontSize="22" fontColor="{232,122,255}" areaSizeX="70" areaSizeY="30" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+          <ElementNode type="Image" elementID="ID_IMAGE_lock10" anchorX="0" anchorY="0" positionX="32" positionY="38" z="0" scaleX="1" scaleY="1" imageName="I_lock_01.png" />
+        </ElementNode>
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_lock10" anchorX="0.5" anchorY="0.5" positionX="170" positionY="148" z="4" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lock1_10" anchorX="0" anchorY="0" positionX="28" positionY="18" z="0" scaleX="1.2" scaleY="1.2" imageName="I_lock_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpenT_10" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lockT_10" anchorX="0" anchorY="0" positionX="-6" positionY="46" z="0" scaleX="1" scaleY="1" imageName="I2_lock_02.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_land11" anchorX="0" anchorY="0" positionX="3194" positionY="236" z="1" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,290}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Button" elementID="ID_btnLand11" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="S_land_11.png" />
+      <ElementNode type="Image" elementID="ID_shadow11" anchorX="0" anchorY="0" positionX="100" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_shadow_03.png" />
+      <ElementNode type="NinePatch" elementID="ID_info11" anchorX="0" anchorY="0" positionX="70" positionY="-2" z="3" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{200,66}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_eventTime11" anchorX="0" anchorY="0" positionX="-60" positionY="36" z="0" scaleX="1" scaleY="1" imageName="9_frame_08.png" ninePatchSize="{320,28}" ninePatchInset="{{76,2},{2,2}}">
+          <ElementNode type="Label" elementID="ID_timeText11" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Time Left: 05:23" fontStyle="1" fontSize="20" fontColor="{255,220,85}" areaSizeX="320" areaSizeY="24" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{56,16,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_landNameLabel11" anchorX="0" anchorY="0" positionX="-30" positionY="2" z="0" scaleX="1" scaleY="1" imageName="9_frame_07.png" ninePatchSize="{260,32}" ninePatchInset="{{16,0},{2,32}}">
+          <ElementNode type="Label" elementID="ID_landNameText11" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Event Island" fontStyle="1" fontSize="24" fontColor="{40,26,0}" areaSizeX="260" areaSizeY="28" alignment="1" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        </ElementNode>
+        <ElementNode type="Button" elementID="ID_btnEvent11" anchorX="0" anchorY="0" positionX="-40" positionY="170" z="1" scaleX="1" scaleY="1" imageName="K_eventTag_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpen11" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_Open11" anchorX="0.5" anchorY="0.5" positionX="170" positionY="82" z="3" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+          <ElementNode type="Image" elementID="ID_IMAGE_crystal11" anchorX="0" anchorY="0" positionX="8" positionY="10" z="0" scaleX="0.4" scaleY="0.4" imageName="I2_crystal_02.png" />
+          <ElementNode type="Label" elementID="ID_LABEL_11" anchorX="0" anchorY="0" positionX="34" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="OPEN" fontStyle="1" fontSize="22" fontColor="{232,122,255}" areaSizeX="70" areaSizeY="30" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+          <ElementNode type="Image" elementID="ID_IMAGE_lock11" anchorX="0" anchorY="0" positionX="32" positionY="38" z="0" scaleX="1" scaleY="1" imageName="I_lock_01.png" />
+        </ElementNode>
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_lock11" anchorX="0.5" anchorY="0.5" positionX="170" positionY="148" z="4" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lock1_11" anchorX="0" anchorY="0" positionX="28" positionY="18" z="0" scaleX="1.2" scaleY="1.2" imageName="I_lock_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpenT_11" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lockT_11" anchorX="0" anchorY="0" positionX="-6" positionY="46" z="0" scaleX="1" scaleY="1" imageName="I2_lock_02.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_land12" anchorX="0" anchorY="0" positionX="3512" positionY="6" z="1" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,290}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Button" elementID="ID_btnLand12" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="S_land_08.png" />
+      <ElementNode type="Image" elementID="ID_shadow12" anchorX="0" anchorY="0" positionX="100" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_shadow_03.png" />
+      <ElementNode type="NinePatch" elementID="ID_info12" anchorX="0" anchorY="0" positionX="70" positionY="-2" z="3" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{200,66}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_eventTime12" anchorX="0" anchorY="0" positionX="-60" positionY="36" z="0" scaleX="1" scaleY="1" imageName="9_frame_08.png" ninePatchSize="{320,28}" ninePatchInset="{{76,2},{2,2}}">
+          <ElementNode type="Label" elementID="ID_timeText12" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Time Left: 05:23" fontStyle="1" fontSize="20" fontColor="{255,220,85}" areaSizeX="320" areaSizeY="24" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{56,16,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_landNameLabel12" anchorX="0" anchorY="0" positionX="-30" positionY="2" z="0" scaleX="1" scaleY="1" imageName="9_frame_07.png" ninePatchSize="{260,32}" ninePatchInset="{{16,0},{2,32}}">
+          <ElementNode type="Label" elementID="ID_landNameText12" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Event Island" fontStyle="1" fontSize="24" fontColor="{40,26,0}" areaSizeX="260" areaSizeY="28" alignment="1" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        </ElementNode>
+        <ElementNode type="Button" elementID="ID_btnEvent12" anchorX="0" anchorY="0" positionX="-40" positionY="170" z="1" scaleX="1" scaleY="1" imageName="K_eventTag_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpen12" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_Open12" anchorX="0.5" anchorY="0.5" positionX="170" positionY="82" z="3" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+          <ElementNode type="Image" elementID="ID_IMAGE_crystal12" anchorX="0" anchorY="0" positionX="8" positionY="10" z="0" scaleX="0.4" scaleY="0.4" imageName="I2_crystal_02.png" />
+          <ElementNode type="Label" elementID="ID_LABEL_12" anchorX="0" anchorY="0" positionX="34" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="OPEN" fontStyle="1" fontSize="22" fontColor="{232,122,255}" areaSizeX="70" areaSizeY="30" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+          <ElementNode type="Image" elementID="ID_IMAGE_lock12" anchorX="0" anchorY="0" positionX="32" positionY="38" z="0" scaleX="1" scaleY="1" imageName="I_lock_01.png" />
+        </ElementNode>
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_lock12" anchorX="0.5" anchorY="0.5" positionX="170" positionY="148" z="4" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lock1_12" anchorX="0" anchorY="0" positionX="28" positionY="18" z="0" scaleX="1.2" scaleY="1.2" imageName="I_lock_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpenT_12" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lockT_12" anchorX="0" anchorY="0" positionX="-6" positionY="46" z="0" scaleX="1" scaleY="1" imageName="I2_lock_02.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_land13" anchorX="0" anchorY="0" positionX="3830" positionY="236" z="1" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,290}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Button" elementID="ID_btnLand13" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="S_land_08.png" />
+      <ElementNode type="Image" elementID="ID_shadow13" anchorX="0" anchorY="0" positionX="100" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_shadow_03.png" />
+      <ElementNode type="NinePatch" elementID="ID_info13" anchorX="0" anchorY="0" positionX="70" positionY="-2" z="3" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{200,66}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_eventTime13" anchorX="0" anchorY="0" positionX="-60" positionY="36" z="0" scaleX="1" scaleY="1" imageName="9_frame_08.png" ninePatchSize="{320,28}" ninePatchInset="{{76,2},{2,2}}">
+          <ElementNode type="Label" elementID="ID_timeText13" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Time Left: 05:23" fontStyle="1" fontSize="20" fontColor="{255,220,85}" areaSizeX="320" areaSizeY="24" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{56,16,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_landNameLabel13" anchorX="0" anchorY="0" positionX="-30" positionY="2" z="0" scaleX="1" scaleY="1" imageName="9_frame_07.png" ninePatchSize="{260,32}" ninePatchInset="{{16,0},{2,32}}">
+          <ElementNode type="Label" elementID="ID_landNameText13" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Event Island" fontStyle="1" fontSize="24" fontColor="{40,26,0}" areaSizeX="260" areaSizeY="28" alignment="1" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        </ElementNode>
+        <ElementNode type="Button" elementID="ID_btnEvent13" anchorX="0" anchorY="0" positionX="-40" positionY="170" z="1" scaleX="1" scaleY="1" imageName="K_eventTag_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpen13" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_Open13" anchorX="0.5" anchorY="0.5" positionX="170" positionY="82" z="3" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+          <ElementNode type="Image" elementID="ID_IMAGE_crystal13" anchorX="0" anchorY="0" positionX="8" positionY="10" z="0" scaleX="0.4" scaleY="0.4" imageName="I2_crystal_02.png" />
+          <ElementNode type="Label" elementID="ID_LABEL_13" anchorX="0" anchorY="0" positionX="34" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="OPEN" fontStyle="1" fontSize="22" fontColor="{232,122,255}" areaSizeX="70" areaSizeY="30" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+          <ElementNode type="Image" elementID="ID_IMAGE_lock13" anchorX="0" anchorY="0" positionX="32" positionY="38" z="0" scaleX="1" scaleY="1" imageName="I_lock_01.png" />
+        </ElementNode>
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_lock13" anchorX="0.5" anchorY="0.5" positionX="170" positionY="148" z="4" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lock1_13" anchorX="0" anchorY="0" positionX="28" positionY="18" z="0" scaleX="1.2" scaleY="1.2" imageName="I_lock_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpenT_13" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lockT_13" anchorX="0" anchorY="0" positionX="-6" positionY="46" z="0" scaleX="1" scaleY="1" imageName="I2_lock_02.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_land14" anchorX="0" anchorY="0" positionX="4148" positionY="6" z="1" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,290}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Button" elementID="ID_btnLand14" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="S_land_08.png" />
+      <ElementNode type="Image" elementID="ID_shadow14" anchorX="0" anchorY="0" positionX="100" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_shadow_03.png" />
+      <ElementNode type="NinePatch" elementID="ID_info14" anchorX="0" anchorY="0" positionX="70" positionY="-2" z="3" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{200,66}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_eventTime14" anchorX="0" anchorY="0" positionX="-60" positionY="36" z="0" scaleX="1" scaleY="1" imageName="9_frame_08.png" ninePatchSize="{320,28}" ninePatchInset="{{76,2},{2,2}}">
+          <ElementNode type="Label" elementID="ID_timeText14" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Time Left: 05:23" fontStyle="1" fontSize="20" fontColor="{255,220,85}" areaSizeX="320" areaSizeY="24" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{56,16,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_landNameLabel14" anchorX="0" anchorY="0" positionX="-30" positionY="2" z="0" scaleX="1" scaleY="1" imageName="9_frame_07.png" ninePatchSize="{260,32}" ninePatchInset="{{16,0},{2,32}}">
+          <ElementNode type="Label" elementID="ID_landNameText14" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Event Island" fontStyle="1" fontSize="24" fontColor="{40,26,0}" areaSizeX="260" areaSizeY="28" alignment="1" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        </ElementNode>
+        <ElementNode type="Button" elementID="ID_btnEvent14" anchorX="0" anchorY="0" positionX="-40" positionY="170" z="1" scaleX="1" scaleY="1" imageName="K_eventTag_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpen14" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_Open14" anchorX="0.5" anchorY="0.5" positionX="170" positionY="82" z="3" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+          <ElementNode type="Image" elementID="ID_IMAGE_crystal14" anchorX="0" anchorY="0" positionX="8" positionY="10" z="0" scaleX="0.4" scaleY="0.4" imageName="I2_crystal_02.png" />
+          <ElementNode type="Label" elementID="ID_LABEL_14" anchorX="0" anchorY="0" positionX="34" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="OPEN" fontStyle="1" fontSize="22" fontColor="{232,122,255}" areaSizeX="70" areaSizeY="30" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+          <ElementNode type="Image" elementID="ID_IMAGE_lock14" anchorX="0" anchorY="0" positionX="32" positionY="38" z="0" scaleX="1" scaleY="1" imageName="I_lock_01.png" />
+        </ElementNode>
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_lock14" anchorX="0.5" anchorY="0.5" positionX="170" positionY="148" z="4" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lock1_14" anchorX="0" anchorY="0" positionX="28" positionY="18" z="0" scaleX="1.2" scaleY="1.2" imageName="I_lock_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpenT_14" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lockT_14" anchorX="0" anchorY="0" positionX="-6" positionY="46" z="0" scaleX="1" scaleY="1" imageName="I2_lock_02.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_land15" anchorX="0" anchorY="0" positionX="4466" positionY="236" z="1" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,290}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Button" elementID="ID_btnLand15" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="S_land_08.png" />
+      <ElementNode type="Image" elementID="ID_shadow15" anchorX="0" anchorY="0" positionX="100" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_shadow_03.png" />
+      <ElementNode type="NinePatch" elementID="ID_info15" anchorX="0" anchorY="0" positionX="70" positionY="-2" z="3" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{200,66}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_eventTime15" anchorX="0" anchorY="0" positionX="-60" positionY="36" z="0" scaleX="1" scaleY="1" imageName="9_frame_08.png" ninePatchSize="{320,28}" ninePatchInset="{{76,2},{2,2}}">
+          <ElementNode type="Label" elementID="ID_timeText15" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Time Left: 05:23" fontStyle="1" fontSize="20" fontColor="{255,220,85}" areaSizeX="320" areaSizeY="24" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{56,16,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_landNameLabel15" anchorX="0" anchorY="0" positionX="-30" positionY="2" z="0" scaleX="1" scaleY="1" imageName="9_frame_07.png" ninePatchSize="{260,32}" ninePatchInset="{{16,0},{2,32}}">
+          <ElementNode type="Label" elementID="ID_landNameText15" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Event Island" fontStyle="1" fontSize="24" fontColor="{40,26,0}" areaSizeX="260" areaSizeY="28" alignment="1" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        </ElementNode>
+        <ElementNode type="Button" elementID="ID_btnEvent15" anchorX="0" anchorY="0" positionX="-40" positionY="170" z="1" scaleX="1" scaleY="1" imageName="K_eventTag_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpen15" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_Open15" anchorX="0.5" anchorY="0.5" positionX="170" positionY="82" z="3" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+          <ElementNode type="Image" elementID="ID_IMAGE_crystal15" anchorX="0" anchorY="0" positionX="8" positionY="10" z="0" scaleX="0.4" scaleY="0.4" imageName="I2_crystal_02.png" />
+          <ElementNode type="Label" elementID="ID_LABEL_15" anchorX="0" anchorY="0" positionX="34" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="OPEN" fontStyle="1" fontSize="22" fontColor="{232,122,255}" areaSizeX="70" areaSizeY="30" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+          <ElementNode type="Image" elementID="ID_IMAGE_lock15" anchorX="0" anchorY="0" positionX="32" positionY="38" z="0" scaleX="1" scaleY="1" imageName="I_lock_01.png" />
+        </ElementNode>
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_lock15" anchorX="0.5" anchorY="0.5" positionX="170" positionY="148" z="4" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lock1_15" anchorX="0" anchorY="0" positionX="28" positionY="18" z="0" scaleX="1.2" scaleY="1.2" imageName="I_lock_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpenT_15" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lockT_15" anchorX="0" anchorY="0" positionX="-6" positionY="46" z="0" scaleX="1" scaleY="1" imageName="I2_lock_02.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_land16" anchorX="0" anchorY="0" positionX="4784" positionY="6" z="1" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,290}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Button" elementID="ID_btnLand16" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="S_land_08.png" />
+      <ElementNode type="Image" elementID="ID_shadow16" anchorX="0" anchorY="0" positionX="100" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_shadow_03.png" />
+      <ElementNode type="NinePatch" elementID="ID_info16" anchorX="0" anchorY="0" positionX="70" positionY="-2" z="3" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{200,66}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_eventTime16" anchorX="0" anchorY="0" positionX="-60" positionY="36" z="0" scaleX="1" scaleY="1" imageName="9_frame_08.png" ninePatchSize="{320,28}" ninePatchInset="{{76,2},{2,2}}">
+          <ElementNode type="Label" elementID="ID_timeText16" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Time Left: 05:23" fontStyle="1" fontSize="20" fontColor="{255,220,85}" areaSizeX="320" areaSizeY="24" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{56,16,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_landNameLabel16" anchorX="0" anchorY="0" positionX="-30" positionY="2" z="0" scaleX="1" scaleY="1" imageName="9_frame_07.png" ninePatchSize="{260,32}" ninePatchInset="{{16,0},{2,32}}">
+          <ElementNode type="Label" elementID="ID_landNameText16" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Event Island" fontStyle="1" fontSize="24" fontColor="{40,26,0}" areaSizeX="260" areaSizeY="28" alignment="1" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        </ElementNode>
+        <ElementNode type="Button" elementID="ID_btnEvent16" anchorX="0" anchorY="0" positionX="-40" positionY="170" z="1" scaleX="1" scaleY="1" imageName="K_eventTag_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpen16" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_Open16" anchorX="0.5" anchorY="0.5" positionX="170" positionY="82" z="3" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+          <ElementNode type="Image" elementID="ID_IMAGE_crystal16" anchorX="0" anchorY="0" positionX="8" positionY="10" z="0" scaleX="0.4" scaleY="0.4" imageName="I2_crystal_02.png" />
+          <ElementNode type="Label" elementID="ID_LABEL_16" anchorX="0" anchorY="0" positionX="34" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="OPEN" fontStyle="1" fontSize="22" fontColor="{232,122,255}" areaSizeX="70" areaSizeY="30" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+          <ElementNode type="Image" elementID="ID_IMAGE_lock16" anchorX="0" anchorY="0" positionX="32" positionY="38" z="0" scaleX="1" scaleY="1" imageName="I_lock_01.png" />
+        </ElementNode>
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_lock16" anchorX="0.5" anchorY="0.5" positionX="170" positionY="148" z="4" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lock1_16" anchorX="0" anchorY="0" positionX="28" positionY="18" z="0" scaleX="1.2" scaleY="1.2" imageName="I_lock_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpenT_16" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lockT_16" anchorX="0" anchorY="0" positionX="-6" positionY="46" z="0" scaleX="1" scaleY="1" imageName="I2_lock_02.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_land17" anchorX="0" anchorY="0" positionX="5102" positionY="236" z="1" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,290}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Button" elementID="ID_btnLand17" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="S_land_08.png" />
+      <ElementNode type="Image" elementID="ID_shadow17" anchorX="0" anchorY="0" positionX="100" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_shadow_03.png" />
+      <ElementNode type="NinePatch" elementID="ID_info17" anchorX="0" anchorY="0" positionX="70" positionY="-2" z="3" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{200,66}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_eventTime17" anchorX="0" anchorY="0" positionX="-60" positionY="36" z="0" scaleX="1" scaleY="1" imageName="9_frame_08.png" ninePatchSize="{320,28}" ninePatchInset="{{76,2},{2,2}}">
+          <ElementNode type="Label" elementID="ID_timeText17" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Time Left: 05:23" fontStyle="1" fontSize="20" fontColor="{255,220,85}" areaSizeX="320" areaSizeY="24" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{56,16,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_landNameLabel17" anchorX="0" anchorY="0" positionX="-30" positionY="2" z="0" scaleX="1" scaleY="1" imageName="9_frame_07.png" ninePatchSize="{260,32}" ninePatchInset="{{16,0},{2,32}}">
+          <ElementNode type="Label" elementID="ID_landNameText17" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Event Island" fontStyle="1" fontSize="24" fontColor="{40,26,0}" areaSizeX="260" areaSizeY="28" alignment="1" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        </ElementNode>
+        <ElementNode type="Button" elementID="ID_btnEvent17" anchorX="0" anchorY="0" positionX="-40" positionY="170" z="1" scaleX="1" scaleY="1" imageName="K_eventTag_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpen17" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_Open17" anchorX="0.5" anchorY="0.5" positionX="170" positionY="82" z="3" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+          <ElementNode type="Image" elementID="ID_IMAGE_crystal17" anchorX="0" anchorY="0" positionX="8" positionY="10" z="0" scaleX="0.4" scaleY="0.4" imageName="I2_crystal_02.png" />
+          <ElementNode type="Label" elementID="ID_LABEL_17" anchorX="0" anchorY="0" positionX="34" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="OPEN" fontStyle="1" fontSize="22" fontColor="{232,122,255}" areaSizeX="70" areaSizeY="30" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+          <ElementNode type="Image" elementID="ID_IMAGE_lock17" anchorX="0" anchorY="0" positionX="32" positionY="38" z="0" scaleX="1" scaleY="1" imageName="I_lock_01.png" />
+        </ElementNode>
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_lock17" anchorX="0.5" anchorY="0.5" positionX="170" positionY="148" z="4" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lock1_17" anchorX="0" anchorY="0" positionX="28" positionY="18" z="0" scaleX="1.2" scaleY="1.2" imageName="I_lock_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpenT_17" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lockT_17" anchorX="0" anchorY="0" positionX="-6" positionY="46" z="0" scaleX="1" scaleY="1" imageName="I2_lock_02.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_land18" anchorX="0" anchorY="0" positionX="5420" positionY="6" z="1" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,290}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Button" elementID="ID_btnLand18" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="S_land_08.png" />
+      <ElementNode type="Image" elementID="ID_shadow18" anchorX="0" anchorY="0" positionX="100" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_shadow_03.png" />
+      <ElementNode type="NinePatch" elementID="ID_info18" anchorX="0" anchorY="0" positionX="70" positionY="-2" z="3" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{200,66}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_eventTime18" anchorX="0" anchorY="0" positionX="-60" positionY="36" z="0" scaleX="1" scaleY="1" imageName="9_frame_08.png" ninePatchSize="{320,28}" ninePatchInset="{{76,2},{2,2}}">
+          <ElementNode type="Label" elementID="ID_timeText18" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Time Left: 05:23" fontStyle="1" fontSize="20" fontColor="{255,220,85}" areaSizeX="320" areaSizeY="24" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{56,16,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_landNameLabel18" anchorX="0" anchorY="0" positionX="-30" positionY="2" z="0" scaleX="1" scaleY="1" imageName="9_frame_07.png" ninePatchSize="{260,32}" ninePatchInset="{{16,0},{2,32}}">
+          <ElementNode type="Label" elementID="ID_landNameText18" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Event Island" fontStyle="1" fontSize="24" fontColor="{40,26,0}" areaSizeX="260" areaSizeY="28" alignment="1" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        </ElementNode>
+        <ElementNode type="Button" elementID="ID_btnEvent18" anchorX="0" anchorY="0" positionX="-40" positionY="170" z="1" scaleX="1" scaleY="1" imageName="K_eventTag_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpen18" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_Open18" anchorX="0.5" anchorY="0.5" positionX="170" positionY="82" z="3" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+          <ElementNode type="Image" elementID="ID_IMAGE_crystal18" anchorX="0" anchorY="0" positionX="8" positionY="10" z="0" scaleX="0.4" scaleY="0.4" imageName="I2_crystal_02.png" />
+          <ElementNode type="Label" elementID="ID_LABEL_18" anchorX="0" anchorY="0" positionX="34" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="OPEN" fontStyle="1" fontSize="22" fontColor="{232,122,255}" areaSizeX="70" areaSizeY="30" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+          <ElementNode type="Image" elementID="ID_IMAGE_lock18" anchorX="0" anchorY="0" positionX="32" positionY="38" z="0" scaleX="1" scaleY="1" imageName="I_lock_01.png" />
+        </ElementNode>
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_lock18" anchorX="0.5" anchorY="0.5" positionX="170" positionY="148" z="4" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lock1_18" anchorX="0" anchorY="0" positionX="28" positionY="18" z="0" scaleX="1.2" scaleY="1.2" imageName="I_lock_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpenT_18" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lockT_18" anchorX="0" anchorY="0" positionX="-6" positionY="46" z="0" scaleX="1" scaleY="1" imageName="I2_lock_02.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_land19" anchorX="0" anchorY="0" positionX="5738" positionY="236" z="1" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,290}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Button" elementID="ID_btnLand19" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="S_land_08.png" />
+      <ElementNode type="Image" elementID="ID_shadow19" anchorX="0" anchorY="0" positionX="100" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_shadow_03.png" />
+      <ElementNode type="NinePatch" elementID="ID_info19" anchorX="0" anchorY="0" positionX="70" positionY="-2" z="3" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{200,66}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_eventTime19" anchorX="0" anchorY="0" positionX="-60" positionY="36" z="0" scaleX="1" scaleY="1" imageName="9_frame_08.png" ninePatchSize="{320,28}" ninePatchInset="{{76,2},{2,2}}">
+          <ElementNode type="Label" elementID="ID_timeText19" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Time Left: 05:23" fontStyle="1" fontSize="20" fontColor="{255,220,85}" areaSizeX="320" areaSizeY="24" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{56,16,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_landNameLabel19" anchorX="0" anchorY="0" positionX="-30" positionY="2" z="0" scaleX="1" scaleY="1" imageName="9_frame_07.png" ninePatchSize="{260,32}" ninePatchInset="{{16,0},{2,32}}">
+          <ElementNode type="Label" elementID="ID_landNameText19" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Event Island" fontStyle="1" fontSize="24" fontColor="{40,26,0}" areaSizeX="232" areaSizeY="28" alignment="1" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        </ElementNode>
+        <ElementNode type="Button" elementID="ID_btnEvent19" anchorX="0" anchorY="0" positionX="-40" positionY="170" z="1" scaleX="1" scaleY="1" imageName="K_eventTag_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpen19" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_Open19" anchorX="0.5" anchorY="0.5" positionX="170" positionY="82" z="3" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+          <ElementNode type="Image" elementID="ID_IMAGE_crystal19" anchorX="0" anchorY="0" positionX="8" positionY="10" z="0" scaleX="0.4" scaleY="0.4" imageName="I2_crystal_02.png" />
+          <ElementNode type="Label" elementID="ID_LABEL_19" anchorX="0" anchorY="0" positionX="34" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="OPEN" fontStyle="1" fontSize="22" fontColor="{232,122,255}" areaSizeX="70" areaSizeY="30" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+          <ElementNode type="Image" elementID="ID_IMAGE_lock19" anchorX="0" anchorY="0" positionX="32" positionY="38" z="0" scaleX="1" scaleY="1" imageName="I_lock_01.png" />
+        </ElementNode>
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_lock19" anchorX="0.5" anchorY="0.5" positionX="170" positionY="148" z="4" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lock1_19" anchorX="0" anchorY="0" positionX="28" positionY="18" z="0" scaleX="1.2" scaleY="1.2" imageName="I_lock_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpenT_19" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lockT_19" anchorX="0" anchorY="0" positionX="-6" positionY="46" z="0" scaleX="1" scaleY="1" imageName="I2_lock_02.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_land20" anchorX="0" anchorY="0" positionX="6056" positionY="6" z="1" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,290}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Button" elementID="ID_btnLand20" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="S_land_08.png" />
+      <ElementNode type="Image" elementID="ID_shadow20" anchorX="0" anchorY="0" positionX="100" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_shadow_03.png" />
+      <ElementNode type="NinePatch" elementID="ID_info20" anchorX="0" anchorY="0" positionX="70" positionY="-2" z="3" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{200,66}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_eventTime20" anchorX="0" anchorY="0" positionX="-60" positionY="36" z="0" scaleX="1" scaleY="1" imageName="9_frame_08.png" ninePatchSize="{320,28}" ninePatchInset="{{76,2},{2,2}}">
+          <ElementNode type="Label" elementID="ID_timeText20" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Time Left: 05:23" fontStyle="1" fontSize="20" fontColor="{255,220,85}" areaSizeX="320" areaSizeY="24" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{56,16,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_landNameLabel20" anchorX="0" anchorY="0" positionX="-16" positionY="2" z="0" scaleX="1" scaleY="1" imageName="9_frame_07.png" ninePatchSize="{232,32}" ninePatchInset="{{16,0},{2,32}}">
+          <ElementNode type="Label" elementID="ID_landNameText20" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Event Island" fontStyle="1" fontSize="24" fontColor="{40,26,0}" areaSizeX="260" areaSizeY="28" alignment="1" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        </ElementNode>
+        <ElementNode type="Button" elementID="ID_btnEvent20" anchorX="0" anchorY="0" positionX="-40" positionY="170" z="1" scaleX="1" scaleY="1" imageName="K_eventTag_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpen20" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_Open20" anchorX="0.5" anchorY="0.5" positionX="170" positionY="82" z="3" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+          <ElementNode type="Image" elementID="ID_IMAGE_crystal20" anchorX="0" anchorY="0" positionX="8" positionY="10" z="0" scaleX="0.4" scaleY="0.4" imageName="I2_crystal_02.png" />
+          <ElementNode type="Label" elementID="ID_LABEL_20" anchorX="0" anchorY="0" positionX="34" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="OPEN" fontStyle="1" fontSize="22" fontColor="{232,122,255}" areaSizeX="70" areaSizeY="30" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+          <ElementNode type="Image" elementID="ID_IMAGE_lock20" anchorX="0" anchorY="0" positionX="32" positionY="38" z="0" scaleX="1" scaleY="1" imageName="I_lock_01.png" />
+        </ElementNode>
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_lock20" anchorX="0.5" anchorY="0.5" positionX="170" positionY="148" z="4" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lock1_20" anchorX="0" anchorY="0" positionX="28" positionY="18" z="0" scaleX="1.2" scaleY="1.2" imageName="I_lock_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpenT_20" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lockT_20" anchorX="0" anchorY="0" positionX="-6" positionY="46" z="0" scaleX="1" scaleY="1" imageName="I2_lock_02.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_land21" anchorX="0" anchorY="0" positionX="6374" positionY="236" z="1" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,290}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Button" elementID="ID_btnLand21" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="S_land_08.png" />
+      <ElementNode type="Image" elementID="ID_shadow21" anchorX="0" anchorY="0" positionX="100" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_shadow_03.png" />
+      <ElementNode type="NinePatch" elementID="ID_info21" anchorX="0" anchorY="0" positionX="70" positionY="-2" z="3" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{200,66}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_eventTime21" anchorX="0" anchorY="0" positionX="-60" positionY="36" z="0" scaleX="1" scaleY="1" imageName="9_frame_08.png" ninePatchSize="{320,28}" ninePatchInset="{{76,2},{2,2}}">
+          <ElementNode type="Label" elementID="ID_timeText21" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Time Left: 05:23" fontStyle="1" fontSize="20" fontColor="{255,220,85}" areaSizeX="320" areaSizeY="24" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{56,16,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_landNameLabel21" anchorX="0" anchorY="0" positionX="-30" positionY="2" z="0" scaleX="1" scaleY="1" imageName="9_frame_07.png" ninePatchSize="{260,32}" ninePatchInset="{{16,0},{2,32}}">
+          <ElementNode type="Label" elementID="ID_landNameText21" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Event Island" fontStyle="1" fontSize="24" fontColor="{40,26,0}" areaSizeX="260" areaSizeY="28" alignment="1" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        </ElementNode>
+        <ElementNode type="Button" elementID="ID_btnEvent21" anchorX="0" anchorY="0" positionX="-40" positionY="170" z="1" scaleX="1" scaleY="1" imageName="K_eventTag_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpen21" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_Open21" anchorX="0.5" anchorY="0.5" positionX="170" positionY="82" z="3" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+          <ElementNode type="Image" elementID="ID_IMAGE_crystal21" anchorX="0" anchorY="0" positionX="8" positionY="10" z="0" scaleX="0.4" scaleY="0.4" imageName="I2_crystal_02.png" />
+          <ElementNode type="Label" elementID="ID_LABEL_21" anchorX="0" anchorY="0" positionX="34" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="OPEN" fontStyle="1" fontSize="22" fontColor="{232,122,255}" areaSizeX="70" areaSizeY="30" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+          <ElementNode type="Image" elementID="ID_IMAGE_lock21" anchorX="0" anchorY="0" positionX="32" positionY="38" z="0" scaleX="1" scaleY="1" imageName="I_lock_01.png" />
+        </ElementNode>
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_lock21" anchorX="0.5" anchorY="0.5" positionX="170" positionY="148" z="4" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lock1_21" anchorX="0" anchorY="0" positionX="28" positionY="18" z="0" scaleX="1.2" scaleY="1.2" imageName="I_lock_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpenT_21" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lockT_21" anchorX="0" anchorY="0" positionX="-6" positionY="46" z="0" scaleX="1" scaleY="1" imageName="I2_lock_02.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_land22" anchorX="0" anchorY="0" positionX="6692" positionY="6" z="1" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,290}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Button" elementID="ID_btnLand22" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="S_land_08.png" />
+      <ElementNode type="Image" elementID="ID_shadow22" anchorX="0" anchorY="0" positionX="100" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_shadow_03.png" />
+      <ElementNode type="NinePatch" elementID="ID_info22" anchorX="0" anchorY="0" positionX="70" positionY="-2" z="3" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{200,66}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_eventTime22" anchorX="0" anchorY="0" positionX="-60" positionY="36" z="0" scaleX="1" scaleY="1" imageName="9_frame_08.png" ninePatchSize="{320,28}" ninePatchInset="{{76,2},{2,2}}">
+          <ElementNode type="Label" elementID="ID_timeText22" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Time Left: 05:23" fontStyle="1" fontSize="20" fontColor="{255,220,85}" areaSizeX="320" areaSizeY="24" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{56,16,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_landNameLabel22" anchorX="0" anchorY="0" positionX="-30" positionY="2" z="0" scaleX="1" scaleY="1" imageName="9_frame_07.png" ninePatchSize="{260,32}" ninePatchInset="{{16,0},{2,32}}">
+          <ElementNode type="Label" elementID="ID_landNameText22" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Event Island" fontStyle="1" fontSize="24" fontColor="{40,26,0}" areaSizeX="260" areaSizeY="28" alignment="1" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        </ElementNode>
+        <ElementNode type="Button" elementID="ID_btnEvent22" anchorX="0" anchorY="0" positionX="-40" positionY="170" z="1" scaleX="1" scaleY="1" imageName="K_eventTag_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpen22" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_Open22" anchorX="0.5" anchorY="0.5" positionX="170" positionY="82" z="3" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+          <ElementNode type="Image" elementID="ID_IMAGE_crystal22" anchorX="0" anchorY="0" positionX="8" positionY="10" z="0" scaleX="0.4" scaleY="0.4" imageName="I2_crystal_02.png" />
+          <ElementNode type="Label" elementID="ID_LABEL_22" anchorX="0" anchorY="0" positionX="34" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="OPEN" fontStyle="1" fontSize="22" fontColor="{232,122,255}" areaSizeX="70" areaSizeY="30" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+          <ElementNode type="Image" elementID="ID_IMAGE_lock22" anchorX="0" anchorY="0" positionX="32" positionY="38" z="0" scaleX="1" scaleY="1" imageName="I_lock_01.png" />
+        </ElementNode>
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_lock22" anchorX="0.5" anchorY="0.5" positionX="170" positionY="148" z="4" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lock1_22" anchorX="0" anchorY="0" positionX="28" positionY="18" z="0" scaleX="1.2" scaleY="1.2" imageName="I_lock_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpenT_22" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lockT_22" anchorX="0" anchorY="0" positionX="-6" positionY="46" z="0" scaleX="1" scaleY="1" imageName="I2_lock_02.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_land23" anchorX="0" anchorY="0" positionX="7010" positionY="236" z="1" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,290}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Button" elementID="ID_btnLand23" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="S_land_08.png" />
+      <ElementNode type="Image" elementID="ID_shadow23" anchorX="0" anchorY="0" positionX="100" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_shadow_03.png" />
+      <ElementNode type="NinePatch" elementID="ID_info23" anchorX="0" anchorY="0" positionX="70" positionY="-2" z="3" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{200,66}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_eventTime23" anchorX="0" anchorY="0" positionX="-60" positionY="36" z="0" scaleX="1" scaleY="1" imageName="9_frame_08.png" ninePatchSize="{320,28}" ninePatchInset="{{76,2},{2,2}}">
+          <ElementNode type="Label" elementID="ID_timeText23" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Time Left: 05:23" fontStyle="1" fontSize="20" fontColor="{255,220,85}" areaSizeX="320" areaSizeY="24" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{56,16,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_landNameLabel23" anchorX="0" anchorY="0" positionX="-30" positionY="2" z="0" scaleX="1" scaleY="1" imageName="9_frame_07.png" ninePatchSize="{260,32}" ninePatchInset="{{16,0},{2,32}}">
+          <ElementNode type="Label" elementID="ID_landNameText23" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Event Island" fontStyle="1" fontSize="24" fontColor="{40,26,0}" areaSizeX="260" areaSizeY="28" alignment="1" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        </ElementNode>
+        <ElementNode type="Button" elementID="ID_btnEvent23" anchorX="0" anchorY="0" positionX="-40" positionY="170" z="1" scaleX="1" scaleY="1" imageName="K_eventTag_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpen23" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_Open23" anchorX="0.5" anchorY="0.5" positionX="170" positionY="82" z="3" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+          <ElementNode type="Image" elementID="ID_IMAGE_crystal23" anchorX="0" anchorY="0" positionX="8" positionY="10" z="0" scaleX="0.4" scaleY="0.4" imageName="I2_crystal_02.png" />
+          <ElementNode type="Label" elementID="ID_LABEL_23" anchorX="0" anchorY="0" positionX="34" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="OPEN" fontStyle="1" fontSize="22" fontColor="{232,122,255}" areaSizeX="70" areaSizeY="30" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+          <ElementNode type="Image" elementID="ID_IMAGE_lock23" anchorX="0" anchorY="0" positionX="32" positionY="38" z="0" scaleX="1" scaleY="1" imageName="I_lock_01.png" />
+        </ElementNode>
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_lock23" anchorX="0.5" anchorY="0.5" positionX="170" positionY="148" z="4" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lock1_23" anchorX="0" anchorY="0" positionX="28" positionY="18" z="0" scaleX="1.2" scaleY="1.2" imageName="I_lock_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpenT_23" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lockT_23" anchorX="0" anchorY="0" positionX="-6" positionY="46" z="0" scaleX="1" scaleY="1" imageName="I2_lock_02.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_land24" anchorX="0" anchorY="0" positionX="7328" positionY="6" z="1" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,290}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Button" elementID="ID_btnLand24" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="S_land_08.png" />
+      <ElementNode type="Image" elementID="ID_shadow24" anchorX="0" anchorY="0" positionX="100" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_shadow_03.png" />
+      <ElementNode type="NinePatch" elementID="ID_info24" anchorX="0" anchorY="0" positionX="70" positionY="-2" z="3" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{200,66}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_eventTime24" anchorX="0" anchorY="0" positionX="-60" positionY="36" z="0" scaleX="1" scaleY="1" imageName="9_frame_08.png" ninePatchSize="{320,28}" ninePatchInset="{{76,2},{2,2}}">
+          <ElementNode type="Label" elementID="ID_timeText24" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Time Left: 05:23" fontStyle="1" fontSize="20" fontColor="{255,220,85}" areaSizeX="320" areaSizeY="24" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{56,16,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_landNameLabel24" anchorX="0" anchorY="0" positionX="-30" positionY="2" z="0" scaleX="1" scaleY="1" imageName="9_frame_07.png" ninePatchSize="{260,32}" ninePatchInset="{{16,0},{2,32}}">
+          <ElementNode type="Label" elementID="ID_landNameText24" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Event Island" fontStyle="1" fontSize="24" fontColor="{40,26,0}" areaSizeX="260" areaSizeY="28" alignment="1" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        </ElementNode>
+        <ElementNode type="Button" elementID="ID_btnEvent24" anchorX="0" anchorY="0" positionX="-40" positionY="170" z="1" scaleX="1" scaleY="1" imageName="K_eventTag_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpen24" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_Open24" anchorX="0.5" anchorY="0.5" positionX="170" positionY="82" z="3" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+          <ElementNode type="Image" elementID="ID_IMAGE_crystal24" anchorX="0" anchorY="0" positionX="8" positionY="10" z="0" scaleX="0.4" scaleY="0.4" imageName="I2_crystal_02.png" />
+          <ElementNode type="Label" elementID="ID_LABEL_24" anchorX="0" anchorY="0" positionX="34" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="OPEN" fontStyle="1" fontSize="22" fontColor="{232,122,255}" areaSizeX="70" areaSizeY="30" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+          <ElementNode type="Image" elementID="ID_IMAGE_lock24" anchorX="0" anchorY="0" positionX="32" positionY="38" z="0" scaleX="1" scaleY="1" imageName="I_lock_01.png" />
+        </ElementNode>
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_lock24" anchorX="0.5" anchorY="0.5" positionX="170" positionY="148" z="4" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lock1_24" anchorX="0" anchorY="0" positionX="28" positionY="18" z="0" scaleX="1.2" scaleY="1.2" imageName="I_lock_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpenT_24" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lockT_24" anchorX="0" anchorY="0" positionX="-6" positionY="46" z="0" scaleX="1" scaleY="1" imageName="I2_lock_02.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_land25" anchorX="0" anchorY="0" positionX="7646" positionY="236" z="1" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,290}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Button" elementID="ID_btnLand25" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="S_land_08.png" />
+      <ElementNode type="Image" elementID="ID_shadow25" anchorX="0" anchorY="0" positionX="100" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_shadow_03.png" />
+      <ElementNode type="NinePatch" elementID="ID_info25" anchorX="0" anchorY="0" positionX="70" positionY="-2" z="3" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{200,66}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_eventTime25" anchorX="0" anchorY="0" positionX="-60" positionY="36" z="0" scaleX="1" scaleY="1" imageName="9_frame_08.png" ninePatchSize="{320,28}" ninePatchInset="{{76,2},{2,2}}">
+          <ElementNode type="Label" elementID="ID_timeText25" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Time Left: 05:23" fontStyle="1" fontSize="20" fontColor="{255,220,85}" areaSizeX="320" areaSizeY="24" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{56,16,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_landNameLabel25" anchorX="0" anchorY="0" positionX="-30" positionY="2" z="0" scaleX="1" scaleY="1" imageName="9_frame_07.png" ninePatchSize="{260,32}" ninePatchInset="{{16,0},{2,32}}">
+          <ElementNode type="Label" elementID="ID_landNameText25" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Event Island" fontStyle="1" fontSize="24" fontColor="{40,26,0}" areaSizeX="260" areaSizeY="28" alignment="1" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        </ElementNode>
+        <ElementNode type="Button" elementID="ID_btnEvent25" anchorX="0" anchorY="0" positionX="-40" positionY="170" z="1" scaleX="1" scaleY="1" imageName="K_eventTag_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpen25" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_Open25" anchorX="0.5" anchorY="0.5" positionX="170" positionY="82" z="3" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+          <ElementNode type="Image" elementID="ID_IMAGE_crystal25" anchorX="0" anchorY="0" positionX="8" positionY="10" z="0" scaleX="0.4" scaleY="0.4" imageName="I2_crystal_02.png" />
+          <ElementNode type="Label" elementID="ID_LABEL_25" anchorX="0" anchorY="0" positionX="34" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="OPEN" fontStyle="1" fontSize="22" fontColor="{232,122,255}" areaSizeX="70" areaSizeY="30" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+          <ElementNode type="Image" elementID="ID_IMAGE_lock25" anchorX="0" anchorY="0" positionX="32" positionY="38" z="0" scaleX="1" scaleY="1" imageName="I_lock_01.png" />
+        </ElementNode>
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_lock25" anchorX="0.5" anchorY="0.5" positionX="170" positionY="148" z="4" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lock1_25" anchorX="0" anchorY="0" positionX="28" positionY="18" z="0" scaleX="1.2" scaleY="1.2" imageName="I_lock_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpenT_25" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lockT_25" anchorX="0" anchorY="0" positionX="-6" positionY="46" z="0" scaleX="1" scaleY="1" imageName="I2_lock_02.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_land26" anchorX="0" anchorY="0" positionX="7964" positionY="6" z="1" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,290}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Button" elementID="ID_btnLand26" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="S_land_08.png" />
+      <ElementNode type="Image" elementID="ID_shadow26" anchorX="0" anchorY="0" positionX="100" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_shadow_03.png" />
+      <ElementNode type="NinePatch" elementID="ID_info26" anchorX="0" anchorY="0" positionX="70" positionY="-2" z="3" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{200,66}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_eventTime26" anchorX="0" anchorY="0" positionX="-60" positionY="36" z="0" scaleX="1" scaleY="1" imageName="9_frame_08.png" ninePatchSize="{320,28}" ninePatchInset="{{76,2},{2,2}}">
+          <ElementNode type="Label" elementID="ID_timeText26" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Time Left: 05:23" fontStyle="1" fontSize="20" fontColor="{255,220,85}" areaSizeX="320" areaSizeY="24" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{56,16,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_landNameLabel26" anchorX="0" anchorY="0" positionX="-30" positionY="2" z="0" scaleX="1" scaleY="1" imageName="9_frame_07.png" ninePatchSize="{260,32}" ninePatchInset="{{16,0},{2,32}}">
+          <ElementNode type="Label" elementID="ID_landNameText26" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Event Island" fontStyle="1" fontSize="24" fontColor="{40,26,0}" areaSizeX="260" areaSizeY="28" alignment="1" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        </ElementNode>
+        <ElementNode type="Button" elementID="ID_btnEvent26" anchorX="0" anchorY="0" positionX="-40" positionY="170" z="1" scaleX="1" scaleY="1" imageName="K_eventTag_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpen26" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_Open26" anchorX="0.5" anchorY="0.5" positionX="170" positionY="82" z="3" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+          <ElementNode type="Image" elementID="ID_IMAGE_crystal26" anchorX="0" anchorY="0" positionX="8" positionY="10" z="0" scaleX="0.4" scaleY="0.4" imageName="I2_crystal_02.png" />
+          <ElementNode type="Label" elementID="ID_LABEL_26" anchorX="0" anchorY="0" positionX="34" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="OPEN" fontStyle="1" fontSize="22" fontColor="{232,122,255}" areaSizeX="70" areaSizeY="30" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+          <ElementNode type="Image" elementID="ID_IMAGE_lock26" anchorX="0" anchorY="0" positionX="32" positionY="38" z="0" scaleX="1" scaleY="1" imageName="I_lock_01.png" />
+        </ElementNode>
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_lock26" anchorX="0.5" anchorY="0.5" positionX="170" positionY="148" z="4" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lock1_26" anchorX="0" anchorY="0" positionX="28" positionY="18" z="0" scaleX="1.2" scaleY="1.2" imageName="I_lock_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpenT_26" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lockT_26" anchorX="0" anchorY="0" positionX="-6" positionY="46" z="0" scaleX="1" scaleY="1" imageName="I2_lock_02.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_land27" anchorX="0" anchorY="0" positionX="8282" positionY="236" z="1" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,290}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Button" elementID="ID_btnLand27" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="S_land_08.png" />
+      <ElementNode type="Image" elementID="ID_shadow27" anchorX="0" anchorY="0" positionX="100" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_shadow_03.png" />
+      <ElementNode type="NinePatch" elementID="ID_info27" anchorX="0" anchorY="0" positionX="70" positionY="-2" z="3" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{200,66}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_eventTime27" anchorX="0" anchorY="0" positionX="-60" positionY="36" z="0" scaleX="1" scaleY="1" imageName="9_frame_08.png" ninePatchSize="{320,28}" ninePatchInset="{{76,2},{2,2}}">
+          <ElementNode type="Label" elementID="ID_timeText27" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Time Left: 05:23" fontStyle="1" fontSize="20" fontColor="{255,220,85}" areaSizeX="320" areaSizeY="24" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{56,16,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_landNameLabel27" anchorX="0" anchorY="0" positionX="-30" positionY="2" z="0" scaleX="1" scaleY="1" imageName="9_frame_07.png" ninePatchSize="{260,32}" ninePatchInset="{{16,0},{2,32}}">
+          <ElementNode type="Label" elementID="ID_landNameText27" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Event Island" fontStyle="1" fontSize="24" fontColor="{40,26,0}" areaSizeX="260" areaSizeY="28" alignment="1" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        </ElementNode>
+        <ElementNode type="Button" elementID="ID_btnEvent27" anchorX="0" anchorY="0" positionX="-40" positionY="170" z="1" scaleX="1" scaleY="1" imageName="K_eventTag_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpen27" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_Open27" anchorX="0.5" anchorY="0.5" positionX="170" positionY="82" z="3" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+          <ElementNode type="Image" elementID="ID_IMAGE_crystal27" anchorX="0" anchorY="0" positionX="8" positionY="10" z="0" scaleX="0.4" scaleY="0.4" imageName="I2_crystal_02.png" />
+          <ElementNode type="Label" elementID="ID_LABEL_27" anchorX="0" anchorY="0" positionX="34" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="OPEN" fontStyle="1" fontSize="22" fontColor="{232,122,255}" areaSizeX="70" areaSizeY="30" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+          <ElementNode type="Image" elementID="ID_IMAGE_lock27" anchorX="0" anchorY="0" positionX="32" positionY="38" z="0" scaleX="1" scaleY="1" imageName="I_lock_01.png" />
+        </ElementNode>
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_lock27" anchorX="0.5" anchorY="0.5" positionX="170" positionY="148" z="4" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lock1_27" anchorX="0" anchorY="0" positionX="28" positionY="18" z="0" scaleX="1.2" scaleY="1.2" imageName="I_lock_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpenT_27" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lockT_27" anchorX="0" anchorY="0" positionX="-6" positionY="46" z="0" scaleX="1" scaleY="1" imageName="I2_lock_02.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_land28" anchorX="0" anchorY="0" positionX="8600" positionY="6" z="1" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,290}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Button" elementID="ID_btnLand28" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="S_land_08.png" />
+      <ElementNode type="Image" elementID="ID_shadow28" anchorX="0" anchorY="0" positionX="100" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_shadow_03.png" />
+      <ElementNode type="NinePatch" elementID="ID_info28" anchorX="0" anchorY="0" positionX="70" positionY="-2" z="3" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{200,66}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_eventTime28" anchorX="0" anchorY="0" positionX="-60" positionY="36" z="0" scaleX="1" scaleY="1" imageName="9_frame_08.png" ninePatchSize="{320,28}" ninePatchInset="{{76,2},{2,2}}">
+          <ElementNode type="Label" elementID="ID_timeText28" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Time Left: 05:23" fontStyle="1" fontSize="20" fontColor="{255,220,85}" areaSizeX="320" areaSizeY="24" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{56,16,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_landNameLabel28" anchorX="0" anchorY="0" positionX="-30" positionY="2" z="0" scaleX="1" scaleY="1" imageName="9_frame_07.png" ninePatchSize="{260,32}" ninePatchInset="{{16,0},{2,32}}">
+          <ElementNode type="Label" elementID="ID_landNameText28" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Event Island" fontStyle="1" fontSize="24" fontColor="{40,26,0}" areaSizeX="260" areaSizeY="28" alignment="1" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        </ElementNode>
+        <ElementNode type="Button" elementID="ID_btnEvent28" anchorX="0" anchorY="0" positionX="-40" positionY="170" z="1" scaleX="1" scaleY="1" imageName="K_eventTag_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpen28" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_Open28" anchorX="0.5" anchorY="0.5" positionX="170" positionY="82" z="3" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+          <ElementNode type="Image" elementID="ID_IMAGE_crystal28" anchorX="0" anchorY="0" positionX="8" positionY="10" z="0" scaleX="0.4" scaleY="0.4" imageName="I2_crystal_02.png" />
+          <ElementNode type="Label" elementID="ID_LABEL_28" anchorX="0" anchorY="0" positionX="34" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="OPEN" fontStyle="1" fontSize="22" fontColor="{232,122,255}" areaSizeX="70" areaSizeY="30" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+          <ElementNode type="Image" elementID="ID_IMAGE_lock28" anchorX="0" anchorY="0" positionX="32" positionY="38" z="0" scaleX="1" scaleY="1" imageName="I_lock_01.png" />
+        </ElementNode>
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_lock28" anchorX="0.5" anchorY="0.5" positionX="170" positionY="148" z="4" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lock1_28" anchorX="0" anchorY="0" positionX="28" positionY="18" z="0" scaleX="1.2" scaleY="1.2" imageName="I_lock_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpenT_28" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lockT_28" anchorX="0" anchorY="0" positionX="-6" positionY="46" z="0" scaleX="1" scaleY="1" imageName="I2_lock_02.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_land29" anchorX="0" anchorY="0" positionX="8918" positionY="225" z="1" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,290}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Button" elementID="ID_btnLand29" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="S_land_08.png" />
+      <ElementNode type="Image" elementID="ID_shadow29" anchorX="0" anchorY="0" positionX="100" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_shadow_03.png" />
+      <ElementNode type="NinePatch" elementID="ID_info29" anchorX="0" anchorY="0" positionX="70" positionY="-2" z="3" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{200,66}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_eventTime29" anchorX="0" anchorY="0" positionX="-60" positionY="36" z="0" scaleX="1" scaleY="1" imageName="9_frame_08.png" ninePatchSize="{320,28}" ninePatchInset="{{76,2},{2,2}}">
+          <ElementNode type="Label" elementID="ID_timeText29" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Time Left: 05:23" fontStyle="1" fontSize="20" fontColor="{255,220,85}" areaSizeX="320" areaSizeY="24" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{56,16,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_landNameLabel29" anchorX="0" anchorY="0" positionX="-30" positionY="2" z="0" scaleX="1" scaleY="1" imageName="9_frame_07.png" ninePatchSize="{260,32}" ninePatchInset="{{16,0},{2,32}}">
+          <ElementNode type="Label" elementID="ID_landNameText29" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Event Island" fontStyle="1" fontSize="24" fontColor="{40,26,0}" areaSizeX="260" areaSizeY="28" alignment="1" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        </ElementNode>
+        <ElementNode type="Button" elementID="ID_btnEvent29" anchorX="0" anchorY="0" positionX="-40" positionY="170" z="1" scaleX="1" scaleY="1" imageName="K_eventTag_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpen29" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_Open29" anchorX="0.5" anchorY="0.5" positionX="170" positionY="82" z="3" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+          <ElementNode type="Image" elementID="ID_IMAGE_crystal29" anchorX="0" anchorY="0" positionX="8" positionY="10" z="0" scaleX="0.4" scaleY="0.4" imageName="I2_crystal_02.png" />
+          <ElementNode type="Label" elementID="ID_LABEL_29" anchorX="0" anchorY="0" positionX="34" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="OPEN" fontStyle="1" fontSize="22" fontColor="{232,122,255}" areaSizeX="70" areaSizeY="30" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+          <ElementNode type="Image" elementID="ID_IMAGE_lock29" anchorX="0" anchorY="0" positionX="32" positionY="38" z="0" scaleX="1" scaleY="1" imageName="I_lock_01.png" />
+        </ElementNode>
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_lock29" anchorX="0.5" anchorY="0.5" positionX="170" positionY="148" z="4" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lock1_29" anchorX="0" anchorY="0" positionX="28" positionY="18" z="0" scaleX="1.2" scaleY="1.2" imageName="I_lock_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpenT_29" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lockT_29" anchorX="0" anchorY="0" positionX="-6" positionY="46" z="0" scaleX="1" scaleY="1" imageName="I2_lock_02.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_land30" anchorX="0" anchorY="0" positionX="9236" positionY="6" z="1" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,290}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Button" elementID="ID_btnLand30" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="S_land_08.png" />
+      <ElementNode type="Image" elementID="ID_shadow30" anchorX="0" anchorY="0" positionX="100" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_shadow_03.png" />
+      <ElementNode type="NinePatch" elementID="ID_info30" anchorX="0" anchorY="0" positionX="70" positionY="-2" z="3" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{200,66}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_eventTime30" anchorX="0" anchorY="0" positionX="-60" positionY="36" z="0" scaleX="1" scaleY="1" imageName="9_frame_08.png" ninePatchSize="{320,28}" ninePatchInset="{{76,2},{2,2}}">
+          <ElementNode type="Label" elementID="ID_timeText30" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Time Left: 05:23" fontStyle="1" fontSize="20" fontColor="{255,220,85}" areaSizeX="320" areaSizeY="24" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{56,16,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_landNameLabel30" anchorX="0" anchorY="0" positionX="-30" positionY="2" z="0" scaleX="1" scaleY="1" imageName="9_frame_07.png" ninePatchSize="{260,32}" ninePatchInset="{{16,0},{2,32}}">
+          <ElementNode type="Label" elementID="ID_landNameText30" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Event Island" fontStyle="1" fontSize="24" fontColor="{40,26,0}" areaSizeX="260" areaSizeY="28" alignment="1" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        </ElementNode>
+        <ElementNode type="Button" elementID="ID_btnEvent30" anchorX="0" anchorY="0" positionX="-40" positionY="170" z="1" scaleX="1" scaleY="1" imageName="K_eventTag_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpen30" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_Open30" anchorX="0.5" anchorY="0.5" positionX="170" positionY="82" z="3" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+          <ElementNode type="Image" elementID="ID_IMAGE_crystal30" anchorX="0" anchorY="0" positionX="8" positionY="10" z="0" scaleX="0.4" scaleY="0.4" imageName="I2_crystal_02.png" />
+          <ElementNode type="Label" elementID="ID_LABEL_30" anchorX="0" anchorY="0" positionX="34" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="OPEN" fontStyle="1" fontSize="22" fontColor="{232,122,255}" areaSizeX="70" areaSizeY="30" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+          <ElementNode type="Image" elementID="ID_IMAGE_lock30" anchorX="0" anchorY="0" positionX="32" positionY="38" z="0" scaleX="1" scaleY="1" imageName="I_lock_01.png" />
+        </ElementNode>
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_lock30" anchorX="0.5" anchorY="0.5" positionX="170" positionY="148" z="4" scaleX="1" scaleY="1" imageName="92_back_23.png" ninePatchSize="{106,90}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lock1_30" anchorX="0" anchorY="0" positionX="28" positionY="18" z="0" scaleX="1.2" scaleY="1.2" imageName="I_lock_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOpenT_30" anchorX="0" anchorY="0" positionX="0" positionY="66" z="4" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{340,224}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_lockT_30" anchorX="0" anchorY="0" positionX="-6" positionY="46" z="0" scaleX="1" scaleY="1" imageName="I2_lock_02.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_guide" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="92_empty_02.png" ninePatchSize="{200,200}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Image" elementID="ID_IMAGE_1" anchorX="0" anchorY="0" positionX="282" positionY="196" z="0" scaleX="1" scaleY="1" imageName="K_line_01.png" />
+      <ElementNode type="Image" elementID="ID_IMAGE_2" anchorX="0" anchorY="0" positionX="602" positionY="196" z="0" scaleX="1" scaleY="1" imageName="K_line_02.png" />
+      <ElementNode type="Image" elementID="ID_IMAGE_3" anchorX="0" anchorY="0" positionX="922" positionY="196" z="0" scaleX="1" scaleY="1" imageName="K_line_01.png" />
+      <ElementNode type="Image" elementID="ID_IMAGE_4" anchorX="0" anchorY="0" positionX="1242" positionY="196" z="0" scaleX="1" scaleY="1" imageName="K_line_02.png" />
+      <ElementNode type="Image" elementID="ID_IMAGE_5" anchorX="0" anchorY="0" positionX="1562" positionY="196" z="0" scaleX="1" scaleY="1" imageName="K_line_01.png" />
+      <ElementNode type="Image" elementID="ID_IMAGE_6" anchorX="0" anchorY="0" positionX="1882" positionY="196" z="0" scaleX="1" scaleY="1" imageName="K_line_02.png" />
+      <ElementNode type="Image" elementID="ID_IMAGE_7" anchorX="0" anchorY="0" positionX="2202" positionY="196" z="0" scaleX="1" scaleY="1" imageName="K_line_01.png" />
+      <ElementNode type="Image" elementID="ID_IMAGE_8" anchorX="0" anchorY="0" positionX="2522" positionY="196" z="0" scaleX="1" scaleY="1" imageName="K_line_02.png" />
+      <ElementNode type="Image" elementID="ID_IMAGE_9" anchorX="0" anchorY="0" positionX="2842" positionY="196" z="0" scaleX="1" scaleY="1" imageName="K_line_01.png" />
+      <ElementNode type="Image" elementID="ID_IMAGE_10" anchorX="0" anchorY="0" positionX="3162" positionY="196" z="0" scaleX="1" scaleY="1" imageName="K_line_02.png" />
+      <ElementNode type="Image" elementID="ID_IMAGE_11" anchorX="0" anchorY="0" positionX="3482" positionY="196" z="0" scaleX="1" scaleY="1" imageName="K_line_01.png" />
+      <ElementNode type="Image" elementID="ID_IMAGE_12" anchorX="0" anchorY="0" positionX="3802" positionY="196" z="0" scaleX="1" scaleY="1" imageName="K_line_02.png" />
+      <ElementNode type="Image" elementID="ID_IMAGE_13" anchorX="0" anchorY="0" positionX="4122" positionY="196" z="0" scaleX="1" scaleY="1" imageName="K_line_01.png" />
+      <ElementNode type="Image" elementID="ID_IMAGE_14" anchorX="0" anchorY="0" positionX="4442" positionY="196" z="0" scaleX="1" scaleY="1" imageName="K_line_02.png" />
+      <ElementNode type="Image" elementID="ID_IMAGE_15" anchorX="0" anchorY="0" positionX="4762" positionY="196" z="0" scaleX="1" scaleY="1" imageName="K_line_01.png" />
+      <ElementNode type="Image" elementID="ID_IMAGE_16" anchorX="0" anchorY="0" positionX="5082" positionY="196" z="0" scaleX="1" scaleY="1" imageName="K_line_02.png" />
+    </ElementNode>
+  </ElementNode>
+</root>

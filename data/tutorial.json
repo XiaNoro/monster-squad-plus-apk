@@ -1,0 +1,1015 @@
+{
+	"_source": "TapGameplay walkthrough parts 1-2 (youtu.be/ygiUgG6qMHI and part 2), read frame by frame. Chapters play once each, in order of their trigger. Step kinds: say (dialogue box, tap to continue), popup (New Island card), focus (dim the screen, bouncing arrow, only the target works).",
+	"chapters": [
+		{
+			"id": "intro",
+			"screen": "hub",
+			"when": "new_game",
+			"steps": [
+				{
+					"say": "firepaw",
+					"text": "Welcome to Monster Squad!",
+					"face": "happy"
+				},
+				{
+					"say": "firepaw",
+					"text": "There are seeds that grant special powers in Sprout Island."
+				},
+				{
+					"say": "firepaw",
+					"text": "Test your powers while exploring Sprout Island."
+				},
+				{
+					"popup": "new_island",
+					"island": "sprout_island",
+					"text": "Investigate Sprout Island"
+				},
+				{
+					"say": "firepaw",
+					"text": "Hello! We're going to form the world's strongest monster squad to stop the dark lord's return."
+				},
+				{
+					"say": "firepaw",
+					"text": "You'll meet all kinds of monsters on the island. Let's set off together!"
+				},
+				{
+					"focus": "begin_quest"
+				}
+			]
+		},
+		{
+			"id": "map",
+			"screen": "islands",
+			"when": "after:intro",
+			"steps": [
+				{
+					"focus": "island:sprout_island"
+				}
+			]
+		},
+		{
+			"id": "field",
+			"screen": "field",
+			"when": "after:map",
+			"steps": [
+				{
+					"say": "firepaw",
+					"text": "See, some monsters hide around the island. You need to use Energy to fight them."
+				},
+				{
+					"focus": "stage:0"
+				}
+			]
+		},
+		{
+			"id": "ready",
+			"screen": "ready",
+			"when": "after:field",
+			"steps": [
+				{
+					"say": "firepaw",
+					"text": "You can also take your friend's monsters. Sometimes, you'll make new friends!"
+				},
+				{
+					"focus": "friend:0"
+				},
+				{
+					"focus": "go"
+				}
+			]
+		},
+		{
+			"id": "battle1",
+			"screen": "battle",
+			"when": "stage:sprout_island:normal:0",
+			"steps": [
+				{
+					"event": "enemies_near"
+				},
+				{
+					"say": "firepaw",
+					"text": "We can attack on our own, but we need your help to use special skills."
+				},
+				{
+					"say": "firepaw",
+					"text": "Tap to use my skills."
+				},
+				{
+					"focus": "skill:any"
+				},
+				{
+					"event": "skill_used"
+				},
+				{
+					"say": "firepaw",
+					"text": "Nice work! Take control of your leader monster and sub monsters' skills to excel in combat!"
+				},
+				{
+					"event": "support_ready"
+				},
+				{
+					"say": "firepaw",
+					"text": "Tap it quickly! Your monsters are counting on you!"
+				},
+				{
+					"focus": "support:any"
+				},
+				{
+					"event": "support_used"
+				},
+				{
+					"say": "firepaw",
+					"text": "Wonderful! Once you're comfortable using skills, you can increase the battle speed by 1.4x to speed things up!"
+				},
+				{
+					"event": "victory"
+				},
+				{
+					"say": "firepaw",
+					"text": "Good job! A new monster might join us thanks to your hard work!"
+				},
+				{
+					"say": "firepaw",
+					"text": "Let's keep it up!"
+				}
+			]
+		},
+		{
+			"id": "team_slot3",
+			"screen": "hub",
+			"when": "cleared:sprout_island:normal:2",
+			"steps": [
+				{
+					"say": "mini",
+					"text": "Two is better than one♪\nThree is better than two♬\nHead to the Team and put me in the third slot!"
+				},
+				{
+					"focus": "nav:team"
+				}
+			]
+		},
+		{
+			"id": "team_slot3_page",
+			"screen": "squad",
+			"when": "after:team_slot3",
+			"steps": [
+				{
+					"say": "mini",
+					"text": "This is the Team tab!\nNow, go find me in the Inventory and tap me!\nI'll show up in that empty third slot!"
+				},
+				{
+					"focus": "monster:mini"
+				},
+				{
+					"say": "mini",
+					"text": "Thanks!\nThis is a good slot.\nI LOVE the third monster slot."
+				},
+				{
+					"say": "mini",
+					"text": "Too much pressure being the first!\nThat's only for team leader who determines team type.\nToo much pressure for me!",
+					"face": "dizzy"
+				},
+				{
+					"say": "mini",
+					"text": "Anyway, you can switch slots by touching monsters like that. Handy, right?"
+				}
+			]
+		},
+		{
+			"id": "store",
+			"screen": "hub",
+			"when": "after:team_slot3_page&cleared:sprout_island:normal:4",
+			"steps": [
+				{
+					"say": "goldbat",
+					"text": "Thanks to you, the world will be at peace again."
+				},
+				{
+					"say": "goldbat",
+					"text": "I have a present for you. Do you want to follow me to the [Store]?"
+				},
+				{
+					"focus": "nav:store"
+				}
+			]
+		},
+		{
+			"id": "store_page",
+			"screen": "cubes",
+			"when": "after:store",
+			"steps": [
+				{
+					"say": "goldbat",
+					"text": "This is it! The Store is where energy and gold flow like water. You can use your gems and friend points here."
+				},
+				{
+					"say": "goldbat",
+					"text": "First, let's meet a new monster using your friend points."
+				},
+				{
+					"focus": "cube:blue"
+				},
+				{
+					"event": "cube_opened"
+				},
+				{
+					"say": "goldbat",
+					"text": "Did you get the monster you wanted? Using the Friendship Cube is a great way to get monsters easily."
+				},
+				{
+					"say": "goldbat",
+					"text": "This time, let's use gems to get a stronger monster from the Yellow Cube."
+				},
+				{
+					"focus": "cube:yellow"
+				},
+				{
+					"event": "cube_opened"
+				},
+				{
+					"say": "goldbat",
+					"text": "Nice job! A powerful monster has become your ally! I can tell the monster is eager to battle. Head to the next field!"
+				},
+				{
+					"focus": "back"
+				}
+			]
+		},
+		{
+			"id": "equip_leader",
+			"screen": "ready",
+			"when": "after:store_page",
+			"steps": [
+				{
+					"say": "goldbat",
+					"text": "Equip new monsters here."
+				},
+				{
+					"focus": "team"
+				}
+			]
+		},
+		{
+			"id": "equip_leader_page",
+			"screen": "squad",
+			"when": "after:equip_leader",
+			"steps": [
+				{
+					"say": "goldbat",
+					"text": "Your new monster has super high HP. Set it as your leader!"
+				},
+				{
+					"focus": "slot:0"
+				},
+				{
+					"focus": "monster:newest"
+				},
+				{
+					"say": "goldbat",
+					"text": "This is more field on Sprout Island. Good luck!"
+				}
+			]
+		},
+		{
+			"id": "team_edit",
+			"screen": "ready",
+			"when": "after:equip_leader_page&cleared:sprout_island:normal:5",
+			"steps": [
+				{
+					"focus": "team"
+				}
+			]
+		},
+		{
+			"id": "team_edit_help",
+			"screen": "squad",
+			"when": "after:team_edit",
+			"steps": [
+				{
+					"say": "firepaw",
+					"text": "Let's try and edit the team. By matching Skill and attributes, depending on what Monster is selected as the Leader, a unique team can be made...",
+					"face": "happy"
+				},
+				{
+					"help": "team_edit",
+					"notes": [
+						{
+							"at": "remove",
+							"text": "Select this slot to remove the Monster from the team."
+						},
+						{
+							"at": "skill",
+							"text": "Press and holding down on the Monster to show information about the Monster / Skill."
+						},
+						{
+							"at": "slot",
+							"text": "(1) Select the team slot.\n[Select] will appear."
+						},
+						{
+							"at": "list",
+							"text": "(2) Selecting the desired Monster will place it into the selected team slot."
+						}
+					]
+				},
+				{
+					"say": "firepaw",
+					"text": "If you are stuck in the game, try pressing the question mark button.\n\nYou can view helpful tips again.",
+					"face": "happy"
+				}
+			]
+		},
+		{
+			"id": "missions",
+			"screen": "hub",
+			"when": "after:equip_leader_page&mission_ready",
+			"steps": [
+				{
+					"say": "wamiami",
+					"text": "Hey, you!\nDon't forget to take your reward for completing today's mission!"
+				},
+				{
+					"say": "wamiami",
+					"text": "You can find more information on the main. Tap the scroll that says [Today]."
+				},
+				{
+					"focus": "missions"
+				}
+			]
+		},
+		{
+			"id": "missions_page",
+			"screen": "missions",
+			"when": "after:missions",
+			"steps": [
+				{
+					"say": "wamiami",
+					"text": "This is a list of missions that gives you various rewards."
+				},
+				{
+					"say": "wamiami",
+					"text": "Touch the (Receive All) button to collect rewards for all the missions you've completed so far."
+				},
+				{
+					"focus": "receive_all"
+				},
+				{
+					"say": "wamiami",
+					"text": "You did so well on today's mission! You'll be able to complete the missions for this week, no problem."
+				},
+				{
+					"say": "wamiami",
+					"text": "Looks doable, right?\nKeep working on daily rewards, and you'll finish the week off strong!\nI hope you get lots of mission rewards."
+				},
+				{
+					"focus": "tab:endless"
+				},
+				{
+					"say": "wamiami",
+					"text": "Some of the more challenging missions don't have a time limit. These will probably be hard to finish in a day or two."
+				},
+				{
+					"say": "wamiami",
+					"text": "These missions don't have a time limit, but they're a little tougher. You'll can still clear them while traveling around an island."
+				},
+				{
+					"say": "wamiami",
+					"text": "Sometimes it's best to put in the effort early to get more rewards later!"
+				}
+			]
+		},
+		{
+			"id": "boost",
+			"screen": "hub",
+			"when": "after:equip_leader_page&cleared:lake_island:normal:0",
+			"steps": [
+				{
+					"say": "firepaw",
+					"text": "Wow, you explored all of Sprout Island!\nBut Lake Island won't be so easy!\nI'll teach you how to boost your monster's stat.",
+					"face": "happy"
+				},
+				{
+					"say": "firepaw",
+					"text": "First, Touch the monster to boost.",
+					"face": "happy"
+				},
+				{
+					"focus": "nav:train"
+				}
+			]
+		},
+		{
+			"id": "boost_page",
+			"screen": "train",
+			"when": "after:boost",
+			"steps": [
+				{
+					"focus": "boost"
+				}
+			]
+		},
+		{
+			"id": "boost_page2",
+			"screen": "combine",
+			"when": "after:boost_page",
+			"steps": [
+				{
+					"say": "firepaw",
+					"text": "Touch a material monster! It shall be content to help boosting.",
+					"face": "happy"
+				},
+				{
+					"focus": "monster:material"
+				},
+				{
+					"say": "firepaw",
+					"text": "Boost PT are given when boost fails. Earned Boost PT add to the success rate."
+				},
+				{
+					"focus": "boost"
+				},
+				{
+					"event": "boosted"
+				},
+				{
+					"say": "firepaw",
+					"text": "Your leader's HP, Offense, and Recovery have increased by 5%! You can enhance it up to 5 times to increase its stats by 25%!",
+					"face": "happy"
+				},
+				{
+					"say": "firepaw",
+					"text": "But you can't use higher-ranked monster(★★★) as sacrifice to boost lower-ranked ones(★~★★)."
+				},
+				{
+					"say": "firepaw",
+					"text": "A monster must be completely enhanced to evolve. Keep boosting your monsters to build the world's top monster squad!",
+					"face": "happy"
+				}
+			]
+		},
+		{
+			"id": "friends",
+			"screen": "hub",
+			"when": "after:boost_page2&cleared:lake_island:normal:2",
+			"steps": [
+				{
+					"say": "rookie",
+					"text": "Four is better than three,\nand five's more than four!\nThe fifth slot is for your friend's monster!"
+				},
+				{
+					"say": "rookie",
+					"text": "You may borrow your friend's monster once a day for exploring.\nSo, the more friends, the better! Go make more!"
+				},
+				{
+					"focus": "nav:friends"
+				}
+			]
+		},
+		{
+			"id": "friends_page",
+			"screen": "friends",
+			"when": "after:friends",
+			"steps": [
+				{
+					"say": "rookie",
+					"text": "You can add friends in your social network and other players as your friends here."
+				},
+				{
+					"say": "rookie",
+					"text": "If you want to find your friends, log into your social network account first. It'll be super fun to play with someone you know!"
+				},
+				{
+					"say": "rookie",
+					"text": "Let's add some players to your Friend List today! Tap the Find button now."
+				},
+				{
+					"focus": "find"
+				},
+				{
+					"say": "rookie",
+					"text": "Don't be disappointed if you don't see any recommended friends. Just tap that Recommend button."
+				},
+				{
+					"focus": "recommend"
+				},
+				{
+					"say": "rookie",
+					"text": "Some players might not accept your request. So just send out tons! Try sending one now.\n\nHow about this person?"
+				},
+				{
+					"focus": "request:0"
+				},
+				{
+					"say": "rookie",
+					"text": "Feeling good about your request? You have to be patient when waiting for the response."
+				},
+				{
+					"say": "rookie",
+					"text": "Keep making requests, and invite others to join the game. You can get monsters from the Friendship Cube with the friend points you get."
+				},
+				{
+					"say": "rookie",
+					"text": "I hope you continue exploring with many friends!"
+				}
+			]
+		},
+		{
+			"id": "evolve",
+			"screen": "hub",
+			"when": "after:friends_page&cleared:lake_island:normal:7",
+			"steps": [
+				{
+					"say": "ayn",
+					"text": "Hey,\nwill you help me evolve?"
+				},
+				{
+					"say": "ayn",
+					"text": "I can learn a skill that cures bad stuff\nlike poison and bleeding when I evolve."
+				},
+				{
+					"say": "ayn",
+					"text": "It will be really helpful\nto take me to Desert Island after I evolve."
+				},
+				{
+					"focus": "nav:train"
+				}
+			]
+		},
+		{
+			"id": "evolve_page",
+			"screen": "train",
+			"when": "after:evolve",
+			"steps": [
+				{
+					"say": "ayn",
+					"text": "To evolve a monster, you need\na +5 boosted Lv.30 Material Monster and\na +5 boosted Lv.30 Monster to evolve."
+				},
+				{
+					"say": "ayn",
+					"text": "You need lots of inventory space.\nBecause all monsters have different materials.\nSince I'm already in the inventory, pick me."
+				},
+				{
+					"focus": "monster:ayn"
+				},
+				{
+					"focus": "evolve"
+				}
+			]
+		},
+		{
+			"id": "evolve_page2",
+			"screen": "combine",
+			"when": "after:evolve_page",
+			"steps": [
+				{
+					"say": "ayn",
+					"text": "Please check the evolution material monster\nyou're planning to strengthen me with."
+				},
+				{
+					"focus": "monster:material"
+				},
+				{
+					"say": "ayn",
+					"text": "So you're strengthening me with that monster,\nhm? Guess it's time for me to evolve!"
+				},
+				{
+					"say": "ayn",
+					"text": "Good job! You see that Greebi over there?\nHe's my evolution material monster!\nWe both trained very hard for today."
+				},
+				{
+					"focus": "evolve"
+				},
+				{
+					"event": "evolved"
+				}
+			]
+		},
+		{
+			"id": "evolve_done",
+			"screen": "train",
+			"when": "after:evolve_page2",
+			"steps": [
+				{
+					"say": "mayn",
+					"text": "Thank you so much for evolving me!\nI will take care of Desert Island from now on!",
+					"face": "happy"
+				},
+				{
+					"say": "mayn",
+					"text": "Your other monsters will also look great and get\nstrong skills like me after their evolution."
+				},
+				{
+					"say": "mayn",
+					"text": "You can find the evolution info by touching the\nEvolution Tree button in the monster info window."
+				},
+				{
+					"say": "mayn",
+					"text": "Keep checking and exploring and powering\nup your monsters!",
+					"face": "happy"
+				}
+			]
+		},
+		{
+			"id": "arena_mission",
+			"screen": "hub",
+			"when": "after:intro&cleared:desert_isle:normal:2",
+			"steps": [
+				{
+					"say": "firepaw",
+					"text": "It's time to test out my skills.\nDefeat the horrifying boss of Desert-4."
+				},
+				{
+					"card": "quest",
+					"title": "New Quest!",
+					"text": "Defeat the boss of Desert-4",
+					"gold": 2000,
+					"mission": "desert_isle:normal:3"
+				}
+			]
+		},
+		{
+			"id": "arena_open",
+			"screen": "hub",
+			"when": "after:arena_mission&mission_done",
+			"steps": [
+				{
+					"say": "firepaw",
+					"text": "You truly are the strongest!\nI've never seen such skill!",
+					"face": "happy"
+				},
+				{
+					"card": "clear",
+					"text": "You're a winner!",
+					"gold": 2000,
+					"grant": true
+				},
+				{
+					"say": "firepaw",
+					"text": "Compete with other monsters.\nYou can test your monsters' strength in the Battle\nArena."
+				},
+				{
+					"focus": "arena"
+				}
+			]
+		},
+		{
+			"id": "specials",
+			"screen": "hub",
+			"when": "after:intro&cleared:desert_isle:normal:9",
+			"steps": [
+				{
+					"say": "g_drank",
+					"text": "Have you been to the Special Islands yet?\nThese islands are full of special rewards."
+				},
+				{
+					"say": "g_drank",
+					"text": "Evolution materials.\nRare monsters.\nLots of gold.\nTONS of experience..."
+				},
+				{
+					"focus": "special_islands"
+				}
+			]
+		},
+		{
+			"id": "specials_map",
+			"screen": "islands",
+			"when": "after:specials",
+			"steps": [
+				{
+					"say": "g_drank",
+					"text": "Let's take a look at the material island, where you\ncan get Evolution Material monsters."
+				},
+				{
+					"focus": "island:material_island"
+				}
+			]
+		},
+		{
+			"id": "specials_field",
+			"screen": "field",
+			"when": "after:specials_map&special:material_island",
+			"steps": [
+				{
+					"say": "g_drank",
+					"text": "Do you see the one you've been looking for?\nPress this cube to check the dropped monsters in\na field."
+				},
+				{
+					"focus": "drops:0"
+				},
+				{
+					"say": "g_drank",
+					"text": "Don't forget to get the rewards you want in the\nright time zone of the Special Island!"
+				}
+			]
+		},
+		{
+			"id": "team_rank",
+			"screen": "hub",
+			"when": "after:intro&cleared:moonlight_desert:normal:3",
+			"steps": [
+				{
+					"say": "shinoblue",
+					"text": "Oh, my! When did your team get so strong?\nYou must already know that your team's rank can\nlevel up to Rank S++."
+				},
+				{
+					"say": "shinoblue",
+					"text": "If you want to rank your team up to S++, your\nmonsters must reach Lv. 30 +5, and 5-6★. It will\nbe a challenge! Getting monsters to 6★ isn't easy!"
+				},
+				{
+					"say": "shinoblue",
+					"text": "Once your monsters can't evolve anymore, get\nthem to +5 Lv. 30.\nThen you can use Fusion to make them into even\nbetter monsters."
+				},
+				{
+					"say": "shinoblue",
+					"text": "You're already pretty tough.\nFrom now on, the right combination of skills and\nelements will be crucial for PvP."
+				},
+				{
+					"say": "shinoblue",
+					"text": "Aim to rank your team up to S++ and make sure\nyou have the right elements and skills.\nRank A monster squad can beat Rank S with the\nright moves!"
+				}
+			]
+		}
+	],
+	"boss_lines": {
+		"sky_island:normal:5": {
+			"say": "archwing",
+			"text": "What are you trying to prove? Go back, NOW!"
+		},
+		"sky_island:normal:6": {
+			"say": "doorbot_v3",
+			"text": "ACCESS DENIED. ADMISSION PROHIBITED."
+		},
+		"sprout_island:normal:1": {
+			"say": "emberpeep",
+			"text": "Doesn't this seed give you special super powers?\nI must have it!"
+		},
+		"sprout_island:normal:2": {
+			"say": "mini",
+			"text": "I'll take out any chump that tries to\nmess up MY seed harvest!"
+		},
+		"sprout_island:normal:3": {
+			"say": "raingull",
+			"text": "I can't believe these rookies defeated me.\nI'll get them... AFTER I GET YOU!"
+		},
+		"sprout_island:normal:4": {
+			"say": "flutter",
+			"text": "All you can come up with is a rare seed?\nThat thing wouldn't even make a good snack!"
+		},
+		"sprout_island:normal:5": {
+			"say": "ulmigrand",
+			"text": "It really was a regular seed...\nWhy are you even here?"
+		},
+		"lake_island:normal:0": {
+			"say": "octo",
+			"text": "Lake Island is ours.\nYou're out of your league anyway.\nMaybe you should go."
+		},
+		"lake_island:normal:1": {
+			"say": "whammi",
+			"text": "You show up late and try to swipe my goods?\nHaven't you ever heard of fair trade?"
+		},
+		"lake_island:normal:2": {
+			"say": "cute_donni",
+			"text": "I hear there's a new powerhouse in town.\nDon't tell me it's you. That's an awful joke."
+		},
+		"lake_island:normal:3": {
+			"say": "tobiak",
+			"text": "You never do anything right!\nGet back to hauling my groceries!"
+		},
+		"lake_island:normal:4": {
+			"say": "shivelle",
+			"text": "Check it out! I put some food coloring in this\nwater, and I'm selling it as a supplement.\nBest prank ever!"
+		},
+		"lake_island:normal:5": {
+			"say": "grumelle",
+			"text": "Boil the lake...\nInstant fish soup!"
+		},
+		"lake_island:normal:6": {
+			"say": "chilelle",
+			"text": "Side-effects? Well, there could be.\nI dunno, I'M not gonna eat it."
+		},
+		"lake_island:normal:7": {
+			"say": "conelle",
+			"text": "Look young ones, this is how business is.\nJust go play. I'll take care of business."
+		},
+		"lake_island:normal:8": {
+			"say": "lavan",
+			"text": "Hey! Who are you? You wrecked my facilities!\nYou'll pay for this!"
+		},
+		"lake_island:normal:9": {
+			"say": "goliem",
+			"text": "You like messing around with my business?\nI hope you like swimming... FOREVER!"
+		},
+		"lake_island:normal:10": {
+			"say": "freez",
+			"text": "Stop it! Fine. I'll leave you alone.\nHaha. I can't believe you didn't realize\nI was joking! Ha.. haha..."
+		},
+		"lake_island:hard:4": {
+			"say": "shivairy",
+			"text": "Check it out! I put some food coloring in this\nwater, and I'm selling it as a supplement.\nBest prank ever!"
+		},
+		"lake_island:hard:6": {
+			"say": "chilairy",
+			"text": "Side-effects? Well, there could be.\nI dunno, I'M not gonna eat it."
+		},
+		"desert_isle:normal:3": {
+			"say": "catrikster",
+			"text": "Don't give the desert folk the cold-shoulder.\nYou'll be buried deep in sand."
+		},
+		"desert_isle:normal:4": {
+			"say": "beburn",
+			"text": "We welcome travelers to the oasis.\nThat'll be 1 gems for water."
+		},
+		"desert_isle:normal:8": {
+			"say": "pinkey",
+			"text": "The desert nights are unkind. Inexperienced\ntravelers like yourself could get buried!"
+		},
+		"desert_isle:normal:9": {
+			"say": "kabong",
+			"text": "You mess with one of us,\nyou mess with all of us!"
+		},
+		"desert_isle:normal:10": {
+			"say": "grochi",
+			"text": "Who are you to interrupt us?\nWhat happens in the desert stays in the desert."
+		},
+		"moonlight_desert:normal:0": {
+			"say": "fimia",
+			"text": "So, you're the one that survived Desert Island?\nYou may have made it through the day,\nbut now you face the night!\nI will end your pain here!"
+		},
+		"moonlight_desert:normal:1": {
+			"say": "wamia",
+			"text": "The energy of the night gives me unstoppable power!\nI guess you're out of luck tonight..."
+		},
+		"moonlight_desert:normal:2": {
+			"say": "trimia",
+			"text": "You look familiar. Heard a lot about you from my\ndistant cousin. Shall we test your skills?"
+		},
+		"moonlight_desert:normal:3": {
+			"say": "amia",
+			"text": "I look so gorgeous and luxurious in the moonlight.\nI'm sure your heart is pounding at the sight of me!\nDon't be afraid of my beauty!"
+		},
+		"moonlight_desert:normal:4": {
+			"say": "octovia",
+			"text": "Are you here to overcome dark energy?\nSo, you think you can overcome ME?!\nI'll cut you to ribbons!"
+		},
+		"moonlight_desert:normal:6": {
+			"say": "pretula",
+			"text": "The moonlight gave me enough power to overcome the\nSeal Stone! I'm unbeatable in the desert night!\nAttack me if you can!"
+		},
+		"moonlight_desert:normal:7": {
+			"say": "greentula",
+			"text": "You beat my younger brother?\nLet's see how you handle the real deal.\nThis is for my younger brother!"
+		},
+		"moonlight_desert:normal:11": {
+			"say": "iron_bear",
+			"text": "Wh-what have you done?!\nI underestimated you before, but this stops now.\nGet ready for a claw clinic!"
+		},
+		"boneyard_island:normal:1": {
+			"say": "goliem",
+			"text": "You must be strong to make it here.\nBut this place will be your grave!\nAttack, my lizards!"
+		},
+		"boneyard_island:normal:2": {
+			"say": "ceratops",
+			"text": "I haven't let anyone through so far.\nBe grateful you ran into me!\nI'll show you an easy exit."
+		},
+		"boneyard_island:normal:4": {
+			"say": "forina",
+			"text": "You beat up Frivolaze? He was a bit clumsy,\nbut I'm different! Take your time, you'll need it!"
+		},
+		"boneyard_island:normal:5": {
+			"say": "derarctus",
+			"text": "I can't believe I have to take matters into\nmy own hands. You punks are really annoying!\nNo one has ever passed this area."
+		},
+		"boneyard_island:normal:6": {
+			"say": "yakkelder",
+			"text": "You've made it far enough to be heroes.\nYou just have to make it past one thing..."
+		},
+		"boneyard_island:normal:7": {
+			"say": "parigontix",
+			"text": "I'm safe, as long as I have my Frivolaze\nto protect me. Frivolaze! Go, and destroy them!\nSmash them to bits!"
+		},
+		"boneyard_island:normal:8": {
+			"say": "unacorn",
+			"text": "I'm the mercenary who will settle this!\nAre you sure you don't want to run for your life?\nHave it your way!"
+		},
+		"boneyard_island:normal:10": {
+			"say": "talmag",
+			"text": "You've gotten too far!\nI can't let you get the Seal Piece!\nThis is where your path ends!"
+		},
+		"boneyard_island:normal:11": {
+			"say": "krokodar",
+			"text": "Don't go celebrating yet. Even if you make it\npast me, you'll never survive Dino Gorge!\nFall to the sound of the Wolverin!"
+		},
+		"boneyard_island:normal:12": {
+			"say": "mantichomp",
+			"text": "I'm Mantichomp. No one can defeat me!\nI'll make you regret coming here! HOWOOOOOO!"
+		},
+		"boneyard_island:normal:13": {
+			"say": "goldverin",
+			"text": "So, you've come this far?\nIf you surrender to me right now, I'll take you\nas my pupil. Surrender to the world of Goldverin!"
+		},
+		"dino_gorge:normal:0": {
+			"say": "minohawker",
+			"text": "You reek of destruction!\nLeave this island."
+		},
+		"dino_gorge:normal:1": {
+			"say": "minoguller",
+			"text": "Sometimes, words aren't enough.\nYou're never leaving this island!"
+		},
+		"dino_gorge:normal:2": {
+			"say": "minothro",
+			"text": "Dragons never make the wrong decision.\nRuckus-makers beware!"
+		},
+		"dino_gorge:normal:4": {
+			"say": "ceratops",
+			"text": "It might have been easy to sneak in,\nbut you'll never get out alive."
+		},
+		"dino_gorge:normal:5": {
+			"say": "parigontix",
+			"text": "Thieves! They're after the warehouse!\nThe warehouse is empty? That's ridiculous!"
+		},
+		"dino_gorge:normal:6": {
+			"say": "derarctus",
+			"text": "How dare you allow my noble hands to be sullied?!\nYou vulgar, vile creatures!"
+		},
+		"dino_gorge:normal:7": {
+			"say": "tramasaur",
+			"text": "So, you made it to the Dragons.\nYour flame of terror fizzles out here!"
+		},
+		"dino_gorge:normal:12": {
+			"say": "azurefang",
+			"text": "We can rebuild, as long as you're not here.\nUnless we lock you up... Forever!"
+		},
+		"desert_isle:normal:0": {
+			"say": "camhil",
+			"text": "Oh, look who's here!\nThe swindlers that skipped out on my toll!"
+		},
+		"desert_isle:normal:2": {
+			"say": "hibisquid",
+			"text": "Feeling great, rolling around the hot desert.\nWhy don't you give it a try?"
+		}
+	},
+	"monster_lines": {
+		"whirlee": "You want to sacrifice ME?\nWell, that won't be so easy!",
+		"ruburak": "You must evolve me to get Goldbat!\nMwahaha!",
+		"sapphibat": "A gem can shine on its own! How dare you\ntry to sacrifice one, you reckless wreck!",
+		"fire_kong": "Material Beans contain greater power\nthan you think, despite being Fusion material.",
+		"grass_kong": "Material Beans contain greater power\nthan you think, despite being Fusion material.",
+		"water_kong": "Material Beans contain greater power\nthan you think, despite being Fusion material.",
+		"no_kong": "Material Beans contain greater power\nthan you think, despite being Fusion material."
+	},
+	"island_text": {
+		"sprout_island": "Villains are trying to steal the precious seeds on Sprout Island. Please take care of them.",
+		"lake_island": "A strange factory appears to be polluting the lake! Please protect that healing water!",
+		"desert_isle": "Desert is bigger and bigger!\nLet's stop more Desertification.",
+		"moonlight_desert": "The desert becomes even more\ndangerous at night.",
+		"boneyard_island": "Beware of bad Monsters!",
+		"dino_gorge": "We're all going to get eaten!\nWhy dinosaurs are so angry?",
+		"robo_island": "The robot army is preparing to annex the rest of the islands! Somebody needs to stop those metal monsters!",
+		"sky_island": "Monsters are trying to escape from the huge door in the sky! You have to stop them before they make it down!"
+	},
+	"island_clear": {
+		"_source": "Footage: Boneyard-14 (part 12 @14:32), Dino-14 (part 25 @4:22) and Sky-8 (Q2NPbbBy8RQ @17:14). Other islands show only the Mission Clear and New Island cards.",
+		"boneyard_island": {
+			"before": [
+				{
+					"say": "firepaw",
+					"text": "You finally did it! Unbelievable!\nWhat an amazing team!",
+					"face": "happy"
+				}
+			],
+			"clear_text": "Those were some fancy moves.",
+			"after": [
+				{
+					"say": "firepaw",
+					"text": "Dino Gorge is a gorge filled with dinosaurs. Wow!\nBeat up the dinosaurs and get their treasure!"
+				}
+			],
+			"next_text": "Defeat all the dinosaurs"
+		},
+		"dino_gorge": {
+			"before": [
+				{
+					"say": "firepaw",
+					"text": "Congrats! You're a true hero!\nEven more challenges await!",
+					"face": "happy"
+				}
+			],
+			"clear_text": "You're a winner!",
+			"after": [
+				{
+					"say": "firepaw",
+					"text": "Robo Island is being dominated by robots.\nGo show them what true power is!"
+				}
+			],
+			"next_text": "Fight off the Robot Army!"
+		},
+		"sky_island": {
+			"clear_text": "We've completely taken over"
+		}
+	},
+	"test_friend": {
+		"name": "XiaNoro",
+		"monster": "prism_kong",
+		"level": 6,
+		"passive_text": "(Friend) Increases leader's HP by 300"
+	}
+}

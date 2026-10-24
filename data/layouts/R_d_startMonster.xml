@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_9PATCH_2" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9T_black60.png" ninePatchSize="{1066,640}" ninePatchInset="{{1,1},{2,2}}">
+    <ElementNode type="NinePatch" elementID="ID_detail" anchorX="0" anchorY="0" positionX="54" positionY="34" z="0" scaleX="1" scaleY="1" imageName="9T_Back_19.png" ninePatchSize="{966,570}" ninePatchInset="{{50,50},{2,2}}">
+      <ElementNode type="NinePatch" elementID="ID_background" anchorX="0" anchorY="0" positionX="12" positionY="16" z="0" scaleX="1" scaleY="1" imageName="9T_Back_01.png" ninePatchSize="{938,476}" ninePatchInset="{{84,126},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_title" anchorX="0" anchorY="0" positionX="128" positionY="480" z="0" scaleX="1" scaleY="1" imageName="9T_frame_04.png" ninePatchSize="{660,56}" ninePatchInset="{{32,0},{2,56}}">
+          <ElementNode type="Label" elementID="ID_titleName" anchorX="0" anchorY="0" positionX="36" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Select Monster" fontStyle="1" fontSize="30" fontColor="{255,220,125}" areaSizeX="590" areaSizeY="40" alignment="1" lineAlignment="0" effect="1" effectOffset="3" effectColor="{80,40,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatchButton" elementID="ID_btnEsc" anchorX="0.5" anchorY="0.5" positionX="876" positionY="508" z="0" scaleX="1" scaleY="1" imageName="9T_btn_05.png" ninePatchSize="{92,60}" ninePatchInset="{{28,28},{2,2}}">
+          <ElementNode type="Image" elementID="ID_IMAGE_1" anchorX="0" anchorY="0" positionX="18" positionY="4" z="0" scaleX="1" scaleY="1" imageName="KT_esc_01.png" />
+        </ElementNode>
+        <ElementNode type="NinePatchButton" elementID="ID_btnOk" anchorX="0.5" anchorY="0.5" positionX="468" positionY="64" z="0" scaleX="1" scaleY="1" imageName="9T_btn_08.png" ninePatchSize="{758,60}" ninePatchInset="{{28,28},{2,2}}">
+          <ElementNode type="Label" elementID="ID_startText" anchorX="0" anchorY="0" positionX="74" positionY="8" z="1" scaleX="1" scaleY="1" labelContent="Game Start" fontStyle="1" fontSize="30" fontColor="{255,255,255}" areaSizeX="600" areaSizeY="40" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,60,0}" />
+          <ElementNode type="Label" elementID="ID_waitText" anchorX="0" anchorY="0" positionX="8" positionY="15" z="1" scaleX="1" scaleY="1" labelContent="“Download Complete, Choose your 1st partner monster”" fontStyle="1" fontSize="20" fontColor="{255,255,255}" areaSizeX="740" areaSizeY="30" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,60,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_monDetailPage" anchorX="0" anchorY="0" positionX="34" positionY="130" z="1" scaleX="1" scaleY="1" imageName="9T_frame_01.png" ninePatchSize="{870,320}" ninePatchInset="{{20,20},{2,2}}">
+          <ElementNode type="Image" elementID="ID_mon1" anchorX="0" anchorY="0" positionX="16" positionY="16" z="0" scaleX="1" scaleY="1" imageName="monsterF_00.png" />
+          <ElementNode type="Image" elementID="ID_mon2" anchorX="0" anchorY="0" positionX="16" positionY="16" z="0" scaleX="1" scaleY="1" imageName="monsterW_00.png" />
+          <ElementNode type="Image" elementID="ID_mon3" anchorX="0" anchorY="0" positionX="16" positionY="16" z="0" scaleX="1" scaleY="1" imageName="monsterN_00.png" />
+          <ElementNode type="Image" elementID="ID_mon4" anchorX="0" anchorY="0" positionX="16" positionY="16" z="0" scaleX="1" scaleY="1" imageName="monsterB_00.png" />
+          <ElementNode type="NinePatch" elementID="ID_skillPosition" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9T_empty_02.png" ninePatchSize="{50,50}" ninePatchInset="{{1,1},{2,2}}">
+            <ElementNode type="NinePatchButton" elementID="ID_leaderSkill1" anchorX="0" anchorY="0" positionX="496" positionY="78" z="0" scaleX="1" scaleY="1" imageName="9T_empty_02.png" ninePatchSize="{40,40}" ninePatchInset="{{1,1},{2,2}}">
+              <ElementNode type="NinePatch" elementID="ID_skillTip1" anchorX="0" anchorY="0" positionX="-3" positionY="46" z="0" scaleX="1" scaleY="1" imageName="9T_Back_12.png" ninePatchSize="{350,100}" ninePatchInset="{{12,12},{2,2}}">
+                <ElementNode type="Label" elementID="ID_skillName1" anchorX="0" anchorY="0" positionX="12" positionY="66" z="0" scaleX="1" scaleY="1" labelContent="Basic Total CRI Up" fontStyle="1" fontSize="19" fontColor="{255,255,255}" areaSizeX="328" areaSizeY="24" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+                <ElementNode type="Label" elementID="ID_skillDetail1" anchorX="0" anchorY="0" positionX="12" positionY="12" z="0" scaleX="1" scaleY="1" labelContent="Increase team's Ciritcal Hit by 20% for 20s" fontStyle="1" fontSize="18" fontColor="{255,255,255}" areaSizeX="328" areaSizeY="44" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+              </ElementNode>
+            </ElementNode>
+            <ElementNode type="NinePatchButton" elementID="ID_leaderSkill2" anchorX="0" anchorY="0" positionX="540" positionY="78" z="0" scaleX="1" scaleY="1" imageName="9T_empty_02.png" ninePatchSize="{40,40}" ninePatchInset="{{1,1},{2,2}}">
+              <ElementNode type="NinePatch" elementID="ID_skillTip2" anchorX="0" anchorY="0" positionX="-3" positionY="46" z="0" scaleX="1" scaleY="1" imageName="9T_Back_12.png" ninePatchSize="{350,100}" ninePatchInset="{{12,12},{2,2}}">
+                <ElementNode type="Label" elementID="ID_skillName2" anchorX="0" anchorY="0" positionX="12" positionY="66" z="0" scaleX="1" scaleY="1" labelContent="Basic Total CRI Up" fontStyle="1" fontSize="19" fontColor="{255,255,255}" areaSizeX="328" areaSizeY="24" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+                <ElementNode type="Label" elementID="ID_skillDetail2" anchorX="0" anchorY="0" positionX="12" positionY="12" z="0" scaleX="1" scaleY="1" labelContent="Increase team's Ciritcal Hit by 20% for 20s" fontStyle="1" fontSize="18" fontColor="{255,255,255}" areaSizeX="328" areaSizeY="44" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+              </ElementNode>
+            </ElementNode>
+            <ElementNode type="NinePatchButton" elementID="ID_leaderSkill3" anchorX="0" anchorY="0" positionX="584" positionY="78" z="0" scaleX="1" scaleY="1" imageName="9T_empty_02.png" ninePatchSize="{40,40}" ninePatchInset="{{1,1},{2,2}}">
+              <ElementNode type="NinePatch" elementID="ID_skillTip3" anchorX="0" anchorY="0" positionX="-310" positionY="46" z="0" scaleX="1" scaleY="1" imageName="9T_Back_12.png" ninePatchSize="{350,100}" ninePatchInset="{{12,12},{2,2}}">
+                <ElementNode type="Label" elementID="ID_skillName3" anchorX="0" anchorY="0" positionX="12" positionY="66" z="0" scaleX="1" scaleY="1" labelContent="Basic Total CRI Up" fontStyle="1" fontSize="19" fontColor="{255,255,255}" areaSizeX="328" areaSizeY="24" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+                <ElementNode type="Label" elementID="ID_skillDetail3" anchorX="0" anchorY="0" positionX="12" positionY="12" z="0" scaleX="1" scaleY="1" labelContent="Increase team's Ciritcal Hit by 20% for 20s" fontStyle="1" fontSize="18" fontColor="{255,255,255}" areaSizeX="328" areaSizeY="44" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+              </ElementNode>
+            </ElementNode>
+            <ElementNode type="NinePatchButton" elementID="ID_leaderSkill4" anchorX="0" anchorY="0" positionX="628" positionY="78" z="0" scaleX="1" scaleY="1" imageName="9T_empty_02.png" ninePatchSize="{40,40}" ninePatchInset="{{1,1},{2,2}}">
+              <ElementNode type="NinePatch" elementID="ID_skillTip4" anchorX="0" anchorY="0" positionX="-310" positionY="46" z="0" scaleX="1" scaleY="1" imageName="9T_Back_12.png" ninePatchSize="{350,100}" ninePatchInset="{{12,12},{2,2}}">
+                <ElementNode type="Label" elementID="ID_skillName4" anchorX="0" anchorY="0" positionX="12" positionY="66" z="0" scaleX="1" scaleY="1" labelContent="Basic Total CRI Up" fontStyle="1" fontSize="19" fontColor="{255,255,255}" areaSizeX="328" areaSizeY="24" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+                <ElementNode type="Label" elementID="ID_skillDetail4" anchorX="0" anchorY="0" positionX="12" positionY="12" z="0" scaleX="1" scaleY="1" labelContent="Increase team's Ciritcal Hit by 20% for 20s" fontStyle="1" fontSize="18" fontColor="{255,255,255}" areaSizeX="328" areaSizeY="44" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+              </ElementNode>
+            </ElementNode>
+            <ElementNode type="NinePatchButton" elementID="ID_leaderSkill6" anchorX="0" anchorY="0" positionX="700" positionY="78" z="0" scaleX="1" scaleY="1" imageName="9T_empty_02.png" ninePatchSize="{40,40}" ninePatchInset="{{1,1},{2,2}}">
+              <ElementNode type="NinePatch" elementID="ID_skillTip6" anchorX="0" anchorY="0" positionX="-310" positionY="46" z="0" scaleX="1" scaleY="1" imageName="9T_Back_12.png" ninePatchSize="{350,100}" ninePatchInset="{{12,12},{2,2}}">
+                <ElementNode type="Label" elementID="ID_skillName6" anchorX="0" anchorY="0" positionX="12" positionY="66" z="0" scaleX="1" scaleY="1" labelContent="Basic Total CRI Up" fontStyle="1" fontSize="19" fontColor="{255,255,255}" areaSizeX="328" areaSizeY="24" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+                <ElementNode type="Label" elementID="ID_skillDetail6" anchorX="0" anchorY="0" positionX="12" positionY="12" z="0" scaleX="1" scaleY="1" labelContent="Increase team's Ciritcal Hit by 20% for 20s" fontStyle="1" fontSize="18" fontColor="{255,255,255}" areaSizeX="328" areaSizeY="44" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+              </ElementNode>
+            </ElementNode>
+          </ElementNode>
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_line" anchorX="0" anchorY="0" positionX="46" positionY="110" z="0" scaleX="1" scaleY="1" imageName="9T_Back_15.png" ninePatchSize="{850,4}" ninePatchInset="{{106,0},{2,4}}" />
+        <ElementNode type="NinePatch" elementID="ID_choiceMonPage" anchorX="0" anchorY="0" positionX="36" positionY="130" z="0" scaleX="1" scaleY="1" imageName="9T_empty_02.png" ninePatchSize="{866,320}" ninePatchInset="{{1,1},{2,2}}">
+          <ElementNode type="NinePatch" elementID="ID_order" anchorX="0" anchorY="0" positionX="12" positionY="272" z="0" scaleX="1" scaleY="1" imageName="9T_Back_02.png" ninePatchSize="{840,48}" ninePatchInset="{{15,15},{2,2}}">
+            <ElementNode type="Label" elementID="ID_TextEx" anchorX="0" anchorY="0" positionX="0" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Touch and Choose you 1 partner monster!" fontStyle="1" fontSize="22" fontColor="{100,50,15}" areaSizeX="840" areaSizeY="30" alignment="1" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+          </ElementNode>
+          <ElementNode type="NinePatchButton" elementID="ID_monsterSlot1" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9T_frame_01.png" ninePatchSize="{212,260}" ninePatchInset="{{20,20},{2,2}}">
+            <ElementNode type="NinePatch" elementID="ID_selected1" anchorX="0" anchorY="0" positionX="8" positionY="22" z="1" scaleX="1" scaleY="1" imageName="9T_frame_06.png" ninePatchSize="{190,180}" ninePatchInset="{{20,20},{2,2}}">
+              <ElementNode type="Image" elementID="ID_IMAGE_3_1" anchorX="0" anchorY="0" positionX="-8" positionY="102" z="0" scaleX="1.5" scaleY="1.5" imageName="IT_check02.png" />
+            </ElementNode>
+            <ElementNode type="NinePatchButton" elementID="ID_btnDetail1" anchorX="0" anchorY="0" positionX="142" positionY="12" z="2" scaleX="1" scaleY="1" imageName="9T_frame_05.png" ninePatchSize="{60,58}" ninePatchInset="{{20,20},{2,2}}">
+              <ElementNode type="Image" elementID="ID_IMAGE_4_1" anchorX="0" anchorY="0" positionX="1" positionY="4" z="0" scaleX="1" scaleY="1" imageName="KT_question_01.png" />
+            </ElementNode>
+            <ElementNode type="Image" elementID="ID_ev1" anchorX="0" anchorY="0" positionX="8" positionY="22" z="0" scaleX="1" scaleY="1" imageName="monsterF_01.png" />
+          </ElementNode>
+          <ElementNode type="NinePatchButton" elementID="ID_monsterSlot2" anchorX="0" anchorY="0" positionX="218" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9T_frame_01.png" ninePatchSize="{212,260}" ninePatchInset="{{20,20},{2,2}}">
+            <ElementNode type="NinePatch" elementID="ID_selected2" anchorX="0" anchorY="0" positionX="8" positionY="22" z="1" scaleX="1" scaleY="1" imageName="9T_frame_06.png" ninePatchSize="{190,180}" ninePatchInset="{{20,20},{2,2}}">
+              <ElementNode type="Image" elementID="ID_IMAGE_3_2" anchorX="0" anchorY="0" positionX="-8" positionY="102" z="0" scaleX="1.5" scaleY="1.5" imageName="IT_check02.png" />
+            </ElementNode>
+            <ElementNode type="NinePatchButton" elementID="ID_btnDetail2" anchorX="0" anchorY="0" positionX="142" positionY="12" z="2" scaleX="1" scaleY="1" imageName="9T_frame_05.png" ninePatchSize="{60,58}" ninePatchInset="{{20,20},{2,2}}">
+              <ElementNode type="Image" elementID="ID_IMAGE_4_2" anchorX="0" anchorY="0" positionX="1" positionY="4" z="0" scaleX="1" scaleY="1" imageName="KT_question_01.png" />
+            </ElementNode>
+            <ElementNode type="Image" elementID="ID_ev2" anchorX="0" anchorY="0" positionX="8" positionY="22" z="0" scaleX="1" scaleY="1" imageName="monsterW_01.png" />
+          </ElementNode>
+          <ElementNode type="NinePatchButton" elementID="ID_monsterSlot3" anchorX="0" anchorY="0" positionX="436" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9T_frame_01.png" ninePatchSize="{212,260}" ninePatchInset="{{20,20},{2,2}}">
+            <ElementNode type="NinePatch" elementID="ID_selected3" anchorX="0" anchorY="0" positionX="8" positionY="22" z="1" scaleX="1" scaleY="1" imageName="9T_frame_06.png" ninePatchSize="{190,180}" ninePatchInset="{{20,20},{2,2}}">
+              <ElementNode type="Image" elementID="ID_IMAGE_3_3" anchorX="0" anchorY="0" positionX="-8" positionY="102" z="0" scaleX="1.5" scaleY="1.5" imageName="IT_check02.png" />
+            </ElementNode>
+            <ElementNode type="NinePatchButton" elementID="ID_btnDetail3" anchorX="0" anchorY="0" positionX="142" positionY="12" z="2" scaleX="1" scaleY="1" imageName="9T_frame_05.png" ninePatchSize="{60,58}" ninePatchInset="{{20,20},{2,2}}">
+              <ElementNode type="Image" elementID="ID_IMAGE_4_3" anchorX="0" anchorY="0" positionX="1" positionY="4" z="0" scaleX="1" scaleY="1" imageName="KT_question_01.png" />
+            </ElementNode>
+            <ElementNode type="Image" elementID="ID_ev3" anchorX="0" anchorY="0" positionX="8" positionY="22" z="0" scaleX="1" scaleY="1" imageName="monsterN_01.png" />
+          </ElementNode>
+          <ElementNode type="NinePatchButton" elementID="ID_monsterSlot4" anchorX="0" anchorY="0" positionX="654" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9T_frame_01.png" ninePatchSize="{212,260}" ninePatchInset="{{20,20},{2,2}}">
+            <ElementNode type="NinePatch" elementID="ID_selected4" anchorX="0" anchorY="0" positionX="8" positionY="22" z="1" scaleX="1" scaleY="1" imageName="9T_frame_06.png" ninePatchSize="{190,180}" ninePatchInset="{{20,20},{2,2}}">
+              <ElementNode type="Image" elementID="ID_IMAGE_3_4" anchorX="0" anchorY="0" positionX="-8" positionY="102" z="0" scaleX="1.5" scaleY="1.5" imageName="IT_check02.png" />
+            </ElementNode>
+            <ElementNode type="NinePatchButton" elementID="ID_btnDetail4" anchorX="0" anchorY="0" positionX="142" positionY="12" z="2" scaleX="1" scaleY="1" imageName="9T_frame_05.png" ninePatchSize="{60,58}" ninePatchInset="{{20,20},{2,2}}">
+              <ElementNode type="Image" elementID="ID_IMAGE_4_4" anchorX="0" anchorY="0" positionX="1" positionY="4" z="0" scaleX="1" scaleY="1" imageName="KT_question_01.png" />
+            </ElementNode>
+            <ElementNode type="Image" elementID="ID_ev4" anchorX="0" anchorY="0" positionX="8" positionY="22" z="0" scaleX="1" scaleY="1" imageName="monsterB_01.png" />
+          </ElementNode>
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_loadingBar" anchorX="0.5" anchorY="0.5" positionX="468" positionY="68" z="0" scaleX="1" scaleY="1" imageName="9_title_graphBack_01.png" ninePatchSize="{758,50}" ninePatchInset="{{20,18},{2,1}}">
+          <ElementNode type="NinePatch" elementID="ID_loadingGraph" anchorX="0" anchorY="0" positionX="8" positionY="10" z="0" scaleX="1" scaleY="1" imageName="9_title_graph_01.png" ninePatchSize="{740,32}" ninePatchInset="{{12,10},{2,1}}" />
+          <ElementNode type="Label" elementID="ID_loadingText" anchorX="0" anchorY="0" positionX="8" positionY="12" z="0" scaleX="1" scaleY="1" labelContent="Please wait a while, Game Start button will sppear soon  ......  (2/7)" fontStyle="1" fontSize="18" fontColor="{255,255,255}" areaSizeX="740" areaSizeY="24" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+        </ElementNode>
+      </ElementNode>
+    </ElementNode>
+  </ElementNode>
+</root>

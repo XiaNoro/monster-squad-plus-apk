@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_frameSize" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{708,100}" ninePatchInset="{{1,1},{2,2}}">
+    <ElementNode type="NinePatch" elementID="ID_9PATCH_2" anchorX="0" anchorY="0" positionX="118" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_frame_01.png" ninePatchSize="{572,98}" ninePatchInset="{{20,20},{2,2}}">
+      <ElementNode type="Label" elementID="ID_friendName" anchorX="0" anchorY="0" positionX="26" positionY="50" z="0" scaleX="1" scaleY="1" labelContent="세빌리아베이비" fontStyle="1" fontSize="20" fontColor="{255,255,255}" areaSizeX="380" areaSizeY="30" alignment="0" effect="2" effectOffset="2" effectColor="{70,40,0}" />
+      <ElementNode type="Label" elementID="ID_friendstat" anchorX="0" anchorY="0" positionX="26" positionY="12" z="0" scaleX="1" scaleY="1" labelContent="Last login: 2h ago" fontStyle="1" fontSize="20" fontColor="{60,45,5}" areaSizeX="240" areaSizeY="28" alignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+      <ElementNode type="NinePatch" elementID="ID_userGame" anchorX="0" anchorY="0" positionX="270" positionY="6" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{90,90}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Button" elementID="ID_btnDelete1" anchorX="0" anchorY="0" positionX="184" positionY="0" z="0" scaleX="1" scaleY="1" imageName="B_friend_06.png" />
+        <ElementNode type="Button" elementID="ID_btnInvite1" anchorX="0" anchorY="0" positionX="92" positionY="0" z="0" scaleX="1" scaleY="1" imageName="K_visit_01.png" />
+        <ElementNode type="Button" elementID="ID_btnSendPoint1" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_fPoint_03.png" />
+        <ElementNode type="Button" elementID="ID_btnInvite1_1" anchorX="0" anchorY="0" positionX="92" positionY="0" z="0" scaleX="1" scaleY="1" imageName="K_visit_02.png" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_userCacao" anchorX="0" anchorY="0" positionX="362" positionY="6" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{90,90}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Button" elementID="ID_btnInvite2" anchorX="0" anchorY="0" positionX="92" positionY="0" z="0" scaleX="1" scaleY="1" imageName="K_visit_01.png" />
+        <ElementNode type="Button" elementID="ID_btnSendPoint2" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_fPoint_03.png" />
+        <ElementNode type="Button" elementID="ID_btnInvite2_1" anchorX="0" anchorY="0" positionX="92" positionY="0" z="0" scaleX="1" scaleY="1" imageName="K_visit_02.png" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_userSearch" anchorX="0" anchorY="0" positionX="362" positionY="6" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{90,90}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Button" elementID="ID_btnInvite3" anchorX="0" anchorY="0" positionX="92" positionY="0" z="0" scaleX="1" scaleY="1" imageName="K_visit_01.png" />
+        <ElementNode type="Button" elementID="ID_btnPropose3" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="B_friend_05.png" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_userWait" anchorX="0" anchorY="0" positionX="270" positionY="6" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{90,90}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Button" elementID="ID_btnDelete4" anchorX="0" anchorY="0" positionX="184" positionY="0" z="0" scaleX="1" scaleY="1" imageName="B_friend_06.png" />
+        <ElementNode type="Button" elementID="ID_btnInvite4" anchorX="0" anchorY="0" positionX="92" positionY="0" z="0" scaleX="1" scaleY="1" imageName="K_visit_01.png" />
+        <ElementNode type="Button" elementID="ID_btnUserPropose4" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="B_friend_05.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_9PATCH_5" anchorX="0" anchorY="0" positionX="18" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_Back_08.png" ninePatchSize="{100,100}" ninePatchInset="{{20,20},{2,2}}">
+      <ElementNode type="NinePatch" elementID="ID_leaderIcon" anchorX="0" anchorY="0" positionX="4" positionY="4" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{92,92}" ninePatchInset="{{1,1},{2,2}}" />
+    </ElementNode>
+  </ElementNode>
+</root>

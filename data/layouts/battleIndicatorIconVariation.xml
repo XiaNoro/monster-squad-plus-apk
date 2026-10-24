@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="Image" elementID="ID_IMAGE_TYPE_FRAME" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="TypeFrame.png">
+    <ElementNode type="ProgressBar" elementID="ID_PROGRESSBAR_COOLTIME" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="TypeFrame_Variation.png" value="100" barDirection="0" />
+    <ElementNode type="Image" elementID="ID_IMAGE_ICON" anchorX="0" anchorY="0" positionX="6" positionY="6" z="1" scaleX="1" scaleY="1" imageName="IconVariation.png" />
+  </ElementNode>
+</root>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_9PATCH_1" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{200,200}" ninePatchInset="{{1,1},{2,2}}">
+    <ElementNode type="Button" elementID="ID_btnLeft" anchorX="0" anchorY="0" positionX="14" positionY="250" z="1" scaleX="1" scaleY="1" imageName="B_arrow_01.png" />
+    <ElementNode type="Button" elementID="ID_btnRight" anchorX="0" anchorY="0" positionX="996" positionY="250" z="1" scaleX="1" scaleY="1" imageName="B_arrow_02.png" />
+    <ElementNode type="NinePatch" elementID="ID_slideArry" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{1066,580}" ninePatchInset="{{1,1},{2,2}}" />
+    <ElementNode type="NinePatchButton" elementID="ID_btnStory" anchorX="0" anchorY="0" positionX="258" positionY="506" z="0" scaleX="1" scaleY="1" imageName="9_tap08_n.png" ninePatchSize="{180,82}" ninePatchInset="{{36,33},{2,1}}">
+      <ElementNode type="Label" elementID="ID_LABEL_S1" anchorX="0" anchorY="0" positionX="4" positionY="20" z="0" scaleX="1" scaleY="1" labelContent="Story" fontStyle="1" fontSize="26" fontColor="{255,255,255}" areaSizeX="170" areaSizeY="50" alignment="1" lineAlignment="1" effect="2" effectOffset="2" effectColor="{80,40,0}" />
+    </ElementNode>
+    <ElementNode type="NinePatchButton" elementID="ID_btnSpecial" anchorX="0" anchorY="0" positionX="444" positionY="506" z="0" scaleX="1" scaleY="1" imageName="9_tap08_n.png" ninePatchSize="{180,82}" ninePatchInset="{{36,33},{2,1}}">
+      <ElementNode type="Label" elementID="ID_LABEL_S2" anchorX="0" anchorY="0" positionX="4" positionY="20" z="0" scaleX="1" scaleY="1" labelContent="Story" fontStyle="1" fontSize="26" fontColor="{255,255,255}" areaSizeX="170" areaSizeY="50" alignment="1" lineAlignment="1" effect="2" effectOffset="2" effectColor="{80,40,0}" />
+    </ElementNode>
+    <ElementNode type="NinePatchButton" elementID="ID_btnTechnical" anchorX="0" anchorY="0" positionX="630" positionY="506" z="0" scaleX="1" scaleY="1" imageName="9_tap08_n.png" ninePatchSize="{180,82}" ninePatchInset="{{36,33},{2,1}}">
+      <ElementNode type="Label" elementID="ID_LABEL_T" anchorX="0" anchorY="0" positionX="4" positionY="20" z="0" scaleX="1" scaleY="1" labelContent="Technical" fontStyle="1" fontSize="26" fontColor="{255,255,255}" areaSizeX="170" areaSizeY="50" alignment="1" lineAlignment="1" effect="2" effectOffset="2" effectColor="{80,40,0}" />
+      <ElementNode type="Image" elementID="ID_IMAGE_3" anchorX="0" anchorY="0" positionX="70" positionY="24" z="0" scaleX="1" scaleY="1" imageName="I_lock_03.png" />
+    </ElementNode>
+  </ElementNode>
+</root>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="Image" elementID="ID_con" anchorX="0" anchorY="0" positionX="532" positionY="166" z="0" scaleX="1" scaleY="1" imageName="9_empty_05.png">
+    <ElementNode type="Image" elementID="ID_imgRarityText" anchorX="0.5" anchorY="0.5" positionX="0" positionY="125" z="1" scaleX="0.6" scaleY="0.6" imageName="common.png" />
+    <ElementNode type="Image" elementID="ID_posInfo" anchorX="0.5" anchorY="0.5" positionX="0" positionY="156" z="2" scaleX="0.6" scaleY="0.6" imageName="9_empty_05.png">
+      <ElementNode type="Image" elementID="ID_imgNew" anchorX="0.5" anchorY="0.5" positionX="0" positionY="48" z="-1" scaleX="1" scaleY="1" imageName="new01.png" />
+    </ElementNode>
+    <ElementNode type="Image" elementID="ID_posMonster" anchorX="0.5" anchorY="0.5" positionX="0" positionY="0" z="3" scaleX="0.6" scaleY="0.6" imageName="9_empty_05.png" />
+    <ElementNode type="Image" elementID="ID_imgShadow" anchorX="0.5" anchorY="0.5" positionX="0" positionY="0" z="-1" scaleX="0.5" scaleY="0.5" imageName="GroundShadow.png" />
+    <ElementNode type="Image" elementID="ID_smal_sold" anchorX="0" anchorY="0" positionX="-57" positionY="6" z="4" scaleX="0.7" scaleY="0.7" imageName="I_sold.png" />
+  </ElementNode>
+</root>

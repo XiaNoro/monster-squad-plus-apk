@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_9PATCH_1" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_black20_01.png" ninePatchSize="{1066,640}" ninePatchInset="{{1,1},{2,2}}">
+    <ElementNode type="NinePatch" elementID="ID_9PATCH_2" anchorX="0" anchorY="0" positionX="0" positionY="480" z="0" scaleX="1" scaleY="1" imageName="A_9_back_03.png" ninePatchSize="{1066,160}" ninePatchInset="{{1,0},{2,160}}" />
+    <ElementNode type="NinePatch" elementID="ID_9PATCH_3" anchorX="0" anchorY="0" positionX="-20" positionY="484" z="2" scaleX="1" scaleY="1" imageName="A_9_back_02.png" ninePatchSize="{354,80}" ninePatchInset="{{22,22},{2,2}}">
+      <ElementNode type="Label" elementID="ID_LABEL_FN" anchorX="0" anchorY="0" positionX="22" positionY="12" z="0" scaleX="1" scaleY="1" labelContent="Field Name" fontStyle="1" fontSize="28" fontColor="{255,125,0}" areaSizeX="314" areaSizeY="50" alignment="2" lineAlignment="1" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_9PATCH_4" anchorX="0" anchorY="0" positionX="0" positionY="0" z="2" scaleX="1" scaleY="1" imageName="A_9_back_04.png" ninePatchSize="{1066,200}" ninePatchInset="{{1,20},{2,2}}">
+      <ElementNode type="Label" elementID="ID_LABEL_BN" anchorX="0" anchorY="0" positionX="92" positionY="138" z="0" scaleX="1" scaleY="1" labelContent="Boss Name" fontStyle="1" fontSize="34" fontColor="{255,125,0}" areaSizeX="310" areaSizeY="40" alignment="0" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+      <ElementNode type="Label" elementID="ID_LABEL_text" anchorX="0" anchorY="0" positionX="142" positionY="0" z="0" scaleX="1" scaleY="1" labelContent="대사 드립 치는곳" fontStyle="1" fontSize="30" fontColor="{255,255,255}" areaSizeX="730" areaSizeY="134" alignment="0" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+      <ElementNode type="Image" elementID="ID_IMAGE_1" anchorX="0" anchorY="0" positionX="920" positionY="60" z="0" scaleX="1" scaleY="1" imageName="B_next.png" />
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_9PATCH_mon" anchorX="0" anchorY="0" positionX="882" positionY="370" z="1" scaleX="1" scaleY="1" imageName="A_9_empty_02.png" ninePatchSize="{150,150}" ninePatchInset="{{1,1},{2,2}}" />
+  </ElementNode>
+</root>

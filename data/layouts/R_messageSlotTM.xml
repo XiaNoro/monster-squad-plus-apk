@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_frameSize" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{450,100}" ninePatchInset="{{1,1},{2,2}}">
+    <ElementNode type="NinePatch" elementID="ID_9PATCH_2" anchorX="0" anchorY="0" positionX="12" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_frame_05.png" ninePatchSize="{432,98}" ninePatchInset="{{20,20},{2,2}}">
+      <ElementNode type="Label" elementID="ID_friendName" anchorX="0" anchorY="0" positionX="18" positionY="50" z="0" scaleX="1" scaleY="1" labelContent="세빌리아베이비" fontStyle="1" fontSize="22" fontColor="{255,255,255}" areaSizeX="280" areaSizeY="30" alignment="0" effect="2" effectOffset="2" effectColor="{70,40,0}" />
+      <ElementNode type="Label" elementID="ID_friendstat" anchorX="0" anchorY="0" positionX="18" positionY="14" z="0" scaleX="1" scaleY="1" labelContent="Last login: 2h ago" fontStyle="1" fontSize="20" fontColor="{60,45,5}" areaSizeX="340" areaSizeY="28" alignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+      <ElementNode type="NinePatch" elementID="ID_gift" anchorX="0" anchorY="0" positionX="336" positionY="10" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{80,80}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_icon" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{80,80}" ninePatchInset="{{1,1},{2,2}}">
+          <ElementNode type="Label" elementID="ID_numText" anchorX="0" anchorY="0" positionX="-35" positionY="-4" z="2" scaleX="1" scaleY="1" labelContent="×2" fontStyle="1" fontSize="24" fontColor="{255,255,255}" areaSizeX="138" areaSizeY="28" alignment="1" effect="2" effectOffset="2" effectColor="{65,35,10}" />
+          <ElementNode type="Image" elementID="ID_iconIMAGE" anchorX="0.5" anchorY="0.5" positionX="40" positionY="46" z="1" scaleX="1" scaleY="1" imageName="I_crystal_02.png" />
+        </ElementNode>
+      </ElementNode>
+    </ElementNode>
+  </ElementNode>
+</root>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_title" anchorX="0" anchorY="0" positionX="44" positionY="484" z="0" scaleX="1" scaleY="1" imageName="9_frame_04.png" ninePatchSize="{334,56}" ninePatchInset="{{32,0},{2,56}}">
+    <ElementNode type="Label" elementID="ID_islandName" anchorX="0" anchorY="0" positionX="4" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="island Name" fontStyle="1" fontSize="30" fontColor="{255,220,125}" areaSizeX="326" areaSizeY="40" alignment="1" lineAlignment="0" effect="1" effectOffset="3" effectColor="{80,40,0}" />
+  </ElementNode>
+  <ElementNode type="NinePatch" elementID="ID_9PATCH_3" anchorX="0" anchorY="0" positionX="398" positionY="2" z="0" scaleX="1" scaleY="1" imageName="9_Back_19.png" ninePatchSize="{654,572}" ninePatchInset="{{50,50},{2,2}}">
+    <ElementNode type="NinePatch" elementID="ID_9PATCH_1" anchorX="0" anchorY="0" positionX="14" positionY="14" z="1" scaleX="1" scaleY="1" imageName="9_Back_01.png" ninePatchSize="{624,544}" ninePatchInset="{{84,126},{2,2}}">
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_2" anchorX="0" anchorY="0" positionX="28" positionY="122" z="0" scaleX="1" scaleY="1" imageName="9_Back_02.png" ninePatchSize="{568,342}" ninePatchInset="{{15,15},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_slide" anchorX="0" anchorY="0" positionX="538" positionY="6" z="0" scaleX="1" scaleY="1" imageName="9_slide_01.png" ninePatchSize="{10,328}" ninePatchInset="{{0,5},{10,2}}">
+          <ElementNode type="NinePatch" elementID="ID_slideBar" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_slide_02.png" ninePatchSize="{10,328}" ninePatchInset="{{0,5},{10,2}}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_arrayPosition" anchorX="0" anchorY="0" positionX="24" positionY="6" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{500,328}" ninePatchInset="{{1,1},{2,2}}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_pageTitle" anchorX="0" anchorY="0" positionX="40" positionY="472" z="0" scaleX="1" scaleY="1" imageName="9_Back_03.png" ninePatchSize="{330,52}" ninePatchInset="{{20,20},{1,2}}">
+        <ElementNode type="Label" elementID="ID_pageName" anchorX="0" anchorY="0" positionX="20" positionY="4" z="0" scaleX="1" scaleY="1" labelContent="Edit Squad" fontStyle="1" fontSize="30" fontColor="{255,220,125}" areaSizeX="290" areaSizeY="40" alignment="0" lineAlignment="0" effect="1" effectOffset="3" effectColor="{80,40,0}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_squadNum" anchorX="0" anchorY="0" positionX="28" positionY="26" z="0" scaleX="1" scaleY="1" imageName="9_Back_02.png" ninePatchSize="{328,82}" ninePatchInset="{{15,15},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_3" anchorX="0" anchorY="0" positionX="0" positionY="51" z="0" scaleX="1" scaleY="1" labelContent="Please Edit your Squad.(20 monsters)" fontStyle="0" fontSize="16" fontColor="{131,76,22}" areaSizeX="328" areaSizeY="22" alignment="1" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        <ElementNode type="NinePatch" elementID="ID_9PATCH_5" anchorX="0" anchorY="0" positionX="74" positionY="6" z="0" scaleX="1" scaleY="1" imageName="9_Back_10.png" ninePatchSize="{180,40}" ninePatchInset="{{12,12},{2,2}}">
+          <ElementNode type="Label" elementID="ID_numText" anchorX="0" anchorY="0" positionX="18" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="00" fontStyle="1" fontSize="24" fontColor="{255,255,255}" areaSizeX="70" areaSizeY="30" alignment="2" lineAlignment="0" effect="1" effectOffset="2" effectColor="{80,40,0}" />
+          <ElementNode type="Label" elementID="ID_maxText" anchorX="0" anchorY="0" positionX="88" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="/20" fontStyle="1" fontSize="24" fontColor="{255,220,125}" areaSizeX="70" areaSizeY="30" alignment="0" lineAlignment="0" effect="1" effectOffset="2" effectColor="{80,40,0}" />
+        </ElementNode>
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnOK" anchorX="0" anchorY="0" positionX="370" positionY="20" z="0" scaleX="1" scaleY="1" imageName="9_btn_06.png" ninePatchSize="{226,94}" ninePatchInset="{{48,43},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_2" anchorX="0" anchorY="0" positionX="0" positionY="24" z="1" scaleX="1" scaleY="1" labelContent="OK" fontStyle="1" fontSize="30" fontColor="{255,255,255}" areaSizeX="222" areaSizeY="40" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,64,0}" />
+      </ElementNode>
+    </ElementNode>
+  </ElementNode>
+  <ElementNode type="NinePatch" elementID="ID_islandDes" anchorX="0" anchorY="0" positionX="36" positionY="6" z="0" scaleX="1" scaleY="1" imageName="9_Back_13.png" ninePatchSize="{350,190}" ninePatchInset="{{12,12},{2,2}}">
+    <ElementNode type="Label" elementID="ID_textDes" anchorX="0" anchorY="0" positionX="14" positionY="106" z="0" scaleX="1" scaleY="1" labelContent="Enter island description here." fontStyle="0" fontSize="18" fontColor="{255,255,255}" areaSizeX="322" areaSizeY="72" alignment="1" lineAlignment="1" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+    <ElementNode type="NinePatchButton" elementID="ID_monFrame1" anchorX="0" anchorY="0" positionX="26" positionY="8" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{92,92}" ninePatchInset="{{1,1},{2,2}}" />
+    <ElementNode type="NinePatchButton" elementID="ID_monFrame2" anchorX="0" anchorY="0" positionX="130" positionY="8" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{92,92}" ninePatchInset="{{1,1},{2,2}}" />
+    <ElementNode type="NinePatchButton" elementID="ID_monFrame3" anchorX="0" anchorY="0" positionX="234" positionY="8" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{92,92}" ninePatchInset="{{1,1},{2,2}}" />
+  </ElementNode>
+</root>

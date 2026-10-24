@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_9PATCH_2" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" imageName="9_black60.png" ninePatchSize="{960,640}" ninePatchInset="{{1,1},{2,2}}">
+    <ElementNode type="NinePatch" elementID="ID_levelUp" anchorX="0" anchorY="0" positionX="250" positionY="158" z="0" imageName="9_Back_14.png" ninePatchSize="{474,364}" ninePatchInset="{{152,138},{2,2}}">
+      <ElementNode type="Image" elementID="ID_IMAGE_1" anchorX="0" anchorY="0" positionX="-22" positionY="174" z="0" imageName="K_levelUp_03.png" />
+      <ElementNode type="Image" elementID="ID_IMAGE_2" anchorX="0" anchorY="0" positionX="74" positionY="278" z="0" imageName="K_levelUp_02.png" />
+      <ElementNode type="Label" elementID="ID_textLevel" anchorX="0" anchorY="0" positionX="128" positionY="216" z="0" labelContent="35 LV" fontStyle="1" fontSize="52" fontColor="{215,51,0}" areaSizeX="200" areaSizeY="50" alignment="1" effect="2" effectOffset="2" effectColor="{255,250,171}" />
+      <ElementNode type="Label" elementID="ID_textCongratulations" anchorX="0" anchorY="0" positionX="128" positionY="180" z="0" labelContent="축하합니다!" fontStyle="1" fontSize="20" fontColor="{215,51,0}" areaSizeX="200" areaSizeY="30" alignment="1" effect="2" effectOffset="2" effectColor="{255,250,171}" />
+      <ElementNode type="NinePatch" elementID="ID_line1" anchorX="0" anchorY="0" positionX="48" positionY="170" z="0" imageName="9_Back_15.png" ninePatchSize="{364,4}" ninePatchInset="{{106,0},{2,4}}" />
+      <ElementNode type="NinePatch" elementID="ID_line1_1" anchorX="0" anchorY="0" positionX="48" positionY="36" z="0" imageName="9_Back_15.png" ninePatchSize="{364,4}" ninePatchInset="{{106,0},{2,4}}" />
+      <ElementNode type="Label" elementID="ID_textReward" anchorX="0" anchorY="0" positionX="48" positionY="56" z="0" labelContent="Cost 1 증가" fontStyle="1" fontSize="22" fontColor="{80,45,0}" areaSizeX="364" areaSizeY="98" alignment="1" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+    </ElementNode>
+  </ElementNode>
+</root>

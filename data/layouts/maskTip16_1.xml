@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="Image" elementID="ID_MaskTip" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png">
+    <ElementNode type="NinePatchButton" elementID="ID_9BUTTON_All" anchorX="0" anchorY="0" positionX="0" positionY="0" z="2" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{1066,640}" ninePatchInset="{{1,1},{2,2}}" />
+    <ElementNode type="NinePatch" elementID="ID_maskTip5_5" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{1066,640}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="NinePatch" elementID="ID_pet_detail_label_bg" anchorX="0" anchorY="0" positionX="56" positionY="99" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{480,52}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_pet_detail_label" anchorX="0" anchorY="0" positionX="8" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Increases a monster’s level cap." fontStyle="0" fontSize="28" fontColor="{255,138,0}" areaSizeX="460" areaSizeY="40" alignment="0" lineAlignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_pet_detail_label_bg_2" anchorX="0" anchorY="0" positionX="42" positionY="470" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{218,52}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_pet_detail_label_2" anchorX="0" anchorY="0" positionX="8" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Increases a monster’s level cap." fontStyle="0" fontSize="28" fontColor="{255,138,0}" areaSizeX="200" areaSizeY="40" alignment="0" lineAlignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="Image" elementID="ID_IMAGE_BG" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" />
+  </ElementNode>
+</root>

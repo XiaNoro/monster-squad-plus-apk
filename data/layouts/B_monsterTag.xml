@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_monsterInfo" anchorX="0.5" anchorY="0.5" positionX="126" positionY="-4" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{230,74}" ninePatchInset="{{1,1},{2,2}}">
+    <ElementNode type="Image" elementID="ID_grade1" anchorX="0" anchorY="0" positionX="36" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_grade_02.png" />
+    <ElementNode type="Image" elementID="ID_grade2" anchorX="0" anchorY="0" positionX="62" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_grade_02.png" />
+    <ElementNode type="Image" elementID="ID_grade3" anchorX="0" anchorY="0" positionX="88" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_grade_02.png" />
+    <ElementNode type="Image" elementID="ID_grade4" anchorX="0" anchorY="0" positionX="114" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_grade_02.png" />
+    <ElementNode type="Image" elementID="ID_grade5" anchorX="0" anchorY="0" positionX="140" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_grade_02.png" />
+    <ElementNode type="Image" elementID="ID_grade6" anchorX="0" anchorY="0" positionX="166" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_grade_02.png" />
+    <ElementNode type="Image" elementID="ID_waterIcon" anchorX="0" anchorY="0" positionX="0" positionY="24" z="0" scaleX="1" scaleY="1" imageName="A_water_03.png" />
+    <ElementNode type="Label" elementID="ID_level" anchorX="0" anchorY="0" positionX="32" positionY="26" z="0" scaleX="1" scaleY="1" labelContent="LV.50" fontStyle="1" fontSize="20" fontColor="{237,149,10}" areaSizeX="64" areaSizeY="24" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{85,36,0}" />
+    <ElementNode type="Label" elementID="ID_monsterName" anchorX="0" anchorY="0" positionX="90" positionY="26" z="0" scaleX="1" scaleY="1" labelContent="엄마고래엄마고" fontStyle="1" fontSize="20" fontColor="{238,233,189}" areaSizeX="138" areaSizeY="24" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{70,50,40}" />
+    <ElementNode type="Image" elementID="ID_leader" anchorX="0" anchorY="0" positionX="3" positionY="52" z="1" scaleX="1" scaleY="1" imageName="I_leader_01.png" />
+    <ElementNode type="Label" elementID="ID_strenth" anchorX="0" anchorY="0" positionX="-4" positionY="-4" z="0" scaleX="1" scaleY="1" labelContent="+0" fontStyle="1" fontSize="24" fontColor="{130,210,235}" areaSizeX="40" areaSizeY="28" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{55,20,90}" />
+    <ElementNode type="Image" elementID="ID_maxLevel" anchorX="0" anchorY="0" positionX="-8" positionY="16" z="-1" scaleX="1" scaleY="1" imageName="K_level30_05.png" />
+    <ElementNode type="NinePatch" elementID="ID_pvpRank" anchorX="0" anchorY="0" positionX="-28" positionY="18" z="-2" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{64,64}" ninePatchInset="{{1,1},{2,2}}" />
+  </ElementNode>
+</root>

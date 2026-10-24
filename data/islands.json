@@ -1,0 +1,4507 @@
+[
+	{
+		"difficulties": {
+			"hard": {
+				"energy": 3,
+				"stages": [
+					{
+						"boss": "firbal",
+						"enemies": [
+							"firbal",
+							"dripbal",
+							"leavbal",
+							"pufbal"
+						],
+						"name": "Sprout-1"
+					},
+					{
+						"boss": "cinderpeep",
+						"enemies": [
+							"cinderpeep",
+							"firbal",
+							"dripbal",
+							"leavbal",
+							"pufbal",
+							"o_fruit"
+						],
+						"name": "Sprout-2"
+					},
+					{
+						"boss": "mini",
+						"enemies": [
+							"mini",
+							"firbal",
+							"dripbal",
+							"leavbal",
+							"pufbal",
+							"b_fruit",
+							"prisbal"
+						],
+						"name": "Sprout-3",
+						"orig": {
+							"boss": "mini",
+							"enemies": [
+								"mini",
+								"firbal",
+								"dripbal",
+								"leavbal",
+								"pufbal",
+								"b_fruit"
+							],
+							"drops": []
+						}
+					},
+					{
+						"boss": "raingull",
+						"enemies": [
+							"raingull",
+							"o_fruit",
+							"smella",
+							"smee",
+							"smoo",
+							"smull",
+							"smelly"
+						],
+						"name": "Sprout-4",
+						"orig": {
+							"boss": "raingull",
+							"enemies": [
+								"raingull",
+								"o_fruit",
+								"smella",
+								"smee",
+								"smoo",
+								"smull"
+							],
+							"drops": []
+						}
+					},
+					{
+						"boss": "flutter",
+						"enemies": [
+							"flutter",
+							"p_fruit",
+							"smella",
+							"smee",
+							"smoo",
+							"smull",
+							"smelly"
+						],
+						"name": "Sprout-5",
+						"orig": {
+							"boss": "flutter",
+							"enemies": [
+								"flutter",
+								"p_fruit",
+								"smella",
+								"smee",
+								"smoo",
+								"smull"
+							],
+							"drops": []
+						}
+					},
+					{
+						"boss": "ulmigros",
+						"enemies": [
+							"ulmigros",
+							"g_fruit",
+							"smella",
+							"smee",
+							"smoo",
+							"smull",
+							"smelly"
+						],
+						"name": "Sprout-6",
+						"orig": {
+							"boss": "ulmigros",
+							"enemies": [
+								"ulmigros",
+								"g_fruit",
+								"smella",
+								"smee",
+								"smoo",
+								"smull"
+							],
+							"drops": []
+						}
+					}
+				]
+			},
+			"hell": {
+				"energy": 4,
+				"stages": [
+					{
+						"boss": "flambal",
+						"enemies": [
+							"flambal",
+							"flobal",
+							"brambal",
+							"prisbal"
+						],
+						"name": "Sprout-1",
+						"orig": {
+							"boss": "firbal",
+							"enemies": [
+								"firbal",
+								"dripbal",
+								"leavbal",
+								"pufbal"
+							],
+							"drops": []
+						},
+						"waves": 2,
+						"boss_fixed": true
+					},
+					{
+						"boss": "emberpeep",
+						"enemies": [
+							"emberpeep",
+							"flambal",
+							"flobal",
+							"brambal",
+							"prisbal",
+							"cinderpeep",
+							"o_fruit"
+						],
+						"name": "Sprout-2",
+						"orig": {
+							"boss": "cinderpeep",
+							"enemies": [
+								"cinderpeep",
+								"firbal",
+								"dripbal",
+								"leavbal",
+								"pufbal",
+								"o_fruit"
+							],
+							"drops": []
+						},
+						"waves": 3,
+						"boss_fixed": true
+					},
+					{
+						"boss": "wini",
+						"enemies": [
+							"wini",
+							"flambal",
+							"flobal",
+							"brambal",
+							"prisbal",
+							"mini",
+							"b_fruit"
+						],
+						"name": "Sprout-3",
+						"orig": {
+							"boss": "mini",
+							"enemies": [
+								"mini",
+								"firbal",
+								"dripbal",
+								"leavbal",
+								"pufbal",
+								"b_fruit"
+							],
+							"drops": []
+						},
+						"waves": 3,
+						"boss_fixed": true
+					},
+					{
+						"boss": "raingull",
+						"enemies": [
+							"raingull",
+							"o_fruit",
+							"smella",
+							"smee",
+							"smoo",
+							"smull",
+							"smelly"
+						],
+						"name": "Sprout-4",
+						"orig": {
+							"boss": "raingull",
+							"enemies": [
+								"raingull",
+								"o_fruit",
+								"smella",
+								"smee",
+								"smoo",
+								"smull"
+							],
+							"drops": []
+						}
+					},
+					{
+						"boss": "flutter",
+						"enemies": [
+							"flutter",
+							"p_fruit",
+							"smella",
+							"smee",
+							"smoo",
+							"smull",
+							"smelly"
+						],
+						"name": "Sprout-5",
+						"orig": {
+							"boss": "flutter",
+							"enemies": [
+								"flutter",
+								"p_fruit",
+								"smella",
+								"smee",
+								"smoo",
+								"smull"
+							],
+							"drops": []
+						}
+					},
+					{
+						"boss": "ulmigros",
+						"enemies": [
+							"ulmigros",
+							"g_fruit",
+							"smella",
+							"smee",
+							"smoo",
+							"smull",
+							"smelly"
+						],
+						"name": "Sprout-6",
+						"orig": {
+							"boss": "ulmigros",
+							"enemies": [
+								"ulmigros",
+								"g_fruit",
+								"smella",
+								"smee",
+								"smoo",
+								"smull"
+							],
+							"drops": []
+						}
+					}
+				]
+			},
+			"normal": {
+				"energy": 2,
+				"stages": [
+					{
+						"boss": "firbal",
+						"enemies": [
+							"firbal",
+							"dripbal",
+							"leavbal",
+							"pufbal"
+						],
+						"name": "Sprout-1"
+					},
+					{
+						"boss": "cinderpeep",
+						"enemies": [
+							"cinderpeep",
+							"firbal",
+							"dripbal",
+							"leavbal",
+							"pufbal",
+							"o_fruit"
+						],
+						"name": "Sprout-2"
+					},
+					{
+						"boss": "mini",
+						"enemies": [
+							"mini",
+							"firbal",
+							"dripbal",
+							"leavbal",
+							"pufbal",
+							"b_fruit"
+						],
+						"name": "Sprout-3"
+					},
+					{
+						"boss": "raingull",
+						"enemies": [
+							"raingull",
+							"o_fruit",
+							"smella",
+							"smee",
+							"smoo",
+							"smull",
+							"smelly"
+						],
+						"name": "Sprout-4",
+						"orig": {
+							"boss": "raingull",
+							"enemies": [
+								"raingull",
+								"o_fruit",
+								"smella",
+								"smee",
+								"smoo",
+								"smull"
+							],
+							"drops": []
+						}
+					},
+					{
+						"boss": "flutter",
+						"enemies": [
+							"flutter",
+							"p_fruit",
+							"smella",
+							"smee",
+							"smoo",
+							"smull",
+							"smelly"
+						],
+						"name": "Sprout-5",
+						"orig": {
+							"boss": "flutter",
+							"enemies": [
+								"flutter",
+								"p_fruit",
+								"smella",
+								"smee",
+								"smoo",
+								"smull"
+							],
+							"drops": []
+						}
+					},
+					{
+						"boss": "ulmigros",
+						"enemies": [
+							"ulmigros",
+							"g_fruit",
+							"smella",
+							"smee",
+							"smoo",
+							"smull",
+							"smelly"
+						],
+						"name": "Sprout-6",
+						"orig": {
+							"boss": "ulmigros",
+							"enemies": [
+								"ulmigros",
+								"g_fruit",
+								"smella",
+								"smee",
+								"smoo",
+								"smull"
+							],
+							"drops": []
+						}
+					}
+				]
+			}
+		},
+		"id": "sprout_island",
+		"name": "Sprout Island",
+		"order": 0
+	},
+	{
+		"difficulties": {
+			"hard": {
+				"energy": 4,
+				"stages": [
+					{
+						"boss": "octo",
+						"enemies": [
+							"octo",
+							"sliby",
+							"friby",
+							"waby",
+							"spriby",
+							"p_fruit"
+						],
+						"name": "Lake-1"
+					},
+					{
+						"boss": "bammi",
+						"enemies": [
+							"bammi",
+							"sliby",
+							"friby",
+							"waby",
+							"spriby",
+							"g_fruit"
+						],
+						"name": "Lake-2"
+					},
+					{
+						"boss": "donni",
+						"enemies": [
+							"donni",
+							"sliby",
+							"friby",
+							"waby",
+							"spriby",
+							"p_fruit"
+						],
+						"name": "Lake-3"
+					},
+					{
+						"boss": "tobio",
+						"enemies": [
+							"tobio",
+							"sliby",
+							"yella_bonk",
+							"red_bonk",
+							"blue_bonk",
+							"green_bonk",
+							"donni"
+						],
+						"boss_wave": ["donni", "donni", "donni", "donni", "donni"],
+						"name": "Lake-4",
+						"orig": {
+							"boss": "tobio",
+							"enemies": [
+								"tobio",
+								"sliby",
+								"yella_bonk",
+								"red_bonk",
+								"blue_bonk",
+								"green_bonk"
+							],
+							"drops": []
+						}
+					},
+					{
+						"boss": "burn_bonk",
+						"enemies": [
+							"burn_bonk",
+							"shivvie",
+							"yella_bonk",
+							"red_bonk",
+							"blue_bonk",
+							"green_bonk"
+						],
+						"name": "Lake-5"
+					},
+					{
+						"boss": "burn_bonk",
+						"enemies": [
+							"burn_bonk",
+							"grumie",
+							"yella_bonk",
+							"red_bonk",
+							"blue_bonk",
+							"green_bonk"
+						],
+						"name": "Lake-6"
+					},
+					{
+						"boss": "burn_bonk",
+						"enemies": [
+							"burn_bonk",
+							"chilie",
+							"yella_bonk",
+							"red_bonk",
+							"blue_bonk",
+							"green_bonk"
+						],
+						"name": "Lake-7"
+					},
+					{
+						"boss": "burn_bonk",
+						"enemies": [
+							"burn_bonk",
+							"conie",
+							"yella_bonk",
+							"red_bonk",
+							"blue_bonk",
+							"green_bonk"
+						],
+						"name": "Lake-8"
+					},
+					{
+						"boss": "brickett",
+						"enemies": [
+							"brickett",
+							"o_drank",
+							"firion",
+							"walion",
+							"pollion",
+							"rockion",
+							"bloomion",
+							"earthion"
+						],
+						"name": "Lake-9",
+						"orig": {
+							"boss": "brickett",
+							"enemies": [
+								"brickett",
+								"o_drank",
+								"firion",
+								"walion",
+								"pollion",
+								"rockion"
+							],
+							"drops": []
+						},
+						"waves": 4
+					},
+					{
+						"boss": "mossmasher",
+						"enemies": [
+							"mossmasher",
+							"g_drank",
+							"firion",
+							"walion",
+							"pollion",
+							"rockion",
+							"bloomion",
+							"earthion"
+						],
+						"name": "Lake-10",
+						"orig": {
+							"boss": "mossmasher",
+							"enemies": [
+								"mossmasher",
+								"g_drank",
+								"firion",
+								"walion",
+								"pollion",
+								"rockion"
+							],
+							"drops": []
+						},
+						"waves": 4
+					},
+					{
+						"boss": "ice_cube",
+						"enemies": [
+							"ice_cube",
+							"b_drank",
+							"firion",
+							"walion",
+							"pollion",
+							"rockion",
+							"bloomion",
+							"earthion"
+						],
+						"name": "Lake-11",
+						"orig": {
+							"boss": "ice_cube",
+							"enemies": [
+								"ice_cube",
+								"b_drank",
+								"firion",
+								"walion",
+								"pollion",
+								"rockion"
+							],
+							"drops": []
+						},
+						"waves": 4
+					},
+					{
+						"boss": "stoneskin",
+						"enemies": [
+							"stoneskin",
+							"stonn",
+							"p_drank",
+							"firion",
+							"walion",
+							"pollion",
+							"rockion",
+							"bloomion",
+							"earthion"
+						],
+						"name": "Lake-12",
+						"orig": {
+							"boss": "stonn",
+							"enemies": [
+								"stonn",
+								"p_drank",
+								"firion",
+								"walion",
+								"pollion",
+								"rockion"
+							],
+							"drops": []
+						},
+						"waves": 4,
+						"boss_fixed": true
+					}
+				]
+			},
+			"hell": {
+				"energy": 5,
+				"stages": [
+					{
+						"boss": "octo",
+						"enemies": [
+							"octo",
+							"sliby",
+							"friby",
+							"waby",
+							"spriby",
+							"p_fruit"
+						],
+						"name": "Lake-1"
+					},
+					{
+						"boss": "bammi",
+						"enemies": [
+							"bammi",
+							"sliby",
+							"friby",
+							"waby",
+							"spriby",
+							"g_fruit"
+						],
+						"name": "Lake-2"
+					},
+					{
+						"boss": "donni",
+						"enemies": [
+							"donni",
+							"sliby",
+							"friby",
+							"waby",
+							"spriby",
+							"p_fruit"
+						],
+						"name": "Lake-3"
+					},
+					{
+						"boss": "tobio",
+						"enemies": [
+							"tobio",
+							"sliby",
+							"yella_bonk",
+							"red_bonk",
+							"blue_bonk",
+							"green_bonk",
+							"donni"
+						],
+						"boss_wave": ["donni", "donni", "donni", "donni", "donni"],
+						"name": "Lake-4",
+						"orig": {
+							"boss": "tobio",
+							"enemies": [
+								"tobio",
+								"sliby",
+								"yella_bonk",
+								"red_bonk",
+								"blue_bonk",
+								"green_bonk"
+							],
+							"drops": []
+						}
+					},
+					{
+						"boss": "burn_bonk",
+						"enemies": [
+							"burn_bonk",
+							"shivvie",
+							"yella_bonk",
+							"red_bonk",
+							"blue_bonk",
+							"green_bonk"
+						],
+						"name": "Lake-5"
+					},
+					{
+						"boss": "burn_bonk",
+						"enemies": [
+							"burn_bonk",
+							"grumie",
+							"yella_bonk",
+							"red_bonk",
+							"blue_bonk",
+							"green_bonk"
+						],
+						"name": "Lake-6"
+					},
+					{
+						"boss": "burn_bonk",
+						"enemies": [
+							"burn_bonk",
+							"chilie",
+							"yella_bonk",
+							"red_bonk",
+							"blue_bonk",
+							"green_bonk"
+						],
+						"name": "Lake-7"
+					},
+					{
+						"boss": "burn_bonk",
+						"enemies": [
+							"burn_bonk",
+							"conie",
+							"yella_bonk",
+							"red_bonk",
+							"blue_bonk",
+							"green_bonk"
+						],
+						"name": "Lake-8"
+					},
+					{
+						"boss": "brickett",
+						"enemies": [
+							"brickett",
+							"o_drank",
+							"firion",
+							"walion",
+							"pollion",
+							"rockion",
+							"bloomion",
+							"earthion"
+						],
+						"name": "Lake-9",
+						"orig": {
+							"boss": "brickett",
+							"enemies": [
+								"brickett",
+								"o_drank",
+								"firion",
+								"walion",
+								"pollion",
+								"rockion"
+							],
+							"drops": []
+						},
+						"waves": 4
+					},
+					{
+						"boss": "mossmasher",
+						"enemies": [
+							"mossmasher",
+							"g_drank",
+							"firion",
+							"walion",
+							"pollion",
+							"rockion",
+							"bloomion",
+							"earthion"
+						],
+						"name": "Lake-10",
+						"orig": {
+							"boss": "mossmasher",
+							"enemies": [
+								"mossmasher",
+								"g_drank",
+								"firion",
+								"walion",
+								"pollion",
+								"rockion"
+							],
+							"drops": []
+						},
+						"waves": 4
+					},
+					{
+						"boss": "ice_cube",
+						"enemies": [
+							"ice_cube",
+							"b_drank",
+							"firion",
+							"walion",
+							"pollion",
+							"rockion",
+							"bloomion",
+							"earthion"
+						],
+						"name": "Lake-11",
+						"orig": {
+							"boss": "ice_cube",
+							"enemies": [
+								"ice_cube",
+								"b_drank",
+								"firion",
+								"walion",
+								"pollion",
+								"rockion"
+							],
+							"drops": []
+						},
+						"waves": 4
+					},
+					{
+						"boss": "stoneskin",
+						"enemies": [
+							"stoneskin",
+							"stonn",
+							"p_drank",
+							"firion",
+							"walion",
+							"pollion",
+							"rockion",
+							"bloomion",
+							"earthion"
+						],
+						"name": "Lake-12",
+						"orig": {
+							"boss": "stonn",
+							"enemies": [
+								"stonn",
+								"p_drank",
+								"firion",
+								"walion",
+								"pollion",
+								"rockion"
+							],
+							"drops": []
+						},
+						"waves": 4,
+						"boss_fixed": true
+					}
+				]
+			},
+			"normal": {
+				"energy": 3,
+				"stages": [
+					{
+						"boss": "octo",
+						"enemies": [
+							"octo",
+							"sliby",
+							"friby",
+							"waby",
+							"spriby",
+							"p_fruit"
+						],
+						"name": "Lake-1"
+					},
+					{
+						"boss": "bammi",
+						"enemies": [
+							"bammi",
+							"sliby",
+							"friby",
+							"waby",
+							"spriby",
+							"g_fruit"
+						],
+						"name": "Lake-2"
+					},
+					{
+						"boss": "donni",
+						"enemies": [
+							"donni",
+							"sliby",
+							"friby",
+							"waby",
+							"spriby",
+							"p_fruit"
+						],
+						"name": "Lake-3"
+					},
+					{
+						"boss": "tobio",
+						"enemies": [
+							"tobio",
+							"sliby",
+							"yella_bonk",
+							"red_bonk",
+							"blue_bonk",
+							"green_bonk"
+						],
+						"boss_wave": ["donni", "donni", "donni", "donni", "donni"],
+						"name": "Lake-4"
+					},
+					{
+						"boss": "burn_bonk",
+						"enemies": [
+							"burn_bonk",
+							"shivvie",
+							"yella_bonk",
+							"red_bonk",
+							"blue_bonk",
+							"green_bonk"
+						],
+						"name": "Lake-5"
+					},
+					{
+						"boss": "burn_bonk",
+						"enemies": [
+							"burn_bonk",
+							"grumie",
+							"yella_bonk",
+							"red_bonk",
+							"blue_bonk",
+							"green_bonk"
+						],
+						"name": "Lake-6"
+					},
+					{
+						"boss": "burn_bonk",
+						"enemies": [
+							"burn_bonk",
+							"chilie",
+							"yella_bonk",
+							"red_bonk",
+							"blue_bonk",
+							"green_bonk"
+						],
+						"name": "Lake-7"
+					},
+					{
+						"boss": "burn_bonk",
+						"enemies": [
+							"burn_bonk",
+							"conie",
+							"yella_bonk",
+							"red_bonk",
+							"blue_bonk",
+							"green_bonk"
+						],
+						"name": "Lake-8"
+					},
+					{
+						"boss": "brickett",
+						"enemies": [
+							"brickett",
+							"o_drank",
+							"firion",
+							"walion",
+							"pollion",
+							"rockion",
+							"bloomion",
+							"earthion"
+						],
+						"name": "Lake-9",
+						"orig": {
+							"boss": "brickett",
+							"enemies": [
+								"brickett",
+								"o_drank",
+								"firion",
+								"walion",
+								"pollion",
+								"rockion"
+							],
+							"drops": []
+						},
+						"waves": 4
+					},
+					{
+						"boss": "mossmasher",
+						"enemies": [
+							"mossmasher",
+							"g_drank",
+							"firion",
+							"walion",
+							"pollion",
+							"rockion",
+							"bloomion",
+							"earthion"
+						],
+						"name": "Lake-10",
+						"orig": {
+							"boss": "mossmasher",
+							"enemies": [
+								"mossmasher",
+								"g_drank",
+								"firion",
+								"walion",
+								"pollion",
+								"rockion"
+							],
+							"drops": []
+						},
+						"waves": 4
+					},
+					{
+						"boss": "ice_cube",
+						"enemies": [
+							"ice_cube",
+							"b_drank",
+							"firion",
+							"walion",
+							"pollion",
+							"rockion",
+							"bloomion",
+							"earthion"
+						],
+						"name": "Lake-11",
+						"orig": {
+							"boss": "ice_cube",
+							"enemies": [
+								"ice_cube",
+								"b_drank",
+								"firion",
+								"walion",
+								"pollion",
+								"rockion"
+							],
+							"drops": []
+						},
+						"waves": 4
+					},
+					{
+						"boss": "stoneskin",
+						"enemies": [
+							"stoneskin",
+							"stonn",
+							"p_drank",
+							"firion",
+							"walion",
+							"pollion",
+							"rockion",
+							"bloomion",
+							"earthion"
+						],
+						"name": "Lake-12",
+						"orig": {
+							"boss": "stonn",
+							"enemies": [
+								"stonn",
+								"p_drank",
+								"firion",
+								"walion",
+								"pollion",
+								"rockion"
+							],
+							"drops": []
+						},
+						"waves": 4,
+						"boss_fixed": true
+					}
+				]
+			}
+		},
+		"id": "lake_island",
+		"name": "Lake Island",
+		"order": 1
+	},
+	{
+		"difficulties": {
+			"hard": {
+				"energy": 5,
+				"stages": [
+					{
+						"boss": "camhil",
+						"enemies": [
+							"camhil",
+							"cubi",
+							"craburn",
+							"crablu",
+							"crabcoon",
+							"crabshade"
+						],
+						"name": "Desert-1",
+						"orig": {
+							"boss": "camhil",
+							"enemies": [
+								"camhil",
+								"cubi",
+								"craburn",
+								"crablu",
+								"crabcoon",
+								"crabshade"
+							],
+							"drops": []
+						},
+						"waves": 3
+					},
+					{
+						"boss": "taddy",
+						"enemies": [
+							"taddy",
+							"sapphibi",
+							"craburn",
+							"crablu",
+							"crabcoon",
+							"crabshade"
+						],
+						"name": "Desert-2",
+						"orig": {
+							"boss": "taddy",
+							"enemies": [
+								"taddy",
+								"sapphibi",
+								"craburn",
+								"crablu",
+								"crabcoon",
+								"crabshade"
+							],
+							"drops": []
+						},
+						"waves": 3
+					},
+					{
+						"boss": "hibisquid",
+						"enemies": [
+							"hibisquid",
+							"hibisq",
+							"greebi",
+							"craburn",
+							"crablu",
+							"crabcoon",
+							"crabshade"
+						],
+						"name": "Desert-3",
+						"orig": {
+							"boss": "hibisq",
+							"enemies": [
+								"hibisq",
+								"greebi",
+								"craburn",
+								"crablu",
+								"crabcoon",
+								"crabshade"
+							],
+							"drops": []
+						},
+						"boss_fixed": true
+					},
+					{
+						"boss": "catrik",
+						"enemies": [
+							"catrik",
+							"rubi",
+							"craburn",
+							"crablu",
+							"crabcoon",
+							"crabshade"
+						],
+						"name": "Desert-4"
+					},
+					{
+						"boss": "antlar",
+						"enemies": [
+							"antlar",
+							"becinder",
+							"o_drank",
+							"antlad",
+							"red_antlad",
+							"blu_antlad",
+							"bud_antlad"
+						],
+						"name": "Desert-5"
+					},
+					{
+						"boss": "thornles",
+						"enemies": [
+							"thornles",
+							"antlar",
+							"g_drank",
+							"antlad",
+							"red_antlad",
+							"blu_antlad",
+							"bud_antlad"
+						],
+						"name": "Desert-6"
+					},
+					{
+						"boss": "xenocutter",
+						"enemies": [
+							"xenocutter",
+							"antlar",
+							"p_drank",
+							"antlad",
+							"red_antlad",
+							"blu_antlad",
+							"bud_antlad"
+						],
+						"name": "Desert-7"
+					},
+					{
+						"boss": "ninja_blue",
+						"enemies": [
+							"ninja_blue",
+							"antlar",
+							"b_drank",
+							"antlad",
+							"red_antlad",
+							"blu_antlad",
+							"bud_antlad"
+						],
+						"name": "Desert-8"
+					},
+					{
+						"boss": "pinkey",
+						"enemies": [
+							"pinkey",
+							"dawnspook",
+							"cubi",
+							"dawnspec",
+							"nightspec",
+							"seaspec",
+							"greenspec",
+							"memew"
+						],
+						"name": "Desert-9",
+						"orig": {
+							"boss": "pinkey",
+							"enemies": [
+								"pinkey",
+								"dawnspook",
+								"cubi",
+								"dawnspec",
+								"nightspec",
+								"seaspec",
+								"greenspec"
+							],
+							"drops": []
+						}
+					},
+					{
+						"boss": "kabi",
+						"enemies": [
+							"kabi",
+							"dawnspook",
+							"greebi",
+							"dawnspec",
+							"nightspec",
+							"seaspec",
+							"greenspec",
+							"memew"
+						],
+						"name": "Desert-10",
+						"orig": {
+							"boss": "kabi",
+							"enemies": [
+								"kabi",
+								"dawnspook",
+								"greebi",
+								"dawnspec",
+								"nightspec",
+								"seaspec",
+								"greenspec"
+							],
+							"drops": []
+						}
+					},
+					{
+						"boss": "groch",
+						"enemies": [
+							"groch",
+							"dawnspook",
+							"sapphibi",
+							"dawnspec",
+							"nightspec",
+							"seaspec",
+							"greenspec",
+							"memew"
+						],
+						"name": "Desert-11",
+						"orig": {
+							"boss": "groch",
+							"enemies": [
+								"groch",
+								"dawnspook",
+								"sapphibi",
+								"dawnspec",
+								"nightspec",
+								"seaspec",
+								"greenspec"
+							],
+							"drops": []
+						},
+						"waves": 5
+					},
+					{
+						"boss": "memew",
+						"enemies": [
+							"memew",
+							"dawnspook",
+							"rubi",
+							"dawnspec",
+							"nightspec",
+							"seaspec",
+							"greenspec",
+							"pinkey"
+						],
+						"name": "Desert-12",
+						"orig": {
+							"boss": "memew",
+							"enemies": [
+								"memew",
+								"dawnspook",
+								"rubi",
+								"dawnspec",
+								"nightspec",
+								"seaspec",
+								"greenspec"
+							],
+							"drops": []
+						},
+						"waves": 5
+					}
+				]
+			},
+			"hell": {
+				"energy": 6,
+				"stages": [
+					{
+						"boss": "camhil",
+						"enemies": [
+							"camhil",
+							"cubi",
+							"craburn",
+							"crablu",
+							"crabcoon",
+							"crabshade"
+						],
+						"name": "Desert-1",
+						"orig": {
+							"boss": "camhil",
+							"enemies": [
+								"camhil",
+								"cubi",
+								"craburn",
+								"crablu",
+								"crabcoon",
+								"crabshade"
+							],
+							"drops": []
+						},
+						"waves": 3
+					},
+					{
+						"boss": "taddy",
+						"enemies": [
+							"taddy",
+							"sapphibi",
+							"craburn",
+							"crablu",
+							"crabcoon",
+							"crabshade"
+						],
+						"name": "Desert-2",
+						"orig": {
+							"boss": "taddy",
+							"enemies": [
+								"taddy",
+								"sapphibi",
+								"craburn",
+								"crablu",
+								"crabcoon",
+								"crabshade"
+							],
+							"drops": []
+						},
+						"waves": 3
+					},
+					{
+						"boss": "hibisquid",
+						"enemies": [
+							"hibisquid",
+							"hibisq",
+							"greebi",
+							"craburn",
+							"crablu",
+							"crabcoon",
+							"crabshade"
+						],
+						"name": "Desert-3",
+						"orig": {
+							"boss": "hibisq",
+							"enemies": [
+								"hibisq",
+								"greebi",
+								"craburn",
+								"crablu",
+								"crabcoon",
+								"crabshade"
+							],
+							"drops": []
+						},
+						"boss_fixed": true
+					},
+					{
+						"boss": "catrik",
+						"enemies": [
+							"catrik",
+							"rubi",
+							"craburn",
+							"crablu",
+							"crabcoon",
+							"crabshade"
+						],
+						"name": "Desert-4"
+					},
+					{
+						"boss": "antlar",
+						"enemies": [
+							"antlar",
+							"becinder",
+							"o_drank",
+							"antlad",
+							"red_antlad",
+							"blu_antlad",
+							"bud_antlad"
+						],
+						"name": "Desert-5"
+					},
+					{
+						"boss": "thornles",
+						"enemies": [
+							"thornles",
+							"antlar",
+							"g_drank",
+							"antlad",
+							"red_antlad",
+							"blu_antlad",
+							"bud_antlad"
+						],
+						"name": "Desert-6"
+					},
+					{
+						"boss": "xenocutter",
+						"enemies": [
+							"xenocutter",
+							"antlar",
+							"p_drank",
+							"antlad",
+							"red_antlad",
+							"blu_antlad",
+							"bud_antlad"
+						],
+						"name": "Desert-7"
+					},
+					{
+						"boss": "ninja_blue",
+						"enemies": [
+							"ninja_blue",
+							"antlar",
+							"b_drank",
+							"antlad",
+							"red_antlad",
+							"blu_antlad",
+							"bud_antlad"
+						],
+						"name": "Desert-8"
+					},
+					{
+						"boss": "pinkey",
+						"enemies": [
+							"pinkey",
+							"dawnspook",
+							"cubi",
+							"dawnspec",
+							"nightspec",
+							"seaspec",
+							"greenspec",
+							"memew"
+						],
+						"name": "Desert-9",
+						"orig": {
+							"boss": "pinkey",
+							"enemies": [
+								"pinkey",
+								"dawnspook",
+								"cubi",
+								"dawnspec",
+								"nightspec",
+								"seaspec",
+								"greenspec"
+							],
+							"drops": []
+						}
+					},
+					{
+						"boss": "kabi",
+						"enemies": [
+							"kabi",
+							"dawnspook",
+							"greebi",
+							"dawnspec",
+							"nightspec",
+							"seaspec",
+							"greenspec",
+							"memew"
+						],
+						"name": "Desert-10",
+						"orig": {
+							"boss": "kabi",
+							"enemies": [
+								"kabi",
+								"dawnspook",
+								"greebi",
+								"dawnspec",
+								"nightspec",
+								"seaspec",
+								"greenspec"
+							],
+							"drops": []
+						}
+					},
+					{
+						"boss": "groch",
+						"enemies": [
+							"groch",
+							"dawnspook",
+							"sapphibi",
+							"dawnspec",
+							"nightspec",
+							"seaspec",
+							"greenspec",
+							"memew"
+						],
+						"name": "Desert-11",
+						"orig": {
+							"boss": "groch",
+							"enemies": [
+								"groch",
+								"dawnspook",
+								"sapphibi",
+								"dawnspec",
+								"nightspec",
+								"seaspec",
+								"greenspec"
+							],
+							"drops": []
+						},
+						"waves": 5
+					},
+					{
+						"boss": "memew",
+						"enemies": [
+							"memew",
+							"dawnspook",
+							"rubi",
+							"dawnspec",
+							"nightspec",
+							"seaspec",
+							"greenspec",
+							"pinkey"
+						],
+						"name": "Desert-12",
+						"orig": {
+							"boss": "memew",
+							"enemies": [
+								"memew",
+								"dawnspook",
+								"rubi",
+								"dawnspec",
+								"nightspec",
+								"seaspec",
+								"greenspec"
+							],
+							"drops": []
+						},
+						"waves": 5
+					}
+				]
+			},
+			"normal": {
+				"energy": 4,
+				"stages": [
+					{
+						"boss": "camhil",
+						"enemies": [
+							"camhil",
+							"cubi",
+							"craburn",
+							"crablu",
+							"crabcoon",
+							"crabshade"
+						],
+						"name": "Desert-1",
+						"orig": {
+							"boss": "camhil",
+							"enemies": [
+								"camhil",
+								"cubi",
+								"craburn",
+								"crablu",
+								"crabcoon",
+								"crabshade"
+							],
+							"drops": []
+						},
+						"waves": 3
+					},
+					{
+						"boss": "taddy",
+						"enemies": [
+							"taddy",
+							"sapphibi",
+							"craburn",
+							"crablu",
+							"crabcoon",
+							"crabshade"
+						],
+						"name": "Desert-2",
+						"orig": {
+							"boss": "taddy",
+							"enemies": [
+								"taddy",
+								"sapphibi",
+								"craburn",
+								"crablu",
+								"crabcoon",
+								"crabshade"
+							],
+							"drops": []
+						},
+						"waves": 3
+					},
+					{
+						"boss": "hibisquid",
+						"enemies": [
+							"hibisquid",
+							"hibisq",
+							"greebi",
+							"craburn",
+							"crablu",
+							"crabcoon",
+							"crabshade"
+						],
+						"name": "Desert-3",
+						"orig": {
+							"boss": "hibisq",
+							"enemies": [
+								"hibisq",
+								"greebi",
+								"craburn",
+								"crablu",
+								"crabcoon",
+								"crabshade"
+							],
+							"drops": []
+						},
+						"boss_fixed": true
+					},
+					{
+						"boss": "catrik",
+						"enemies": [
+							"catrik",
+							"rubi",
+							"craburn",
+							"crablu",
+							"crabcoon",
+							"crabshade"
+						],
+						"name": "Desert-4"
+					},
+					{
+						"boss": "antlar",
+						"enemies": [
+							"antlar",
+							"becinder",
+							"o_drank",
+							"antlad",
+							"red_antlad",
+							"blu_antlad",
+							"bud_antlad"
+						],
+						"name": "Desert-5"
+					},
+					{
+						"boss": "thornles",
+						"enemies": [
+							"thornles",
+							"antlar",
+							"g_drank",
+							"antlad",
+							"red_antlad",
+							"blu_antlad",
+							"bud_antlad"
+						],
+						"name": "Desert-6"
+					},
+					{
+						"boss": "xenocutter",
+						"enemies": [
+							"xenocutter",
+							"antlar",
+							"p_drank",
+							"antlad",
+							"red_antlad",
+							"blu_antlad",
+							"bud_antlad"
+						],
+						"name": "Desert-7"
+					},
+					{
+						"boss": "ninja_blue",
+						"enemies": [
+							"ninja_blue",
+							"antlar",
+							"b_drank",
+							"antlad",
+							"red_antlad",
+							"blu_antlad",
+							"bud_antlad"
+						],
+						"name": "Desert-8"
+					},
+					{
+						"boss": "pinkey",
+						"enemies": [
+							"pinkey",
+							"dawnspook",
+							"cubi",
+							"dawnspec",
+							"nightspec",
+							"seaspec",
+							"greenspec",
+							"memew"
+						],
+						"name": "Desert-9",
+						"orig": {
+							"boss": "pinkey",
+							"enemies": [
+								"pinkey",
+								"dawnspook",
+								"cubi",
+								"dawnspec",
+								"nightspec",
+								"seaspec",
+								"greenspec"
+							],
+							"drops": []
+						}
+					},
+					{
+						"boss": "kabi",
+						"enemies": [
+							"kabi",
+							"dawnspook",
+							"greebi",
+							"dawnspec",
+							"nightspec",
+							"seaspec",
+							"greenspec",
+							"memew"
+						],
+						"name": "Desert-10",
+						"orig": {
+							"boss": "kabi",
+							"enemies": [
+								"kabi",
+								"dawnspook",
+								"greebi",
+								"dawnspec",
+								"nightspec",
+								"seaspec",
+								"greenspec"
+							],
+							"drops": []
+						}
+					},
+					{
+						"boss": "groch",
+						"enemies": [
+							"groch",
+							"dawnspook",
+							"sapphibi",
+							"dawnspec",
+							"nightspec",
+							"seaspec",
+							"greenspec",
+							"memew"
+						],
+						"name": "Desert-11",
+						"orig": {
+							"boss": "groch",
+							"enemies": [
+								"groch",
+								"dawnspook",
+								"sapphibi",
+								"dawnspec",
+								"nightspec",
+								"seaspec",
+								"greenspec"
+							],
+							"drops": []
+						},
+						"waves": 5
+					},
+					{
+						"boss": "fenny",
+						"enemies": [
+							"fenny",
+							"dawnspook",
+							"rubi",
+							"dawnspec",
+							"nightspec",
+							"seaspec",
+							"greenspec",
+							"memew",
+							"pinkey"
+						],
+						"name": "Desert-12",
+						"orig": {
+							"boss": "fenny",
+							"enemies": [
+								"fenny",
+								"dawnspook",
+								"rubi",
+								"dawnspec",
+								"nightspec",
+								"seaspec",
+								"greenspec"
+							],
+							"drops": []
+						},
+						"waves": 5
+					}
+				]
+			}
+		},
+		"id": "desert_isle",
+		"name": "Desert Isle",
+		"order": 2
+	},
+	{
+		"difficulties": {
+			"hard": {
+				"energy": 6,
+				"stages": [
+					{
+						"boss": "armor_bonk",
+						"enemies": [
+							"armor_bonk",
+							"fimi",
+							"nightspec",
+							"seaspec",
+							"red_bonk",
+							"pufbal"
+						],
+						"name": "Moonlight-1"
+					},
+					{
+						"boss": "bonk_pyro",
+						"enemies": [
+							"bonk_pyro",
+							"wami",
+							"nightspec",
+							"yella_bonk",
+							"red_bonk",
+							"antlad"
+						],
+						"name": "Moonlight-2"
+					},
+					{
+						"boss": "bonk_scion",
+						"enemies": [
+							"bonk_scion",
+							"trimi",
+							"feril",
+							"seaspec",
+							"red_bonk",
+							"firbal"
+						],
+						"name": "Moonlight-3"
+					},
+					{
+						"boss": "bonk_druid",
+						"enemies": [
+							"bonk_druid",
+							"ami",
+							"doomba",
+							"conie",
+							"red_bonk",
+							"crabshade"
+						],
+						"name": "Moonlight-4"
+					},
+					{
+						"boss": "antlar",
+						"enemies": [
+							"antlar",
+							"octovia",
+							"camhil",
+							"seaspec",
+							"antlad"
+						],
+						"name": "Moonlight-5"
+					},
+					{
+						"boss": "cupi",
+						"enemies": [
+							"cupi",
+							"red_antlar",
+							"greenspec",
+							"antlad",
+							"red_antlad"
+						],
+						"name": "Moonlight-6"
+					},
+					{
+						"boss": "ulmigrand",
+						"enemies": [
+							"ulmigrand",
+							"pretula",
+							"ulmigros",
+							"conie",
+							"dawnspec",
+							"red_antlad",
+							"memew"
+						],
+						"name": "Moonlight-7",
+						"orig": {
+							"boss": "ulmigrand",
+							"enemies": [
+								"ulmigrand",
+								"pretula",
+								"ulmigros",
+								"conie",
+								"dawnspec",
+								"red_antlad"
+							],
+							"drops": []
+						}
+					},
+					{
+						"boss": "armor_bonk",
+						"enemies": [
+							"armor_bonk",
+							"greentula",
+							"ulmigros",
+							"feril",
+							"yella_bonk"
+						],
+						"name": "Moonlight-8"
+					},
+					{
+						"boss": "ulmigrand",
+						"enemies": [
+							"ulmigrand",
+							"reditula",
+							"ulmigros",
+							"feril",
+							"dawnspec"
+						],
+						"name": "Moonlight-9"
+					},
+					{
+						"boss": "armor_bonk",
+						"enemies": [
+							"armor_bonk",
+							"dratula",
+							"prisbal",
+							"crabshade"
+						],
+						"name": "Moonlight-10"
+					},
+					{
+						"boss": "moonstar",
+						"enemies": [
+							"moonstar",
+							"ulmigrand",
+							"dratula",
+							"ulmigros",
+							"feril"
+						],
+						"name": "Moonlight-11",
+						"orig": {
+							"boss": "moonstar",
+							"enemies": [
+								"moonstar",
+								"ulmigrand",
+								"dratula",
+								"ulmigros",
+								"feril"
+							],
+							"drops": []
+						},
+						"boss_fixed": true
+					},
+					{
+						"boss": "armor_bonk",
+						"enemies": [
+							"armor_bonk",
+							"dratula",
+							"stone_bear",
+							"spike_bonk",
+							"yella_bonk"
+						],
+						"name": "Moonlight-12"
+					}
+				]
+			},
+			"hell": {
+				"energy": 7,
+				"stages": [
+					{
+						"boss": "armor_bonk",
+						"enemies": [
+							"armor_bonk",
+							"fimi",
+							"nightspec",
+							"seaspec",
+							"red_bonk",
+							"pufbal"
+						],
+						"name": "Moonlight-1"
+					},
+					{
+						"boss": "bonk_pyro",
+						"enemies": [
+							"bonk_pyro",
+							"wami",
+							"nightspec",
+							"yella_bonk",
+							"red_bonk",
+							"antlad"
+						],
+						"name": "Moonlight-2"
+					},
+					{
+						"boss": "bonk_scion",
+						"enemies": [
+							"bonk_scion",
+							"trimi",
+							"feril",
+							"seaspec",
+							"red_bonk",
+							"firbal"
+						],
+						"name": "Moonlight-3"
+					},
+					{
+						"boss": "bonk_druid",
+						"enemies": [
+							"bonk_druid",
+							"ami",
+							"doomba",
+							"conie",
+							"red_bonk",
+							"crabshade"
+						],
+						"name": "Moonlight-4"
+					},
+					{
+						"boss": "antlar",
+						"enemies": [
+							"antlar",
+							"octovia",
+							"camhil",
+							"seaspec",
+							"antlad"
+						],
+						"name": "Moonlight-5"
+					},
+					{
+						"boss": "cupi",
+						"enemies": [
+							"cupi",
+							"red_antlar",
+							"greenspec",
+							"antlad",
+							"red_antlad"
+						],
+						"name": "Moonlight-6"
+					},
+					{
+						"boss": "ulmigrand",
+						"enemies": [
+							"ulmigrand",
+							"pretula",
+							"ulmigros",
+							"conie",
+							"dawnspec",
+							"red_antlad",
+							"memew"
+						],
+						"name": "Moonlight-7",
+						"orig": {
+							"boss": "ulmigrand",
+							"enemies": [
+								"ulmigrand",
+								"pretula",
+								"ulmigros",
+								"conie",
+								"dawnspec",
+								"red_antlad"
+							],
+							"drops": []
+						}
+					},
+					{
+						"boss": "armor_bonk",
+						"enemies": [
+							"armor_bonk",
+							"greentula",
+							"ulmigros",
+							"feril",
+							"yella_bonk"
+						],
+						"name": "Moonlight-8"
+					},
+					{
+						"boss": "reditula",
+						"enemies": [
+							"reditula",
+							"ulmigrand",
+							"ulmigros",
+							"feril",
+							"dawnspec"
+						],
+						"name": "Moonlight-9"
+					},
+					{
+						"boss": "dratula",
+						"enemies": [
+							"dratula",
+							"armor_bonk",
+							"prisbal",
+							"crabshade"
+						],
+						"name": "Moonlight-10"
+					},
+					{
+						"boss": "moonlight",
+						"drops": [
+							"moonstar",
+							"ulmigrand",
+							"dratula",
+							"ulmigros",
+							"feril"
+						],
+						"enemies": [
+							"moonlight",
+							"moonstar",
+							"ulmigrand",
+							"dratula",
+							"ulmigros",
+							"feril"
+						],
+						"name": "Moonlight-11",
+						"orig": {
+							"boss": "moonlight",
+							"enemies": [
+								"moonlight",
+								"moonstar",
+								"ulmigrand",
+								"dratula",
+								"ulmigros",
+								"feril"
+							],
+							"drops": [
+								"moonstar",
+								"ulmigrand",
+								"dratula",
+								"ulmigros",
+								"feril"
+							]
+						},
+						"boss_fixed": true
+					},
+					{
+						"boss": "iron_bear",
+						"enemies": [
+							"iron_bear",
+							"armor_bonk",
+							"dratula",
+							"stone_bear",
+							"spike_bonk",
+							"yella_bonk"
+						],
+						"name": "Moonlight-12"
+					}
+				]
+			},
+			"normal": {
+				"energy": 5,
+				"stages": [
+					{
+						"boss": "armor_bonk",
+						"enemies": [
+							"armor_bonk",
+							"fimi",
+							"nightspec",
+							"seaspec",
+							"red_bonk",
+							"pufbal"
+						],
+						"name": "Moonlight-1"
+					},
+					{
+						"boss": "bonk_pyro",
+						"enemies": [
+							"bonk_pyro",
+							"wami",
+							"nightspec",
+							"yella_bonk",
+							"red_bonk",
+							"antlad"
+						],
+						"name": "Moonlight-2"
+					},
+					{
+						"boss": "bonk_scion",
+						"enemies": [
+							"bonk_scion",
+							"trimi",
+							"feril",
+							"seaspec",
+							"red_bonk",
+							"firbal"
+						],
+						"name": "Moonlight-3"
+					},
+					{
+						"boss": "bonk_druid",
+						"enemies": [
+							"bonk_druid",
+							"ami",
+							"doomba",
+							"conie",
+							"red_bonk",
+							"crabshade"
+						],
+						"name": "Moonlight-4"
+					},
+					{
+						"boss": "antlar",
+						"enemies": [
+							"antlar",
+							"octovia",
+							"camhil",
+							"seaspec",
+							"antlad"
+						],
+						"name": "Moonlight-5"
+					},
+					{
+						"boss": "cupi",
+						"enemies": [
+							"cupi",
+							"red_antlar",
+							"greenspec",
+							"antlad",
+							"red_antlad"
+						],
+						"name": "Moonlight-6"
+					},
+					{
+						"boss": "ulmigrand",
+						"enemies": [
+							"ulmigrand",
+							"pretula",
+							"ulmigros",
+							"conie",
+							"dawnspec",
+							"red_antlad",
+							"memew"
+						],
+						"name": "Moonlight-7",
+						"orig": {
+							"boss": "ulmigrand",
+							"enemies": [
+								"ulmigrand",
+								"pretula",
+								"ulmigros",
+								"conie",
+								"dawnspec",
+								"red_antlad"
+							],
+							"drops": []
+						}
+					},
+					{
+						"boss": "armor_bonk",
+						"enemies": [
+							"armor_bonk",
+							"greentula",
+							"ulmigros",
+							"feril",
+							"yella_bonk"
+						],
+						"name": "Moonlight-8"
+					},
+					{
+						"boss": "ulmigrand",
+						"enemies": [
+							"ulmigrand",
+							"reditula",
+							"ulmigros",
+							"feril",
+							"dawnspec"
+						],
+						"name": "Moonlight-9"
+					},
+					{
+						"boss": "armor_bonk",
+						"enemies": [
+							"armor_bonk",
+							"dratula",
+							"prisbal",
+							"crabshade"
+						],
+						"name": "Moonlight-10"
+					},
+					{
+						"boss": "ulmigrand",
+						"enemies": [
+							"ulmigrand",
+							"mayn",
+							"dratula",
+							"ulmigros",
+							"feril"
+						],
+						"name": "Moonlight-11"
+					},
+					{
+						"boss": "armor_bonk",
+						"enemies": [
+							"armor_bonk",
+							"dratula",
+							"stone_bear",
+							"spike_bonk",
+							"yella_bonk"
+						],
+						"name": "Moonlight-12"
+					}
+				]
+			}
+		},
+		"id": "moonlight_desert",
+		"name": "Moonlight Desert",
+		"order": 3
+	},
+	{
+		"difficulties": {
+			"hard": {
+				"energy": 7,
+				"stages": [
+					{
+						"boss": "red_antlar",
+						"enemies": [
+							"red_antlar",
+							"hotblok",
+							"rokk",
+							"cero",
+							"trama",
+							"pari",
+							"dera"
+						],
+						"name": "Boneyard-1"
+					},
+					{
+						"boss": "red_antlar",
+						"enemies": [
+							"red_antlar",
+							"ice_crush",
+							"bloomasher",
+							"cero",
+							"trama",
+							"pari",
+							"dera"
+						],
+						"name": "Boneyard-2"
+					},
+					{
+						"boss": "red_antlar",
+						"enemies": [
+							"red_antlar",
+							"cetrop",
+							"cero",
+							"trama",
+							"pari",
+							"dera",
+							"red_antlad"
+						],
+						"name": "Boneyard-3",
+						"orig": {
+							"boss": "red_antlar",
+							"enemies": [
+								"red_antlar",
+								"cetrop",
+								"cero",
+								"trama",
+								"pari",
+								"dera"
+							],
+							"drops": []
+						}
+					},
+					{
+						"boss": "red_antlar",
+						"enemies": [
+							"red_antlar",
+							"stingr",
+							"yakka",
+							"red_antlad",
+							"rockion"
+						],
+						"name": "Boneyard-4"
+					},
+					{
+						"boss": "forin",
+						"enemies": [
+							"forin",
+							"whirly",
+							"twirly",
+							"dera"
+						],
+						"name": "Boneyard-5"
+					},
+					{
+						"boss": "blu_antlar",
+						"enemies": [
+							"blu_antlar",
+							"derakon",
+							"dera",
+							"friby",
+							"craburn"
+						],
+						"name": "Boneyard-6"
+					},
+					{
+						"boss": "antlar",
+						"enemies": [
+							"antlar",
+							"yakkadin",
+							"ibi",
+							"cero"
+						],
+						"name": "Boneyard-7"
+					},
+					{
+						"boss": "bud_antlar",
+						"enemies": [
+							"bud_antlar",
+							"pragon",
+							"yakka",
+							"pari",
+							"spriby"
+						],
+						"name": "Boneyard-8"
+					},
+					{
+						"boss": "whirly",
+						"enemies": [
+							"whirly",
+							"ponee",
+							"mossmasher",
+							"rockion"
+						],
+						"name": "Boneyard-9"
+					},
+					{
+						"boss": "surakan",
+						"enemies": [
+							"surakan",
+							"tane",
+							"surak",
+							"red_antlid",
+							"bud_antlid"
+						],
+						"name": "Boneyard-10"
+					},
+					{
+						"boss": "fino",
+						"enemies": [
+							"fino",
+							"red_antlar",
+							"ullie",
+							"red_antlid",
+							"trama",
+							"friby"
+						],
+						"name": "Boneyard-11"
+					},
+					{
+						"boss": "krokodar",
+						"enemies": [
+							"krokodar",
+							"kroko",
+							"red_antlar",
+							"cero",
+							"trama",
+							"pari",
+							"dera",
+							"ullie"
+						],
+						"name": "Boneyard-12",
+						"orig": {
+							"boss": "kroko",
+							"enemies": [
+								"kroko",
+								"red_antlar",
+								"cero",
+								"trama",
+								"pari",
+								"dera"
+							],
+							"drops": []
+						},
+						"boss_fixed": true
+					},
+					{
+						"boss": "mantichomp",
+						"enemies": [
+							"mantichomp",
+							"dullbeak",
+							"surak",
+							"ibi",
+							"yakka",
+							"dumbird"
+						],
+						"name": "Boneyard-13",
+						"orig": {
+							"boss": "manticlaw",
+							"enemies": [
+								"manticlaw",
+								"dullbeak",
+								"surak",
+								"ibi",
+								"yakka",
+								"dumbird"
+							],
+							"drops": []
+						},
+						"boss_fixed": true
+					},
+					{
+						"boss": "goldverin",
+						"enemies": [
+							"goldverin",
+							"dullbeak",
+							"wolverin",
+							"feril",
+							"doomba"
+						],
+						"name": "Boneyard-14",
+						"orig": {
+							"boss": "dullbeak",
+							"enemies": [
+								"dullbeak",
+								"wolverin",
+								"feril",
+								"doomba"
+							],
+							"drops": []
+						},
+						"boss_fixed": true
+					}
+				]
+			},
+			"hell": {
+				"energy": 8,
+				"stages": [
+					{
+						"boss": "red_antlar",
+						"enemies": [
+							"red_antlar",
+							"hotblok",
+							"rokk",
+							"cero",
+							"trama",
+							"pari",
+							"dera"
+						],
+						"name": "Boneyard-1"
+					},
+					{
+						"boss": "red_antlar",
+						"enemies": [
+							"red_antlar",
+							"ice_crush",
+							"bloomasher",
+							"cero",
+							"trama",
+							"pari",
+							"dera"
+						],
+						"name": "Boneyard-2"
+					},
+					{
+						"boss": "red_antlar",
+						"enemies": [
+							"red_antlar",
+							"cetrop",
+							"cero",
+							"trama",
+							"pari",
+							"dera",
+							"red_antlad"
+						],
+						"name": "Boneyard-3",
+						"orig": {
+							"boss": "red_antlar",
+							"enemies": [
+								"red_antlar",
+								"cetrop",
+								"cero",
+								"trama",
+								"pari",
+								"dera"
+							],
+							"drops": []
+						}
+					},
+					{
+						"boss": "red_antlar",
+						"enemies": [
+							"red_antlar",
+							"stingr",
+							"yakka",
+							"red_antlad",
+							"rockion"
+						],
+						"name": "Boneyard-4"
+					},
+					{
+						"boss": "forin",
+						"enemies": [
+							"forin",
+							"whirly",
+							"twirly",
+							"dera"
+						],
+						"name": "Boneyard-5"
+					},
+					{
+						"boss": "blu_antlar",
+						"enemies": [
+							"blu_antlar",
+							"derakon",
+							"dera",
+							"friby",
+							"craburn"
+						],
+						"name": "Boneyard-6"
+					},
+					{
+						"boss": "antlar",
+						"enemies": [
+							"antlar",
+							"yakkadin",
+							"ibi",
+							"cero"
+						],
+						"name": "Boneyard-7"
+					},
+					{
+						"boss": "bud_antlar",
+						"enemies": [
+							"bud_antlar",
+							"pragon",
+							"yakka",
+							"pari",
+							"spriby"
+						],
+						"name": "Boneyard-8"
+					},
+					{
+						"boss": "whirly",
+						"enemies": [
+							"whirly",
+							"ponee",
+							"mossmasher",
+							"rockion"
+						],
+						"name": "Boneyard-9"
+					},
+					{
+						"boss": "surakan",
+						"enemies": [
+							"surakan",
+							"tane",
+							"surak",
+							"red_antlid",
+							"bud_antlid"
+						],
+						"name": "Boneyard-10"
+					},
+					{
+						"boss": "fino",
+						"enemies": [
+							"fino",
+							"red_antlar",
+							"ullie",
+							"red_antlid",
+							"trama",
+							"friby"
+						],
+						"name": "Boneyard-11"
+					},
+					{
+						"boss": "krokodar",
+						"enemies": [
+							"krokodar",
+							"kroko",
+							"red_antlar",
+							"cero",
+							"trama",
+							"pari",
+							"dera",
+							"ullie"
+						],
+						"name": "Boneyard-12",
+						"orig": {
+							"boss": "kroko",
+							"enemies": [
+								"kroko",
+								"red_antlar",
+								"cero",
+								"trama",
+								"pari",
+								"dera"
+							],
+							"drops": []
+						},
+						"boss_fixed": true
+					},
+					{
+						"boss": "mantichomp",
+						"enemies": [
+							"mantichomp",
+							"dullbeak",
+							"surak",
+							"ibi",
+							"yakka",
+							"dumbird"
+						],
+						"name": "Boneyard-13",
+						"orig": {
+							"boss": "manticlaw",
+							"enemies": [
+								"manticlaw",
+								"dullbeak",
+								"surak",
+								"ibi",
+								"yakka",
+								"dumbird"
+							],
+							"drops": []
+						},
+						"boss_fixed": true
+					},
+					{
+						"boss": "goldverin",
+						"enemies": [
+							"goldverin",
+							"dullbeak",
+							"wolverin",
+							"feril",
+							"doomba"
+						],
+						"name": "Boneyard-14",
+						"orig": {
+							"boss": "dullbeak",
+							"enemies": [
+								"dullbeak",
+								"wolverin",
+								"feril",
+								"doomba"
+							],
+							"drops": []
+						},
+						"boss_fixed": true
+					}
+				]
+			},
+			"normal": {
+				"energy": 6,
+				"stages": [
+					{
+						"boss": "red_antlar",
+						"enemies": [
+							"red_antlar",
+							"hotblok",
+							"rokk",
+							"cero",
+							"trama",
+							"pari",
+							"dera"
+						],
+						"name": "Boneyard-1"
+					},
+					{
+						"boss": "red_antlar",
+						"enemies": [
+							"red_antlar",
+							"ice_crush",
+							"bloomasher",
+							"cero",
+							"trama",
+							"pari",
+							"dera"
+						],
+						"name": "Boneyard-2"
+					},
+					{
+						"boss": "red_antlar",
+						"enemies": [
+							"red_antlar",
+							"cetrop",
+							"cero",
+							"trama",
+							"pari",
+							"dera",
+							"red_antlad"
+						],
+						"name": "Boneyard-3",
+						"orig": {
+							"boss": "red_antlar",
+							"enemies": [
+								"red_antlar",
+								"cetrop",
+								"cero",
+								"trama",
+								"pari",
+								"dera"
+							],
+							"drops": []
+						}
+					},
+					{
+						"boss": "red_antlar",
+						"enemies": [
+							"red_antlar",
+							"stingr",
+							"yakka",
+							"red_antlad",
+							"rockion"
+						],
+						"name": "Boneyard-4"
+					},
+					{
+						"boss": "forin",
+						"enemies": [
+							"forin",
+							"whirly",
+							"twirly",
+							"dera"
+						],
+						"name": "Boneyard-5"
+					},
+					{
+						"boss": "blu_antlar",
+						"enemies": [
+							"blu_antlar",
+							"derakon",
+							"dera",
+							"friby",
+							"craburn"
+						],
+						"name": "Boneyard-6"
+					},
+					{
+						"boss": "antlar",
+						"enemies": [
+							"antlar",
+							"yakkadin",
+							"ibi",
+							"cero"
+						],
+						"name": "Boneyard-7"
+					},
+					{
+						"boss": "bud_antlar",
+						"enemies": [
+							"bud_antlar",
+							"pragon",
+							"yakka",
+							"pari",
+							"spriby"
+						],
+						"name": "Boneyard-8"
+					},
+					{
+						"boss": "whirly",
+						"enemies": [
+							"whirly",
+							"ponee",
+							"mossmasher",
+							"rockion"
+						],
+						"name": "Boneyard-9"
+					},
+					{
+						"boss": "surakan",
+						"enemies": [
+							"surakan",
+							"tane",
+							"surak",
+							"red_antlid",
+							"bud_antlid"
+						],
+						"name": "Boneyard-10"
+					},
+					{
+						"boss": "fino",
+						"enemies": [
+							"fino",
+							"red_antlar",
+							"ullie",
+							"red_antlid",
+							"trama",
+							"friby"
+						],
+						"name": "Boneyard-11"
+					},
+					{
+						"boss": "kroko",
+						"enemies": [
+							"kroko",
+							"red_antlar",
+							"cero",
+							"trama",
+							"pari",
+							"dera",
+							"ullie"
+						],
+						"name": "Boneyard-12",
+						"orig": {
+							"boss": "kroko",
+							"enemies": [
+								"kroko",
+								"red_antlar",
+								"cero",
+								"trama",
+								"pari",
+								"dera"
+							],
+							"drops": []
+						}
+					},
+					{
+						"boss": "mantichomp",
+						"boss_fixed": true,
+						"enemies": [
+							"mantichomp",
+							"dullbeak",
+							"rean",
+							"surak",
+							"ibi",
+							"yakka",
+							"dumbird"
+						],
+						"name": "Boneyard-13"
+					},
+					{
+						"boss": "dullbeak",
+						"enemies": [
+							"dullbeak",
+							"wolverin",
+							"feril",
+							"doomba"
+						],
+						"name": "Boneyard-14"
+					}
+				]
+			}
+		},
+		"id": "boneyard_island",
+		"name": "Boneyard Island",
+		"order": 4
+	},
+	{
+		"difficulties": {
+			"hard": {
+				"energy": 8,
+				"stages": [
+					{
+						"boss": "tobiak",
+						"enemies": [
+							"tobiak",
+							"minohawket",
+							"sliming",
+							"friming",
+							"wabering",
+							"budding"
+						],
+						"name": "Dino-1"
+					},
+					{
+						"boss": "tobiak",
+						"enemies": [
+							"tobiak",
+							"minogullet",
+							"sliming",
+							"friming",
+							"wabering",
+							"budding"
+						],
+						"name": "Dino-2"
+					},
+					{
+						"boss": "tobiak",
+						"enemies": [
+							"tobiak",
+							"minothring",
+							"sliming",
+							"friming",
+							"wabering",
+							"budding"
+						],
+						"name": "Dino-3"
+					},
+					{
+						"boss": "tobiak",
+						"enemies": [
+							"tobiak",
+							"minoeaglet",
+							"sliming",
+							"friming",
+							"wabering",
+							"budding"
+						],
+						"name": "Dino-4"
+					},
+					{
+						"boss": "cetrop",
+						"enemies": [
+							"cetrop",
+							"tobiak",
+							"cero",
+							"trama",
+							"pari",
+							"dera"
+						],
+						"name": "Dino-5"
+					},
+					{
+						"boss": "pragon",
+						"enemies": [
+							"pragon",
+							"tobiak",
+							"burtle",
+							"cero",
+							"trama",
+							"pari",
+							"dera"
+						],
+						"name": "Dino-6"
+					},
+					{
+						"boss": "derakon",
+						"enemies": [
+							"derakon",
+							"tobiak",
+							"cero",
+							"trama",
+							"pari",
+							"dera"
+						],
+						"name": "Dino-7"
+					},
+					{
+						"boss": "tramix",
+						"enemies": [
+							"tramix",
+							"tobiak",
+							"cero",
+							"trama",
+							"pari",
+							"dera",
+							"tobio"
+						],
+						"name": "Dino-8"
+					},
+					{
+						"boss": "kangy",
+						"enemies": [
+							"kangy",
+							"grand_bang",
+							"tobiak",
+							"feril",
+							"doomba"
+						],
+						"name": "Dino-9"
+					},
+					{
+						"boss": "burdon",
+						"enemies": [
+							"burdon",
+							"surakan",
+							"tobiak",
+							"ibi",
+							"yakka"
+						],
+						"name": "Dino-10"
+					},
+					{
+						"boss": "glinthide",
+						"enemies": [
+							"glinthide",
+							"dratula",
+							"tobiak",
+							"ibi"
+						],
+						"name": "Dino-11"
+					},
+					{
+						"boss": "jadehide",
+						"enemies": [
+							"jadehide",
+							"greentula",
+							"tobiak",
+							"yakka"
+						],
+						"name": "Dino-12"
+					},
+					{
+						"boss": "azurehide",
+						"enemies": [
+							"azurehide",
+							"pretula",
+							"tobiak",
+							"doomba"
+						],
+						"name": "Dino-13"
+					},
+					{
+						"boss": "rubyhide",
+						"enemies": [
+							"rubyhide",
+							"reditula",
+							"tobiak",
+							"feril"
+						],
+						"name": "Dino-14"
+					}
+				]
+			},
+			"hell": {
+				"energy": 9,
+				"stages": [
+					{
+						"boss": "tobiak",
+						"enemies": [
+							"tobiak",
+							"minohawket",
+							"sliming",
+							"friming",
+							"wabering",
+							"budding"
+						],
+						"name": "Dino-1"
+					},
+					{
+						"boss": "tobiak",
+						"enemies": [
+							"tobiak",
+							"minogullet",
+							"sliming",
+							"friming",
+							"wabering",
+							"budding"
+						],
+						"name": "Dino-2"
+					},
+					{
+						"boss": "tobiak",
+						"enemies": [
+							"tobiak",
+							"minothring",
+							"sliming",
+							"friming",
+							"wabering",
+							"budding"
+						],
+						"name": "Dino-3"
+					},
+					{
+						"boss": "tobiak",
+						"enemies": [
+							"tobiak",
+							"minoeaglet",
+							"sliming",
+							"friming",
+							"wabering",
+							"budding"
+						],
+						"name": "Dino-4"
+					},
+					{
+						"boss": "cetrop",
+						"enemies": [
+							"cetrop",
+							"tobiak",
+							"cero",
+							"trama",
+							"pari",
+							"dera"
+						],
+						"name": "Dino-5"
+					},
+					{
+						"boss": "pragon",
+						"enemies": [
+							"pragon",
+							"tobiak",
+							"burtle",
+							"cero",
+							"trama",
+							"pari",
+							"dera"
+						],
+						"name": "Dino-6"
+					},
+					{
+						"boss": "derakon",
+						"enemies": [
+							"derakon",
+							"tobiak",
+							"cero",
+							"trama",
+							"pari",
+							"dera"
+						],
+						"name": "Dino-7"
+					},
+					{
+						"boss": "tramix",
+						"enemies": [
+							"tramix",
+							"tobiak",
+							"cero",
+							"trama",
+							"pari",
+							"dera",
+							"tobio"
+						],
+						"name": "Dino-8"
+					},
+					{
+						"boss": "kangy",
+						"enemies": [
+							"kangy",
+							"grand_bang",
+							"tobiak",
+							"feril",
+							"doomba"
+						],
+						"name": "Dino-9"
+					},
+					{
+						"boss": "burdon",
+						"enemies": [
+							"burdon",
+							"surakan",
+							"tobiak",
+							"ibi",
+							"yakka"
+						],
+						"name": "Dino-10"
+					},
+					{
+						"boss": "glinthide",
+						"enemies": [
+							"glinthide",
+							"dratula",
+							"tobiak",
+							"ibi"
+						],
+						"name": "Dino-11"
+					},
+					{
+						"boss": "jadehide",
+						"enemies": [
+							"jadehide",
+							"greentula",
+							"tobiak",
+							"yakka"
+						],
+						"name": "Dino-12"
+					},
+					{
+						"boss": "azurehide",
+						"enemies": [
+							"azurehide",
+							"pretula",
+							"tobiak",
+							"doomba"
+						],
+						"name": "Dino-13"
+					},
+					{
+						"boss": "rubyhide",
+						"enemies": [
+							"rubyhide",
+							"reditula",
+							"tobiak",
+							"feril"
+						],
+						"name": "Dino-14"
+					}
+				]
+			},
+			"normal": {
+				"energy": 7,
+				"stages": [
+					{
+						"boss": "tobiak",
+						"enemies": [
+							"tobiak",
+							"minohawket",
+							"sliming",
+							"friming",
+							"wabering",
+							"budding"
+						],
+						"name": "Dino-1"
+					},
+					{
+						"boss": "tobiak",
+						"enemies": [
+							"tobiak",
+							"minogullet",
+							"sliming",
+							"friming",
+							"wabering",
+							"budding"
+						],
+						"name": "Dino-2"
+					},
+					{
+						"boss": "tobiak",
+						"enemies": [
+							"tobiak",
+							"minothring",
+							"sliming",
+							"friming",
+							"wabering",
+							"budding"
+						],
+						"name": "Dino-3"
+					},
+					{
+						"boss": "tobiak",
+						"enemies": [
+							"tobiak",
+							"minoeaglet",
+							"sliming",
+							"friming",
+							"wabering",
+							"budding"
+						],
+						"name": "Dino-4"
+					},
+					{
+						"boss": "cetrop",
+						"enemies": [
+							"cetrop",
+							"tobiak",
+							"cero",
+							"trama",
+							"pari",
+							"dera"
+						],
+						"name": "Dino-5"
+					},
+					{
+						"boss": "pragon",
+						"enemies": [
+							"pragon",
+							"tobiak",
+							"burtle",
+							"cero",
+							"trama",
+							"pari",
+							"dera"
+						],
+						"name": "Dino-6"
+					},
+					{
+						"boss": "derakon",
+						"enemies": [
+							"derakon",
+							"tobiak",
+							"cero",
+							"trama",
+							"pari",
+							"dera"
+						],
+						"name": "Dino-7"
+					},
+					{
+						"boss": "tramix",
+						"enemies": [
+							"tramix",
+							"tobiak",
+							"cero",
+							"trama",
+							"pari",
+							"dera",
+							"tobio"
+						],
+						"name": "Dino-8"
+					},
+					{
+						"boss": "kangy",
+						"enemies": [
+							"kangy",
+							"grand_bang",
+							"tobiak",
+							"feril",
+							"doomba"
+						],
+						"name": "Dino-9"
+					},
+					{
+						"boss": "whimptor",
+						"enemies": [
+							"whimptor",
+							"surakan",
+							"tobiak",
+							"ibi",
+							"yakka"
+						],
+						"name": "Dino-10"
+					},
+					{
+						"boss": "glinthide",
+						"enemies": [
+							"glinthide",
+							"dratula",
+							"tobiak",
+							"ibi"
+						],
+						"name": "Dino-11"
+					},
+					{
+						"boss": "jadehide",
+						"enemies": [
+							"jadehide",
+							"greentula",
+							"tobiak",
+							"yakka"
+						],
+						"name": "Dino-12"
+					},
+					{
+						"boss": "azurehide",
+						"enemies": [
+							"azurehide",
+							"pretula",
+							"tobiak",
+							"doomba"
+						],
+						"name": "Dino-13"
+					},
+					{
+						"boss": "rubyhide",
+						"enemies": [
+							"rubyhide",
+							"reditula",
+							"tobiak",
+							"feril"
+						],
+						"name": "Dino-14"
+					}
+				]
+			}
+		},
+		"id": "dino_gorge",
+		"name": "Dino Gorge",
+		"order": 5
+	},
+	{
+		"difficulties": {
+			"hard": {
+				"energy": 9,
+				"stages": [
+					{
+						"boss": "smash_bot",
+						"enemies": [
+							"smash_bot",
+							"king_spiky",
+							"sir_spiky",
+							"sir_drip"
+						],
+						"name": "Robo-1"
+					},
+					{
+						"boss": "blaze_bot",
+						"enemies": [
+							"blaze_bot",
+							"king_spiky",
+							"king_drip",
+							"sir_spiky",
+							"burn_bot"
+						],
+						"name": "Robo-2"
+					},
+					{
+						"boss": "urscout_p",
+						"enemies": [
+							"urscout_p",
+							"king_spiky",
+							"king_clip",
+							"sir_spiky",
+							"sir_clip"
+						],
+						"name": "Robo-3"
+					},
+					{
+						"boss": "urscout_g",
+						"enemies": [
+							"urscout_g",
+							"king_flame",
+							"king_drip",
+							"sir_flame",
+							"sir_drip"
+						],
+						"name": "Robo-4"
+					},
+					{
+						"boss": "urscout_b",
+						"enemies": [
+							"urscout_b",
+							"king_flame",
+							"king_clip",
+							"sir_flame",
+							"sir_clip"
+						],
+						"name": "Robo-5"
+					},
+					{
+						"boss": "urscout_o",
+						"enemies": [
+							"urscout_o",
+							"king_flame",
+							"king_clip",
+							"burn_bot",
+							"sir_flame",
+							"sir_clip"
+						],
+						"name": "Robo-6"
+					},
+					{
+						"boss": "picore",
+						"enemies": [
+							"picore",
+							"king_flame",
+							"king_drip",
+							"frost_bot",
+							"sir_flame",
+							"sir_drip"
+						],
+						"name": "Robo-7"
+					},
+					{
+						"boss": "toriz",
+						"enemies": [
+							"toriz",
+							"king_spiky",
+							"king_clip",
+							"seed_bot",
+							"sir_spiky",
+							"sir_clip"
+						],
+						"name": "Robo-8"
+					},
+					{
+						"boss": "hark",
+						"enemies": [
+							"hark",
+							"king_spiky",
+							"king_drip",
+							"jag_bot",
+							"sir_spiky",
+							"sir_drip"
+						],
+						"name": "Robo-9"
+					},
+					{
+						"boss": "karos",
+						"enemies": [
+							"karos",
+							"king_flame",
+							"king_drip",
+							"frost_bot",
+							"sir_flame",
+							"sir_drip"
+						],
+						"name": "Robo-10"
+					},
+					{
+						"boss": "oceanik",
+						"enemies": [
+							"oceanik",
+							"king_spiky",
+							"king_clip",
+							"seed_bot",
+							"sir_spiky",
+							"sir_clip"
+						],
+						"name": "Robo-11"
+					},
+					{
+						"boss": "rokliad",
+						"drops": [
+							"rollergor",
+							"king_spiky",
+							"king_drip",
+							"jag_bot",
+							"sir_spiky",
+							"sir_drip"
+						],
+						"enemies": [
+							"rokliad",
+							"rollergor",
+							"king_spiky",
+							"king_drip",
+							"jag_bot",
+							"sir_spiky",
+							"sir_drip"
+						],
+						"name": "Robo-12"
+					},
+					{
+						"boss": "metapanzer",
+						"enemies": [
+							"metapanzer",
+							"panzer",
+							"king_flame",
+							"king_clip",
+							"burn_bot",
+							"sir_flame",
+							"sir_drip"
+						],
+						"name": "Robo-13"
+					},
+					{
+						"boss": "maktron",
+						"enemies": [
+							"maktron",
+							"maglavan",
+							"king_spiky",
+							"king_drip",
+							"jag_bot",
+							"sir_spiky",
+							"sir_drip"
+						],
+						"name": "Robo-14"
+					}
+				]
+			},
+			"hell": {
+				"energy": 10,
+				"stages": [
+					{
+						"boss": "urscout_b",
+						"enemies": [
+							"urscout_b",
+							"king_spiky",
+							"sir_spiky",
+							"sir_drip"
+						],
+						"name": "Robo-1"
+					},
+					{
+						"boss": "uranger_p",
+						"enemies": [
+							"uranger_p",
+							"king_spiky",
+							"king_drip",
+							"sir_spiky",
+							"sir_drip"
+						],
+						"name": "Robo-2"
+					},
+					{
+						"boss": "karos",
+						"enemies": [
+							"karos",
+							"king_clip",
+							"king_clip",
+							"sir_spiky",
+							"sir_clip"
+						],
+						"name": "Robo-3"
+					},
+					{
+						"boss": "toriz",
+						"enemies": [
+							"toriz",
+							"king_flame",
+							"king_drip",
+							"sir_flame",
+							"sir_drip"
+						],
+						"name": "Robo-4"
+					},
+					{
+						"boss": "hark",
+						"enemies": [
+							"hark",
+							"king_flame",
+							"king_clip",
+							"sir_flame",
+							"sir_clip"
+						],
+						"name": "Robo-5"
+					},
+					{
+						"boss": "picore",
+						"enemies": [
+							"picore",
+							"king_flame",
+							"king_clip",
+							"burn_bot",
+							"sir_flame",
+							"sir_clip"
+						],
+						"name": "Robo-6"
+					},
+					{
+						"boss": "oceanik",
+						"enemies": [
+							"oceanik",
+							"king_flame",
+							"king_drip",
+							"frost_bot",
+							"sir_flame",
+							"sir_drip"
+						],
+						"name": "Robo-7"
+					},
+					{
+						"boss": "rollergor",
+						"enemies": [
+							"rollergor",
+							"king_spiky",
+							"king_clip",
+							"seed_bot",
+							"sir_spiky",
+							"sir_clip"
+						],
+						"name": "Robo-8"
+					},
+					{
+						"boss": "panzer",
+						"enemies": [
+							"panzer",
+							"king_spiky",
+							"king_drip",
+							"jag_bot",
+							"sir_spiky",
+							"sir_drip"
+						],
+						"name": "Robo-9"
+					},
+					{
+						"boss": "maglavan",
+						"enemies": [
+							"maglavan",
+							"king_flame",
+							"king_drip",
+							"frost_bot",
+							"sir_flame",
+							"sir_drip"
+						],
+						"name": "Robo-10"
+					},
+					{
+						"boss": "megasavage",
+						"enemies": [
+							"megasavage",
+							"megabomba",
+							"king_spiky",
+							"king_clip",
+							"seed_bot",
+							"sir_spiky",
+							"sir_clip"
+						],
+						"name": "Robo-11",
+						"orig": {
+							"boss": "megabomba",
+							"enemies": [
+								"megabomba",
+								"king_spiky",
+								"king_clip",
+								"seed_bot",
+								"sir_spiky",
+								"sir_clip"
+							],
+							"drops": []
+						},
+						"boss_drop": 0.05,
+						"boss_fixed": true
+					},
+					{
+						"boss": "megacrush",
+						"enemies": [
+							"megacrush",
+							"megablow",
+							"king_spiky",
+							"king_drip",
+							"jag_bot",
+							"sir_spiky",
+							"sir_drip"
+						],
+						"name": "Robo-12",
+						"orig": {
+							"boss": "megablow",
+							"enemies": [
+								"megablow",
+								"king_spiky",
+								"king_drip",
+								"jag_bot",
+								"sir_spiky",
+								"sir_drip"
+							],
+							"drops": []
+						},
+						"boss_drop": 0.05,
+						"boss_fixed": true
+					},
+					{
+						"boss": "megabrute",
+						"enemies": [
+							"megabrute",
+							"megabeat",
+							"king_flame",
+							"king_clip",
+							"burn_bot",
+							"sir_flame",
+							"sir_clip"
+						],
+						"name": "Robo-13",
+						"orig": {
+							"boss": "megabeat",
+							"enemies": [
+								"megabeat",
+								"king_flame",
+								"king_clip",
+								"burn_bot",
+								"sir_flame",
+								"sir_clip"
+							],
+							"drops": []
+						},
+						"boss_drop": 0.05,
+						"boss_fixed": true
+					},
+					{
+						"boss": "megabuster",
+						"enemies": [
+							"megabuster",
+							"megapuncha",
+							"king_spiky",
+							"king_drip",
+							"jag_bot",
+							"sir_spiky",
+							"sir_drip"
+						],
+						"name": "Robo-14",
+						"orig": {
+							"boss": "megapuncha",
+							"enemies": [
+								"megapuncha",
+								"king_spiky",
+								"king_drip",
+								"jag_bot",
+								"sir_spiky",
+								"sir_drip"
+							],
+							"drops": []
+						},
+						"boss_drop": 0.05,
+						"boss_fixed": true
+					}
+				]
+			},
+			"normal": {
+				"energy": 8,
+				"stages": [
+					{
+						"boss": "king_spiky",
+						"enemies": [
+							"king_spiky",
+							"sir_spiky",
+							"sir_drip"
+						],
+						"name": "Robo-1"
+					},
+					{
+						"boss": "king_flame",
+						"enemies": [
+							"king_flame",
+							"king_spiky",
+							"king_drip",
+							"sir_spiky",
+							"sir_drip"
+						],
+						"name": "Robo-2"
+					},
+					{
+						"boss": "freeze_bot",
+						"enemies": [
+							"freeze_bot",
+							"king_flame",
+							"king_clip",
+							"sir_spiky",
+							"sir_clip"
+						],
+						"name": "Robo-3"
+					},
+					{
+						"boss": "sap_bot",
+						"enemies": [
+							"sap_bot",
+							"king_flame",
+							"king_drip",
+							"sir_flame",
+							"sir_drip"
+						],
+						"name": "Robo-4"
+					},
+					{
+						"boss": "smash_bot",
+						"enemies": [
+							"smash_bot",
+							"king_flame",
+							"king_clip",
+							"sir_flame",
+							"sir_clip"
+						],
+						"name": "Robo-5"
+					},
+					{
+						"boss": "blaze_bot",
+						"enemies": [
+							"blaze_bot",
+							"king_flame",
+							"king_clip",
+							"burn_bot",
+							"sir_flame",
+							"sir_clip"
+						],
+						"name": "Robo-6"
+					},
+					{
+						"boss": "urscout_p",
+						"enemies": [
+							"urscout_p",
+							"king_flame",
+							"king_drip",
+							"frost_bot",
+							"sir_flame",
+							"sir_drip"
+						],
+						"name": "Robo-7"
+					},
+					{
+						"boss": "urscout_g",
+						"enemies": [
+							"urscout_g",
+							"king_spiky",
+							"king_clip",
+							"seed_bot",
+							"sir_spiky",
+							"sir_clip"
+						],
+						"name": "Robo-8"
+					},
+					{
+						"boss": "urscout_b",
+						"enemies": [
+							"urscout_b",
+							"king_spiky",
+							"king_drip",
+							"jag_bot",
+							"sir_spiky",
+							"sir_drip"
+						],
+						"name": "Robo-9"
+					},
+					{
+						"boss": "urscout_o",
+						"enemies": [
+							"urscout_o",
+							"king_flame",
+							"king_drip",
+							"frost_bot",
+							"sir_flame",
+							"sir_drip"
+						],
+						"name": "Robo-10"
+					},
+					{
+						"boss": "precore",
+						"enemies": [
+							"precore",
+							"picore",
+							"king_spiky",
+							"king_clip",
+							"seed_bot",
+							"sir_spiky",
+							"sir_clip"
+						],
+						"name": "Robo-11 (6-Star Precore)",
+						"orig": {
+							"boss": "picore",
+							"enemies": [
+								"picore",
+								"king_spiky",
+								"king_clip",
+								"seed_bot",
+								"sir_spiky",
+								"sir_clip"
+							],
+							"drops": []
+						},
+						"boss_drop": 0.05,
+						"boss_fixed": true
+					},
+					{
+						"boss": "torizor",
+						"enemies": [
+							"torizor",
+							"toriz",
+							"king_spiky",
+							"king_drip",
+							"jag_bot",
+							"sir_spiky",
+							"sir_drip"
+						],
+						"name": "Robo-12 (6-Star Torizor)",
+						"orig": {
+							"boss": "toriz",
+							"enemies": [
+								"toriz",
+								"king_spiky",
+								"king_drip",
+								"jag_bot",
+								"sir_spiky",
+								"sir_drip"
+							],
+							"drops": []
+						},
+						"boss_drop": 0.05,
+						"boss_fixed": true
+					},
+					{
+						"boss": "heroks",
+						"enemies": [
+							"heroks",
+							"hark",
+							"king_flame",
+							"king_clip",
+							"burn_bot",
+							"sir_flame",
+							"sir_clip"
+						],
+						"name": "Robo-13 (6-Star Heroks)",
+						"orig": {
+							"boss": "hark",
+							"enemies": [
+								"hark",
+								"king_flame",
+								"king_clip",
+								"burn_bot",
+								"sir_flame",
+								"sir_clip"
+							],
+							"drops": []
+						},
+						"boss_drop": 0.05,
+						"boss_fixed": true
+					},
+					{
+						"boss": "kepros",
+						"enemies": [
+							"kepros",
+							"karos",
+							"king_spiky",
+							"king_drip",
+							"jag_bot",
+							"sir_spiky",
+							"sir_drip"
+						],
+						"name": "Robo-14 (6-Star Kepros)",
+						"orig": {
+							"boss": "karos",
+							"enemies": [
+								"karos",
+								"king_spiky",
+								"king_drip",
+								"jag_bot",
+								"sir_spiky",
+								"sir_drip"
+							],
+							"drops": []
+						},
+						"boss_drop": 0.05,
+						"boss_fixed": true
+					}
+				]
+			}
+		},
+		"id": "robo_island",
+		"name": "Robo Island",
+		"order": 6
+	},
+	{
+		"difficulties": {
+			"hard": {
+				"energy": 11,
+				"stages": [
+					{
+						"boss": "reditula",
+						"enemies": [
+							"reditula",
+							"pretula",
+							"greentula",
+							"dratula",
+							"blue_rock"
+						],
+						"name": "Sky-1"
+					},
+					{
+						"boss": "reditula",
+						"enemies": [
+							"reditula",
+							"pretula",
+							"greentula",
+							"dratula",
+							"mauve_rock"
+						],
+						"name": "Sky-2"
+					},
+					{
+						"boss": "reditula",
+						"enemies": [
+							"reditula",
+							"pretula",
+							"greentula",
+							"dratula",
+							"sapphiroid",
+							"blue_rock"
+						],
+						"name": "Sky-3"
+					},
+					{
+						"boss": "reditula",
+						"enemies": [
+							"reditula",
+							"pretula",
+							"greentula",
+							"dratula",
+							"amethoid",
+							"mauve_rock"
+						],
+						"name": "Sky-4"
+					},
+					{
+						"boss": "conairy",
+						"enemies": [
+							"conairy",
+							"shivairy",
+							"grumairy",
+							"chilairy",
+							"griffpup",
+							"amethoid",
+							"mauve_rock"
+						],
+						"name": "Sky-5"
+					},
+					{
+						"boss": "conairy",
+						"enemies": [
+							"conairy",
+							"shivairy",
+							"grumairy",
+							"chilairy",
+							"griffpup",
+							"amethoid",
+							"mauve_rock"
+						],
+						"name": "Sky-6"
+					},
+					{
+						"boss": "ami",
+						"enemies": [
+							"ami",
+							"fimi",
+							"trimi",
+							"wami",
+							"nimby",
+							"sapphiroid",
+							"blue_rock"
+						],
+						"name": "Sky-7"
+					},
+					{
+						"boss": "ami",
+						"enemies": [
+							"ami",
+							"fimi",
+							"trimi",
+							"wami",
+							"nimby",
+							"sapphiroid",
+							"blue_rock"
+						],
+						"name": "Sky-8"
+					}
+				]
+			},
+			"hell": {
+				"energy": 12,
+				"stages": [
+					{
+						"boss": "spooki",
+						"enemies": [
+							"spooki",
+							"jel",
+							"rean",
+							"oonga",
+							"blue_rock"
+						],
+						"name": "Sky-1"
+					},
+					{
+						"boss": "spooki",
+						"enemies": [
+							"spooki",
+							"jel",
+							"rean",
+							"oonga",
+							"mauve_rock"
+						],
+						"name": "Sky-2"
+					},
+					{
+						"boss": "spooki",
+						"enemies": [
+							"spooki",
+							"jel",
+							"rean",
+							"oonga",
+							"sapphiroid",
+							"blue_rock"
+						],
+						"name": "Sky-3"
+					},
+					{
+						"boss": "spooki",
+						"enemies": [
+							"spooki",
+							"jel",
+							"rean",
+							"oonga",
+							"amethoid",
+							"mauve_rock"
+						],
+						"name": "Sky-4"
+					},
+					{
+						"boss": "hotblok",
+						"enemies": [
+							"hotblok",
+							"ice_crush",
+							"bloomasher",
+							"rokk",
+							"griffpup",
+							"amethoid",
+							"mauve_rock"
+						],
+						"name": "Sky-5"
+					},
+					{
+						"boss": "hotblok",
+						"enemies": [
+							"hotblok",
+							"ice_crush",
+							"bloomasher",
+							"rokk",
+							"griffpup",
+							"amethoid",
+							"mauve_rock"
+						],
+						"name": "Sky-6"
+					},
+					{
+						"boss": "ponee",
+						"enemies": [
+							"ponee",
+							"danica",
+							"amethoid",
+							"mauve_rock"
+						],
+						"name": "Sky-7"
+					},
+					{
+						"boss": "ponee",
+						"enemies": [
+							"ponee",
+							"danica",
+							"amethoid",
+							"mauve_rock"
+						],
+						"name": "Sky-8"
+					}
+				]
+			},
+			"normal": {
+				"energy": 10,
+				"stages": [
+					{
+						"boss": "urscout_b",
+						"drops": [
+							"smelly",
+							"smish",
+							"smoovie",
+							"smulling",
+							"blue_rock"
+						],
+						"enemies": [
+							"urscout_b",
+							"smelly",
+							"smish",
+							"smoovie",
+							"smulling",
+							"blue_rock"
+						],
+						"name": "Sky-1"
+					},
+					{
+						"boss": "glintscale",
+						"drops": [
+							"smelly",
+							"smish",
+							"smoovie",
+							"smulling",
+							"mauve_rock"
+						],
+						"enemies": [
+							"glintscale",
+							"smelly",
+							"smish",
+							"smoovie",
+							"smulling",
+							"mauve_rock"
+						],
+						"name": "Sky-2"
+					},
+					{
+						"boss": "torizo",
+						"drops": [
+							"smelly",
+							"smish",
+							"smoovie",
+							"smulling",
+							"sapphiroid"
+						],
+						"enemies": [
+							"torizo",
+							"smelly",
+							"smish",
+							"smoovie",
+							"smulling",
+							"sapphiroid"
+						],
+						"name": "Sky-3"
+					},
+					{
+						"boss": "unacorn",
+						"drops": [
+							"smelly",
+							"smish",
+							"smoovie",
+							"smulling",
+							"amethoid"
+						],
+						"enemies": [
+							"unacorn",
+							"smelly",
+							"smish",
+							"smoovie",
+							"smulling",
+							"amethoid"
+						],
+						"name": "Sky-4"
+					},
+					{
+						"boss": "swiftclaw",
+						"drops": [
+							"griffpup",
+							"conie",
+							"shivvie",
+							"grumie",
+							"chilie",
+							"amethoid",
+							"mauve_rock"
+						],
+						"enemies": [
+							"swiftclaw",
+							"griffpup",
+							"conie",
+							"shivvie",
+							"grumie",
+							"chilie",
+							"amethoid",
+							"mauve_rock"
+						],
+						"name": "Sky-5"
+					},
+					{
+						"boss": "archwing",
+						"drops": [
+							"griffpup",
+							"conie",
+							"shivvie",
+							"grumie",
+							"chilie",
+							"amethoid",
+							"mauve_rock"
+						],
+						"enemies": [
+							"archwing",
+							"griffpup",
+							"conie",
+							"shivvie",
+							"grumie",
+							"chilie",
+							"amethoid",
+							"mauve_rock"
+						],
+						"name": "Sky-6"
+					},
+					{
+						"boss": "doorbot_v3",
+						"drops": [
+							"doorbot_v1",
+							"brickett",
+							"ice_cube",
+							"mossmasher",
+							"stonn",
+							"sapphiroid",
+							"blue_rock"
+						],
+						"enemies": [
+							"doorbot_v3",
+							"doorbot_v1",
+							"brickett",
+							"ice_cube",
+							"mossmasher",
+							"stonn",
+							"sapphiroid",
+							"blue_rock"
+						],
+						"name": "Sky-7"
+					},
+					{
+						"boss": "doorbot_x",
+						"drops": [
+							"doorbot_v1",
+							"brickett",
+							"ice_cube",
+							"mossmasher",
+							"stonn",
+							"sapphiroid",
+							"blue_rock"
+						],
+						"enemies": [
+							"doorbot_x",
+							"doorbot_v1",
+							"brickett",
+							"ice_cube",
+							"mossmasher",
+							"stonn",
+							"sapphiroid",
+							"blue_rock"
+						],
+						"name": "Sky-8"
+					}
+				]
+			}
+		},
+		"id": "sky_island",
+		"name": "Sky Island",
+		"order": 7
+	}
+]

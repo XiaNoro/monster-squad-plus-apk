@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_9PATCH_2" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_black60.png" ninePatchSize="{1066,640}" ninePatchInset="{{1,1},{2,2}}">
+    <ElementNode type="NinePatch" elementID="ID_Dialog" anchorX="0" anchorY="0" positionX="224" positionY="18" z="0" scaleX="1" scaleY="1" imageName="9_Back_19.png" ninePatchSize="{628,604}" ninePatchInset="{{50,50},{2,2}}">
+      <ElementNode type="NinePatch" elementID="ID_baseback" anchorX="0" anchorY="0" positionX="12" positionY="16" z="0" scaleX="1" scaleY="1" imageName="9_Back_01.png" ninePatchSize="{600,508}" ninePatchInset="{{84,126},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_title" anchorX="0" anchorY="0" positionX="28" positionY="514" z="0" scaleX="1" scaleY="1" imageName="9_frame_04.png" ninePatchSize="{324,56}" ninePatchInset="{{32,0},{2,56}}">
+          <ElementNode type="Label" elementID="ID_titleText" anchorX="0" anchorY="0" positionX="32" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Rank" fontStyle="1" fontSize="30" fontColor="{255,220,125}" areaSizeX="260" areaSizeY="38" alignment="0" lineAlignment="0" effect="1" effectOffset="3" effectColor="{80,40,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatchButton" elementID="ID_btnEsc" anchorX="0.5" anchorY="0.5" positionX="520" positionY="542" z="0" scaleX="1" scaleY="1" imageName="9_btn_05.png" ninePatchSize="{106,60}" ninePatchInset="{{28,28},{2,2}}">
+          <ElementNode type="Image" elementID="ID_IMAGE_1" anchorX="0" anchorY="0" positionX="22" positionY="4" z="0" scaleX="1" scaleY="1" imageName="K_esc_01.png" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_rank" anchorX="0" anchorY="0" positionX="30" positionY="32" z="0" scaleX="1" scaleY="1" imageName="9_Back_02.png" ninePatchSize="{540,450}" ninePatchInset="{{15,15},{2,2}}">
+          <ElementNode type="NinePatch" elementID="ID_arrayPosition" anchorX="0" anchorY="0" positionX="12" positionY="10" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{496,428}" ninePatchInset="{{1,1},{2,2}}" />
+          <ElementNode type="NinePatch" elementID="ID_slide" anchorX="0" anchorY="0" positionX="520" positionY="10" z="0" scaleX="1" scaleY="1" imageName="9_slide_01.png" ninePatchSize="{10,428}" ninePatchInset="{{0,5},{10,2}}">
+            <ElementNode type="NinePatch" elementID="ID_bar" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_slide_02.png" ninePatchSize="{10,428}" ninePatchInset="{{0,5},{10,2}}" />
+          </ElementNode>
+        </ElementNode>
+      </ElementNode>
+    </ElementNode>
+  </ElementNode>
+</root>

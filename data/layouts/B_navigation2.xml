@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_9PATCH_2" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{406,98}" ninePatchInset="{{1,1},{2,2}}">
+    <ElementNode type="NinePatch" elementID="ID_9back_07_1" anchorX="0" anchorY="0" positionX="-354" positionY="2" z="0" scaleX="1" scaleY="1" imageName="9_Back_07.png" ninePatchSize="{406,96}" ninePatchInset="{{78,0},{2,96}}">
+      <ElementNode type="Button" elementID="ID_btnOpenN" anchorX="0.5" anchorY="0.5" positionX="380" positionY="48" z="0" scaleX="1" scaleY="1" imageName="B_arrow_03.png" />
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_9back_07" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" imageName="9_Back_07.png" ninePatchSize="{406,96}" ninePatchInset="{{78,0},{2,96}}">
+      <ElementNode type="NinePatchButton" elementID="ID_9BUTTON_1" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{406,96}" ninePatchInset="{{1,1},{2,2}}" />
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_1" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{406,96}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Button" elementID="ID_btnCloseN" anchorX="0.5" anchorY="0.5" positionX="380" positionY="48" z="1" scaleX="1" scaleY="1" imageName="B_arrow_04.png" />
+        <ElementNode type="Button" elementID="ID_btnGoHome" anchorX="0" anchorY="0" positionX="10" positionY="10" z="1" scaleX="1" scaleY="1" imageName="B_home_01.png">
+          <ElementNode type="Label" elementID="ID_txtHome" anchorX="0" anchorY="0" positionX="0" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Home" fontStyle="1" fontSize="18" fontColor="{255,255,255}" areaSizeX="100" areaSizeY="20" alignment="1" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        </ElementNode>
+        <ElementNode type="Button" elementID="ID_btnRaise" anchorX="0" anchorY="0" positionX="122" positionY="10" z="1" scaleX="1" scaleY="1" imageName="B_raise_01.png">
+          <ElementNode type="Label" elementID="ID_txtRaise" anchorX="0" anchorY="0" positionX="0" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Train" fontStyle="1" fontSize="18" fontColor="{255,255,255}" areaSizeX="100" areaSizeY="20" alignment="1" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        </ElementNode>
+        <ElementNode type="Button" elementID="ID_btnShop" anchorX="0" anchorY="0" positionX="236" positionY="10" z="1" scaleX="1" scaleY="1" imageName="B_shop_01.png">
+          <ElementNode type="Label" elementID="ID_txtShop" anchorX="0" anchorY="0" positionX="0" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Store" fontStyle="1" fontSize="18" fontColor="{255,255,255}" areaSizeX="108" areaSizeY="20" alignment="1" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        </ElementNode>
+      </ElementNode>
+    </ElementNode>
+  </ElementNode>
+</root>

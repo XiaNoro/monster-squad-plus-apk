@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_9PATCH_1" anchorX="0" anchorY="0" positionX="66" positionY="14" z="0" imageName="9_Back_01.png" ninePatchSize="{828,520}" ninePatchInset="{{84,126},{2,2}}">
+    <ElementNode type="NinePatch" elementID="ID_9PATCH_2" anchorX="0" anchorY="0" positionX="30" positionY="116" z="0" imageName="9_Back_02.png" ninePatchSize="{770,374}" ninePatchInset="{{15,15},{2,2}}">
+      <ElementNode type="NinePatch" elementID="ID_monsterSlot1" anchorX="0" anchorY="0" positionX="10" positionY="192" z="0" imageName="9_empty_02.png" ninePatchSize="{180,172}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_monsterSlotFrame1" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" imageName="9_Back_08.png" ninePatchSize="{180,172}" ninePatchInset="{{20,20},{2,2}}" />
+        <ElementNode type="Image" elementID="ID_monsterBack1" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" imageName="F_getMonster_01.png" />
+        <ElementNode type="Image" elementID="ID_monsterShadow1" anchorX="0.5" anchorY="0.5" positionX="90" positionY="28" z="0" imageName="I_shadow_04.png" />
+        <ElementNode type="Image" elementID="ID_monsterAttribute1" anchorX="0" anchorY="0" positionX="0" positionY="126" z="0" imageName="A_fire_05.png" />
+        <ElementNode type="Image" elementID="ID_cube1" anchorX="0" anchorY="0" positionX="46" positionY="10" z="0" imageName="S_cube_02.png" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_monsterSlot2" anchorX="0" anchorY="0" positionX="200" positionY="192" z="0" imageName="9_empty_02.png" ninePatchSize="{180,172}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_monsterSlotFrame2" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" imageName="9_Back_08.png" ninePatchSize="{180,172}" ninePatchInset="{{20,20},{2,2}}" />
+        <ElementNode type="Image" elementID="ID_monsterBack2" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" imageName="F_getMonster_01.png" />
+        <ElementNode type="Image" elementID="ID_monsterShadow2" anchorX="0.5" anchorY="0.5" positionX="90" positionY="28" z="0" imageName="I_shadow_04.png" />
+        <ElementNode type="Image" elementID="ID_monsterAttribute2" anchorX="0" anchorY="0" positionX="0" positionY="126" z="0" imageName="A_fire_05.png" />
+        <ElementNode type="Image" elementID="ID_cube2" anchorX="0" anchorY="0" positionX="46" positionY="10" z="0" imageName="S_cube_02.png" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_monsterSlot3" anchorX="0" anchorY="0" positionX="390" positionY="192" z="0" imageName="9_empty_02.png" ninePatchSize="{180,172}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_monsterSlotFrame3" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" imageName="9_Back_08.png" ninePatchSize="{180,172}" ninePatchInset="{{20,20},{2,2}}" />
+        <ElementNode type="Image" elementID="ID_monsterBack3" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" imageName="F_getMonster_01.png" />
+        <ElementNode type="Image" elementID="ID_monsterShadow3" anchorX="0.5" anchorY="0.5" positionX="90" positionY="28" z="0" imageName="I_shadow_04.png" />
+        <ElementNode type="Image" elementID="ID_monsterAttribute3" anchorX="0" anchorY="0" positionX="0" positionY="126" z="0" imageName="A_fire_05.png" />
+        <ElementNode type="Image" elementID="ID_cube3" anchorX="0" anchorY="0" positionX="46" positionY="10" z="0" imageName="S_cube_02.png" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_monsterSlot4" anchorX="0" anchorY="0" positionX="580" positionY="192" z="0" imageName="9_empty_02.png" ninePatchSize="{180,172}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_monsterSlotFrame4" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" imageName="9_Back_08.png" ninePatchSize="{180,172}" ninePatchInset="{{20,20},{2,2}}" />
+        <ElementNode type="Image" elementID="ID_monsterBack4" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" imageName="F_getMonster_01.png" />
+        <ElementNode type="Image" elementID="ID_monsterShadow4" anchorX="0.5" anchorY="0.5" positionX="90" positionY="28" z="0" imageName="I_shadow_04.png" />
+        <ElementNode type="Image" elementID="ID_monsterAttribute4" anchorX="0" anchorY="0" positionX="0" positionY="126" z="0" imageName="A_fire_05.png" />
+        <ElementNode type="Image" elementID="ID_cube4" anchorX="0" anchorY="0" positionX="46" positionY="10" z="0" imageName="S_cube_02.png" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_monsterSlot5" anchorX="0" anchorY="0" positionX="10" positionY="10" z="0" imageName="9_empty_02.png" ninePatchSize="{180,172}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_monsterSlotFrame5" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" imageName="9_Back_08.png" ninePatchSize="{180,172}" ninePatchInset="{{20,20},{2,2}}" />
+        <ElementNode type="Image" elementID="ID_monsterBack5" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" imageName="F_getMonster_01.png" />
+        <ElementNode type="Image" elementID="ID_monsterShadow5" anchorX="0.5" anchorY="0.5" positionX="90" positionY="28" z="0" imageName="I_shadow_04.png" />
+        <ElementNode type="Image" elementID="ID_monsterAttribute5" anchorX="0" anchorY="0" positionX="0" positionY="126" z="0" imageName="A_fire_05.png" />
+        <ElementNode type="Image" elementID="ID_cube5" anchorX="0" anchorY="0" positionX="46" positionY="10" z="0" imageName="S_cube_02.png" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_monsterSlot6" anchorX="0" anchorY="0" positionX="200" positionY="10" z="0" imageName="9_empty_02.png" ninePatchSize="{180,172}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_monsterSlotFrame6" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" imageName="9_Back_08.png" ninePatchSize="{180,172}" ninePatchInset="{{20,20},{2,2}}" />
+        <ElementNode type="Image" elementID="ID_monsterBack6" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" imageName="F_getMonster_01.png" />
+        <ElementNode type="Image" elementID="ID_monsterShadow6" anchorX="0.5" anchorY="0.5" positionX="90" positionY="28" z="0" imageName="I_shadow_04.png" />
+        <ElementNode type="Image" elementID="ID_monsterAttribute6" anchorX="0" anchorY="0" positionX="0" positionY="126" z="0" imageName="A_fire_05.png" />
+        <ElementNode type="Image" elementID="ID_cube6" anchorX="0" anchorY="0" positionX="46" positionY="10" z="0" imageName="S_cube_02.png" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_monsterSlot7" anchorX="0" anchorY="0" positionX="390" positionY="10" z="0" imageName="9_empty_02.png" ninePatchSize="{180,172}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_monsterSlotFrame7" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" imageName="9_Back_08.png" ninePatchSize="{180,172}" ninePatchInset="{{20,20},{2,2}}" />
+        <ElementNode type="Image" elementID="ID_monsterBack7" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" imageName="F_getMonster_01.png" />
+        <ElementNode type="Image" elementID="ID_monsterShadow7" anchorX="0.5" anchorY="0.5" positionX="90" positionY="28" z="0" imageName="I_shadow_04.png" />
+        <ElementNode type="Image" elementID="ID_monsterAttribute7" anchorX="0" anchorY="0" positionX="0" positionY="126" z="0" imageName="A_fire_05.png" />
+        <ElementNode type="Image" elementID="ID_cube7" anchorX="0" anchorY="0" positionX="46" positionY="10" z="0" imageName="S_cube_02.png" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_monsterSlot8" anchorX="0" anchorY="0" positionX="580" positionY="10" z="0" imageName="9_empty_02.png" ninePatchSize="{180,172}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_monsterSlotFrame8" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" imageName="9_Back_08.png" ninePatchSize="{180,172}" ninePatchInset="{{20,20},{2,2}}" />
+        <ElementNode type="Image" elementID="ID_monsterBack8" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" imageName="F_getMonster_01.png" />
+        <ElementNode type="Image" elementID="ID_monsterShadow8" anchorX="0.5" anchorY="0.5" positionX="90" positionY="28" z="0" imageName="I_shadow_04.png" />
+        <ElementNode type="Image" elementID="ID_monsterAttribute8" anchorX="0" anchorY="0" positionX="0" positionY="126" z="0" imageName="A_fire_05.png" />
+        <ElementNode type="Image" elementID="ID_cube8" anchorX="0" anchorY="0" positionX="46" positionY="10" z="0" imageName="S_cube_02.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatchButton" elementID="ID_btnOk" anchorX="0" anchorY="0" positionX="298" positionY="18" z="0" imageName="9_btn_06.png" ninePatchSize="{232,88}" ninePatchInset="{{48,43},{2,2}}">
+      <ElementNode type="Label" elementID="ID_LABEL_1" anchorX="0" anchorY="0" positionX="0" positionY="28" z="0" labelContent="OK" fontStyle="1" fontSize="30" fontColor="{255,255,255}" areaSizeX="232" areaSizeY="34" alignment="1" effect="2" effectOffset="2" effectColor="{0,75,19}" />
+    </ElementNode>
+    <ElementNode type="Image" elementID="ID_ribon" anchorX="0" anchorY="0" positionX="174" positionY="480" z="0" imageName="K_ribon_01.png">
+      <ElementNode type="Label" elementID="ID_LABEL_2" anchorX="0" anchorY="0" positionX="62" positionY="28" z="0" labelContent="Monster Obtained" fontStyle="1" fontSize="24" fontColor="{255,246,148}" areaSizeX="358" areaSizeY="40" alignment="1" effect="2" effectOffset="2" effectColor="{169,40,0}" />
+    </ElementNode>
+  </ElementNode>
+</root>

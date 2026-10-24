@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_notiSlot" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{564,54}" ninePatchInset="{{1,1},{2,2}}">
+    <ElementNode type="Label" elementID="ID_txt1" anchorX="0" anchorY="0" positionX="10" positionY="0" z="0" scaleX="1" scaleY="1" labelContent="KunKun obtained " fontStyle="1" fontSize="18" fontColor="{255,249,214}" areaSizeX="512" areaSizeY="30" alignment="0" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+    <ElementNode type="Label" elementID="ID_txt2" anchorX="0" anchorY="0" positionX="404" positionY="0" z="0" scaleX="1" scaleY="1" labelContent="by Cube" fontStyle="1" fontSize="18" fontColor="{255,249,214}" areaSizeX="154" areaSizeY="30" alignment="0" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+    <ElementNode type="Button" elementID="ID_btnMon" anchorX="0" anchorY="0" positionX="270" positionY="-1" z="0" scaleX="0.8" scaleY="0.8" imageName="B_green_01.png">
+      <ElementNode type="Label" elementID="ID_txtMonName" anchorX="0" anchorY="0" positionX="6" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Monster Name" fontStyle="1" fontSize="18" fontColor="{0,22,2}" areaSizeX="92" areaSizeY="30" alignment="0" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+      <ElementNode type="Image" elementID="ID_grade" anchorX="0" anchorY="0" positionX="92" positionY="16" z="0" scaleX="1" scaleY="1" imageName="I_grade_05.png" />
+      <ElementNode type="Label" elementID="ID_txtGradeN" anchorX="0" anchorY="0" positionX="106" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="N" fontStyle="1" fontSize="18" fontColor="{0,22,2}" areaSizeX="28" areaSizeY="30" alignment="0" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+    </ElementNode>
+  </ElementNode>
+</root>

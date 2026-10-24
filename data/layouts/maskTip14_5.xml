@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="Image" elementID="ID_MaskTip" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png">
+    <ElementNode type="NinePatchButton" elementID="ID_9BUTTON_All" anchorX="0" anchorY="0" positionX="0" positionY="0" z="2" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{1066,640}" ninePatchInset="{{1,1},{2,2}}" />
+    <ElementNode type="NinePatch" elementID="ID_maskTip14_5" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{1066,640}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_1" anchorX="0" anchorY="0" positionX="71" positionY="492" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{392,92}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_1" anchorX="0" anchorY="0" positionX="6" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Press and hold on the Monster in the list to show its information" fontStyle="0" fontSize="22" fontColor="{255,162,0}" areaSizeX="380" areaSizeY="80" alignment="0" lineAlignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_2" anchorX="0" anchorY="0" positionX="71" positionY="152" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{392,92}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_2" anchorX="0" anchorY="0" positionX="6" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Higher class or level will be automatically added first " fontStyle="0" fontSize="22" fontColor="{255,162,0}" areaSizeX="380" areaSizeY="80" alignment="0" lineAlignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_3" anchorX="0" anchorY="0" positionX="550" positionY="42" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{452,182}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_3" anchorX="0" anchorY="0" positionX="6" positionY="116" z="0" scaleX="1" scaleY="1" labelContent="Click a monster from left then click here to add. " fontStyle="0" fontSize="22" fontColor="{255,162,0}" areaSizeX="440" areaSizeY="60" alignment="0" lineAlignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+        <ElementNode type="Label" elementID="ID_LABEL_4" anchorX="0" anchorY="0" positionX="6" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Click a monster here then click ‘Remove’ button on the left to remove from the team. " fontStyle="0" fontSize="22" fontColor="{255,162,0}" areaSizeX="440" areaSizeY="90" alignment="0" lineAlignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="Image" elementID="ID_IMAGE_BG" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" />
+  </ElementNode>
+</root>

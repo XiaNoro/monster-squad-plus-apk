@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_frameSize" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{100,104}" ninePatchInset="{{1,1},{2,2}}">
+    <ElementNode type="NinePatch" elementID="ID_backImage" anchorX="0" anchorY="0" positionX="0" positionY="4" z="0" scaleX="1" scaleY="1" imageName="9_Back_08.png" ninePatchSize="{100,100}" ninePatchInset="{{20,20},{2,2}}" />
+    <ElementNode type="Image" elementID="ID_badgeEmpty" anchorX="0" anchorY="0" positionX="4" positionY="8" z="1" scaleX="1" scaleY="1" imageName="B_monEmpty_06.png" />
+    <ElementNode type="NinePatch" elementID="ID_badgeBlack" anchorX="0" anchorY="0" positionX="4" positionY="8" z="4" scaleX="1" scaleY="1" imageName="9_Back_13.png" ninePatchSize="{92,92}" ninePatchInset="{{11,11},{2,2}}" />
+    <ElementNode type="NinePatch" elementID="ID_check" anchorX="0" anchorY="0" positionX="4" positionY="8" z="5" scaleX="1" scaleY="1" imageName="9_frame_03.png" ninePatchSize="{92,92}" ninePatchInset="{{16,16},{2,2}}" />
+    <ElementNode type="NinePatch" elementID="ID_select" anchorX="0" anchorY="0" positionX="4" positionY="8" z="6" scaleX="1" scaleY="1" imageName="9_frame_03.png" ninePatchSize="{92,92}" ninePatchInset="{{16,16},{2,2}}">
+      <ElementNode type="Label" elementID="ID_txtSelect" anchorX="0" anchorY="0" positionX="0" positionY="28" z="0" scaleX="1" scaleY="1" labelContent="Select" fontStyle="1" fontSize="24" fontColor="{255,255,0}" areaSizeX="92" areaSizeY="30" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+    </ElementNode>
+  </ElementNode>
+</root>

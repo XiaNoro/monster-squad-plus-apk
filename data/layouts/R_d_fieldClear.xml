@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_9PATCH_2" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_black60.png" ninePatchSize="{1066,640}" ninePatchInset="{{1,1},{2,2}}">
+    <ElementNode type="NinePatch" elementID="ID_Dialog" anchorX="0" anchorY="0" positionX="284" positionY="100" z="0" scaleX="1" scaleY="1" imageName="9_Back_19.png" ninePatchSize="{498,434}" ninePatchInset="{{50,50},{2,2}}">
+      <ElementNode type="NinePatch" elementID="ID_baseback" anchorX="0" anchorY="0" positionX="12" positionY="16" z="0" scaleX="1" scaleY="1" imageName="9_Back_01.png" ninePatchSize="{472,340}" ninePatchInset="{{84,126},{2,2}}">
+        <ElementNode type="Image" elementID="ID_titleRibon" anchorX="0" anchorY="0" positionX="-18" positionY="320" z="1" scaleX="1.06" scaleY="1.06" imageName="K_ribon_01.png">
+          <ElementNode type="Label" elementID="ID_titleText" anchorX="0" anchorY="0" positionX="90" positionY="30" z="0" scaleX="1" scaleY="1" labelContent="First Quest Successful!" fontStyle="1" fontSize="28" fontColor="{255,220,125}" areaSizeX="300" areaSizeY="40" alignment="1" effect="2" effectOffset="2" effectColor="{80,40,0}" />
+        </ElementNode>
+        <ElementNode type="Label" elementID="ID_headText" anchorX="0" anchorY="0" positionX="28" positionY="256" z="0" scaleX="1" scaleY="1" labelContent="oo Island Quest Completed!" fontStyle="1" fontSize="26" fontColor="{45,20,0}" areaSizeX="414" areaSizeY="40" alignment="1" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        <ElementNode type="NinePatchButton" elementID="ID_btnOk" anchorX="0.5" anchorY="0.5" positionX="236" positionY="68" z="0" scaleX="1" scaleY="1" imageName="9_btn_06.png" ninePatchSize="{272,88}" ninePatchInset="{{48,43},{2,2}}">
+          <ElementNode type="Label" elementID="ID_LABEL_5" anchorX="0" anchorY="0" positionX="42" positionY="22" z="1" scaleX="1" scaleY="1" labelContent="OK" fontStyle="1" fontSize="30" fontColor="{255,255,255}" areaSizeX="180" areaSizeY="40" alignment="1" effect="2" effectOffset="2" effectColor="{0,64,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_base" anchorX="0" anchorY="0" positionX="28" positionY="126" z="0" scaleX="1" scaleY="1" imageName="9_Back_02.png" ninePatchSize="{414,114}" ninePatchInset="{{15,15},{2,2}}">
+          <ElementNode type="NinePatch" elementID="ID_teamSlot" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{10,10}" ninePatchInset="{{1,1},{2,2}}">
+            <ElementNode type="Label" elementID="ID_text_1" anchorX="0" anchorY="0" positionX="12" positionY="8" z="0" scaleX="1" scaleY="1" labelContent="Team slot expanded.              Make the strongest monster your leader." fontStyle="1" fontSize="20" fontColor="{45,20,0}" areaSizeX="294" areaSizeY="96" alignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+            <ElementNode type="Button" elementID="ID_btnTeam" anchorX="0.5" anchorY="0.5" positionX="356" positionY="56" z="0" scaleX="1" scaleY="1" imageName="B_team_01.png">
+              <ElementNode type="Label" elementID="ID_LABEL_1" anchorX="0" anchorY="0" positionX="8" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Edit Team" fontStyle="1" fontSize="17" fontColor="{255,230,150}" areaSizeX="80" areaSizeY="20" alignment="1" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+            </ElementNode>
+          </ElementNode>
+          <ElementNode type="NinePatch" elementID="ID_cubeSlot" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{10,10}" ninePatchInset="{{1,1},{2,2}}">
+            <ElementNode type="Label" elementID="ID_text_2" anchorX="0" anchorY="0" positionX="10" positionY="21" z="0" scaleX="1" scaleY="1" labelContent="Inventory expanded. Go get more monsters!" fontStyle="1" fontSize="20" fontColor="{45,20,0}" areaSizeX="278" areaSizeY="60" alignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+            <ElementNode type="NinePatch" elementID="ID_cubeMon" anchorX="0" anchorY="0" positionX="288" positionY="10" z="0" scaleX="1" scaleY="1" imageName="9_Back_08.png" ninePatchSize="{118,88}" ninePatchInset="{{20,20},{2,2}}">
+              <ElementNode type="Image" elementID="ID_IMAGE_2" anchorX="0" anchorY="0" positionX="30" positionY="40" z="0" scaleX="1" scaleY="1" imageName="I_mon_01.png" />
+              <ElementNode type="Label" elementID="ID_cubeMonText" anchorX="0" anchorY="0" positionX="0" positionY="4" z="2" scaleX="1" scaleY="1" labelContent="+00" fontStyle="1" fontSize="30" fontColor="{255,255,255}" areaSizeX="118" areaSizeY="34" alignment="1" effect="2" effectOffset="2" effectColor="{70,45,20}" />
+            </ElementNode>
+          </ElementNode>
+          <ElementNode type="NinePatch" elementID="ID_crystal" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{10,10}" ninePatchInset="{{1,1},{2,2}}">
+            <ElementNode type="Label" elementID="ID_text_3" anchorX="0" anchorY="0" positionX="10" positionY="14" z="0" scaleX="1" scaleY="1" labelContent="Gems provided from completing your first quest!" fontStyle="1" fontSize="20" fontColor="{45,20,0}" areaSizeX="278" areaSizeY="74" alignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+            <ElementNode type="NinePatch" elementID="ID_crystal_1" anchorX="0" anchorY="0" positionX="288" positionY="10" z="0" scaleX="1" scaleY="1" imageName="9_Back_08.png" ninePatchSize="{118,88}" ninePatchInset="{{20,20},{2,2}}">
+              <ElementNode type="Image" elementID="ID_IMAGE_1" anchorX="0" anchorY="0" positionX="26" positionY="36" z="0" scaleX="1" scaleY="1" imageName="I_crystal_02.png" />
+              <ElementNode type="Label" elementID="ID_crystalText" anchorX="0" anchorY="0" positionX="0" positionY="4" z="2" scaleX="1" scaleY="1" labelContent="+00" fontStyle="1" fontSize="30" fontColor="{255,255,255}" areaSizeX="118" areaSizeY="34" alignment="1" effect="2" effectOffset="2" effectColor="{70,45,20}" />
+            </ElementNode>
+          </ElementNode>
+          <ElementNode type="NinePatch" elementID="ID_cupon" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{10,10}" ninePatchInset="{{1,1},{2,2}}">
+            <ElementNode type="Label" elementID="ID_text_4" anchorX="0" anchorY="0" positionX="10" positionY="20" z="0" scaleX="1" scaleY="1" labelContent="Coupon issued. Please check your Mailbox." fontStyle="1" fontSize="20" fontColor="{45,20,0}" areaSizeX="278" areaSizeY="60" alignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+            <ElementNode type="NinePatch" elementID="ID_cupon_1" anchorX="0" anchorY="0" positionX="288" positionY="10" z="0" scaleX="1" scaleY="1" imageName="9_Back_08.png" ninePatchSize="{118,88}" ninePatchInset="{{20,20},{2,2}}">
+              <ElementNode type="Image" elementID="ID_IMAGE_1_1" anchorX="0" anchorY="0" positionX="20" positionY="36" z="0" scaleX="1" scaleY="1" imageName="I_coupon_01.png" />
+              <ElementNode type="Label" elementID="ID_cuponText" anchorX="0" anchorY="0" positionX="0" positionY="4" z="2" scaleX="1" scaleY="1" labelContent="+00" fontStyle="1" fontSize="30" fontColor="{255,255,255}" areaSizeX="118" areaSizeY="34" alignment="1" effect="2" effectOffset="2" effectColor="{70,45,20}" />
+            </ElementNode>
+          </ElementNode>
+          <ElementNode type="NinePatch" elementID="ID_trainSlot" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{10,10}" ninePatchInset="{{1,1},{2,2}}">
+            <ElementNode type="Label" elementID="ID_text_5" anchorX="0" anchorY="0" positionX="12" positionY="8" z="0" scaleX="1" scaleY="1" labelContent="문구 입력" fontStyle="1" fontSize="20" fontColor="{45,20,0}" areaSizeX="294" areaSizeY="96" alignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+            <ElementNode type="Button" elementID="ID_btnRaise_1" anchorX="0.5" anchorY="0.5" positionX="356" positionY="56" z="0" scaleX="1" scaleY="1" imageName="B_raise_01.png">
+              <ElementNode type="Label" elementID="ID_LABEL_1_1" anchorX="0" anchorY="0" positionX="8" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Train" fontStyle="1" fontSize="17" fontColor="{255,230,150}" areaSizeX="80" areaSizeY="20" alignment="1" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+            </ElementNode>
+          </ElementNode>
+        </ElementNode>
+      </ElementNode>
+    </ElementNode>
+  </ElementNode>
+</root>

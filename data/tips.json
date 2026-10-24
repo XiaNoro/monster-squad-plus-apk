@@ -1,0 +1,28 @@
+{
+    "_note":  "Loading-screen tips as shown in the original (OCR of the TapGameplay walkthrough loading screens). Friend/social tips omitted (no online features).",
+    "tips":  [
+                 "Boost Points give you better success rates.",
+                 "100 Boost Points means a 100% success rate.",
+                 "Water monsters resist Fire monsters.",
+                 "Fire monsters resist Nature monsters.",
+                 "Nature monsters resist Water monsters.",
+                 "Normal attribute won\u0027t be affected by any attribute.",
+                 "Use elemental weaknesses to crush enemies.",
+                 "Use team effects to beat powerful enemies.",
+                 "You must always have a team leader.",
+                 "Each monster in your team must be unique.",
+                 "After Sprout Island you can use 4 monsters.",
+                 "Your team\u0027s size doesn\u0027t affect your EXP.",
+                 "Fight in 51 Battle Arenas to earn 30 Gems!",
+                 "Test your strength in the Battle Arena!",
+                 "Join the Battle Arena to earn Gems.",
+                 "Team with the longest surviving leader will win.",
+                 "Only max level +5 monsters can be Fused.",
+                 "Level up to increase HP, Attack and Recovery.",
+                 "Boost to increase HP, Attack, and Recovery.",
+                 "You can use your monsters\u0027 skills in battle.",
+                 "You can\u0027t adventure with a full inventory.",
+                 "You can preview monsters in the Mystery Box.",
+                 "Use the Continue feature to revive your team."
+             ]
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_frameSize" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{92,92}" ninePatchInset="{{1,1},{2,2}}">
+    <ElementNode type="Image" elementID="ID_monEmpty" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="B_monEmpty_01.png" />
+    <ElementNode type="Image" elementID="ID_monNoMeet" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="B_monEmpty_03.png" />
+    <ElementNode type="Image" elementID="ID_att" anchorX="0" anchorY="0" positionX="0" positionY="0" z="2" scaleX="1" scaleY="1" imageName="M_attBalance_01.png" />
+    <ElementNode type="NinePatch" elementID="ID_grade" anchorX="0" anchorY="0" positionX="0" positionY="0" z="3" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{92,92}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Image" elementID="ID_grade1" anchorX="0" anchorY="0" positionX="30" positionY="76" z="0" scaleX="1" scaleY="1" imageName="I_grade_04.png" />
+      <ElementNode type="Image" elementID="ID_grade2" anchorX="0" anchorY="0" positionX="38" positionY="76" z="0" scaleX="1" scaleY="1" imageName="I_grade_04.png" />
+      <ElementNode type="Image" elementID="ID_grade3" anchorX="0" anchorY="0" positionX="46" positionY="76" z="0" scaleX="1" scaleY="1" imageName="I_grade_04.png" />
+      <ElementNode type="Image" elementID="ID_grade4" anchorX="0" anchorY="0" positionX="54" positionY="76" z="0" scaleX="1" scaleY="1" imageName="I_grade_04.png" />
+      <ElementNode type="Image" elementID="ID_grade5" anchorX="0" anchorY="0" positionX="62" positionY="76" z="0" scaleX="1" scaleY="1" imageName="I_grade_04.png" />
+      <ElementNode type="Image" elementID="ID_grade6" anchorX="0" anchorY="0" positionX="70" positionY="76" z="0" scaleX="1" scaleY="1" imageName="I_grade_04.png" />
+    </ElementNode>
+    <ElementNode type="Image" elementID="ID_party" anchorX="0" anchorY="0" positionX="22" positionY="58" z="4" scaleX="1" scaleY="1" imageName="I_check05.PNG" />
+    <ElementNode type="Label" elementID="ID_level" anchorX="0" anchorY="0" positionX="30" positionY="0" z="4" scaleX="1" scaleY="1" labelContent="Lv.20" fontStyle="1" fontSize="18" fontColor="{255,255,255}" areaSizeX="60" areaSizeY="22" alignment="2" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+    <ElementNode type="Label" elementID="ID_strenth" anchorX="0" anchorY="0" positionX="2" positionY="0" z="4" scaleX="1" scaleY="1" labelContent="+0" fontStyle="1" fontSize="18" fontColor="{130,210,235}" areaSizeX="30" areaSizeY="22" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{55,20,90}" />
+    <ElementNode type="NinePatch" elementID="ID_check" anchorX="0" anchorY="0" positionX="0" positionY="0" z="5" scaleX="1" scaleY="1" imageName="9_frame_03.png" ninePatchSize="{92,92}" ninePatchInset="{{16,16},{2,2}}" />
+    <ElementNode type="Image" elementID="ID_monAll" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="B_monEmpty_05.png" />
+    <ElementNode type="Image" elementID="ID_monInfoEmpty" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="B_monEmpty_06.png" />
+    <ElementNode type="Label" elementID="ID_level_F" anchorX="0" anchorY="0" positionX="30" positionY="0" z="4" scaleX="1" scaleY="1" labelContent="Lv.20" fontStyle="1" fontSize="18" fontColor="{218,148,65}" areaSizeX="60" areaSizeY="22" alignment="2" lineAlignment="0" effect="2" effectOffset="2" effectColor="{69,35,8}" />
+    <ElementNode type="Label" elementID="ID_strenth_F" anchorX="0" anchorY="0" positionX="2" positionY="0" z="4" scaleX="1" scaleY="1" labelContent="+0" fontStyle="1" fontSize="18" fontColor="{218,148,65}" areaSizeX="30" areaSizeY="22" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{69,35,8}" />
+    <ElementNode type="Image" elementID="ID_att_F" anchorX="0" anchorY="0" positionX="0" positionY="0" z="2" scaleX="1" scaleY="1" imageName="M_attExample_01.png" />
+    <ElementNode type="Image" elementID="ID_prefer" anchorX="0" anchorY="0" positionX="72" positionY="76" z="6" scaleX="1" scaleY="1" imageName="I_prefer_03.png" />
+    <ElementNode type="NinePatch" elementID="ID_class" anchorX="0" anchorY="0" positionX="56" positionY="0" z="4" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{36,36}" ninePatchInset="{{1,1},{2,2}}" />
+    <ElementNode type="Label" elementID="ID_monN" anchorX="0" anchorY="0" positionX="16" positionY="0" z="4" scaleX="1" scaleY="1" labelContent="0/0" fontStyle="1" fontSize="18" fontColor="{255,255,255}" areaSizeX="60" areaSizeY="22" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}">
+      <ElementNode type="Label" elementID="ID_txtTouch" anchorX="0" anchorY="0" positionX="-10" positionY="34" z="5" scaleX="1" scaleY="1" labelContent="Touch" fontStyle="1" fontSize="18" fontColor="{255,255,255}" areaSizeX="80" areaSizeY="22" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+    </ElementNode>
+    <ElementNode type="Label" elementID="ID_monN1" anchorX="0" anchorY="0" positionX="2" positionY="0" z="4" scaleX="1" scaleY="1" labelContent="0/0" fontStyle="1" fontSize="18" fontColor="{255,255,255}" areaSizeX="60" areaSizeY="22" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+    <ElementNode type="NinePatch" elementID="ID_monOpacity" anchorX="0" anchorY="0" positionX="0" positionY="0" z="6" scaleX="1" scaleY="1" imageName="9_Back_13.png" ninePatchSize="{92,92}" ninePatchInset="{{12,12},{2,2}}" />
+    <ElementNode type="NinePatch" elementID="ID_monOpacity1" anchorX="0" anchorY="0" positionX="0" positionY="0" z="3" scaleX="1" scaleY="1" imageName="9_Back_13.png" ninePatchSize="{92,92}" ninePatchInset="{{12,12},{2,2}}" />
+    <ElementNode type="Label" elementID="ID_txtRandom" anchorX="0" anchorY="0" positionX="4" positionY="4" z="2" scaleX="1" scaleY="1" labelContent="Random" fontStyle="1" fontSize="18" fontColor="{255,255,0}" areaSizeX="86" areaSizeY="22" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+    <ElementNode type="Image" elementID="ID_pvpDeath" anchorX="0" anchorY="0" positionX="-4" positionY="-4" z="6" scaleX="1" scaleY="1" imageName="M_pvpDeath_01.png" />
+    <ElementNode type="Image" elementID="ID_pvpReady" anchorX="0" anchorY="0" positionX="-14" positionY="-14" z="6" scaleX="1" scaleY="1" imageName="M_pvpReady_01.png" />
+    <ElementNode type="Image" elementID="ID_pvpSecret" anchorX="0" anchorY="0" positionX="0" positionY="0" z="5" scaleX="1" scaleY="1" imageName="B_monEmpty_07.png" />
+  </ElementNode>
+</root>

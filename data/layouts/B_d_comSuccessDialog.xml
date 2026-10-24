@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_9PATCH_1" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" imageName="9_black60.png" ninePatchSize="{960,640}" ninePatchInset="{{1,1},{2,2}}">
+    <ElementNode type="NinePatch" elementID="ID_comSucessDialog" anchorX="0" anchorY="0" positionX="244" positionY="107" z="0" imageName="9_Back_14.png" ninePatchSize="{450,460}" ninePatchInset="{{152,138},{2,2}}">
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_3" anchorX="0" anchorY="0" positionX="38" positionY="116" z="0" imageName="9_Back_15.png" ninePatchSize="{360,4}" ninePatchInset="{{106,0},{2,4}}" />
+      <ElementNode type="NinePatchButton" elementID="ID_btnOk" anchorX="0" anchorY="0" positionX="86" positionY="20" z="0" imageName="9_btn_06.png" ninePatchSize="{250,88}" ninePatchInset="{{48,43},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_1" anchorX="0" anchorY="0" positionX="34" positionY="21" z="0" labelContent="확 인" fontStyle="1" fontSize="30" fontColor="{255,255,255}" areaSizeX="180" areaSizeY="40" alignment="1" effect="2" effectOffset="2" effectColor="{0,64,0}" />
+      </ElementNode>
+      <ElementNode type="Image" elementID="ID_titleImage" anchorX="0" anchorY="0" positionX="-26" positionY="352" z="0" imageName="K_ribon_01.png">
+        <ElementNode type="Label" elementID="ID_titleText" anchorX="0" anchorY="0" positionX="88" positionY="34" z="0" labelContent="축하 합니다." fontStyle="1" fontSize="30" fontColor="{255,255,255}" areaSizeX="300" areaSizeY="40" alignment="1" effect="1" effectOffset="2" effectColor="{64,0,0}" />
+      </ElementNode>
+      <ElementNode type="Label" elementID="ID_baseText" anchorX="0" anchorY="0" positionX="48" positionY="124" z="0" labelContent="합성에 성공 하였습니다." fontStyle="1" fontSize="26" fontColor="{60,45,5}" areaSizeX="340" areaSizeY="40" alignment="1" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+      <ElementNode type="NinePatch" elementID="ID_monster" anchorX="0" anchorY="0" positionX="120" positionY="172" z="0" imageName="9_Back_08.png" ninePatchSize="{188,180}" ninePatchInset="{{20,20},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_2" anchorX="0" anchorY="0" positionX="4" positionY="4" z="0" imageName="F_getMonster_01.png">
+          <ElementNode type="Image" elementID="ID_mon1Sh" anchorX="0.5" anchorY="0.5" positionX="90" positionY="28" z="0" imageName="I_shadow_02.png" />
+          <ElementNode type="Image" elementID="ID_mon1Grade1" anchorX="0" anchorY="0" positionX="8" positionY="4" z="1" imageName="I_grade_03.png" />
+          <ElementNode type="Image" elementID="ID_mon1Grade2" anchorX="0" anchorY="0" positionX="26" positionY="4" z="1" imageName="I_grade_03.png" />
+          <ElementNode type="Image" elementID="ID_mon1Grade3" anchorX="0" anchorY="0" positionX="44" positionY="4" z="1" imageName="I_grade_03.png" />
+          <ElementNode type="Image" elementID="ID_mon1Grade4" anchorX="0" anchorY="0" positionX="62" positionY="4" z="1" imageName="I_grade_03.png" />
+          <ElementNode type="Image" elementID="ID_mon1Grade5" anchorX="0" anchorY="0" positionX="80" positionY="4" z="1" imageName="I_grade_03.png" />
+          <ElementNode type="Image" elementID="ID_mon1Grade6" anchorX="0" anchorY="0" positionX="98" positionY="4" z="1" imageName="I_grade_03.png" />
+          <ElementNode type="Image" elementID="ID_mon1att" anchorX="0" anchorY="0" positionX="2" positionY="128" z="1" imageName="A_balance_05.png" />
+          <ElementNode type="Label" elementID="ID_mon1Text" anchorX="0" anchorY="0" positionX="16" positionY="138" z="2" labelContent="큐몬이름" fontStyle="1" fontSize="18" fontColor="{255,255,255}" areaSizeX="160" areaSizeY="22" alignment="1" effect="2" effectOffset="2" effectColor="{80,40,0}" />
+          <ElementNode type="Label" elementID="ID_LABEL_2" anchorX="0" anchorY="0" positionX="112" positionY="0" z="0" labelContent="Lv." fontStyle="1" fontSize="20" fontColor="{255,255,255}" areaSizeX="40" areaSizeY="24" alignment="2" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+          <ElementNode type="Label" elementID="ID_levelText" anchorX="0" anchorY="0" positionX="145" positionY="2" z="0" labelContent="20" fontStyle="1" fontSize="24" fontColor="{255,255,255}" areaSizeX="40" areaSizeY="24" alignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+        </ElementNode>
+      </ElementNode>
+    </ElementNode>
+  </ElementNode>
+</root>

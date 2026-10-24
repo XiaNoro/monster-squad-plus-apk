@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_monBook" anchorX="0" anchorY="0" positionX="16" positionY="36" z="0" imageName="9_empty_02.png" ninePatchSize="{934,524}" ninePatchInset="{{1,1},{2,2}}">
+    <ElementNode type="NinePatch" elementID="ID_monster" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" imageName="9_Back_01.png" ninePatchSize="{934,460}" ninePatchInset="{{84,126},{2,2}}">
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_4" anchorX="0" anchorY="0" positionX="58" positionY="380" z="0" imageName="9_Back_03.png" ninePatchSize="{580,52}" ninePatchInset="{{20,20},{1,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_3" anchorX="0" anchorY="0" positionX="20" positionY="4" z="0" labelContent="상 점 - 큐몬 큐브" fontStyle="1" fontSize="30" fontColor="{255,220,125}" areaSizeX="500" areaSizeY="40" alignment="0" effect="1" effectOffset="3" effectColor="{80,40,0}" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnCupon" anchorX="0" anchorY="0" positionX="740" positionY="378" z="0" imageName="9_btn_05.png" ninePatchSize="{150,60}" ninePatchInset="{{28,28},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_4" anchorX="0" anchorY="0" positionX="4" positionY="14" z="0" labelContent="쿠폰 등록" fontStyle="1" fontSize="22" fontColor="{255,255,255}" areaSizeX="140" areaSizeY="30" alignment="1" effect="2" effectOffset="2" effectColor="{95,40,0}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_5" anchorX="0" anchorY="0" positionX="38" positionY="34" z="0" imageName="9_Back_02.png" ninePatchSize="{860,330}" ninePatchInset="{{15,15},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_ID_arrayPosition" anchorX="0" anchorY="0" positionX="14" positionY="16" z="0" imageName="9_empty_02.png" ninePatchSize="{836,294}" ninePatchInset="{{1,1},{2,2}}" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="NinePatchButton" elementID="ID_btnCubeT" anchorX="0" anchorY="0" positionX="31" positionY="440" z="-1" imageName="9_tap02_n.png" ninePatchSize="{174,84}" ninePatchInset="{{36,33},{2,1}}">
+      <ElementNode type="Image" elementID="ID_IMAGE_2" anchorX="0" anchorY="0" positionX="24" positionY="24" z="0" imageName="I_cube_01.png" />
+      <ElementNode type="Label" elementID="ID_LABEL_1" anchorX="0" anchorY="0" positionX="70" positionY="28" z="0" labelContent="큐 브" fontStyle="1" fontSize="28" fontColor="{255,255,255}" areaSizeX="84" areaSizeY="36" alignment="1" effect="2" effectOffset="2" effectColor="{80,40,0}" />
+    </ElementNode>
+    <ElementNode type="NinePatchButton" elementID="ID_btnItemT" anchorX="0" anchorY="0" positionX="207" positionY="440" z="-1" imageName="9_tap02_n.png" ninePatchSize="{174,84}" ninePatchInset="{{36,33},{2,1}}">
+      <ElementNode type="Image" elementID="ID_IMAGE_16" anchorX="0" anchorY="0" positionX="24" positionY="24" z="0" imageName="I_present_01.png" />
+      <ElementNode type="Label" elementID="ID_LABEL_2" anchorX="0" anchorY="0" positionX="70" positionY="28" z="0" labelContent="아이템" fontStyle="1" fontSize="28" fontColor="{255,255,255}" areaSizeX="84" areaSizeY="36" alignment="1" effect="2" effectOffset="2" effectColor="{80,40,0}" />
+    </ElementNode>
+    <ElementNode type="NinePatchButton" elementID="ID_btnCrystalT" anchorX="0" anchorY="0" positionX="383" positionY="440" z="-1" imageName="9_tap02_n.png" ninePatchSize="{174,84}" ninePatchInset="{{36,33},{2,1}}">
+      <ElementNode type="Image" elementID="ID_IMAGE_17" anchorX="0" anchorY="0" positionX="24" positionY="26" z="0" imageName="I_crystal_01.png" />
+      <ElementNode type="Label" elementID="ID_LABEL_5" anchorX="0" anchorY="0" positionX="66" positionY="28" z="0" labelContent="보 석" fontStyle="1" fontSize="28" fontColor="{255,255,255}" areaSizeX="84" areaSizeY="36" alignment="1" effect="2" effectOffset="2" effectColor="{80,40,0}" />
+    </ElementNode>
+  </ElementNode>
+</root>

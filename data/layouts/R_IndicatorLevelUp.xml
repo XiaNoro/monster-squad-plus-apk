@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="Image" elementID="ID_IMAGE_BASE" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png">
+    <ElementNode type="Image" elementID="ID_IMAGE_EXP_BACK" anchorX="0" anchorY="0" positionX="-32" positionY="7" z="2" scaleX="1" scaleY="1" imageName="beta00ExpBase.png">
+      <ElementNode type="ProgressBar" elementID="ID_PROGRESSBAR_EXP" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="beta00Exp.png" value="100" barDirection="0" />
+      <ElementNode type="Label" elementID="ID_LABEL_EXP_LEVEL" anchorX="0" anchorY="0" positionX="-45" positionY="-3" z="0" scaleX="1" scaleY="1" labelContent="Lv20" fontStyle="1" fontSize="26" fontColor="{255,174,0}" areaSizeX="110" areaSizeY="28" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{36,9,9}" />
+      <ElementNode type="Label" elementID="ID_LABEL_EXP_PROGRESS" anchorX="0" anchorY="0" positionX="31" positionY="17" z="0" scaleX="1" scaleY="1" labelContent="100%" fontStyle="1" fontSize="30" fontColor="{255,228,0}" areaSizeX="120" areaSizeY="32" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{36,9,9}" />
+      <ElementNode type="Image" elementID="ID_IMAGE_LEVEL_UP" anchorX="0.5" anchorY="0.5" positionX="93" positionY="55" z="1" scaleX="1" scaleY="1" imageName="beta00levelUp.png" />
+    </ElementNode>
+  </ElementNode>
+</root>

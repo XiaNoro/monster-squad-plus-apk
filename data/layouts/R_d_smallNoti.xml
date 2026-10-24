@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_smallNoti" anchorX="0" anchorY="0" positionX="7" positionY="518" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{1054,54}" ninePatchInset="{{12,12},{2,2}}" />
+</root>

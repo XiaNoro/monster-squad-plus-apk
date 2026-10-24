@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_frameSize" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{244,340}" ninePatchInset="{{1,1},{2,2}}">
+    <ElementNode type="NinePatchButton" elementID="ID_btnSlot" anchorX="0" anchorY="0" positionX="8" positionY="8" z="0" scaleX="1" scaleY="1" imageName="9_frame_01.png" ninePatchSize="{230,320}" ninePatchInset="{{20,20},{2,2}}">
+      <ElementNode type="Label" elementID="ID_Name" anchorX="0" anchorY="0" positionX="2" positionY="274" z="2" scaleX="1" scaleY="1" labelContent="Item Name" fontStyle="1" fontSize="22" fontColor="{255,255,255}" areaSizeX="220" areaSizeY="32" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{50,30,0}" />
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_1" anchorX="0" anchorY="0" positionX="10" positionY="62" z="0" scaleX="1" scaleY="1" imageName="9_Back_09.png" ninePatchSize="{208,210}" ninePatchInset="{{20,20},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_6" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="F_itemShop_01.png" />
+        <ElementNode type="Image" elementID="ID_recomBack" anchorX="0" anchorY="0" positionX="4" positionY="4" z="1" scaleX="1.11" scaleY="1.18" imageName="F_getMonster_01.png" />
+        <ElementNode type="NinePatch" elementID="ID_itemImage" anchorX="0" anchorY="0" positionX="6" positionY="4" z="2" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{196,204}" ninePatchInset="{{1,1},{2,2}}" />
+        <ElementNode type="NinePatch" elementID="ID_eventTime" anchorX="0" anchorY="0" positionX="0" positionY="176" z="3" scaleX="1" scaleY="1" imageName="9_frame00_08.png" ninePatchSize="{208,28}" ninePatchInset="{{76,2},{2,2}}">
+          <ElementNode type="Label" elementID="ID_timeText" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" labelContent="Closes in 24hr 59min" fontStyle="1" fontSize="17" fontColor="{255,220,85}" areaSizeX="208" areaSizeY="28" alignment="1" lineAlignment="1" effect="2" effectOffset="2" effectColor="{55,15,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_timeBar" anchorX="0" anchorY="0" positionX="28" positionY="6" z="2" scaleX="1" scaleY="1" imageName="9_Back_13.png" ninePatchSize="{154,26}" ninePatchInset="{{12,12},{2,2}}">
+          <ElementNode type="Label" elementID="ID_LABEL_2" anchorX="0" anchorY="0" positionX="2" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="ON" fontStyle="1" fontSize="20" fontColor="{0,210,255}" areaSizeX="48" areaSizeY="22" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,18,71}" />
+          <ElementNode type="Label" elementID="ID_LABEL_2_1" anchorX="0" anchorY="0" positionX="38" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="000 hours" fontStyle="1" fontSize="20" fontColor="{255,228,119}" areaSizeX="106" areaSizeY="22" alignment="2" lineAlignment="0" effect="2" effectOffset="2" effectColor="{43,18,0}" />
+        </ElementNode>
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_buy" anchorX="0" anchorY="0" positionX="14" positionY="14" z="2" scaleX="1" scaleY="1" imageName="9_Back_03.png" ninePatchSize="{198,42}" ninePatchInset="{{20,20},{1,2}}">
+        <ElementNode type="NinePatch" elementID="ID_crystal" anchorX="0" anchorY="0" positionX="18" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{152,40}" ninePatchInset="{{1,1},{2,2}}">
+          <ElementNode type="Image" elementID="ID_IMAGE_2" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_crystal_01.png" />
+          <ElementNode type="Label" elementID="ID_priceText1" anchorX="0" anchorY="0" positionX="42" positionY="0" z="1" scaleX="1" scaleY="1" labelContent="0,000" fontStyle="1" fontSize="28" fontColor="{255,255,255}" areaSizeX="110" areaSizeY="34" alignment="2" lineAlignment="0" effect="2" effectOffset="2" effectColor="{70,30,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_gold" anchorX="0" anchorY="0" positionX="18" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{152,40}" ninePatchInset="{{1,1},{2,2}}">
+          <ElementNode type="Image" elementID="ID_IMAGE_3" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_money_01.png" />
+          <ElementNode type="Label" elementID="ID_priceText2" anchorX="0" anchorY="0" positionX="42" positionY="0" z="1" scaleX="1" scaleY="1" labelContent="0,000" fontStyle="1" fontSize="28" fontColor="{255,255,255}" areaSizeX="110" areaSizeY="34" alignment="2" lineAlignment="0" effect="2" effectOffset="2" effectColor="{70,30,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_friendPoint" anchorX="0" anchorY="0" positionX="18" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{152,40}" ninePatchInset="{{1,1},{2,2}}">
+          <ElementNode type="Image" elementID="ID_IMAGE_4" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_fPoint_01.png" />
+          <ElementNode type="Label" elementID="ID_priceText3" anchorX="0" anchorY="0" positionX="42" positionY="0" z="1" scaleX="1" scaleY="1" labelContent="0,000" fontStyle="1" fontSize="28" fontColor="{255,255,255}" areaSizeX="110" areaSizeY="34" alignment="2" lineAlignment="0" effect="2" effectOffset="2" effectColor="{70,30,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_cash_w" anchorX="0" anchorY="0" positionX="18" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{152,40}" ninePatchInset="{{1,1},{2,2}}">
+          <ElementNode type="Image" elementID="ID_IMAGE_5" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_cash_01.png" />
+          <ElementNode type="Label" elementID="ID_priceText4" anchorX="0" anchorY="0" positionX="42" positionY="0" z="1" scaleX="1" scaleY="1" labelContent="0,000" fontStyle="1" fontSize="28" fontColor="{255,255,255}" areaSizeX="110" areaSizeY="34" alignment="2" lineAlignment="0" effect="2" effectOffset="2" effectColor="{70,30,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_cash_d" anchorX="0" anchorY="0" positionX="18" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{152,40}" ninePatchInset="{{1,1},{2,2}}">
+          <ElementNode type="Image" elementID="ID_IMAGE_5_1" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_cash_02.png" />
+          <ElementNode type="Label" elementID="ID_priceText5" anchorX="0" anchorY="0" positionX="42" positionY="0" z="1" scaleX="1" scaleY="1" labelContent="0,000" fontStyle="1" fontSize="28" fontColor="{255,255,255}" areaSizeX="110" areaSizeY="34" alignment="2" lineAlignment="0" effect="2" effectOffset="2" effectColor="{70,30,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_honor" anchorX="0" anchorY="0" positionX="18" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{152,40}" ninePatchInset="{{1,1},{2,2}}">
+          <ElementNode type="Image" elementID="ID_IMAGE_7" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="I_honor_01.png" />
+          <ElementNode type="Label" elementID="ID_priceText6" anchorX="0" anchorY="0" positionX="42" positionY="0" z="1" scaleX="1" scaleY="1" labelContent="0,000" fontStyle="1" fontSize="28" fontColor="{255,255,255}" areaSizeX="110" areaSizeY="34" alignment="2" lineAlignment="0" effect="2" effectOffset="2" effectColor="{70,30,0}" />
+        </ElementNode>
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_gift" anchorX="0" anchorY="0" positionX="161" positionY="218" z="1" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{20,20}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_1" anchorX="0" anchorY="0" positionX="-6" positionY="-4" z="0" scaleX="0.88" scaleY="0.88" imageName="K_buff_08.png" />
+        <ElementNode type="Label" elementID="ID_LABEL_1" anchorX="0" anchorY="0" positionX="14" positionY="14" z="0" scaleX="1" scaleY="1" labelContent="" fontStyle="1" fontSize="22" fontColor="{255,255,0}" areaSizeX="40" areaSizeY="40" alignment="1" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_badge" anchorX="0" anchorY="0" positionX="-8" positionY="204" z="2" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{84,84}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Image" elementID="ID_sale" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="K_buff_04.png" />
+        <ElementNode type="Image" elementID="ID_new" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="K_buff_05.png" />
+        <ElementNode type="Image" elementID="ID_hot" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="K_buff_06.png" />
+      </ElementNode>
+    </ElementNode>
+  </ElementNode>
+</root>

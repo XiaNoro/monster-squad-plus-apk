@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_chanelSlot_1" anchorX="0" anchorY="0" positionX="8" positionY="0" z="2" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{170,65}" ninePatchInset="{{1,1},{2,2}}">
+    <ElementNode type="Label" elementID="ID_chanel_txt1" anchorX="0" anchorY="0" positionX="0" positionY="-5" z="2" scaleX="1" scaleY="1" labelContent="30" fontStyle="1" fontSize="32" fontColor="{64,0,0}" areaSizeX="170" areaSizeY="65" alignment="1" lineAlignment="1" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+  </ElementNode>
+</root>

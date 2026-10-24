@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="Image" elementID="ID_MaskTip" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png">
+    <ElementNode type="NinePatchButton" elementID="ID_9BUTTON_All" anchorX="0" anchorY="0" positionX="0" positionY="0" z="2" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{1066,640}" ninePatchInset="{{1,1},{2,2}}" />
+    <ElementNode type="NinePatch" elementID="ID_maskTip1_2" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{1066,640}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_1_2_1" anchorX="0" anchorY="0" positionX="6" positionY="338" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{352,198}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_1_2_1" anchorX="0" anchorY="0" positionX="6" positionY="152" z="0" scaleX="1" scaleY="1" labelContent="FRIENDSHIP POINT" fontStyle="0" fontSize="28" fontColor="{255,216,0}" areaSizeX="340" areaSizeY="40" alignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+        <ElementNode type="Label" elementID="ID_LABEL_1_2_2" anchorX="0" anchorY="0" positionX="6" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Points you obtain by exploring with a friend or receiving it as a gift.Points can be used to purchase Friendship Cubs. " fontStyle="0" fontSize="22" fontColor="{255,162,0}" areaSizeX="340" areaSizeY="136" alignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_1_2_2" anchorX="0" anchorY="0" positionX="340" positionY="160" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{312,162}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_1_2_3" anchorX="0" anchorY="0" positionX="6" positionY="116" z="0" scaleX="1" scaleY="1" labelContent="Fuel" fontStyle="0" fontSize="28" fontColor="{255,216,0}" areaSizeX="300" areaSizeY="40" alignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+        <ElementNode type="Label" elementID="ID_LABEL_1_2_4" anchorX="0" anchorY="0" positionX="6" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Fuel is used when exploring The amount of fuel used varies for each field." fontStyle="0" fontSize="22" fontColor="{255,162,0}" areaSizeX="300" areaSizeY="100" alignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_1_2_3" anchorX="0" anchorY="0" positionX="420" positionY="338" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{312,198}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_1_2_5" anchorX="0" anchorY="0" positionX="6" positionY="152" z="0" scaleX="1" scaleY="1" labelContent="GOLD" fontStyle="0" fontSize="28" fontColor="{255,216,0}" areaSizeX="300" areaSizeY="40" alignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+        <ElementNode type="Label" elementID="ID_LABEL_1_2_6" anchorX="0" anchorY="0" positionX="6" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Gold can be obtained in quests.Gold is used to enhance Monsters,or purchase items in Store." fontStyle="0" fontSize="22" fontColor="{255,162,0}" areaSizeX="300" areaSizeY="136" alignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_1_2_4" anchorX="0" anchorY="0" positionX="665" positionY="132" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{320,190}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_1_2_7" anchorX="0" anchorY="0" positionX="6" positionY="144" z="0" scaleX="1" scaleY="1" labelContent="GEMS" fontStyle="0" fontSize="28" fontColor="{255,216,0}" areaSizeX="308" areaSizeY="40" alignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+        <ElementNode type="Label" elementID="ID_LABEL_1_2_8" anchorX="0" anchorY="0" positionX="6" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Gems are obtained during gameplay or purchased in the store. You can use Gems to also purchase Cubes." fontStyle="0" fontSize="22" fontColor="{255,162,0}" areaSizeX="308" areaSizeY="128" alignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_1_2_5" anchorX="0" anchorY="0" positionX="800" positionY="474" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{162,52}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_1_2_9" anchorX="0" anchorY="0" positionX="6" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="SETTINGS" fontStyle="0" fontSize="28" fontColor="{255,216,0}" areaSizeX="150" areaSizeY="40" alignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_1_2_6" anchorX="0" anchorY="0" positionX="790" positionY="406" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{262,52}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_1_2_10" anchorX="0" anchorY="0" positionX="6" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="NOTICE WINDOW" fontStyle="0" fontSize="28" fontColor="{255,216,0}" areaSizeX="250" areaSizeY="40" alignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="Image" elementID="ID_IMAGE_BG" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" />
+  </ElementNode>
+</root>

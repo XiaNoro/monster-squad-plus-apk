@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_9PATCH_1" anchorX="0" anchorY="0" positionX="100" positionY="100" z="0" imageName="B_black00_n.png" ninePatchSize="{400,400}" ninePatchInset="{{13,13},{148,31}}">
+    <ElementNode type="Image" elementID="ID_IMAGE_1" anchorX="0" anchorY="0" positionX="26" positionY="296" z="0" imageName="K_main00.png" />
+    <ElementNode type="Label" elementID="ID_LABEL_1" anchorX="0" anchorY="0" positionX="123" positionY="311" z="0" labelContent="여자가 도망가" fontStyle="1" fontSize="28" fontColor="{255,255,255}" areaSizeX="300" areaSizeY="50" alignment="0" effect="2" effectOffset="4" effectColor="{0,0,0}" />
+    <ElementNode type="Button" elementID="ID_BUTTON_1" anchorX="0" anchorY="0" positionX="90" positionY="122" z="0" imageName="B_auto00_n.png" />
+    <ElementNode type="Button" elementID="ID_BUTTON_2" anchorX="0" anchorY="0" positionX="214" positionY="122" z="0" imageName="B_end00_n.png" />
+    <ElementNode type="Image" elementID="ID_IMAGE_3" anchorX="0" anchorY="0" positionX="215" positionY="28" z="0" imageName="B_skill01_d.png">
+      <ElementNode type="ProgressBar" elementID="ID_PROGRESSBAR_2" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" imageName="B_skill01_n.png" value="75" barDirection="1" />
+    </ElementNode>
+    <ElementNode type="Image" elementID="ID_IMAGE_2" anchorX="0" anchorY="0" positionX="108" positionY="28" z="0" imageName="B_skill00_d.png">
+      <ElementNode type="ProgressBar" elementID="ID_PROGRESSBAR_1" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" imageName="B_skill00_n.png" value="75" barDirection="0" />
+    </ElementNode>
+  </ElementNode>
+</root>

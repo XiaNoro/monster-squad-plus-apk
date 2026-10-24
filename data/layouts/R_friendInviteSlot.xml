@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_frameSize" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{378,100}" ninePatchInset="{{1,1},{2,2}}">
+    <ElementNode type="NinePatch" elementID="ID_9PATCH_2" anchorX="0" anchorY="0" positionX="10" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_frame_01.png" ninePatchSize="{362,98}" ninePatchInset="{{20,20},{2,2}}">
+      <ElementNode type="Label" elementID="ID_friendName" anchorX="0" anchorY="0" positionX="94" positionY="50" z="0" scaleX="1" scaleY="1" labelContent="세빌리아베이비" fontStyle="1" fontSize="20" fontColor="{255,255,255}" areaSizeX="174" areaSizeY="30" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{70,40,0}" />
+      <ElementNode type="Button" elementID="ID_btnInvite" anchorX="0" anchorY="0" positionX="260" positionY="6" z="0" scaleX="1" scaleY="1" imageName="B_invitationS_01.png" />
+      <ElementNode type="NinePatch" elementID="ID_userPhoto" anchorX="0" anchorY="0" positionX="16" positionY="14" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{74,74}" ninePatchInset="{{1,1},{2,2}}" />
+      <ElementNode type="Image" elementID="ID_complete" anchorX="0" anchorY="0" positionX="264" positionY="10" z="0" scaleX="1.2" scaleY="1.2" imageName="I_check02.png" />
+    </ElementNode>
+  </ElementNode>
+  <ElementNode type="NinePatch" elementID="ID_frameSize_2" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{378,100}" ninePatchInset="{{1,1},{2,2}}">
+    <ElementNode type="NinePatch" elementID="ID_9PATCH_2_2" anchorX="0" anchorY="0" positionX="10" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_frame_01.png" ninePatchSize="{362,98}" ninePatchInset="{{20,20},{2,2}}">
+      <ElementNode type="Label" elementID="ID_friendName_2" anchorX="0" anchorY="0" positionX="12" positionY="50" z="0" scaleX="1" scaleY="1" labelContent="AAAAABBBBBCCCCCDDD" fontStyle="1" fontSize="20" fontColor="{255,255,255}" areaSizeX="250" areaSizeY="30" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{70,40,0}" />
+      <ElementNode type="Button" elementID="ID_btnInvite_2" anchorX="0" anchorY="0" positionX="260" positionY="6" z="0" scaleX="1" scaleY="1" imageName="B_invitationS_01.png" />
+      <ElementNode type="Image" elementID="ID_complete_2" anchorX="0" anchorY="0" positionX="264" positionY="10" z="0" scaleX="1.2" scaleY="1.2" imageName="I_check02.png" />
+    </ElementNode>
+  </ElementNode>
+</root>

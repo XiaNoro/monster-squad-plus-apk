@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_9PATCH_1" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9L_empty_01.png" ninePatchSize="{1066,640}" ninePatchInset="{{1,1},{2,2}}">
+    <ElementNode type="Image" elementID="ID_IMAGE_pvpLoading" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="LO_pvp_01.png">
+      <ElementNode type="Label" elementID="ID_LABEL_waiting" anchorX="0.5" anchorY="0.5" positionX="532" positionY="248" z="0" scaleX="1" scaleY="1" labelContent="Loading..." fontStyle="1" fontSize="18" fontColor="{255,251,185}" areaSizeX="500" areaSizeY="30" alignment="1" lineAlignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_tip" anchorX="0.5" anchorY="0.5" positionX="554" positionY="40" z="0" scaleX="1" scaleY="1" imageName="9L_Back_12.png" ninePatchSize="{610,48}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_tip" anchorX="0.5" anchorY="0.5" positionX="324" positionY="22" z="0" scaleX="1" scaleY="1" labelContent="여기에 각종 팁을 표시해주세요." fontStyle="1" fontSize="22" fontColor="{255,251,185}" areaSizeX="570" areaSizeY="30" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+        <ElementNode type="Image" elementID="ID_IMAGE_2" anchorX="0.5" anchorY="0.5" positionX="0" positionY="20" z="0" scaleX="1" scaleY="1" imageName="LO_tip_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_graphBack" anchorX="0" anchorY="0" positionX="356" positionY="20" z="0" scaleX="1" scaleY="1" imageName="9L_title_graphBack_01.png" ninePatchSize="{370,40}" ninePatchInset="{{20,0},{2,40}}">
+        <ElementNode type="NinePatch" elementID="ID_9PATCH_graph" anchorX="0" anchorY="0" positionX="8" positionY="10" z="0" scaleX="1" scaleY="1" imageName="9L_title_graph_01.png" ninePatchSize="{352,22}" ninePatchInset="{{12,0},{2,22}}" />
+        <ElementNode type="Label" elementID="ID_LABEL_1" anchorX="0" anchorY="0" positionX="0" positionY="4" z="0" scaleX="1" scaleY="1" labelContent="Download for additional file (100%)" fontStyle="1" fontSize="18" fontColor="{255,255,255}" areaSizeX="370" areaSizeY="30" alignment="1" lineAlignment="1" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+      </ElementNode>
+    </ElementNode>
+  </ElementNode>
+</root>

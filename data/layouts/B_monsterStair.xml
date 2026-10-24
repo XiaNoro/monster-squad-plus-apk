@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="Image" elementID="ID_monStair" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="K_stairG_01.png">
+    <ElementNode type="Image" elementID="ID_mon" anchorX="0.5" anchorY="0.5" positionX="100" positionY="54" z="2" scaleX="1" scaleY="1" imageName="9_empty_02.png" />
+    <ElementNode type="Image" elementID="ID_monGrade1" anchorX="0" anchorY="0" positionX="42" positionY="14" z="1" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+    <ElementNode type="Image" elementID="ID_monGrade2" anchorX="0" anchorY="0" positionX="62" positionY="14" z="1" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+    <ElementNode type="Image" elementID="ID_monGrade3" anchorX="0" anchorY="0" positionX="82" positionY="14" z="1" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+    <ElementNode type="Image" elementID="ID_monGrade4" anchorX="0" anchorY="0" positionX="100" positionY="14" z="1" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+    <ElementNode type="Image" elementID="ID_monGrade5" anchorX="0" anchorY="0" positionX="120" positionY="14" z="1" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+    <ElementNode type="Image" elementID="ID_monGrade6" anchorX="0" anchorY="0" positionX="140" positionY="14" z="1" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+    <ElementNode type="NinePatch" elementID="ID_check" anchorX="0" anchorY="0" positionX="180" positionY="208" z="3" scaleX="1" scaleY="1" imageName="9_Back_13.png" ninePatchSize="{70,70}" ninePatchInset="{{12,12},{2,2}}">
+      <ElementNode type="Image" elementID="ID_IMAGE_1" anchorX="0" anchorY="0" positionX="2" positionY="4" z="0" scaleX="1" scaleY="1" imageName="K_mark_02.png" />
+    </ElementNode>
+  </ElementNode>
+</root>

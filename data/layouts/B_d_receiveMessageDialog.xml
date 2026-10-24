@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_9PATCH_1" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" imageName="9_black60.png" ninePatchSize="{960,640}" ninePatchInset="{{1,1},{2,2}}">
+    <ElementNode type="NinePatch" elementID="ID_2buttonDialog" anchorX="0" anchorY="0" positionX="160" positionY="90" z="0" imageName="9_Back_14.png" ninePatchSize="{650,485}" ninePatchInset="{{152,138},{2,2}}">
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_3" anchorX="0" anchorY="0" positionX="39" positionY="116" z="0" imageName="9_Back_15.png" ninePatchSize="{554,4}" ninePatchInset="{{106,0},{2,4}}" />
+      <ElementNode type="NinePatchButton" elementID="ID_btnOk" anchorX="0" anchorY="0" positionX="388" positionY="20" z="0" imageName="9_btn_06.png" ninePatchSize="{200,88}" ninePatchInset="{{48,43},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_1" anchorX="0" anchorY="0" positionX="8" positionY="21" z="0" labelContent="확 인" fontStyle="1" fontSize="30" fontColor="{255,255,255}" areaSizeX="180" areaSizeY="40" alignment="1" effect="2" effectOffset="2" effectColor="{0,64,0}" />
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnEsc" anchorX="0" anchorY="0" positionX="40" positionY="20" z="0" imageName="9_btn_01.png" ninePatchSize="{164,88}" ninePatchInset="{{48,43},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_2" anchorX="0" anchorY="0" positionX="2" positionY="21" z="0" labelContent="취 소" fontStyle="1" fontSize="30" fontColor="{255,255,255}" areaSizeX="160" areaSizeY="40" alignment="1" effect="2" effectOffset="2" effectColor="{95,40,0}" />
+      </ElementNode>
+      <ElementNode type="Label" elementID="ID_titleText" anchorX="0" anchorY="0" positionX="209" positionY="416" z="0" labelContent="받은 메시지" fontStyle="1" fontSize="30" fontColor="{245,208,120}" areaSizeX="220" areaSizeY="40" alignment="1" effect="2" effectOffset="2" effectColor="{80,35,0}" />
+      <ElementNode type="Image" elementID="ID_IMAGE_1" anchorX="0" anchorY="0" positionX="134" positionY="394" z="0" imageName="B_sendMessage_02.png" />
+      <ElementNode type="Label" elementID="ID_baseText" anchorX="0" anchorY="0" positionX="48" positionY="154" z="0" labelContent="'우정 포인트' 를 받았습니다." fontStyle="1" fontSize="26" fontColor="{60,45,5}" areaSizeX="540" areaSizeY="160" alignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+      <ElementNode type="Label" elementID="ID_dearName" anchorX="0" anchorY="0" positionX="48" positionY="336" z="0" labelContent="%s 님으로 부터" fontStyle="1" fontSize="30" fontColor="{60,45,5}" areaSizeX="540" areaSizeY="40" alignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+      <ElementNode type="NinePatch" elementID="ID_friendPoint" anchorX="0" anchorY="0" positionX="156" positionY="122" z="0" imageName="9_empty_02.png" ninePatchSize="{300,80}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Image" elementID="ID_IMAGE_2" anchorX="0" anchorY="0" positionX="24" positionY="10" z="1" imageName="I_fPoint_02.png" />
+        <ElementNode type="NinePatch" elementID="ID_9PATCH_2" anchorX="0" anchorY="0" positionX="54" positionY="10" z="0" imageName="9_Back_08.png" ninePatchSize="{224,56}" ninePatchInset="{{20,20},{2,2}}">
+          <ElementNode type="Label" elementID="ID_pointText" anchorX="0" anchorY="0" positionX="54" positionY="2" z="0" labelContent="00" fontStyle="1" fontSize="36" fontColor="{128,255,255}" areaSizeX="140" areaSizeY="44" alignment="2" effect="1" effectOffset="2" effectColor="{0,0,0}" />
+        </ElementNode>
+      </ElementNode>
+      <ElementNode type="NinePatchButton" elementID="ID_btnAnswer" anchorX="0" anchorY="0" positionX="214" positionY="20" z="0" imageName="9_btn_02.png" ninePatchSize="{164,88}" ninePatchInset="{{48,43},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_2_1" anchorX="0" anchorY="0" positionX="2" positionY="21" z="0" labelContent="답 장" fontStyle="1" fontSize="30" fontColor="{255,255,255}" areaSizeX="160" areaSizeY="40" alignment="1" effect="2" effectOffset="2" effectColor="{0,0,128}" />
+      </ElementNode>
+    </ElementNode>
+  </ElementNode>
+</root>

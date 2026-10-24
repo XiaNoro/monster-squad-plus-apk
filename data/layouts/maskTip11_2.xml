@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="Image" elementID="ID_MaskTip" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png">
+    <ElementNode type="NinePatchButton" elementID="ID_9BUTTON_All" anchorX="0" anchorY="0" positionX="0" positionY="0" z="2" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{1066,640}" ninePatchInset="{{1,1},{2,2}}" />
+    <ElementNode type="NinePatch" elementID="ID_maskTip11_2" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{1066,640}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_11_2_1" anchorX="0" anchorY="0" positionX="516" positionY="496" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{364,54}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_11_2_1" anchorX="0" anchorY="0" positionX="16" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Sells the selected Magic Stone." fontStyle="0" fontSize="22" fontColor="{255,162,0}" areaSizeX="340" areaSizeY="34" alignment="0" lineAlignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_11_2_2" anchorX="0" anchorY="0" positionX="488" positionY="346" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{548,98}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_11_2_2" anchorX="0" anchorY="0" positionX="18" positionY="4" z="0" scaleX="1" scaleY="1" labelContent="(2) Select a slot, then press the big button to equip the Magic Stone." fontStyle="0" fontSize="30" fontColor="{255,216,0}" areaSizeX="514" areaSizeY="80" alignment="0" lineAlignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_11_2_3" anchorX="0" anchorY="0" positionX="30" positionY="158" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{560,64}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_11_2_3" anchorX="0" anchorY="0" positionX="6" positionY="8" z="0" scaleX="1" scaleY="1" labelContent="(1) Select a Magic Stone from this list." fontStyle="0" fontSize="30" fontColor="{255,216,0}" areaSizeX="554" areaSizeY="40" alignment="0" lineAlignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_11_2_4" anchorX="0" anchorY="0" positionX="418" positionY="46" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{150,54}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_11_2_4" anchorX="0" anchorY="0" positionX="14" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Equip Cost" fontStyle="0" fontSize="22" fontColor="{255,162,0}" areaSizeX="134" areaSizeY="34" alignment="0" lineAlignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="Image" elementID="ID_IMAGE_BG" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" />
+  </ElementNode>
+</root>

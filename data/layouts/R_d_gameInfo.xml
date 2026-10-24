@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_9PATCH_25" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_black60.png" ninePatchSize="{1066,640}" ninePatchInset="{{1,1},{2,2}}">
+    <ElementNode type="NinePatch" elementID="ID_9PATCH_1" anchorX="0" anchorY="0" positionX="212" positionY="94" z="0" scaleX="1" scaleY="1" imageName="9_Back_19.png" ninePatchSize="{652,448}" ninePatchInset="{{50,50},{2,2}}">
+      <ElementNode type="NinePatch" elementID="ID_gameInfo" anchorX="0" anchorY="0" positionX="14" positionY="18" z="0" scaleX="1" scaleY="1" imageName="9_Back_01.png" ninePatchSize="{620,354}" ninePatchInset="{{84,126},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_title" anchorX="0" anchorY="0" positionX="24" positionY="358" z="0" scaleX="1" scaleY="1" imageName="9_frame_04.png" ninePatchSize="{300,56}" ninePatchInset="{{32,0},{2,56}}">
+          <ElementNode type="Label" elementID="ID_titleName" anchorX="0" anchorY="0" positionX="47" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Game Rating Information" fontStyle="1" fontSize="30" fontColor="{255,220,125}" areaSizeX="200" areaSizeY="40" alignment="0" effect="1" effectOffset="3" effectColor="{80,40,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatchButton" elementID="ID_btnEsc" anchorX="0" anchorY="0" positionX="500" positionY="356" z="0" scaleX="1" scaleY="1" imageName="9_btn_05.png" ninePatchSize="{106,60}" ninePatchInset="{{28,28},{2,2}}">
+          <ElementNode type="Image" elementID="ID_IMAGE_10" anchorX="0" anchorY="0" positionX="24" positionY="4" z="0" scaleX="1" scaleY="1" imageName="K_esc_01.png" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_label_1" anchorX="0" anchorY="0" positionX="30" positionY="90" z="0" scaleX="1" scaleY="1" imageName="9_Back_02.png" ninePatchSize="{196,46}" ninePatchInset="{{15,15},{2,2}}">
+          <ElementNode type="Label" elementID="ID_LABEL_1" anchorX="0" anchorY="0" positionX="8" positionY="10" z="0" scaleX="1" scaleY="1" labelContent="Name: Monster Squad" fontStyle="1" fontSize="18" fontColor="{65,32,0}" areaSizeX="178" areaSizeY="24" alignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_label_2" anchorX="0" anchorY="0" positionX="30" positionY="32" z="0" scaleX="1" scaleY="1" imageName="9_Back_02.png" ninePatchSize="{196,46}" ninePatchInset="{{15,15},{2,2}}">
+          <ElementNode type="Label" elementID="ID_LABEL_1_1" anchorX="0" anchorY="0" positionX="8" positionY="10" z="0" scaleX="1" scaleY="1" labelContent="User Rating: Rated for All" fontStyle="1" fontSize="18" fontColor="{65,32,0}" areaSizeX="178" areaSizeY="24" alignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_label_3" anchorX="0" anchorY="0" positionX="240" positionY="90" z="0" scaleX="1" scaleY="1" imageName="9_Back_02.png" ninePatchSize="{352,46}" ninePatchInset="{{15,15},{2,2}}">
+          <ElementNode type="Label" elementID="ID_LABEL_1_1_1" anchorX="0" anchorY="0" positionX="8" positionY="10" z="0" scaleX="1" scaleY="1" labelContent="Company Name: Nexon Co. Ltd." fontStyle="1" fontSize="18" fontColor="{65,32,0}" areaSizeX="178" areaSizeY="24" alignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_label_4" anchorX="0" anchorY="0" positionX="240" positionY="30" z="0" scaleX="1" scaleY="1" imageName="9_Back_02.png" ninePatchSize="{352,46}" ninePatchInset="{{15,15},{2,2}}">
+          <ElementNode type="Label" elementID="ID_LABEL_1_1_1_1" anchorX="0" anchorY="0" positionX="8" positionY="10" z="0" scaleX="1" scaleY="1" labelContent="Registration number: Sungnam City Hall 2013-000044" fontStyle="1" fontSize="18" fontColor="{65,32,0}" areaSizeX="356" areaSizeY="24" alignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        </ElementNode>
+        <ElementNode type="Label" elementID="ID_txt1" anchorX="0" anchorY="0" positionX="32" positionY="288" z="0" scaleX="1" scaleY="1" labelContent="Phone Number: 1588-6627" fontStyle="1" fontSize="20" fontColor="{65,32,0}" areaSizeX="400" areaSizeY="30" alignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        <ElementNode type="Label" elementID="ID_txt2" anchorX="0" anchorY="0" positionX="32" positionY="258" z="0" scaleX="1" scaleY="1" labelContent="운영시간: 평일 오전 10:00~오후 18:00" fontStyle="1" fontSize="20" fontColor="{65,32,0}" areaSizeX="400" areaSizeY="30" alignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        <ElementNode type="Label" elementID="ID_txt3" anchorX="0" anchorY="0" positionX="32" positionY="228" z="0" scaleX="1" scaleY="1" labelContent="토/일/공휴일 휴무 (점심시간 13:00~14:00)" fontStyle="1" fontSize="20" fontColor="{65,32,0}" areaSizeX="400" areaSizeY="30" alignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        <ElementNode type="Label" elementID="ID_txt4" anchorX="0" anchorY="0" positionX="32" positionY="168" z="0" scaleX="1" scaleY="1" labelContent="Monster Squad is rated Everyone" fontStyle="1" fontSize="20" fontColor="{65,32,0}" areaSizeX="400" areaSizeY="30" alignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        <ElementNode type="Image" elementID="ID_tagAll" anchorX="0" anchorY="0" positionX="486" positionY="208" z="0" scaleX="1" scaleY="1" imageName="K_tag_01.png" />
+        <ElementNode type="NinePatch" elementID="ID_line" anchorX="0" anchorY="0" positionX="30" positionY="150" z="0" scaleX="1" scaleY="1" imageName="9_Back_15.png" ninePatchSize="{560,4}" ninePatchInset="{{106,0},{2,4}}" />
+      </ElementNode>
+    </ElementNode>
+  </ElementNode>
+</root>

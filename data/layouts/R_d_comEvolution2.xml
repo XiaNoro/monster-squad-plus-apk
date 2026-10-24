@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_9PATCH_2" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_black60.png" ninePatchSize="{1066,640}" ninePatchInset="{{1,1},{2,2}}">
+    <ElementNode type="NinePatch" elementID="ID_Dialog" anchorX="0" anchorY="0" positionX="100" positionY="72" z="0" scaleX="1" scaleY="1" imageName="9_Back_19.png" ninePatchSize="{864,494}" ninePatchInset="{{50,50},{2,2}}">
+      <ElementNode type="NinePatch" elementID="ID_baseback" anchorX="0" anchorY="0" positionX="12" positionY="16" z="0" scaleX="1" scaleY="1" imageName="9_Back_01.png" ninePatchSize="{834,400}" ninePatchInset="{{84,126},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_title" anchorX="0" anchorY="0" positionX="24" positionY="406" z="0" scaleX="1" scaleY="1" imageName="9_frame_04.png" ninePatchSize="{400,56}" ninePatchInset="{{32,0},{2,56}}">
+          <ElementNode type="Label" elementID="ID_titleText" anchorX="0" anchorY="0" positionX="30" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="큐몬 진화 트리" fontStyle="1" fontSize="30" fontColor="{255,220,125}" areaSizeX="240" areaSizeY="40" alignment="0" effect="1" effectOffset="3" effectColor="{80,40,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatchButton" elementID="ID_btnEsc" anchorX="0.5" anchorY="0.5" positionX="778" positionY="434" z="0" scaleX="1" scaleY="1" imageName="9_btn_05.png" ninePatchSize="{102,60}" ninePatchInset="{{28,28},{2,2}}">
+          <ElementNode type="Image" elementID="ID_IMAGE_1" anchorX="0" anchorY="0" positionX="22" positionY="4" z="0" scaleX="1" scaleY="1" imageName="K_esc_01.png" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_monInfo1" anchorX="0" anchorY="0" positionX="30" positionY="212" z="0" scaleX="1" scaleY="1" imageName="9_Back_08.png" ninePatchSize="{132,160}" ninePatchInset="{{15,15},{2,2}}">
+          <ElementNode type="Image" elementID="ID_grade1_1" anchorX="0" anchorY="0" positionX="6" positionY="126" z="0" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+          <ElementNode type="Image" elementID="ID_grade2_1" anchorX="0" anchorY="0" positionX="26" positionY="126" z="0" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+          <ElementNode type="Image" elementID="ID_grade3_1" anchorX="0" anchorY="0" positionX="46" positionY="126" z="0" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+          <ElementNode type="Image" elementID="ID_grade4_1" anchorX="0" anchorY="0" positionX="66" positionY="126" z="0" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+          <ElementNode type="Image" elementID="ID_grade5_1" anchorX="0" anchorY="0" positionX="86" positionY="126" z="0" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+          <ElementNode type="Image" elementID="ID_grade6_1" anchorX="0" anchorY="0" positionX="106" positionY="126" z="0" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+          <ElementNode type="NinePatch" elementID="ID_monIcon1" anchorX="0" anchorY="0" positionX="16" positionY="16" z="0" scaleX="1" scaleY="1" imageName="9_Back_08.png" ninePatchSize="{100,100}" ninePatchInset="{{15,15},{2,2}}" />
+          <ElementNode type="NinePatch" elementID="ID_monFrame1" anchorX="0" anchorY="0" positionX="20" positionY="20" z="1" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{92,92}" ninePatchInset="{{1,1},{2,2}}" />
+          <ElementNode type="Image" elementID="ID_arrow_1" anchorX="0" anchorY="0" positionX="124" positionY="38" z="-1" scaleX="1" scaleY="1" imageName="I_arrow_02.png" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_monInfo2" anchorX="0" anchorY="0" positionX="30" positionY="34" z="0" scaleX="1" scaleY="1" imageName="9_Back_02.png" ninePatchSize="{132,132}" ninePatchInset="{{15,15},{2,2}}">
+          <ElementNode type="NinePatch" elementID="ID_monIcon2" anchorX="0" anchorY="0" positionX="16" positionY="16" z="0" scaleX="1" scaleY="1" imageName="9_Back_08.png" ninePatchSize="{100,100}" ninePatchInset="{{15,15},{2,2}}" />
+          <ElementNode type="NinePatch" elementID="ID_monFrame2" anchorX="0" anchorY="0" positionX="20" positionY="20" z="1" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{92,92}" ninePatchInset="{{1,1},{2,2}}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_monInfo3" anchorX="0" anchorY="0" positionX="190" positionY="212" z="0" scaleX="1" scaleY="1" imageName="9_Back_08.png" ninePatchSize="{132,160}" ninePatchInset="{{15,15},{2,2}}">
+          <ElementNode type="Image" elementID="ID_grade1_3" anchorX="0" anchorY="0" positionX="6" positionY="126" z="0" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+          <ElementNode type="Image" elementID="ID_grade2_3" anchorX="0" anchorY="0" positionX="26" positionY="126" z="0" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+          <ElementNode type="Image" elementID="ID_grade3_3" anchorX="0" anchorY="0" positionX="46" positionY="126" z="0" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+          <ElementNode type="Image" elementID="ID_grade4_3" anchorX="0" anchorY="0" positionX="66" positionY="126" z="0" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+          <ElementNode type="Image" elementID="ID_grade5_3" anchorX="0" anchorY="0" positionX="86" positionY="126" z="0" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+          <ElementNode type="Image" elementID="ID_grade6_3" anchorX="0" anchorY="0" positionX="106" positionY="126" z="0" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+          <ElementNode type="NinePatch" elementID="ID_monIcon3" anchorX="0" anchorY="0" positionX="16" positionY="16" z="0" scaleX="1" scaleY="1" imageName="9_Back_08.png" ninePatchSize="{100,100}" ninePatchInset="{{15,15},{2,2}}" />
+          <ElementNode type="NinePatch" elementID="ID_monFrame3" anchorX="0" anchorY="0" positionX="20" positionY="20" z="1" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{92,92}" ninePatchInset="{{1,1},{2,2}}" />
+          <ElementNode type="Image" elementID="ID_arrow_2" anchorX="0" anchorY="0" positionX="124" positionY="38" z="-1" scaleX="1" scaleY="1" imageName="I_arrow_02.png" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_monInfo4" anchorX="0" anchorY="0" positionX="190" positionY="34" z="0" scaleX="1" scaleY="1" imageName="9_Back_02.png" ninePatchSize="{132,132}" ninePatchInset="{{15,15},{2,2}}">
+          <ElementNode type="NinePatch" elementID="ID_monIcon4" anchorX="0" anchorY="0" positionX="16" positionY="16" z="0" scaleX="1" scaleY="1" imageName="9_Back_08.png" ninePatchSize="{100,100}" ninePatchInset="{{15,15},{2,2}}" />
+          <ElementNode type="NinePatch" elementID="ID_monFrame4" anchorX="0" anchorY="0" positionX="20" positionY="20" z="1" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{92,92}" ninePatchInset="{{1,1},{2,2}}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_monInfo5" anchorX="0" anchorY="0" positionX="350" positionY="212" z="0" scaleX="1" scaleY="1" imageName="9_Back_08.png" ninePatchSize="{132,160}" ninePatchInset="{{15,15},{2,2}}">
+          <ElementNode type="Image" elementID="ID_grade1_5" anchorX="0" anchorY="0" positionX="6" positionY="126" z="0" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+          <ElementNode type="Image" elementID="ID_grade2_5" anchorX="0" anchorY="0" positionX="26" positionY="126" z="0" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+          <ElementNode type="Image" elementID="ID_grade3_5" anchorX="0" anchorY="0" positionX="46" positionY="126" z="0" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+          <ElementNode type="Image" elementID="ID_grade4_5" anchorX="0" anchorY="0" positionX="66" positionY="126" z="0" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+          <ElementNode type="Image" elementID="ID_grade5_5" anchorX="0" anchorY="0" positionX="86" positionY="126" z="0" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+          <ElementNode type="Image" elementID="ID_grade6_5" anchorX="0" anchorY="0" positionX="106" positionY="126" z="0" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+          <ElementNode type="NinePatch" elementID="ID_monIcon5" anchorX="0" anchorY="0" positionX="16" positionY="16" z="0" scaleX="1" scaleY="1" imageName="9_Back_08.png" ninePatchSize="{100,100}" ninePatchInset="{{15,15},{2,2}}" />
+          <ElementNode type="NinePatch" elementID="ID_monFrame5" anchorX="0" anchorY="0" positionX="20" positionY="20" z="1" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{92,92}" ninePatchInset="{{1,1},{2,2}}" />
+          <ElementNode type="Image" elementID="ID_arrow_3" anchorX="0" anchorY="0" positionX="124" positionY="38" z="-1" scaleX="1" scaleY="1" imageName="I_arrow_02.png" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_monInfo6" anchorX="0" anchorY="0" positionX="350" positionY="34" z="0" scaleX="1" scaleY="1" imageName="9_Back_02.png" ninePatchSize="{132,132}" ninePatchInset="{{15,15},{2,2}}">
+          <ElementNode type="NinePatch" elementID="ID_monIcon6" anchorX="0" anchorY="0" positionX="16" positionY="16" z="0" scaleX="1" scaleY="1" imageName="9_Back_08.png" ninePatchSize="{100,100}" ninePatchInset="{{15,15},{2,2}}" />
+          <ElementNode type="NinePatch" elementID="ID_monFrame6" anchorX="0" anchorY="0" positionX="20" positionY="20" z="1" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{92,92}" ninePatchInset="{{1,1},{2,2}}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_monInfo7" anchorX="0" anchorY="0" positionX="510" positionY="212" z="0" scaleX="1" scaleY="1" imageName="9_Back_08.png" ninePatchSize="{132,160}" ninePatchInset="{{15,15},{2,2}}">
+          <ElementNode type="Image" elementID="ID_grade1_7" anchorX="0" anchorY="0" positionX="6" positionY="126" z="0" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+          <ElementNode type="Image" elementID="ID_grade2_7" anchorX="0" anchorY="0" positionX="26" positionY="126" z="0" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+          <ElementNode type="Image" elementID="ID_grade3_7" anchorX="0" anchorY="0" positionX="46" positionY="126" z="0" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+          <ElementNode type="Image" elementID="ID_grade4_7" anchorX="0" anchorY="0" positionX="66" positionY="126" z="0" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+          <ElementNode type="Image" elementID="ID_grade5_7" anchorX="0" anchorY="0" positionX="86" positionY="126" z="0" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+          <ElementNode type="Image" elementID="ID_grade6_7" anchorX="0" anchorY="0" positionX="107" positionY="126" z="0" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+          <ElementNode type="NinePatch" elementID="ID_monIcon7" anchorX="0" anchorY="0" positionX="16" positionY="16" z="0" scaleX="1" scaleY="1" imageName="9_Back_08.png" ninePatchSize="{100,100}" ninePatchInset="{{15,15},{2,2}}" />
+          <ElementNode type="NinePatch" elementID="ID_monFrame7" anchorX="0" anchorY="0" positionX="20" positionY="20" z="1" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{92,92}" ninePatchInset="{{1,1},{2,2}}" />
+          <ElementNode type="Image" elementID="ID_arrow_4" anchorX="0" anchorY="0" positionX="124" positionY="38" z="-1" scaleX="1" scaleY="1" imageName="I_arrow_02.png" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_monInfo8" anchorX="0" anchorY="0" positionX="510" positionY="34" z="0" scaleX="1" scaleY="1" imageName="9_Back_02.png" ninePatchSize="{132,132}" ninePatchInset="{{15,15},{2,2}}">
+          <ElementNode type="NinePatch" elementID="ID_monIcon8" anchorX="0" anchorY="0" positionX="16" positionY="16" z="0" scaleX="1" scaleY="1" imageName="9_Back_08.png" ninePatchSize="{100,100}" ninePatchInset="{{15,15},{2,2}}" />
+          <ElementNode type="NinePatch" elementID="ID_monFrame8" anchorX="0" anchorY="0" positionX="20" positionY="20" z="1" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{92,92}" ninePatchInset="{{1,1},{2,2}}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_monInfo9" anchorX="0" anchorY="0" positionX="670" positionY="212" z="0" scaleX="1" scaleY="1" imageName="9_Back_08.png" ninePatchSize="{132,160}" ninePatchInset="{{15,15},{2,2}}">
+          <ElementNode type="Image" elementID="ID_grade1_9" anchorX="0" anchorY="0" positionX="6" positionY="126" z="0" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+          <ElementNode type="Image" elementID="ID_grade2_9" anchorX="0" anchorY="0" positionX="26" positionY="126" z="0" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+          <ElementNode type="Image" elementID="ID_grade3_9" anchorX="0" anchorY="0" positionX="46" positionY="126" z="0" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+          <ElementNode type="Image" elementID="ID_grade4_9" anchorX="0" anchorY="0" positionX="66" positionY="126" z="0" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+          <ElementNode type="Image" elementID="ID_grade5_9" anchorX="0" anchorY="0" positionX="86" positionY="126" z="0" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+          <ElementNode type="Image" elementID="ID_grade6_9" anchorX="0" anchorY="0" positionX="107" positionY="126" z="0" scaleX="1" scaleY="1" imageName="I_grade_03.png" />
+          <ElementNode type="NinePatch" elementID="ID_monIcon9" anchorX="0" anchorY="0" positionX="16" positionY="16" z="0" scaleX="1" scaleY="1" imageName="9_Back_08.png" ninePatchSize="{100,100}" ninePatchInset="{{15,15},{2,2}}" />
+          <ElementNode type="NinePatch" elementID="ID_monFrame9" anchorX="0" anchorY="0" positionX="20" positionY="20" z="1" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{92,92}" ninePatchInset="{{1,1},{2,2}}" />
+        </ElementNode>
+        <ElementNode type="Image" elementID="ID_plus_1" anchorX="0" anchorY="0" positionX="70" positionY="166" z="0" scaleX="1" scaleY="1" imageName="I_plus_02.png" />
+        <ElementNode type="Image" elementID="ID_plus_2" anchorX="0" anchorY="0" positionX="232" positionY="166" z="0" scaleX="1" scaleY="1" imageName="I_plus_02.png" />
+        <ElementNode type="Image" elementID="ID_plus_3" anchorX="0" anchorY="0" positionX="392" positionY="166" z="0" scaleX="1" scaleY="1" imageName="I_plus_02.png" />
+        <ElementNode type="Image" elementID="ID_plus_4" anchorX="0" anchorY="0" positionX="552" positionY="166" z="0" scaleX="1" scaleY="1" imageName="I_plus_02.png" />
+        <ElementNode type="NinePatch" elementID="ID_monPreview" anchorX="0" anchorY="0" positionX="644" positionY="26" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{180,180}" ninePatchInset="{{1,1},{2,2}}">
+          <ElementNode type="Image" elementID="ID_monSh" anchorX="0.5" anchorY="0.5" positionX="92" positionY="16" z="0" scaleX="0.8" scaleY="0.8" imageName="I_shadow_02.png" />
+        </ElementNode>
+      </ElementNode>
+    </ElementNode>
+  </ElementNode>
+</root>

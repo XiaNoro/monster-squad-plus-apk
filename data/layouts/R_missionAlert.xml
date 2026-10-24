@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_alert" anchorX="0" anchorY="0" positionX="120" positionY="486" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{386,100}" ninePatchInset="{{12,12},{2,2}}">
+    <ElementNode type="Label" elementID="ID_text" anchorX="0" anchorY="0" positionX="112" positionY="26" z="0" scaleX="1" scaleY="1" labelContent="Mission & Reward Information" fontStyle="1" fontSize="20" fontColor="{233,202,116}" areaSizeX="256" areaSizeY="50" alignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+    <ElementNode type="Image" elementID="ID_IMAGE_1" anchorX="0" anchorY="0" positionX="14" positionY="14" z="0" scaleX="1" scaleY="1" imageName="B_mission_01.png" />
+    <ElementNode type="Image" elementID="ID_IMAGE_2" anchorX="0" anchorY="0" positionX="14" positionY="14" z="0" scaleX="1" scaleY="1" imageName="B_mission_02.png" />
+  </ElementNode>
+</root>

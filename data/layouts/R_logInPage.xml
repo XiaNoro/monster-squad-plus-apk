@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="Image" elementID="ID_IMAGE_1" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="title.png">
+    <ElementNode type="NinePatch" elementID="ID_9PATCH_1" anchorX="0" anchorY="0" positionX="356" positionY="22" z="0" scaleX="1" scaleY="1" imageName="9_title_graphBack_01.png" ninePatchSize="{350,40}" ninePatchInset="{{20,0},{2,40}}">
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_GRAPH" anchorX="0" anchorY="0" positionX="8" positionY="10" z="0" scaleX="1" scaleY="1" imageName="9_title_graph_01.png" ninePatchSize="{332,22}" ninePatchInset="{{12,0},{2,22}}" />
+      <ElementNode type="Label" elementID="ID_LABEL_Percent" anchorX="0" anchorY="0" positionX="36" positionY="10" z="0" scaleX="1" scaleY="1" labelContent="100%" fontStyle="1" fontSize="16" fontColor="{255,255,255}" areaSizeX="280" areaSizeY="20" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,0,0}" />
+    </ElementNode>
+    <ElementNode type="Image" elementID="ID_IMAGE_2" anchorX="0" anchorY="0" positionX="108" positionY="-4" z="0" scaleX="1" scaleY="1" imageName="T_Rights.png" />
+    <ElementNode type="NinePatch" elementID="ID_logIn" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9T_empty_02.png" ninePatchSize="{200,200}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Button" elementID="ID_btnGoogle" anchorX="0.5" anchorY="0.5" positionX="310" positionY="100" z="0" scaleX="1" scaleY="1" imageName="BT_google_01.png" />
+      <ElementNode type="NinePatchButton" elementID="ID_BUTTON_DS" anchorX="0.5" anchorY="0.5" positionX="904" positionY="590" z="0" scaleX="1" scaleY="1" imageName="9T_Back_13.png" ninePatchSize="{300,66}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_DS" anchorX="0" anchorY="0" positionX="18" positionY="16" z="0" scaleX="1" scaleY="1" labelContent="Select Server List" fontStyle="1" fontSize="22" fontColor="{255,255,255}" areaSizeX="260" areaSizeY="30" alignment="1" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+      </ElementNode>
+      <ElementNode type="Button" elementID="ID_btnGameCenter" anchorX="0.5" anchorY="0.5" positionX="310" positionY="100" z="0" scaleX="1" scaleY="1" imageName="BT_gamecenter_01.png" />
+      <ElementNode type="Button" elementID="ID_btnFacebook" anchorX="0.5" anchorY="0.5" positionX="768" positionY="100" z="0" scaleX="1" scaleY="1" imageName="BT_facebook_01.png" />
+      <ElementNode type="NinePatchButton" elementID="ID_btnGuest" anchorX="0" anchorY="0" positionX="0" positionY="156" z="0" scaleX="1" scaleY="1" imageName="9T_empty_02.png" ninePatchSize="{1066,484}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Button" elementID="ID_btnGuest1" anchorX="0.5" anchorY="0.5" positionX="532" positionY="50" z="0" scaleX="1" scaleY="1" imageName="BT_guest_01.png" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="Label" elementID="ID_LABEL_Version" anchorX="0" anchorY="0" positionX="8" positionY="581" z="0" scaleX="1" scaleY="1" labelContent="ver 1.02" fontStyle="1" fontSize="22" fontColor="{255,255,255}" areaSizeX="300" areaSizeY="50" alignment="0" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+  </ElementNode>
+</root>

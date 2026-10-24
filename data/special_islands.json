@@ -1,0 +1,3185 @@
+{
+    "_note": "Special islands. Schedules, drop lists, Training/Treasure costs and rewards, K9 rewards: Monster Squad Wiki 'Special Islands'. Spirit Island costs (6/7 energy) and 'Lv. 15~30' drops: walkthrough Part 15 @ 0:32. Hunter's Folly costs: Tranzcendent 6TBLnxsHr8k. Fields marked est_ are our estimates. days: 0=Sun..6=Sat, empty = always open. Magic Island energy 10, description and drop lists (each field's 2-5 star evolution line, from the Voxus popup), and Material Island energy 5: kl_2Se8Ktq4 @ 3:20-4:30. Training Island names, Mon/Wed, 4 stages: HIqZmgJLv08. Treasure Island names and text, 60-gem 1-hour unlock: 7_j-jZqCSIk. Deep Ocean text and loading promo: 29-OZ4BnRS4. Deep Ocean field chain (6 Iron Shark with Shaark, 7 Frozen Sea 35 energy, 8 Titanic Foot 40, 9 Mythical Whale with Whalgent, 10 Ryugu's Party for 100 Friend Points, 10 stages, Armin Coral): hJbt19b1z9w.",
+    "islands": [
+        {
+            "id": "material_island",
+            "name": "Material Island",
+            "kind": "material",
+            "days": [],
+            "desc": "This is the place for 24/7 Evolution materials! You can get Lv. 15-30 B-C Class monsters.",
+            "first_clear_drop": true,
+            "est_level": true,
+            "quests": [
+                {
+                    "name": "Flaree (★3)",
+                    "energy": 5,
+                    "level": 10,
+                    "drop_level": [
+                        15,
+                        30
+                    ],
+                    "boss": "flaree",
+                    "enemies": [
+                        "o_drank",
+                        "o_fruit"
+                    ],
+                    "stages": 3
+                },
+                {
+                    "name": "Whirlee (★3)",
+                    "energy": 5,
+                    "level": 10,
+                    "drop_level": [
+                        15,
+                        30
+                    ],
+                    "boss": "whirlee",
+                    "enemies": [
+                        "b_drank",
+                        "b_fruit"
+                    ],
+                    "stages": 3
+                },
+                {
+                    "name": "Patchee (★3)",
+                    "energy": 5,
+                    "level": 10,
+                    "drop_level": [
+                        15,
+                        30
+                    ],
+                    "boss": "patchee",
+                    "enemies": [
+                        "g_drank",
+                        "g_fruit"
+                    ],
+                    "stages": 3
+                },
+                {
+                    "name": "Seree (★3)",
+                    "energy": 5,
+                    "level": 10,
+                    "drop_level": [
+                        15,
+                        30
+                    ],
+                    "boss": "seree",
+                    "enemies": [
+                        "p_drank",
+                        "p_fruit"
+                    ],
+                    "stages": 3
+                },
+                {
+                    "name": "Rubat (★3)",
+                    "energy": 5,
+                    "level": 10,
+                    "drop_level": [
+                        15,
+                        30
+                    ],
+                    "boss": "rubat",
+                    "enemies": [
+                        "rubi"
+                    ],
+                    "stages": 3
+                },
+                {
+                    "name": "Sapphibat (★3)",
+                    "energy": 5,
+                    "level": 10,
+                    "drop_level": [
+                        15,
+                        30
+                    ],
+                    "boss": "sapphibat",
+                    "enemies": [
+                        "sapphibi"
+                    ],
+                    "stages": 3
+                },
+                {
+                    "name": "Greebat (★3)",
+                    "energy": 5,
+                    "level": 10,
+                    "drop_level": [
+                        15,
+                        30
+                    ],
+                    "boss": "greebat",
+                    "enemies": [
+                        "greebi"
+                    ],
+                    "stages": 3
+                },
+                {
+                    "name": "Cubat (★3)",
+                    "energy": 5,
+                    "level": 10,
+                    "drop_level": [
+                        15,
+                        30
+                    ],
+                    "boss": "cubat",
+                    "enemies": [
+                        "cubi"
+                    ],
+                    "stages": 3
+                },
+                {
+                    "name": "Flaruus (★4)",
+                    "energy": 5,
+                    "level": 16,
+                    "drop_level": [
+                        15,
+                        30
+                    ],
+                    "boss": "flaruus",
+                    "enemies": [
+                        "flaree",
+                        "o_drank"
+                    ],
+                    "stages": 4
+                },
+                {
+                    "name": "Whirluus (★4)",
+                    "energy": 5,
+                    "level": 16,
+                    "drop_level": [
+                        15,
+                        30
+                    ],
+                    "boss": "whirluus",
+                    "enemies": [
+                        "whirlee",
+                        "b_drank"
+                    ],
+                    "stages": 4
+                },
+                {
+                    "name": "Patchuus (★4)",
+                    "energy": 5,
+                    "level": 16,
+                    "drop_level": [
+                        15,
+                        30
+                    ],
+                    "boss": "patchuus",
+                    "enemies": [
+                        "patchee",
+                        "g_fruit"
+                    ],
+                    "stages": 4
+                },
+                {
+                    "name": "Seruus (★4)",
+                    "energy": 5,
+                    "level": 16,
+                    "drop_level": [
+                        15,
+                        30
+                    ],
+                    "boss": "seruus",
+                    "enemies": [
+                        "seree",
+                        "p_drank"
+                    ],
+                    "stages": 4
+                },
+                {
+                    "name": "Ruburak (★4)",
+                    "energy": 5,
+                    "level": 16,
+                    "drop_level": [
+                        15,
+                        30
+                    ],
+                    "boss": "ruburak",
+                    "enemies": [
+                        "rubat",
+                        "rubi"
+                    ],
+                    "stages": 4
+                },
+                {
+                    "name": "Sapphburak (★4)",
+                    "energy": 5,
+                    "level": 16,
+                    "drop_level": [
+                        15,
+                        30
+                    ],
+                    "boss": "sapphburak",
+                    "enemies": [
+                        "sapphibat",
+                        "sapphibi"
+                    ],
+                    "stages": 4
+                },
+                {
+                    "name": "Greeburak (★4)",
+                    "energy": 5,
+                    "level": 16,
+                    "drop_level": [
+                        15,
+                        30
+                    ],
+                    "boss": "greeburak",
+                    "enemies": [
+                        "greebat",
+                        "greebi"
+                    ],
+                    "stages": 4
+                },
+                {
+                    "name": "Cuburak (★4)",
+                    "energy": 5,
+                    "level": 16,
+                    "drop_level": [
+                        15,
+                        30
+                    ],
+                    "boss": "cuburak",
+                    "enemies": [
+                        "cubat",
+                        "cubi"
+                    ],
+                    "stages": 4
+                }
+            ]
+        },
+        {
+            "id": "spirit_island",
+            "name": "Spirit Island",
+            "kind": "material",
+            "days": [],
+            "desc": "This is the place for 24/7 Evolution materials! You can get Lv. 15-30 A Class monsters.",
+            "first_clear_drop": true,
+            "quests": [
+                {
+                    "name": "Sir Fwoosh (★3)",
+                    "energy": 6,
+                    "level": 18,
+                    "drop_level": [
+                        15,
+                        30
+                    ],
+                    "boss": "sir_fwoosh",
+                    "enemies": [
+                        "lil_fwoosh",
+                        "trama"
+                    ]
+                },
+                {
+                    "name": "Sir Splish (★3)",
+                    "energy": 6,
+                    "level": 18,
+                    "drop_level": [
+                        15,
+                        30
+                    ],
+                    "boss": "sir_splish",
+                    "enemies": [
+                        "lil_splish",
+                        "dera"
+                    ]
+                },
+                {
+                    "name": "Sir Woosh (★3)",
+                    "energy": 6,
+                    "level": 18,
+                    "drop_level": [
+                        15,
+                        30
+                    ],
+                    "boss": "sir_woosh",
+                    "enemies": [
+                        "li_l_woosh",
+                        "pari"
+                    ]
+                },
+                {
+                    "name": "Sir Swoosh (★3)",
+                    "energy": 6,
+                    "level": 18,
+                    "drop_level": [
+                        15,
+                        30
+                    ],
+                    "boss": "sir_swoosh",
+                    "enemies": [
+                        "lil_swoosh",
+                        "cero"
+                    ]
+                },
+                {
+                    "name": "Meteo (★4)",
+                    "energy": 7,
+                    "level": 22,
+                    "drop_level": [
+                        15,
+                        30
+                    ],
+                    "boss": "meteo",
+                    "enemies": [
+                        "smishee",
+                        "smish"
+                    ]
+                },
+                {
+                    "name": "Ici (★4)",
+                    "energy": 7,
+                    "level": 22,
+                    "drop_level": [
+                        15,
+                        30
+                    ],
+                    "boss": "ici",
+                    "enemies": [
+                        "soosoo",
+                        "smoovie"
+                    ]
+                },
+                {
+                    "name": "Growth (★4)",
+                    "energy": 7,
+                    "level": 22,
+                    "drop_level": [
+                        15,
+                        30
+                    ],
+                    "boss": "growth",
+                    "enemies": [
+                        "smullock",
+                        "smulling"
+                    ]
+                },
+                {
+                    "name": "Torni (★4)",
+                    "energy": 7,
+                    "level": 22,
+                    "drop_level": [
+                        15,
+                        30
+                    ],
+                    "boss": "torni",
+                    "enemies": [
+                        "smunk",
+                        "smelly"
+                    ]
+                },
+                {
+                    "name": "Fire Kong (★4)",
+                    "energy": 7,
+                    "level": 22,
+                    "drop_level": [
+                        15,
+                        30
+                    ],
+                    "boss": "fire_kong",
+                    "enemies": [
+                        "red_antlar",
+                        "red_antlid"
+                    ]
+                },
+                {
+                    "name": "Water Kong (★4)",
+                    "energy": 7,
+                    "level": 22,
+                    "drop_level": [
+                        15,
+                        30
+                    ],
+                    "boss": "water_kong",
+                    "enemies": [
+                        "blu_antlar",
+                        "blu_antlid"
+                    ]
+                },
+                {
+                    "name": "Grass Kong (★4)",
+                    "energy": 7,
+                    "level": 22,
+                    "drop_level": [
+                        15,
+                        30
+                    ],
+                    "boss": "grass_kong",
+                    "enemies": [
+                        "bud_antlar",
+                        "bud_antlid"
+                    ]
+                },
+                {
+                    "name": "No Kong (★4)",
+                    "energy": 7,
+                    "level": 22,
+                    "drop_level": [
+                        15,
+                        30
+                    ],
+                    "boss": "no_kong",
+                    "enemies": [
+                        "antlar",
+                        "antlid"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "magic_island",
+            "name": "Magic Island",
+            "kind": "material",
+            "days": [],
+            "desc": "This is the place for 24/7 Evolution materials! You can get Lv. 15~30 and S Class monsters",
+            "first_clear_drop": false,
+            "est_energy": true,
+            "quests": [
+                {
+                    "name": "Flarell (★4)",
+                    "energy": 10,
+                    "level": 25,
+                    "drop_level": [
+                        15,
+                        30
+                    ],
+                    "boss": "flarell",
+                    "enemies": [
+                        "shivvie",
+                        "shivairy"
+                    ],
+                    "stages": 4
+                },
+                {
+                    "name": "Swirell (★4)",
+                    "energy": 10,
+                    "level": 25,
+                    "drop_level": [
+                        15,
+                        30
+                    ],
+                    "boss": "swirell",
+                    "enemies": [
+                        "chilie",
+                        "chilairy"
+                    ],
+                    "stages": 4
+                },
+                {
+                    "name": "Bushell (★4)",
+                    "energy": 10,
+                    "level": 25,
+                    "drop_level": [
+                        15,
+                        30
+                    ],
+                    "boss": "bushell",
+                    "enemies": [
+                        "grumie",
+                        "grumairy"
+                    ],
+                    "stages": 4
+                },
+                {
+                    "name": "Marell (★4)",
+                    "energy": 10,
+                    "level": 25,
+                    "drop_level": [
+                        15,
+                        30
+                    ],
+                    "boss": "marell",
+                    "enemies": [
+                        "conie",
+                        "conairy"
+                    ],
+                    "stages": 4
+                },
+                {
+                    "name": "Vulcus (★4)",
+                    "energy": 10,
+                    "level": 25,
+                    "drop_level": [
+                        15,
+                        30
+                    ],
+                    "boss": "vulcus",
+                    "enemies": [
+                        "brickett",
+                        "hotblok"
+                    ],
+                    "stages": 4
+                },
+                {
+                    "name": "Auqus (★4)",
+                    "energy": 10,
+                    "level": 25,
+                    "drop_level": [
+                        15,
+                        30
+                    ],
+                    "boss": "auqus",
+                    "enemies": [
+                        "ice_cube",
+                        "ice_crush"
+                    ],
+                    "stages": 4
+                },
+                {
+                    "name": "Verdens (★4)",
+                    "energy": 10,
+                    "level": 25,
+                    "drop_level": [
+                        15,
+                        30
+                    ],
+                    "boss": "verdens",
+                    "enemies": [
+                        "mossmasher",
+                        "bloomasher"
+                    ],
+                    "stages": 4
+                },
+                {
+                    "name": "Voxus (★4)",
+                    "energy": 10,
+                    "level": 25,
+                    "drop_level": [
+                        15,
+                        30
+                    ],
+                    "boss": "voxus",
+                    "enemies": [
+                        "stonn",
+                        "rokk"
+                    ],
+                    "stages": 4
+                }
+            ]
+        },
+        {
+            "id": "training_island",
+            "name": "Training Island",
+            "kind": "exp",
+            "days": [
+                1,
+                3
+            ],
+            "desc": "Training is the key to strength!\nThis is your chance to gain a lot of EXP.\nOpen on Monday and Wednesday!",
+            "quests": [
+                {
+                    "name": "Training(Easy)",
+                    "energy": 4,
+                    "level": 5,
+                    "exp": 110,
+                    "gold": 0,
+                    "boss": "spooki",
+                    "enemies": [
+                        "rean",
+                        "oonga",
+                        "jel"
+                    ]
+                },
+                {
+                    "name": "Training(Normal)",
+                    "energy": 5,
+                    "level": 12,
+                    "exp": 165,
+                    "gold": 0,
+                    "boss": "spooker",
+                    "enemies": [
+                        "trean",
+                        "doonga",
+                        "jellio"
+                    ]
+                },
+                {
+                    "name": "Training(Hard)",
+                    "energy": 6,
+                    "level": 20,
+                    "exp": 198,
+                    "gold": 0,
+                    "boss": "spookloak",
+                    "enemies": [
+                        "treant",
+                        "roonga",
+                        "jelliton"
+                    ]
+                },
+                {
+                    "name": "Training(Extreme)",
+                    "energy": 8,
+                    "level": 28,
+                    "exp": 292,
+                    "gold": 0,
+                    "boss": "spooking",
+                    "enemies": [
+                        "tryant",
+                        "koonga",
+                        "jelliking"
+                    ]
+                }
+            ],
+            "stages": 4,
+            "_source": "Bosses (Spooki line 3-6 stars), Hard lineup Treant/Roonga/Jelliton and 4 stages: 3lUuIs6OFEo 2:28-3:30; other tiers follow the same evolution lines."
+        },
+        {
+            "id": "treasure_island",
+            "name": "Treasure Island",
+            "kind": "gold",
+            "days": [
+                0
+            ],
+            "desc": "Come over here if you need some money!\nYou can get loads of gold here!\nOpen Sundays.",
+            "est_enemies": false,
+            "quests": [
+                {
+                    "name": "Treasure(Easy)",
+                    "energy": 7,
+                    "level": 8,
+                    "exp": 0,
+                    "gold": 3500,
+                    "boss": "prisbal",
+                    "enemies": [
+                        "pufbal",
+                        "mewer",
+                        "prisbal"
+                    ],
+                    "drops": [
+                        "pufbal",
+                        "mewer",
+                        "prisbal"
+                    ],
+                    "stages": 3
+                },
+                {
+                    "name": "Treasure(Normal)",
+                    "energy": 10,
+                    "level": 16,
+                    "exp": 0,
+                    "gold": 7000,
+                    "boss": "mewceleste",
+                    "enemies": [
+                        "mewer",
+                        "mewshine",
+                        "prisbal"
+                    ],
+                    "drops": [
+                        "mewer",
+                        "mewshine",
+                        "prisbal"
+                    ],
+                    "stages": 4
+                },
+                {
+                    "name": "Treasure(Hard)",
+                    "energy": 15,
+                    "level": 26,
+                    "exp": 0,
+                    "gold": 15000,
+                    "boss": "pentacorn",
+                    "enemies": [
+                        "mewshine",
+                        "mewceleste",
+                        "prisbal"
+                    ],
+                    "drops": [
+                        "mewshine",
+                        "mewceleste"
+                    ],
+                    "stages": 4
+                }
+            ],
+            "_source": "Bosses Prisbal/Mewceleste/Pentacorn, energy 7/10/15, yellow monster cubes, 3 waves on Easy: D9HuvYhKiJQ."
+        },
+        {
+            "id": "friendship_island",
+            "name": "Friendship Island",
+            "kind": "material",
+            "days": [],
+            "desc": "Uses Friend Points instead of Energy.\nSend Friend Points to your friends and bring them here!",
+            "est_fp": true,
+            "_source": "Drop lists and Friend Point use: Monster Squad Wiki Special Islands. FP costs, levels and bosses are estimates.",
+            "quests": [
+                {
+                    "name": "Friendship(Easy)",
+                    "energy": 0,
+                    "fp": 30,
+                    "level": 8,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "raingull",
+                    "enemies": [
+                        "nindori",
+                        "taddy",
+                        "catrik",
+                        "brickett",
+                        "ice_cube",
+                        "mossmasher",
+                        "stonn",
+                        "friby",
+                        "waby",
+                        "spriby",
+                        "sliby",
+                        "ayn",
+                        "twirly"
+                    ],
+                    "drops": [
+                        "nindori",
+                        "raingull",
+                        "taddy",
+                        "catrik",
+                        "brickett",
+                        "ice_cube",
+                        "mossmasher",
+                        "stonn",
+                        "friby",
+                        "waby",
+                        "spriby",
+                        "sliby",
+                        "ayn",
+                        "twirly"
+                    ]
+                },
+                {
+                    "name": "Friendship(Normal)",
+                    "energy": 0,
+                    "fp": 60,
+                    "level": 16,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "camhil",
+                    "enemies": [
+                        "nindori",
+                        "flitsplish",
+                        "rookie",
+                        "red_antlad",
+                        "blu_antlad",
+                        "bud_antlad",
+                        "antlad",
+                        "craburn",
+                        "crablu",
+                        "crabcoon",
+                        "crabshade"
+                    ],
+                    "drops": [
+                        "nindori",
+                        "camhil",
+                        "flitsplish",
+                        "rookie",
+                        "red_antlad",
+                        "blu_antlad",
+                        "bud_antlad",
+                        "antlad",
+                        "craburn",
+                        "crablu",
+                        "crabcoon",
+                        "crabshade"
+                    ]
+                },
+                {
+                    "name": "Friendship(Hard)",
+                    "energy": 0,
+                    "fp": 100,
+                    "level": 24,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "dumbird",
+                    "enemies": [
+                        "nindori",
+                        "feril",
+                        "yakka",
+                        "doomba",
+                        "ibi",
+                        "trama",
+                        "dera",
+                        "pari",
+                        "cero"
+                    ],
+                    "drops": [
+                        "nindori",
+                        "dumbird",
+                        "feril",
+                        "yakka",
+                        "doomba",
+                        "ibi",
+                        "trama",
+                        "dera",
+                        "pari",
+                        "cero"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "jungle_island",
+            "name": "Jungle Island",
+            "kind": "element",
+            "days": [
+                4
+            ],
+            "desc": "What kind of monsters are waiting in the jungle?\nThis is your chance to get a Nature monster!",
+            "quests": [
+                {
+                    "name": "Jungle(Easy)",
+                    "energy": 3,
+                    "level": 6,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "greenspook",
+                    "enemies": [
+                        "craboth",
+                        "budding",
+                        "spriby",
+                        "crabcoon",
+                        "greenspec"
+                    ],
+                    "drops": [
+                        "greenspook",
+                        "greenspec",
+                        "craboth",
+                        "budding",
+                        "spriby",
+                        "crabcoon"
+                    ],
+                    "stages": 4
+                },
+                {
+                    "name": "Jungle(Normal)",
+                    "energy": 5,
+                    "level": 14,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "dark_stump",
+                    "enemies": [
+                        "stumper",
+                        "brambal",
+                        "bloomion",
+                        "leavbal",
+                        "pollion"
+                    ],
+                    "drops": [
+                        "stumper",
+                        "brambal",
+                        "bloomion",
+                        "leavbal",
+                        "pollion"
+                    ]
+                },
+                {
+                    "name": "Jungle(Hard)",
+                    "energy": 8,
+                    "level": 22,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "moonknight_legendary",
+                    "enemies": [
+                        "moonk",
+                        "bonk_druid",
+                        "bud_antlar",
+                        "bud_bonk",
+                        "bud_antlid",
+                        "green_bonk"
+                    ],
+                    "drops": [
+                        "moonk",
+                        "bonk_druid",
+                        "bud_antlar",
+                        "bud_bonk",
+                        "bud_antlid",
+                        "green_bonk"
+                    ]
+                },
+                {
+                    "name": "Jungle(Extreme)",
+                    "energy": 10,
+                    "level": 30,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "whylie",
+                    "enemies": [
+                        "whirly",
+                        "smullock",
+                        "twirly",
+                        "smulling",
+                        "smull"
+                    ],
+                    "drops": [
+                        "whylie",
+                        "whirly",
+                        "smullock",
+                        "twirly",
+                        "smulling",
+                        "smull"
+                    ]
+                }
+            ],
+            "_source": "Quest names and energy 3/5/8/10: zj5T4GOAim4 (Volcano names/energy assumed to match). Jungle opens Thursday; Normal/Hard bosses from footage. Extreme boss Whylie (wiki drop list; footage shows its evolution Whynoceros)."
+        },
+        {
+            "id": "icicle_island",
+            "name": "Icicle Island",
+            "kind": "element",
+            "days": [
+                3
+            ],
+            "desc": "A troop of fierce monsters is coming from the frozen regions!\nThis is your chance to get a Water monster!",
+            "quests": [
+                {
+                    "name": "Icicle(Easy)",
+                    "energy": 3,
+                    "level": 6,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "toomba",
+                    "enemies": [
+                        "wabering",
+                        "doomba",
+                        "crabay",
+                        "waby",
+                        "crablu"
+                    ],
+                    "drops": [
+                        "wabering",
+                        "doomba",
+                        "crabay",
+                        "waby",
+                        "crablu"
+                    ]
+                },
+                {
+                    "name": "Icicle(Normal)",
+                    "energy": 5,
+                    "level": 14,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "ribinbelle",
+                    "enemies": [
+                        "jinglbelle",
+                        "flobal",
+                        "glacion",
+                        "dripbal",
+                        "walion"
+                    ],
+                    "drops": [
+                        "jinglbelle",
+                        "flobal",
+                        "glacion",
+                        "dripbal",
+                        "walion"
+                    ]
+                },
+                {
+                    "name": "Icicle(Hard)",
+                    "energy": 8,
+                    "level": 22,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "beetortle",
+                    "enemies": [
+                        "beetorking",
+                        "bonk_scion",
+                        "blu_antlar",
+                        "drop_bonk",
+                        "blu_antlid",
+                        "blue_bonk"
+                    ],
+                    "drops": [
+                        "beetorking",
+                        "bonk_scion",
+                        "blu_antlar",
+                        "drop_bonk",
+                        "blu_antlid",
+                        "blue_bonk"
+                    ]
+                },
+                {
+                    "name": "Icicle(Extreme)",
+                    "energy": 10,
+                    "level": 30,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "nalino",
+                    "enemies": [
+                        "lucky",
+                        "soosoo",
+                        "rookie",
+                        "smoovie",
+                        "smoo"
+                    ],
+                    "drops": [
+                        "nalino",
+                        "lucky",
+                        "soosoo",
+                        "rookie",
+                        "smoovie",
+                        "smoo"
+                    ]
+                }
+            ],
+            "_source": "Quest names and energy 3/5/8/10: zj5T4GOAim4 (Volcano names/energy assumed to match). Icicle Easy/Normal/Hard bosses and Easy drop list from footage; Extreme boss estimate."
+        },
+        {
+            "id": "volcano_island",
+            "name": "Volcano Island",
+            "kind": "element",
+            "days": [
+                4
+            ],
+            "desc": "Fire monsters.",
+            "quests": [
+                {
+                    "name": "Volcano(Easy)",
+                    "energy": 3,
+                    "level": 6,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "friming",
+                    "enemies": [
+                        "feril",
+                        "crablaze",
+                        "friby",
+                        "craburn"
+                    ],
+                    "drops": [
+                        "friming",
+                        "feril",
+                        "crablaze",
+                        "friby",
+                        "craburn"
+                    ]
+                },
+                {
+                    "name": "Volcano(Normal)",
+                    "energy": 5,
+                    "level": 14,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "oonga",
+                    "enemies": [
+                        "flambal",
+                        "lavion",
+                        "firbal",
+                        "firion"
+                    ],
+                    "drops": [
+                        "oonga",
+                        "flambal",
+                        "lavion",
+                        "firbal",
+                        "firion"
+                    ]
+                },
+                {
+                    "name": "Volcano(Hard)",
+                    "energy": 8,
+                    "level": 22,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "punchpuppy",
+                    "enemies": [
+                        "tobiak",
+                        "smishee",
+                        "tobio",
+                        "smish",
+                        "smee"
+                    ],
+                    "drops": [
+                        "punchpuppy",
+                        "tobiak",
+                        "smishee",
+                        "tobio",
+                        "smish",
+                        "smee"
+                    ]
+                },
+                {
+                    "name": "Volcano(Extreme)",
+                    "energy": 10,
+                    "level": 30,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "twinbark",
+                    "enemies": [
+                        "bonk_pyro",
+                        "red_antlar",
+                        "burn_bonk",
+                        "red_antlid",
+                        "red_antlad",
+                        "lil_flame"
+                    ],
+                    "drops": [
+                        "twinbark",
+                        "bonk_pyro",
+                        "red_antlar",
+                        "burn_bonk",
+                        "red_antlid",
+                        "red_antlad",
+                        "lil_flame"
+                    ]
+                }
+            ],
+            "_source": "Quest names and energy 3/5/8/10: zj5T4GOAim4 (Volcano names/energy assumed to match)."
+        },
+        {
+            "id": "deep_ocean_island",
+            "name": "Deep Ocean Island",
+            "kind": "element",
+            "days": [
+                0
+            ],
+            "desc": "Let's explore the deep blue sea. While you're exploring, various new monsters will appear randomly from Fields 1~9 of Normal, Hard, Hell.",
+            "est_energy": true,
+            "quests": [
+                {
+                    "name": "1 Fish on Fire",
+                    "tab": "normal",
+                    "energy": 5,
+                    "level": 8,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "surak",
+                    "enemies": [
+                        "surak",
+                        "dripbal",
+                        "waby"
+                    ],
+                    "rare": [
+                        {
+                            "id": "mini_coral",
+                            "chance": 0.05
+                        },
+                        {
+                            "id": "armin_coral",
+                            "chance": 0.005
+                        }
+                    ],
+                    "gold": 500,
+                    "exp": 50
+                },
+                {
+                    "name": "2 Navy Seal",
+                    "tab": "normal",
+                    "energy": 10,
+                    "level": 10,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "cupi",
+                    "enemies": [
+                        "flobal",
+                        "glacion",
+                        "dripbal"
+                    ],
+                    "rare": [
+                        {
+                            "id": "mini_coral",
+                            "chance": 0.05
+                        },
+                        {
+                            "id": "armin_coral",
+                            "chance": 0.005
+                        }
+                    ],
+                    "gold": 1000,
+                    "exp": 100
+                },
+                {
+                    "name": "3 Silent Heal",
+                    "tab": "normal",
+                    "energy": 15,
+                    "level": 12,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "wave_maker",
+                    "enemies": [
+                        "raingull",
+                        "burtle",
+                        "wami"
+                    ],
+                    "rare": [
+                        {
+                            "id": "mini_coral",
+                            "chance": 0.05
+                        },
+                        {
+                            "id": "armin_coral",
+                            "chance": 0.005
+                        }
+                    ],
+                    "gold": 1500,
+                    "exp": 150
+                },
+                {
+                    "name": "4 Impassible Deep",
+                    "tab": "normal",
+                    "energy": 20,
+                    "level": 14,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "sharpbeak",
+                    "enemies": [
+                        "sharpbeak",
+                        "drop_bonk",
+                        "blue_bonk"
+                    ],
+                    "rare": [
+                        {
+                            "id": "mini_coral",
+                            "chance": 0.05
+                        },
+                        {
+                            "id": "armin_coral",
+                            "chance": 0.005
+                        }
+                    ],
+                    "gold": 2000,
+                    "exp": 200,
+                    "say": "Marvelous! You warriors fight even without Healing."
+                },
+                {
+                    "name": "5 Jellykings Man",
+                    "tab": "normal",
+                    "energy": 25,
+                    "level": 16,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "jellio",
+                    "enemies": [
+                        "jel",
+                        "drop_bonk",
+                        "bonk_scion"
+                    ],
+                    "rare": [
+                        {
+                            "id": "mini_coral",
+                            "chance": 0.05
+                        },
+                        {
+                            "id": "armin_coral",
+                            "chance": 0.005
+                        }
+                    ],
+                    "drops": [
+                        "bonk_scion",
+                        "mini_coral",
+                        "drop_bonk"
+                    ],
+                    "gold": 2500,
+                    "exp": 250,
+                    "say": "What do you see? I see a next field for you"
+                },
+                {
+                    "name": "6 Iron Shark",
+                    "tab": "normal",
+                    "energy": 30,
+                    "level": 18,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "shaark",
+                    "enemies": [
+                        "derakon",
+                        "tane",
+                        "groch"
+                    ],
+                    "rare": [
+                        {
+                            "id": "mini_coral",
+                            "chance": 0.05
+                        },
+                        {
+                            "id": "armin_coral",
+                            "chance": 0.005
+                        }
+                    ],
+                    "say": "No wonder modern robots function properly even in the water. However I wonder if your offense power works any more against my debuff skill.",
+                    "gold": 3000,
+                    "exp": 300
+                },
+                {
+                    "name": "7 Frozen Sea",
+                    "tab": "normal",
+                    "energy": 35,
+                    "level": 20,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "derarctus",
+                    "enemies": [
+                        "shaark",
+                        "derakon",
+                        "toriz"
+                    ],
+                    "rare": [
+                        {
+                            "id": "mini_coral",
+                            "chance": 0.05
+                        },
+                        {
+                            "id": "armin_coral",
+                            "chance": 0.005
+                        }
+                    ],
+                    "gold": 3500,
+                    "exp": 350
+                },
+                {
+                    "name": "8 Titanic Foot",
+                    "tab": "normal",
+                    "energy": 40,
+                    "level": 22,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "taran",
+                    "enemies": [
+                        "tane",
+                        "derakon",
+                        "shaark"
+                    ],
+                    "rare": [
+                        {
+                            "id": "mini_coral",
+                            "chance": 0.05
+                        },
+                        {
+                            "id": "armin_coral",
+                            "chance": 0.005
+                        }
+                    ],
+                    "gold": 4000,
+                    "exp": 400
+                },
+                {
+                    "name": "9 Mythical Whale",
+                    "tab": "normal",
+                    "energy": 45,
+                    "level": 24,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "whalgent",
+                    "enemies": [
+                        "shaark",
+                        "tane",
+                        "derakon"
+                    ],
+                    "rare": [
+                        {
+                            "id": "mini_coral",
+                            "chance": 0.05
+                        },
+                        {
+                            "id": "armin_coral",
+                            "chance": 0.005
+                        }
+                    ],
+                    "boss_traits": [
+                        "immune"
+                    ],
+                    "say": "In this Deep Ocean Island, no debuff works against me!",
+                    "gold": 4500,
+                    "exp": 450
+                },
+                {
+                    "name": "10 Ryugu's Party",
+                    "tab": "normal",
+                    "energy": 0,
+                    "fp": 100,
+                    "level": 30,
+                    "stages": 10,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "armin_coral",
+                    "enemies": [
+                        "mini_coral",
+                        "rollin_coral",
+                        "rushin_coral",
+                        "shaark",
+                        "whalgent"
+                    ],
+                    "say": "I usually train in Normal Field 1~9. When you find me, I'll be your partner."
+                },
+                {
+                    "name": "1 Fish on Fire",
+                    "tab": "hard",
+                    "energy": 5,
+                    "level": 18,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "surak",
+                    "enemies": [
+                        "surak",
+                        "dripbal",
+                        "waby"
+                    ],
+                    "rare": [
+                        {
+                            "id": "turto_papa",
+                            "chance": 0.05
+                        }
+                    ]
+                },
+                {
+                    "name": "2 Navy Seal",
+                    "tab": "hard",
+                    "energy": 10,
+                    "level": 20,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "cupi",
+                    "enemies": [
+                        "flobal",
+                        "glacion",
+                        "dripbal"
+                    ],
+                    "rare": [
+                        {
+                            "id": "turto_papa",
+                            "chance": 0.05
+                        }
+                    ]
+                },
+                {
+                    "name": "3 Silent Heal",
+                    "tab": "hard",
+                    "energy": 15,
+                    "level": 22,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "wave_maker",
+                    "enemies": [
+                        "raingull",
+                        "burtle",
+                        "wami"
+                    ],
+                    "rare": [
+                        {
+                            "id": "turto_papa",
+                            "chance": 0.05
+                        }
+                    ]
+                },
+                {
+                    "name": "4 Impassible Deep",
+                    "tab": "hard",
+                    "energy": 20,
+                    "level": 24,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "sharpbeak",
+                    "enemies": [
+                        "sharpbeak",
+                        "drop_bonk",
+                        "blue_bonk"
+                    ],
+                    "rare": [
+                        {
+                            "id": "turto_papa",
+                            "chance": 0.05
+                        }
+                    ],
+                    "say": "Marvelous! You warriors fight even without Healing."
+                },
+                {
+                    "name": "5 Jellykings Man",
+                    "tab": "hard",
+                    "energy": 25,
+                    "level": 26,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "jellio",
+                    "enemies": [
+                        "jel",
+                        "drop_bonk",
+                        "bonk_scion"
+                    ],
+                    "rare": [
+                        {
+                            "id": "turto_papa",
+                            "chance": 0.05
+                        }
+                    ],
+                    "drops": [
+                        "bonk_scion",
+                        "mini_coral",
+                        "drop_bonk"
+                    ],
+                    "say": "What do you see? I see a next field for you"
+                },
+                {
+                    "name": "6 Iron Shark",
+                    "tab": "hard",
+                    "energy": 30,
+                    "level": 28,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "shaark",
+                    "enemies": [
+                        "derakon",
+                        "tane",
+                        "groch"
+                    ],
+                    "rare": [
+                        {
+                            "id": "turto_papa",
+                            "chance": 0.05
+                        }
+                    ],
+                    "say": "No wonder modern robots function properly even in the water. However I wonder if your offense power works any more against my debuff skill."
+                },
+                {
+                    "name": "7 Frozen Sea",
+                    "tab": "hard",
+                    "energy": 35,
+                    "level": 30,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "derarctus",
+                    "enemies": [
+                        "shaark",
+                        "derakon",
+                        "toriz"
+                    ],
+                    "rare": [
+                        {
+                            "id": "turto_papa",
+                            "chance": 0.05
+                        }
+                    ]
+                },
+                {
+                    "name": "8 Titanic Foot",
+                    "tab": "hard",
+                    "energy": 40,
+                    "level": 32,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "taran",
+                    "enemies": [
+                        "tane",
+                        "derakon",
+                        "shaark"
+                    ],
+                    "rare": [
+                        {
+                            "id": "turto_papa",
+                            "chance": 0.05
+                        }
+                    ]
+                },
+                {
+                    "name": "9 Mythical Whale",
+                    "tab": "hard",
+                    "energy": 45,
+                    "level": 34,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "whalgent",
+                    "enemies": [
+                        "shaark",
+                        "tane",
+                        "derakon"
+                    ],
+                    "rare": [
+                        {
+                            "id": "turto_papa",
+                            "chance": 0.05
+                        }
+                    ],
+                    "boss_traits": [
+                        "immune"
+                    ],
+                    "say": "In this Deep Ocean Island, no debuff works against me!"
+                },
+                {
+                    "name": "1 Fish on Fire",
+                    "tab": "hell",
+                    "energy": 5,
+                    "level": 28,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "surak",
+                    "enemies": [
+                        "surak",
+                        "dripbal",
+                        "waby"
+                    ],
+                    "rare": [
+                        {
+                            "id": "chibi_lorel",
+                            "chance": 0.05
+                        }
+                    ]
+                },
+                {
+                    "name": "2 Navy Seal",
+                    "tab": "hell",
+                    "energy": 10,
+                    "level": 30,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "cupi",
+                    "enemies": [
+                        "flobal",
+                        "glacion",
+                        "dripbal"
+                    ],
+                    "rare": [
+                        {
+                            "id": "chibi_lorel",
+                            "chance": 0.05
+                        }
+                    ]
+                },
+                {
+                    "name": "3 Silent Heal",
+                    "tab": "hell",
+                    "energy": 15,
+                    "level": 32,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "wave_maker",
+                    "enemies": [
+                        "raingull",
+                        "burtle",
+                        "wami"
+                    ],
+                    "rare": [
+                        {
+                            "id": "chibi_lorel",
+                            "chance": 0.05
+                        }
+                    ]
+                },
+                {
+                    "name": "4 Impassible Deep",
+                    "tab": "hell",
+                    "energy": 20,
+                    "level": 34,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "sharpbeak",
+                    "enemies": [
+                        "sharpbeak",
+                        "drop_bonk",
+                        "blue_bonk"
+                    ],
+                    "rare": [
+                        {
+                            "id": "chibi_lorel",
+                            "chance": 0.05
+                        }
+                    ],
+                    "say": "Marvelous! You warriors fight even without Healing."
+                },
+                {
+                    "name": "5 Jellykings Man",
+                    "tab": "hell",
+                    "energy": 25,
+                    "level": 36,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "jellio",
+                    "enemies": [
+                        "jel",
+                        "drop_bonk",
+                        "bonk_scion"
+                    ],
+                    "rare": [
+                        {
+                            "id": "chibi_lorel",
+                            "chance": 0.05
+                        }
+                    ],
+                    "drops": [
+                        "bonk_scion",
+                        "mini_coral",
+                        "drop_bonk"
+                    ],
+                    "say": "What do you see? I see a next field for you"
+                },
+                {
+                    "name": "6 Iron Shark",
+                    "tab": "hell",
+                    "energy": 30,
+                    "level": 38,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "shaark",
+                    "enemies": [
+                        "derakon",
+                        "tane",
+                        "groch"
+                    ],
+                    "rare": [
+                        {
+                            "id": "chibi_lorel",
+                            "chance": 0.05
+                        }
+                    ],
+                    "say": "No wonder modern robots function properly even in the water. However I wonder if your offense power works any more against my debuff skill."
+                },
+                {
+                    "name": "7 Frozen Sea",
+                    "tab": "hell",
+                    "energy": 35,
+                    "level": 40,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "derarctus",
+                    "enemies": [
+                        "shaark",
+                        "derakon",
+                        "toriz"
+                    ],
+                    "rare": [
+                        {
+                            "id": "chibi_lorel",
+                            "chance": 0.05
+                        }
+                    ]
+                },
+                {
+                    "name": "8 Titanic Foot",
+                    "tab": "hell",
+                    "energy": 40,
+                    "level": 42,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "taran",
+                    "enemies": [
+                        "tane",
+                        "derakon",
+                        "shaark"
+                    ],
+                    "rare": [
+                        {
+                            "id": "chibi_lorel",
+                            "chance": 0.05
+                        }
+                    ]
+                },
+                {
+                    "name": "9 Mythical Whale",
+                    "tab": "hell",
+                    "energy": 45,
+                    "level": 44,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "whalgent",
+                    "enemies": [
+                        "shaark",
+                        "tane",
+                        "derakon"
+                    ],
+                    "rare": [
+                        {
+                            "id": "chibi_lorel",
+                            "chance": 0.05
+                        }
+                    ],
+                    "boss_traits": [
+                        "immune"
+                    ],
+                    "say": "In this Deep Ocean Island, no debuff works against me!"
+                }
+            ],
+            "promo": "You'll be invited to a special monster's party when you clear Fields 1~9.",
+            "chain": true,
+            "est_fields": "Hard/Hell levels are estimates. Fields 1-5 names, bosses, energy 5/field, normal EXP 50/field and gold 500/field, Field 5 drop list: a8HsIdihHcw 2:38-5:58 and 5TxUU5mgPLU 0:56. 6-10 from hJbt19b1z9w"
+        },
+        {
+            "id": "elemental_island",
+            "name": "Elemental Island",
+            "kind": "elemental",
+            "days": [
+                6
+            ],
+            "desc": "In this island, the divine guard protects a precious treasure where Red Cubes can be found.",
+            "est_quests": "Temple names, bosses and gem costs 1/3/4/6/7: dRjMGwJWYCg (0:10, 11:05). Drop list from the in-game popup at 10:57 (wiki: list shown in-game is incomplete, drops are very rare). Opens Saturdays, 60 min for 15 gems otherwise (wiki).",
+            "quests": [
+                {
+                    "name": "Temple of Great Nature (normal)",
+                    "gems": 1,
+                    "energy": 0,
+                    "level": 18,
+                    "stages": 4,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "arch_bern",
+                    "enemies": [
+                        "fire_eldrake",
+                        "nurture_eldragon",
+                        "polar_eldragon",
+                        "spriby",
+                        "craboth"
+                    ],
+                    "red_cube_chance": 0.004,
+                    "drops": [
+                        "polar_eldragon",
+                        "nurture_eldragon",
+                        "fire_eldrake"
+                    ],
+                    "drop_mult": 0.15
+                },
+                {
+                    "name": "Temple of Lake (hard)",
+                    "gems": 3,
+                    "energy": 0,
+                    "level": 24,
+                    "stages": 4,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "turto_monarch",
+                    "enemies": [
+                        "polar_eldragon",
+                        "frozen_eldragon",
+                        "meteor_eldragon",
+                        "crablu",
+                        "water_kong"
+                    ],
+                    "red_cube_chance": 0.006,
+                    "drops": [
+                        "frozen_eldragon",
+                        "polar_eldragon",
+                        "meteor_eldragon"
+                    ],
+                    "drop_mult": 0.15
+                },
+                {
+                    "name": "Temple of Flame (very hard)",
+                    "gems": 4,
+                    "energy": 0,
+                    "level": 30,
+                    "stages": 4,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "firukis",
+                    "enemies": [
+                        "pyro_eldragon",
+                        "torch_eldragon",
+                        "pheona",
+                        "crablaze",
+                        "flame_kong"
+                    ],
+                    "red_cube_chance": 0.008,
+                    "drops": [
+                        "pheona",
+                        "torch_eldragon",
+                        "pyro_eldragon"
+                    ],
+                    "drop_mult": 0.15
+                },
+                {
+                    "name": "Temple of Void (extreme)",
+                    "gems": 6,
+                    "energy": 0,
+                    "level": 36,
+                    "stages": 4,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "obelisis",
+                    "enemies": [
+                        "void_eldragon",
+                        "neo_eldragon",
+                        "meteor_eldragon",
+                        "crabshade",
+                        "no_kong"
+                    ],
+                    "red_cube_chance": 0.01,
+                    "drops": [
+                        "neo_eldragon",
+                        "void_eldragon",
+                        "meteor_eldragon"
+                    ],
+                    "drop_mult": 0.15
+                },
+                {
+                    "name": "Temple of Four Elements (hell)",
+                    "gems": 7,
+                    "energy": 0,
+                    "level": 42,
+                    "stages": 4,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "morrigan",
+                    "enemies": [
+                        "pandabond",
+                        "whalduke",
+                        "ant_queen",
+                        "torch_eldragon",
+                        "void_eldragon"
+                    ],
+                    "red_cube_chance": 0.015,
+                    "drops": [
+                        "fortina",
+                        "pentacorn",
+                        "slayergal",
+                        "pandabond",
+                        "whalduke",
+                        "ant_queen",
+                        "torch_eldragon",
+                        "void_eldragon"
+                    ],
+                    "drop_mult": 0.15,
+                    "rare": [
+                        {
+                            "id": "fortina",
+                            "chance": 0.01
+                        },
+                        {
+                            "id": "pentacorn",
+                            "chance": 0.01
+                        },
+                        {
+                            "id": "slayergal",
+                            "chance": 0.01
+                        }
+                    ]
+                }
+            ],
+            "unlock_gems": 15
+        },
+        {
+            "id": "hunters_folly",
+            "name": "Hunter's Folly",
+            "kind": "event",
+            "days": [
+                5
+            ],
+            "desc": "When Demon Hunters fall prey to those they're hunting, they become a deadly threat. Can you guide hunters to the right path?",
+            "est_gold": true,
+            "quests": [
+                {
+                    "name": "Lustful Hunter",
+                    "energy": 10,
+                    "level": 15,
+                    "exp": 200,
+                    "gold": 1000,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "lowe",
+                    "enemies": [
+                        "emberpeep",
+                        "cinderpeep"
+                    ]
+                },
+                {
+                    "name": "Slothful Hunter",
+                    "energy": 20,
+                    "level": 18,
+                    "exp": 420,
+                    "gold": 1500,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "lowe",
+                    "enemies": [
+                        "burn_bot",
+                        "cinderpeep"
+                    ]
+                },
+                {
+                    "name": "Envious Hunter",
+                    "energy": 30,
+                    "level": 21,
+                    "exp": 520,
+                    "gold": 2000,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "lowe",
+                    "enemies": [
+                        "dawnspook",
+                        "dawnspec"
+                    ]
+                },
+                {
+                    "name": "Glutton Hunter",
+                    "energy": 40,
+                    "level": 23,
+                    "exp": 620,
+                    "gold": 2500,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "crueltee",
+                    "enemies": [
+                        "fimi",
+                        "shivvie"
+                    ]
+                },
+                {
+                    "name": "Prideful Hunter",
+                    "energy": 40,
+                    "level": 25,
+                    "exp": 720,
+                    "gold": 3000,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "crueltee",
+                    "enemies": [
+                        "tramix",
+                        "trama"
+                    ]
+                },
+                {
+                    "name": "Greedy Hunter",
+                    "energy": 40,
+                    "level": 27,
+                    "exp": 820,
+                    "gold": 3500,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "crueltee",
+                    "enemies": [
+                        "hotblok",
+                        "brickett"
+                    ]
+                },
+                {
+                    "name": "Wrathful Hunter",
+                    "energy": 40,
+                    "level": 30,
+                    "exp": 920,
+                    "gold": 4000,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "vengens",
+                    "enemies": [
+                        "grand_bang",
+                        "brickett"
+                    ]
+                }
+            ],
+            "promo": "[FREE on Friday] You can get ★4 Lowe by exploring this island."
+        },
+        {
+            "id": "k9_kingdom",
+            "name": "K9 Kingdom",
+            "kind": "event",
+            "days": [
+                6
+            ],
+            "desc": "This holy garden was once a paradise for dogs, but now it's being occupied by selfish monsters. Help Arch Bern restore peace to this land.",
+            "quests": [
+                {
+                    "name": "Unholy Dog",
+                    "energy": 5,
+                    "level": 8,
+                    "exp": 100,
+                    "gold": 500,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "saint_bern",
+                    "enemies": [
+                        "grumie",
+                        "bern"
+                    ],
+                    "stages": 3,
+                    "drops": [
+                        "bern",
+                        "grumie",
+                        "bern"
+                    ],
+                    "bg": "k9_cliffs"
+                },
+                {
+                    "name": "Feral Dog",
+                    "energy": 10,
+                    "level": 11,
+                    "exp": 200,
+                    "gold": 1000,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "kaolycan",
+                    "enemies": [
+                        "guardwolf",
+                        "kaowolf"
+                    ],
+                    "stages": 3,
+                    "drops": [
+                        "chilie",
+                        "guardwolf",
+                        "kaowolf"
+                    ],
+                    "bg": "k9_cliffs"
+                },
+                {
+                    "name": "Fierce Dog",
+                    "energy": 15,
+                    "level": 14,
+                    "exp": 300,
+                    "gold": 1500,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "harm_hound",
+                    "enemies": [
+                        "shivvie",
+                        "shivairy"
+                    ],
+                    "stages": 3,
+                    "drops": [
+                        "shivvie",
+                        "shivvie",
+                        "shivairy"
+                    ],
+                    "bg": "k9_cliffs"
+                },
+                {
+                    "name": "Hot Dog",
+                    "energy": 20,
+                    "level": 17,
+                    "exp": 400,
+                    "gold": 2000,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "twinblaze",
+                    "enemies": [
+                        "ferdog",
+                        "shivairy"
+                    ],
+                    "stages": 3,
+                    "drops": [
+                        "shivvie",
+                        "ferdog",
+                        "shivairy"
+                    ],
+                    "bg": "k9_cliffs"
+                },
+                {
+                    "name": "Alpha Dog",
+                    "energy": 25,
+                    "level": 20,
+                    "exp": 500,
+                    "gold": 2500,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "firukis",
+                    "enemies": [
+                        "shivelle",
+                        "shivairy"
+                    ],
+                    "stages": 3,
+                    "drops": [
+                        "shivairy",
+                        "shivelle",
+                        "shivairy"
+                    ],
+                    "bg": "k9_garden"
+                },
+                {
+                    "name": "Beta Dog",
+                    "energy": 30,
+                    "level": 23,
+                    "exp": 600,
+                    "gold": 3000,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "aquavis",
+                    "enemies": [
+                        "chilelle",
+                        "ghoulflash"
+                    ],
+                    "stages": 3,
+                    "drops": [
+                        "chilairy",
+                        "chilelle",
+                        "ghoulflash"
+                    ],
+                    "bg": "k9_garden"
+                },
+                {
+                    "name": "Sigma Dog",
+                    "energy": 35,
+                    "level": 26,
+                    "exp": 700,
+                    "gold": 3500,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "granubis",
+                    "enemies": [
+                        "grumelle",
+                        "grumairy"
+                    ],
+                    "stages": 3,
+                    "drops": [
+                        "grumairy",
+                        "grumelle",
+                        "grumairy"
+                    ],
+                    "bg": "k9_garden"
+                },
+                {
+                    "name": "Omega Dog",
+                    "energy": 40,
+                    "level": 29,
+                    "exp": 800,
+                    "gold": 4000,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "anubis",
+                    "enemies": [
+                        "conelle",
+                        "conairy"
+                    ],
+                    "stages": 3,
+                    "drops": [
+                        "conairy",
+                        "conelle",
+                        "conairy"
+                    ],
+                    "bg": "k9_garden"
+                },
+                {
+                    "name": "Dogfather",
+                    "energy": 0,
+                    "fp": 300,
+                    "level": 30,
+                    "exp": 1000,
+                    "gold": 3900,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "arch_bern",
+                    "enemies": [
+                        "anubis",
+                        "aquavis",
+                        "big_bern",
+                        "firukis",
+                        "granubis",
+                        "harm_hound",
+                        "kaolycan",
+                        "saint_bern",
+                        "twinblaze"
+                    ],
+                    "wave_pools": [
+                        [
+                            "harm_hound"
+                        ],
+                        [
+                            "twinblaze"
+                        ],
+                        [
+                            "kaolycan"
+                        ],
+                        [
+                            "aquavis"
+                        ],
+                        [
+                            "granubis"
+                        ],
+                        [
+                            "firukis"
+                        ],
+                        [
+                            "anubis"
+                        ],
+                        [
+                            "saint_bern"
+                        ],
+                        [
+                            "big_bern"
+                        ]
+                    ],
+                    "wave_sizes": [
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        0
+                    ],
+                    "stages": 9,
+                    "bg": "k9_garden",
+                    "rare": [
+                        {
+                            "id": "bern",
+                            "chance": 0.1
+                        }
+                    ]
+                }
+            ],
+            "promo": "Help Arch Bern restore peace to Doggy Heaven!",
+            "_source": "Field names, energy 5-40, Dogfather 300 FP and 9 waves, bosses, enemies and backgrounds: ElOm4vFzGyc. Levels and Dogfather waves 1-8 bosses partly estimated."
+        },
+        {
+            "id": "halloween_island",
+            "name": "Happy Halloween",
+            "kind": "event",
+            "days": [],
+            "desc": "Let's explore the island. While you're exploring, various new monsters will appear randomly from Fields 1~5 of Normal, Hard, Hell.",
+            "_source": "Fields 1-6, energy (Normal 10-50, Hard 15/25/35, Hell 25-70), Walpurgisnacht FP 100/300, waves, backgrounds and enemies: OMYpt_g8c38, L8MkmNw8srI, 3vEP5Z0ly2Q. Hard 4/5 energy, Hard Walpurgisnacht FP, gold/exp and some bosses estimated. Hell Mummy's curse also shows three bull-like monsters missing from the DB.",
+            "est_gold": true,
+            "quests": [
+                {
+                    "name": "1 Jack's carnival",
+                    "tab": "normal",
+                    "energy": 10,
+                    "level": 15,
+                    "exp": 200,
+                    "gold": 1000,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "bg": "halloween_carnival",
+                    "rare": [
+                        {
+                            "id": "jack",
+                            "chance": 0.05
+                        }
+                    ],
+                    "boss": "jack_o_paw",
+                    "enemies": [
+                        "firepaw"
+                    ],
+                    "stages": 3
+                },
+                {
+                    "name": "2 Masquerade",
+                    "tab": "normal",
+                    "energy": 20,
+                    "level": 18,
+                    "exp": 300,
+                    "gold": 1800,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "bg": "halloween_masquerade",
+                    "rare": [
+                        {
+                            "id": "jack",
+                            "chance": 0.05
+                        }
+                    ],
+                    "boss": "kora",
+                    "enemies": [
+                        "shade"
+                    ],
+                    "stages": 3
+                },
+                {
+                    "name": "3 Wolf's howling",
+                    "tab": "normal",
+                    "energy": 30,
+                    "level": 21,
+                    "exp": 400,
+                    "gold": 2600,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "bg": "halloween_graveyard",
+                    "rare": [
+                        {
+                            "id": "jack",
+                            "chance": 0.05
+                        }
+                    ],
+                    "boss": "guardwolf",
+                    "enemies": [
+                        "guardhunt"
+                    ],
+                    "stages": 3
+                },
+                {
+                    "name": "4 City of zombi",
+                    "tab": "normal",
+                    "energy": 40,
+                    "level": 24,
+                    "exp": 500,
+                    "gold": 3400,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "bg": "halloween_zombi",
+                    "rare": [
+                        {
+                            "id": "jack",
+                            "chance": 0.05
+                        }
+                    ],
+                    "boss": "ghouldig",
+                    "enemies": [
+                        "ghoulflame",
+                        "ghoulseed",
+                        "ghouldrop",
+                        "ghouldig"
+                    ],
+                    "stages": 3
+                },
+                {
+                    "name": "5 Mummy's curse",
+                    "tab": "normal",
+                    "energy": 50,
+                    "level": 27,
+                    "exp": 600,
+                    "gold": 4200,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "bg": "halloween_castle",
+                    "rare": [
+                        {
+                            "id": "jack",
+                            "chance": 0.05
+                        }
+                    ],
+                    "boss": "jackolantern",
+                    "enemies": [
+                        "tutankha",
+                        "jack"
+                    ],
+                    "stages": 3
+                },
+                {
+                    "name": "6 Walpurgisnacht",
+                    "tab": "normal",
+                    "energy": 0,
+                    "level": 30,
+                    "exp": 700,
+                    "gold": 5000,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "bg": "halloween_pumpkin",
+                    "rare": [
+                        {
+                            "id": "jack",
+                            "chance": 0.05
+                        }
+                    ],
+                    "boss": "jackolantern",
+                    "enemies": [
+                        "firepaw",
+                        "ghouldig",
+                        "ghouldrop",
+                        "ghoulflame",
+                        "ghoulseed",
+                        "guardhunt",
+                        "jack",
+                        "jackoblack",
+                        "shade",
+                        "tutankha"
+                    ],
+                    "wave_pools": [
+                        [
+                            "firepaw"
+                        ],
+                        [
+                            "shade"
+                        ],
+                        [
+                            "guardhunt"
+                        ],
+                        [
+                            "ghoulflame",
+                            "ghoulseed",
+                            "ghouldrop",
+                            "ghouldig"
+                        ],
+                        [
+                            "tutankha",
+                            "jack"
+                        ],
+                        [
+                            "jackoblack"
+                        ]
+                    ],
+                    "stages": 6,
+                    "fp": 100
+                },
+                {
+                    "name": "1 Jack's carnival",
+                    "tab": "hard",
+                    "energy": 15,
+                    "level": 22,
+                    "exp": 350,
+                    "gold": 2200,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "bg": "halloween_carnival",
+                    "rare": [
+                        {
+                            "id": "necro_kid",
+                            "chance": 0.05
+                        }
+                    ],
+                    "boss": "jack_o_paw",
+                    "enemies": [
+                        "firepaw",
+                        "flarepaw"
+                    ],
+                    "stages": 3
+                },
+                {
+                    "name": "2 Masquerade",
+                    "tab": "hard",
+                    "energy": 25,
+                    "level": 25,
+                    "exp": 450,
+                    "gold": 3000,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "bg": "halloween_masquerade",
+                    "rare": [
+                        {
+                            "id": "necro_kid",
+                            "chance": 0.05
+                        }
+                    ],
+                    "boss": "camilla",
+                    "enemies": [
+                        "shade",
+                        "shadow"
+                    ],
+                    "stages": 3
+                },
+                {
+                    "name": "3 Wolf's howling",
+                    "tab": "hard",
+                    "energy": 35,
+                    "level": 28,
+                    "exp": 550,
+                    "gold": 3800,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "bg": "halloween_graveyard",
+                    "rare": [
+                        {
+                            "id": "necro_kid",
+                            "chance": 0.05
+                        }
+                    ],
+                    "boss": "kaowolf",
+                    "enemies": [
+                        "guardhunt",
+                        "guardwolf"
+                    ],
+                    "stages": 3
+                },
+                {
+                    "name": "4 City of zombi",
+                    "tab": "hard",
+                    "energy": 50,
+                    "level": 31,
+                    "exp": 650,
+                    "gold": 4600,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "bg": "halloween_zombi",
+                    "rare": [
+                        {
+                            "id": "necro_kid",
+                            "chance": 0.05
+                        }
+                    ],
+                    "boss": "ghoulflash",
+                    "enemies": [
+                        "ghoulflame",
+                        "ghoulseed",
+                        "ghouldrop",
+                        "ghouldig"
+                    ],
+                    "stages": 3
+                },
+                {
+                    "name": "5 Mummy's curse",
+                    "tab": "hard",
+                    "energy": 60,
+                    "level": 34,
+                    "exp": 750,
+                    "gold": 5400,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "bg": "halloween_castle",
+                    "rare": [
+                        {
+                            "id": "necro_kid",
+                            "chance": 0.05
+                        }
+                    ],
+                    "boss": "jackolantern",
+                    "enemies": [
+                        "tutankha",
+                        "jackoblack"
+                    ],
+                    "stages": 3
+                },
+                {
+                    "name": "6 Walpurgisnacht",
+                    "tab": "hard",
+                    "energy": 0,
+                    "level": 37,
+                    "exp": 850,
+                    "gold": 6200,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "bg": "halloween_pumpkin",
+                    "rare": [
+                        {
+                            "id": "necro_kid",
+                            "chance": 0.05
+                        }
+                    ],
+                    "boss": "jackolantern",
+                    "enemies": [
+                        "firepaw",
+                        "flarepaw",
+                        "ghouldig",
+                        "ghouldrop",
+                        "ghoulflame",
+                        "ghoulseed",
+                        "guardhunt",
+                        "guardwolf",
+                        "jackoblack",
+                        "necro_corn",
+                        "shade",
+                        "shadow",
+                        "tutankha"
+                    ],
+                    "wave_pools": [
+                        [
+                            "firepaw",
+                            "flarepaw"
+                        ],
+                        [
+                            "shade",
+                            "shadow"
+                        ],
+                        [
+                            "guardhunt",
+                            "guardwolf"
+                        ],
+                        [
+                            "ghoulflame",
+                            "ghoulseed",
+                            "ghouldrop",
+                            "ghouldig"
+                        ],
+                        [
+                            "tutankha",
+                            "jackoblack"
+                        ],
+                        [
+                            "jackoblack",
+                            "necro_corn"
+                        ]
+                    ],
+                    "stages": 6,
+                    "fp": 200
+                },
+                {
+                    "name": "1 Jack's carnival",
+                    "tab": "hell",
+                    "energy": 25,
+                    "level": 30,
+                    "exp": 500,
+                    "gold": 3400,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "bg": "halloween_carnival",
+                    "rare": [
+                        {
+                            "id": "jiangshi",
+                            "chance": 0.05
+                        }
+                    ],
+                    "boss": "jack_o_paw",
+                    "enemies": [
+                        "infernopaw",
+                        "furion"
+                    ],
+                    "stages": 3
+                },
+                {
+                    "name": "2 Masquerade",
+                    "tab": "hell",
+                    "energy": 35,
+                    "level": 33,
+                    "exp": 600,
+                    "gold": 4200,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "bg": "halloween_masquerade",
+                    "rare": [
+                        {
+                            "id": "jiangshi",
+                            "chance": 0.05
+                        }
+                    ],
+                    "boss": "narkissa",
+                    "enemies": [
+                        "midnight",
+                        "camilla"
+                    ],
+                    "stages": 3
+                },
+                {
+                    "name": "3 Wolf's howling",
+                    "tab": "hell",
+                    "energy": 45,
+                    "level": 36,
+                    "exp": 700,
+                    "gold": 5000,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "bg": "halloween_graveyard",
+                    "rare": [
+                        {
+                            "id": "jiangshi",
+                            "chance": 0.05
+                        }
+                    ],
+                    "boss": "kaolycan",
+                    "enemies": [
+                        "guardwolf",
+                        "kaowolf"
+                    ],
+                    "stages": 3
+                },
+                {
+                    "name": "4 City of zombi",
+                    "tab": "hell",
+                    "energy": 60,
+                    "level": 39,
+                    "exp": 800,
+                    "gold": 5800,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "bg": "halloween_zombi",
+                    "rare": [
+                        {
+                            "id": "jiangshi",
+                            "chance": 0.05
+                        }
+                    ],
+                    "boss": "ghoulsmash",
+                    "enemies": [
+                        "ghoulflame",
+                        "ghoulseed",
+                        "ghouldrop",
+                        "ghouldig",
+                        "ghoulflash",
+                        "ghoulbloom",
+                        "ghoulfrost"
+                    ],
+                    "stages": 3
+                },
+                {
+                    "name": "5 Mummy's curse",
+                    "tab": "hell",
+                    "energy": 70,
+                    "level": 42,
+                    "exp": 900,
+                    "gold": 6600,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "bg": "halloween_castle",
+                    "rare": [
+                        {
+                            "id": "jiangshi",
+                            "chance": 0.05
+                        }
+                    ],
+                    "boss": "necro_moncer",
+                    "enemies": [
+                        "imhotep",
+                        "jackoblack",
+                        "necro_horn"
+                    ],
+                    "stages": 3
+                },
+                {
+                    "name": "6 Walpurgisnacht",
+                    "tab": "hell",
+                    "energy": 0,
+                    "level": 45,
+                    "exp": 1000,
+                    "gold": 7400,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "bg": "halloween_pumpkin",
+                    "rare": [
+                        {
+                            "id": "jiangshi",
+                            "chance": 0.05
+                        }
+                    ],
+                    "boss": "bw_ghosts",
+                    "enemies": [
+                        "camilla",
+                        "furion",
+                        "ghoulbloom",
+                        "ghouldig",
+                        "ghouldrop",
+                        "ghoulflame",
+                        "ghoulflash",
+                        "ghoulfrost",
+                        "ghoulseed",
+                        "guardwolf",
+                        "imhotep",
+                        "infernopaw",
+                        "jackoblack",
+                        "jiangshi",
+                        "kaowolf",
+                        "midnight",
+                        "necro_horn"
+                    ],
+                    "wave_pools": [
+                        [
+                            "infernopaw",
+                            "furion"
+                        ],
+                        [
+                            "midnight",
+                            "camilla"
+                        ],
+                        [
+                            "guardwolf",
+                            "kaowolf"
+                        ],
+                        [
+                            "ghoulflame",
+                            "ghoulseed",
+                            "ghouldrop",
+                            "ghouldig",
+                            "ghoulflash",
+                            "ghoulbloom",
+                            "ghoulfrost"
+                        ],
+                        [
+                            "imhotep",
+                            "jackoblack",
+                            "necro_horn"
+                        ],
+                        [
+                            "jiangshi"
+                        ]
+                    ],
+                    "stages": 6,
+                    "fp": 300
+                }
+            ],
+            "chain": true,
+            "chain_unlock": 3,
+            "promo": "You'll be invited to a special monster's party when you clear Fields 1~5."
+        },
+        {
+            "id": "maple_island",
+            "name": "Maple Island",
+            "kind": "event",
+            "days": [],
+            "desc": "A limited-edition island straight out of MapleStory! Find Zakum, Pink Bean, and Magnus here!",
+            "promo": "A limited-edition island straight out of MapleStory!",
+            "_source": "MapleStory crossover (p5OaHCqSMyw, 360p): fields, energy 4/20, bosses, Zakum box (E Zakum, Smish, Smee), Pink Bean (Chaos) box, enemies Spooki/Octo/Ponee, Pink Bean field background. Gold/levels and Magnus field enemies estimated.",
+            "quests": [
+                {
+                    "name": "Zakum",
+                    "energy": 4,
+                    "level": 20,
+                    "exp": 300,
+                    "gold": 520,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "e_zakum",
+                    "enemies": [
+                        "spooki",
+                        "octo",
+                        "ponee",
+                        "smish",
+                        "smee"
+                    ],
+                    "stages": 3,
+                    "bg": "maple_castle",
+                    "drops": [
+                        "e_zakum",
+                        "smish",
+                        "smee"
+                    ],
+                    "drop_mult": 1.0
+                },
+                {
+                    "name": "Magnus",
+                    "energy": 4,
+                    "level": 20,
+                    "exp": 300,
+                    "gold": 520,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "e_magnus",
+                    "enemies": [
+                        "spooki",
+                        "octo",
+                        "ponee"
+                    ],
+                    "stages": 3,
+                    "bg": "maple_castle",
+                    "drops": [
+                        "e_magnus"
+                    ],
+                    "drop_mult": 1.0
+                },
+                {
+                    "name": "Pink Bean",
+                    "energy": 4,
+                    "level": 20,
+                    "exp": 300,
+                    "gold": 520,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "e_pink_bean",
+                    "enemies": [
+                        "spooki",
+                        "octo",
+                        "ponee"
+                    ],
+                    "stages": 3,
+                    "bg": "maple_castle",
+                    "drops": [
+                        "e_pink_bean"
+                    ],
+                    "drop_mult": 1.0
+                },
+                {
+                    "name": "Zakum(Chaos)",
+                    "energy": 20,
+                    "level": 30,
+                    "exp": 600,
+                    "gold": 1500,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "zakum",
+                    "enemies": [
+                        "spooki",
+                        "octo",
+                        "ponee",
+                        "smish",
+                        "smee"
+                    ],
+                    "stages": 3,
+                    "bg": "maple_castle",
+                    "drops": [
+                        "e_zakum",
+                        "e_magnus",
+                        "e_pink_bean",
+                        "smish",
+                        "smee"
+                    ],
+                    "drop_mult": 0.5
+                },
+                {
+                    "name": "Magnus(Chaos)",
+                    "energy": 20,
+                    "level": 30,
+                    "exp": 600,
+                    "gold": 1500,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "magnus",
+                    "enemies": [
+                        "spooki",
+                        "octo",
+                        "ponee"
+                    ],
+                    "stages": 3,
+                    "bg": "maple_castle",
+                    "drops": [
+                        "e_zakum",
+                        "e_magnus",
+                        "e_pink_bean"
+                    ],
+                    "drop_mult": 0.5
+                },
+                {
+                    "name": "Pink Bean(Chaos)",
+                    "energy": 20,
+                    "level": 30,
+                    "exp": 600,
+                    "gold": 1500,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "pink_bean",
+                    "enemies": [
+                        "spooki",
+                        "octo",
+                        "ponee"
+                    ],
+                    "stages": 3,
+                    "bg": "maple_castle",
+                    "drops": [
+                        "e_zakum",
+                        "e_magnus",
+                        "e_pink_bean"
+                    ],
+                    "drop_mult": 0.5
+                }
+            ]
+        }
+    ]
+}

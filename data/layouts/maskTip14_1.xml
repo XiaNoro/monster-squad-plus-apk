@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="Image" elementID="ID_MaskTip" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png">
+    <ElementNode type="NinePatchButton" elementID="ID_9BUTTON_All" anchorX="0" anchorY="0" positionX="0" positionY="0" z="2" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{1066,640}" ninePatchInset="{{1,1},{2,2}}" />
+    <ElementNode type="NinePatch" elementID="ID_maskTip14_1" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{1066,640}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="Label" elementID="ID_LABEL_1" anchorX="0" anchorY="0" positionX="328" positionY="160" z="0" scaleX="1" scaleY="1" labelContent="Welcome to PvP Group Battle!" fontStyle="0" fontSize="30" fontColor="{255,255,255}" areaSizeX="700" areaSizeY="36" alignment="0" lineAlignment="0" effect="0" effectOffset="0" effectColor="{255,255,255}" />
+      <ElementNode type="Label" elementID="ID_LABEL_2" anchorX="0" anchorY="0" positionX="328" positionY="70" z="0" scaleX="1" scaleY="1" labelContent="In pvp group battle, you will set a team of 12 monster " fontStyle="0" fontSize="30" fontColor="{255,255,255}" areaSizeX="630" areaSizeY="70" alignment="0" lineAlignment="0" effect="0" effectOffset="0" effectColor="{255,255,255}" />
+    </ElementNode>
+    <ElementNode type="Image" elementID="ID_IMAGE_BG" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" />
+  </ElementNode>
+</root>

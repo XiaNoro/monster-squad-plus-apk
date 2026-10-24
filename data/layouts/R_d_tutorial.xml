@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_9PATCH_2" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_black40.png" ninePatchSize="{1066,640}" ninePatchInset="{{1,1},{2,2}}">
+    <ElementNode type="NinePatch" elementID="ID_9PATCH_1" anchorX="1" anchorY="1" positionX="1066" positionY="640" z="0" scaleX="1" scaleY="1" imageName="9_frame_10.png" ninePatchSize="{1066,160}" ninePatchInset="{{1,0},{2,160}}" />
+    <ElementNode type="NinePatch" elementID="ID_Dialog" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="9_frame_09.png" ninePatchSize="{1066,238}" ninePatchInset="{{1,0},{2,238}}">
+      <ElementNode type="NinePatch" elementID="ID_qmon" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{330,238}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Image" elementID="ID_mon1Sh" anchorX="0" anchorY="0" positionX="-25" positionY="-45" z="0" scaleX="2" scaleY="2" imageName="I_shadow_01.png" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_monStat" anchorX="0" anchorY="0" positionX="329" positionY="0" z="2" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{640,238}" ninePatchInset="{{1,1},{2,2}}">
+        <ElementNode type="Label" elementID="ID_monNameText" anchorX="0" anchorY="0" positionX="0" positionY="186" z="0" scaleX="1" scaleY="1" labelContent="NAME" fontStyle="0" fontSize="30" fontColor="{255,255,0}" areaSizeX="280" areaSizeY="34" alignment="0" lineAlignment="0" effect="0" effectOffset="2" effectColor="{80,40,0}" />
+        <ElementNode type="Label" elementID="ID_baseText" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" labelContent="Base Text" fontStyle="0" fontSize="28" fontColor="{255,255,255}" areaSizeX="640" areaSizeY="180" alignment="0" lineAlignment="0" effect="0" effectOffset="2" effectColor="{80,40,0}" />
+      </ElementNode>
+      <ElementNode type="Image" elementID="ID_IMAGE_OK" anchorX="0" anchorY="0" positionX="970" positionY="12" z="3" scaleX="1" scaleY="1" imageName="B_tutNext_01.png" />
+    </ElementNode>
+  </ElementNode>
+  <ElementNode type="Button" elementID="ID_btnSkip" anchorX="0" anchorY="0" positionX="867" positionY="562" z="1" scaleX="1" scaleY="1" imageName="B_skip_01.png" />
+</root>

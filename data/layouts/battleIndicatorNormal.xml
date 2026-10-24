@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="Image" elementID="ID_IMAGE_BASE" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_03.png">
+    <ElementNode type="Image" elementID="ID_IMAGE_HP_BASE" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="HpBase.png">
+      <ElementNode type="Image" elementID="ID_IMAGE_TYPE_FRAME" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="TypeFrame.png" />
+      <ElementNode type="ProgressBar" elementID="ID_PROGRESSBAR_HP" anchorX="0" anchorY="0" positionX="17" positionY="12" z="0" scaleX="1" scaleY="1" imageName="Hp.png" value="100" barDirection="0" />
+      <ElementNode type="NinePatch" elementID="ID_pvpRank" anchorX="0" anchorY="0" positionX="-26" positionY="-5" z="0" scaleX="1" scaleY="1" imageName="A_9_empty_02.png" ninePatchSize="{64,64}" ninePatchInset="{{1,1},{2,2}}" />
+    </ElementNode>
+  </ElementNode>
+</root>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="Image" elementID="ID_MaskTip" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png">
+    <ElementNode type="NinePatchButton" elementID="ID_9BUTTON_All" anchorX="0" anchorY="0" positionX="0" positionY="0" z="2" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{1066,640}" ninePatchInset="{{1,1},{2,2}}" />
+    <ElementNode type="NinePatch" elementID="ID_maskTip5_5" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{1066,640}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_5_5_1" anchorX="0" anchorY="0" positionX="392" positionY="486" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{316,52}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_5_5_1" anchorX="0" anchorY="0" positionX="6" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Sell selected Monster." fontStyle="0" fontSize="28" fontColor="{255,138,0}" areaSizeX="302" areaSizeY="40" alignment="0" lineAlignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_5_5_2" anchorX="0" anchorY="0" positionX="442" positionY="130" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{232,52}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_5_5_2" anchorX="0" anchorY="0" positionX="12" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Boost Monster." fontStyle="0" fontSize="28" fontColor="{255,138,0}" areaSizeX="220" areaSizeY="40" alignment="0" lineAlignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_5_5_3" anchorX="0" anchorY="0" positionX="532" positionY="208" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{232,52}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_5_5_3" anchorX="0" anchorY="0" positionX="10" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Fuses Monster." fontStyle="0" fontSize="28" fontColor="{255,138,0}" areaSizeX="220" areaSizeY="40" alignment="0" lineAlignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_5_5_4" anchorX="0" anchorY="0" positionX="564" positionY="286" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{334,52}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_5_5_4" anchorX="0" anchorY="0" positionX="12" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Equip the Magic Stone." fontStyle="0" fontSize="28" fontColor="{255,138,0}" areaSizeX="320" areaSizeY="40" alignment="0" lineAlignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_5_5_5" anchorX="0" anchorY="0" positionX="600" positionY="362" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{446,52}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_5_5_5" anchorX="0" anchorY="0" positionX="8" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Increases a monster’s level cap." fontStyle="0" fontSize="28" fontColor="{255,138,0}" areaSizeX="438" areaSizeY="40" alignment="0" lineAlignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_5_5_1_1" anchorX="0" anchorY="0" positionX="402" positionY="429" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{316,52}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_5_5_1_1" anchorX="0" anchorY="0" positionX="6" positionY="2" z="0" scaleX="1" scaleY="1" labelContent="Sell selected Monster." fontStyle="0" fontSize="28" fontColor="{255,138,0}" areaSizeX="302" areaSizeY="40" alignment="0" lineAlignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="Image" elementID="ID_IMAGE_BG" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" />
+  </ElementNode>
+</root>

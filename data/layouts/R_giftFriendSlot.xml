@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_frameSize" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{350,92}" ninePatchInset="{{1,1},{2,2}}">
+    <ElementNode type="NinePatch" elementID="ID_9PATCH_2" anchorX="0" anchorY="0" positionX="10" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_frame_01.png" ninePatchSize="{332,90}" ninePatchInset="{{20,20},{2,2}}">
+      <ElementNode type="Label" elementID="ID_friendName" anchorX="0" anchorY="0" positionX="98" positionY="46" z="0" scaleX="1" scaleY="1" labelContent="세빌리아베이비" fontStyle="1" fontSize="20" fontColor="{255,255,255}" areaSizeX="200" areaSizeY="30" alignment="0" effect="2" effectOffset="2" effectColor="{70,40,0}" />
+      <ElementNode type="Label" elementID="ID_friendstat" anchorX="0" anchorY="0" positionX="98" positionY="12" z="0" scaleX="1" scaleY="1" labelContent="Last login: 2h ago" fontStyle="1" fontSize="20" fontColor="{60,45,5}" areaSizeX="230" areaSizeY="28" alignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+      <ElementNode type="NinePatch" elementID="ID_userPhoto" anchorX="0" anchorY="0" positionX="16" positionY="10" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{74,74}" ninePatchInset="{{1,1},{2,2}}" />
+      <ElementNode type="Image" elementID="ID_check" anchorX="0" anchorY="0" positionX="258" positionY="22" z="0" scaleX="1" scaleY="1" imageName="I_check02.png" />
+    </ElementNode>
+  </ElementNode>
+</root>

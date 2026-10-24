@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_9PATCH_25" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_black60.png" ninePatchSize="{1066,640}" ninePatchInset="{{1,1},{2,2}}">
+    <ElementNode type="NinePatch" elementID="ID_option" anchorX="0" anchorY="0" positionX="104" positionY="2" z="0" scaleX="1" scaleY="1" imageName="9_Back_01.png" ninePatchSize="{858,560}" ninePatchInset="{{84,126},{2,2}}">
+      <ElementNode type="NinePatch" elementID="ID_option1" anchorX="0" anchorY="0" positionX="30" positionY="222" z="0" scaleX="1" scaleY="1" imageName="9_Back_02.png" ninePatchSize="{390,306}" ninePatchInset="{{15,15},{2,2}}">
+        <ElementNode type="NinePatch" elementID="ID_backSound" anchorX="0" anchorY="0" positionX="36" positionY="212" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{138,78}" ninePatchInset="{{1,1},{2,2}}">
+          <ElementNode type="Label" elementID="ID_LABEL_1" anchorX="0" anchorY="0" positionX="0" positionY="54" z="0" scaleX="1" scaleY="1" labelContent="BGM" fontStyle="1" fontSize="20" fontColor="{90,45,0}" areaSizeX="138" areaSizeY="24" alignment="0" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+          <ElementNode type="Button" elementID="ID_btnOn1" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="B_toggle_02.png">
+            <ElementNode type="Label" elementID="ID_LABEL_2" anchorX="0" anchorY="0" positionX="16" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="ON" fontStyle="1" fontSize="30" fontColor="{255,255,255}" areaSizeX="100" areaSizeY="36" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{80,35,0}" />
+            <ElementNode type="Image" elementID="ID_IMAGE_2" anchorX="0" anchorY="0" positionX="88" positionY="2" z="0" scaleX="1" scaleY="1" imageName="B_toggle_01.png" />
+          </ElementNode>
+          <ElementNode type="Button" elementID="ID_btnOff1" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="B_toggle_03.png">
+            <ElementNode type="Label" elementID="ID_LABEL_3" anchorX="0" anchorY="0" positionX="16" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Off" fontStyle="1" fontSize="30" fontColor="{235,190,105}" areaSizeX="100" areaSizeY="36" alignment="2" lineAlignment="0" effect="2" effectOffset="2" effectColor="{80,35,0}" />
+            <ElementNode type="Image" elementID="ID_IMAGE_3" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" imageName="B_toggle_01.png" />
+          </ElementNode>
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_effectSound" anchorX="0" anchorY="0" positionX="214" positionY="212" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{138,78}" ninePatchInset="{{1,1},{2,2}}">
+          <ElementNode type="Label" elementID="ID_LABEL_4" anchorX="0" anchorY="0" positionX="0" positionY="54" z="0" scaleX="1" scaleY="1" labelContent="Sound FX" fontStyle="1" fontSize="20" fontColor="{90,45,0}" areaSizeX="138" areaSizeY="24" alignment="0" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+          <ElementNode type="Button" elementID="ID_btnOn2" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="B_toggle_02.png">
+            <ElementNode type="Label" elementID="ID_LABEL_5" anchorX="0" anchorY="0" positionX="16" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="ON" fontStyle="1" fontSize="30" fontColor="{255,255,255}" areaSizeX="100" areaSizeY="36" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{80,35,0}" />
+            <ElementNode type="Image" elementID="ID_IMAGE_4" anchorX="0" anchorY="0" positionX="88" positionY="2" z="0" scaleX="1" scaleY="1" imageName="B_toggle_01.png" />
+          </ElementNode>
+          <ElementNode type="Button" elementID="ID_btnOff2" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="B_toggle_03.png">
+            <ElementNode type="Label" elementID="ID_LABEL_6" anchorX="0" anchorY="0" positionX="16" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Off" fontStyle="1" fontSize="30" fontColor="{235,190,105}" areaSizeX="100" areaSizeY="36" alignment="2" lineAlignment="0" effect="2" effectOffset="2" effectColor="{80,35,0}" />
+            <ElementNode type="Image" elementID="ID_IMAGE_5" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" imageName="B_toggle_01.png" />
+          </ElementNode>
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_alarm" anchorX="0" anchorY="0" positionX="-290" positionY="-290" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{138,90}" ninePatchInset="{{1,1},{2,2}}">
+          <ElementNode type="Label" elementID="ID_LABEL_7" anchorX="0" anchorY="0" positionX="0" positionY="66" z="0" scaleX="1" scaleY="1" labelContent="Push Notification" fontStyle="1" fontSize="20" fontColor="{90,45,0}" areaSizeX="138" areaSizeY="24" alignment="0" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+          <ElementNode type="Button" elementID="ID_btnOn3" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="B_toggle_02.png">
+            <ElementNode type="Label" elementID="ID_LABEL_8" anchorX="0" anchorY="0" positionX="16" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="ON" fontStyle="1" fontSize="30" fontColor="{255,255,255}" areaSizeX="100" areaSizeY="36" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{80,35,0}" />
+            <ElementNode type="Image" elementID="ID_IMAGE_6" anchorX="0" anchorY="0" positionX="88" positionY="2" z="0" scaleX="1" scaleY="1" imageName="B_toggle_01.png" />
+          </ElementNode>
+          <ElementNode type="Button" elementID="ID_btnOff3" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="B_toggle_03.png">
+            <ElementNode type="Label" elementID="ID_LABEL_9" anchorX="0" anchorY="0" positionX="16" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Off" fontStyle="1" fontSize="30" fontColor="{235,190,105}" areaSizeX="100" areaSizeY="36" alignment="2" lineAlignment="0" effect="2" effectOffset="2" effectColor="{80,35,0}" />
+            <ElementNode type="Image" elementID="ID_IMAGE_7" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" imageName="B_toggle_01.png" />
+          </ElementNode>
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_myPhoto" anchorX="0" anchorY="0" positionX="-290" positionY="-290" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{138,90}" ninePatchInset="{{1,1},{2,2}}">
+          <ElementNode type="Label" elementID="ID_LABEL_10" anchorX="0" anchorY="0" positionX="0" positionY="66" z="0" scaleX="1" scaleY="1" labelContent="Share My Info" fontStyle="1" fontSize="20" fontColor="{90,45,0}" areaSizeX="138" areaSizeY="24" alignment="0" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+          <ElementNode type="Button" elementID="ID_btnOn4" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="B_toggle_02.png">
+            <ElementNode type="Label" elementID="ID_LABEL_11" anchorX="0" anchorY="0" positionX="16" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="ON" fontStyle="1" fontSize="30" fontColor="{255,255,255}" areaSizeX="100" areaSizeY="36" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{80,35,0}" />
+            <ElementNode type="Image" elementID="ID_IMAGE_8" anchorX="0" anchorY="0" positionX="88" positionY="2" z="0" scaleX="1" scaleY="1" imageName="B_toggle_01.png" />
+          </ElementNode>
+          <ElementNode type="Button" elementID="ID_btnOff4" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="B_toggle_03.png">
+            <ElementNode type="Label" elementID="ID_LABEL_12" anchorX="0" anchorY="0" positionX="16" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Off" fontStyle="1" fontSize="30" fontColor="{235,190,105}" areaSizeX="100" areaSizeY="36" alignment="2" lineAlignment="0" effect="2" effectOffset="2" effectColor="{80,35,0}" />
+            <ElementNode type="Image" elementID="ID_IMAGE_9" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" imageName="B_toggle_01.png" />
+          </ElementNode>
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_kakaoMessage" anchorX="0" anchorY="0" positionX="-290" positionY="-290" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{138,90}" ninePatchInset="{{1,1},{2,2}}">
+          <ElementNode type="Label" elementID="ID_LABEL_18" anchorX="0" anchorY="0" positionX="0" positionY="66" z="0" scaleX="1" scaleY="1" labelContent="Get Friend Points" fontStyle="1" fontSize="20" fontColor="{90,45,0}" areaSizeX="148" areaSizeY="24" alignment="0" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+          <ElementNode type="Button" elementID="ID_btnOn5" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="B_toggle_02.png">
+            <ElementNode type="Label" elementID="ID_LABEL_8_1" anchorX="0" anchorY="0" positionX="16" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="ON" fontStyle="1" fontSize="30" fontColor="{255,255,255}" areaSizeX="100" areaSizeY="36" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{80,35,0}" />
+            <ElementNode type="Image" elementID="ID_IMAGE_6_1" anchorX="0" anchorY="0" positionX="88" positionY="2" z="0" scaleX="1" scaleY="1" imageName="B_toggle_01.png" />
+          </ElementNode>
+          <ElementNode type="Button" elementID="ID_btnOff5" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="B_toggle_03.png">
+            <ElementNode type="Label" elementID="ID_LABEL_9_1" anchorX="0" anchorY="0" positionX="16" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Off" fontStyle="1" fontSize="30" fontColor="{235,190,105}" areaSizeX="100" areaSizeY="36" alignment="2" lineAlignment="0" effect="2" effectOffset="2" effectColor="{80,35,0}" />
+            <ElementNode type="Image" elementID="ID_IMAGE_7_1" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" imageName="B_toggle_01.png" />
+          </ElementNode>
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_fullScreen" anchorX="0" anchorY="0" positionX="36" positionY="110" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{138,78}" ninePatchInset="{{1,1},{2,2}}">
+          <ElementNode type="Label" elementID="ID_LABEL_19" anchorX="0" anchorY="0" positionX="0" positionY="54" z="0" scaleX="1" scaleY="1" labelContent="Fullscreen" fontStyle="1" fontSize="20" fontColor="{90,45,0}" areaSizeX="138" areaSizeY="24" alignment="0" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+          <ElementNode type="Button" elementID="ID_btnOn4_1" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="B_toggle_02.png">
+            <ElementNode type="Label" elementID="ID_LABEL_11_1" anchorX="0" anchorY="0" positionX="16" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="ON" fontStyle="1" fontSize="30" fontColor="{255,255,255}" areaSizeX="100" areaSizeY="36" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{80,35,0}" />
+            <ElementNode type="Image" elementID="ID_IMAGE_8_1" anchorX="0" anchorY="0" positionX="88" positionY="2" z="0" scaleX="1" scaleY="1" imageName="B_toggle_01.png" />
+          </ElementNode>
+          <ElementNode type="Button" elementID="ID_btnOff4_1" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="B_toggle_03.png">
+            <ElementNode type="Label" elementID="ID_LABEL_12_1" anchorX="0" anchorY="0" positionX="16" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Off" fontStyle="1" fontSize="30" fontColor="{235,190,105}" areaSizeX="100" areaSizeY="36" alignment="2" lineAlignment="0" effect="2" effectOffset="2" effectColor="{80,35,0}" />
+            <ElementNode type="Image" elementID="ID_IMAGE_9_1" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" imageName="B_toggle_01.png" />
+          </ElementNode>
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_fuelPush" anchorX="0" anchorY="0" positionX="214" positionY="110" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{138,78}" ninePatchInset="{{1,1},{2,2}}">
+          <ElementNode type="Label" elementID="ID_LABEL_19_1" anchorX="0" anchorY="0" positionX="0" positionY="54" z="0" scaleX="1" scaleY="1" labelContent="Energy Push" fontStyle="1" fontSize="20" fontColor="{90,45,0}" areaSizeX="138" areaSizeY="24" alignment="0" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+          <ElementNode type="Button" elementID="ID_btnOn4_1_1" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="B_toggle_02.png">
+            <ElementNode type="Label" elementID="ID_LABEL_11_1_1" anchorX="0" anchorY="0" positionX="16" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="ON" fontStyle="1" fontSize="30" fontColor="{255,255,255}" areaSizeX="100" areaSizeY="36" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{80,35,0}" />
+            <ElementNode type="Image" elementID="ID_IMAGE_8_1_1" anchorX="0" anchorY="0" positionX="88" positionY="2" z="0" scaleX="1" scaleY="1" imageName="B_toggle_01.png" />
+          </ElementNode>
+          <ElementNode type="Button" elementID="ID_btnOff4_1_1" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="B_toggle_03.png">
+            <ElementNode type="Label" elementID="ID_LABEL_12_1_1" anchorX="0" anchorY="0" positionX="16" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Off" fontStyle="1" fontSize="30" fontColor="{235,190,105}" areaSizeX="100" areaSizeY="36" alignment="2" lineAlignment="0" effect="2" effectOffset="2" effectColor="{80,35,0}" />
+            <ElementNode type="Image" elementID="ID_IMAGE_9_1_1" anchorX="0" anchorY="0" positionX="0" positionY="2" z="0" scaleX="1" scaleY="1" imageName="B_toggle_01.png" />
+          </ElementNode>
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_btnLanguage" anchorX="0" anchorY="0" positionX="28" positionY="8" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{334,90}" ninePatchInset="{{1,1},{2,2}}">
+          <ElementNode type="Label" elementID="ID_LABEL_21" anchorX="0" anchorY="0" positionX="0" positionY="34" z="0" scaleX="1" scaleY="1" labelContent="Language" fontStyle="1" fontSize="20" fontColor="{90,45,0}" areaSizeX="106" areaSizeY="24" alignment="0" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+          <ElementNode type="NinePatchButton" elementID="ID_9BUTTON_1" anchorX="0" anchorY="0" positionX="106" positionY="6" z="0" scaleX="1" scaleY="1" imageName="9_btn_05.png" ninePatchSize="{228,78}" ninePatchInset="{{28,28},{2,2}}">
+            <ElementNode type="Image" elementID="ID_IMAGE_frameLS" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" />
+          </ElementNode>
+        </ElementNode>
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_option2" anchorX="0" anchorY="0" positionX="438" positionY="36" z="0" scaleX="1" scaleY="1" imageName="9_Back_02.png" ninePatchSize="{390,492}" ninePatchInset="{{15,15},{2,2}}">
+        <ElementNode type="NinePatchButton" elementID="ID_btnNotice" anchorX="0" anchorY="0" positionX="26" positionY="362" z="0" scaleX="1" scaleY="1" imageName="9_btn_05.png" ninePatchSize="{158,90}" ninePatchInset="{{28,28},{2,2}}">
+          <ElementNode type="Label" elementID="ID_LABEL_14" anchorX="0" anchorY="0" positionX="0" positionY="31" z="0" scaleX="1" scaleY="1" labelContent="Notice" fontStyle="1" fontSize="20" fontColor="{255,255,255}" areaSizeX="158" areaSizeY="26" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{94,38,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatchButton" elementID="ID_btnWeb" anchorX="0" anchorY="0" positionX="206" positionY="360" z="0" scaleX="1" scaleY="1" imageName="9_btn_05.png" ninePatchSize="{158,90}" ninePatchInset="{{28,28},{2,2}}">
+          <ElementNode type="Label" elementID="ID_LABEL_14_1" anchorX="0" anchorY="0" positionX="0" positionY="15" z="0" scaleX="1" scaleY="1" labelContent="Our Facebook Page" fontStyle="1" fontSize="20" fontColor="{255,255,255}" areaSizeX="158" areaSizeY="52" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{94,38,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatchButton" elementID="ID_btnRequest" anchorX="0" anchorY="0" positionX="26" positionY="240" z="0" scaleX="1" scaleY="1" imageName="9_btn_05.png" ninePatchSize="{158,90}" ninePatchInset="{{28,28},{2,2}}">
+          <ElementNode type="Label" elementID="ID_LABEL_13_2" anchorX="0" anchorY="0" positionX="0" positionY="31" z="0" scaleX="1" scaleY="1" labelContent="Contact Us" fontStyle="1" fontSize="20" fontColor="{255,255,255}" areaSizeX="158" areaSizeY="26" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{94,38,0}" />
+          <ElementNode type="Image" elementID="ID_alert13" anchorX="0" anchorY="0" positionX="-7" positionY="44" z="1" scaleX="1.4" scaleY="1.4" imageName="K_alert_01.png" />
+        </ElementNode>
+        <ElementNode type="NinePatchButton" elementID="ID_btnService" anchorX="0" anchorY="0" positionX="208" positionY="240" z="0" scaleX="1" scaleY="1" imageName="9_btn_08.png" ninePatchSize="{158,90}" ninePatchInset="{{28,28},{2,2}}">
+          <ElementNode type="Label" elementID="ID_LABEL_13" anchorX="0" anchorY="0" positionX="0" positionY="31" z="0" scaleX="1" scaleY="1" labelContent="Terms of Use" fontStyle="1" fontSize="20" fontColor="{255,255,255}" areaSizeX="158" areaSizeY="26" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,64,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatchButton" elementID="ID_btnPersonalInfo" anchorX="0" anchorY="0" positionX="26" positionY="120" z="0" scaleX="1" scaleY="1" imageName="9_btn_08.png" ninePatchSize="{158,90}" ninePatchInset="{{28,28},{2,2}}">
+          <ElementNode type="Label" elementID="ID_LABEL_13_3" anchorX="0" anchorY="0" positionX="0" positionY="31" z="0" scaleX="1" scaleY="1" labelContent="Privacy Policy" fontStyle="1" fontSize="20" fontColor="{255,255,255}" areaSizeX="158" areaSizeY="26" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,64,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatchButton" elementID="ID_btnGameInfo" anchorX="0" anchorY="0" positionX="208" positionY="-150" z="0" scaleX="1" scaleY="1" imageName="9_btn_08.png" ninePatchSize="{158,90}" ninePatchInset="{{28,28},{2,2}}">
+          <ElementNode type="Label" elementID="ID_LABEL_14_2" anchorX="0" anchorY="0" positionX="0" positionY="26" z="0" scaleX="1" scaleY="1" labelContent="Game Rating Info" fontStyle="1" fontSize="22" fontColor="{255,255,255}" areaSizeX="158" areaSizeY="32" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,64,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_9PATCH_versionID" anchorX="0" anchorY="0" positionX="24" positionY="16" z="0" scaleX="1" scaleY="1" imageName="9_Back_08.png" ninePatchSize="{344,68}" ninePatchInset="{{20,20},{2,2}}">
+          <ElementNode type="Label" elementID="ID_versionText" anchorX="0" anchorY="0" positionX="12" positionY="34" z="0" scaleX="1" scaleY="1" labelContent="Version: 1.1" fontStyle="1" fontSize="18" fontColor="{66,33,0}" areaSizeX="200" areaSizeY="24" alignment="0" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+          <ElementNode type="Label" elementID="ID_webIDText" anchorX="0" anchorY="0" positionX="12" positionY="10" z="0" scaleX="1" scaleY="1" labelContent="Kakao Member ID: 443534535353535353" fontStyle="1" fontSize="18" fontColor="{66,33,0}" areaSizeX="340" areaSizeY="24" alignment="0" lineAlignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatchButton" elementID="ID_btnAchievements" anchorX="0" anchorY="0" positionX="208" positionY="120" z="0" scaleX="1" scaleY="1" imageName="9_btn_08.png" ninePatchSize="{158,90}" ninePatchInset="{{28,28},{2,2}}">
+          <ElementNode type="Label" elementID="ID_LABEL_24" anchorX="0" anchorY="0" positionX="0" positionY="15" z="1" scaleX="1" scaleY="1" labelContent="Achievements" fontStyle="1" fontSize="20" fontColor="{255,255,255}" areaSizeX="158" areaSizeY="26" alignment="1" lineAlignment="0" effect="2" effectOffset="2" effectColor="{0,64,0}" />
+          <ElementNode type="Image" elementID="ID_IMAGE_1" anchorX="0" anchorY="0" positionX="61" positionY="39" z="0" scaleX="1" scaleY="1" imageName="I_achieve_01.png" />
+        </ElementNode>
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_option3" anchorX="0" anchorY="0" positionX="30" positionY="36" z="0" scaleX="1" scaleY="1" imageName="9_Back_02.png" ninePatchSize="{390,172}" ninePatchInset="{{15,15},{2,2}}">
+        <ElementNode type="NinePatchButton" elementID="ID_btnTerminatie" anchorX="0" anchorY="0" positionX="202" positionY="14" z="0" scaleX="1" scaleY="1" imageName="9_Back_09.png" ninePatchSize="{174,68}" ninePatchInset="{{20,20},{2,2}}">
+          <ElementNode type="Label" elementID="ID_LABEL_16" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" labelContent="Close Account" fontStyle="1" fontSize="18" fontColor="{255,200,120}" areaSizeX="174" areaSizeY="68" alignment="1" lineAlignment="1" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatchButton" elementID="ID_btnLogout" anchorX="0" anchorY="0" positionX="14" positionY="14" z="0" scaleX="1" scaleY="1" imageName="9_Back_09.png" ninePatchSize="{174,68}" ninePatchInset="{{20,20},{2,2}}">
+          <ElementNode type="Label" elementID="ID_LABEL_17" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" labelContent="Logout" fontStyle="1" fontSize="18" fontColor="{255,200,120}" areaSizeX="174" areaSizeY="68" alignment="1" lineAlignment="1" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatchButton" elementID="ID_btnFacebook" anchorX="0" anchorY="0" positionX="14" positionY="96" z="0" scaleX="1" scaleY="1" imageName="9_btn_11.png" ninePatchSize="{174,62}" ninePatchInset="{{54,0},{2,62}}">
+          <ElementNode type="Label" elementID="ID_LABEL_20" anchorX="0" anchorY="0" positionX="50" positionY="0" z="1" scaleX="1" scaleY="1" labelContent="Connect" fontStyle="1" fontSize="18" fontColor="{255,255,255}" areaSizeX="124" areaSizeY="62" alignment="1" lineAlignment="1" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+          <ElementNode type="NinePatch" elementID="ID_connected1" anchorX="0" anchorY="0" positionX="0" positionY="0" z="2" scaleX="1" scaleY="1" imageName="9_Back_22.png" ninePatchSize="{174,62}" ninePatchInset="{{6,6},{2,2}}" />
+        </ElementNode>
+        <ElementNode type="NinePatchButton" elementID="ID_btnGamecenter" anchorX="0" anchorY="0" positionX="202" positionY="96" z="0" scaleX="1" scaleY="1" imageName="9_btn_12.png" ninePatchSize="{174,62}" ninePatchInset="{{54,0},{2,62}}">
+          <ElementNode type="Label" elementID="ID_LABEL_22" anchorX="0" anchorY="0" positionX="50" positionY="0" z="1" scaleX="1" scaleY="1" labelContent="Connect" fontStyle="1" fontSize="18" fontColor="{255,255,255}" areaSizeX="124" areaSizeY="62" alignment="1" lineAlignment="1" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+          <ElementNode type="NinePatch" elementID="ID_connected2" anchorX="0" anchorY="0" positionX="0" positionY="0" z="2" scaleX="1" scaleY="1" imageName="9_Back_22.png" ninePatchSize="{174,62}" ninePatchInset="{{6,6},{2,2}}" />
+        </ElementNode>
+        <ElementNode type="NinePatchButton" elementID="ID_btnGoogle+" anchorX="0" anchorY="0" positionX="202" positionY="96" z="0" scaleX="1" scaleY="1" imageName="9_btn_13.png" ninePatchSize="{174,62}" ninePatchInset="{{54,0},{2,62}}">
+          <ElementNode type="Label" elementID="ID_LABEL_23" anchorX="0" anchorY="0" positionX="50" positionY="0" z="1" scaleX="1" scaleY="1" labelContent="Connect" fontStyle="1" fontSize="18" fontColor="{255,255,255}" areaSizeX="124" areaSizeY="62" alignment="1" lineAlignment="1" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+          <ElementNode type="NinePatch" elementID="ID_connected3" anchorX="0" anchorY="0" positionX="0" positionY="0" z="2" scaleX="1" scaleY="1" imageName="9_Back_22.png" ninePatchSize="{174,62}" ninePatchInset="{{6,6},{2,2}}" />
+        </ElementNode>
+      </ElementNode>
+    </ElementNode>
+  </ElementNode>
+</root>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_9PATCH_2" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9H_black60.png" ninePatchSize="{1066,640}" ninePatchInset="{{1,1},{2,2}}">
+    <ElementNode type="NinePatch" elementID="ID_Dialog" anchorX="0" anchorY="0" positionX="294" positionY="100" z="0" scaleX="1" scaleY="1" imageName="9H_Back_19.png" ninePatchSize="{468,434}" ninePatchInset="{{50,50},{2,2}}">
+      <ElementNode type="NinePatch" elementID="ID_baseback" anchorX="0" anchorY="0" positionX="12" positionY="16" z="0" scaleX="1" scaleY="1" imageName="9H_Back_01.png" ninePatchSize="{440,340}" ninePatchInset="{{84,126},{2,2}}">
+        <ElementNode type="Label" elementID="ID_headText" anchorX="0" anchorY="0" positionX="28" positionY="256" z="0" scaleX="1" scaleY="1" labelContent="Failed to complete quest." fontStyle="1" fontSize="26" fontColor="{45,20,0}" areaSizeX="382" areaSizeY="40" alignment="1" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+        <ElementNode type="NinePatch" elementID="ID_base" anchorX="0" anchorY="0" positionX="28" positionY="126" z="0" scaleX="1" scaleY="1" imageName="9H_Back_02.png" ninePatchSize="{382,114}" ninePatchInset="{{15,15},{2,2}}">
+          <ElementNode type="NinePatch" elementID="ID_teamSlot" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_03.png" ninePatchSize="{10,10}" ninePatchInset="{{1,1},{2,2}}">
+            <ElementNode type="Label" elementID="ID_text_1" anchorX="0" anchorY="0" positionX="16" positionY="20" z="0" scaleX="1" scaleY="1" labelContent="Bring along a monster with ability." fontStyle="1" fontSize="20" fontColor="{45,20,0}" areaSizeX="240" areaSizeY="60" alignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+            <ElementNode type="Button" elementID="ID_btnTeam" anchorX="0.5" anchorY="0.5" positionX="318" positionY="56" z="0" scaleX="1" scaleY="1" imageName="H_team_01.png">
+              <ElementNode type="Label" elementID="ID_LABEL_1" anchorX="0" anchorY="0" positionX="8" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Edit Team" fontStyle="1" fontSize="17" fontColor="{255,230,150}" areaSizeX="80" areaSizeY="20" alignment="1" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+            </ElementNode>
+            <ElementNode type="NinePatchButton" elementID="ID_btnTeam_2" anchorX="0.5" anchorY="0.5" positionX="92" positionY="-58" z="0" scaleX="1" scaleY="1" imageName="9H_btn_06.png" ninePatchSize="{182,88}" ninePatchInset="{{48,43},{2,2}}">
+              <ElementNode type="Label" elementID="ID_LABEL_4" anchorX="0" anchorY="0" positionX="0" positionY="24" z="1" scaleX="1" scaleY="1" labelContent="Edit Team" fontStyle="1" fontSize="30" fontColor="{255,255,255}" areaSizeX="180" areaSizeY="40" alignment="1" effect="2" effectOffset="2" effectColor="{0,64,0}" />
+            </ElementNode>
+          </ElementNode>
+          <ElementNode type="NinePatch" elementID="ID_shop" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_03.png" ninePatchSize="{10,10}" ninePatchInset="{{1,1},{2,2}}">
+            <ElementNode type="Label" elementID="ID_text_2" anchorX="0" anchorY="0" positionX="16" positionY="20" z="0" scaleX="1" scaleY="1" labelContent="Try to get the best monster!" fontStyle="1" fontSize="20" fontColor="{45,20,0}" areaSizeX="240" areaSizeY="60" alignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+            <ElementNode type="Button" elementID="ID_btnShop" anchorX="0.5" anchorY="0.5" positionX="318" positionY="56" z="0" scaleX="0.9" scaleY="0.9" imageName="H_shop_01.png">
+              <ElementNode type="Label" elementID="ID_LABEL_2" anchorX="0.5" anchorY="0.5" positionX="52" positionY="17" z="0" scaleX="1" scaleY="1" labelContent="Store" fontStyle="1" fontSize="17" fontColor="{255,230,150}" areaSizeX="80" areaSizeY="20" alignment="1" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+            </ElementNode>
+            <ElementNode type="NinePatchButton" elementID="ID_btnShop_2" anchorX="0.5" anchorY="0.5" positionX="92" positionY="-58" z="0" scaleX="1" scaleY="1" imageName="9H_btn_06.png" ninePatchSize="{182,88}" ninePatchInset="{{48,43},{2,2}}">
+              <ElementNode type="Label" elementID="ID_LABEL_6" anchorX="0" anchorY="0" positionX="0" positionY="24" z="1" scaleX="1" scaleY="1" labelContent="Store" fontStyle="1" fontSize="30" fontColor="{255,255,255}" areaSizeX="180" areaSizeY="40" alignment="1" effect="2" effectOffset="2" effectColor="{0,64,0}" />
+            </ElementNode>
+          </ElementNode>
+          <ElementNode type="NinePatch" elementID="ID_combine" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_03.png" ninePatchSize="{10,10}" ninePatchInset="{{1,1},{2,2}}">
+            <ElementNode type="Label" elementID="ID_text_3" anchorX="0" anchorY="0" positionX="16" positionY="20" z="0" scaleX="1" scaleY="1" labelContent="Boosting monsters will \nupgrade their stats!" fontStyle="1" fontSize="20" fontColor="{45,20,0}" areaSizeX="240" areaSizeY="60" alignment="0" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+            <ElementNode type="Button" elementID="ID_btnTeam_1" anchorX="0.5" anchorY="0.5" positionX="318" positionY="56" z="0" scaleX="1" scaleY="1" imageName="H_raise_01.png">
+              <ElementNode type="Label" elementID="ID_LABEL_3" anchorX="0" anchorY="0" positionX="8" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Train" fontStyle="1" fontSize="17" fontColor="{255,230,150}" areaSizeX="80" areaSizeY="20" alignment="1" effect="0" effectOffset="0" effectColor="{0,0,0}" />
+            </ElementNode>
+            <ElementNode type="NinePatchButton" elementID="ID_btnCom_2" anchorX="0.5" anchorY="0.5" positionX="92" positionY="-58" z="0" scaleX="1" scaleY="1" imageName="9H_btn_06.png" ninePatchSize="{182,88}" ninePatchInset="{{48,43},{2,2}}">
+              <ElementNode type="Label" elementID="ID_LABEL_7" anchorX="0" anchorY="0" positionX="0" positionY="24" z="1" scaleX="1" scaleY="1" labelContent="Go Train" fontStyle="1" fontSize="30" fontColor="{255,255,255}" areaSizeX="180" areaSizeY="40" alignment="1" effect="2" effectOffset="2" effectColor="{0,64,0}" />
+            </ElementNode>
+          </ElementNode>
+        </ElementNode>
+        <ElementNode type="NinePatch" elementID="ID_title" anchorX="0" anchorY="0" positionX="68" positionY="344" z="0" scaleX="1" scaleY="1" imageName="9H_frame_04.png" ninePatchSize="{300,56}" ninePatchInset="{{32,0},{2,56}}">
+          <ElementNode type="Label" elementID="ID_titleText" anchorX="0" anchorY="0" positionX="28" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Quest Failed" fontStyle="1" fontSize="30" fontColor="{255,220,125}" areaSizeX="240" areaSizeY="40" alignment="1" effect="1" effectOffset="3" effectColor="{80,40,0}" />
+        </ElementNode>
+        <ElementNode type="NinePatchButton" elementID="ID_btnOk" anchorX="0.5" anchorY="0.5" positionX="318" positionY="68" z="0" scaleX="1" scaleY="1" imageName="9H_btn_01.png" ninePatchSize="{182,88}" ninePatchInset="{{48,43},{2,2}}">
+          <ElementNode type="Label" elementID="ID_LABEL_5" anchorX="0" anchorY="0" positionX="0" positionY="24" z="1" scaleX="1" scaleY="1" labelContent="Leave" fontStyle="1" fontSize="30" fontColor="{255,255,255}" areaSizeX="180" areaSizeY="40" alignment="1" effect="2" effectOffset="2" effectColor="{95,40,0}" />
+        </ElementNode>
+      </ElementNode>
+    </ElementNode>
+  </ElementNode>
+</root>

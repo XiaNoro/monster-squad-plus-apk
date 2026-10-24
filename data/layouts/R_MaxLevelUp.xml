@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="Image" elementID="ID_con" anchorX="0" anchorY="0" positionX="532" positionY="165" z="0" scaleX="1" scaleY="1" imageName="9_empty_05.png">
+    <ElementNode type="Image" elementID="ID_posBubble" anchorX="0.5" anchorY="0.5" positionX="127" positionY="96" z="4" scaleX="1" scaleY="1" imageName="9_empty_05.png" />
+    <ElementNode type="Image" elementID="ID_imgText" anchorX="0.5" anchorY="0.5" positionX="0" positionY="358" z="1" scaleX="1" scaleY="1" imageName="maxLevel.png" />
+    <ElementNode type="Image" elementID="ID_posMonster" anchorX="0.5" anchorY="0.5" positionX="0" positionY="0" z="3" scaleX="1" scaleY="1" imageName="9_empty_05.png" />
+    <ElementNode type="Image" elementID="ID_imgShadow" anchorX="0.5" anchorY="0.5" positionX="0" positionY="0" z="-1" scaleX="1" scaleY="1" imageName="GroundShadow.png" />
+    <ElementNode type="NinePatch" elementID="ID_infoLevel" anchorX="0.5" anchorY="0.5" positionX="-6" positionY="270" z="2" scaleX="1" scaleY="1" imageName="9_empty_05.png" ninePatchSize="{500,40}" ninePatchInset="{{0,0},{0,0}}">
+      <ElementNode type="Label" elementID="ID_levelText1" anchorX="0.5" anchorY="0.5" positionX="162" positionY="20" z="0" scaleX="1" scaleY="1" labelContent="Lv.30" fontStyle="1" fontSize="24" fontColor="{0,252,255}" areaSizeX="100" areaSizeY="30" alignment="2" lineAlignment="0" effect="2" effectOffset="2" effectColor="{45,12,0}" />
+      <ElementNode type="Label" elementID="ID_levelText1_1" anchorX="0.5" anchorY="0.5" positionX="326" positionY="22" z="2" scaleX="1" scaleY="1" labelContent="Lv.35" fontStyle="1" fontSize="38" fontColor="{255,243,115}" areaSizeX="120" areaSizeY="40" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{45,12,0}" />
+      <ElementNode type="Image" elementID="ID_IMAGE_1" anchorX="0.5" anchorY="0.5" positionX="240" positionY="22" z="1" scaleX="1" scaleY="1" imageName="arrow_01.png" />
+    </ElementNode>
+  </ElementNode>
+</root>

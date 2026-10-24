@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="Image" elementID="ID_MaskTip" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png">
+    <ElementNode type="NinePatchButton" elementID="ID_9BUTTON_All" anchorX="0" anchorY="0" positionX="0" positionY="0" z="2" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{1066,640}" ninePatchInset="{{1,1},{2,2}}" />
+    <ElementNode type="NinePatch" elementID="ID_maskTip3_1" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{1066,640}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_3_1_1" anchorX="0" anchorY="0" positionX="207" positionY="578" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{240,52}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_3_1_1" anchorX="0" anchorY="0" positionX="6" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Speed Control" fontStyle="0" fontSize="30" fontColor="{255,138,0}" areaSizeX="228" areaSizeY="40" alignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_3_1_2" anchorX="0" anchorY="0" positionX="25" positionY="493" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{292,52}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_3_1_2" anchorX="0" anchorY="0" positionX="6" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Activate Auto Skill" fontStyle="0" fontSize="30" fontColor="{255,138,0}" areaSizeX="280" areaSizeY="40" alignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+      <ElementNode type="Label" elementID="ID_LABEL_3_1_3" anchorX="0" anchorY="0" positionX="32" positionY="420" z="0" scaleX="1" scaleY="1" labelContent="Activate team member's skill" fontStyle="0" fontSize="30" fontColor="{255,138,0}" areaSizeX="420" areaSizeY="40" alignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_3_1_3" anchorX="0" anchorY="0" positionX="255" positionY="10" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{542,94}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_3_1_4" anchorX="0" anchorY="0" positionX="6" positionY="47" z="0" scaleX="1" scaleY="1" labelContent="Leader's Mana Gauge" fontStyle="0" fontSize="30" fontColor="{255,138,0}" areaSizeX="530" areaSizeY="40" alignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+        <ElementNode type="Label" elementID="ID_LABEL_3_1_5" anchorX="0" anchorY="0" positionX="6" positionY="6" z="0" scaleX="1" scaleY="1" labelContent="Skill(s) can be used only if there is enough Mana." fontStyle="0" fontSize="22" fontColor="{255,162,0}" areaSizeX="530" areaSizeY="30" alignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="Image" elementID="ID_IMAGE_BG" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" />
+  </ElementNode>
+</root>

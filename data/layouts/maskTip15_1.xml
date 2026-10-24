@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="Image" elementID="ID_MaskTip" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png">
+    <ElementNode type="NinePatchButton" elementID="ID_9BUTTON_All" anchorX="0" anchorY="0" positionX="0" positionY="0" z="2" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{1066,640}" ninePatchInset="{{1,1},{2,2}}" />
+    <ElementNode type="NinePatch" elementID="ID_maskTip15_1" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{1066,640}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_15_1_1" anchorX="0" anchorY="0" positionX="290" positionY="478" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{322,52}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_15_1_1" anchorX="0" anchorY="0" positionX="6" positionY="4" z="0" scaleX="1" scaleY="1" labelContent="Current monster stats" fontStyle="0" fontSize="28" fontColor="{255,138,0}" areaSizeX="310" areaSizeY="40" alignment="0" lineAlignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_15_1_2" anchorX="0" anchorY="0" positionX="632" positionY="478" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{354,52}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_15_1_2" anchorX="0" anchorY="0" positionX="10" positionY="4" z="0" scaleX="1" scaleY="1" labelContent="Rerolled monster stats" fontStyle="0" fontSize="28" fontColor="{255,138,0}" areaSizeX="340" areaSizeY="40" alignment="0" lineAlignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_15_1_3" anchorX="0" anchorY="0" positionX="822" positionY="130" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{192,52}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_15_1_3" anchorX="0" anchorY="0" positionX="10" positionY="4" z="0" scaleX="1" scaleY="1" labelContent="Reroll stats" fontStyle="0" fontSize="28" fontColor="{255,138,0}" areaSizeX="174" areaSizeY="40" alignment="0" lineAlignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_15_1_4" anchorX="0" anchorY="0" positionX="822" positionY="226" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{234,86}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_15_1_4" anchorX="0" anchorY="0" positionX="10" positionY="4" z="0" scaleX="1" scaleY="1" labelContent="Roll-back to previous stats " fontStyle="0" fontSize="28" fontColor="{255,138,0}" areaSizeX="216" areaSizeY="72" alignment="0" lineAlignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_15_1_5" anchorX="0" anchorY="0" positionX="20" positionY="268" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{364,116}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_15_1_5" anchorX="0" anchorY="0" positionX="10" positionY="4" z="0" scaleX="1" scaleY="1" labelContent="You can lock-in one stat.  Lock-in stat will not decrease." fontStyle="0" fontSize="28" fontColor="{255,138,0}" areaSizeX="350" areaSizeY="102" alignment="0" lineAlignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="Image" elementID="ID_IMAGE_BG" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" />
+  </ElementNode>
+</root>

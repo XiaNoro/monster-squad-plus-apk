@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="Image" elementID="ID_MaskTip" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png">
+    <ElementNode type="NinePatchButton" elementID="ID_9BUTTON_All" anchorX="0" anchorY="0" positionX="0" positionY="0" z="2" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{1066,640}" ninePatchInset="{{1,1},{2,2}}" />
+    <ElementNode type="NinePatch" elementID="ID_maskTip12_3" anchorX="0" anchorY="0" positionX="0" positionY="0" z="1" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{1066,640}" ninePatchInset="{{1,1},{2,2}}">
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_12_3_1" anchorX="0" anchorY="0" positionX="78" positionY="510" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{262,52}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_12_3_1" anchorX="0" anchorY="0" positionX="6" positionY="4" z="0" scaleX="1" scaleY="1" labelContent="Magic Stone Type" fontStyle="0" fontSize="28" fontColor="{255,138,0}" areaSizeX="250" areaSizeY="40" alignment="0" lineAlignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_12_3_2" anchorX="0" anchorY="0" positionX="276" positionY="116" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{294,86}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_12_3_2" anchorX="0" anchorY="0" positionX="6" positionY="4" z="0" scaleX="1" scaleY="1" labelContent="Number that can currently be crafted." fontStyle="0" fontSize="28" fontColor="{255,138,0}" areaSizeX="286" areaSizeY="72" alignment="0" lineAlignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_12_3_3" anchorX="0" anchorY="0" positionX="83" positionY="48" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{494,52}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_12_3_3" anchorX="0" anchorY="0" positionX="6" positionY="4" z="0" scaleX="1" scaleY="1" labelContent="Select a recipe to craft from this list." fontStyle="0" fontSize="28" fontColor="{255,138,0}" areaSizeX="488" areaSizeY="40" alignment="0" lineAlignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_12_3_4" anchorX="0" anchorY="0" positionX="562" positionY="314" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{140,52}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_12_3_4" anchorX="0" anchorY="0" positionX="10" positionY="4" z="0" scaleX="1" scaleY="1" labelContent="Material" fontStyle="0" fontSize="28" fontColor="{255,138,0}" areaSizeX="124" areaSizeY="40" alignment="0" lineAlignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_12_3_5" anchorX="0" anchorY="0" positionX="721" positionY="314" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{290,52}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_12_3_5" anchorX="0" anchorY="0" positionX="10" positionY="4" z="0" scaleX="1" scaleY="1" labelContent="Magic Stone Details" fontStyle="0" fontSize="28" fontColor="{255,138,0}" areaSizeX="276" areaSizeY="40" alignment="0" lineAlignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_12_3_6" anchorX="0" anchorY="0" positionX="590" positionY="136" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{162,52}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_12_3_6" anchorX="0" anchorY="0" positionX="10" positionY="4" z="0" scaleX="1" scaleY="1" labelContent="Craft Cost" fontStyle="0" fontSize="28" fontColor="{255,138,0}" areaSizeX="150" areaSizeY="40" alignment="0" lineAlignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+      <ElementNode type="NinePatch" elementID="ID_9PATCH_12_3_7" anchorX="0" anchorY="0" positionX="822" positionY="136" z="0" scaleX="1" scaleY="1" imageName="9_Back_12.png" ninePatchSize="{112,52}" ninePatchInset="{{12,12},{2,2}}">
+        <ElementNode type="Label" elementID="ID_LABEL_12_3_7" anchorX="0" anchorY="0" positionX="11" positionY="4" z="0" scaleX="1" scaleY="1" labelContent="Craft" fontStyle="0" fontSize="28" fontColor="{255,138,0}" areaSizeX="90" areaSizeY="40" alignment="0" lineAlignment="0" effect="2" effectOffset="3" effectColor="{0,0,0}" />
+      </ElementNode>
+    </ElementNode>
+    <ElementNode type="Image" elementID="ID_IMAGE_BG" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" />
+  </ElementNode>
+</root>

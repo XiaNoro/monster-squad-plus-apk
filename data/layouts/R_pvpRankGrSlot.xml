@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ElementNode type="NinePatch" elementID="ID_rankSlot" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{496,104}" ninePatchInset="{{1,1},{2,2}}">
+    <ElementNode type="NinePatch" elementID="ID_monIcon" anchorX="0" anchorY="0" positionX="2" positionY="2" z="0" scaleX="1" scaleY="1" imageName="9_Back_08.png" ninePatchSize="{100,100}" ninePatchInset="{{20,20},{2,2}}">
+      <ElementNode type="NinePatch" elementID="ID_position" anchorX="0" anchorY="0" positionX="4" positionY="4" z="1" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{92,92}" ninePatchInset="{{1,1},{2,2}}" />
+    </ElementNode>
+    <ElementNode type="NinePatch" elementID="ID_slot" anchorX="0" anchorY="0" positionX="106" positionY="2" z="0" scaleX="1" scaleY="1" imageName="9_frame_01.png" ninePatchSize="{388,102}" ninePatchInset="{{20,20},{2,2}}">
+      <ElementNode type="Button" elementID="ID_btnMList" anchorX="0" anchorY="0" positionX="286" positionY="8" z="0" scaleX="1" scaleY="1" imageName="K_info_01.png" />
+      <ElementNode type="NinePatch" elementID="ID_rankingIcon" anchorX="0" anchorY="0" positionX="-4" positionY="50" z="0" scaleX="1" scaleY="1" imageName="9_empty_02.png" ninePatchSize="{56,56}" ninePatchInset="{{1,1},{2,2}}" />
+      <ElementNode type="Label" elementID="ID_txtUserName" anchorX="0" anchorY="0" positionX="30" positionY="50" z="0" scaleX="1" scaleY="1" labelContent="Baby_Fighter" fontStyle="1" fontSize="22" fontColor="{255,255,255}" areaSizeX="200" areaSizeY="30" alignment="0" lineAlignment="0" effect="2" effectOffset="2" effectColor="{70,40,0}" />
+      <ElementNode type="Label" elementID="ID_txtPvpScore" anchorX="0" anchorY="0" positionX="30" positionY="14" z="0" scaleX="1" scaleY="1" labelContent="000% (00,000 Points)" fontStyle="1" fontSize="22" fontColor="{60,40,5}" areaSizeX="260" areaSizeY="30" alignment="0" lineAlignment="0" effect="0" effectOffset="2" effectColor="{0,0,0}" />
+    </ElementNode>
+  </ElementNode>
+</root>
