@@ -11,10 +11,19 @@ env:
 
 jobs:
   ios:
-    runs-on: macos-15
+    runs-on: macos-26
     timeout-minutes: 45
+    defaults:
+      run:
+        shell: bash -eo pipefail {0}
     steps:
       - uses: actions/checkout@v4
+
+      - name: Select newest Xcode
+        run: |
+          xcode=$(ls -d /Applications/Xcode_*.app | sort -V | tail -n 1)
+          sudo xcode-select -s "$xcode"
+          xcodebuild -version
 
       - name: Install Godot and iOS template
         run: |
@@ -42,6 +51,7 @@ jobs:
             -configuration Release -sdk iphoneos -destination generic/platform=iOS \
             -derivedDataPath dd CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" \
             build | tail -n 40
+          test -f dd/Build/Products/Release-iphoneos/MonsterSquadPlus.app/MonsterSquadPlus
           mkdir Payload
           cp -R dd/Build/Products/Release-iphoneos/MonsterSquadPlus.app Payload/
           version=$(sed -n 's/^config\/version="\(.*\)"/\1/p' project.godot)
