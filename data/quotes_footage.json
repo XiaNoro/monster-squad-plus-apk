@@ -2,6 +2,7 @@
     "_note":  "Monster quotes read (OCR) from loading screens in gameplay footage; used when the wiki has none.",
     "quotes":  {
                    "furion":  "There is no next time, only now!",
+                   "armin_coral":  "There is a haven of warm even in the deep cold ocean.",
                    "trapula":  "Sometimes the only way out is through.",
                    "plossom":  "Pat rne. then I\u0027ll be your friend.",
                    "megacrush":  "The terror begins.",
@@ -165,6 +166,13 @@
                    "titan_foot":  "Excuse me, big fella coming through!",
                    "explodion":  "Tomorrow is another day.",
                    "plum_bat":  "Leave this castle. Now!",
-                   "krokodin":  "Ya gotta crack some eggs to make an egg sandwich!"
+                   "krokodin":  "Ya gotta crack some eggs to make an egg sandwich!",
+                   "ceratoking":  "An ancient power is slowly rising!",
+                   "deramax":  "A new ice age begins!",
+                   "ghouldrop":  "Brrrrrrrrr...",
+                   "ghoulfrost":  "Brrrrrrrrr...",
+                   "moss_bat":  "Silence, intruder!",
+                   "turto_kaiser":  "Life begins at one hundred years old.",
+                   "lubu":  "Have After!"
                }
 }

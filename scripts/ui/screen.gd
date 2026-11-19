@@ -1,4 +1,4 @@
-class_name Screen
+﻿class_name Screen
 extends Control
 
 const TOP_VARIANTS := ["ID_top1", "ID_top2", "ID_top3", "ID_top4", "ID_top5", "ID_top_shop", "ID_top7"]
@@ -59,7 +59,7 @@ func add_top_bar(variant: String = "2", title: String = "", back_target: String 
 		if n.begins_with("ID_Chatalert") or n.begins_with("ID_alert") or n == "ID_BUTTON_Key":
 			c.visible = false
 		elif n.begins_with("ID_btnChat"):
-			c.visible = false
+			(c as BaseButton).pressed.connect(open_chat)
 		elif n.begins_with("ID_btnBack"):
 			c.set_meta("sfx", "back")
 			(c as BaseButton).pressed.connect(go_back)
@@ -144,12 +144,7 @@ func _offer_refill() -> void:
 	if e >= int(Save.data.energy_cap):
 		UI.toast(self, "Energy is already full")
 		return
-	var body := UI.label("Refill energy to %d for %d gems?" % [int(Save.data.energy_cap), Save.ENERGY_REFILL_GEMS], 22, UI.BROWN)
-	body.add_theme_constant_override("outline_size", 0)
-	UI.dialog(self, "Energy", body, [
-		{"text": "Refill", "color": "yellow", "cb": _refill},
-		{"text": "Cancel", "color": "blue"},
-	])
+	UI.confirm(self, "Notice", "Refill energy to %d for %d gems?" % [int(Save.data.energy_cap), Save.ENERGY_REFILL_GEMS], _refill)
 
 
 func _refill() -> void:
@@ -160,24 +155,20 @@ func _refill() -> void:
 
 
 func _show_tip() -> void:
-	var body := UI.label(String(DB.tips[randi() % DB.tips.size()]) if not DB.tips.is_empty() else "", 20, UI.BROWN)
-	body.add_theme_constant_override("outline_size", 0)
-	body.autowrap_mode = TextServer.AUTOWRAP_WORD
-	body.custom_minimum_size = Vector2(520, 0)
-	UI.dialog(self, "Tip", body, [{"text": "OK", "color": "blue"}])
+	UI.notice(self, "Tip", String(DB.tips[randi() % DB.tips.size()]) if not DB.tips.is_empty() else "")
 
 
 func open_options() -> void:
 	OptionsPopup.open(self)
 
 
+func open_chat() -> void:
+	if main != null and main.ticker != null:
+		ChatPanel.open(self)
+
+
 func _confirm_reset() -> void:
-	var body := UI.label("All monsters and progress will be lost.", 20, UI.BROWN)
-	body.add_theme_constant_override("outline_size", 0)
-	UI.dialog(self, "Really reset?", body, [
-		{"text": "Reset", "color": "purple", "cb": _do_reset},
-		{"text": "Cancel", "color": "blue"},
-	])
+	UI.confirm(self, "Really reset?", "All monsters and progress will be lost.", _do_reset)
 
 
 func _do_reset() -> void:
@@ -193,3 +184,21 @@ static func _thousands(n: int) -> String:
 		out = "," + s.substr(s.length() - 3) + out
 		s = s.substr(0, s.length() - 3)
 	return s + out
+
+
+func brown_background() -> void:
+	var g := Gradient.new()
+	g.set_color(0, Color("5e4433"))
+	g.set_color(1, Color("3a281b"))
+	var gt := GradientTexture2D.new()
+	gt.gradient = g
+	gt.fill = GradientTexture2D.FILL_RADIAL
+	gt.fill_from = Vector2(0.5, 0.45)
+	gt.fill_to = Vector2(1.1, 1.1)
+	var bg := TextureRect.new()
+	bg.texture = gt
+	bg.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	bg.stretch_mode = TextureRect.STRETCH_SCALE
+	bg.set_anchors_and_offsets_preset(PRESET_FULL_RECT)
+	bg.mouse_filter = MOUSE_FILTER_IGNORE
+	add_child(bg)

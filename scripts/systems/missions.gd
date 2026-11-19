@@ -17,6 +17,8 @@ const WEEKLY := [
 	{"id": "w_fuse", "text": "Fuse the Monster!", "event": "fuse", "goal": 2, "reward": {"gold": 50000}},
 	{"id": "w_lv30", "text": "Achieve Lv.30 (Except Material)", "event": "reach30", "goal": 20, "reward": {"gems": 20}},
 	{"id": "w_volcano", "text": "Explore Volcano Island", "event": "special:volcano_island", "goal": 7, "reward": {"monster": "ruburak"}},
+	{"id": "w_icicle", "text": "Explore Icicle Island", "event": "special:icicle_island", "goal": 7, "reward": {"monster": "sapphburak"}},
+	{"id": "w_jungle", "text": "Explore Jungle Island", "event": "special:jungle_island", "goal": 7, "reward": {"monster": "greeburak"}},
 	{"id": "w_daily", "text": "Clear Daily Mission", "event": "daily_done", "goal": 40, "reward": {"cube": "yellow"}},
 	{"id": "w_ocean1", "text": "Explore Deep Ocean Isle1 (Special Island)", "event": "special:deep_ocean_island", "goal": 10, "reward": {"gold": 20000}},
 	{"id": "w_ocean2", "text": "Explore Deep Ocean Isle2 (Special Island)", "event": "special:deep_ocean_island", "goal": 20, "reward": {"cube": "yellow"}},

@@ -26,8 +26,21 @@ static func ensure_defaults() -> void:
 			if String(f.name) == String(d.name):
 				f.monster = d.monster
 				found = true
-		if not found:
+		if not found and not String(d.name) in Save.data.get("friends_removed", []):
 			Save.data.friends.append(d.duplicate())
+
+
+static func remove_friend(name: String) -> void:
+	Save.data.friends = Save.data.friends.filter(func(f): return String(f.name) != name)
+	var removed: Array = Save.data.get("friends_removed", [])
+	if not name in removed:
+		removed.append(name)
+	Save.data["friends_removed"] = removed
+	Save.save_game()
+
+
+static func _welcome_back(name: String) -> void:
+	Save.data.get("friends_removed", []).erase(name)
 
 
 static func day_key() -> int:
@@ -118,6 +131,7 @@ static func process_requests() -> Array:
 			var p: Dictionary = r.player.duplicate()
 			p.erase("guest")
 			Save.data.friends.append(p)
+			_welcome_back(String(p.name))
 			accepted.append(p)
 			_invite_gift(String(p.name))
 	Save.data["friend_requests"] = keep
@@ -145,6 +159,7 @@ static func add_friend(p: Dictionary) -> void:
 	var f := p.duplicate()
 	f.erase("guest")
 	Save.data.friends.append(f)
+	_welcome_back(String(f.name))
 	_invite_gift(String(f.name))
 	Save.save_game()
 
@@ -199,6 +214,7 @@ static func duel_quest(f: Dictionary) -> Dictionary:
 	return {
 		"kind": "duel",
 		"key": "duel",
+		"bg": "duel_cave",
 		"title": "Duel  ·  vs %s" % f.name,
 		"rival_name": String(f.name), "friend_name": String(f.name),
 		"energy": 0, "level": int(t[0].level), "boss": t[0].id, "enemies": [],

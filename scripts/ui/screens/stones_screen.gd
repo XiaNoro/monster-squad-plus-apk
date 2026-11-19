@@ -5,15 +5,19 @@ const CAT_TABS := {"attack": "ID_tapATK", "defense": "ID_tapDEF", "skill": "ID_t
 const TYPE_TINT := {"bravery": Color("ff6a4a"), "windfury": Color("9cf06a"), "thunder": Color("ffe24a"), "destruction": Color("ff4aa8"),
 	"vitality": Color("ff9a9a"), "steel": Color("b8c8d8"), "blessed": Color("7affc8"), "time": Color("8ab8ff"), "clarity": Color("6ae8ff"), "spirit": Color("c88aff")}
 const SORTS := ["Rank", "Type", "Recent"]
+const RANK_FILTERS := ["ALL", "E", "D", "C", "B", "A", "S", "S+"]
 const STAT_ROWS := [["hp", "ID_textHp2", "ID_textHp2_1"], ["atk", "ID_textAp2", "ID_textAp2_1"], ["def", "ID_textDp2", "ID_textDp2_1"], ["rec", "ID_textRe2", "ID_textRe2_1"], ["max_mp", "ID_textMana2", "ID_textMana2_1"]]
+const LIST_CUT := 58.0
+const CRAFT_SELL_SCALE := 0.8
 
 var lay: Layout
+var _box: Layout
 var uid := -1
 var _cat := "attack"
 var _sort := 0
+var _rank := 0
 var _pick := ""
 var _slot := 0
-var _stone := -1
 
 
 func build() -> void:
@@ -21,27 +25,50 @@ func build() -> void:
 	uid = int(args.get("uid", -1))
 	if uid >= 0 and not Save.get_owned(uid).is_empty():
 		lay = Layout.load_into(self, "R_comStonePage")
+		_box = lay
 		add_top_bar("2", "Magic Stones", String(args.get("back", "squad")))
 		_back_args = args.get("back_args", {"mode": "train", "uid": uid})
 		lay.on("ID_btnAlign", _next_sort)
-		lay.on("ID_btnAdd", _offer_box)
 		lay.on("ID_btnEquip", _confirm_equip)
 		lay.on("ID_btnRemove", _confirm_remove)
-		lay.on("ID_btnSell", _confirm_destroy)
 		lay.text("ID_LABEL_6", "Equip Cost")
 		for i in 3:
 			var s := lay.node("ID_stone%d" % (i + 1))
 			s.mouse_filter = MOUSE_FILTER_STOP
 			s.gui_input.connect(_on_slot.bind(i))
-		_refresh_equip()
 	else:
 		lay = Layout.load_into(self, "R_comStonePage_create")
-		add_top_bar("2", "Magic Stones", "hub")
+		add_top_bar("2", "Craft M. Stone", String(args.get("back", "hub")))
+		_borrow_box()
 		for c in CAT_TABS:
 			lay.on(CAT_TABS[c], _set_cat.bind(c))
-		lay.on("ID_btnAlign", _next_sort)
+		lay.on("ID_btnAlign", _next_rank)
 		lay.on("ID_btnCreate", _craft)
+		lay.show("ID_txtUnique", false)
+	_box.on("ID_btnAdd", _expand)
+	_box.on("ID_btnSell", _open_sell)
+	_box.text("ID_LABEL_1", "Sell")
+	if uid >= 0:
+		_refresh_equip()
+	else:
 		_set_cat("attack")
+
+
+func _borrow_box() -> void:
+	var donor := Layout.load_into(self, "R_comStonePage", Vector2.ZERO, Layout.SCREEN_H, "")
+	_box = donor
+	(donor.node("ID_9PATCH_4_1") as Control).reparent(lay.node("ID_stoneList"), false)
+	var sell := donor.node("ID_btnSell") as Control
+	var matl := lay.node("ID_9PATCH_infoMatl") as Control
+	sell.reparent(matl, false)
+	sell.scale = Vector2.ONE * CRAFT_SELL_SCALE
+	sell.position = Vector2(matl.size.x - sell.size.x * CRAFT_SELL_SCALE - 8.0, -2.0)
+	donor.root.queue_free()
+	var panel := lay.node("ID_9PATCH_5") as Control
+	panel.size.y -= LIST_CUT
+	for id in ["ID_slide", "ID_bar", "ID_arrayPosition"]:
+		var c := lay.node(id) as Control
+		c.size.y -= LIST_CUT
 
 
 static func stone_icon(st: Dictionary, size: float = 92.0) -> Control:
@@ -78,7 +105,7 @@ static func stone_icon(st: Dictionary, size: float = 92.0) -> Control:
 	if v > 0:
 		var l := UI.label(MagicStones.VARIANTS[v], int(18 * s), Color.WHITE)
 		l.add_theme_constant_override("outline_size", 4)
-		l.position = Vector2(60, 62) * s
+		l.position = Vector2(64, 4) * s
 		box.add_child(l)
 	return box
 
@@ -102,12 +129,59 @@ static func stone_tile(st: Dictionary, on_press: Callable) -> Control:
 	return b
 
 
-func _next_sort() -> void:
-	_sort = (_sort + 1) % SORTS.size()
+static func stone_slot_art(area: Vector2) -> Control:
+	var box := Control.new()
+	box.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	box.size = area
+	var t := minf(area.x, area.y) * 0.62
+	var tile := UI.image(UI.tex("betaUI00/B_monEmpty_04.png"), Vector2(t, t))
+	tile.size = Vector2(t, t)
+	tile.position = (area - tile.size) / 2.0
+	box.add_child(tile)
+	var arrow := UI.image(UI.tex("betaUI00/I_arrow_03.png"), Vector2(t * 0.42, t * 0.5))
+	arrow.size = Vector2(t * 0.42, t * 0.5)
+	arrow.pivot_offset = arrow.size / 2.0
+	arrow.rotation = PI
+	arrow.modulate = Color(1.0, 0.25, 0.35)
+	arrow.position = tile.position + tile.size - arrow.size * Vector2(0.75, 0.8)
+	box.add_child(arrow)
+	return box
+
+
+static func offer_stone_slots(parent: Control, full: bool = false, on_done: Callable = Callable()) -> void:
+	CubesScreen.offer_purchase(parent, "Expand Stone Slots", stone_slot_art(Vector2(208, 210)),
+		"Not enough inventory slots.\nWould you like to make a purchase?" if full else "Would you like to make a purchase?",
+		"Use a gem to expand your Magic Stone slots.", MagicStones.STONE_SLOT_GEMS, Save.expand_stone_box,
+		func() -> String: return "Magic Stone slots expanded.", on_done)
+
+
+func _refresh() -> void:
 	if uid >= 0:
 		_refresh_equip()
 	else:
 		_refresh_craft()
+
+
+func _refresh_bar() -> void:
+	_box.text("ID_numText", str(Save.free_stones().size()))
+	_box.text("ID_maxText", "/%d" % int(Save.data.stone_cap))
+	var stack := _picked_stack()
+	_box.node("ID_btnSell").modulate = Color.WHITE if not stack.is_empty() else Color(0.6, 0.6, 0.6)
+
+
+func _expand() -> void:
+	offer_stone_slots(self, false, _refresh)
+
+
+func _next_sort() -> void:
+	_sort = (_sort + 1) % SORTS.size()
+	_refresh()
+
+
+func _next_rank() -> void:
+	_rank = (_rank + 1) % RANK_FILTERS.size()
+	_pick = ""
+	_refresh_craft()
 
 
 func _sorted(list: Array) -> Array:
@@ -122,8 +196,32 @@ func _sorted(list: Array) -> Array:
 	return out
 
 
-func _key(st: Dictionary) -> String:
-	return "%s|%d|%d" % [st.type, int(st.rank), int(st.get("variant", 0))]
+func _by_recipe(list: Array) -> Array:
+	var order := MagicStones.TYPES.keys()
+	var out := list.duplicate()
+	out.sort_custom(func(a, b):
+		var ta := order.find(a.type)
+		var tb := order.find(b.type)
+		if ta != tb:
+			return ta < tb
+		if int(a.rank) != int(b.rank):
+			return int(a.rank) < int(b.rank)
+		return int(a.get("variant", 0)) < int(b.get("variant", 0)))
+	return out
+
+
+func _picked_stack() -> Dictionary:
+	if _pick == "":
+		return {}
+	for s in Save.stone_stacks(Save.free_stones()):
+		if s.key == _pick:
+			return s
+	return {}
+
+
+func _picked_uid() -> int:
+	var s := _picked_stack()
+	return int(s.uids[0]) if not s.is_empty() else -1
 
 
 func _brown(l: Label, font: int = 18) -> Label:
@@ -143,31 +241,38 @@ func _set_cat(c: String) -> void:
 	_refresh_craft()
 
 
-func _refresh_craft() -> void:
-	lay.text("ID_LABEL_4", SORTS[_sort])
-	var groups := {}
-	var order := []
-	for st in _sorted(Save.free_stones()):
+func _craft_stacks() -> Array:
+	var out := []
+	for s in Save.stone_stacks(_by_recipe(Save.free_stones())):
+		var st: Dictionary = s.stone
 		if String(MagicStones.TYPES[st.type].cat) != _cat:
 			continue
-		var k := _key(st)
-		if not groups.has(k):
-			groups[k] = []
-			order.append(k)
-		groups[k].append(st)
-	if _pick == "" or not groups.has(_pick):
-		_pick = order[0] if not order.is_empty() else ""
+		if _rank > 0 and int(st.rank) != _rank - 1:
+			continue
+		out.append(s)
+	return out
+
+
+func _refresh_craft() -> void:
+	lay.text("ID_LABEL_4", RANK_FILTERS[_rank])
+	var stacks := _craft_stacks()
+	var keys := stacks.map(func(s): return s.key)
+	if not _pick in keys:
+		_pick = keys[0] if not keys.is_empty() else ""
 	var rows := []
-	for k in order:
-		rows.append(_stone_row(groups[k][0], groups[k].size(), k == _pick, _select_group.bind(k)))
+	for s in stacks:
+		rows.append(_stone_row(s.stone, s.uids.size(), s.key == _pick, _select_group.bind(s.key)))
 	if rows.is_empty():
-		var l := _brown(UI.label("No stones yet.\nClear Sky Tower floors to find Magic Stones.", 20), 20)
+		var what := "" if _rank == 0 else "rank %s " % RANK_FILTERS[_rank]
+		var l := _brown(UI.label("No %s%s stones.\nClear Sky Tower floors to find Magic Stones." % [what, _cat], 20), 20)
 		l.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		l.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		l.custom_minimum_size = Vector2(400, 120)
 		l.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 		rows.append(l)
 	lay.list_into("ID_arrayPosition", rows, 2)
-	_fill_craft(groups.get(_pick, []))
+	_fill_craft(_picked_stack())
+	_refresh_bar()
 
 
 func _stone_row(st: Dictionary, count: int, selected: bool, on_tap: Callable) -> Control:
@@ -189,7 +294,14 @@ func _select_group(k: String) -> void:
 	_refresh_craft()
 
 
-func _fill_craft(group: Array) -> void:
+func _craft_result(st: Dictionary) -> Dictionary:
+	if int(st.rank) >= MagicStones.SP:
+		return st
+	var next := int(st.rank) + 1
+	return {"type": st.type, "rank": next, "variant": 0 if next == MagicStones.B else int(st.get("variant", 0))}
+
+
+func _fill_craft(stack: Dictionary) -> void:
 	var holder := lay.node("ID_previewStone")
 	for c in holder.get_children():
 		if c.has_meta("icon"):
@@ -199,31 +311,42 @@ func _fill_craft(group: Array) -> void:
 		for c in m.get_children():
 			c.queue_free()
 		lay.show("ID_Matl_%d" % (k + 1), false)
-	if group.is_empty():
+	if stack.is_empty():
 		lay.text("ID_txtStoneName", "-")
 		lay.text("ID_txtStoneDes", "")
-		lay.text("ID_txtUnique", "")
 		lay.text("ID_txtCondition", "")
 		lay.text("ID_goldText", "0")
 		lay.node("ID_btnCreate").modulate = Color(0.55, 0.55, 0.55)
 		return
-	var st: Dictionary = group[0]
-	var icon := stone_icon(st, 120)
+	var st: Dictionary = stack.stone
+	var have: int = stack.uids.size()
+	var top := int(st.rank) >= MagicStones.SP
+	var result := _craft_result(st)
+	var icon := stone_icon(result, 120)
 	icon.set_meta("icon", true)
 	icon.position = Vector2(22, 18)
 	holder.add_child(icon)
-	lay.text("ID_txtStoneName", MagicStones.label(st))
-	var des := _brown(lay.text("ID_txtStoneDes", "- " + MagicStones.describe(st).replace(",  ", "\n- ")), 16)
+	UI.fit_text(lay.text("ID_txtStoneName", MagicStones.label(result)), 22, 14)
+	var lines := "- " + MagicStones.describe(result).replace(",  ", "\n- ")
+	if int(result.rank) == MagicStones.B and not top:
+		lines += "\n- Pick I, II or III when crafting"
+	var des := _brown(lay.text("ID_txtStoneDes", lines), 16)
 	des.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	lay.text("ID_txtUnique", "[%s]" % String(MagicStones.TYPES[st.type].cat).capitalize())
+	lay.text("ID_txtMatl", "Material")
 	var req := MagicStones.craft_requirements(st, int(Save.data.tower_floor))
-	var ok: bool = req.ok
-	if int(st.rank) >= MagicStones.SP:
-		lay.text("ID_txtCondition", "Highest rank")
-	else:
-		lay.text("ID_txtCondition", "Required Skytower's floor : %d" % int(req.get("floor", 0)))
 	var need := int(req.get("count", 0))
-	var have := group.size()
+	var cond := lay.text("ID_txtCondition", "")
+	if top:
+		cond.text = "Highest rank. It can't be crafted further."
+		_brown(cond, 20)
+	elif not req.ok:
+		cond.text = "Required Skytower's floor : %d" % int(req.get("floor", 0))
+		cond.add_theme_color_override("font_color", Color("e0301a"))
+	else:
+		cond.text = "Can craft: %d" % (have / need if need > 0 else 0)
+		_brown(cond, 20)
+	if not top:
+		need = int(req.get("count", MagicStones.CRAFT_COUNT[int(st.rank) + 1]))
 	var boxes := need if need <= 4 else 1
 	for k in 4:
 		var show := k < boxes
@@ -238,20 +361,20 @@ func _fill_craft(group: Array) -> void:
 		lay.text("ID_txtNumCan_%d" % (k + 1), "%d/%d" % [got, per])
 		lay.text("ID_txtNumCant_%d" % (k + 1), "%d/%d" % [got, per])
 		(lay.node("ID_txtNumCant_%d" % (k + 1)) as Label).add_theme_color_override("font_color", Color("ff6a5a"))
-	lay.text("ID_goldText", Screen._thousands(int(req.get("cost", 0))))
-	lay.node("ID_btnCreate").modulate = Color.WHITE if ok and have >= need else Color(0.55, 0.55, 0.55)
+	lay.text("ID_goldText", Screen._thousands(int(req.get("cost", 0))) if not top else "-")
+	lay.node("ID_btnCreate").modulate = Color.WHITE if req.ok and have >= need else Color(0.55, 0.55, 0.55)
 
 
 func _craft() -> void:
-	var groups := Save.free_stones().filter(func(s): return _key(s) == _pick)
-	if groups.is_empty():
+	var stack := _picked_stack()
+	if stack.is_empty():
 		return
-	var st: Dictionary = groups[0]
+	var st: Dictionary = stack.stone
 	var req := MagicStones.craft_requirements(st, int(Save.data.tower_floor))
 	if not req.ok:
 		UI.notice(self, "Notice", String(req.reason) + ".")
 		return
-	if groups.size() < int(req.count):
+	if stack.uids.size() < int(req.count):
 		UI.notice(self, "Notice", "You need %d of this stone to craft." % int(req.count))
 		return
 	if int(Save.data.gold) < int(req.cost):
@@ -276,42 +399,89 @@ func _do_craft(stone_uid: int, variant: int) -> void:
 		UI.notice(self, "Notice", String(r.reason))
 		return
 	Sfx.play("buff_big")
-	_pick = _key(r.stone)
 	_refresh_craft()
 	UI.notice(self, "Craft", "Crafted %s!" % MagicStones.label(r.stone))
 
 
-func _offer_box() -> void:
-	UI.notice(self, "Notice", "The stone box holds %d stones. Craft or sell stones to make room." % int(Save.data.stone_cap))
+func _open_sell() -> void:
+	var stack := _picked_stack()
+	if stack.is_empty():
+		UI.notice(self, "Notice", "Select a Magic Stone from the list.")
+		return
+	var st: Dictionary = stack.stone
+	var have: int = stack.uids.size()
+	var price: int = MagicStones.SELL_PRICE[clampi(int(st.rank), 0, MagicStones.SELL_PRICE.size() - 1)]
+	var d := _dialog("R_d_sellStone1")
+	d.text("ID_titleText", "Sell M. Stone")
+	d.text("ID_LABEL_5", "Sell")
+	d.show("ID_stoneSh", false)
+	var msg := _brown(d.text("ID_baseText", "Sell this Magic Stone?\n%s" % MagicStones.label(st)), 20)
+	msg.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	msg.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	var info := d.node("ID_stoneInfo") as Control
+	var icon := stone_icon(st, 132)
+	icon.position = (info.size - icon.size) / 2.0
+	info.add_child(icon)
+	var state := {"n": 1}
+	var num := d.node("ID_txtNum") as Label
+	var gold := d.node("ID_priceText") as Label
+	var show := func() -> void:
+		num.text = "%d / %d" % [int(state.n), have]
+		gold.text = Screen._thousands(price * int(state.n))
+	show.call()
+	var root := d.root
+	d.on("ID_btnDown", func() -> void:
+		state.n = maxi(1, int(state.n) - 1)
+		show.call())
+	d.on("ID_btnUp", func() -> void:
+		state.n = mini(have, int(state.n) + 1)
+		show.call())
+	d.on("ID_btnOk", func() -> void:
+		root.queue_free()
+		var got := Save.sell_stones(stack.uids.slice(0, int(state.n)))
+		if got <= 0:
+			return
+		Sfx.play("coin")
+		UI.toast(self, "+%s Gold" % Screen._thousands(got), UI.GOLD)
+		_refresh())
+	d.on("ID_btnEsc", root.queue_free)
 
 
 func _refresh_equip() -> void:
 	var m := Save.get_owned(uid)
 	var def := DB.monster(m.id)
 	lay.text("ID_LABEL_4", SORTS[_sort])
-	var free := _sorted(Save.free_stones())
-	lay.text("ID_numText", str(free.size()))
-	lay.text("ID_maxText", "/%d" % int(Save.data.stone_cap))
+	var stacks := Save.stone_stacks(_sorted(Save.free_stones()))
+	if not stacks.any(func(s): return s.key == _pick):
+		_pick = ""
 	var grid := GridContainer.new()
 	grid.columns = 4
 	grid.add_theme_constant_override("h_separation", 4)
 	grid.add_theme_constant_override("v_separation", 4)
-	for st in free:
+	for s in stacks:
 		var tile := Layout.instance("B_stoneIcon_slide")
-		tile.hide_all(["ID_stoneEmpty", "ID_att", "ID_check", "ID_numStone"])
-		tile.show("ID_select", int(st.uid) == _stone)
-		var icon := stone_icon(st, 92)
-		icon.position = Vector2(4, 8)
-		tile.root.add_child(icon)
-		tile.root.move_child(icon, 1)
+		tile.hide_all(["ID_stoneEmpty", "ID_att", "ID_check"])
+		tile.show("ID_select", s.key == _pick)
+		var icon := stone_icon(s.stone, 92)
+		var slot := tile.node("ID_stoneEmpty")
+		icon.position = slot.position
+		slot.get_parent().add_child(icon)
+		slot.get_parent().move_child(icon, slot.get_index() + 1)
+		var count: int = s.uids.size()
+		tile.show("ID_numStone", count > 1)
+		var n := tile.text("ID_numStone", str(count))
+		if n:
+			n.add_theme_constant_override("outline_size", 5)
+			n.add_theme_color_override("font_outline_color", Color("000d2e"))
 		tile.root.mouse_filter = MOUSE_FILTER_STOP
-		tile.root.gui_input.connect(_on_stone.bind(int(st.uid)))
+		tile.root.gui_input.connect(_on_stone.bind(String(s.key)))
 		grid.add_child(tile.root)
-	if free.is_empty():
+	if stacks.is_empty():
 		var l := _brown(UI.label("No spare stones.\nClear Sky Tower floors to find some.", 19), 19)
 		l.custom_minimum_size = Vector2(400, 100)
 		grid.add_child(l)
 	lay.list_into("ID_ID_arrayPosition", [grid])
+	_refresh_bar()
 	var art: Control = lay.node("ID_ev2")
 	for c in art.get_children():
 		if c.has_meta("art"):
@@ -343,7 +513,8 @@ func _refresh_equip() -> void:
 				if c is Label:
 					(c as Label).text = "%d Gems" % MagicStones.THIRD_SLOT_GEMS
 		lay.show("ID_stone%dChange" % n, i == _slot and not locked)
-	var st_sel := Save.get_stone(_stone) if _stone >= 0 else {}
+	var sel_uid := _picked_uid()
+	var st_sel := Save.get_stone(sel_uid) if sel_uid >= 0 else {}
 	var base := DB.stats_at(m.id, int(m.level), int(m.boost))
 	var cur := Save.stone_bonuses(m)
 	var preview := cur.duplicate()
@@ -384,7 +555,6 @@ func _refresh_equip() -> void:
 	var cost: int = MagicStones.EQUIP_COST[int(st_sel.rank)] if not st_sel.is_empty() else 0
 	lay.text("ID_goldText", Screen._thousands(cost))
 	lay.node("ID_btnEquip").modulate = Color.WHITE if not st_sel.is_empty() else Color(0.55, 0.55, 0.55)
-	lay.show("ID_btnSell", not st_sel.is_empty())
 
 
 func _pressed(e: InputEvent) -> bool:
@@ -422,10 +592,10 @@ func _unlock(root: Control) -> void:
 	_refresh_equip()
 
 
-func _on_stone(e: InputEvent, stone_uid: int) -> void:
+func _on_stone(e: InputEvent, key: String) -> void:
 	if not _pressed(e):
 		return
-	_stone = -1 if _stone == stone_uid else stone_uid
+	_pick = "" if _pick == key else key
 	Sfx.play("click")
 	_refresh_equip()
 
@@ -451,7 +621,8 @@ func _dialog(name: String) -> Layout:
 
 
 func _confirm_equip() -> void:
-	var st := Save.get_stone(_stone) if _stone >= 0 else {}
+	var sel := _picked_uid()
+	var st := Save.get_stone(sel) if sel >= 0 else {}
 	if st.is_empty():
 		UI.notice(self, "Notice", "Select a Magic Stone from the list.")
 		return
@@ -478,19 +649,19 @@ func _confirm_equip() -> void:
 	l.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	l.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	var root := d.root
-	d.on("ID_btnOk", _equip.bind(root))
+	d.on("ID_btnOk", _equip.bind(root, sel))
 	d.on("ID_btnEsc", root.queue_free)
 
 
-func _equip(root: Control) -> void:
+func _equip(root: Control, stone_uid: int) -> void:
 	root.queue_free()
-	var st := Save.get_stone(_stone)
-	var r := Save.equip_stone(uid, _slot, _stone)
+	var st := Save.get_stone(stone_uid)
+	var r := Save.equip_stone(uid, _slot, stone_uid)
 	if not r.ok:
 		UI.notice(self, "Notice", String(r.reason))
 		return
 	Sfx.play("buff_big")
-	_stone = -1
+	_pick = ""
 	_refresh_equip()
 	var d := _dialog("R_d_comStone2")
 	d.text("ID_titleText", "Equip M. Stone")
@@ -516,6 +687,9 @@ func _confirm_remove() -> void:
 	var st := Save.stone_in_slot(m, _slot)
 	if st.is_empty():
 		return
+	if Save.stone_box_full():
+		UI.notice(self, "Notice", "Not enough inventory slots.\nSell Magic Stones or expand the stone box first.")
+		return
 	var cost: int = MagicStones.UNEQUIP_COST[int(st.rank)]
 	_ask("Remove %s for %s Gold?\nIt goes back to the stone box." % [MagicStones.label(st), Screen._thousands(cost)], _remove)
 
@@ -525,21 +699,6 @@ func _remove() -> void:
 	if not r.ok:
 		UI.notice(self, "Notice", String(r.reason))
 		return
-	Sfx.play("buff")
-	_refresh_equip()
-
-
-func _confirm_destroy() -> void:
-	var st := Save.get_stone(_stone) if _stone >= 0 else {}
-	if st.is_empty():
-		return
-	_ask("Sell %s?\nThe stone will disappear." % MagicStones.label(st), _destroy)
-
-
-func _destroy() -> void:
-	Save.data.stones.erase(Save.get_stone(_stone))
-	Save.save_game()
-	_stone = -1
 	Sfx.play("buff")
 	_refresh_equip()
 

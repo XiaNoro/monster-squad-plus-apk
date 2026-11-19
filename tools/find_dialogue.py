@@ -10,7 +10,8 @@ for vid in sys.argv[1:]:
     field = "?"
     seen = set()
     print("##", vid)
-    for line in open(os.path.join(ROOT, "research/videos/frames_hd", vid, "ocr.tsv"), encoding="utf-8-sig"):
+    d = next((p for p in (os.path.join(ROOT, "research/videos", c, vid) for c in ("frames_hd", "frames_new", "frames_skipped")) if os.path.isdir(p)), "")
+    for line in open(os.path.join(d, "ocr.tsv"), encoding="utf-8-sig"):
         parts = line.rstrip("\n").split("\t", 1)
         if len(parts) < 2:
             continue

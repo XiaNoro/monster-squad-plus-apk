@@ -1,12 +1,12 @@
 # Extracts one frame every N seconds from each downloaded video, then OCRs them.
 # Output: research/videos/frames/<video>/<seconds>.jpg and ocr.tsv; skips videos already scanned.
 # Usage: powershell -File tools/scan_videos.ps1 [-Every 2]
-param([int]$Every = 2, [string]$VideoDir = 'video')
+param([int]$Every = 2, [string]$VideoDir = 'video', [string]$FramesDir = 'frames')
 
 $root = Split-Path $PSScriptRoot -Parent
 $bin = Join-Path $root 'research\bin'
 $videos = Join-Path $root ('research\videos\' + $VideoDir)
-$framesRoot = Join-Path $root 'research\videos\frames'
+$framesRoot = Join-Path $root ('research\videos\' + $FramesDir)
 
 foreach ($v in Get-ChildItem $videos -Filter *.mp4 | Sort-Object Name) {
     $dir = Join-Path $framesRoot $v.BaseName

@@ -10,13 +10,16 @@ ELEMENTAL_POOL = ["fortina", "pentacorn", "slayergal", "pandabond", "whalduke", 
                   "meteor_eldragon", "fire_eldrake"]
 ELEMENTAL_GEMS = [1, 3, 4, 6, 7]
 ELEMENTAL_ENEMIES = [
-    ["fire_eldrake", "nurture_eldragon", "polar_eldragon", "spriby", "craboth"],
-    ["polar_eldragon", "frozen_eldragon", "meteor_eldragon", "crablu", "water_kong"],
-    ["pyro_eldragon", "torch_eldragon", "pheona", "crablaze", "flame_kong"],
+    ["fire_eldrake", "nurture_eldragon", "polar_eldragon", "spriby", "craboth", "saint_bern"],
+    ["polar_eldragon", "frozen_eldragon", "meteor_eldragon", "crablu", "water_kong", "tane"],
+    ["pyro_eldragon", "torch_eldragon", "pheona", "crablaze", "flame_kong", "firepaw", "firuba"],
     ["void_eldragon", "neo_eldragon", "meteor_eldragon", "crabshade", "no_kong"],
     ["pandabond", "whalduke", "ant_queen", "torch_eldragon", "void_eldragon"],
 ]
 ELEMENTAL_RARE = [0.004, 0.006, 0.008, 0.01, 0.015]
+ELEMENTAL_EXP = [100, 200, 300, 400, 500]
+ELEMENTAL_GOLD = 360
+TEMPLE_RARE = {"fortina": 0.01, "pentacorn": 0.01, "slayergal": 0.01, "caocao": 0.005}
 
 
 HW_NAMES = ["1 Jack's carnival", "2 Masquerade", "3 Wolf's howling", "4 City of zombi", "5 Mummy's curse", "6 Walpurgisnacht"]
@@ -109,6 +112,67 @@ def maple_island():
             "quests": q}
 
 
+CANDY_NAMES = ["Candy Forest", "Candy Town Trap!", "Road to Candy Castle", "Candy Castle Adventure", "Lord of Candy Castle"]
+CANDY_ENERGY = {"normal": [5, 10, 15, 20, 25], "hard": [10, 15, 20, 25, 30], "hell": [20, 25, 30, 35, 40]}
+CANDY_FIELDS = {
+    "normal": [("bluebella", ["banany", "marshmallow"]), ("cutiepong", ["marshmallow", "banany"]),
+               ("phantom_mallow", ["marshmallow", "banany"]), ("banasnack", ["banany", "marshmallow"]),
+               ("gateau", ["phantom_mallow", "banasnack"])],
+    "hard": [("bluebella", ["banany", "marshmallow", "phantom_mallow"]), ("cutiepong", ["marshmallow", "banasnack"]),
+             ("phantom_mallow", ["marshmallow", "banany", "banasnack"]), ("banasnack", ["banany", "phantom_mallow"]),
+             ("gateau", ["phantom_mallow", "banasnack", "brioche"])],
+    "hell": [("brioche", ["marshmallow", "phantom_mallow", "banasnack"]), ("cutiepong", ["phantom_mallow", "banasnack"]),
+             ("phantom_mallow", ["banasnack", "brioche"]), ("banasnack", ["phantom_mallow", "brioche"]),
+             ("gateau", ["phantom_mallow", "banasnack", "brioche"])],
+}
+CANDY_RARE = {"normal": 0.02, "hard": 0.04, "hell": 0.06}
+
+
+def candy_island():
+    quests = []
+    for tab, base_lv, gold0, exp0 in (("normal", 15, 1000, 200), ("hard", 22, 2200, 350), ("hell", 30, 3400, 500)):
+        for f in range(5):
+            boss, enemies = CANDY_FIELDS[tab][f]
+            name = CANDY_NAMES[f] + ("" if tab == "normal" else " (%s)" % tab.upper())
+            quests.append({"name": name, "tab": tab, "energy": CANDY_ENERGY[tab][f], "level": base_lv + 3 * f,
+                           "exp": exp0 + 100 * f, "gold": gold0 + 800 * f, "drop_level": [1, 1], "boss": boss, "enemies": enemies,
+                           "stages": 3 if tab == "normal" else 4, "bg": "candy_town",
+                           "drops": sorted({e for e in enemies if e in ("banany", "marshmallow", "banasnack", "phantom_mallow")}),
+                           "rare": [{"id": "brioche", "chance": CANDY_RARE[tab]}]})
+    return {"id": "candy_island", "name": "Candy Island", "kind": "event", "days": [], "chain": True, "chain_unlock": 5,
+            "desc": "The witch, Gateau, took all your candies. Go get her! Random monsters in Candy Island drop rare cubes.",
+            "promo": "The witch, Gateau, took all your candies. Go get her!",
+            "_source": "Feb 2016 event (rmNIIXuSwyk): island text and art, Normal/Hard/Hell with 5 fields each, field names, energy "
+                       "(Normal 5-15, Hard 20-30, Hell 20/35/40 seen; rest by the 5-step pattern), bosses Bluebella, Cutiepong, "
+                       "Phantom Mallow, Banasnack, Gateau (Hell Candy Forest: Brioche), Road to Candy Castle drop list, 4 waves on Hell, "
+                       "candy-town battle field. A pink horned 3* normal drop and enemy is missing from the DB and left out. "
+                       "Enemies past the bosses, gold/exp/levels and the Brioche rare chance are estimated.",
+            "quests": quests}
+
+
+HOLIDAY_FIELDS = [
+    ("Fairy Forest (Easy)", 10, "fairy_reindeer", ["unee", "st_mew"]),
+    ("Rudolph's Forest (Normal)", 15, "rudolph", ["unee", "ice_unee", "st_mew", "fairy_reindeer"]),
+    ("Santa's Forest (Hard)", 20, "mr_jolly", ["ice_unee", "st_mew", "fairy_reindeer", "rudolph"]),
+]
+
+
+def holiday_island():
+    quests = []
+    for n, (name, energy, boss, enemies) in enumerate(HOLIDAY_FIELDS):
+        quests.append({"name": name, "tab": "normal", "energy": energy, "level": 15 + 8 * n, "exp": 250 + 200 * n,
+                       "gold": 1200 + 1200 * n, "drop_level": [1, 1], "boss": boss, "enemies": enemies, "stages": 4,
+                       "bg": "holiday_forest", "drops": [e for e in enemies if e in ("fairy_reindeer", "st_mew", "unee")],
+                       "rare": [{"id": "fairy_reindeer", "chance": 0.03 + 0.02 * n}]})
+    return {"id": "holiday_island", "name": "Holiday Island", "kind": "event", "days": [],
+            "desc": "Happy holidays! Meet Rudolph who is carrying special gifts for you!",
+            "promo": "Happy holidays! Meet Rudolph who is carrying special gifts for you!",
+            "_source": "Dec 2015 event (I3Wo0BDFOWk): island text and art, one Normal tab with Fairy Forest (Easy) 10, Rudolph's "
+                       "Forest (Normal) 15, Santa's Forest (Hard) 20 energy, bosses Fairy Reindeer, Rudolph, Mr. Jolly, 4 waves, "
+                       "snowy forest battle field. Enemies (Unee line, St. Mew), gold/exp/levels and drops are estimated.",
+            "quests": quests}
+
+
 def main():
     d = json.load(open(PATH, encoding="utf-8-sig"))
     mons = json.load(open(os.path.join(ROOT, "data/monsters.json"), encoding="utf-8"))
@@ -118,16 +182,21 @@ def main():
     el["unlock_gems"] = 15
     el["days"] = [6]
     el["desc"] = "In this island, the divine guard protects a precious treasure where Red Cubes can be found."
-    el["est_quests"] = "Temple names, bosses and gem costs 1/3/4/6/7: dRjMGwJWYCg (0:10, 11:05). Drop list from the in-game popup at 10:57 (wiki: list shown in-game is incomplete, drops are very rare). Opens Saturdays, 60 min for 15 gems otherwise (wiki)."
+    el["est_quests"] = "Temple names, bosses and gem costs 1/3/4/6/7: dRjMGwJWYCg (0:10, 11:05). Drop list from the in-game popup at 10:57 (wiki: list shown in-game is incomplete, drops are very rare). Opens Saturdays, 60 min for 15 gems otherwise (wiki). Results: EXP 100/200/300 for Great Nature/Lake/Flame, gold 232-434 (coins). 6 waves (Stage x/6) with Saint Bern, Tane, Firepaw and Firuba waves: j2YOEEzSOcI 19:34-20:00, 0d4CQozyd20 23:44, 28:58-29:46."
     for k, q in enumerate(el["quests"]):
         q["gems"] = ELEMENTAL_GEMS[k]
-        q["stages"] = 4
+        q["stages"] = 6
         q["enemies"] = ELEMENTAL_ENEMIES[k]
-        q["drops"] = [e for e in ELEMENTAL_POOL if e in ELEMENTAL_ENEMIES[k] or (k == 4 and e in ("fortina", "pentacorn", "slayergal"))]
+        q["drops"] = [e for e in ELEMENTAL_POOL if e in ELEMENTAL_ENEMIES[k] or (k == 4 and e in TEMPLE_RARE)]
         q["drop_mult"] = 0.15
         q["red_cube_chance"] = ELEMENTAL_RARE[k]
+        q["exp"] = ELEMENTAL_EXP[k]
+        q["gold"] = ELEMENTAL_GOLD
+        if k in (0, 2):
+            q["boss_wave"] = [ELEMENTAL_ENEMIES[k][-1]] * 2
         if k == 4:
-            q["rare"] = [{"id": i, "chance": 0.01} for i in ("fortina", "pentacorn", "slayergal")]
+            q["drops"].append("caocao")
+            q["rare"] = [{"id": i, "chance": TEMPLE_RARE[i]} for i in TEMPLE_RARE]
 
     tr = by["treasure_island"]
     tr["est_enemies"] = False
@@ -135,7 +204,27 @@ def main():
     tq = tr["quests"]
     tq[0].update({"boss": "prisbal", "enemies": ["pufbal", "mewer", "prisbal"], "drops": ["pufbal", "mewer", "prisbal"], "stages": 3})
     tq[1].update({"boss": "mewceleste", "enemies": ["mewer", "mewshine", "prisbal"], "drops": ["mewer", "mewshine", "prisbal"], "stages": 4})
-    tq[2].update({"boss": "pentacorn", "enemies": ["mewshine", "mewceleste", "prisbal"], "drops": ["mewshine", "mewceleste"], "stages": 4})
+    tq[2].update({"boss": "pentacorn", "enemies": ["unacorn", "mewshine"], "drops": ["mewshine"], "stages": 4})
+
+    fr = by["friendship_island"]
+    fr["est_fp"] = False
+    fr["desc"] = "Love and Friendship for You"
+    fr["_source"] = ("j5Nt0tULg4g 0042-0108: Easy/Normal/Hard all 100 FP, field icons Nindori/Ninchan/Cap Ninja, 3 waves, "
+                     "Can't select friend; Hard boss Cap Ninja with Dumbird, Owlder and Trama-family dinos as enemies, "
+                     "cleared Hard dropped a 3* Nindori. Easy/Normal bosses follow the icons; their enemies are the wiki lists.")
+    for q, boss in zip(fr["quests"], ("nindori", "ninchan", "cap_ninja")):
+        old = q["boss"]
+        q.update({"fp": 100, "stages": 3, "no_friend": True, "boss": boss})
+        q["enemies"] = [boss] + [e for e in q["enemies"] if e != boss] + ([old] if old not in q["enemies"] else [])
+    if "owlder" not in fr["quests"][2]["enemies"]:
+        fr["quests"][2]["enemies"].append("owlder")
+
+    tx = by["training_island"]["quests"][3]
+    tx["enemies"] = ["tryant", "koonga", "jelliking", "spooking"]
+    tx["wave_sizes"] = [4, 4, 4, 3]
+    note = " Extreme: every wave is Spooking, Jelliking, Koonga, Tryant (GY4hAEhrSn4 6:48-10:32, EXP 292)."
+    if note not in by["training_island"]["_source"]:
+        by["training_island"]["_source"] += note
 
     ju = by["jungle_island"]["quests"][0]
     ju.update({"boss": "greenspook", "enemies": ["craboth", "budding", "spriby", "crabcoon", "greenspec"], "stages": 4,
@@ -151,9 +240,13 @@ def main():
         q["stages"] = 3 if "3)" in q["name"] else 4
         q["drop_level"] = [15, 30]
 
+    for q in by["spirit_island"]["quests"]:
+        q["stages"] = 3 if "3)" in q["name"] else 4
+
     patch_halloween(by["halloween_island"])
     patch_k9(by["k9_kingdom"])
-    d["islands"] = [s for s in d["islands"] if s["id"] != "maple_island"] + [maple_island()]
+    extra = [maple_island(), candy_island(), holiday_island()]
+    d["islands"] = [s for s in d["islands"] if s["id"] not in [e["id"] for e in extra]] + extra
 
     for s in d["islands"]:
         for q in s["quests"]:

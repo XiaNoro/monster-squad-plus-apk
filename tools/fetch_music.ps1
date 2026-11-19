@@ -6,7 +6,7 @@ $bin = "research/bin"
 New-Item -ItemType Directory -Force research/videos/music, assets/music | Out-Null
 $tracks = [ordered]@{
 	lobby = '-cRF7xAYULY'; sprout = 'jVSR4HhOAbI'; lake = 'khGMOdecN6M'; lake_boss = 'JSS37pkXi4c'
-	moonlight_boss = '4C6FONkHaXg'; dino_boss = 'vNAlv8tUj6A'; robo = 'nDSbCCuondI'; robo_boss = 'kJsnl_6aFjM'; boneyard = 'IW1x7zRp0OQ'
+	moonlight_boss = '4C6FONkHaXg'; dino_boss = 'vNAlv8tUj6A'; robo = 'nDSbCCuondI'; robo_boss = 'kJsnl_6aFjM'; boneyard = 'IW1x7zRp0OQ'; desert = 'WVjUAqTzZmM'
 }
 $gain = @{ boneyard = '13dB' }
 foreach ($name in $tracks.Keys) {

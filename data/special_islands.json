@@ -268,7 +268,8 @@
                     "enemies": [
                         "lil_fwoosh",
                         "trama"
-                    ]
+                    ],
+                    "stages": 3
                 },
                 {
                     "name": "Sir Splish (★3)",
@@ -282,7 +283,8 @@
                     "enemies": [
                         "lil_splish",
                         "dera"
-                    ]
+                    ],
+                    "stages": 3
                 },
                 {
                     "name": "Sir Woosh (★3)",
@@ -296,7 +298,8 @@
                     "enemies": [
                         "li_l_woosh",
                         "pari"
-                    ]
+                    ],
+                    "stages": 3
                 },
                 {
                     "name": "Sir Swoosh (★3)",
@@ -310,7 +313,8 @@
                     "enemies": [
                         "lil_swoosh",
                         "cero"
-                    ]
+                    ],
+                    "stages": 3
                 },
                 {
                     "name": "Meteo (★4)",
@@ -324,7 +328,8 @@
                     "enemies": [
                         "smishee",
                         "smish"
-                    ]
+                    ],
+                    "stages": 4
                 },
                 {
                     "name": "Ici (★4)",
@@ -338,7 +343,9 @@
                     "enemies": [
                         "soosoo",
                         "smoovie"
-                    ]
+                    ],
+                    "stages": 4,
+                    "say": "The spirits of the elements fill me with power!"
                 },
                 {
                     "name": "Growth (★4)",
@@ -352,7 +359,8 @@
                     "enemies": [
                         "smullock",
                         "smulling"
-                    ]
+                    ],
+                    "stages": 4
                 },
                 {
                     "name": "Torni (★4)",
@@ -366,7 +374,8 @@
                     "enemies": [
                         "smunk",
                         "smelly"
-                    ]
+                    ],
+                    "stages": 4
                 },
                 {
                     "name": "Fire Kong (★4)",
@@ -380,7 +389,8 @@
                     "enemies": [
                         "red_antlar",
                         "red_antlid"
-                    ]
+                    ],
+                    "stages": 4
                 },
                 {
                     "name": "Water Kong (★4)",
@@ -394,7 +404,8 @@
                     "enemies": [
                         "blu_antlar",
                         "blu_antlid"
-                    ]
+                    ],
+                    "stages": 4
                 },
                 {
                     "name": "Grass Kong (★4)",
@@ -408,7 +419,8 @@
                     "enemies": [
                         "bud_antlar",
                         "bud_antlid"
-                    ]
+                    ],
+                    "stages": 4
                 },
                 {
                     "name": "No Kong (★4)",
@@ -422,7 +434,8 @@
                     "enemies": [
                         "antlar",
                         "antlid"
-                    ]
+                    ],
+                    "stages": 4
                 }
             ]
         },
@@ -463,7 +476,8 @@
                         "chilie",
                         "chilairy"
                     ],
-                    "stages": 4
+                    "stages": 4,
+                    "say": "You think you can use me just because I'm full of\npower? I'll show you!"
                 },
                 {
                     "name": "Bushell (★4)",
@@ -553,7 +567,24 @@
                         "stonn",
                         "rokk"
                     ],
-                    "stages": 4
+                    "stages": 4,
+                    "drops": [
+                        "voxus",
+                        "voidina",
+                        "blacky",
+                        "stonn",
+                        "rokk"
+                    ],
+                    "rare": [
+                        {
+                            "id": "voidina",
+                            "chance": 0.03
+                        },
+                        {
+                            "id": "blacky",
+                            "chance": 0.05
+                        }
+                    ]
                 }
             ]
         },
@@ -604,7 +635,8 @@
                         "treant",
                         "roonga",
                         "jelliton"
-                    ]
+                    ],
+                    "say": "There is no end to a challenge.\nOnly the ones you set yourself."
                 },
                 {
                     "name": "Training(Extreme)",
@@ -616,12 +648,19 @@
                     "enemies": [
                         "tryant",
                         "koonga",
-                        "jelliking"
+                        "jelliking",
+                        "spooking"
+                    ],
+                    "wave_sizes": [
+                        4,
+                        4,
+                        4,
+                        3
                     ]
                 }
             ],
             "stages": 4,
-            "_source": "Bosses (Spooki line 3-6 stars), Hard lineup Treant/Roonga/Jelliton and 4 stages: 3lUuIs6OFEo 2:28-3:30; other tiers follow the same evolution lines."
+            "_source": "Bosses (Spooki line 3-6 stars), Hard lineup Treant/Roonga/Jelliton and 4 stages: 3lUuIs6OFEo 2:28-3:30; other tiers follow the same evolution lines. Extreme: every wave is Spooking, Jelliking, Koonga, Tryant (GY4hAEhrSn4 6:48-10:32, EXP 292)."
         },
         {
             "id": "treasure_island",
@@ -679,15 +718,14 @@
                     "gold": 15000,
                     "boss": "pentacorn",
                     "enemies": [
-                        "mewshine",
-                        "mewceleste",
-                        "prisbal"
+                        "unacorn",
+                        "mewshine"
                     ],
                     "drops": [
-                        "mewshine",
-                        "mewceleste"
+                        "mewshine"
                     ],
-                    "stages": 4
+                    "stages": 4,
+                    "say": "No matter how much treasure, it's not enough.\nFunny, right? You have no idea, do you?"
                 }
             ],
             "_source": "Bosses Prisbal/Mewceleste/Pentacorn, energy 7/10/15, yellow monster cubes, 3 waves on Easy: D9HuvYhKiJQ."
@@ -697,20 +735,20 @@
             "name": "Friendship Island",
             "kind": "material",
             "days": [],
-            "desc": "Uses Friend Points instead of Energy.\nSend Friend Points to your friends and bring them here!",
-            "est_fp": true,
-            "_source": "Drop lists and Friend Point use: Monster Squad Wiki Special Islands. FP costs, levels and bosses are estimates.",
+            "desc": "Love and Friendship for You",
+            "est_fp": false,
+            "_source": "j5Nt0tULg4g 0042-0108: Easy/Normal/Hard all 100 FP, field icons Nindori/Ninchan/Cap Ninja, 3 waves, Can't select friend; Hard boss Cap Ninja with Dumbird, Owlder and Trama-family dinos as enemies, cleared Hard dropped a 3* Nindori. Easy/Normal bosses follow the icons; their enemies are the wiki lists.",
             "quests": [
                 {
                     "name": "Friendship(Easy)",
                     "energy": 0,
-                    "fp": 30,
+                    "fp": 100,
                     "level": 8,
                     "drop_level": [
                         1,
                         1
                     ],
-                    "boss": "raingull",
+                    "boss": "nindori",
                     "enemies": [
                         "nindori",
                         "taddy",
@@ -724,7 +762,8 @@
                         "spriby",
                         "sliby",
                         "ayn",
-                        "twirly"
+                        "twirly",
+                        "raingull"
                     ],
                     "drops": [
                         "nindori",
@@ -741,19 +780,22 @@
                         "sliby",
                         "ayn",
                         "twirly"
-                    ]
+                    ],
+                    "stages": 3,
+                    "no_friend": true
                 },
                 {
                     "name": "Friendship(Normal)",
                     "energy": 0,
-                    "fp": 60,
+                    "fp": 100,
                     "level": 16,
                     "drop_level": [
                         1,
                         1
                     ],
-                    "boss": "camhil",
+                    "boss": "ninchan",
                     "enemies": [
+                        "ninchan",
                         "nindori",
                         "flitsplish",
                         "rookie",
@@ -764,7 +806,8 @@
                         "craburn",
                         "crablu",
                         "crabcoon",
-                        "crabshade"
+                        "crabshade",
+                        "camhil"
                     ],
                     "drops": [
                         "nindori",
@@ -779,7 +822,9 @@
                         "crablu",
                         "crabcoon",
                         "crabshade"
-                    ]
+                    ],
+                    "stages": 3,
+                    "no_friend": true
                 },
                 {
                     "name": "Friendship(Hard)",
@@ -790,8 +835,9 @@
                         1,
                         1
                     ],
-                    "boss": "dumbird",
+                    "boss": "cap_ninja",
                     "enemies": [
+                        "cap_ninja",
                         "nindori",
                         "feril",
                         "yakka",
@@ -800,7 +846,9 @@
                         "trama",
                         "dera",
                         "pari",
-                        "cero"
+                        "cero",
+                        "dumbird",
+                        "owlder"
                     ],
                     "drops": [
                         "nindori",
@@ -813,7 +861,9 @@
                         "dera",
                         "pari",
                         "cero"
-                    ]
+                    ],
+                    "stages": 3,
+                    "no_friend": true
                 }
             ]
         },
@@ -850,7 +900,8 @@
                         "spriby",
                         "crabcoon"
                     ],
-                    "stages": 4
+                    "stages": 4,
+                    "say": "You think plants are passive?\nShall we see if that's true? Come on!"
                 },
                 {
                     "name": "Jungle(Normal)",
@@ -1021,13 +1072,14 @@
                         1,
                         1
                     ],
-                    "boss": "nalino",
+                    "boss": "naladdin",
                     "enemies": [
                         "lucky",
                         "soosoo",
                         "rookie",
                         "smoovie",
-                        "smoo"
+                        "smoo",
+                        "nalino"
                     ],
                     "drops": [
                         "nalino",
@@ -1036,7 +1088,8 @@
                         "rookie",
                         "smoovie",
                         "smoo"
-                    ]
+                    ],
+                    "say": "Blades of ice will leave a mark\nand disappear without a trace."
                 }
             ],
             "_source": "Quest names and energy 3/5/8/10: zj5T4GOAim4 (Volcano names/energy assumed to match). Icicle Easy/Normal/Hard bosses and Easy drop list from footage; Extreme boss estimate."
@@ -1129,14 +1182,15 @@
                         1,
                         1
                     ],
-                    "boss": "twinbark",
+                    "boss": "nightmare",
                     "enemies": [
                         "bonk_pyro",
                         "red_antlar",
                         "burn_bonk",
                         "red_antlid",
                         "red_antlad",
-                        "lil_flame"
+                        "lil_flame",
+                        "twinbark"
                     ],
                     "drops": [
                         "twinbark",
@@ -1146,7 +1200,8 @@
                         "red_antlid",
                         "red_antlad",
                         "lil_flame"
-                    ]
+                    ],
+                    "say": "Did you live an exciting life?\nThen you'll have no regrets!"
                 }
             ],
             "_source": "Quest names and energy 3/5/8/10: zj5T4GOAim4 (Volcano names/energy assumed to match)."
@@ -1243,7 +1298,8 @@
                         }
                     ],
                     "gold": 1500,
-                    "exp": 150
+                    "exp": 150,
+                    "say": "A bastard making much noise in the sea will be\nsilenced forever."
                 },
                 {
                     "name": "4 Impassible Deep",
@@ -1346,11 +1402,12 @@
                         1,
                         1
                     ],
-                    "boss": "derarctus",
+                    "boss": "nalino",
                     "enemies": [
                         "shaark",
                         "derakon",
-                        "toriz"
+                        "toriz",
+                        "derarctus"
                     ],
                     "rare": [
                         {
@@ -1363,7 +1420,8 @@
                         }
                     ],
                     "gold": 3500,
-                    "exp": 350
+                    "exp": 350,
+                    "say": "Quite impressive you bear this coldness."
                 },
                 {
                     "name": "8 Titanic Foot",
@@ -1374,11 +1432,12 @@
                         1,
                         1
                     ],
-                    "boss": "taran",
+                    "boss": "torban",
                     "enemies": [
                         "tane",
                         "derakon",
-                        "shaark"
+                        "shaark",
+                        "taran"
                     ],
                     "rare": [
                         {
@@ -1391,7 +1450,8 @@
                         }
                     ],
                     "gold": 4000,
-                    "exp": 400
+                    "exp": 400,
+                    "say": "Tsunami in the heart of the sea causes Long Stun. It's\ngoanna be hard for you if your fellow can't be cured."
                 },
                 {
                     "name": "9 Mythical Whale",
@@ -1510,7 +1570,8 @@
                             "id": "turto_papa",
                             "chance": 0.05
                         }
-                    ]
+                    ],
+                    "say": "A bastard making much noise in the sea will be\nsilenced forever."
                 },
                 {
                     "name": "4 Impassible Deep",
@@ -1595,18 +1656,20 @@
                         1,
                         1
                     ],
-                    "boss": "derarctus",
+                    "boss": "nalino",
                     "enemies": [
                         "shaark",
                         "derakon",
-                        "toriz"
+                        "toriz",
+                        "derarctus"
                     ],
                     "rare": [
                         {
                             "id": "turto_papa",
                             "chance": 0.05
                         }
-                    ]
+                    ],
+                    "say": "Quite impressive you bear this coldness."
                 },
                 {
                     "name": "8 Titanic Foot",
@@ -1617,18 +1680,20 @@
                         1,
                         1
                     ],
-                    "boss": "taran",
+                    "boss": "torban",
                     "enemies": [
                         "tane",
                         "derakon",
-                        "shaark"
+                        "shaark",
+                        "taran"
                     ],
                     "rare": [
                         {
                             "id": "turto_papa",
                             "chance": 0.05
                         }
-                    ]
+                    ],
+                    "say": "Tsunami in the heart of the sea causes Long Stun. It's\ngoanna be hard for you if your fellow can't be cured."
                 },
                 {
                     "name": "9 Mythical Whale",
@@ -1720,7 +1785,8 @@
                             "id": "chibi_lorel",
                             "chance": 0.05
                         }
-                    ]
+                    ],
+                    "say": "A bastard making much noise in the sea will be\nsilenced forever."
                 },
                 {
                     "name": "4 Impassible Deep",
@@ -1805,18 +1871,20 @@
                         1,
                         1
                     ],
-                    "boss": "derarctus",
+                    "boss": "nalino",
                     "enemies": [
                         "shaark",
                         "derakon",
-                        "toriz"
+                        "toriz",
+                        "derarctus"
                     ],
                     "rare": [
                         {
                             "id": "chibi_lorel",
                             "chance": 0.05
                         }
-                    ]
+                    ],
+                    "say": "Quite impressive you bear this coldness."
                 },
                 {
                     "name": "8 Titanic Foot",
@@ -1827,18 +1895,20 @@
                         1,
                         1
                     ],
-                    "boss": "taran",
+                    "boss": "torban",
                     "enemies": [
                         "tane",
                         "derakon",
-                        "shaark"
+                        "shaark",
+                        "taran"
                     ],
                     "rare": [
                         {
                             "id": "chibi_lorel",
                             "chance": 0.05
                         }
-                    ]
+                    ],
+                    "say": "Tsunami in the heart of the sea causes Long Stun. It's\ngoanna be hard for you if your fellow can't be cured."
                 },
                 {
                     "name": "9 Mythical Whale",
@@ -1879,14 +1949,14 @@
                 6
             ],
             "desc": "In this island, the divine guard protects a precious treasure where Red Cubes can be found.",
-            "est_quests": "Temple names, bosses and gem costs 1/3/4/6/7: dRjMGwJWYCg (0:10, 11:05). Drop list from the in-game popup at 10:57 (wiki: list shown in-game is incomplete, drops are very rare). Opens Saturdays, 60 min for 15 gems otherwise (wiki).",
+            "est_quests": "Temple names, bosses and gem costs 1/3/4/6/7: dRjMGwJWYCg (0:10, 11:05). Drop list from the in-game popup at 10:57 (wiki: list shown in-game is incomplete, drops are very rare). Opens Saturdays, 60 min for 15 gems otherwise (wiki). Results: EXP 100/200/300 for Great Nature/Lake/Flame, gold 232-434 (coins). 6 waves (Stage x/6) with Saint Bern, Tane, Firepaw and Firuba waves: j2YOEEzSOcI 19:34-20:00, 0d4CQozyd20 23:44, 28:58-29:46.",
             "quests": [
                 {
                     "name": "Temple of Great Nature (normal)",
                     "gems": 1,
                     "energy": 0,
                     "level": 18,
-                    "stages": 4,
+                    "stages": 6,
                     "drop_level": [
                         1,
                         1
@@ -1897,22 +1967,69 @@
                         "nurture_eldragon",
                         "polar_eldragon",
                         "spriby",
-                        "craboth"
+                        "craboth",
+                        "saint_bern"
                     ],
                     "red_cube_chance": 0.004,
                     "drops": [
+                        "fortina",
+                        "pentacorn",
+                        "slayergal",
+                        "pandabond",
+                        "whalduke",
+                        "ant_queen",
+                        "pheona",
+                        "torch_eldragon",
+                        "frozen_eldragon",
+                        "neo_eldragon",
+                        "void_eldragon",
+                        "pyro_eldragon",
                         "polar_eldragon",
                         "nurture_eldragon",
+                        "meteor_eldragon",
                         "fire_eldrake"
                     ],
-                    "drop_mult": 0.15
+                    "drop_mult": 0.15,
+                    "boss_wave": [
+                        "saint_bern",
+                        "saint_bern"
+                    ],
+                    "exp": 100,
+                    "gold": 360,
+                    "say": "Face nature's wrath and tremble in fear!",
+                    "rare": [
+                        {
+                            "id": "fortina",
+                            "chance": 0.01
+                        },
+                        {
+                            "id": "pentacorn",
+                            "chance": 0.01
+                        },
+                        {
+                            "id": "slayergal",
+                            "chance": 0.01
+                        },
+                        {
+                            "id": "pandabond",
+                            "chance": 0.01
+                        },
+                        {
+                            "id": "whalduke",
+                            "chance": 0.01
+                        },
+                        {
+                            "id": "ant_queen",
+                            "chance": 0.01
+                        }
+                    ]
                 },
                 {
                     "name": "Temple of Lake (hard)",
                     "gems": 3,
                     "energy": 0,
                     "level": 24,
-                    "stages": 4,
+                    "stages": 6,
                     "drop_level": [
                         1,
                         1
@@ -1923,22 +2040,64 @@
                         "frozen_eldragon",
                         "meteor_eldragon",
                         "crablu",
-                        "water_kong"
+                        "water_kong",
+                        "tane"
                     ],
                     "red_cube_chance": 0.006,
                     "drops": [
+                        "fortina",
+                        "pentacorn",
+                        "slayergal",
+                        "pandabond",
+                        "whalduke",
+                        "ant_queen",
+                        "pheona",
+                        "torch_eldragon",
                         "frozen_eldragon",
+                        "neo_eldragon",
+                        "void_eldragon",
+                        "pyro_eldragon",
                         "polar_eldragon",
-                        "meteor_eldragon"
+                        "nurture_eldragon",
+                        "meteor_eldragon",
+                        "fire_eldrake"
                     ],
-                    "drop_mult": 0.15
+                    "drop_mult": 0.15,
+                    "exp": 200,
+                    "gold": 360,
+                    "rare": [
+                        {
+                            "id": "fortina",
+                            "chance": 0.01
+                        },
+                        {
+                            "id": "pentacorn",
+                            "chance": 0.01
+                        },
+                        {
+                            "id": "slayergal",
+                            "chance": 0.01
+                        },
+                        {
+                            "id": "pandabond",
+                            "chance": 0.01
+                        },
+                        {
+                            "id": "whalduke",
+                            "chance": 0.01
+                        },
+                        {
+                            "id": "ant_queen",
+                            "chance": 0.01
+                        }
+                    ]
                 },
                 {
                     "name": "Temple of Flame (very hard)",
                     "gems": 4,
                     "energy": 0,
                     "level": 30,
-                    "stages": 4,
+                    "stages": 6,
                     "drop_level": [
                         1,
                         1
@@ -1949,22 +2108,69 @@
                         "torch_eldragon",
                         "pheona",
                         "crablaze",
-                        "flame_kong"
+                        "flame_kong",
+                        "firepaw",
+                        "firuba"
                     ],
                     "red_cube_chance": 0.008,
                     "drops": [
+                        "fortina",
+                        "pentacorn",
+                        "slayergal",
+                        "pandabond",
+                        "whalduke",
+                        "ant_queen",
                         "pheona",
                         "torch_eldragon",
-                        "pyro_eldragon"
+                        "frozen_eldragon",
+                        "neo_eldragon",
+                        "void_eldragon",
+                        "pyro_eldragon",
+                        "polar_eldragon",
+                        "nurture_eldragon",
+                        "meteor_eldragon",
+                        "fire_eldrake"
                     ],
-                    "drop_mult": 0.15
+                    "drop_mult": 0.15,
+                    "boss_wave": [
+                        "firuba",
+                        "firuba"
+                    ],
+                    "exp": 300,
+                    "gold": 360,
+                    "rare": [
+                        {
+                            "id": "fortina",
+                            "chance": 0.01
+                        },
+                        {
+                            "id": "pentacorn",
+                            "chance": 0.01
+                        },
+                        {
+                            "id": "slayergal",
+                            "chance": 0.01
+                        },
+                        {
+                            "id": "pandabond",
+                            "chance": 0.01
+                        },
+                        {
+                            "id": "whalduke",
+                            "chance": 0.01
+                        },
+                        {
+                            "id": "ant_queen",
+                            "chance": 0.01
+                        }
+                    ]
                 },
                 {
                     "name": "Temple of Void (extreme)",
                     "gems": 6,
                     "energy": 0,
                     "level": 36,
-                    "stages": 4,
+                    "stages": 6,
                     "drop_level": [
                         1,
                         1
@@ -1979,18 +2185,59 @@
                     ],
                     "red_cube_chance": 0.01,
                     "drops": [
+                        "fortina",
+                        "pentacorn",
+                        "slayergal",
+                        "pandabond",
+                        "whalduke",
+                        "ant_queen",
+                        "pheona",
+                        "torch_eldragon",
+                        "frozen_eldragon",
                         "neo_eldragon",
                         "void_eldragon",
-                        "meteor_eldragon"
+                        "pyro_eldragon",
+                        "polar_eldragon",
+                        "nurture_eldragon",
+                        "meteor_eldragon",
+                        "fire_eldrake"
                     ],
-                    "drop_mult": 0.15
+                    "drop_mult": 0.15,
+                    "exp": 400,
+                    "gold": 360,
+                    "rare": [
+                        {
+                            "id": "fortina",
+                            "chance": 0.01
+                        },
+                        {
+                            "id": "pentacorn",
+                            "chance": 0.01
+                        },
+                        {
+                            "id": "slayergal",
+                            "chance": 0.01
+                        },
+                        {
+                            "id": "pandabond",
+                            "chance": 0.01
+                        },
+                        {
+                            "id": "whalduke",
+                            "chance": 0.01
+                        },
+                        {
+                            "id": "ant_queen",
+                            "chance": 0.01
+                        }
+                    ]
                 },
                 {
                     "name": "Temple of Four Elements (hell)",
                     "gems": 7,
                     "energy": 0,
                     "level": 42,
-                    "stages": 4,
+                    "stages": 6,
                     "drop_level": [
                         1,
                         1
@@ -2011,8 +2258,17 @@
                         "pandabond",
                         "whalduke",
                         "ant_queen",
+                        "pheona",
                         "torch_eldragon",
-                        "void_eldragon"
+                        "frozen_eldragon",
+                        "neo_eldragon",
+                        "void_eldragon",
+                        "pyro_eldragon",
+                        "polar_eldragon",
+                        "nurture_eldragon",
+                        "meteor_eldragon",
+                        "fire_eldrake",
+                        "caocao"
                     ],
                     "drop_mult": 0.15,
                     "rare": [
@@ -2027,8 +2283,27 @@
                         {
                             "id": "slayergal",
                             "chance": 0.01
+                        },
+                        {
+                            "id": "caocao",
+                            "chance": 0.005
+                        },
+                        {
+                            "id": "pandabond",
+                            "chance": 0.01
+                        },
+                        {
+                            "id": "whalduke",
+                            "chance": 0.01
+                        },
+                        {
+                            "id": "ant_queen",
+                            "chance": 0.01
                         }
-                    ]
+                    ],
+                    "exp": 500,
+                    "gold": 360,
+                    "say": "All the fools seeking treasure will be punished!"
                 }
             ],
             "unlock_gems": 15
@@ -2057,7 +2332,8 @@
                     "enemies": [
                         "emberpeep",
                         "cinderpeep"
-                    ]
+                    ],
+                    "say": "Hell is so much more pleasurable than heaven."
                 },
                 {
                     "name": "Slothful Hunter",
@@ -2073,7 +2349,8 @@
                     "enemies": [
                         "burn_bot",
                         "cinderpeep"
-                    ]
+                    ],
+                    "say": "Demon hunting is a pain. I'd rather sit back and relax."
                 },
                 {
                     "name": "Envious Hunter",
@@ -2089,7 +2366,8 @@
                     "enemies": [
                         "dawnspook",
                         "dawnspec"
-                    ]
+                    ],
+                    "say": "Don't be jealous because I'm better than you."
                 },
                 {
                     "name": "Glutton Hunter",
@@ -2121,7 +2399,8 @@
                     "enemies": [
                         "tramix",
                         "trama"
-                    ]
+                    ],
+                    "say": "Hmph, as if a demon could outsmart ME!"
                 },
                 {
                     "name": "Greedy Hunter",
@@ -2151,6 +2430,12 @@
                     ],
                     "boss": "vengens",
                     "enemies": [
+                        "grand_bang",
+                        "brickett",
+                        "lowe"
+                    ],
+                    "drops": [
+                        "lowe",
                         "grand_bang",
                         "brickett"
                     ]
@@ -2188,7 +2473,8 @@
                         "grumie",
                         "bern"
                     ],
-                    "bg": "k9_cliffs"
+                    "bg": "k9_cliffs",
+                    "say": "Monsters threw me from the sky. Will you help me?"
                 },
                 {
                     "name": "Feral Dog",
@@ -2257,7 +2543,8 @@
                         "ferdog",
                         "shivairy"
                     ],
-                    "bg": "k9_cliffs"
+                    "bg": "k9_cliffs",
+                    "say": "All I want is to be surrounded by screams of pain!"
                 },
                 {
                     "name": "Alpha Dog",
@@ -2280,7 +2567,8 @@
                         "shivelle",
                         "shivairy"
                     ],
-                    "bg": "k9_garden"
+                    "bg": "k9_garden",
+                    "say": "It's not too late to bow down and become my slave."
                 },
                 {
                     "name": "Beta Dog",
@@ -2303,7 +2591,8 @@
                         "chilelle",
                         "ghoulflash"
                     ],
-                    "bg": "k9_garden"
+                    "bg": "k9_garden",
+                    "say": "You truly think you can win with those weaklings?"
                 },
                 {
                     "name": "Sigma Dog",
@@ -2326,7 +2615,8 @@
                         "grumelle",
                         "grumairy"
                     ],
-                    "bg": "k9_garden"
+                    "bg": "k9_garden",
+                    "say": "You've come far...but this is the end of the line!"
                 },
                 {
                     "name": "Omega Dog",
@@ -3091,12 +3381,17 @@
                     "enemies": [
                         "spooki",
                         "octo",
-                        "ponee"
+                        "ponee",
+                        "e_zakum",
+                        "e_magnus",
+                        "smelly"
                     ],
                     "stages": 3,
                     "bg": "maple_castle",
                     "drops": [
-                        "e_pink_bean"
+                        "e_zakum",
+                        "e_magnus",
+                        "smelly"
                     ],
                     "drop_mult": 1.0
                 },
@@ -3168,16 +3463,583 @@
                     "enemies": [
                         "spooki",
                         "octo",
-                        "ponee"
+                        "ponee",
+                        "e_zakum",
+                        "e_magnus",
+                        "smelly"
                     ],
                     "stages": 3,
                     "bg": "maple_castle",
                     "drops": [
                         "e_zakum",
                         "e_magnus",
-                        "e_pink_bean"
+                        "smelly"
                     ],
                     "drop_mult": 0.5
+                }
+            ]
+        },
+        {
+            "id": "candy_island",
+            "name": "Candy Island",
+            "kind": "event",
+            "days": [],
+            "chain": true,
+            "chain_unlock": 5,
+            "desc": "The witch, Gateau, took all your candies. Go get her! Random monsters in Candy Island drop rare cubes.",
+            "promo": "The witch, Gateau, took all your candies. Go get her!",
+            "_source": "Feb 2016 event (rmNIIXuSwyk): island text and art, Normal/Hard/Hell with 5 fields each, field names, energy (Normal 5-15, Hard 20-30, Hell 20/35/40 seen; rest by the 5-step pattern), bosses Bluebella, Cutiepong, Phantom Mallow, Banasnack, Gateau (Hell Candy Forest: Brioche), Road to Candy Castle drop list, 4 waves on Hell, candy-town battle field. The pink horned 3* normal drop and enemy is Chocomew (wiki art name; kit from the Korean DB, HungryApp #447). Enemies past the bosses, gold/exp/levels and the Brioche rare chance are estimated.",
+            "quests": [
+                {
+                    "name": "Candy Forest",
+                    "tab": "normal",
+                    "energy": 5,
+                    "level": 15,
+                    "exp": 200,
+                    "gold": 1000,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "bluebella",
+                    "enemies": [
+                        "banany",
+                        "marshmallow"
+                    ],
+                    "stages": 3,
+                    "bg": "candy_town",
+                    "drops": [
+                        "banany",
+                        "marshmallow"
+                    ],
+                    "rare": [
+                        {
+                            "id": "brioche",
+                            "chance": 0.02
+                        }
+                    ]
+                },
+                {
+                    "name": "Candy Town Trap!",
+                    "tab": "normal",
+                    "energy": 10,
+                    "level": 18,
+                    "exp": 300,
+                    "gold": 1800,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "cutiepong",
+                    "enemies": [
+                        "marshmallow",
+                        "banany"
+                    ],
+                    "stages": 3,
+                    "bg": "candy_town",
+                    "drops": [
+                        "banany",
+                        "marshmallow"
+                    ],
+                    "rare": [
+                        {
+                            "id": "brioche",
+                            "chance": 0.02
+                        }
+                    ]
+                },
+                {
+                    "name": "Road to Candy Castle",
+                    "tab": "normal",
+                    "energy": 15,
+                    "level": 21,
+                    "exp": 400,
+                    "gold": 2600,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "phantom_mallow",
+                    "enemies": [
+                        "marshmallow",
+                        "banany",
+                        "chocomew"
+                    ],
+                    "stages": 3,
+                    "bg": "candy_town",
+                    "drops": [
+                        "banany",
+                        "marshmallow",
+                        "chocomew"
+                    ],
+                    "rare": [
+                        {
+                            "id": "brioche",
+                            "chance": 0.02
+                        }
+                    ]
+                },
+                {
+                    "name": "Candy Castle Adventure",
+                    "tab": "normal",
+                    "energy": 20,
+                    "level": 24,
+                    "exp": 500,
+                    "gold": 3400,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "banasnack",
+                    "enemies": [
+                        "banany",
+                        "marshmallow"
+                    ],
+                    "stages": 3,
+                    "bg": "candy_town",
+                    "drops": [
+                        "banany",
+                        "marshmallow"
+                    ],
+                    "rare": [
+                        {
+                            "id": "brioche",
+                            "chance": 0.02
+                        }
+                    ]
+                },
+                {
+                    "name": "Lord of Candy Castle",
+                    "tab": "normal",
+                    "energy": 25,
+                    "level": 27,
+                    "exp": 600,
+                    "gold": 4200,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "gateau",
+                    "enemies": [
+                        "phantom_mallow",
+                        "banasnack"
+                    ],
+                    "stages": 3,
+                    "bg": "candy_town",
+                    "drops": [
+                        "banasnack",
+                        "phantom_mallow"
+                    ],
+                    "rare": [
+                        {
+                            "id": "brioche",
+                            "chance": 0.02
+                        }
+                    ]
+                },
+                {
+                    "name": "Candy Forest (HARD)",
+                    "tab": "hard",
+                    "energy": 10,
+                    "level": 22,
+                    "exp": 350,
+                    "gold": 2200,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "bluebella",
+                    "enemies": [
+                        "banany",
+                        "marshmallow",
+                        "phantom_mallow"
+                    ],
+                    "stages": 4,
+                    "bg": "candy_town",
+                    "drops": [
+                        "banany",
+                        "marshmallow",
+                        "phantom_mallow"
+                    ],
+                    "rare": [
+                        {
+                            "id": "brioche",
+                            "chance": 0.04
+                        }
+                    ]
+                },
+                {
+                    "name": "Candy Town Trap! (HARD)",
+                    "tab": "hard",
+                    "energy": 15,
+                    "level": 25,
+                    "exp": 450,
+                    "gold": 3000,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "cutiepong",
+                    "enemies": [
+                        "marshmallow",
+                        "banasnack"
+                    ],
+                    "stages": 4,
+                    "bg": "candy_town",
+                    "drops": [
+                        "banasnack",
+                        "marshmallow"
+                    ],
+                    "rare": [
+                        {
+                            "id": "brioche",
+                            "chance": 0.04
+                        }
+                    ]
+                },
+                {
+                    "name": "Road to Candy Castle (HARD)",
+                    "tab": "hard",
+                    "energy": 20,
+                    "level": 28,
+                    "exp": 550,
+                    "gold": 3800,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "phantom_mallow",
+                    "enemies": [
+                        "marshmallow",
+                        "banany",
+                        "banasnack",
+                        "chocomew"
+                    ],
+                    "stages": 4,
+                    "bg": "candy_town",
+                    "drops": [
+                        "banany",
+                        "banasnack",
+                        "marshmallow",
+                        "chocomew"
+                    ],
+                    "rare": [
+                        {
+                            "id": "brioche",
+                            "chance": 0.04
+                        }
+                    ]
+                },
+                {
+                    "name": "Candy Castle Adventure (HARD)",
+                    "tab": "hard",
+                    "energy": 25,
+                    "level": 31,
+                    "exp": 650,
+                    "gold": 4600,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "banasnack",
+                    "enemies": [
+                        "banany",
+                        "phantom_mallow"
+                    ],
+                    "stages": 4,
+                    "bg": "candy_town",
+                    "drops": [
+                        "banany",
+                        "phantom_mallow"
+                    ],
+                    "rare": [
+                        {
+                            "id": "brioche",
+                            "chance": 0.04
+                        }
+                    ]
+                },
+                {
+                    "name": "Lord of Candy Castle (HARD)",
+                    "tab": "hard",
+                    "energy": 30,
+                    "level": 34,
+                    "exp": 750,
+                    "gold": 5400,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "gateau",
+                    "enemies": [
+                        "phantom_mallow",
+                        "banasnack",
+                        "brioche"
+                    ],
+                    "stages": 4,
+                    "bg": "candy_town",
+                    "drops": [
+                        "banasnack",
+                        "phantom_mallow"
+                    ],
+                    "rare": [
+                        {
+                            "id": "brioche",
+                            "chance": 0.04
+                        }
+                    ]
+                },
+                {
+                    "name": "Candy Forest (HELL)",
+                    "tab": "hell",
+                    "energy": 20,
+                    "level": 30,
+                    "exp": 500,
+                    "gold": 3400,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "brioche",
+                    "enemies": [
+                        "marshmallow",
+                        "phantom_mallow",
+                        "banasnack"
+                    ],
+                    "stages": 4,
+                    "bg": "candy_town",
+                    "drops": [
+                        "banasnack",
+                        "marshmallow",
+                        "phantom_mallow"
+                    ],
+                    "rare": [
+                        {
+                            "id": "brioche",
+                            "chance": 0.06
+                        }
+                    ],
+                    "say": "Candy festival! Follow me if you want some!"
+                },
+                {
+                    "name": "Candy Town Trap! (HELL)",
+                    "tab": "hell",
+                    "energy": 25,
+                    "level": 33,
+                    "exp": 600,
+                    "gold": 4200,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "cutiepong",
+                    "enemies": [
+                        "phantom_mallow",
+                        "banasnack"
+                    ],
+                    "stages": 4,
+                    "bg": "candy_town",
+                    "drops": [
+                        "banasnack",
+                        "phantom_mallow"
+                    ],
+                    "rare": [
+                        {
+                            "id": "brioche",
+                            "chance": 0.06
+                        }
+                    ]
+                },
+                {
+                    "name": "Road to Candy Castle (HELL)",
+                    "tab": "hell",
+                    "energy": 30,
+                    "level": 36,
+                    "exp": 700,
+                    "gold": 5000,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "phantom_mallow",
+                    "enemies": [
+                        "banasnack",
+                        "brioche",
+                        "chocomew"
+                    ],
+                    "stages": 4,
+                    "bg": "candy_town",
+                    "drops": [
+                        "banasnack",
+                        "chocomew"
+                    ],
+                    "rare": [
+                        {
+                            "id": "brioche",
+                            "chance": 0.06
+                        }
+                    ]
+                },
+                {
+                    "name": "Candy Castle Adventure (HELL)",
+                    "tab": "hell",
+                    "energy": 35,
+                    "level": 39,
+                    "exp": 800,
+                    "gold": 5800,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "banasnack",
+                    "enemies": [
+                        "phantom_mallow",
+                        "brioche"
+                    ],
+                    "stages": 4,
+                    "bg": "candy_town",
+                    "drops": [
+                        "phantom_mallow"
+                    ],
+                    "rare": [
+                        {
+                            "id": "brioche",
+                            "chance": 0.06
+                        }
+                    ]
+                },
+                {
+                    "name": "Lord of Candy Castle (HELL)",
+                    "tab": "hell",
+                    "energy": 40,
+                    "level": 42,
+                    "exp": 900,
+                    "gold": 6600,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "gateau",
+                    "enemies": [
+                        "phantom_mallow",
+                        "banasnack",
+                        "brioche"
+                    ],
+                    "stages": 4,
+                    "bg": "candy_town",
+                    "drops": [
+                        "banasnack",
+                        "phantom_mallow"
+                    ],
+                    "rare": [
+                        {
+                            "id": "brioche",
+                            "chance": 0.06
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "holiday_island",
+            "name": "Holiday Island",
+            "kind": "event",
+            "days": [],
+            "desc": "Happy holidays! Meet Rudolph who is carrying special gifts for you!",
+            "promo": "Happy holidays! Meet Rudolph who is carrying special gifts for you!",
+            "_source": "Dec 2015 event (I3Wo0BDFOWk): island text and art, one Normal tab with Fairy Forest (Easy) 10, Rudolph's Forest (Normal) 15, Santa's Forest (Hard) 20 energy, bosses Fairy Reindeer, Rudolph, Mr. Jolly, 4 waves, snowy forest battle field. Enemies (Unee line, St. Mew), gold/exp/levels and drops are estimated.",
+            "quests": [
+                {
+                    "name": "Fairy Forest (Easy)",
+                    "tab": "normal",
+                    "energy": 10,
+                    "level": 15,
+                    "exp": 250,
+                    "gold": 1200,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "fairy_reindeer",
+                    "enemies": [
+                        "unee",
+                        "st_mew"
+                    ],
+                    "stages": 4,
+                    "bg": "holiday_forest",
+                    "drops": [
+                        "unee",
+                        "st_mew"
+                    ],
+                    "rare": [
+                        {
+                            "id": "fairy_reindeer",
+                            "chance": 0.03
+                        }
+                    ]
+                },
+                {
+                    "name": "Rudolph's Forest (Normal)",
+                    "tab": "normal",
+                    "energy": 15,
+                    "level": 23,
+                    "exp": 450,
+                    "gold": 2400,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "rudolph",
+                    "enemies": [
+                        "unee",
+                        "ice_unee",
+                        "st_mew",
+                        "fairy_reindeer"
+                    ],
+                    "stages": 4,
+                    "bg": "holiday_forest",
+                    "drops": [
+                        "unee",
+                        "st_mew",
+                        "fairy_reindeer"
+                    ],
+                    "rare": [
+                        {
+                            "id": "fairy_reindeer",
+                            "chance": 0.05
+                        }
+                    ]
+                },
+                {
+                    "name": "Santa's Forest (Hard)",
+                    "tab": "normal",
+                    "energy": 20,
+                    "level": 31,
+                    "exp": 650,
+                    "gold": 3600,
+                    "drop_level": [
+                        1,
+                        1
+                    ],
+                    "boss": "mr_jolly",
+                    "enemies": [
+                        "ice_unee",
+                        "st_mew",
+                        "fairy_reindeer",
+                        "rudolph"
+                    ],
+                    "stages": 4,
+                    "bg": "holiday_forest",
+                    "drops": [
+                        "st_mew",
+                        "fairy_reindeer"
+                    ],
+                    "rare": [
+                        {
+                            "id": "fairy_reindeer",
+                            "chance": 0.07
+                        }
+                    ]
                 }
             ]
         }

@@ -1,0 +1,4808 @@
+{
+	"alias": {
+		"c_k_launch": "c_b_launch2",
+		"c_w_breath": "c_w_quake_2",
+		"c_n_breath": "c_n_quake_2",
+		"c_k_breath": "c_k_laser",
+		"c_k_quake_2": "c_n_quake_2",
+		"p_n_circle_1": "p_b_circle_1",
+		"p_n_circle_2": "p_b_circle_1",
+		"h_w_explosion_3": "h_w_explosion_1",
+		"h_n_explosion_3": "h_n_explosion_1",
+		"h_k_explosion_3": "h_k_explosion_1",
+		"h_k_base_2": "h_k_base_1",
+		"h_k_base_4": "h_k_explosion_1",
+		"h_n_base_4": "h_n_explosion_1",
+		"p_n_Sconcentrate_1": "p_n_Sconcentrate_1"
+	},
+	"offsets": {
+		"c_b_fall": [
+			-3,
+			-17
+		],
+		"c_b_launch2": [
+			-52,
+			-3
+		],
+		"c_b_whirlwave_1": [
+			0,
+			9
+		],
+		"c_bite_1": [
+			-53,
+			5
+		],
+		"c_bite_2": [
+			-64,
+			4
+		],
+		"c_buff_1": [
+			2,
+			-38
+		],
+		"c_bufficon_attack": [
+			0,
+			3
+		],
+		"c_cut_1": [
+			-44,
+			4
+		],
+		"c_cut_2": [
+			-44,
+			1
+		],
+		"c_debuff_1": [
+			-1,
+			-28
+		],
+		"c_debufficon_defense": [
+			-2,
+			10
+		],
+		"c_debufficon_speed": [
+			-2,
+			8
+		],
+		"c_extraglow_b_1": [
+			2,
+			-88
+		],
+		"c_extraglow_r_1": [
+			2,
+			-88
+		],
+		"c_extraglow_y_1": [
+			2,
+			-88
+		],
+		"c_f_ball": [
+			46,
+			1
+		],
+		"c_f_ball_2": [
+			13,
+			0
+		],
+		"c_f_breath": [
+			-130,
+			36
+		],
+		"c_f_laser": [
+			-234,
+			2
+		],
+		"c_f_launch": [
+			-52,
+			-3
+		],
+		"c_f_launch_2": [
+			-55,
+			-2
+		],
+		"c_f_quake_2": [
+			42,
+			-62
+		],
+		"c_heal1": [
+			-2,
+			-24
+		],
+		"c_heal2": [
+			-1,
+			-24
+		],
+		"c_heal_1": [
+			2,
+			5
+		],
+		"c_iceball_1": [
+			27,
+			1
+		],
+		"c_immune_1": [
+			-30,
+			2
+		],
+		"c_immunereflect_1": [
+			-52,
+			1
+		],
+		"c_k_ball": [
+			45,
+			1
+		],
+		"c_k_ball_2": [
+			18,
+			1
+		],
+		"c_k_laser": [
+			-234,
+			2
+		],
+		"c_levelup_1": [
+			0,
+			-94
+		],
+		"c_lightning_k_2": [
+			-4,
+			-26
+		],
+		"c_magma_2": [
+			-1,
+			-93
+		],
+		"c_n_ball": [
+			45,
+			1
+		],
+		"c_n_ball_2": [
+			24,
+			0
+		],
+		"c_n_bladeprojectile_1": [
+			66,
+			2
+		],
+		"c_n_laser": [
+			-234,
+			2
+		],
+		"c_n_launch": [
+			-52,
+			-3
+		],
+		"c_n_quake_2": [
+			22,
+			-48
+		],
+		"c_n_snake_1": [
+			-160,
+			-20
+		],
+		"c_pierce_1": [
+			-90,
+			-6
+		],
+		"c_pierce_2": [
+			-88,
+			-2
+		],
+		"c_pierce_3": [
+			-42,
+			0
+		],
+		"c_pierceprojectile_1": [
+			110,
+			-4
+		],
+		"c_provoke_1": [
+			-1,
+			-95
+		],
+		"c_punch_1": [
+			-55,
+			1
+		],
+		"c_punch_2": [
+			-54,
+			-6
+		],
+		"c_punch_3": [
+			-42,
+			-14
+		],
+		"c_revival": [
+			-1,
+			-93
+		],
+		"c_scratch_1": [
+			-67,
+			-2
+		],
+		"c_silence_1": [
+			-54,
+			-2
+		],
+		"c_w_ball": [
+			45,
+			1
+		],
+		"c_w_ball_2": [
+			16,
+			0
+		],
+		"c_w_laser": [
+			-234,
+			2
+		],
+		"c_w_launch": [
+			-52,
+			-3
+		],
+		"c_w_quake_2": [
+			18,
+			-60
+		],
+		"h_b_explosion_1": [
+			-6,
+			-4
+		],
+		"h_b_fall": [
+			-78,
+			-96
+		],
+		"h_base_2": [
+			4,
+			-3
+		],
+		"h_base_3": [
+			-6,
+			-18
+		],
+		"h_diagonalcut_1": [
+			-4,
+			7
+		],
+		"h_f_base_2": [
+			4,
+			-3
+		],
+		"h_f_base_4": [
+			-2,
+			-4
+		],
+		"h_f_explosion_1": [
+			-6,
+			-4
+		],
+		"h_f_explosion_3": [
+			-7,
+			2
+		],
+		"h_k_explosion_1": [
+			-6,
+			-4
+		],
+		"h_lightning_k_1": [
+			-54,
+			-92
+		],
+		"h_lightning_k_2": [
+			-78,
+			-96
+		],
+		"h_n_base_2": [
+			6,
+			-3
+		],
+		"h_n_explosion_1": [
+			-6,
+			-4
+		],
+		"h_scratch_1": [
+			0,
+			-21
+		],
+		"h_w_base_2": [
+			4,
+			-3
+		],
+		"h_w_base_4": [
+			-2,
+			-4
+		],
+		"h_w_explosion_1": [
+			-6,
+			-4
+		],
+		"h_web_1": [
+			-8,
+			-3
+		],
+		"k_bleed": [
+			-53,
+			-8
+		],
+		"k_bomb_1": [
+			8,
+			-12
+		],
+		"k_burn": [
+			1,
+			-12
+		],
+		"k_confusion": [
+			0,
+			3
+		],
+		"k_immune_1": [
+			-24,
+			2
+		],
+		"k_magicmirror_1": [
+			-22,
+			-16
+		],
+		"k_reflect": [
+			-61,
+			0
+		],
+		"k_shield": [
+			-31,
+			1
+		],
+		"k_silence_1": [
+			3,
+			-2
+		],
+		"k_thorn_1": [
+			-4,
+			14
+		],
+		"p_b_Sconcentrate_1": [
+			8,
+			-4
+		],
+		"p_b_circle_1": [
+			-1,
+			-8
+		],
+		"p_b_concentrate1_2": [
+			2,
+			-6
+		],
+		"p_f_Sconcentrate_1": [
+			8,
+			-4
+		],
+		"p_f_circle_1": [
+			-1,
+			-8
+		],
+		"p_f_circle_2": [
+			-3,
+			-16
+		],
+		"p_f_concentrate1_2": [
+			2,
+			-6
+		],
+		"p_k_Sconcentrate_1": [
+			8,
+			-4
+		],
+		"p_k_circle_1": [
+			-2,
+			-8
+		],
+		"p_k_circle_2": [
+			-3,
+			-16
+		],
+		"p_k_concentrate1_2": [
+			2,
+			-6
+		],
+		"p_n_Sconcentrate_1": [
+			8,
+			-4
+		],
+		"p_w_Sconcentrate_1": [
+			8,
+			-4
+		],
+		"p_w_circle_1": [
+			-1,
+			-8
+		],
+		"p_w_circle_2": [
+			-3,
+			-14
+		],
+		"p_w_concentrate1_2": [
+			2,
+			-6
+		],
+		"p_w_light_2": [
+			-1,
+			-56
+		],
+		"p_w_magiccircle_2": [
+			0,
+			-50
+		],
+		"t_firespear_1": [
+			82,
+			2
+		],
+		"t_provoke_1": [
+			2,
+			-52
+		],
+		"t_provokeicon_1": [
+			0,
+			4
+		],
+		"t_shield_1": [
+			-4,
+			-10
+		]
+	},
+	"default_style": "ranged",
+	"styles": {
+		"astral_eldragon": "melee",
+		"cold_eldrake": "melee",
+		"fire_eldrake": "melee",
+		"flame_eldragon": "melee",
+		"flare_eldragon": "melee",
+		"frozen_eldragon": "melee",
+		"glacial_eldragon": "melee",
+		"lucky": "melee",
+		"meteor_eldragon": "melee",
+		"nascent_eldrake": "melee",
+		"native_eldragon": "melee",
+		"naturia_eldragon": "melee",
+		"neo_eldragon": "melee",
+		"nurture_eldragon": "melee",
+		"polar_eldragon": "melee",
+		"pyro_eldragon": "melee",
+		"rookie": "melee",
+		"star_eldrake": "melee",
+		"stellar_eldragon": "melee",
+		"torch_eldragon": "melee",
+		"tundra_eldragon": "melee",
+		"void_eldragon": "melee"
+	},
+	"attack": {
+		"fire": [
+			"c_scratch_1",
+			"c_bite_1",
+			"h_f_base_1",
+			"c_punch_2"
+		],
+		"water": [
+			"c_punch_3",
+			"h_w_base_1",
+			"c_cut_1",
+			"c_punch_2"
+		],
+		"nature": [
+			"c_scratch_1",
+			"c_cut_2",
+			"h_n_base_1",
+			"c_punch_2"
+		],
+		"normal": [
+			"c_punch_1",
+			"c_bite_2",
+			"h_k_base_1",
+			"c_punch_2",
+			"h_base_1"
+		]
+	},
+	"attack_by": {
+		"rookie": "tarang_attack01",
+		"lucky": "tarang_attack01"
+	},
+	"tick": {
+		"burn": "h_f_tick",
+		"poison": "h_n_tick",
+		"freeze": "h_w_tick",
+		"bleed": "h_b_tick",
+		"time_bomb": "h_b_explosion_1"
+	},
+	"apply": {
+		"stun": "",
+		"silence": "t_silence_1",
+		"provoke": "t_provoke_1",
+		"reflect": "t_thorn_1",
+		"immune": "c_immune_1",
+		"shield": "",
+		"debuff_def": "c_debufficon_defense",
+		"debuff_speed": "c_debufficon_speed"
+	},
+	"loops": {
+		"stun": "k_stun",
+		"silence": "k_silence_1",
+		"provoke": "k_provoke_1",
+		"reflect": "k_thorn_1",
+		"immune": "k_immune_1",
+		"time_bomb": "k_bomb_1",
+		"shield": "k_shield",
+		"dot_burn": "k_burn",
+		"dot_poison": "k_poison",
+		"dot_freeze": "k_frost",
+		"dot_bleed": "k_bleed"
+	},
+	"skills": {
+		"Abracadabra": {
+			"aura": "p_b_circle_1"
+		},
+		"Absorb Health": {
+			"aura": "p_b_circle_1"
+		},
+		"Acid attack of Queen": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Acorn Burst": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Advance!": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Advanced Defense Down": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2",
+			"icon": "c_debufficon_defense"
+		},
+		"Advanced Leader Speed Up": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_speed"
+		},
+		"Advanced Null Magic": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Advanced Purification": {
+			"aura": "p_w_circle_1",
+			"land": "t_extraglow_b_1"
+		},
+		"Advanced REC Down": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Advanced Total Barrier": {
+			"aura": "p_w_magiccircle_2",
+			"land": "t_shield_1"
+		},
+		"Advanced Total Basic": {
+			"aura": "p_w_magiccircle_2",
+			"charge": "c_shield_1",
+			"land": "t_shield_1"
+		},
+		"Ant Blood Poison": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Ant Fire Shot": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Ant Flame": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "h_{e}_explosion_1",
+			"sweep": "c_{e}_breath"
+		},
+		"Ant Freeze": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_w_launch",
+			"hit": "h_w_explosion_1",
+			"travel": "c_iceball_1"
+		},
+		"Ant Grass Gun": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Ant Poison": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Ant Sting": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"hit": "c_pierce_2",
+			"travel": "c_pierceprojectile_1",
+			"hit2": "h_pierce_1",
+			"fly": 0.18
+		},
+		"Ant Water Cannon": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Antenna Attack": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1",
+			"icon": "c_debufficon_defense"
+		},
+		"Apple Throw": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Aqua lure": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_attack"
+		},
+		"Arc-Beam": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "h_{e}_base_4",
+			"sweep": "c_{e}_laser",
+			"delay": 0.4
+		},
+		"Assault": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Attack + Heal.png": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45,
+			"land": "c_heal2"
+		},
+		"Attack Speed Down": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2",
+			"icon": "c_debufficon_speed"
+		},
+		"Attacks": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Bamboo Sprout": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_n_Sconcentrate_2",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45,
+			"sweep": "c_{e}_quake_2"
+		},
+		"Banana Smash": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_n_Sconcentrate_2",
+			"hit": "c_punch_3",
+			"icon": "c_debufficon_defense",
+			"hit2": "h_{e}_base_2"
+		},
+		"Basic Bull Magic": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Basic Leader ATK Up": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_attack"
+		},
+		"Basic Leader ATK up": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_attack"
+		},
+		"Basic Leader Critical Up": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_critical"
+		},
+		"Basic Leader Speed Up": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_speed"
+		},
+		"Basic Null Magic": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Basic Offense Down": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Basic Purifaction": {
+			"aura": "p_w_circle_1",
+			"land": "t_extraglow_b_1"
+		},
+		"Basic Purifcation": {
+			"aura": "p_w_circle_1",
+			"land": "t_extraglow_b_1"
+		},
+		"Basic Purification": {
+			"aura": "p_w_circle_1",
+			"land": "t_extraglow_b_1"
+		},
+		"Basic Random ATK Up": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_attack"
+		},
+		"Basic Random Critical Up": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_critical"
+		},
+		"Basic Shield": {
+			"aura": "p_w_magiccircle_2",
+			"charge": "c_shield_1",
+			"land": "t_shield_1"
+		},
+		"Basic Speed Down": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2",
+			"icon": "c_debufficon_speed"
+		},
+		"Basic Total ATK Down": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Basic Total ATK Down *": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Basic Total ATK UP": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_attack"
+		},
+		"Basic Total ATK Up": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_attack"
+		},
+		"Basic Total Atk Up": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_attack"
+		},
+		"Basic Total Attack Up": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_attack"
+		},
+		"Basic Total CRI Up": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_critical"
+		},
+		"Basic Total Defense Down": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2",
+			"icon": "c_debufficon_defense"
+		},
+		"Basic Total Heal": {
+			"aura": "p_w_circle_2",
+			"land": "c_heal_1"
+		},
+		"Basic Total Offence": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_attack"
+		},
+		"Basic Total Offense": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_attack"
+		},
+		"Basic total heal": {
+			"aura": "p_w_circle_2",
+			"land": "c_heal_1"
+		},
+		"Bean Power": {
+			"aura": "p_b_circle_1"
+		},
+		"Bean's Might": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1"
+		},
+		"Bear Criticals": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_critical"
+		},
+		"Bear's Fury": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Bifrost": {
+			"aura": "p_w_light_2",
+			"land": "c_heal2"
+		},
+		"Billowing Fury": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_critical"
+		},
+		"Biting Meat": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Biting meat": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Black Blade": {
+			"aura": "p_k_circle_2",
+			"charge": "p_k_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_k_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Black Bloom": {
+			"aura": "p_k_circle_2",
+			"charge": "p_k_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_k_explosion_1",
+			"delay": 0.45
+		},
+		"Black Gale": {
+			"aura": "p_k_circle_2",
+			"charge": "p_k_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_k_explosion_1",
+			"delay": 0.45
+		},
+		"Black Hole": {
+			"aura": "p_k_circle_2",
+			"charge": "p_k_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_k_explosion_1",
+			"delay": 0.45
+		},
+		"Black Mud": {
+			"aura": "p_k_circle_2",
+			"charge": "p_k_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_k_explosion_1",
+			"delay": 0.45
+		},
+		"Black Needle": {
+			"aura": "p_k_circle_2",
+			"charge": "p_k_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_k_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Black and White": {
+			"aura": "p_k_circle_2",
+			"charge": "p_k_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_k_explosion_1",
+			"delay": 0.45
+		},
+		"Blade of Cold": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_w_concentrate2_1",
+			"hit": "c_cut_2",
+			"hit2": "h_diagonalcut_1"
+		},
+		"Blade of Light": {
+			"hit": "c_cut_2",
+			"hit2": "c_magma_2",
+			"tint2": "#fff2a0"
+		},
+		"Blazing Bird": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_attack"
+		},
+		"Blockade": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Blockblade": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "c_cut_2",
+			"hit2": "h_diagonalcut_1"
+		},
+		"Blood Drain": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "c_bite_1",
+			"hit2": "h_{e}_base_1",
+			"delay": 0.45,
+			"land": "c_heal2"
+		},
+		"Blood Touch": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "c_bite_1",
+			"hit2": "h_{e}_base_1",
+			"delay": 0.45
+		},
+		"Bloodsucker": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "c_bite_1",
+			"hit2": "h_{e}_base_1"
+		},
+		"Bloodsucking": {
+			"aura": "p_b_circle_1"
+		},
+		"Bloodwedding": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "c_bite_1",
+			"hit2": "h_{e}_base_1"
+		},
+		"Blossom Blade": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_n_Sconcentrate_2",
+			"hit": "c_cut_2",
+			"hit2": "h_diagonalcut_1"
+		},
+		"Blossom effect": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_attack"
+		},
+		"Blue Bloom": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Blue Laser": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_w_concentrate2_1",
+			"hit": "h_{e}_base_4",
+			"sweep": "c_{e}_laser",
+			"delay": 0.4
+		},
+		"Boar's Fury": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_n_Sconcentrate_2",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Body Slam": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "c_punch_3",
+			"hit2": "h_{e}_base_2"
+		},
+		"Bone Toss": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Bone throw": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Bony Hand": {
+			"aura": "p_w_light_2",
+			"land": "c_heal2"
+		},
+		"Bouncing Flame": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "h_{e}_explosion_1",
+			"sweep": "c_{e}_breath"
+		},
+		"Brown Bear Multi-Shot": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "c_pierce_2",
+			"hit2": "h_pierce_1",
+			"delay": 0.45,
+			"travel": "c_pierceprojectile_1",
+			"fly": 0.18
+		},
+		"Brown Bear Multi–Shot": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "c_pierce_2",
+			"hit2": "h_pierce_1",
+			"delay": 0.45,
+			"travel": "c_pierceprojectile_1",
+			"fly": 0.18
+		},
+		"Brown Bear Shot": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"hit": "c_pierce_2",
+			"travel": "c_pierceprojectile_1",
+			"hit2": "h_pierce_1",
+			"fly": 0.18
+		},
+		"Bubble Burst": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"travel": "c_{e}_ball"
+		},
+		"Bubble Toss": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"travel": "c_{e}_ball"
+		},
+		"Burn": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Burn All": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Burning Acorn": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Burning Wing": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "h_{e}_base_4",
+			"sweep": "c_b_whirlwave_1",
+			"delay": 0.4
+		},
+		"Cake Attack": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1",
+			"icon": "c_debufficon_defense"
+		},
+		"Call Lightning": {
+			"aura": "c_b_fall",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_b_fall",
+			"hit2": "h_{e}_explosion_1",
+			"delay": 0.45
+		},
+		"Call for family": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_attack"
+		},
+		"Candle Party": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Candle Throw": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Candy Strike": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Captain Ninja Star": {
+			"aura": "p_b_circle_1",
+			"charge": "p_w_concentrate2_2",
+			"cast": "c_{e}_launch",
+			"hit": "h_b_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Centaur Rush": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_charge_1",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Charge": {
+			"lunge": true,
+			"hit": "c_cut_2",
+			"hit2": "h_diagonalcut_1",
+			"delay": 0.2
+		},
+		"Chatter": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Chewing Meat": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Chewing meat": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Chicken Salt Kick": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "c_punch_3",
+			"hit2": "h_{e}_base_2"
+		},
+		"Chieftain's Spear": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_n_Sconcentrate_2",
+			"cast": "c_{e}_launch",
+			"hit": "c_pierce_2",
+			"hit2": "h_pierce_1",
+			"delay": 0.45,
+			"travel": "c_pierceprojectile_1",
+			"fly": 0.18
+		},
+		"Chilling Burst": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_w_concentrate2_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Chin Upper": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Chloro Multi-Shot": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "c_pierce_2",
+			"hit2": "h_pierce_1",
+			"delay": 0.45,
+			"travel": "c_pierceprojectile_1",
+			"fly": 0.18
+		},
+		"Chloro-Shot": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "c_pierce_2",
+			"hit2": "h_pierce_1",
+			"delay": 0.45,
+			"travel": "c_pierceprojectile_1",
+			"fly": 0.18
+		},
+		"Chow Down": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Clam Soup Slap": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Claw Cyclone": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "c_cut_2",
+			"hit2": "h_diagonalcut_1",
+			"delay": 0.45
+		},
+		"Claw Dash": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "c_cut_2",
+			"hit2": "h_diagonalcut_1"
+		},
+		"Claw Uppercut": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_w_concentrate2_1",
+			"hit": "c_cut_2",
+			"hit2": "h_diagonalcut_1"
+		},
+		"Claw of Ancient Dragon": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "c_cut_2",
+			"hit2": "h_diagonalcut_1"
+		},
+		"Claw of Darkness": {
+			"aura": "p_k_circle_2",
+			"charge": "p_k_Sconcentrate_1",
+			"hit": "h_k_explosion_1",
+			"delay": 0.45
+		},
+		"Claw of Fire": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "c_cut_2",
+			"hit2": "h_diagonalcut_1"
+		},
+		"Claw of Frost": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "c_cut_2",
+			"hit2": "h_diagonalcut_1"
+		},
+		"Claw of Poison": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "c_cut_2",
+			"hit2": "h_diagonalcut_1"
+		},
+		"Claw of ancient dragon": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "c_cut_2",
+			"hit2": "h_diagonalcut_1"
+		},
+		"Climax": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_w_concentrate2_2",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Clip Claws": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "c_cut_2",
+			"hit2": "h_diagonalcut_1",
+			"delay": 0.45
+		},
+		"Clobber": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Clown's Curse": {
+			"aura": "p_k_circle_2",
+			"charge": "p_k_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_k_explosion_1",
+			"delay": 0.45
+		},
+		"Commander's Strike": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45,
+			"icon": "c_debufficon_defense"
+		},
+		"Compressed Dark Ball": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"travel": "c_{e}_ball"
+		},
+		"Compressed Fire Ball": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"travel": "c_{e}_ball"
+		},
+		"Compressed Leaf Ball": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"travel": "c_{e}_ball"
+		},
+		"Compressed Water Ball": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"travel": "c_{e}_ball"
+		},
+		"Concentrated Venom": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Coral Blade": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "c_cut_2",
+			"hit2": "h_diagonalcut_1",
+			"delay": 0.45
+		},
+		"Coral DEF UP": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1"
+		},
+		"Coral Heal": {
+			"aura": "p_w_light_2",
+			"land": "c_heal2"
+		},
+		"Counter Formation": {
+			"aura": "p_b_circle_1",
+			"charge": "c_thorn_1"
+		},
+		"Cratch": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_n_Sconcentrate_2",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Crescent Kick": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "c_punch_3",
+			"hit2": "h_{e}_base_2"
+		},
+		"Critical Up": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_critical"
+		},
+		"Cursed Touch": {
+			"aura": "p_k_circle_2",
+			"charge": "p_k_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_k_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"DEF Down": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2",
+			"icon": "c_debufficon_defense"
+		},
+		"Dagger Charge": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_charge_1",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Dancing Dragon": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Dark Ball": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"travel": "c_{e}_ball"
+		},
+		"Dark Breath": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45,
+			"sweep": "c_{e}_breath"
+		},
+		"Dark Bubble Shot": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"hit": "c_pierce_2",
+			"travel": "c_pierceprojectile_1",
+			"hit2": "h_pierce_1",
+			"fly": 0.18
+		},
+		"Dark Flame": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "h_{e}_explosion_1",
+			"sweep": "c_{e}_breath"
+		},
+		"Dark Flash": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Dark Ghost Beam": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "h_{e}_base_4",
+			"sweep": "c_{e}_laser",
+			"delay": 0.4
+		},
+		"Dark Hammer Shot": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Dark Hummer Shot": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Dark Orb": {
+			"cast": "c_b_launch2",
+			"travel": "c_k_ball",
+			"hit": "h_k_explosion_1"
+		},
+		"Dark Power": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_attack"
+		},
+		"Dark Shield": {
+			"aura": "p_w_magiccircle_2",
+			"charge": "c_shield_1",
+			"land": "t_shield_1"
+		},
+		"Dark Storm": {
+			"aura": "c_b_fall",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_b_fall",
+			"hit2": "h_{e}_explosion_1",
+			"delay": 0.45
+		},
+		"Dark ball": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"travel": "c_{e}_ball"
+		},
+		"Dark orb": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"travel": "c_{e}_ball"
+		},
+		"Dark power": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_attack"
+		},
+		"Dash Attack": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_charge_1",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Dashing Comet": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_charge_1",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Dead or Alive": {
+			"aura": "p_w_magiccircle_2",
+			"charge": "c_shield_1",
+			"land": "t_shield_1"
+		},
+		"Defense Formation": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_attack"
+		},
+		"Defense of ant armor": {
+			"aura": "p_w_magiccircle_2",
+			"charge": "c_shield_1",
+			"land": "t_shield_1"
+		},
+		"Delicious Banana": {
+			"aura": "p_w_magiccircle_2",
+			"charge": "c_shield_1",
+			"land": "t_shield_1"
+		},
+		"Devil's Breath": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Dispel": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Divine Retribution": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "h_n_explosion_1",
+			"sweep": "c_n_snake_1",
+			"delay": 0.45
+		},
+		"Doggy Attack": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Downward Chop": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "c_cut_2",
+			"hit2": "h_diagonalcut_1"
+		},
+		"Dragon Blessing": {
+			"aura": "p_w_circle_2",
+			"land": "c_heal_1"
+		},
+		"Dragon Roar": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_attack"
+		},
+		"Dragon Scale Barrier": {
+			"aura": "p_w_magiccircle_2",
+			"charge": "c_shield_1",
+			"land": "t_shield_1"
+		},
+		"Dragon's Charm": {
+			"aura": "p_w_light_2",
+			"land": "c_heal2"
+		},
+		"Dragon's charm": {
+			"aura": "p_w_circle_2",
+			"land": "c_heal_1"
+		},
+		"Drain Blood": {
+			"aura": "p_b_circle_1"
+		},
+		"Drain Boold": {
+			"aura": "p_b_circle_1"
+		},
+		"Electric Shock": {
+			"aura": "c_b_fall",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_b_fall",
+			"hit2": "h_{e}_explosion_1",
+			"delay": 0.45
+		},
+		"Emergency Heal": {
+			"aura": "p_w_light_2",
+			"land": "c_heal2"
+		},
+		"Emperor's Curse": {
+			"aura": "p_w_magiccircle_2",
+			"charge": "c_shield_1",
+			"land": "t_shield_1"
+		},
+		"Energu Multi-Shot": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "c_pierce_2",
+			"hit2": "h_pierce_1",
+			"delay": 0.45,
+			"travel": "c_pierceprojectile_1",
+			"fly": 0.18
+		},
+		"Energy Extraction": {
+			"aura": "p_b_circle_1"
+		},
+		"Energy Multi-Shot": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "c_pierce_2",
+			"hit2": "h_pierce_1",
+			"delay": 0.45,
+			"travel": "c_pierceprojectile_1",
+			"fly": 0.18
+		},
+		"Energy Shot": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"hit": "c_pierce_2",
+			"travel": "c_pierceprojectile_1",
+			"hit2": "h_pierce_1",
+			"fly": 0.18
+		},
+		"Energy shot": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "c_pierce_2",
+			"hit2": "h_pierce_1",
+			"delay": 0.45,
+			"travel": "c_pierceprojectile_1",
+			"fly": 0.18
+		},
+		"Enjoy Meat": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_n_Sconcentrate_2",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45,
+			"land": "c_heal2"
+		},
+		"Enjoy meat": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_w_concentrate2_2",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45,
+			"land": "c_heal2"
+		},
+		"Explosion Shot": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Eye Poke": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Falling Darkness": {
+			"aura": "p_k_circle_2",
+			"hit": "c_magma_2",
+			"tint": "#b04cff",
+			"hit2": "h_k_explosion_1",
+			"delay": 0.45
+		},
+		"Fang Tear": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_w_concentrate2_1",
+			"hit": "c_bite_1",
+			"hit2": "h_{e}_base_1"
+		},
+		"Feather Arrow": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Fiery Chicken Fist": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "c_punch_3",
+			"hit2": "h_{e}_base_2"
+		},
+		"Fire Bomb": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Fire Bomb Shower": {
+			"aura": "p_b_circle_1",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_b_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Fire Breath": {
+			"aura": "c_b_whirlwave_1",
+			"charge": "p_f_concentrate1_2",
+			"sweep": "c_f_laser",
+			"hit": "h_f_explosion_1",
+			"delay": 0.45
+		},
+		"Fire Bubble Shot": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"hit": "c_pierce_2",
+			"travel": "c_pierceprojectile_1",
+			"hit2": "h_pierce_1",
+			"fly": 0.18
+		},
+		"Fire Dance": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Fire Fist": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "c_punch_3",
+			"hit2": "h_{e}_base_2"
+		},
+		"Fire Fox": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Fire Ghost Beam": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "h_{e}_base_4",
+			"sweep": "c_{e}_laser",
+			"delay": 0.4
+		},
+		"Fire Hammer Shot": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Fire Pillar": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "c_magma_2",
+			"hit2": "h_f_explosion_3",
+			"delay": 0.4
+		},
+		"Fire Starter": {
+			"aura": "p_b_circle_1",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_b_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Fire Storm": {
+			"aura": "c_b_fall",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_b_fall",
+			"hit2": "h_{e}_explosion_1",
+			"delay": 0.45
+		},
+		"Fire of Ancient Dragon": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Fire of ancient dragon": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Fire power": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_attack"
+		},
+		"Fireball": {
+			"cast": "c_f_launch",
+			"travel": "c_f_ball",
+			"hit": "h_f_explosion_3"
+		},
+		"Fireball Throw": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"travel": "c_{e}_ball"
+		},
+		"Fireball Toss": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"travel": "c_{e}_ball"
+		},
+		"Fireball throw": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"travel": "c_{e}_ball"
+		},
+		"Fireworks Festival": {
+			"aura": "p_w_circle_2",
+			"land": "c_heal_1"
+		},
+		"First Aid": {
+			"aura": "p_w_light_2",
+			"land": "c_heal2"
+		},
+		"Flame Burst": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45,
+			"sweep": "c_{e}_breath"
+		},
+		"Flame Multi-Shot": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45,
+			"sweep": "c_{e}_breath"
+		},
+		"Flame Multi–shot": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45,
+			"sweep": "c_{e}_breath"
+		},
+		"Flame Needle": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45,
+			"sweep": "c_{e}_breath"
+		},
+		"Flame Shot": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "h_{e}_explosion_1",
+			"sweep": "c_{e}_breath"
+		},
+		"Flame Shower": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45,
+			"sweep": "c_{e}_breath"
+		},
+		"Flame Shower *": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45,
+			"sweep": "c_{e}_breath"
+		},
+		"Flame Spitfire": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "h_{e}_explosion_1",
+			"sweep": "c_{e}_breath"
+		},
+		"Flame Storm": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45,
+			"sweep": "c_{e}_breath"
+		},
+		"Flame Thorn": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45,
+			"sweep": "c_{e}_breath"
+		},
+		"Flame Throw": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "h_{e}_explosion_1",
+			"sweep": "c_{e}_breath"
+		},
+		"Flame Toss": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "h_{e}_explosion_1",
+			"sweep": "c_{e}_breath"
+		},
+		"Flame Whirlwind": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45,
+			"sweep": "c_{e}_breath"
+		},
+		"Flame cutter": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45,
+			"sweep": "c_{e}_breath"
+		},
+		"Flame tension": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_attack"
+		},
+		"Flame's Fury": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45,
+			"sweep": "c_{e}_breath"
+		},
+		"Flameblast": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Flamethrower": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "h_{e}_explosion_1",
+			"sweep": "c_{e}_breath"
+		},
+		"Flaming Burst": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Flaming Burst *": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_n_Sconcentrate_2",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Flaming Claws": {
+			"aura": "p_f_circle_2",
+			"cast": "c_f_launch",
+			"travel": "c_f_ball",
+			"hit": "h_f_explosion_1",
+			"hit2": "h_f_explosion_3"
+		},
+		"Flaming Nuggets": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Flare Shot": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"hit": "c_pierce_2",
+			"travel": "c_pierceprojectile_1",
+			"hit2": "h_pierce_1",
+			"fly": 0.18
+		},
+		"Flea Attack": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Flower Hammer": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "c_punch_3",
+			"hit2": "h_{e}_base_2"
+		},
+		"Flower Shower": {
+			"aura": "p_b_circle_1",
+			"charge": "p_n_Sconcentrate_2",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_b_explosion_1"
+		},
+		"Flower Thorn Gust": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45,
+			"sweep": "c_{e}_quake_2"
+		},
+		"Force Flutter": {
+			"aura": "p_w_light_2",
+			"land": "c_heal2"
+		},
+		"Forgotten Magic": {
+			"aura": "p_b_circle_1"
+		},
+		"Foxfire Orb": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45,
+			"travel": "c_{e}_ball"
+		},
+		"Fragment Shot": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"hit": "c_pierce_2",
+			"travel": "c_pierceprojectile_1",
+			"hit2": "h_pierce_1",
+			"fly": 0.18
+		},
+		"Frog Bubble": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45,
+			"travel": "c_{e}_ball"
+		},
+		"Frost Orb": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Frost Prison": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Frosty Breeze": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_w_launch",
+			"hit": "h_w_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45,
+			"travel": "c_iceball_1"
+		},
+		"Frozen Ice": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_w_concentrate2_1",
+			"cast": "c_w_launch",
+			"hit": "h_w_explosion_1",
+			"travel": "c_iceball_1"
+		},
+		"Frozen Punisher": {
+			"charge": "p_w_Sconcentrate_1",
+			"sweep": "c_w_laser",
+			"hit": "h_w_explosion_1",
+			"hit2": "h_w_base_4",
+			"delay": 0.5
+		},
+		"Frozen Storm": {
+			"aura": "c_b_fall",
+			"charge": "p_w_concentrate2_2",
+			"cast": "c_{e}_launch",
+			"hit": "h_b_fall",
+			"hit2": "h_{e}_explosion_1",
+			"delay": 0.45
+		},
+		"Fury Attack": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Genie Storm": {
+			"aura": "c_b_fall",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_b_fall",
+			"hit2": "h_{e}_explosion_1",
+			"delay": 0.45
+		},
+		"Giant Fang": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "c_bite_1",
+			"hit2": "h_{e}_base_1",
+			"delay": 0.45
+		},
+		"Giant Fist": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Gibberish": {
+			"aura": "p_w_magiccircle_2",
+			"charge": "c_shield_1",
+			"land": "t_shield_1"
+		},
+		"Gift Strike": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Gnaw": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Granpa's Cold": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_w_concentrate2_2",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Grass Bubble Shot": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"hit": "c_pierce_2",
+			"travel": "c_pierceprojectile_1",
+			"hit2": "h_pierce_1",
+			"fly": 0.18
+		},
+		"Grass Spitfire": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Great Thorn": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "h_{e}_explosion_1",
+			"sweep": "c_{e}_quake_2",
+			"delay": 0.45
+		},
+		"Green Bloom": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Green Ghost Beam": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "h_{e}_base_4",
+			"sweep": "c_{e}_laser",
+			"delay": 0.4
+		},
+		"Green Hammer Shot": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Green Healing": {
+			"aura": "p_w_circle_2",
+			"land": "c_heal_1"
+		},
+		"Green Laser": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_n_Sconcentrate_2",
+			"hit": "h_{e}_base_4",
+			"sweep": "c_{e}_laser",
+			"delay": 0.4
+		},
+		"Green Marble Bullet": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_n_Sconcentrate_2",
+			"cast": "c_{e}_launch",
+			"hit": "c_pierce_2",
+			"hit2": "h_pierce_1",
+			"delay": 0.45,
+			"travel": "c_pierceprojectile_1",
+			"fly": 0.18
+		},
+		"Green Spear": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"hit": "c_pierce_2",
+			"travel": "c_pierceprojectile_1",
+			"hit2": "h_pierce_1",
+			"fly": 0.18
+		},
+		"Growing Mud": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "h_{e}_base_4",
+			"sweep": "c_b_whirlwave_1",
+			"delay": 0.4
+		},
+		"Gushing Rage": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45,
+			"sweep": "c_{e}_quake_2"
+		},
+		"Gust of Rage": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_attack"
+		},
+		"Hades Gate": {
+			"aura": "p_w_magiccircle_2",
+			"charge": "c_shield_1",
+			"land": "t_shield_1"
+		},
+		"Hammer Punch": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "c_punch_3",
+			"hit2": "h_{e}_base_2"
+		},
+		"Harangue": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Hardened Seed": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Harpoon Throw": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"hit": "c_pierce_2",
+			"travel": "c_pierceprojectile_1",
+			"hit2": "h_pierce_1",
+			"fly": 0.18
+		},
+		"Have After!": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_attack"
+		},
+		"Head Uppercut": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Headbutt": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Header": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Heak Urgent Heal": {
+			"aura": "p_w_light_2",
+			"land": "c_heal2"
+		},
+		"Heal": {
+			"aura": "p_w_circle_2",
+			"land": "c_heal_1"
+		},
+		"Healing": {
+			"aura": "p_w_circle_2",
+			"land": "c_heal_1"
+		},
+		"Healing Dance": {
+			"aura": "p_w_circle_2",
+			"land": "c_heal_1"
+		},
+		"Healing Flight": {
+			"aura": "p_w_circle_2",
+			"land": "c_heal_1"
+		},
+		"Healing Force": {
+			"aura": "p_w_light_2",
+			"land": "c_heal2"
+		},
+		"Healing Prayer": {
+			"aura": "p_w_circle_2",
+			"land": "c_heal_1"
+		},
+		"Heavy Slash": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "c_cut_2",
+			"hit2": "h_diagonalcut_1"
+		},
+		"Hellfire": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Help From Beyond": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_critical"
+		},
+		"Help from Beyond": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_critical"
+		},
+		"Hoarfrost": {
+			"aura": "p_w_circle_2",
+			"land": "c_heal_1"
+		},
+		"Holy Judgement": {
+			"aura": "p_b_circle_1",
+			"charge": "p_n_Sconcentrate_2",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_b_explosion_1"
+		},
+		"Hook Thorn": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45,
+			"sweep": "c_{e}_quake_2"
+		},
+		"Horn Boost": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_attack"
+		},
+		"Horn Uppercut": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "c_cut_2",
+			"hit2": "h_diagonalcut_1"
+		},
+		"Horn boost": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_attack"
+		},
+		"Horn of heaven": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_n_Sconcentrate_2",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Hot Mud": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Hot Water Shot": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "c_pierce_2",
+			"hit2": "h_pierce_1",
+			"delay": 0.45,
+			"travel": "c_pierceprojectile_1",
+			"fly": 0.18
+		},
+		"Howl of Ancient Dragon": {
+			"aura": "p_w_circle_2",
+			"land": "c_heal_1"
+		},
+		"Howl of Ancient dragon": {
+			"aura": "p_w_light_2",
+			"land": "c_heal2"
+		},
+		"Howl of ancient dragon": {
+			"aura": "p_w_circle_2",
+			"land": "c_heal_1"
+		},
+		"Howl of the ancient dragon": {
+			"aura": "p_w_circle_2",
+			"land": "c_heal_1"
+		},
+		"Howling Focus": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_attack"
+		},
+		"Howling Wind": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "h_{e}_base_4",
+			"sweep": "c_b_whirlwave_1",
+			"delay": 0.4
+		},
+		"Hunter's Fury": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Hunter's Mantle": {
+			"aura": "p_w_magiccircle_2",
+			"charge": "c_shield_1",
+			"land": "t_shield_1"
+		},
+		"Hunter's Trap": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Hunter's Trick": {
+			"cast": "c_f_launch",
+			"land": "c_debuff_1",
+			"icon": "c_debufficon_defense"
+		},
+		"Ice Ball": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_w_launch",
+			"hit": "h_w_explosion_1",
+			"travel": "c_iceball_1"
+		},
+		"Ice Blade": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_w_concentrate2_2",
+			"hit": "c_cut_2",
+			"hit2": "h_diagonalcut_1",
+			"delay": 0.45
+		},
+		"Ice Bonk": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_w_launch",
+			"hit": "h_w_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45,
+			"travel": "c_iceball_1"
+		},
+		"Ice Crush": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_w_concentrate2_2",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45,
+			"sweep": "c_{e}_quake_2"
+		},
+		"Ice Cutter Kick": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Ice Fist": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "c_punch_3",
+			"hit2": "h_{e}_base_2",
+			"delay": 0.45
+		},
+		"Ice Horn": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_w_launch",
+			"hit": "h_w_explosion_1",
+			"travel": "c_iceball_1"
+		},
+		"Ice Kick": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "c_punch_3",
+			"hit2": "h_{e}_base_2",
+			"delay": 0.45
+		},
+		"Ice Needle": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "c_pierce_2",
+			"hit2": "h_pierce_1",
+			"delay": 0.45,
+			"travel": "c_pierceprojectile_1",
+			"fly": 0.18
+		},
+		"Ice Pillar": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_w_concentrate2_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "c_magma_2",
+			"hit2": "h_f_explosion_3",
+			"delay": 0.4
+		},
+		"Ice Shield": {
+			"aura": "p_w_magiccircle_2",
+			"charge": "c_shield_1",
+			"land": "t_shield_1"
+		},
+		"Ice Spear": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Ice Storm": {
+			"aura": "c_b_fall",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_b_fall",
+			"hit2": "h_{e}_explosion_1",
+			"delay": 0.45
+		},
+		"Ice Toss": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_w_launch",
+			"hit": "h_w_explosion_1",
+			"travel": "c_iceball_1"
+		},
+		"Ice Volcano": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "c_magma_2",
+			"hit2": "h_f_explosion_3",
+			"delay": 0.4
+		},
+		"Ice ball": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_w_launch",
+			"hit": "h_w_explosion_1",
+			"travel": "c_iceball_1"
+		},
+		"Inferno": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45,
+			"sweep": "c_{e}_breath"
+		},
+		"Ink Shot": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"hit": "c_pierce_2",
+			"travel": "c_pierceprojectile_1",
+			"hit2": "h_pierce_1",
+			"fly": 0.18
+		},
+		"Ink Squirt": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Iron Claw Strike": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "c_cut_2",
+			"hit2": "h_diagonalcut_1"
+		},
+		"Iron Defense": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_attack"
+		},
+		"Iron Horn": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Iron Laser": {
+			"aura": "p_w_circle_1",
+			"sweep": "c_w_laser",
+			"hit": "h_w_base_4",
+			"delay": 0.4
+		},
+		"Iron Shield": {
+			"aura": "p_w_magiccircle_2",
+			"land": "t_shield_1"
+		},
+		"Jackal's Fist": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "c_punch_3",
+			"hit2": "h_{e}_base_2"
+		},
+		"Jackal's Prayer": {
+			"aura": "p_w_circle_2",
+			"land": "c_heal_1"
+		},
+		"Jackals Fist": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "c_punch_3",
+			"hit2": "h_{e}_base_2"
+		},
+		"Jackals Prayer": {
+			"aura": "p_w_light_2",
+			"land": "c_heal2"
+		},
+		"Judgment": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Jumping Uppercut": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "c_cut_2",
+			"hit2": "h_diagonalcut_1",
+			"delay": 0.45
+		},
+		"K9 Blessing": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_critical"
+		},
+		"Knock Knock": {
+			"aura": "p_b_circle_1"
+		},
+		"Lamp Might": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1"
+		},
+		"Lamp Power": {
+			"aura": "p_b_circle_1"
+		},
+		"Laser Storm": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_w_concentrate2_2",
+			"hit": "h_{e}_base_4",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.4,
+			"sweep": "c_{e}_laser"
+		},
+		"Leader ATK Up": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_attack"
+		},
+		"Leader Critical UP": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_critical"
+		},
+		"Leader Critical Up": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_critical"
+		},
+		"Leader Heal": {
+			"aura": "p_w_light_2",
+			"land": "c_heal2"
+		},
+		"Leader Offence Up": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_attack"
+		},
+		"Leader Offense Up": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_attack"
+		},
+		"Leader Speed Up": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_speed"
+		},
+		"Leaf Ball": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"travel": "c_{e}_ball"
+		},
+		"Leaf Blow": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Leaf Bundle Toss": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Leaf Shower": {
+			"aura": "p_b_circle_1",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_b_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Leaf Throw": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Leaf blade": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_n_Sconcentrate_2",
+			"hit": "c_cut_2",
+			"hit2": "h_diagonalcut_1",
+			"delay": 0.45
+		},
+		"Leaf cutter": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "c_cut_2",
+			"hit2": "h_diagonalcut_1",
+			"delay": 0.45
+		},
+		"Let's Blood!": {
+			"aura": "p_b_circle_1"
+		},
+		"Level up Punch": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "c_punch_3",
+			"hit2": "h_{e}_base_2"
+		},
+		"Lick Wounds": {
+			"aura": "p_w_light_2",
+			"land": "c_heal2"
+		},
+		"Lightning Strike": {
+			"aura": "c_b_fall",
+			"hit": "h_b_fall",
+			"hit2": "h_w_explosion_1",
+			"delay": 0.45
+		},
+		"Love for All": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Mach Cutter": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "c_cut_2",
+			"hit2": "h_diagonalcut_1",
+			"delay": 0.45
+		},
+		"Magma Punch": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Magnum Gravity Bullet": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "c_pierce_2",
+			"hit2": "h_pierce_1",
+			"delay": 0.45,
+			"travel": "c_pierceprojectile_1",
+			"fly": 0.18
+		},
+		"Marshmallow Bomb": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"travel": "c_{e}_ball"
+		},
+		"Marshmallow Fluff": {
+			"aura": "p_w_light_2",
+			"land": "c_heal2"
+		},
+		"Marshmallow Roast": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Massive Charisma": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Mecha Black Hole": {
+			"aura": "p_k_circle_2",
+			"charge": "p_k_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_k_explosion_1",
+			"delay": 0.45
+		},
+		"Mecha Shield": {
+			"aura": "p_w_magiccircle_2",
+			"charge": "c_shield_1",
+			"land": "t_shield_1"
+		},
+		"Mega Thornbloom": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45,
+			"sweep": "c_{e}_quake_2"
+		},
+		"Megaphone": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Meteor Kick": {
+			"aura": "p_k_circle_2",
+			"hit": "c_magma_2",
+			"tint": "#b04cff",
+			"hit2": "h_k_explosion_1",
+			"delay": 0.45
+		},
+		"Mighty Attack": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Million Ton Punch": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "c_punch_3",
+			"hit2": "h_{e}_base_2",
+			"delay": 0.45
+		},
+		"Mini Bean B": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45,
+			"icon": "c_debufficon_defense"
+		},
+		"Missile Punch": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "c_punch_3",
+			"hit2": "h_{e}_base_2",
+			"delay": 0.45,
+			"icon": "c_debufficon_defense"
+		},
+		"Monkey Banana": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Monkey Punch": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "c_punch_3",
+			"hit2": "h_{e}_base_2"
+		},
+		"Monkey Slush": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Moon Beam": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "h_{e}_base_4",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.4,
+			"sweep": "c_{e}_laser"
+		},
+		"Moon Shield": {
+			"aura": "p_w_magiccircle_2",
+			"charge": "c_shield_1",
+			"land": "t_shield_1"
+		},
+		"Multi High-Five": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Multi Pot": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Multi Protecting": {
+			"aura": "p_w_magiccircle_2",
+			"charge": "c_shield_1",
+			"land": "t_shield_1"
+		},
+		"Multi-Bite": {
+			"aura": "p_b_circle_1"
+		},
+		"Music Start": {
+			"aura": "p_w_light_2",
+			"land": "c_heal2"
+		},
+		"Mystery Wall": {
+			"aura": "p_w_magiccircle_2",
+			"charge": "c_shield_1",
+			"land": "t_shield_1"
+		},
+		"Naked Ape": {
+			"aura": "p_b_circle_1"
+		},
+		"Nature Attack": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Nature Aura": {
+			"aura": "p_w_magiccircle_2",
+			"charge": "c_shield_1",
+			"land": "t_shield_1"
+		},
+		"Nature Heal": {
+			"aura": "p_w_light_2",
+			"land": "c_heal2"
+		},
+		"Nature Reflect": {
+			"aura": "p_b_circle_1",
+			"charge": "c_thorn_1"
+		},
+		"Nature aroma": {
+			"aura": "p_w_circle_2",
+			"land": "c_heal_1"
+		},
+		"Nature aura": {
+			"aura": "p_w_magiccircle_2",
+			"charge": "c_shield_1",
+			"land": "t_shield_1"
+		},
+		"Nature fury": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_n_Sconcentrate_2",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Nature's Might": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_n_Sconcentrate_2",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Nature's Rage": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_n_Sconcentrate_2",
+			"hit": "h_{e}_explosion_1",
+			"sweep": "c_{e}_quake_2",
+			"delay": 0.45
+		},
+		"Needle Drill Shot": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "c_pierce_2",
+			"hit2": "h_pierce_1",
+			"delay": 0.45,
+			"travel": "c_pierceprojectile_1",
+			"fly": 0.18
+		},
+		"Nightmare Mace": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Nightmare Spear": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "c_pierce_2",
+			"hit2": "h_pierce_1",
+			"delay": 0.45,
+			"travel": "c_pierceprojectile_1",
+			"fly": 0.18
+		},
+		"Nightmare Sword": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "c_cut_2",
+			"hit2": "h_diagonalcut_1"
+		},
+		"No Violence": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Nom Nom Mallow": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_attack"
+		},
+		"Nonsense": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Nose Beam!": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Nose beam!": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Nutrient Heal": {
+			"aura": "p_b_circle_1"
+		},
+		"Nutrient Steal": {
+			"aura": "p_b_circle_1"
+		},
+		"Offense Formation": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_attack"
+		},
+		"One Two Punch": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "c_punch_3",
+			"hit2": "h_{e}_base_2"
+		},
+		"One-Two Punch": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "c_punch_3",
+			"hit2": "h_{e}_base_2"
+		},
+		"Optic Flare": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_w_concentrate2_2",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Or Shield": {
+			"aura": "p_w_magiccircle_2",
+			"charge": "c_shield_1",
+			"land": "t_shield_1"
+		},
+		"Or Trick": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Panda Stun": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Panda Stun Punch": {
+			"hit": "c_cut_2",
+			"hit2": "h_n_base_2"
+		},
+		"Papa's Cold": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Paralysis Shot": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"hit": "c_pierce_2",
+			"travel": "c_pierceprojectile_1",
+			"hit2": "h_pierce_1",
+			"fly": 0.18
+		},
+		"Peace Maker": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Pebble Shower": {
+			"aura": "p_b_circle_1",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_b_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Pebble Throw": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Pedal Blade": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "c_cut_2",
+			"hit2": "h_diagonalcut_1"
+		},
+		"Pedal Cyclone": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "h_{e}_base_4",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.4,
+			"sweep": "c_b_whirlwave_1"
+		},
+		"Pepper Shot": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"hit": "c_pierce_2",
+			"travel": "c_pierceprojectile_1",
+			"hit2": "h_pierce_1",
+			"fly": 0.18
+		},
+		"Petal shield": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_attack"
+		},
+		"Pierce Armor": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2",
+			"icon": "c_debufficon_defense"
+		},
+		"Piercing Blade": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "c_cut_2",
+			"hit2": "h_diagonalcut_1",
+			"delay": 0.45
+		},
+		"Piercing fire": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1",
+			"icon": "c_debufficon_defense"
+		},
+		"Piercing poison": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2",
+			"icon": "c_debufficon_defense"
+		},
+		"Pink Recovery": {
+			"aura": "p_w_circle_1",
+			"land": "t_extraglow_b_1"
+		},
+		"Poison Ball": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"travel": "c_{e}_ball"
+		},
+		"Poison Breath": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45,
+			"sweep": "c_{e}_breath"
+		},
+		"Poison Burst": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_n_Sconcentrate_2",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Poison Needle Shot": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Poison Orb": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Poison Spray": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Poison Sting": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Poison Storm": {
+			"aura": "c_b_fall",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_b_fall",
+			"hit2": "h_{e}_explosion_1",
+			"delay": 0.45
+		},
+		"Power Kick": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "c_punch_3",
+			"hit2": "h_{e}_base_2",
+			"delay": 0.45
+		},
+		"Power Pulse": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_w_concentrate2_2",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Power Shield": {
+			"aura": "p_w_magiccircle_2",
+			"charge": "c_shield_1",
+			"land": "t_shield_1"
+		},
+		"Powerful Flea Attack": {
+			"aura": "p_b_circle_1"
+		},
+		"Powerful Total Heal": {
+			"aura": "p_w_circle_2",
+			"land": "c_heal_1"
+		},
+		"Powerful Urgent Heal": {
+			"aura": "p_w_light_2",
+			"land": "c_heal2"
+		},
+		"Pressure Punch": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "c_punch_3",
+			"hit2": "h_{e}_base_2",
+			"delay": 0.45
+		},
+		"Provoke Effect": {
+			"aura": "p_b_circle_1"
+		},
+		"Provoke effect": {
+			"aura": "p_b_circle_1"
+		},
+		"Punch Arrow": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "c_pierce_2",
+			"hit2": "h_pierce_1",
+			"delay": 0.45,
+			"travel": "c_pierceprojectile_1",
+			"fly": 0.18
+		},
+		"Punch Blast": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "c_punch_3",
+			"hit2": "h_{e}_base_2",
+			"delay": 0.45
+		},
+		"Puppy Attack": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Purify": {
+			"aura": "p_w_circle_1",
+			"land": "t_extraglow_b_1"
+		},
+		"Purple Laser": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "h_{e}_base_4",
+			"sweep": "c_{e}_laser",
+			"delay": 0.4
+		},
+		"Queen Vitality": {
+			"aura": "p_b_circle_1"
+		},
+		"Quick Attack": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Quick Heal": {
+			"aura": "p_w_light_2",
+			"land": "c_heal2"
+		},
+		"Radiant Gale": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_w_concentrate2_2",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45,
+			"icon": "c_debufficon_defense"
+		},
+		"Rage of Cerberus": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "h_{e}_explosion_1",
+			"sweep": "c_{e}_quake_2",
+			"delay": 0.45
+		},
+		"Ram": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Random ATK Up": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_attack"
+		},
+		"Random Critical Down": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_critical"
+		},
+		"Random Critical Up": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_critical"
+		},
+		"Razor's Edge": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "c_cut_2",
+			"hit2": "h_diagonalcut_1"
+		},
+		"Red Bloom": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Red Flame Dance": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "h_{e}_explosion_1",
+			"sweep": "c_{e}_breath"
+		},
+		"Red Laser": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "h_{e}_base_4",
+			"sweep": "c_{e}_laser",
+			"delay": 0.4
+		},
+		"Repair Protocol": {
+			"aura": "p_w_light_2",
+			"land": "c_heal2"
+		},
+		"Roar of the Ancients": {
+			"aura": "p_b_circle_1"
+		},
+		"Rock Fist": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "c_punch_3",
+			"hit2": "h_{e}_base_2"
+		},
+		"Rock Shield Bash": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_n_Sconcentrate_2",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Rock Smash": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_n_Sconcentrate_2",
+			"hit": "c_punch_3",
+			"hit2": "h_{e}_base_2",
+			"delay": 0.45
+		},
+		"Rock Toss": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Rocket Punch": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "c_punch_3",
+			"hit2": "h_{e}_base_2",
+			"delay": 0.45,
+			"icon": "c_debufficon_defense"
+		},
+		"Rolling Attack": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Rush Attack": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_speed"
+		},
+		"Ruthless Power": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_n_Sconcentrate_2",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Saw Stab": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Sawtooth Bite": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "c_bite_1",
+			"hit2": "h_{e}_base_1"
+		},
+		"Scratch": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Screwblow": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Seduction": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Shadow Crush": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "h_{e}_explosion_1",
+			"sweep": "c_{e}_quake_2",
+			"delay": 0.45
+		},
+		"Shadow Explosion": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Shadow Throw": {
+			"aura": "p_k_circle_2",
+			"charge": "p_k_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_k_explosion_1",
+			"delay": 0.45
+		},
+		"Shield": {
+			"aura": "p_w_magiccircle_2",
+			"charge": "c_shield_1",
+			"land": "t_shield_1"
+		},
+		"Shield of God": {
+			"aura": "p_w_magiccircle_2",
+			"charge": "c_shield_1",
+			"land": "t_shield_1"
+		},
+		"Shields for All": {
+			"aura": "p_w_magiccircle_2",
+			"charge": "c_shield_1",
+			"land": "t_shield_1"
+		},
+		"Show Time": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Shroom Heal": {
+			"aura": "p_w_light_2",
+			"land": "c_heal2"
+		},
+		"Silence": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Skele-Strike": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Slippery Peel": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Slug Uppercut": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_n_Sconcentrate_2",
+			"hit": "c_cut_2",
+			"hit2": "h_diagonalcut_1",
+			"delay": 0.45
+		},
+		"Smile of Seduction": {
+			"aura": "p_w_circle_2",
+			"land": "c_heal_1"
+		},
+		"Smile of seduction": {
+			"aura": "p_w_circle_2",
+			"land": "c_heal_1"
+		},
+		"Snake Curse": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "h_n_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45,
+			"sweep": "c_n_snake_1"
+		},
+		"Snake Spear": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "h_n_explosion_1",
+			"sweep": "c_n_snake_1",
+			"delay": 0.45
+		},
+		"Snake Surge": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_attack"
+		},
+		"Snake Vemon": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_n_Sconcentrate_2",
+			"hit": "h_n_explosion_1",
+			"sweep": "c_n_snake_1",
+			"delay": 0.45
+		},
+		"Snake Venom": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_n_Sconcentrate_2",
+			"hit": "h_n_explosion_1",
+			"sweep": "c_n_snake_1",
+			"delay": 0.45
+		},
+		"Snowburst": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_attack"
+		},
+		"Sonic Attack": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Sound of nature": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Sow Seeds": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Spear Charge": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_w_concentrate2_2",
+			"cast": "c_{e}_launch",
+			"hit": "c_pierce_2",
+			"hit2": "h_pierce_1",
+			"delay": 0.45,
+			"travel": "c_pierceprojectile_1",
+			"fly": 0.18
+		},
+		"Spear Spin": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "c_pierce_2",
+			"hit2": "h_pierce_1",
+			"delay": 0.45,
+			"travel": "c_pierceprojectile_1",
+			"fly": 0.18
+		},
+		"Speed Down": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2",
+			"icon": "c_debufficon_speed"
+		},
+		"Speed Sting": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "c_pierce_2",
+			"hit2": "h_pierce_1",
+			"delay": 0.45,
+			"travel": "c_pierceprojectile_1",
+			"fly": 0.18
+		},
+		"Speedy Battle": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_attack"
+		},
+		"Spider Web Shot": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "c_pierce_2",
+			"hit2": "h_pierce_1",
+			"delay": 0.45,
+			"travel": "c_pierceprojectile_1",
+			"fly": 0.18
+		},
+		"Spiky Water Ball": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45,
+			"travel": "c_{e}_ball"
+		},
+		"Spin Dance": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Spine Shower": {
+			"aura": "p_b_circle_1",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_b_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Spirit Grudge": {
+			"aura": "p_k_circle_2",
+			"charge": "p_k_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_k_explosion_1",
+			"delay": 0.45
+		},
+		"Spirit Heal": {
+			"aura": "p_w_light_2",
+			"land": "c_heal2"
+		},
+		"Spore Shower": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Spread the Love": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Spreading Vine": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_n_Sconcentrate_2",
+			"hit": "h_n_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45,
+			"sweep": "c_n_snake_1"
+		},
+		"Star Shower": {
+			"aura": "p_b_circle_1",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_b_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Star Spear": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"hit": "c_pierce_2",
+			"travel": "c_pierceprojectile_1",
+			"hit2": "h_pierce_1",
+			"fly": 0.18
+		},
+		"Star Toss": {
+			"aura": "p_b_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_b_explosion_1"
+		},
+		"Statue Guard": {
+			"aura": "p_w_magiccircle_2",
+			"land": "k_zakumbarrier_1"
+		},
+		"Steal Vitality": {
+			"aura": "p_b_circle_1"
+		},
+		"Stone Bear Scratch": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Stone Shot": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"hit": "c_pierce_2",
+			"travel": "c_pierceprojectile_1",
+			"hit2": "h_pierce_1",
+			"fly": 0.18
+		},
+		"Stone Shower": {
+			"aura": "p_b_circle_1",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_b_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Stone Shrapnel": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Storm Laser": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_w_concentrate2_2",
+			"hit": "h_{e}_base_4",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.4,
+			"sweep": "c_{e}_laser"
+		},
+		"Strong Peel": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_attack"
+		},
+		"Strong Punch": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "c_punch_3",
+			"hit2": "h_{e}_base_2"
+		},
+		"Strong Ram": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Stump Attack": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Stump Heal": {
+			"aura": "p_w_light_2",
+			"land": "c_heal2"
+		},
+		"Stun Kick": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "c_punch_3",
+			"hit2": "h_{e}_base_2"
+		},
+		"Stun Strike": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Summon Glacier": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Summon Ice Pillar": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "c_magma_2",
+			"hit2": "h_f_explosion_3",
+			"delay": 0.4
+		},
+		"Summon Thunder": {
+			"aura": "c_b_fall",
+			"charge": "p_n_Sconcentrate_2",
+			"cast": "c_{e}_launch",
+			"hit": "h_b_fall",
+			"hit2": "h_{e}_explosion_1",
+			"delay": 0.45
+		},
+		"Sump Bounce": {
+			"aura": "p_b_circle_1",
+			"charge": "c_thorn_1"
+		},
+		"Suout of Victory": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_attack"
+		},
+		"Super Buble Kick": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_w_concentrate2_2",
+			"hit": "c_punch_3",
+			"hit2": "h_{e}_base_2",
+			"delay": 0.45
+		},
+		"Super Heal": {
+			"aura": "p_w_light_2",
+			"land": "c_heal2"
+		},
+		"Super Mega Punch": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "c_punch_3",
+			"hit2": "h_{e}_base_2",
+			"delay": 0.45
+		},
+		"Super Total Shield": {
+			"aura": "p_w_magiccircle_2",
+			"charge": "c_shield_1",
+			"land": "t_shield_1"
+		},
+		"Surrender Now!": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Swamp Needle": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "c_pierce_2",
+			"hit2": "h_pierce_1",
+			"delay": 0.45,
+			"travel": "c_pierceprojectile_1",
+			"fly": 0.18
+		},
+		"Sweet Cake Party": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45,
+			"land": "c_heal2"
+		},
+		"Sweet Candy": {
+			"aura": "p_w_circle_2",
+			"land": "c_heal_1"
+		},
+		"Swift Slam": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_attack"
+		},
+		"Swing": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "h_{e}_base_4",
+			"sweep": "c_b_whirlwave_1",
+			"delay": 0.4
+		},
+		"Sword Charge": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_w_concentrate2_1",
+			"hit": "c_cut_2",
+			"hit2": "h_diagonalcut_1"
+		},
+		"Sword Shower": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "c_cut_2",
+			"hit2": "h_diagonalcut_1",
+			"delay": 0.45
+		},
+		"Tempest": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "h_{e}_base_4",
+			"sweep": "c_b_whirlwave_1",
+			"delay": 0.4
+		},
+		"Terminal Cutter": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Terror Strike": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"The Count's Command": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"The Lady's Order": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Thick Hide": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1"
+		},
+		"Third Eye": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_w_concentrate2_2",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Thorn Shower": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45,
+			"sweep": "c_{e}_quake_2"
+		},
+		"Thorn Thrust": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45,
+			"sweep": "c_{e}_quake_2"
+		},
+		"Thornlaunch": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45,
+			"sweep": "c_{e}_quake_2"
+		},
+		"Thorns": {
+			"aura": "p_b_circle_1",
+			"charge": "c_thorn_1"
+		},
+		"Thorny Bush": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45,
+			"sweep": "c_{e}_quake_2"
+		},
+		"Thrilling ATK Boost": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_attack"
+		},
+		"Thrilling Criticals": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_critical"
+		},
+		"Thrilling Fierce Attack": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_n_Sconcentrate_2",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Throns": {
+			"aura": "p_b_circle_1",
+			"charge": "c_thorn_1"
+		},
+		"Thunder Storm": {
+			"aura": "c_b_fall",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_b_fall",
+			"hit2": "h_{e}_explosion_1",
+			"delay": 0.45
+		},
+		"Thunderbolt Slash": {
+			"aura": "c_b_fall",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_b_fall",
+			"hit2": "h_{e}_explosion_1",
+			"delay": 0.45
+		},
+		"Total Critical Up": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_critical"
+		},
+		"Total Defence Down": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2",
+			"icon": "c_debufficon_defense"
+		},
+		"Total Defense Down": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2",
+			"icon": "c_debufficon_defense"
+		},
+		"Total Heal": {
+			"aura": "p_w_circle_2",
+			"land": "c_heal_1"
+		},
+		"Total Heal and Cure": {
+			"aura": "p_w_circle_2",
+			"land": "c_heal_1"
+		},
+		"Total Recovery Down": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Total Shield": {
+			"aura": "p_w_magiccircle_2",
+			"charge": "c_shield_1",
+			"land": "t_shield_1"
+		},
+		"Total Shoeld": {
+			"aura": "p_w_magiccircle_2",
+			"charge": "c_shield_1",
+			"land": "t_shield_1"
+		},
+		"Touch of Beauty": {
+			"aura": "p_w_light_2",
+			"land": "c_heal2"
+		},
+		"Touch of beauty": {
+			"aura": "p_w_light_2",
+			"land": "c_heal2"
+		},
+		"Treat": {
+			"aura": "p_w_light_2",
+			"land": "c_heal2"
+		},
+		"Triple Hit": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Turtle Shell": {
+			"aura": "p_w_magiccircle_2",
+			"charge": "c_shield_1",
+			"land": "t_shield_1"
+		},
+		"Turtle Thorn": {
+			"aura": "p_b_circle_1",
+			"charge": "c_thorn_1"
+		},
+		"Twin Attack": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Twin Thrust": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Twinkle Star": {
+			"aura": "p_b_circle_1",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_b_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45,
+			"icon": "c_debufficon_defense"
+		},
+		"Tyrant Claw": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "c_cut_2",
+			"hit2": "h_diagonalcut_1"
+		},
+		"Ultimate Black Cannon": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "h_{e}_base_4",
+			"sweep": "c_{e}_laser",
+			"delay": 0.4
+		},
+		"Ultrafast Punch": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "c_punch_3",
+			"hit2": "h_{e}_base_2",
+			"delay": 0.45
+		},
+		"Undine's fury": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_w_concentrate2_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Undine's song": {
+			"aura": "p_w_light_2",
+			"land": "c_heal2"
+		},
+		"Up-Kick": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "c_punch_3",
+			"hit2": "h_{e}_base_2"
+		},
+		"Up-kick": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "c_punch_3",
+			"hit2": "h_{e}_base_2"
+		},
+		"Urgen Heal": {
+			"aura": "p_w_light_2",
+			"land": "c_heal2"
+		},
+		"Urgent Heal": {
+			"aura": "p_w_light_2",
+			"land": "c_heal2"
+		},
+		"Urgent Weak Heal": {
+			"aura": "p_w_light_2",
+			"land": "c_heal2"
+		},
+		"Vampiric Touch": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "c_bite_1",
+			"hit2": "h_{e}_base_1"
+		},
+		"Victory Shout": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_attack"
+		},
+		"Vital Point Strike": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Vital point strike": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Vitality Raid": {
+			"aura": "p_b_circle_1"
+		},
+		"Void Cutter": {
+			"aura": "p_k_circle_2",
+			"charge": "p_k_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_k_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Void Punch": {
+			"aura": "p_k_circle_2",
+			"charge": "p_k_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_k_explosion_1",
+			"delay": 0.45
+		},
+		"Void cutter": {
+			"aura": "p_k_circle_2",
+			"charge": "p_k_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_k_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Volcanic Blast": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Volcanic Eruption": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45,
+			"sweep": "c_{e}_quake_2"
+		},
+		"Volt Charge": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_attack"
+		},
+		"Voo doo Curse": {
+			"aura": "p_k_circle_2",
+			"charge": "p_k_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_k_explosion_1",
+			"delay": 0.45
+		},
+		"Wand Strike": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Water Ball": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"travel": "c_{e}_ball"
+		},
+		"Water Ball Shot": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "c_pierce_2",
+			"hit2": "h_pierce_1",
+			"delay": 0.45,
+			"travel": "c_pierceprojectile_1",
+			"fly": 0.18
+		},
+		"Water Blast": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Water Blaster": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "h_{e}_base_4",
+			"sweep": "c_{e}_laser",
+			"delay": 0.4
+		},
+		"Water Breath": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_w_concentrate2_2",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45,
+			"sweep": "c_{e}_breath"
+		},
+		"Water Bubble Shot": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"hit": "c_pierce_2",
+			"travel": "c_pierceprojectile_1",
+			"hit2": "h_pierce_1",
+			"fly": 0.18
+		},
+		"Water Bullet": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"hit": "c_pierce_2",
+			"travel": "c_pierceprojectile_1",
+			"hit2": "h_pierce_1",
+			"fly": 0.18
+		},
+		"Water Cannon": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_w_concentrate2_2",
+			"hit": "h_{e}_base_4",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.4,
+			"sweep": "c_{e}_laser"
+		},
+		"Water Crush": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_w_concentrate2_1",
+			"hit": "h_{e}_explosion_1",
+			"sweep": "c_{e}_quake_2",
+			"delay": 0.45
+		},
+		"Water Cutter": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "c_cut_2",
+			"hit2": "h_diagonalcut_1",
+			"delay": 0.45
+		},
+		"Water Ghost Beam": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "h_{e}_base_4",
+			"sweep": "c_{e}_laser",
+			"delay": 0.4
+		},
+		"Water Hammer Shot": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Water Missile": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_w_concentrate2_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Water Orb Multi-Shot": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "c_pierce_2",
+			"hit2": "h_pierce_1",
+			"delay": 0.45,
+			"travel": "c_pierceprojectile_1",
+			"fly": 0.18
+		},
+		"Water Punch": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "c_punch_3",
+			"hit2": "h_{e}_base_2",
+			"delay": 0.45
+		},
+		"Water Spitfire": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Water Throw": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Water Toss": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Water Urgent Heal": {
+			"aura": "p_w_light_2",
+			"land": "c_heal2"
+		},
+		"Water spear": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "c_pierce_2",
+			"hit2": "h_pierce_1",
+			"delay": 0.45,
+			"travel": "c_pierceprojectile_1",
+			"fly": 0.18
+		},
+		"Wave Dance": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_w_concentrate2_2",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Wave Rider": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Way of the Panda": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"Weak Urgent Heal": {
+			"aura": "p_w_light_2",
+			"land": "c_heal2"
+		},
+		"Weak Urgent all Heal": {
+			"aura": "p_w_circle_2",
+			"land": "c_heal_1"
+		},
+		"Wet Mud": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"What the Heal": {
+			"aura": "p_w_circle_2",
+			"land": "c_heal_1"
+		},
+		"Wild Attack": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1"
+		},
+		"Wild Punch": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "c_punch_3",
+			"hit2": "h_{e}_base_2"
+		},
+		"Wind Breath": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45,
+			"sweep": "c_{e}_breath"
+		},
+		"Wind Cutter": {
+			"aura": "p_{e}_circle_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_base_2"
+		},
+		"Wind Fist": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"hit": "c_punch_3",
+			"hit2": "h_{e}_base_2"
+		},
+		"Wind Shower": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "h_{e}_base_4",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.4,
+			"sweep": "c_b_whirlwave_1"
+		},
+		"Wind of Seduction": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "h_{e}_base_4",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.4,
+			"sweep": "c_b_whirlwave_1"
+		},
+		"Wind of seduction": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "h_{e}_base_4",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.4,
+			"sweep": "c_b_whirlwave_1"
+		},
+		"Windmill Punch": {
+			"aura": "p_b_circle_1"
+		},
+		"Wings of Flame": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45,
+			"sweep": "c_{e}_breath"
+		},
+		"Wolverin Power Up": {
+			"aura": "p_b_circle_1",
+			"land": "c_buff_1",
+			"icon": "c_bufficon_attack"
+		},
+		"Wolverin Storm": {
+			"aura": "c_b_fall",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_b_fall",
+			"hit2": "h_{e}_explosion_1",
+			"delay": 0.45
+		},
+		"Wolverin's Claw": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "c_cut_2",
+			"hit2": "h_diagonalcut_1",
+			"delay": 0.45,
+			"icon": "c_debufficon_defense"
+		},
+		"Woolly tactics": {
+			"aura": "p_w_magiccircle_2",
+			"charge": "c_shield_1",
+			"land": "t_shield_1"
+		},
+		"Yet Trick": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"cast": "c_{e}_launch",
+			"hit": "h_{e}_explosion_1",
+			"hit2": "h_{e}_base_4",
+			"delay": 0.45
+		},
+		"YinYang Shield": {
+			"aura": "p_b_circle_1"
+		},
+		"Zakum Leech": {
+			"aura": "p_{e}_circle_1",
+			"charge": "p_{e}_concentrate1_1",
+			"cast": "c_{e}_launch",
+			"travel": "c_{e}_ball",
+			"hit": "h_{e}_explosion_1",
+			"land": "c_heal2"
+		},
+		"love cutter": {
+			"aura": "p_{e}_circle_2",
+			"charge": "p_{e}_Sconcentrate_1",
+			"hit": "c_cut_2",
+			"hit2": "h_diagonalcut_1",
+			"delay": 0.45
+		}
+	}
+}

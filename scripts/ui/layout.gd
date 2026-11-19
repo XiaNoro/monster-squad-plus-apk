@@ -6,6 +6,7 @@ const IMAGE_DIRS := ["betaUI00", "betaHud00", "betaGacha00", "betaLoading00", "b
 const FONT_REGULAR := "res://assets/apk/fonts/NanumBarunGothic.ttf"
 const SCREEN_H := 640.0
 const DESIGN_W := 1066.0
+const WIDEN := 1.0675
 const POPUP_CLOSE := ["ID_btnOk", "ID_btnOk_1", "ID_btnEsc", "ID_btnEsc_1"]
 
 static var _paths: Dictionary = {}
@@ -124,6 +125,20 @@ static func image_path_raw(image_name: String) -> String:
 	return found
 
 
+static func image_paths(layout_names: Array) -> Array:
+	var out := []
+	var stack: Array = []
+	for n in layout_names:
+		stack.append_array(parse(String(n)))
+	while not stack.is_empty():
+		var node: Dictionary = stack.pop_back()
+		stack.append_array(node.children)
+		var p := image_path(String(node.attrs.imageName)) if node.attrs.has("imageName") else ""
+		if p != "":
+			out.append(p if p.begins_with("res://") else UI.SPRITES + p)
+	return out
+
+
 static func texture(image_name: String) -> Texture2D:
 	var p := image_path(image_name)
 	return UI.tex(p) if p != "" else null
@@ -193,6 +208,7 @@ func _build(n: Dictionary, parent: Control, parent_h: float = SCREEN_H) -> void:
 		"Label":
 			c = _label(a)
 			size = Vector2(float(a.get("areaSizeX", 100)), float(a.get("areaSizeY", 30)))
+			c.set_meta("area", size)
 		"ProgressBar":
 			var pb := TextureProgressBar.new()
 			pb.texture_progress = tex

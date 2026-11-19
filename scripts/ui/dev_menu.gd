@@ -129,6 +129,7 @@ func _resources_page() -> Control:
 	_btn(items, "Give keys", _give_keys, "orange")
 	_btn(items, "Box +100 slots", _give.bind("box", 100), "orange")
 	_btn(items, "All Magic Stones", _all_stones, "purple", 220)
+	_btn(items, "All Pets", _all_pets, "green", 160)
 	var cubes := _section(p, "Open 10 Cubes (free)")
 	for spec in [["Blue ×10", "blue", "blue"], ["Yellow ×10", "yellow", "yellow"], ["Red ×10", "red", "orange"], ["Honour ×10", "honor", "yellow"], ["Pet Egg ×10", "pet", "green"], ["Rare Egg ×10", "pet_rare", "purple"]]:
 		_btn(cubes, spec[0], _open_cubes.bind(spec[1]), spec[2], 170)
@@ -151,6 +152,10 @@ func _progress_page() -> Control:
 	_btn(ev, "Next event day", _event_shift.bind("day"), "green", 210)
 	_btn(ev, "Next event week", _event_shift.bind("week"), "green", 220)
 	_btn(ev, "Real date", _event_shift.bind("reset"), "blue", 160)
+	var lg := _section(p, "Arena League Week")
+	_btn(lg, "Previous week", _league_shift.bind(-1), "green", 210)
+	_btn(lg, "Next week", _league_shift.bind(1), "green", 180)
+	_btn(lg, "Real week", _league_shift.bind(0), "blue", 170)
 	var msg := _section(p, "Messages")
 	_btn(msg, "Send test mail", _test_mail, "purple", 210)
 	_btn(msg, "Random message", func():
@@ -386,6 +391,12 @@ func _all_stones() -> void:
 	_saved("Added %d magic stones (every type, rank and variant)" % n)
 
 
+func _all_pets() -> void:
+	for p in DB.pets:
+		Save.add_pet(String(p.id))
+	_saved("Added %d pets (one of each)" % DB.pets.size())
+
+
 func _event_shift(kind: String) -> void:
 	match kind:
 		"day":
@@ -397,6 +408,12 @@ func _event_shift(kind: String) -> void:
 	var now := Events.now()
 	var d := Time.get_date_dict_from_unix_time(now)
 	_saved("Events: week %d of %d, %s · %s" % [Events.week_index(now) + 1, Events.week_count(), DB.WEEKDAYS[int(d.weekday)], Events.text().replace("\n", ", ")])
+
+
+func _league_shift(step: int) -> void:
+	Save.data.league_shift = LeagueSeasons.shift() + step if step != 0 else 0
+	Save.league()
+	_saved("League: " + LeagueSeasons.title(LeagueSeasons.season()))
 
 
 func _test_mail() -> void:

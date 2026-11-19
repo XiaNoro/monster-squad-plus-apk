@@ -127,6 +127,7 @@
 		}
 	},
 	"amethoid": {
+		"boost_fail": true,
 		"class": "C",
 		"element": "normal",
 		"evolution_tree": [],
@@ -139,7 +140,7 @@
 		"location": "Sky Island (Sky-4,5)",
 		"material": true,
 		"name": "Amethoid",
-		"passive": "Always fails at fortification and grants 0 Fortity Points",
+		"passive": "Always fails at fortification and grants 0 Fortify Points",
 		"passive_effect": {},
 		"quote": "",
 		"rarity": "common",
@@ -199,8 +200,12 @@
 		"location": "",
 		"material": false,
 		"name": "Ami",
-		"passive": "",
-		"passive_effect": {},
+		"passive": "Increases leader's REC by 50%",
+		"passive_effect": {
+			"element": "leader",
+			"pct": 0.5,
+			"stat": "rec"
+		},
 		"quote": "",
 		"rarity": "rare",
 		"skills": [
@@ -258,17 +263,17 @@
 		],
 		"stars": 3,
 		"stats": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
+			"atk": 139,
+			"def": 42,
+			"hp": 625,
 			"mp": 120,
-			"rec": 0
+			"rec": 239
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 235,
+			"def": 42,
+			"hp": 991,
+			"rec": 427
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -360,17 +365,22 @@
 		],
 		"stars": 4,
 		"stats": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
+			"atk": 237,
+			"def": 54,
+			"hp": 1097,
 			"mp": 160,
-			"rec": 0
+			"rec": 373
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats",
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 318,
+			"def": 54,
+			"hp": 1588,
+			"rec": 654
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -594,11 +604,11 @@
 		],
 		"stars": 6,
 		"stats": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
+			"atk": 668,
+			"def": 110,
+			"hp": 3306,
 			"mp": 240,
-			"rec": 0
+			"rec": 845
 		},
 		"stats_max": {
 			"atk": 815,
@@ -635,7 +645,7 @@
 				"quantity": 1
 			}
 		],
-		"evolve_material": "ant_queen",
+		"evolve_material": "",
 		"evolve_quantity": 1,
 		"evolves_from": "ant_queen",
 		"evolves_into": "",
@@ -792,7 +802,7 @@
 			"pct": 0.2,
 			"stat": "def"
 		},
-		"quote": "",
+		"quote": "I am the queen of ant army.",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -1559,10 +1569,10 @@
 			"rec": 316
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 665,
+			"def": 56,
+			"hp": 2083,
+			"rec": 490
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -1616,7 +1626,7 @@
 		"name": "Aqua Bat",
 		"passive": "",
 		"passive_effect": {},
-		"quote": "",
+		"quote": "You are not welcome here!",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -1933,9 +1943,9 @@
 		"location": "Undine's Ocean",
 		"material": false,
 		"name": "Aqua Spirit",
-		"passive": "Increases Nature Monsters' ATK by 40%",
+		"passive": "Increases Water Monsters' ATK by 40%",
 		"passive_effect": {
-			"element": "nature",
+			"element": "water",
 			"pct": 0.4,
 			"stat": "atk"
 		},
@@ -2019,11 +2029,15 @@
 			"mp": 200,
 			"rec": 450
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 609,
+			"def": 70,
+			"hp": 1991,
+			"rec": 721
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -2227,7 +2241,7 @@
 		"name": "Aquacron",
 		"passive": "",
 		"passive_effect": {},
-		"quote": "",
+		"quote": "I am colder than ice baby!",
 		"rarity": "legendary",
 		"skills": [
 			{
@@ -2353,7 +2367,7 @@
 		"name": "Aquahopper",
 		"passive": "",
 		"passive_effect": {},
-		"quote": "",
+		"quote": "Beyond the power of Lv. 30!",
 		"rarity": "legendary",
 		"skills": [
 			{
@@ -2430,7 +2444,7 @@
 		"name": "Aquarell",
 		"passive": "",
 		"passive_effect": {},
-		"quote": "",
+		"quote": "Don't be surprised if I disappear.",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -2922,7 +2936,7 @@
 			"pct": 0.7,
 			"stat": "hp"
 		},
-		"quote": "",
+		"quote": "Prepare for mummification.",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -3539,10 +3553,10 @@
 			"rec": 127
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 260,
+			"def": 29,
+			"hp": 722,
+			"rec": 243
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -3782,10 +3796,10 @@
 			"rec": 462
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 473,
+			"def": 144,
+			"hp": 3407,
+			"rec": 752
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -5017,7 +5031,7 @@
 			"pct": 0.25,
 			"stat": "def"
 		},
-		"quote": "",
+		"quote": "This is my true form!",
 		"rarity": "legendary",
 		"skills": [
 			{
@@ -5439,7 +5453,7 @@
 			"pct": 0.25,
 			"stat": "def"
 		},
-		"quote": "",
+		"quote": "Do not eat the banana peel.",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -5526,7 +5540,7 @@
 		},
 		"stats_max": {
 			"atk": 457,
-			"def": 157,
+			"def": 128,
 			"hp": 3268,
 			"rec": 734
 		},
@@ -5755,12 +5769,16 @@
 		],
 		"stars": 6,
 		"stats": {
-			"atk": 0,
+			"atk": 806,
 			"def": 75,
-			"hp": 0,
+			"hp": 2951,
 			"mp": 240,
-			"rec": 0
+			"rec": 430
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats"
+		],
 		"stats_max": {
 			"atk": 974,
 			"def": 75,
@@ -6067,7 +6085,7 @@
 			"pct": 0.2,
 			"stat": "def"
 		},
-		"quote": "",
+		"quote": "Less yapping, more slapping!",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -6133,10 +6151,10 @@
 			"rec": 370
 		},
 		"stats_max": {
-			"atk": 0,
+			"atk": 423,
 			"def": 88,
-			"hp": 0,
-			"rec": 0
+			"hp": 2849,
+			"rec": 602
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -6632,7 +6650,7 @@
 			"pct": 0.24,
 			"stat": "def"
 		},
-		"quote": "",
+		"quote": "I may be small, but I dream big.",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -7097,11 +7115,15 @@
 			"mp": 160,
 			"rec": 250
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 490,
+			"def": 40,
+			"hp": 1563,
+			"rec": 428
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -7638,7 +7660,7 @@
 			"pct": 0.4,
 			"stat": "def"
 		},
-		"quote": "",
+		"quote": "Feel the wrath of my blossoming sword",
 		"rarity": "legendary",
 		"skills": [
 			{
@@ -7712,11 +7734,15 @@
 			"hp": 0,
 			"rec": 0
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 844,
+			"def": 175,
+			"hp": 4858,
+			"rec": 1082
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -8142,21 +8168,88 @@
 		"evolves_into": "",
 		"id": "blue_dragongod",
 		"image": "https://static.wikia.nocookie.net/monster-squad/images/d/dd/Unknown.png/revision/latest?cb=20150718002707",
-		"location": "",
+		"location": "Mystery Box",
 		"material": false,
 		"name": "Blue Dragongod",
-		"passive": "",
-		"passive_effect": {},
+		"passive": "All Monsters' ATK + 50%",
+		"passive_effect": {
+			"element": "all",
+			"pct": 0.5,
+			"stat": "atk"
+		},
 		"quote": "",
 		"rarity": "legendary",
-		"skills": [],
+		"skills": [
+			{
+				"description": "Heals all allies (150% REC)",
+				"effects": [
+					{
+						"mult": 1.5,
+						"target": "all_allies",
+						"type": "heal"
+					}
+				],
+				"icon": "Heal All.png",
+				"mp": 60,
+				"name": "Dragon Blessing"
+			},
+			{
+				"description": "All allies ATK +50% for 20s",
+				"effects": [
+					{
+						"duration": 20.0,
+						"pct": 0.5,
+						"stat": "atk",
+						"target": "all_allies",
+						"type": "buff"
+					}
+				],
+				"icon": "ATK Up All.png",
+				"mp": 100,
+				"name": "Dragon Roar"
+			},
+			{
+				"description": "Stage 3 shield to all allies for 15s",
+				"effects": [
+					{
+						"duration": 15.0,
+						"stage": 3,
+						"target": "all_allies",
+						"type": "shield"
+					}
+				],
+				"icon": "Shield All.png",
+				"mp": 100,
+				"name": "Dragon Scale Barrier"
+			},
+			{
+				"description": "Attacks all enemies with 180% ATK; Stage 2 Freeze on all enemies",
+				"effects": [
+					{
+						"mult": 1.8,
+						"target": "all_enemies",
+						"type": "damage"
+					},
+					{
+						"duration": 10.0,
+						"kind": "freeze",
+						"stage": 2,
+						"target": "all_enemies",
+						"type": "dot"
+					}
+				],
+				"icon": "Freeze All.png",
+				"mp": 150,
+				"name": "Frozen Storm"
+			}
+		],
 		"stars": 6,
 		"stats": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
+			"atk": 565,
+			"def": 187,
+			"hp": 4079,
 			"mp": 240,
-			"rec": 0
+			"rec": 658
 		},
 		"stats_50": {
 			"atk": 0,
@@ -8164,27 +8257,33 @@
 			"hp": 0,
 			"rec": 0
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 712,
+			"def": 187,
+			"hp": 4833,
+			"rec": 1017
 		},
 		"support_skill": {
 			"cooldown": 12.0,
-			"description": "",
+			"description": "Stage 1 shield to all allies for 10s",
 			"effects": [
 				{
-					"mult": 1.0,
-					"target": "enemy",
-					"type": "damage"
+					"duration": 10.0,
+					"stage": 1,
+					"target": "all_allies",
+					"type": "shield"
 				}
 			],
-			"icon": "",
-			"name": ""
+			"icon": "Shield All.png",
+			"name": "Dragon Scale Barrier"
 		}
 	},
 	"blue_rock": {
+		"boost_fail": true,
 		"class": "C",
 		"element": "water",
 		"evolution_tree": [],
@@ -8197,7 +8296,7 @@
 		"location": "Sky Island (Sky-1)",
 		"material": true,
 		"name": "Blue Rock",
-		"passive": "Always fails at fortification and grants 0 Fortity Points",
+		"passive": "Always fails at fortification and grants 0 Fortify Points",
 		"passive_effect": {},
 		"quote": "",
 		"rarity": "common",
@@ -8289,7 +8388,7 @@
 			"pct": 0.3,
 			"stat": "mp_regen"
 		},
-		"quote": "",
+		"quote": "Enough drops of water'll make a hole in a stone.",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -8473,7 +8572,7 @@
 		},
 		"stats_max": {
 			"atk": 260,
-			"def": 28,
+			"def": 29,
 			"hp": 722,
 			"rec": 243
 		},
@@ -9024,7 +9123,7 @@
 		},
 		"stats_max": {
 			"atk": 595,
-			"def": 156,
+			"def": 98,
 			"hp": 2838,
 			"rec": 1067
 		},
@@ -9420,7 +9519,7 @@
 		"stats_max": {
 			"atk": 137,
 			"def": 22,
-			"hp": 403,
+			"hp": 412,
 			"rec": 186
 		},
 		"support_skill": {
@@ -9469,7 +9568,7 @@
 			"pct": 0.33,
 			"stat": "def"
 		},
-		"quote": "",
+		"quote": "Careful! The flowers haven't bloomed yet",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -9630,7 +9729,7 @@
 			"rec": 155
 		},
 		"stats_max": {
-			"atk": 120,
+			"atk": 110,
 			"def": 29,
 			"hp": 478,
 			"rec": 329
@@ -9720,10 +9819,10 @@
 			"rec": 324
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 318,
+			"def": 99,
+			"hp": 2286,
+			"rec": 556
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -10352,10 +10451,10 @@
 			"rec": 114
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 89,
+			"def": 55,
+			"hp": 607,
+			"rec": 259
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -10602,10 +10701,10 @@
 			"rec": 183
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 195,
+			"def": 68,
+			"hp": 1219,
+			"rec": 357
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -10644,7 +10743,7 @@
 		"evolves_into": "king_caocao",
 		"id": "caocao",
 		"image": "https://static.wikia.nocookie.net/monster-squad/images/7/72/CaoCao.png/revision/latest?cb=20150820100647",
-		"location": "October 2015 Special Event only",
+		"location": "Temple of Four Elements (hell)",
 		"material": false,
 		"name": "CaoCao",
 		"passive": "Fire Monster's HP + 70%",
@@ -11062,7 +11161,7 @@
 			"atk": 195,
 			"def": 68,
 			"hp": 1219,
-			"rec": 183
+			"rec": 357
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -11110,9 +11209,79 @@
 			"pct": 0.33,
 			"stat": "def"
 		},
-		"quote": "",
+		"quote": "All heroes are born from me",
 		"rarity": "epic",
-		"skills": [],
+		"skills": [
+			{
+				"description": "Attacks 1 enemy with 150% ATK; Stuns 1 enemy for 3s",
+				"effects": [
+					{
+						"mult": 1.5,
+						"target": "enemy",
+						"type": "damage"
+					},
+					{
+						"chance": 1.0,
+						"duration": 3.0,
+						"target": "enemy",
+						"type": "stun"
+					}
+				],
+				"icon": "Stun.png",
+				"mp": 60,
+				"name": "Stun Strike"
+			},
+			{
+				"description": "Attacks all enemies with 120% ATK",
+				"effects": [
+					{
+						"mult": 1.2,
+						"target": "all_enemies",
+						"type": "damage"
+					}
+				],
+				"icon": "Attack All.png",
+				"mp": 100,
+				"name": "Centaur Rush"
+			},
+			{
+				"description": "Inflicts Poison 2stage, DEF Down",
+				"effects": [
+					{
+						"duration": 10.0,
+						"kind": "poison",
+						"stage": 2,
+						"target": "all_enemies",
+						"type": "dot"
+					},
+					{
+						"duration": 10.0,
+						"pct": 0.3,
+						"stat": "def",
+						"target": "all_enemies",
+						"type": "debuff"
+					}
+				],
+				"icon": "Poison All.png",
+				"mp": 100,
+				"name": "Piercing poison"
+			},
+			{
+				"description": "1 enemy Speed -25% for 20s",
+				"effects": [
+					{
+						"duration": 20.0,
+						"pct": 0.25,
+						"stat": "speed",
+						"target": "enemy",
+						"type": "debuff"
+					}
+				],
+				"icon": "Speed Down.png",
+				"mp": 40,
+				"name": "Basic Speed Down"
+			}
+		],
 		"stars": 5,
 		"stats": {
 			"atk": 475,
@@ -11121,24 +11290,35 @@
 			"mp": 200,
 			"rec": 410
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 613,
+			"def": 135,
+			"hp": 3423,
+			"rec": 667
 		},
 		"support_skill": {
 			"cooldown": 12.0,
-			"description": "",
+			"description": "Attacks 1 enemy with 100% ATK; Stage 1 Poison on all enemies",
 			"effects": [
 				{
 					"mult": 1.0,
 					"target": "enemy",
 					"type": "damage"
+				},
+				{
+					"duration": 10.0,
+					"kind": "poison",
+					"stage": 1,
+					"target": "all_enemies",
+					"type": "dot"
 				}
 			],
 			"icon": "Poison All.png",
-			"name": ""
+			"name": "Poison Arrow"
 		}
 	},
 	"ceratoking": {
@@ -11186,7 +11366,7 @@
 			"pct": 0.3,
 			"stat": "def"
 		},
-		"quote": "",
+		"quote": "An ancient power is slowly rising!",
 		"rarity": "legendary",
 		"skills": [
 			{
@@ -11261,11 +11441,15 @@
 			"mp": 240,
 			"rec": 612
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 665,
+			"def": 185,
+			"hp": 4725,
+			"rec": 931
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -11382,10 +11566,10 @@
 			"rec": 338
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 327,
+			"def": 110,
+			"hp": 2385,
+			"rec": 599
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -11524,10 +11708,10 @@
 			"rec": 444
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 457,
+			"def": 128,
+			"hp": 3268,
+			"rec": 734
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -11642,10 +11826,10 @@
 			"rec": 196
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 615,
+			"def": 46,
+			"hp": 1370,
+			"rec": 341
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -11745,10 +11929,10 @@
 			"rec": 148
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 107,
+			"def": 77,
+			"hp": 801,
+			"rec": 322
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -11863,10 +12047,10 @@
 			"rec": 229
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 212,
+			"def": 99,
+			"hp": 1474,
+			"rec": 461
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -11904,7 +12088,7 @@
 				"quantity": 1
 			}
 		],
-		"evolve_material": "nono_kong",
+		"evolve_material": "",
 		"evolve_quantity": 1,
 		"evolves_from": "charmew",
 		"evolves_into": "",
@@ -12107,10 +12291,10 @@
 			"rec": 425
 		},
 		"stats_max": {
-			"atk": 558,
+			"atk": 447,
 			"def": 113,
-			"hp": 3910,
-			"rec": 857
+			"hp": 3128,
+			"rec": 686
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -12930,7 +13114,7 @@
 			"atk": 116,
 			"def": 32,
 			"hp": 531,
-			"rec": 0
+			"rec": 375
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -12980,7 +13164,7 @@
 			"pct": 0.2,
 			"stat": "def"
 		},
-		"quote": "",
+		"quote": "You'll never win if you don't try hard.",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -13048,10 +13232,10 @@
 			"rec": 370
 		},
 		"stats_max": {
-			"atk": 0,
+			"atk": 423,
 			"def": 88,
-			"hp": 0,
-			"rec": 0
+			"hp": 2849,
+			"rec": 602
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -13071,6 +13255,98 @@
 			],
 			"icon": "Stun.png",
 			"name": "Frozen Lightning"
+		}
+	},
+	"chocomew": {
+		"class": "B",
+		"element": "normal",
+		"evolution_tree": [],
+		"evolve_material": "",
+		"evolve_quantity": 1,
+		"evolves_from": "",
+		"evolves_into": "",
+		"id": "chocomew",
+		"image": "",
+		"location": "Candy Island",
+		"material": false,
+		"name": "Chocomew",
+		"passive": "Increases leader's HP by 50%",
+		"passive_effect": {
+			"element": "leader",
+			"pct": 0.5,
+			"stat": "hp"
+		},
+		"quote": "",
+		"rarity": "rare",
+		"skills": [
+			{
+				"description": "Attacks with 100% ATK",
+				"effects": [
+					{
+						"mult": 1.0,
+						"target": "enemy",
+						"type": "damage"
+					}
+				],
+				"icon": "Attack.png",
+				"mp": 40,
+				"name": "Rolling Attack"
+			},
+			{
+				"description": "Returns 50% of the damage dealt by enemies for 15s",
+				"effects": [
+					{
+						"duration": 15.0,
+						"pct": 0.5,
+						"type": "reflect"
+					}
+				],
+				"icon": "Thorns.png",
+				"mp": 60,
+				"name": "Thorns"
+			},
+			{
+				"description": "Attacks all with 100% ATK",
+				"effects": [
+					{
+						"mult": 1.0,
+						"target": "all_enemies",
+						"type": "damage"
+					}
+				],
+				"icon": "Attack All.png",
+				"mp": 100,
+				"name": "Thorn Shower"
+			}
+		],
+		"stars": 3,
+		"stats": {
+			"atk": 152,
+			"def": 42,
+			"hp": 548,
+			"mp": 120,
+			"rec": 148
+		},
+		"stats_max": {
+			"atk": 258,
+			"def": 42,
+			"hp": 850,
+			"rec": 282
+		},
+		"support_skill": {
+			"cooldown": 12.0,
+			"description": "Decreases enemies' ATK by 25% for 20s",
+			"effects": [
+				{
+					"duration": 20.0,
+					"pct": 0.25,
+					"stat": "atk",
+					"target": "all_enemies",
+					"type": "debuff"
+				}
+			],
+			"icon": "ATK Down All.png",
+			"name": "Basic Total Offense Down"
 		}
 	},
 	"chocopinky": {
@@ -13395,11 +13671,15 @@
 			"mp": 100,
 			"rec": 150
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 103,
+			"def": 69,
+			"hp": 739,
+			"rec": 326
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -13543,11 +13823,15 @@
 			"hp": 4824,
 			"rec": 1318
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 981,
+			"def": 70,
+			"hp": 3127,
+			"rec": 708
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -13783,10 +14067,10 @@
 			"rec": 270
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 220,
+			"def": 42,
+			"hp": 958,
+			"rec": 502
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -13894,7 +14178,7 @@
 		},
 		"stats_max": {
 			"atk": 340,
-			"def": 52,
+			"def": 51,
 			"hp": 1594,
 			"rec": 675
 		},
@@ -14120,10 +14404,10 @@
 			"rec": 172
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 116,
+			"def": 32,
+			"hp": 531,
+			"rec": 375
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -15662,7 +15946,7 @@
 			"pct": 0.7,
 			"stat": "hp"
 		},
-		"quote": "",
+		"quote": "I'll blow you out like a candle if you come near me!",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -16191,10 +16475,10 @@
 			"rec": 270
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 220,
+			"def": 42,
+			"hp": 958,
+			"rec": 502
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -16504,7 +16788,7 @@
 			"pct": 0.6,
 			"stat": "hp"
 		},
-		"quote": "",
+		"quote": "If you can punch, you can be punched.",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -16675,17 +16959,22 @@
 		],
 		"stars": 3,
 		"stats": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
+			"atk": 224,
+			"def": 39,
+			"hp": 534,
 			"mp": 120,
-			"rec": 0
+			"rec": 137
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats",
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 379,
+			"def": 39,
+			"hp": 778,
+			"rec": 240
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -16741,7 +17030,7 @@
 			"pct": 0.2,
 			"stat": "crit"
 		},
-		"quote": "",
+		"quote": "There's no escaping my icy gaze!",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -17160,7 +17449,7 @@
 			"pct": 0.5,
 			"stat": "atk"
 		},
-		"quote": "",
+		"quote": "I dwell in the darkest place",
 		"rarity": "legendary",
 		"skills": [
 			{
@@ -17299,7 +17588,7 @@
 			}
 		],
 		"evolve_material": "strang",
-		"evolve_quantity": 1,
+		"evolve_quantity": 3,
 		"evolves_from": "",
 		"evolves_into": "dark_monk",
 		"id": "dark_kong",
@@ -17890,10 +18179,10 @@
 			"rec": 265
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 539,
+			"def": 61,
+			"hp": 1686,
+			"rec": 468
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -17946,7 +18235,7 @@
 			"pct": 0.4,
 			"stat": "def"
 		},
-		"quote": "",
+		"quote": "When I stare into the abyss, the abyss stares back at me",
 		"rarity": "legendary",
 		"skills": [],
 		"stars": 6,
@@ -17963,11 +18252,15 @@
 			"hp": 0,
 			"rec": 0
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 1033,
+			"def": 90,
+			"hp": 3014,
+			"rec": 605
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -18003,7 +18296,7 @@
 				"quantity": 1
 			}
 		],
-		"evolve_material": "marell",
+		"evolve_material": "magicrell",
 		"evolve_quantity": 1,
 		"evolves_from": "darkra",
 		"evolves_into": "darkera",
@@ -18294,8 +18587,8 @@
 		"stats_max": {
 			"atk": 116,
 			"def": 32,
-			"hp": 445,
-			"rec": 346
+			"hp": 531,
+			"rec": 375
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -18835,7 +19128,7 @@
 			"pct": 0.3,
 			"stat": "def"
 		},
-		"quote": "",
+		"quote": "A new ice age begins!",
 		"rarity": "legendary",
 		"skills": [
 			{
@@ -19103,7 +19396,7 @@
 			"pct": 0.24,
 			"stat": "def"
 		},
-		"quote": "",
+		"quote": "A new ice age begins!",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -19286,10 +19579,10 @@
 			"rec": 243
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 207,
+			"def": 38,
+			"hp": 868,
+			"rec": 446
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -19580,10 +19873,10 @@
 			"rec": 172
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 116,
+			"def": 32,
+			"hp": 531,
+			"rec": 375
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -20564,7 +20857,7 @@
 			"pct": 0.2,
 			"stat": "def"
 		},
-		"quote": "",
+		"quote": "I am the hardest shield ever.",
 		"rarity": "legendary",
 		"skills": [
 			{
@@ -20697,7 +20990,7 @@
 			"pct": 0.15,
 			"stat": "def"
 		},
-		"quote": "",
+		"quote": "Are you looking for stronger power?",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -20780,10 +21073,10 @@
 			"rec": 430
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 550,
+			"def": 165,
+			"hp": 3575,
+			"rec": 633
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -20867,17 +21160,22 @@
 		],
 		"stars": 3,
 		"stats": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
+			"atk": 179,
+			"def": 42,
+			"hp": 627,
 			"mp": 120,
-			"rec": 0
+			"rec": 169
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats",
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 295,
+			"def": 42,
+			"hp": 917,
+			"rec": 314
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -21153,10 +21451,10 @@
 			"rec": 141
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 276,
+			"def": 32,
+			"hp": 806,
+			"rec": 257
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -21168,7 +21466,7 @@
 					"type": "heal"
 				}
 			],
-			"icon": "",
+			"icon": "Heal.png",
 			"name": "Powerful Leader Heal"
 		}
 	},
@@ -21241,10 +21539,10 @@
 			"rec": 78
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 146,
+			"def": 25,
+			"hp": 464,
+			"rec": 194
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -21349,7 +21647,7 @@
 			"rec": 235
 		},
 		"stats_max": {
-			"atk": 468,
+			"atk": 469,
 			"def": 49,
 			"hp": 1491,
 			"rec": 409
@@ -21585,11 +21883,15 @@
 			"mp": 200,
 			"rec": 661
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 595,
+			"def": 98,
+			"hp": 2838,
+			"rec": 1067
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -21673,10 +21975,10 @@
 				"name": "Statue Guard"
 			},
 			{
-				"description": "Attacks with 150% ATK; Heals HP (REC 100%)",
+				"description": "Attacks with 200% ATK; Heal HP (REC 100%)",
 				"effects": [
 					{
-						"mult": 1.5,
+						"mult": 2.0,
 						"target": "enemy",
 						"type": "damage"
 					},
@@ -21693,24 +21995,24 @@
 		],
 		"stars": 4,
 		"stats": {
+			"atk": 290,
+			"def": 122,
+			"hp": 1798,
+			"mp": 160,
+			"rec": 364
+		},
+		"stats_max": {
 			"atk": 348,
 			"def": 122,
 			"hp": 2581,
-			"mp": 160,
 			"rec": 625
-		},
-		"stats_max": {
-			"atk": 393,
-			"def": 122,
-			"hp": 2796,
-			"rec": 673
 		},
 		"support_skill": {
 			"cooldown": 12.0,
-			"description": "Attacks with 150% ATK; Heals HP (REC 100%)",
+			"description": "Attacks with 200% ATK; Heal HP (REC 100%)",
 			"effects": [
 				{
-					"mult": 1.5,
+					"mult": 2.0,
 					"target": "enemy",
 					"type": "damage"
 				},
@@ -21841,9 +22143,79 @@
 			"pct": 0.4,
 			"stat": "def"
 		},
-		"quote": "",
+		"quote": "I am the master of all heroes",
 		"rarity": "legendary",
-		"skills": [],
+		"skills": [
+			{
+				"description": "Attacks 1 enemy with 150% ATK; Stuns 1 enemy for 3s",
+				"effects": [
+					{
+						"mult": 1.5,
+						"target": "enemy",
+						"type": "damage"
+					},
+					{
+						"chance": 1.0,
+						"duration": 3.0,
+						"target": "enemy",
+						"type": "stun"
+					}
+				],
+				"icon": "Stun.png",
+				"mp": 60,
+				"name": "Stun Strike"
+			},
+			{
+				"description": "Attacks all enemies with 120% ATK",
+				"effects": [
+					{
+						"mult": 1.2,
+						"target": "all_enemies",
+						"type": "damage"
+					}
+				],
+				"icon": "Attack All.png",
+				"mp": 100,
+				"name": "Centaur Rush"
+			},
+			{
+				"description": "Inflicts Poison 2stage, DEF Down",
+				"effects": [
+					{
+						"duration": 10.0,
+						"kind": "poison",
+						"stage": 2,
+						"target": "all_enemies",
+						"type": "dot"
+					},
+					{
+						"duration": 10.0,
+						"pct": 0.3,
+						"stat": "def",
+						"target": "all_enemies",
+						"type": "debuff"
+					}
+				],
+				"icon": "Poison All.png",
+				"mp": 100,
+				"name": "Piercing poison"
+			},
+			{
+				"description": "1 enemy Speed -25% for 20s",
+				"effects": [
+					{
+						"duration": 20.0,
+						"pct": 0.25,
+						"stat": "speed",
+						"target": "enemy",
+						"type": "debuff"
+					}
+				],
+				"icon": "Speed Down.png",
+				"mp": 40,
+				"name": "Basic Speed Down"
+			}
+		],
 		"stars": 6,
 		"stats": {
 			"atk": 620,
@@ -21858,24 +22230,35 @@
 			"hp": 0,
 			"rec": 0
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 781,
+			"def": 150,
+			"hp": 5094,
+			"rec": 928
 		},
 		"support_skill": {
 			"cooldown": 12.0,
-			"description": "",
+			"description": "Attacks 1 enemy with 100% ATK; Stage 1 Poison on all enemies",
 			"effects": [
 				{
 					"mult": 1.0,
 					"target": "enemy",
 					"type": "damage"
+				},
+				{
+					"duration": 10.0,
+					"kind": "poison",
+					"stage": 1,
+					"target": "all_enemies",
+					"type": "dot"
 				}
 			],
 			"icon": "Poison All.png",
-			"name": ""
+			"name": "Poison Arrow"
 		}
 	},
 	"emberpeep": {
@@ -22531,7 +22914,7 @@
 			"pct": 0.3,
 			"stat": "crit"
 		},
-		"quote": "",
+		"quote": "There's no escaping my icy gaze!",
 		"rarity": "legendary",
 		"skills": [
 			{
@@ -22675,7 +23058,7 @@
 			"pct": 0.65,
 			"stat": "crit_dmg"
 		},
-		"quote": "",
+		"quote": "The fire in my eyes is enough to burn you!",
 		"rarity": "legendary",
 		"skills": [
 			{
@@ -22956,7 +23339,7 @@
 			"pct": 0.4,
 			"stat": "atk"
 		},
-		"quote": "",
+		"quote": "I am the mighty spear master!",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -24327,10 +24710,10 @@
 			"rec": 235
 		},
 		"stats_max": {
-			"atk": 0,
+			"atk": 469,
 			"def": 49,
-			"hp": 0,
-			"rec": 0
+			"hp": 1491,
+			"rec": 409
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -24448,10 +24831,10 @@
 			"rec": 316
 		},
 		"stats_max": {
-			"atk": 0,
+			"atk": 665,
 			"def": 56,
-			"hp": 0,
-			"rec": 0
+			"hp": 2083,
+			"rec": 490
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -24564,7 +24947,7 @@
 				"quantity": 1
 			}
 		],
-		"evolve_material": "fire_bun",
+		"evolve_material": "",
 		"evolve_quantity": 1,
 		"evolves_from": "fire_bun",
 		"evolves_into": "",
@@ -24957,11 +25340,15 @@
 			"mp": 100,
 			"rec": 137
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 111,
+			"def": 59,
+			"hp": 717,
+			"rec": 311
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -25003,7 +25390,7 @@
 			"pct": 0.3,
 			"stat": "atk"
 		},
-		"quote": "",
+		"quote": "I'm Fire genie",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -25276,11 +25663,15 @@
 			"mp": 160,
 			"rec": 220
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
+			"atk": 531,
 			"def": 65,
-			"hp": 0,
-			"rec": 0
+			"hp": 1341,
+			"rec": 383
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -25322,7 +25713,7 @@
 			"pct": 0.5,
 			"stat": "atk"
 		},
-		"quote": "",
+		"quote": "I am the flame of ancient.",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -25414,11 +25805,15 @@
 			"mp": 200,
 			"rec": 330
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 762,
+			"def": 54,
+			"hp": 2094,
+			"rec": 504
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -26381,7 +26776,7 @@
 			"pct": 0.5,
 			"stat": "atk"
 		},
-		"quote": "",
+		"quote": "I will burn everything with the ancient fire!",
 		"rarity": "legendary",
 		"skills": [
 			{
@@ -26471,11 +26866,15 @@
 			"mp": 240,
 			"rec": 637
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 733,
+			"def": 171,
+			"hp": 4833,
+			"rec": 985
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -26648,9 +27047,9 @@
 		"location": "Evolution",
 		"material": false,
 		"name": "Flame Knight",
-		"passive": "Increases Normal Monsters' ATK by 50%",
+		"passive": "Increases Fire Monsters' ATK by 50%",
 		"passive_effect": {
-			"element": "normal",
+			"element": "fire",
 			"pct": 0.5,
 			"stat": "atk"
 		},
@@ -26723,7 +27122,7 @@
 						"type": "debuff"
 					}
 				],
-				"icon": "",
+				"icon": "Attack + DEF Down.png",
 				"mp": 150,
 				"name": "Piercing fire"
 			}
@@ -26882,7 +27281,7 @@
 			"pct": 0.5,
 			"stat": "atk"
 		},
-		"quote": "",
+		"quote": "My fire is everlasting!",
 		"rarity": "legendary",
 		"skills": [
 			{
@@ -26978,7 +27377,7 @@
 			"atk": 1024,
 			"def": 75,
 			"hp": 3044,
-			"rec": 0
+			"rec": 643
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -27173,7 +27572,7 @@
 		"name": "Flamell",
 		"passive": "",
 		"passive_effect": {},
-		"quote": "",
+		"quote": "Want to see a magic trick?",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -27426,10 +27825,10 @@
 			"rec": 270
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 220,
+			"def": 42,
+			"hp": 958,
+			"rec": 502
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -27574,11 +27973,15 @@
 			"mp": 200,
 			"rec": 462
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 514,
+			"def": 122,
+			"hp": 3423,
+			"rec": 752
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -27602,6 +28005,10 @@
 		}
 	},
 	"flaree": {
+		"boost_for": {
+			"element": "fire",
+			"stars": 5
+		},
 		"class": "B",
 		"element": "fire",
 		"evolution_tree": [
@@ -27635,7 +28042,7 @@
 		"location": "Material Island (Flaree (★3) and Flaruus (★4))",
 		"material": false,
 		"name": "Flaree",
-		"passive": "",
+		"passive": "Grants Fortify Points when used on 5★ Fire monsters",
 		"passive_effect": {},
 		"quote": "",
 		"rarity": "rare",
@@ -28038,6 +28445,10 @@
 		}
 	},
 	"flaruus": {
+		"boost_for": {
+			"element": "fire",
+			"stars": 6
+		},
 		"class": "B",
 		"element": "fire",
 		"evolution_tree": [
@@ -28071,7 +28482,7 @@
 		"location": "Material Island (Flaruus (★4))",
 		"material": false,
 		"name": "Flaruus",
-		"passive": "",
+		"passive": "Grants Fortify Points when used on 6★ Fire monsters",
 		"passive_effect": {},
 		"quote": "",
 		"rarity": "super_rare",
@@ -28494,10 +28905,10 @@
 			"rec": 172
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 116,
+			"def": 32,
+			"hp": 531,
+			"rec": 375
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -28638,8 +29049,12 @@
 		"location": "",
 		"material": false,
 		"name": "Forina",
-		"passive": "",
-		"passive_effect": {},
+		"passive": "Increases Normal Monsters' Speed by 15%",
+		"passive_effect": {
+			"element": "normal",
+			"pct": 0.15,
+			"stat": "speed"
+		},
 		"quote": "",
 		"rarity": "super_rare",
 		"skills": [
@@ -28707,17 +29122,17 @@
 		],
 		"stars": 4,
 		"stats": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
+			"atk": 312,
+			"def": 58,
+			"hp": 1041,
 			"mp": 160,
-			"rec": 0
+			"rec": 205
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 415,
+			"def": 58,
+			"hp": 1415,
+			"rec": 367
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -28752,7 +29167,7 @@
 			"pct": 0.15,
 			"stat": "crit"
 		},
-		"quote": "",
+		"quote": "Enchanting, aren't I?",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -28819,17 +29234,17 @@
 		],
 		"stars": 5,
 		"stats": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
+			"atk": 515,
+			"def": 75,
+			"hp": 1862,
 			"mp": 200,
-			"rec": 0
+			"rec": 342
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 694,
+			"def": 75,
+			"hp": 2319,
+			"rec": 543
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -28870,7 +29285,7 @@
 				"quantity": 1
 			}
 		],
-		"evolve_material": "goldbat",
+		"evolve_material": "",
 		"evolve_quantity": 1,
 		"evolves_from": "forinas",
 		"evolves_into": "",
@@ -29470,7 +29885,7 @@
 			"rec": 155
 		},
 		"stats_max": {
-			"atk": 120,
+			"atk": 110,
 			"def": 29,
 			"hp": 478,
 			"rec": 329
@@ -29632,7 +30047,7 @@
 			"pct": 0.6,
 			"stat": "hp"
 		},
-		"quote": "",
+		"quote": "What can you sacrifice for your dreams?",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -29754,7 +30169,7 @@
 			"pct": 0.8,
 			"stat": "hp"
 		},
-		"quote": "",
+		"quote": "What can you sacrifice for your dreams?",
 		"rarity": "legendary",
 		"skills": [
 			{
@@ -29898,11 +30313,11 @@
 		],
 		"stars": 2,
 		"stats": {
-			"atk": 0,
+			"atk": 86,
 			"def": 25,
-			"hp": 0,
+			"hp": 214,
 			"mp": 100,
-			"rec": 0
+			"rec": 83
 		},
 		"stats_max": {
 			"atk": 146,
@@ -30109,7 +30524,7 @@
 			"rec": 183
 		},
 		"stats_max": {
-			"atk": 125,
+			"atk": 195,
 			"def": 68,
 			"hp": 1219,
 			"rec": 357
@@ -30553,11 +30968,15 @@
 			"mp": 160,
 			"rec": 360
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 334,
+			"def": 110,
+			"hp": 2385,
+			"rec": 638
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -30998,6 +31417,10 @@
 		}
 	},
 	"g_drank": {
+		"boost_for": {
+			"element": "nature",
+			"stars": 4
+		},
 		"class": "C",
 		"element": "nature",
 		"evolution_tree": [
@@ -31031,7 +31454,7 @@
 		"location": "Material Island",
 		"material": false,
 		"name": "G. Drank",
-		"passive": "",
+		"passive": "Grants Fortify Points when used on 4★ Nature monsters",
 		"passive_effect": {},
 		"quote": "",
 		"rarity": "uncommon",
@@ -31339,7 +31762,7 @@
 			"pct": 0.8,
 			"stat": "hp"
 		},
-		"quote": "",
+		"quote": "What is your favorite sweet?",
 		"rarity": "legendary",
 		"skills": [
 			{
@@ -31917,7 +32340,7 @@
 			"pct": 0.7,
 			"stat": "hp"
 		},
-		"quote": "",
+		"quote": "Brrrrrrrrr...",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -32057,7 +32480,7 @@
 			"pct": 0.7,
 			"stat": "hp"
 		},
-		"quote": "",
+		"quote": "Buuuuurns...",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -32328,7 +32751,7 @@
 				"quantity": 1
 			}
 		],
-		"evolve_material": "river_kong",
+		"evolve_material": "",
 		"evolve_quantity": 1,
 		"evolves_from": "ghouldrop",
 		"evolves_into": "",
@@ -32343,7 +32766,7 @@
 			"pct": 0.9,
 			"stat": "hp"
 		},
-		"quote": "",
+		"quote": "Brrrrrrrrr...",
 		"rarity": "legendary",
 		"skills": [
 			{
@@ -32708,10 +33131,10 @@
 			"rec": 397
 		},
 		"stats_max": {
-			"atk": 0,
+			"atk": 970,
 			"def": 67,
-			"hp": 0,
-			"rec": 0
+			"hp": 3206,
+			"rec": 600
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -32935,11 +33358,11 @@
 		],
 		"stars": 3,
 		"stats": {
-			"atk": 0,
+			"atk": 52,
 			"def": 55,
-			"hp": 0,
+			"hp": 385,
 			"mp": 120,
-			"rec": 0
+			"rec": 139
 		},
 		"stats_max": {
 			"atk": 89,
@@ -33007,7 +33430,7 @@
 			"pct": 0.3,
 			"stat": "crit"
 		},
-		"quote": "",
+		"quote": "I live beneath the deep blue",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -33090,11 +33513,15 @@
 			"mp": 200,
 			"rec": 480
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 477,
+			"def": 144,
+			"hp": 3407,
+			"rec": 781
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -33414,10 +33841,10 @@
 			"rec": 245
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 510,
+			"def": 55,
+			"hp": 1566,
+			"rec": 419
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -33808,7 +34235,7 @@
 			"pct": 0.2,
 			"stat": "def"
 		},
-		"quote": "",
+		"quote": "With patience, the thirsty root breaks stone.",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -33994,7 +34421,7 @@
 		"stats_max": {
 			"atk": 290,
 			"def": 76,
-			"hp": 0,
+			"hp": 1992,
 			"rec": 473
 		},
 		"support_skill": {
@@ -34381,7 +34808,7 @@
 			"pct": 0.9,
 			"stat": "hp"
 		},
-		"quote": "",
+		"quote": "Let me guide you after death.",
 		"rarity": "legendary",
 		"skills": [
 			{
@@ -34644,7 +35071,7 @@
 			"pct": 0.7,
 			"stat": "hp"
 		},
-		"quote": "",
+		"quote": "Let me guide you after death.",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -34862,10 +35289,11 @@
 		"location": "Material Island: Greebat (★3) and Greeburak (★4)",
 		"material": false,
 		"name": "Greebat",
-		"passive": "",
+		"passive": "Lucky prize! Sells for 10,000 gold",
 		"passive_effect": {},
 		"quote": "",
 		"rarity": "rare",
+		"sell_price": 10000,
 		"skills": [
 			{
 				"description": "Attacks with 100% ATK",
@@ -34969,10 +35397,11 @@
 		"location": "Material Island: Greebat (★3) and Greeburak (★4)",
 		"material": false,
 		"name": "Greebi",
-		"passive": "",
+		"passive": "Consolation prize! Sells for 3,000 gold",
 		"passive_effect": {},
 		"quote": "",
 		"rarity": "uncommon",
+		"sell_price": 3000,
 		"skills": [
 			{
 				"description": "Attacks with 100% ATK",
@@ -35063,10 +35492,11 @@
 		"location": "Material Island: Greebat (★3) and Greeburak (★4)",
 		"material": false,
 		"name": "Greeburak",
-		"passive": "",
+		"passive": "Jackpot! Sells for 50,000 gold",
 		"passive_effect": {},
 		"quote": "",
 		"rarity": "super_rare",
+		"sell_price": 50000,
 		"skills": [
 			{
 				"description": "Attacks with 100% ATK",
@@ -35832,11 +36262,15 @@
 			"mp": 160,
 			"rec": 235
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
+			"atk": 485,
 			"def": 53,
-			"hp": 0,
-			"rec": 0
+			"hp": 1670,
+			"rec": 402
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -36201,10 +36635,10 @@
 			"rec": 345
 		},
 		"stats_max": {
-			"atk": 0,
+			"atk": 871,
 			"def": 52,
-			"hp": 0,
-			"rec": 0
+			"hp": 2733,
+			"rec": 519
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -36373,7 +36807,7 @@
 			"pct": 0.15,
 			"stat": "crit"
 		},
-		"quote": "",
+		"quote": "We're in this together, no matter what!",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -36490,8 +36924,12 @@
 		"location": "Spirit Island",
 		"material": false,
 		"name": "Growth",
-		"passive": "",
-		"passive_effect": {},
+		"passive": "Increases leader's MP by 40",
+		"passive_effect": {
+			"element": "leader",
+			"flat": 40.0,
+			"stat": "mp"
+		},
 		"quote": "",
 		"rarity": "super_rare",
 		"skills": [
@@ -37289,7 +37727,7 @@
 			"pct": 0.75,
 			"stat": "rec"
 		},
-		"quote": "",
+		"quote": "If ya don't got brains, use brawn instead!",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -37350,15 +37788,15 @@
 		"stats": {
 			"atk": 360,
 			"def": 113,
-			"hp": 0,
+			"hp": 2432,
 			"mp": 200,
 			"rec": 425
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 447,
+			"def": 113,
+			"hp": 3128,
+			"rec": 686
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -37387,11 +37825,62 @@
 		"location": "Halloween Island",
 		"material": false,
 		"name": "Hallomew",
-		"passive": "",
-		"passive_effect": {},
+		"passive": "Increases leader's HP by 50%",
+		"passive_effect": {
+			"element": "leader",
+			"pct": 0.5,
+			"stat": "hp"
+		},
 		"quote": "",
 		"rarity": "rare",
-		"skills": [],
+		"skills": [
+			{
+				"description": "Attacks with 100% ATK",
+				"effects": [
+					{
+						"mult": 1.0,
+						"target": "enemy",
+						"type": "damage"
+					}
+				],
+				"icon": "Attack.png",
+				"mp": 40,
+				"name": "Rolling Attack"
+			},
+			{
+				"description": "Heals most hurt ally with 100% REC",
+				"effects": [
+					{
+						"mult": 1.0,
+						"target": "most_hurt",
+						"type": "heal"
+					}
+				],
+				"icon": "Heal.png",
+				"mp": 60,
+				"name": "Treat"
+			},
+			{
+				"description": "Attacks all with 75% ATK (Randomly Stage 1 Bleed for 10s)",
+				"effects": [
+					{
+						"mult": 0.75,
+						"target": "all_enemies",
+						"type": "damage"
+					},
+					{
+						"duration": 10.0,
+						"kind": "bleed",
+						"stage": 1,
+						"target": "all_enemies",
+						"type": "dot"
+					}
+				],
+				"icon": "Bleed All.png",
+				"mp": 100,
+				"name": "Or Trick"
+			}
+		],
 		"stars": 3,
 		"stats": {
 			"atk": 0,
@@ -37408,16 +37897,18 @@
 		},
 		"support_skill": {
 			"cooldown": 12.0,
-			"description": "",
+			"description": "Decreases enemies' ATK by 25% for 20s",
 			"effects": [
 				{
-					"mult": 1.0,
-					"target": "enemy",
-					"type": "damage"
+					"duration": 20.0,
+					"pct": 0.25,
+					"stat": "atk",
+					"target": "all_enemies",
+					"type": "debuff"
 				}
 			],
-			"icon": "",
-			"name": ""
+			"icon": "ATK Down All.png",
+			"name": "Basic Total Offense Down"
 		}
 	},
 	"hark": {
@@ -37522,10 +38013,10 @@
 			"rec": 235
 		},
 		"stats_max": {
-			"atk": 586,
+			"atk": 469,
 			"def": 49,
-			"hp": 1863,
-			"rec": 511
+			"hp": 1491,
+			"rec": 409
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -38703,7 +39194,7 @@
 			"pct": 0.7,
 			"stat": "hp"
 		},
-		"quote": "",
+		"quote": "You think I can't beat you?",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -39130,10 +39621,10 @@
 			"rec": 183
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 195,
+			"def": 68,
+			"hp": 1219,
+			"rec": 357
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -39770,11 +40261,15 @@
 			"mp": 200,
 			"rec": 350
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 702,
+			"def": 53,
+			"hp": 2190,
+			"rec": 535
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -39884,11 +40379,15 @@
 			"mp": 160,
 			"rec": 260
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 490,
+			"def": 55,
+			"hp": 1620,
+			"rec": 445
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -39929,8 +40428,12 @@
 		"location": "Spirit Island (Ici (★4))",
 		"material": false,
 		"name": "Ici",
-		"passive": "",
-		"passive_effect": {},
+		"passive": "Increases leader's MP by 40",
+		"passive_effect": {
+			"element": "leader",
+			"flat": 40.0,
+			"stat": "mp"
+		},
 		"quote": "",
 		"rarity": "super_rare",
 		"skills": [
@@ -40030,8 +40533,12 @@
 		"location": "First Stage found in Spirit Island",
 		"material": false,
 		"name": "Icikel",
-		"passive": "",
-		"passive_effect": {},
+		"passive": "Increases leader's MP by 50",
+		"passive_effect": {
+			"element": "leader",
+			"flat": 50.0,
+			"stat": "mp"
+		},
 		"quote": "Chill out and think rationally.",
 		"rarity": "epic",
 		"skills": [
@@ -40263,33 +40770,102 @@
 		"passive_effect": {},
 		"quote": "",
 		"rarity": "epic",
-		"skills": [],
+		"skills": [
+			{
+				"description": "Heals all allies (150% REC)",
+				"effects": [
+					{
+						"mult": 1.5,
+						"target": "all_allies",
+						"type": "heal"
+					}
+				],
+				"icon": "Heal All.png",
+				"mp": 60,
+				"name": "Dragon Blessing"
+			},
+			{
+				"description": "All allies ATK +50% for 20s",
+				"effects": [
+					{
+						"duration": 20.0,
+						"pct": 0.5,
+						"stat": "atk",
+						"target": "all_allies",
+						"type": "buff"
+					}
+				],
+				"icon": "ATK Up All.png",
+				"mp": 100,
+				"name": "Dragon Roar"
+			},
+			{
+				"description": "Stage 3 shield to all allies for 15s",
+				"effects": [
+					{
+						"duration": 15.0,
+						"stage": 3,
+						"target": "all_allies",
+						"type": "shield"
+					}
+				],
+				"icon": "Shield All.png",
+				"mp": 100,
+				"name": "Dragon Scale Barrier"
+			},
+			{
+				"description": "Attacks all enemies with 180% ATK; Stage 2 Freeze on all enemies",
+				"effects": [
+					{
+						"mult": 1.8,
+						"target": "all_enemies",
+						"type": "damage"
+					},
+					{
+						"duration": 10.0,
+						"kind": "freeze",
+						"stage": 2,
+						"target": "all_enemies",
+						"type": "dot"
+					}
+				],
+				"icon": "Freeze All.png",
+				"mp": 150,
+				"name": "Frozen Storm"
+			}
+		],
 		"stars": 5,
 		"stats": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
+			"atk": 378,
+			"def": 158,
+			"hp": 2652,
 			"mp": 200,
-			"rec": 0
+			"rec": 499
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats",
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 465,
+			"def": 158,
+			"hp": 3413,
+			"rec": 800
 		},
 		"support_skill": {
 			"cooldown": 12.0,
-			"description": "",
+			"description": "Stage 1 shield to all allies for 10s",
 			"effects": [
 				{
-					"mult": 1.0,
-					"target": "enemy",
-					"type": "damage"
+					"duration": 10.0,
+					"stage": 1,
+					"target": "all_allies",
+					"type": "shield"
 				}
 			],
-			"icon": "",
-			"name": ""
+			"icon": "Shield All.png",
+			"name": "Dragon Scale Barrier"
 		}
 	},
 	"infernopaw": {
@@ -40449,7 +41025,7 @@
 			"pct": 0.3,
 			"stat": "atk"
 		},
-		"quote": "",
+		"quote": "These claws of mine? Might want to avoid them.",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -40516,10 +41092,10 @@
 			"rec": 302
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 646,
+			"def": 51,
+			"hp": 2008,
+			"rec": 476
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -40876,7 +41452,7 @@
 					"type": "damage"
 				}
 			],
-			"icon": "",
+			"icon": "Attack_All.png",
 			"name": "Yet Trick"
 		}
 	},
@@ -41070,7 +41646,7 @@
 						"type": "damage"
 					}
 				],
-				"icon": "",
+				"icon": "Attack_All.png",
 				"mp": 150,
 				"name": "Yet Trick"
 			}
@@ -41084,10 +41660,10 @@
 			"rec": 344
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 733,
+			"def": 66,
+			"hp": 2291,
+			"rec": 518
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -41099,7 +41675,7 @@
 					"type": "damage"
 				}
 			],
-			"icon": "",
+			"icon": "Attack_All.png",
 			"name": "Yet Trick"
 		}
 	},
@@ -41211,7 +41787,7 @@
 			"rec": 666
 		},
 		"stats_max": {
-			"atk": 0,
+			"atk": 840,
 			"def": 66,
 			"hp": 3809,
 			"rec": 898
@@ -41668,10 +42244,10 @@
 			"rec": 183
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 195,
+			"def": 68,
+			"hp": 1219,
+			"rec": 357
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -42450,7 +43026,7 @@
 				"quantity": 1
 			}
 		],
-		"evolve_material": "overgrowth",
+		"evolve_material": "",
 		"evolve_quantity": 1,
 		"evolves_from": "dimbo",
 		"evolves_into": "",
@@ -42670,10 +43246,10 @@
 			"rec": 302
 		},
 		"stats_max": {
-			"atk": 0,
+			"atk": 646,
 			"def": 51,
-			"hp": 0,
-			"rec": 0
+			"hp": 2008,
+			"rec": 476
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -43089,7 +43665,7 @@
 			"pct": 0.35,
 			"stat": "atk"
 		},
-		"quote": "",
+		"quote": "We are chained by fate, you and I.",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -43448,37 +44024,103 @@
 		"location": "",
 		"material": false,
 		"name": "Kalper",
-		"passive": "",
-		"passive_effect": {},
+		"passive": "Increases leader's HP by 100%",
+		"passive_effect": {
+			"element": "leader",
+			"pct": 1.0,
+			"stat": "hp"
+		},
 		"quote": "You could wait, but when will chance come ever again?",
 		"rarity": "epic",
-		"skills": [],
+		"skills": [
+			{
+				"description": "Decreases 1 enemy's Speed by 25% for 20s",
+				"effects": [
+					{
+						"duration": 20.0,
+						"pct": 0.25,
+						"stat": "speed",
+						"target": "enemy",
+						"type": "debuff"
+					}
+				],
+				"icon": "Speed Down.png",
+				"mp": 40,
+				"name": "Basic Speed Down"
+			},
+			{
+				"description": "Attacks all with 75% ATK",
+				"effects": [
+					{
+						"mult": 0.75,
+						"target": "all_enemies",
+						"type": "damage"
+					}
+				],
+				"icon": "Attack All.png",
+				"mp": 60,
+				"name": "Wind Shower"
+			},
+			{
+				"description": "Absorbs damage with Stage 3 Shield",
+				"effects": [
+					{
+						"duration": 15.0,
+						"stage": 3,
+						"target": "leader",
+						"type": "shield"
+					}
+				],
+				"icon": "Shield.png",
+				"mp": 100,
+				"name": "Powerful Shield"
+			},
+			{
+				"description": "Attacks with 450% ATK",
+				"effects": [
+					{
+						"mult": 4.5,
+						"target": "enemy",
+						"type": "damage"
+					}
+				],
+				"icon": "Attack.png",
+				"mp": 150,
+				"name": "Black Gale"
+			}
+		],
 		"stars": 5,
 		"stats": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
+			"atk": 414,
+			"def": 75,
+			"hp": 2353,
 			"mp": 200,
-			"rec": 0
+			"rec": 468
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 526,
+			"def": 75,
+			"hp": 3072,
+			"rec": 689
 		},
 		"support_skill": {
 			"cooldown": 12.0,
-			"description": "",
+			"description": "Attacks with 250% ATK and stuns for 2s",
 			"effects": [
 				{
-					"mult": 1.0,
+					"mult": 2.5,
 					"target": "enemy",
 					"type": "damage"
+				},
+				{
+					"chance": 1.0,
+					"duration": 2.0,
+					"target": "enemy",
+					"type": "stun"
 				}
 			],
-			"icon": "",
-			"name": ""
+			"icon": "Stun.png",
+			"name": "Black Gale"
 		}
 	},
 	"kanga": {
@@ -43704,10 +44346,10 @@
 			"rec": 345
 		},
 		"stats_max": {
-			"atk": 1088,
+			"atk": 871,
 			"def": 52,
-			"hp": 3416,
-			"rec": 0
+			"hp": 2733,
+			"rec": 519
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -43812,10 +44454,10 @@
 			"rec": 196
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 431,
+			"def": 38,
+			"hp": 1295,
+			"rec": 341
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -44487,7 +45129,7 @@
 		"stats_max": {
 			"atk": 423,
 			"def": 88,
-			"hp": 2846,
+			"hp": 2849,
 			"rec": 602
 		},
 		"support_skill": {
@@ -44761,10 +45403,10 @@
 			"rec": 316
 		},
 		"stats_max": {
-			"atk": 0,
+			"atk": 665,
 			"def": 56,
-			"hp": 0,
-			"rec": 0
+			"hp": 2083,
+			"rec": 490
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -46491,7 +47133,7 @@
 			"pct": 0.3,
 			"stat": "atk"
 		},
-		"quote": "",
+		"quote": "I'm Leaf genie",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -46611,7 +47253,7 @@
 			"pct": 0.4,
 			"stat": "atk"
 		},
-		"quote": "",
+		"quote": "Listen to the whispers of life",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -47468,9 +48110,77 @@
 			"pct": 0.45,
 			"stat": "atk"
 		},
-		"quote": "",
+		"quote": "Lightning is the most powerful weapon to illuminate the darkness",
 		"rarity": "legendary",
-		"skills": [],
+		"skills": [
+			{
+				"description": "The leader ATK +50% for 20s",
+				"effects": [
+					{
+						"duration": 20.0,
+						"pct": 0.5,
+						"stat": "atk",
+						"target": "leader",
+						"type": "buff"
+					}
+				],
+				"icon": "ATK Up.png",
+				"mp": 40,
+				"name": "Volt Charge"
+			},
+			{
+				"description": "Attacks all enemies with 150% ATK; Stuns all enemies for 2s",
+				"effects": [
+					{
+						"mult": 1.5,
+						"target": "all_enemies",
+						"type": "damage"
+					},
+					{
+						"chance": 0.3,
+						"duration": 2.0,
+						"target": "all_enemies",
+						"type": "stun"
+					}
+				],
+				"icon": "Stun + Attack All.png",
+				"mp": 150,
+				"name": "Thunder Storm"
+			},
+			{
+				"description": "Heals the most hurt ally (200% REC)",
+				"effects": [
+					{
+						"mult": 2.0,
+						"target": "most_hurt",
+						"type": "heal"
+					}
+				],
+				"icon": "Heal.png",
+				"mp": 60,
+				"name": "Spirit Heal"
+			},
+			{
+				"description": "Attack with 300% ATK; inflicts Stage 2 Bleed",
+				"effects": [
+					{
+						"mult": 3.0,
+						"target": "enemy",
+						"type": "damage"
+					},
+					{
+						"duration": 10.0,
+						"kind": "bleed",
+						"stage": 2,
+						"target": "enemy",
+						"type": "dot"
+					}
+				],
+				"icon": "Bleed.png",
+				"mp": 100,
+				"name": "Call Lightning"
+			}
+		],
 		"stars": 6,
 		"stats": {
 			"atk": 810,
@@ -47485,24 +48195,35 @@
 			"hp": 0,
 			"rec": 0
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 981,
+			"def": 85,
+			"hp": 3127,
+			"rec": 692
 		},
 		"support_skill": {
 			"cooldown": 12.0,
-			"description": "",
+			"description": "Attacks 1 enemy with 150% ATK; Stage 1 Bleed on 1 enemy",
 			"effects": [
 				{
-					"mult": 1.0,
+					"mult": 1.5,
 					"target": "enemy",
 					"type": "damage"
+				},
+				{
+					"duration": 10.0,
+					"kind": "bleed",
+					"stage": 1,
+					"target": "enemy",
+					"type": "dot"
 				}
 			],
 			"icon": "Bleed.png",
-			"name": ""
+			"name": "Lightning Bite"
 		}
 	},
 	"lil_drip": {
@@ -47680,11 +48401,15 @@
 			"mp": 120,
 			"rec": 170
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
+			"atk": 330,
 			"def": 50,
-			"hp": 0,
-			"rec": 0
+			"hp": 848,
+			"rec": 316
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -48046,10 +48771,10 @@
 			"rec": 324
 		},
 		"stats_max": {
-			"atk": 0,
+			"atk": 318,
 			"def": 99,
-			"hp": 0,
-			"rec": 0
+			"hp": 2286,
+			"rec": 556
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -48242,7 +48967,7 @@
 						"type": "damage"
 					}
 				],
-				"icon": "",
+				"icon": "Attack_All.png",
 				"mp": 60,
 				"name": "Surrender Now!"
 			},
@@ -48429,7 +49154,7 @@
 		"name": "Luxhopper",
 		"passive": "",
 		"passive_effect": {},
-		"quote": "",
+		"quote": "Beyond the power of Lv. 30!",
 		"rarity": "legendary",
 		"skills": [
 			{
@@ -48835,7 +49560,7 @@
 				"quantity": 1
 			}
 		],
-		"evolve_material": "e_magnus",
+		"evolve_material": "",
 		"evolve_quantity": 1,
 		"evolves_from": "e_magnus",
 		"evolves_into": "",
@@ -48972,7 +49697,7 @@
 			"pct": 0.8,
 			"stat": "hp"
 		},
-		"quote": "",
+		"quote": "Punch! Punch! Punch with the fire in my heart!",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -49220,7 +49945,7 @@
 			"pct": 0.5,
 			"stat": "atk"
 		},
-		"quote": "",
+		"quote": "Feel the power of the great nature!",
 		"rarity": "legendary",
 		"skills": [
 			{
@@ -49689,7 +50414,7 @@
 		},
 		"stats_max": {
 			"atk": 469,
-			"def": 0,
+			"def": 49,
 			"hp": 1491,
 			"rec": 409
 		},
@@ -49923,11 +50648,15 @@
 			"mp": 160,
 			"rec": 337
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 350,
+			"def": 70,
+			"hp": 1872,
+			"rec": 578
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -50142,10 +50871,10 @@
 			"rec": 78
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 146,
+			"def": 25,
+			"hp": 464,
+			"rec": 194
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -50164,6 +50893,7 @@
 		}
 	},
 	"mauve_rock": {
+		"boost_fail": true,
 		"class": "C",
 		"element": "normal",
 		"evolution_tree": [],
@@ -50176,7 +50906,7 @@
 		"location": "Sky Island (Sky-2,5)",
 		"material": true,
 		"name": "Mauve Rock",
-		"passive": "Always fails at fortification and grants 0 Fortity Points",
+		"passive": "Always fails at fortification and grants 0 Fortify Points",
 		"passive_effect": {},
 		"quote": "",
 		"rarity": "common",
@@ -51429,7 +52159,7 @@
 			"pct": 0.33,
 			"stat": "def"
 		},
-		"quote": "",
+		"quote": "The terror begins.",
 		"rarity": "legendary",
 		"skills": [
 			{
@@ -51574,7 +52304,7 @@
 			"pct": 0.4,
 			"stat": "atk"
 		},
-		"quote": "",
+		"quote": "I will protect nature with my iron antlers.",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -51972,7 +52702,7 @@
 			"pct": 0.27,
 			"stat": "def"
 		},
-		"quote": "",
+		"quote": "I. Will. Destroy. You.",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -52051,10 +52781,10 @@
 			"rec": 462
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 523,
+			"def": 144,
+			"hp": 3480,
+			"rec": 752
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -52593,10 +53323,10 @@
 			"rec": 220
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 208,
+			"def": 88,
+			"hp": 1411,
+			"rec": 423
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -52643,8 +53373,12 @@
 		"location": "1st Stage on Spirit Island (Meteo (★4))",
 		"material": false,
 		"name": "Meteorik",
-		"passive": "",
-		"passive_effect": {},
+		"passive": "Increases leader's MP by 50",
+		"passive_effect": {
+			"element": "leader",
+			"flat": 50.0,
+			"stat": "mp"
+		},
 		"quote": "You can't say you're alive without a firey heart.",
 		"rarity": "epic",
 		"skills": [
@@ -54683,9 +55417,13 @@
 		"location": "",
 		"material": false,
 		"name": "Minohawk",
-		"passive": "",
-		"passive_effect": {},
-		"quote": "",
+		"passive": "Increases Normal Monsters' HP by 50%",
+		"passive_effect": {
+			"element": "normal",
+			"pct": 0.5,
+			"stat": "hp"
+		},
+		"quote": "Chaos! Destruction! Oblivion!",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -54734,17 +55472,17 @@
 		],
 		"stars": 5,
 		"stats": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
+			"atk": 371,
+			"def": 75,
+			"hp": 2215,
 			"mp": 200,
-			"rec": 0
+			"rec": 409
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 452,
+			"def": 75,
+			"hp": 2866,
+			"rec": 619
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -54775,8 +55513,12 @@
 		"location": "",
 		"material": false,
 		"name": "Minohawker",
-		"passive": "",
-		"passive_effect": {},
+		"passive": "Increases Normal Monsters' HP by 300",
+		"passive_effect": {
+			"element": "normal",
+			"flat": 300.0,
+			"stat": "hp"
+		},
 		"quote": "",
 		"rarity": "super_rare",
 		"skills": [
@@ -54826,17 +55568,17 @@
 		],
 		"stars": 4,
 		"stats": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
+			"atk": 248,
+			"def": 58,
+			"hp": 1353,
 			"mp": 160,
-			"rec": 0
+			"rec": 292
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 323,
+			"def": 58,
+			"hp": 1924,
+			"rec": 490
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -54945,10 +55687,10 @@
 			"rec": 183
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 184,
+			"def": 55,
+			"hp": 1096,
+			"rec": 342
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -55225,7 +55967,7 @@
 			"pct": 0.6,
 			"stat": "hp"
 		},
-		"quote": "",
+		"quote": "Face oblivion!",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -55410,10 +56152,10 @@
 			"rec": 245
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 510,
+			"def": 55,
+			"hp": 1566,
+			"rec": 419
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -55744,7 +56486,7 @@
 				"quantity": 1
 			}
 		],
-		"evolve_material": "goldbat",
+		"evolve_material": "",
 		"evolve_quantity": 1,
 		"evolves_from": "moonlight",
 		"evolves_into": "",
@@ -56135,7 +56877,7 @@
 				"quantity": 1
 			}
 		],
-		"evolve_material": "woods_kong",
+		"evolve_material": "",
 		"evolve_quantity": 1,
 		"evolves_from": "moonknight_epic",
 		"evolves_into": "",
@@ -56688,7 +57430,7 @@
 		"name": "Moss Bat",
 		"passive": "",
 		"passive_effect": {},
-		"quote": "",
+		"quote": "Silence, intruder!",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -58149,11 +58891,15 @@
 			"mp": 100,
 			"rec": 137
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 99,
+			"def": 72,
+			"hp": 856,
+			"rec": 298
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -58221,7 +58967,7 @@
 			"pct": 0.35,
 			"stat": "crit"
 		},
-		"quote": "",
+		"quote": "Finally... I've awaken from the unknown jungle.",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -58311,11 +59057,15 @@
 			"mp": 200,
 			"rec": 462
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 473,
+			"def": 152,
+			"hp": 3614,
+			"rec": 752
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -58482,7 +59232,7 @@
 			"pct": 0.5,
 			"stat": "atk"
 		},
-		"quote": "",
+		"quote": "Beware! The Deep forest is very dangerous.",
 		"rarity": "legendary",
 		"skills": [
 			{
@@ -58572,11 +59322,15 @@
 			"mp": 240,
 			"rec": 637
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 709,
+			"def": 199,
+			"hp": 5425,
+			"rec": 985
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -58796,10 +59550,10 @@
 			"rec": 338
 		},
 		"stats_max": {
-			"atk": 0,
+			"atk": 327,
 			"def": 110,
-			"hp": 0,
-			"rec": 0
+			"hp": 2385,
+			"rec": 599
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -59388,11 +60142,15 @@
 			"mp": 160,
 			"rec": 338
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 327,
+			"def": 122,
+			"hp": 2557,
+			"rec": 599
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -59738,10 +60496,10 @@
 			"rec": 385
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 340,
+			"def": 51,
+			"hp": 1594,
+			"rec": 675
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -59981,10 +60739,10 @@
 			"rec": 172
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 116,
+			"def": 32,
+			"hp": 531,
+			"rec": 375
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -60085,10 +60843,10 @@
 			"rec": 270
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 220,
+			"def": 42,
+			"hp": 958,
+			"rec": 502
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -60546,6 +61304,7 @@
 		}
 	},
 	"no_kong": {
+		"boost_fail": true,
 		"class": "A",
 		"element": "normal",
 		"evolution_tree": [
@@ -60569,7 +61328,7 @@
 		"location": "Spirit Island - No Kong (★4)",
 		"material": false,
 		"name": "No Kong",
-		"passive": "",
+		"passive": "Always fails at fortification and grants 0 Fortify Points",
 		"passive_effect": {},
 		"quote": "",
 		"rarity": "super_rare",
@@ -60630,6 +61389,7 @@
 		}
 	},
 	"nono_kong": {
+		"boost_fail": true,
 		"class": "A",
 		"element": "normal",
 		"evolution_tree": [
@@ -60644,7 +61404,7 @@
 				"quantity": 1
 			}
 		],
-		"evolve_material": "mantiroar",
+		"evolve_material": "",
 		"evolve_quantity": 1,
 		"evolves_from": "no_kong",
 		"evolves_into": "",
@@ -60653,7 +61413,7 @@
 		"location": "Evolve No Kong",
 		"material": false,
 		"name": "Nono Kong",
-		"passive": "",
+		"passive": "Always fails at fortification and grants 0 Fortify Points",
 		"passive_effect": {},
 		"quote": "Lose yourself in nothingness.",
 		"rarity": "epic",
@@ -60743,7 +61503,7 @@
 		"name": "Noxhopper",
 		"passive": "",
 		"passive_effect": {},
-		"quote": "",
+		"quote": "Beyond the power of Lv. 30!",
 		"rarity": "legendary",
 		"skills": [
 			{
@@ -61053,6 +61813,10 @@
 		}
 	},
 	"o_drank": {
+		"boost_for": {
+			"element": "fire",
+			"stars": 4
+		},
 		"class": "C",
 		"element": "fire",
 		"evolution_tree": [
@@ -61086,7 +61850,7 @@
 		"location": "Material Island (Flaree (★3) and Flaruus (★4))",
 		"material": false,
 		"name": "O. Drank",
-		"passive": "",
+		"passive": "Grants Fortify Points when used on 4★ Fire monsters",
 		"passive_effect": {},
 		"quote": "",
 		"rarity": "uncommon",
@@ -61560,10 +62324,10 @@
 			"rec": 114
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 89,
+			"def": 55,
+			"hp": 607,
+			"rec": 259
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -61912,10 +62676,10 @@
 			"rec": 183
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 195,
+			"def": 68,
+			"hp": 1219,
+			"rec": 357
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -62054,8 +62818,12 @@
 		"location": "",
 		"material": false,
 		"name": "Overgrowth",
-		"passive": "",
-		"passive_effect": {},
+		"passive": "Increases leader's MP by 50",
+		"passive_effect": {
+			"element": "leader",
+			"flat": 50.0,
+			"stat": "mp"
+		},
 		"quote": "New growth comes to those who wait.",
 		"rarity": "epic",
 		"skills": [
@@ -62230,10 +62998,10 @@
 			"rec": 141
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 276,
+			"def": 32,
+			"hp": 806,
+			"rec": 257
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -62252,6 +63020,10 @@
 		}
 	},
 	"p_drank": {
+		"boost_for": {
+			"element": "normal",
+			"stars": 4
+		},
 		"class": "C",
 		"element": "normal",
 		"evolution_tree": [
@@ -62285,7 +63057,7 @@
 		"location": "Lake Island (Lake-12), Material Island (Seree (★3), Seruus (★4))",
 		"material": false,
 		"name": "P. Drank",
-		"passive": "",
+		"passive": "Grants Fortify Points when used on 4★ Normal monsters",
 		"passive_effect": {},
 		"quote": "",
 		"rarity": "uncommon",
@@ -62931,10 +63703,10 @@
 			"rec": 462
 		},
 		"stats_max": {
-			"atk": 0,
+			"atk": 473,
 			"def": 144,
-			"hp": 0,
-			"rec": 0
+			"hp": 3407,
+			"rec": 752
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -63258,10 +64030,10 @@
 			"rec": 364
 		},
 		"stats_max": {
-			"atk": 0,
+			"atk": 348,
 			"def": 122,
-			"hp": 0,
-			"rec": 0
+			"hp": 2581,
+			"rec": 625
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -63379,10 +64151,10 @@
 			"rec": 462
 		},
 		"stats_max": {
-			"atk": 0,
+			"atk": 473,
 			"def": 144,
-			"hp": 0,
-			"rec": 0
+			"hp": 3598,
+			"rec": 752
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -63622,6 +64394,10 @@
 		}
 	},
 	"patchee": {
+		"boost_for": {
+			"element": "nature",
+			"stars": 5
+		},
 		"class": "C",
 		"element": "nature",
 		"evolution_tree": [
@@ -63655,7 +64431,7 @@
 		"location": "Material Island",
 		"material": false,
 		"name": "Patchee",
-		"passive": "",
+		"passive": "Grants Fortify Points when used on 5★ Nature monsters",
 		"passive_effect": {},
 		"quote": "",
 		"rarity": "rare",
@@ -63731,6 +64507,10 @@
 		}
 	},
 	"patchuus": {
+		"boost_for": {
+			"element": "nature",
+			"stars": 6
+		},
 		"class": "C",
 		"element": "nature",
 		"evolution_tree": [
@@ -63764,7 +64544,7 @@
 		"location": "Material Island",
 		"material": false,
 		"name": "Patchuus",
-		"passive": "",
+		"passive": "Grants Fortify Points when used on 6★ Nature monsters",
 		"passive_effect": {},
 		"quote": "",
 		"rarity": "super_rare",
@@ -63820,10 +64600,10 @@
 			"rec": 142
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 240,
+			"def": 44,
+			"hp": 995,
+			"rec": 258
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -64034,7 +64814,7 @@
 			"pct": 0.24,
 			"stat": "def"
 		},
-		"quote": "",
+		"quote": "You'll pay for abusing Mother Nature!",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -65679,10 +66459,10 @@
 			"rec": 252
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 414,
+			"def": 85,
+			"hp": 1746,
+			"rec": 397
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -65775,10 +66555,10 @@
 			"rec": 125
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 174,
+			"def": 46,
+			"hp": 696,
+			"rec": 241
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -65889,10 +66669,10 @@
 			"rec": 170
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 262,
+			"def": 57,
+			"hp": 1134,
+			"rec": 315
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -66015,11 +66795,15 @@
 			"mp": 120,
 			"rec": 240
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 214,
+			"def": 88,
+			"hp": 1414,
+			"rec": 483
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -66334,10 +67118,10 @@
 			"rec": 176
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 319,
+			"def": 46,
+			"hp": 1030,
+			"rec": 330
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -67825,10 +68609,10 @@
 			"rec": 275
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 631,
+			"def": 44,
+			"hp": 1904,
+			"rec": 420
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -67953,11 +68737,15 @@
 			"mp": 120,
 			"rec": 220
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 222,
+			"def": 79,
+			"hp": 1414,
+			"rec": 443
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -69295,10 +70083,10 @@
 			"rec": 183
 		},
 		"stats_max": {
-			"atk": 0,
+			"atk": 195,
 			"def": 68,
-			"hp": 0,
-			"rec": 0
+			"hp": 1219,
+			"rec": 357
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -69349,7 +70137,7 @@
 			"pct": 0.7,
 			"stat": "hp"
 		},
-		"quote": "",
+		"quote": "The earth will be here long after you're gone.",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -70116,11 +70904,15 @@
 			"mp": 200,
 			"rec": 350
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 734,
+			"def": 68,
+			"hp": 2319,
+			"rec": 527
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -70177,10 +70969,11 @@
 		"location": "Material Island",
 		"material": false,
 		"name": "Rubat",
-		"passive": "",
+		"passive": "Lucky prize! Sells for 10,000 gold",
 		"passive_effect": {},
 		"quote": "",
 		"rarity": "rare",
+		"sell_price": 10000,
 		"skills": [
 			{
 				"description": "Attacks with 100% ATK",
@@ -70284,10 +71077,11 @@
 		"location": "Found on Material Island as Lv.30",
 		"material": false,
 		"name": "Rubi",
-		"passive": "",
+		"passive": "Consolation prize! Sells for 3,000 gold",
 		"passive_effect": {},
 		"quote": "",
 		"rarity": "uncommon",
+		"sell_price": 3000,
 		"skills": [
 			{
 				"description": "Attacks with 100% ATK",
@@ -70378,10 +71172,11 @@
 		"location": "Material Island",
 		"material": false,
 		"name": "Ruburak",
-		"passive": "",
+		"passive": "Jackpot! Sells for 50,000 gold",
 		"passive_effect": {},
 		"quote": "",
 		"rarity": "super_rare",
+		"sell_price": 50000,
 		"skills": [
 			{
 				"description": "Attack with 100% ATK",
@@ -70842,7 +71637,7 @@
 			"pct": 0.3,
 			"stat": "def"
 		},
-		"quote": "",
+		"quote": "We give presents to good kids!",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -71346,10 +72141,11 @@
 		"location": "Material Island",
 		"material": false,
 		"name": "Sapphburak",
-		"passive": "",
+		"passive": "Jackpot! Sells for 50,000 gold",
 		"passive_effect": {},
 		"quote": "",
 		"rarity": "super_rare",
+		"sell_price": 50000,
 		"skills": [
 			{
 				"description": "Attacks with 100% ATK",
@@ -71560,10 +72356,11 @@
 		"location": "Material Island: Sapphibat (★3) and Sapphburak (★4)",
 		"material": false,
 		"name": "Sapphibi",
-		"passive": "",
+		"passive": "Consolation prize! Sells for 3,000 gold",
 		"passive_effect": {},
 		"quote": "",
 		"rarity": "uncommon",
+		"sell_price": 3000,
 		"skills": [
 			{
 				"description": "Attacks with 100% ATK",
@@ -71621,6 +72418,7 @@
 		}
 	},
 	"sapphiroid": {
+		"boost_fail": true,
 		"class": "C",
 		"element": "water",
 		"evolution_tree": [],
@@ -71633,7 +72431,7 @@
 		"location": "Sky Island (Sky-3)",
 		"material": true,
 		"name": "Sapphiroid",
-		"passive": "Always fails at fortification and grants 0 Fortity Points",
+		"passive": "Always fails at fortification and grants 0 Fortify Points",
 		"passive_effect": {},
 		"quote": "",
 		"rarity": "common",
@@ -71872,10 +72670,10 @@
 			"rec": 385
 		},
 		"stats_max": {
-			"atk": 0,
+			"atk": 340,
 			"def": 51,
-			"hp": 0,
-			"rec": 0
+			"hp": 1594,
+			"rec": 675
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -72298,6 +73096,10 @@
 		}
 	},
 	"seruus": {
+		"boost_for": {
+			"element": "normal",
+			"stars": 6
+		},
 		"class": "B",
 		"element": "normal",
 		"evolution_tree": [
@@ -72331,7 +73133,7 @@
 		"location": "Material Island (Seruus (★4))",
 		"material": false,
 		"name": "Seruus",
-		"passive": "",
+		"passive": "Grants Fortify Points when used on 6★ Normal monsters",
 		"passive_effect": {},
 		"quote": "",
 		"rarity": "super_rare",
@@ -72387,10 +73189,10 @@
 			"rec": 142
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 240,
+			"def": 44,
+			"hp": 995,
+			"rec": 258
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -72426,7 +73228,7 @@
 				"quantity": 1
 			}
 		],
-		"evolve_material": "icikel",
+		"evolve_material": "",
 		"evolve_quantity": 1,
 		"evolves_from": "shaaark",
 		"evolves_into": "",
@@ -74725,10 +75527,10 @@
 			"rec": 125
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 174,
+			"def": 46,
+			"hp": 696,
+			"rec": 241
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -75308,7 +76110,7 @@
 			"atk": 469,
 			"def": 49,
 			"hp": 1491,
-			"rec": 406
+			"rec": 409
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -75532,7 +76334,7 @@
 			"atk": 469,
 			"def": 49,
 			"hp": 1491,
-			"rec": 406
+			"rec": 409
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -75565,33 +76367,65 @@
 		"passive_effect": {},
 		"quote": "",
 		"rarity": "super_rare",
-		"skills": [],
+		"skills": [
+			{
+				"description": "Heals the most hurt ally (150% REC)",
+				"effects": [
+					{
+						"mult": 1.5,
+						"target": "most_hurt",
+						"type": "heal"
+					}
+				],
+				"icon": "Heal.png",
+				"mp": 40,
+				"name": "Quick Heal"
+			},
+			{
+				"description": "Attacks 1 enemy with 200% ATK",
+				"effects": [
+					{
+						"mult": 2.0,
+						"target": "enemy",
+						"type": "damage"
+					}
+				],
+				"icon": "Attack.png",
+				"mp": 40,
+				"name": "Bone Toss"
+			}
+		],
 		"stars": 4,
 		"stats": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
+			"atk": 353,
+			"def": 49,
+			"hp": 1056,
 			"mp": 160,
-			"rec": 0
+			"rec": 235
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats",
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 469,
+			"def": 49,
+			"hp": 1491,
+			"rec": 409
 		},
 		"support_skill": {
 			"cooldown": 12.0,
-			"description": "",
+			"description": "Attacks 1 enemy with 150% ATK",
 			"effects": [
 				{
-					"mult": 1.0,
+					"mult": 1.5,
 					"target": "enemy",
 					"type": "damage"
 				}
 			],
-			"icon": "",
-			"name": ""
+			"icon": "Attack.png",
+			"name": "Bone Toss"
 		}
 	},
 	"skelfire": {
@@ -75723,33 +76557,65 @@
 		"passive_effect": {},
 		"quote": "",
 		"rarity": "rare",
-		"skills": [],
+		"skills": [
+			{
+				"description": "Heals the most hurt ally (150% REC)",
+				"effects": [
+					{
+						"mult": 1.5,
+						"target": "most_hurt",
+						"type": "heal"
+					}
+				],
+				"icon": "Heal.png",
+				"mp": 40,
+				"name": "Quick Heal"
+			},
+			{
+				"description": "Attacks 1 enemy with 200% ATK",
+				"effects": [
+					{
+						"mult": 2.0,
+						"target": "enemy",
+						"type": "damage"
+					}
+				],
+				"icon": "Attack.png",
+				"mp": 40,
+				"name": "Bone Toss"
+			}
+		],
 		"stars": 3,
 		"stats": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
+			"atk": 179,
+			"def": 42,
+			"hp": 627,
 			"mp": 120,
-			"rec": 0
+			"rec": 169
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats",
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 295,
+			"def": 42,
+			"hp": 917,
+			"rec": 314
 		},
 		"support_skill": {
 			"cooldown": 12.0,
-			"description": "",
+			"description": "Attacks 1 enemy with 150% ATK",
 			"effects": [
 				{
-					"mult": 1.0,
+					"mult": 1.5,
 					"target": "enemy",
 					"type": "damage"
 				}
 			],
-			"icon": "",
-			"name": ""
+			"icon": "Attack.png",
+			"name": "Bone Toss"
 		}
 	},
 	"skulbloom": {
@@ -76062,37 +76928,68 @@
 		"location": "",
 		"material": false,
 		"name": "Skulme",
-		"passive": "",
-		"passive_effect": {},
+		"passive": "Increases leader's ATK by 40",
+		"passive_effect": {
+			"element": "leader",
+			"flat": 40.0,
+			"stat": "atk"
+		},
 		"quote": "",
 		"rarity": "uncommon",
-		"skills": [],
+		"skills": [
+			{
+				"description": "Heals the most hurt ally (150% REC)",
+				"effects": [
+					{
+						"mult": 1.5,
+						"target": "most_hurt",
+						"type": "heal"
+					}
+				],
+				"icon": "Heal.png",
+				"mp": 40,
+				"name": "Quick Heal"
+			},
+			{
+				"description": "Attacks 1 enemy with 200% ATK",
+				"effects": [
+					{
+						"mult": 2.0,
+						"target": "enemy",
+						"type": "damage"
+					}
+				],
+				"icon": "Attack.png",
+				"mp": 40,
+				"name": "Bone Toss"
+			}
+		],
 		"stars": 2,
 		"stats": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
+			"atk": 74,
+			"def": 32,
+			"hp": 214,
 			"mp": 100,
-			"rec": 0
+			"rec": 85
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 127,
+			"def": 32,
+			"hp": 454,
+			"rec": 208
 		},
 		"support_skill": {
 			"cooldown": 12.0,
-			"description": "",
+			"description": "Attacks 1 enemy with 150% ATK",
 			"effects": [
 				{
-					"mult": 1.0,
+					"mult": 1.5,
 					"target": "enemy",
 					"type": "damage"
 				}
 			],
-			"icon": "",
-			"name": ""
+			"icon": "Attack.png",
+			"name": "Bone Toss"
 		}
 	},
 	"slayergal": {
@@ -76324,11 +77221,70 @@
 		"location": "",
 		"material": false,
 		"name": "Slime King",
-		"passive": "",
-		"passive_effect": {},
+		"passive": "Increases leader's MP by 45",
+		"passive_effect": {
+			"element": "leader",
+			"flat": 45.0,
+			"stat": "mp"
+		},
 		"quote": "One must eat to become strong.",
 		"rarity": "epic",
-		"skills": [],
+		"skills": [
+			{
+				"description": "Increases random ally's ATK by 25% for 20s",
+				"effects": [
+					{
+						"duration": 20.0,
+						"pct": 0.25,
+						"stat": "atk",
+						"target": "random_ally",
+						"type": "buff"
+					}
+				],
+				"icon": "ATK Up.png",
+				"mp": 40,
+				"name": "Basic Random ATK Up"
+			},
+			{
+				"description": "Attacks with 200% ATK",
+				"effects": [
+					{
+						"mult": 2.0,
+						"target": "enemy",
+						"type": "damage"
+					}
+				],
+				"icon": "Attack.png",
+				"mp": 60,
+				"name": "Fragment Shot"
+			},
+			{
+				"description": "Attacks all with 100% ATK",
+				"effects": [
+					{
+						"mult": 1.0,
+						"target": "all_enemies",
+						"type": "damage"
+					}
+				],
+				"icon": "Attack All.png",
+				"mp": 100,
+				"name": "King Black Hole"
+			},
+			{
+				"description": "Heals all with 250% REC",
+				"effects": [
+					{
+						"mult": 2.5,
+						"target": "all_allies",
+						"type": "heal"
+					}
+				],
+				"icon": "Heal All.png",
+				"mp": 150,
+				"name": "King Shower"
+			}
+		],
 		"stars": 5,
 		"stats": {
 			"atk": 327,
@@ -76341,20 +77297,24 @@
 			"atk": 414,
 			"def": 85,
 			"hp": 1746,
-			"rec": 0
+			"rec": 397
 		},
 		"support_skill": {
 			"cooldown": 12.0,
-			"description": "",
+			"description": "Heals all with 200% REC and cures status effects",
 			"effects": [
 				{
-					"mult": 1.0,
-					"target": "enemy",
-					"type": "damage"
+					"mult": 2.0,
+					"target": "all_allies",
+					"type": "heal"
+				},
+				{
+					"target": "all_allies",
+					"type": "cleanse"
 				}
 			],
-			"icon": "",
-			"name": ""
+			"icon": "Heal All.png",
+			"name": "Total Heal"
 		}
 	},
 	"sliming": {
@@ -76428,7 +77388,7 @@
 			"rec": 155
 		},
 		"stats_max": {
-			"atk": 120,
+			"atk": 110,
 			"def": 29,
 			"hp": 478,
 			"rec": 329
@@ -76529,10 +77489,10 @@
 			"rec": 270
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 290,
+			"def": 76,
+			"hp": 1992,
+			"rec": 473
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -77926,10 +78886,10 @@
 			"rec": 70
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 137,
+			"def": 22,
+			"hp": 412,
+			"rec": 186
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -78118,10 +79078,10 @@
 			"rec": 155
 		},
 		"stats_max": {
-			"atk": 0,
+			"atk": 110,
 			"def": 29,
-			"hp": 0,
-			"rec": 0
+			"hp": 478,
+			"rec": 329
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -78387,7 +79347,7 @@
 				"quantity": 1
 			}
 		],
-		"evolve_material": "goldbat",
+		"evolve_material": "",
 		"evolve_quantity": 1,
 		"evolves_from": "spookloak",
 		"evolves_into": "",
@@ -78772,10 +79732,10 @@
 			"rec": 196
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 431,
+			"def": 38,
+			"hp": 1295,
+			"rec": 341
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -78935,7 +79895,7 @@
 			"pct": 0.25,
 			"stat": "crit"
 		},
-		"quote": "",
+		"quote": "Try me. I dare ya.",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -79262,11 +80222,15 @@
 			"mp": 100,
 			"rec": 137
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 99,
+			"def": 72,
+			"hp": 856,
+			"rec": 298
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -79308,7 +80272,7 @@
 			"pct": 0.5,
 			"stat": "atk"
 		},
-		"quote": "",
+		"quote": "My power will send everything to the next dimension!",
 		"rarity": "legendary",
 		"skills": [
 			{
@@ -79397,10 +80361,10 @@
 			"rec": 637
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 703,
+			"def": 187,
+			"hp": 4833,
+			"rec": 985
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -79617,10 +80581,10 @@
 			"rec": 155
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 284,
+			"def": 37,
+			"hp": 833,
+			"rec": 271
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -79676,7 +80640,7 @@
 			"pct": 0.2,
 			"stat": "def"
 		},
-		"quote": "",
+		"quote": "When you look into darkness, it often looks back.",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -79748,10 +80712,10 @@
 			"rec": 370
 		},
 		"stats_max": {
-			"atk": 528,
+			"atk": 423,
 			"def": 88,
-			"hp": 3561,
-			"rec": 752
+			"hp": 2849,
+			"rec": 602
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -79953,16 +80917,16 @@
 		"stars": 2,
 		"stats": {
 			"atk": 60,
-			"def": 0,
+			"def": 55,
 			"hp": 259,
 			"mp": 100,
 			"rec": 114
 		},
 		"stats_max": {
-			"atk": 0,
+			"atk": 89,
 			"def": 55,
-			"hp": 0,
-			"rec": 0
+			"hp": 607,
+			"rec": 259
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -80182,11 +81146,15 @@
 			"mp": 160,
 			"rec": 196
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
+			"atk": 532,
 			"def": 48,
-			"hp": 0,
-			"rec": 0
+			"hp": 1435,
+			"rec": 341
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -81973,7 +82941,7 @@
 			"pct": 0.3,
 			"stat": "atk"
 		},
-		"quote": "",
+		"quote": "Stand on your own two legs!",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -82040,10 +83008,10 @@
 			"rec": 275
 		},
 		"stats_max": {
-			"atk": 0,
+			"atk": 631,
 			"def": 44,
-			"hp": 0,
-			"rec": 0
+			"hp": 1904,
+			"rec": 420
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -82913,11 +83881,15 @@
 			"mp": 160,
 			"rec": 338
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 340,
+			"def": 95,
+			"hp": 2385,
+			"rec": 599
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -83103,7 +84075,7 @@
 			"pct": 0.35,
 			"stat": "atk"
 		},
-		"quote": "",
+		"quote": "Ride the winds with me.",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -83183,7 +84155,7 @@
 			"rec": 316
 		},
 		"stats_max": {
-			"atk": 0,
+			"atk": 665,
 			"def": 56,
 			"hp": 2083,
 			"rec": 490
@@ -83481,8 +84453,12 @@
 		"location": "First Stage at Spirit Island (Torni (★4))",
 		"material": false,
 		"name": "Tornido",
-		"passive": "",
-		"passive_effect": {},
+		"passive": "Increases leader's MP by 50",
+		"passive_effect": {
+			"element": "leader",
+			"flat": 50.0,
+			"stat": "mp"
+		},
 		"quote": "I'd rather be free to fall than safely caged.",
 		"rarity": "epic",
 		"skills": [
@@ -83552,10 +84528,10 @@
 			"rec": 232
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 391,
+			"def": 67,
+			"hp": 1603,
+			"rec": 377
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -83723,7 +84699,7 @@
 			"pct": 0.24,
 			"stat": "def"
 		},
-		"quote": "",
+		"quote": "Do you feel that? It's the heat of my breath!",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -84441,7 +85417,7 @@
 						"type": "damage"
 					}
 				],
-				"icon": "",
+				"icon": "Attack.png",
 				"mp": 40,
 				"name": "Dark Ball"
 			},
@@ -84456,7 +85432,7 @@
 						"type": "dot"
 					}
 				],
-				"icon": "",
+				"icon": "Bleed.png",
 				"mp": 60,
 				"name": "Head Uppercut"
 			},
@@ -84469,7 +85445,7 @@
 						"type": "lifesteal"
 					}
 				],
-				"icon": "",
+				"icon": "Attack.png",
 				"mp": 100,
 				"name": "Vitality Raid"
 			},
@@ -84484,7 +85460,7 @@
 						"type": "dot"
 					}
 				],
-				"icon": "",
+				"icon": "Poison All.png",
 				"mp": 150,
 				"name": "Poison Spray"
 			}
@@ -84498,10 +85474,10 @@
 			"rec": 316
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 665,
+			"def": 56,
+			"hp": 2083,
+			"rec": 490
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -84515,7 +85491,7 @@
 					"type": "dot"
 				}
 			],
-			"icon": "",
+			"icon": "Poison All.png",
 			"name": "Poison Spray"
 		}
 	},
@@ -85279,7 +86255,7 @@
 			"pct": 0.5,
 			"stat": "atk"
 		},
-		"quote": "",
+		"quote": "Beware! The deep sea is very cold.",
 		"rarity": "legendary",
 		"skills": [
 			{
@@ -85368,11 +86344,15 @@
 			"hp": 0,
 			"rec": 0
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 857,
+			"def": 274,
+			"hp": 5767,
+			"rec": 1523
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -85777,10 +86757,10 @@
 			"rec": 235
 		},
 		"stats_max": {
-			"atk": 0,
+			"atk": 469,
 			"def": 49,
-			"hp": 0,
-			"rec": 0
+			"hp": 1491,
+			"rec": 409
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -85848,7 +86828,7 @@
 			"pct": 0.27,
 			"stat": "def"
 		},
-		"quote": "",
+		"quote": "Life begins at one hundred years old.",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -85926,10 +86906,10 @@
 			"rec": 344
 		},
 		"stats_max": {
-			"atk": 0,
+			"atk": 733,
 			"def": 72,
-			"hp": 0,
-			"rec": 0
+			"hp": 2291,
+			"rec": 518
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -86339,11 +87319,15 @@
 			"mp": 160,
 			"rec": 378
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 388,
+			"def": 133,
+			"hp": 2691,
+			"rec": 649
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -86704,7 +87688,7 @@
 		],
 		"stars": 6,
 		"stats": {
-			"atk": 489,
+			"atk": 498,
 			"def": 128,
 			"hp": 3589,
 			"mp": 240,
@@ -87341,7 +88325,7 @@
 			"pct": 0.75,
 			"stat": "hp"
 		},
-		"quote": "",
+		"quote": "I'm not the giving tree.",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -87525,11 +88509,15 @@
 			"hp": 0,
 			"rec": 0
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 1014,
+			"def": 82,
+			"hp": 3415,
+			"rec": 683
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -87715,13 +88703,13 @@
 		"location": "Evolution / Mystery Box",
 		"material": false,
 		"name": "Undine",
-		"passive": "Increases Nature Monsters' ATK by 45%",
+		"passive": "Increases Water Monsters' ATK by 45%",
 		"passive_effect": {
-			"element": "nature",
+			"element": "water",
 			"pct": 0.45,
 			"stat": "atk"
 		},
-		"quote": "",
+		"quote": "I'm beautiful and dangerous as a deep lake",
 		"rarity": "legendary",
 		"skills": [
 			{
@@ -88113,7 +89101,7 @@
 			"pct": 0.7,
 			"stat": "hp"
 		},
-		"quote": "",
+		"quote": "You can take on the world with a friend.",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -88445,10 +89433,10 @@
 			"rec": 425
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 447,
+			"def": 113,
+			"hp": 3128,
+			"rec": 686
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -89263,10 +90251,10 @@
 			"rec": 338
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 327,
+			"def": 110,
+			"hp": 2385,
+			"rec": 599
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -89308,9 +90296,66 @@
 			"pct": 0.3,
 			"stat": "atk"
 		},
-		"quote": "",
+		"quote": "I'm Void genie",
 		"rarity": "epic",
-		"skills": [],
+		"skills": [
+			{
+				"description": "1 enemy Speed -25% for 20s",
+				"effects": [
+					{
+						"duration": 20.0,
+						"pct": 0.25,
+						"stat": "speed",
+						"target": "enemy",
+						"type": "debuff"
+					}
+				],
+				"icon": "Speed Down.png",
+				"mp": 40,
+				"name": "Basic Speed Down"
+			},
+			{
+				"description": "Attacks all enemies with 120% ATK",
+				"effects": [
+					{
+						"mult": 1.2,
+						"target": "all_enemies",
+						"type": "damage"
+					}
+				],
+				"icon": "Attack All.png",
+				"mp": 100,
+				"name": "Genie Storm"
+			},
+			{
+				"description": "All enemies ATK -25% for 20s",
+				"effects": [
+					{
+						"duration": 20.0,
+						"pct": 0.25,
+						"stat": "atk",
+						"target": "all_enemies",
+						"type": "debuff"
+					}
+				],
+				"icon": "ATK Down All.png",
+				"mp": 100,
+				"name": "Basic Total ATK Down"
+			},
+			{
+				"description": "Attacks 1 enemy with 250% ATK",
+				"effects": [
+					{
+						"mult": 2.5,
+						"target": "enemy",
+						"type": "damage"
+					}
+				],
+				"icon": "Attack.png",
+				"mp": 60,
+				"name": "Void Punch"
+			}
+		],
 		"stars": 5,
 		"stats": {
 			"atk": 312,
@@ -89320,23 +90365,23 @@
 			"rec": 242
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 399,
+			"def": 104,
+			"hp": 1689,
+			"rec": 387
 		},
 		"support_skill": {
 			"cooldown": 12.0,
-			"description": "",
+			"description": "Attacks 1 enemy with 150% ATK",
 			"effects": [
 				{
-					"mult": 1.0,
+					"mult": 1.5,
 					"target": "enemy",
 					"type": "damage"
 				}
 			],
 			"icon": "Attack.png",
-			"name": ""
+			"name": "Void Punch"
 		}
 	},
 	"void_knight": {
@@ -89369,7 +90414,7 @@
 			"pct": 0.45,
 			"stat": "atk"
 		},
-		"quote": "",
+		"quote": "Darkness is my strength",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -89516,7 +90561,7 @@
 			"pct": 0.33,
 			"stat": "def"
 		},
-		"quote": "",
+		"quote": "I come from a deep space",
 		"rarity": "epic",
 		"skills": [],
 		"stars": 5,
@@ -89527,11 +90572,15 @@
 			"mp": 200,
 			"rec": 310
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 753,
+			"def": 80,
+			"hp": 2284,
+			"rec": 473
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -89719,9 +90768,77 @@
 			"pct": 0.4,
 			"stat": "atk"
 		},
-		"quote": "",
+		"quote": "I'm a spirit that controls lightning.",
 		"rarity": "epic",
-		"skills": [],
+		"skills": [
+			{
+				"description": "The leader ATK +50% for 20s",
+				"effects": [
+					{
+						"duration": 20.0,
+						"pct": 0.5,
+						"stat": "atk",
+						"target": "leader",
+						"type": "buff"
+					}
+				],
+				"icon": "ATK Up.png",
+				"mp": 40,
+				"name": "Volt Charge"
+			},
+			{
+				"description": "Attacks all enemies with 150% ATK; Stuns all enemies for 2s",
+				"effects": [
+					{
+						"mult": 1.5,
+						"target": "all_enemies",
+						"type": "damage"
+					},
+					{
+						"chance": 0.3,
+						"duration": 2.0,
+						"target": "all_enemies",
+						"type": "stun"
+					}
+				],
+				"icon": "Stun + Attack All.png",
+				"mp": 150,
+				"name": "Thunder Storm"
+			},
+			{
+				"description": "Heals the most hurt ally (200% REC)",
+				"effects": [
+					{
+						"mult": 2.0,
+						"target": "most_hurt",
+						"type": "heal"
+					}
+				],
+				"icon": "Heal.png",
+				"mp": 60,
+				"name": "Spirit Heal"
+			},
+			{
+				"description": "Attack with 300% ATK; inflicts Stage 2 Bleed",
+				"effects": [
+					{
+						"mult": 3.0,
+						"target": "enemy",
+						"type": "damage"
+					},
+					{
+						"duration": 10.0,
+						"kind": "bleed",
+						"stage": 2,
+						"target": "enemy",
+						"type": "dot"
+					}
+				],
+				"icon": "Bleed.png",
+				"mp": 100,
+				"name": "Call Lightning"
+			}
+		],
 		"stars": 5,
 		"stats": {
 			"atk": 520,
@@ -89730,24 +90847,35 @@
 			"mp": 200,
 			"rec": 380
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 682,
+			"def": 70,
+			"hp": 2141,
+			"rec": 572
 		},
 		"support_skill": {
 			"cooldown": 12.0,
-			"description": "",
+			"description": "Attacks 1 enemy with 150% ATK; Stage 1 Bleed on 1 enemy",
 			"effects": [
 				{
-					"mult": 1.0,
+					"mult": 1.5,
 					"target": "enemy",
 					"type": "damage"
+				},
+				{
+					"duration": 10.0,
+					"kind": "bleed",
+					"stage": 1,
+					"target": "enemy",
+					"type": "dot"
 				}
 			],
 			"icon": "Bleed.png",
-			"name": ""
+			"name": "Lightning Bite"
 		}
 	},
 	"voxus": {
@@ -90017,7 +91145,7 @@
 			"rec": 155
 		},
 		"stats_max": {
-			"atk": 120,
+			"atk": 110,
 			"def": 29,
 			"hp": 478,
 			"rec": 329
@@ -90536,7 +91664,7 @@
 			"pct": 0.3,
 			"stat": "atk"
 		},
-		"quote": "",
+		"quote": "I'm Water genie",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -90605,10 +91733,10 @@
 			"rec": 242
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 399,
+			"def": 104,
+			"hp": 1689,
+			"rec": 387
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -90650,8 +91778,12 @@
 		"location": "Spirit Island - Water Kong (★4)",
 		"material": false,
 		"name": "Water Kong",
-		"passive": "",
-		"passive_effect": {},
+		"passive": "Increases Water Monsters' MP recovery by 15%",
+		"passive_effect": {
+			"element": "water",
+			"pct": 0.15,
+			"stat": "mp_regen"
+		},
 		"quote": "",
 		"rarity": "super_rare",
 		"skills": [
@@ -90803,11 +91935,15 @@
 			"mp": 120,
 			"rec": 185
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 325,
+			"def": 40,
+			"hp": 952,
+			"rec": 337
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -91012,12 +92148,16 @@
 		],
 		"stars": 6,
 		"stats": {
-			"atk": 0,
+			"atk": 853,
 			"def": 75,
-			"hp": 0,
+			"hp": 2769,
 			"mp": 240,
-			"rec": 0
+			"rec": 572
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats"
+		],
 		"stats_max": {
 			"atk": 1024,
 			"def": 75,
@@ -91136,11 +92276,15 @@
 			"mp": 160,
 			"rec": 280
 		},
+		"stats_estimated": true,
+		"stats_estimated_parts": [
+			"stats_max"
+		],
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 462,
+			"def": 35,
+			"hp": 1696,
+			"rec": 479
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -91191,7 +92335,7 @@
 			"pct": 0.8,
 			"stat": "hp"
 		},
-		"quote": "",
+		"quote": "I am cold blooded.",
 		"rarity": "epic",
 		"skills": [
 			{
@@ -91866,6 +93010,10 @@
 		}
 	},
 	"whirlee": {
+		"boost_for": {
+			"element": "water",
+			"stars": 5
+		},
 		"class": "B",
 		"element": "water",
 		"evolution_tree": [
@@ -91899,7 +93047,7 @@
 		"location": "",
 		"material": false,
 		"name": "Whirlee",
-		"passive": "",
+		"passive": "Grants Fortify Points when used on 5★ Water monsters",
 		"passive_effect": {},
 		"quote": "",
 		"rarity": "rare",
@@ -91975,6 +93123,10 @@
 		}
 	},
 	"whirluus": {
+		"boost_for": {
+			"element": "water",
+			"stars": 6
+		},
 		"class": "B",
 		"element": "water",
 		"evolution_tree": [
@@ -92008,7 +93160,7 @@
 		"location": "",
 		"material": false,
 		"name": "Whirluus",
-		"passive": "",
+		"passive": "Grants Fortify Points when used on 6★ Water monsters",
 		"passive_effect": {},
 		"quote": "",
 		"rarity": "super_rare",
@@ -92513,10 +93665,10 @@
 			"rec": 270
 		},
 		"stats_max": {
-			"atk": 0,
+			"atk": 220,
 			"def": 42,
-			"hp": 0,
-			"rec": 0
+			"hp": 958,
+			"rec": 502
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -93747,10 +94899,10 @@
 			"rec": 36
 		},
 		"stats_max": {
-			"atk": 0,
-			"def": 0,
-			"hp": 0,
-			"rec": 0
+			"atk": 82,
+			"def": 13,
+			"hp": 173,
+			"rec": 123
 		},
 		"support_skill": {
 			"cooldown": 12.0,
@@ -93783,7 +94935,7 @@
 				"quantity": 1
 			}
 		],
-		"evolve_material": "e_zakum",
+		"evolve_material": "",
 		"evolve_quantity": 1,
 		"evolves_from": "e_zakum",
 		"evolves_into": "",
@@ -93995,7 +95147,7 @@
 			"rec": 270
 		},
 		"stats_max": {
-			"atk": 390,
+			"atk": 290,
 			"def": 76,
 			"hp": 1992,
 			"rec": 473

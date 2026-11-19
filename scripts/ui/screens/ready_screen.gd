@@ -4,6 +4,8 @@ extends Screen
 const SPOTS := ["ID_leaderS", "ID_surportASh", "ID_surportBSh", "ID_surportCSh", "ID_surportDSh"]
 const LV_LABELS := ["ID_Lv_1", "ID_Lv_2", "ID_Lv_3", "ID_Lv_4", "ID_Lv_5"]
 const SORTS := ["Rank", "Level", "Name"]
+const AUTO_GO_WAIT := 1.5
+const GO_WAIT := 0.5
 
 var lay: Layout
 var quest: Dictionary
@@ -47,6 +49,26 @@ func build() -> void:
 	Friends.process_requests()
 	_refresh()
 	Tutorial.maybe_start(self, "ready")
+	if bool(args.get("repeat", false)) and bool(Save.data.get("auto_repeat", false)):
+		_auto_go()
+
+
+func _auto_go() -> void:
+	var t := Timer.new()
+	t.one_shot = true
+	add_child(t)
+	t.start(AUTO_GO_WAIT)
+	await t.timeout
+	if not bool(Save.data.get("auto_repeat", false)):
+		return
+	if _picked.is_empty() and not bool(quest.get("no_friend", false)):
+		for f in _entries():
+			if not bool(f.get("guest", false)) and not Friends.used_today(f):
+				_pick(f)
+				break
+	if not await _go():
+		Save.data.auto_repeat = false
+		Save.save_game()
 
 
 func _return_args() -> Dictionary:
@@ -149,11 +171,12 @@ func _entries() -> Array:
 func _fill_friends() -> void:
 	_slots.clear()
 	var rows := []
-	var entries := _entries()
+	var off := bool(quest.get("no_friend", false))
+	var entries := [] if off else _entries()
 	for f in entries:
 		rows.append(_friend_slot(f))
-	lay.show("ID_NoSelection", entries.is_empty())
-	lay.show("ID_LABEL_FRIEND_DISABLE", false)
+	lay.show("ID_NoSelection", entries.is_empty() and not off)
+	lay.show("ID_LABEL_FRIEND_DISABLE", off)
 	lay.text("ID_LABEL_4", SORTS[_sort]).add_theme_font_size_override("font_size", 17)
 	lay.list_into("ID_ID_arrayPosition", rows)
 
@@ -219,13 +242,13 @@ func _team() -> void:
 	main.go("squad", {"back": "ready", "back_args": args})
 
 
-func _go() -> void:
+func _go() -> bool:
 	if Save.team_members().is_empty():
 		UI.toast(self, "Your squad is empty!")
-		return
+		return false
 	if Save.inventory_full() and not tutorial_active():
 		UI.inventory_full(self, func(): main.go("squad", {"mode": "train"}))
-		return
+		return false
 	if not Save.pay_quest(quest):
 		var need := "Not enough energy (%d needed)" % int(quest.energy)
 		if int(quest.get("gems", 0)) > 0:
@@ -233,11 +256,14 @@ func _go() -> void:
 		elif int(quest.get("fp", 0)) > 0:
 			need = "Not enough Friend Points (%d needed)" % int(quest.fp)
 		UI.toast(self, need, Color("ff8080"))
-		return
+		return false
 	var a := args.duplicate()
 	if not _picked.is_empty():
 		a["friend"] = _picked
+	if not tutorial_active():
+		await main.busy(GO_WAIT)
 	main.go("battle", a)
+	return true
 
 
 func tutorial_target(name: String) -> Control:

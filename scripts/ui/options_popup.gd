@@ -79,6 +79,11 @@ static func open(screen: Screen) -> void:
 	bgrid.add_child(_big("Help", screen._show_tip, "green"))
 	bgrid.add_child(_big("Event", func(): UI.toast(screen, Events.text() if not Events.today().is_empty() else "No event today", UI.GOLD), "green"))
 	bgrid.add_child(_big("Credits", _credits.bind(screen), "green"))
+	for spec in [["Export Save", _export_save], ["Load Save", _load_save]]:
+		var b := _big(spec[0], spec[1].bind(screen), "blue")
+		b.custom_minimum_size.y = 64
+		b.add_theme_font_size_override("font_size", 24)
+		bgrid.add_child(b)
 	var gap := Control.new()
 	gap.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	right.add_child(gap)
@@ -190,7 +195,7 @@ static func _flat(text: String, cb: Callable) -> Button:
 
 static func _big(text: String, cb: Callable, color: String) -> Button:
 	var b := UI.button(text, cb, color, Vector2(196, 96), 26 if not "\n" in text else 23)
-	b.add_theme_color_override("font_outline_color", Color("6a2a00") if color == "orange" else Color("1e4a00"))
+	b.add_theme_color_override("font_outline_color", {"orange": Color("6a2a00"), "blue": Color("0c3566")}.get(color, Color("1e4a00")))
 	b.add_theme_constant_override("outline_size", 7)
 	return b
 
@@ -215,12 +220,48 @@ static func _credits(screen: Screen) -> void:
 	d.z_index = 60
 
 
+static func _pick_file(screen: Screen, title: String, mode: FileDialog.FileMode, cb: Callable) -> void:
+	var fd := FileDialog.new()
+	fd.title = title
+	fd.use_native_dialog = true
+	fd.access = FileDialog.ACCESS_FILESYSTEM
+	fd.file_mode = mode
+	fd.filters = PackedStringArray(["*.%s ; Monster Squad+ save" % Save.EXPORT_EXT])
+	fd.current_dir = OS.get_system_dir(OS.SYSTEM_DIR_DOCUMENTS)
+	if mode == FileDialog.FILE_MODE_SAVE_FILE:
+		fd.current_file = "MonsterSquadPlus_%s.%s" % [Time.get_date_string_from_system(), Save.EXPORT_EXT]
+	fd.file_selected.connect(func(path: String):
+		fd.queue_free()
+		cb.call(path))
+	fd.canceled.connect(fd.queue_free)
+	screen.add_child(fd)
+	fd.popup_centered_ratio(0.7)
+
+
+static func _export_save(screen: Screen) -> void:
+	_pick_file(screen, "Export Save", FileDialog.FILE_MODE_SAVE_FILE, func(path: String):
+		if Save.export_to(path):
+			UI.notice(screen, "Export Save", "Save exported to\n" + path)
+		else:
+			UI.notice(screen, "Export Save", "Couldn't write the save there."))
+
+
+static func _load_save(screen: Screen) -> void:
+	_pick_file(screen, "Load Save", FileDialog.FILE_MODE_OPEN_FILE, func(path: String):
+		var saved := Save.read_export(path)
+		if saved.is_empty():
+			UI.notice(screen, "Load Save", "That file isn't a Monster Squad+ save.")
+			return
+		UI.confirm(screen, "Load Save", "Load %s's save (%d monsters)?\nYour current progress will be replaced." % [saved.get("name", "Tamer"), saved.monsters.size()], _import.bind(screen, saved)))
+
+
+static func _import(screen: Screen, saved: Dictionary) -> void:
+	Save.import_save(saved)
+	screen.main.go("title")
+
+
 static func _confirm_quit(screen: Screen) -> void:
-	var body := UI.label("Quit Monster Squad+?\nYour progress is saved.", 22, UI.BROWN)
-	body.add_theme_constant_override("outline_size", 0)
-	body.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	var d := UI.dialog(screen, "Quit Game", body, [{"text": "Quit", "color": "orange", "cb": _quit.bind(screen)}, {"text": "Cancel", "color": "blue"}])
-	d.z_index = 60
+	UI.confirm(screen, "Quit Game", "Quit Monster Squad+?\nYour progress is saved.", _quit.bind(screen))
 
 
 static func _quit(screen: Screen) -> void:

@@ -1,0 +1,579 @@
+{
+	"_about": "Monsters that are the same creature in different colours (tools/find_monster_variants.py). Each group shares one body size; a member's height is the group size times its factor.",
+	"groups": [
+		{
+			"amethoid": 1.0,
+			"sapphiroid": 1.013
+		},
+		{
+			"antlad": 1.0,
+			"blu_antlad": 0.964,
+			"bud_antlad": 0.996,
+			"red_antlad": 0.964
+		},
+		{
+			"antlar": 1.0,
+			"blu_antlar": 0.978,
+			"bud_antlar": 0.993,
+			"red_antlar": 1.0
+		},
+		{
+			"antlid": 1.0,
+			"blu_antlid": 0.996,
+			"bud_antlid": 0.996,
+			"red_antlid": 0.996
+		},
+		{
+			"anubis": 1.0,
+			"aquavis": 0.884,
+			"firukis": 0.958,
+			"granubis": 0.966
+		},
+		{
+			"anuk": 1.0,
+			"aqus": 0.983,
+			"firub": 1.049,
+			"granuk": 0.968
+		},
+		{
+			"anuka": 1.0,
+			"aqusa": 1.033,
+			"firuba": 1.067,
+			"granuka": 1.05
+		},
+		{
+			"aqua_bat": 1.0,
+			"plum_bat": 1.01
+		},
+		{
+			"aqua_bit": 1.0,
+			"plum_bit": 1.009
+		},
+		{
+			"aqua_bun": 1.0,
+			"plum_bun": 0.948
+		},
+		{
+			"aquahopper": 1.0,
+			"luxhopper": 0.972,
+			"noxhopper": 1.039,
+			"terahopper": 1.031
+		},
+		{
+			"aquarell": 1.0,
+			"flamell": 1.012,
+			"magicrell": 0.996,
+			"naturell": 1.099
+		},
+		{
+			"armor_bonk": 1.0,
+			"bonk_druid": 0.928,
+			"bonk_pyro": 0.934
+		},
+		{
+			"astral_eldragon": 1.0,
+			"flare_eldragon": 1.022,
+			"glacial_eldragon": 1.071,
+			"native_eldragon": 1.05
+		},
+		{
+			"auqus": 1.0,
+			"voxus": 1.052,
+			"vulcus": 0.967
+		},
+		{
+			"azurefang": 1.0,
+			"glintfang": 0.964,
+			"jadefang": 1.001,
+			"rubyfang": 0.969
+		},
+		{
+			"azurehide": 1.0,
+			"glinthide": 1.014,
+			"jadehide": 1.007,
+			"rubyhide": 0.994
+		},
+		{
+			"azurescale": 1.0,
+			"glintscale": 1.008,
+			"jadescale": 1.011,
+			"rubyscale": 1.007
+		},
+		{
+			"b_drank": 1.0,
+			"g_drank": 1.029,
+			"o_drank": 0.948,
+			"p_drank": 1.029
+		},
+		{
+			"b_fruit": 1.0,
+			"g_fruit": 0.947,
+			"o_fruit": 1.046,
+			"p_fruit": 1.046
+		},
+		{
+			"beat_maker": 1.0,
+			"wave_maker": 1.014
+		},
+		{
+			"blacky": 1.0,
+			"melfy": 0.988
+		},
+		{
+			"blaze_bot": 1.0,
+			"freeze_bot": 0.992,
+			"sap_bot": 1.026,
+			"smash_bot": 0.894
+		},
+		{
+			"bloomasher": 1.0,
+			"hotblok": 0.982,
+			"ice_crush": 0.959,
+			"rokk": 0.972
+		},
+		{
+			"bloomion": 1.0,
+			"earthion": 1.005,
+			"glacion": 1.007,
+			"lavion": 1.012
+		},
+		{
+			"blue_rock": 1.0,
+			"mauve_rock": 1.012
+		},
+		{
+			"brambal": 1.0,
+			"flobal": 0.879
+		},
+		{
+			"brickett": 1.0,
+			"ice_cube": 1.001,
+			"mossmasher": 1.026,
+			"stonn": 1.017
+		},
+		{
+			"bud_bonk": 1.0,
+			"burn_bonk": 1.029,
+			"spike_bonk": 0.93
+		},
+		{
+			"burn_bot": 1.0,
+			"frost_bot": 1.03,
+			"jag_bot": 1.004,
+			"seed_bot": 1.044
+		},
+		{
+			"bushell": 1.0,
+			"flarell": 0.874,
+			"marell": 0.86,
+			"swirell": 0.846
+		},
+		{
+			"ceratoking": 1.0,
+			"deramax": 0.939,
+			"patragon": 1.013,
+			"tramarex": 0.991
+		},
+		{
+			"ceratops": 1.0,
+			"derarctus": 1.037,
+			"parigontix": 0.983,
+			"tramasaur": 1.021
+		},
+		{
+			"ceratopson": 1.0,
+			"derastorm": 0.977,
+			"patrox": 1.021,
+			"tramacron": 0.979
+		},
+		{
+			"cero": 1.0,
+			"dera": 1.012,
+			"pari": 1.001,
+			"trama": 1.081
+		},
+		{
+			"cetrop": 1.0,
+			"derakon": 1.044,
+			"pragon": 1.08,
+			"tramix": 1.034
+		},
+		{
+			"chilairy": 1.0,
+			"conairy": 0.98,
+			"grumairy": 0.964,
+			"shivairy": 0.996
+		},
+		{
+			"chilelle": 1.0,
+			"conelle": 0.98,
+			"grumelle": 0.918,
+			"shivelle": 0.996
+		},
+		{
+			"chilellia": 1.0,
+			"conellia": 0.951,
+			"grumellia": 0.949,
+			"shivellia": 1.036
+		},
+		{
+			"chilie": 1.0,
+			"conie": 0.98,
+			"grumie": 1.063,
+			"shivvie": 1.046
+		},
+		{
+			"cold_eldrake": 1.0,
+			"fire_eldrake": 0.948,
+			"nascent_eldrake": 1.029,
+			"star_eldrake": 0.964
+		},
+		{
+			"crabay": 1.0,
+			"crablaze": 1.09,
+			"craboth": 1.008,
+			"crabterror": 0.999
+		},
+		{
+			"crabcoon": 1.0,
+			"crablu": 0.988,
+			"crabshade": 1.012,
+			"craburn": 1.053
+		},
+		{
+			"cubat": 1.0,
+			"greebat": 0.964,
+			"rubat": 0.948,
+			"sapphibat": 1.012
+		},
+		{
+			"cubi": 1.0,
+			"greebi": 1.018,
+			"rubi": 0.993,
+			"sapphibi": 1.011
+		},
+		{
+			"cuburak": 1.0,
+			"greeburak": 1.022,
+			"ruburak": 1.026,
+			"sapphburak": 1.018
+		},
+		{
+			"dark_ena": 1.0,
+			"dark_hy": 0.981
+		},
+		{
+			"darkrake": 1.0,
+			"mandrake": 0.972
+		},
+		{
+			"dawngeist": 1.0,
+			"greengeist": 1.117,
+			"nightgeist": 1.063,
+			"sea_geist": 1.046
+		},
+		{
+			"dawnspec": 1.0,
+			"greenspec": 0.98,
+			"nightspec": 0.996,
+			"seaspec": 0.996
+		},
+		{
+			"dawnspook": 1.0,
+			"greenspook": 1.085,
+			"nightspook": 1.004,
+			"seaspook": 1.129
+		},
+		{
+			"doomba": 1.0,
+			"feril": 1.024,
+			"ibi": 1.087,
+			"yakka": 0.978
+		},
+		{
+			"dratula": 1.0,
+			"greentula": 0.92,
+			"pretula": 0.935,
+			"reditula": 0.969
+		},
+		{
+			"dripbal": 1.0,
+			"leavbal": 1.094
+		},
+		{
+			"evil_ena": 1.0,
+			"evil_hy": 1.035
+		},
+		{
+			"ferdog": 1.0,
+			"ibismash": 0.928,
+			"toomba": 1.04,
+			"yakkadin": 0.942
+		},
+		{
+			"feroah": 1.0,
+			"ibisking": 0.925,
+			"torban": 0.982,
+			"yakkelder": 0.922
+		},
+		{
+			"fire_kong": 1.0,
+			"grass_kong": 0.997,
+			"no_kong": 1.0,
+			"water_kong": 0.981
+		},
+		{
+			"firion": 1.0,
+			"pollion": 0.968,
+			"rockion": 1.003,
+			"walion": 0.95
+		},
+		{
+			"flame_eldragon": 1.0,
+			"naturia_eldragon": 0.894,
+			"stellar_eldragon": 0.927,
+			"tundra_eldragon": 0.988
+		},
+		{
+			"flame_hy": 1.0,
+			"frost_ena": 1.05
+		},
+		{
+			"flame_kong": 1.0,
+			"nono_kong": 0.999,
+			"prism_kong": 0.999,
+			"river_kong": 0.999,
+			"woods_kong": 1.004
+		},
+		{
+			"flamus": 1.0,
+			"neutrus": 1.018,
+			"waturus": 1.007
+		},
+		{
+			"flaree": 1.0,
+			"patchee": 1.155,
+			"seree": 1.097,
+			"whirlee": 1.001
+		},
+		{
+			"flaruus": 1.0,
+			"patchuus": 1.255,
+			"seruus": 1.242,
+			"whirluus": 1.183
+		},
+		{
+			"freez": 1.0,
+			"goliem": 1.068,
+			"lavan": 1.05,
+			"stoneskin": 1.075
+		},
+		{
+			"freezr": 1.0,
+			"goliath": 0.959,
+			"lavatron": 0.989,
+			"stoneheart": 0.996
+		},
+		{
+			"frostcap": 1.0,
+			"spinecap": 0.985
+		},
+		{
+			"froststool": 1.0,
+			"spinestool": 0.998
+		},
+		{
+			"frozen_eldragon": 1.0,
+			"neo_eldragon": 1.006,
+			"torch_eldragon": 1.041,
+			"void_eldragon": 0.987
+		},
+		{
+			"furrior": 1.0,
+			"ibizard": 1.06,
+			"yaknight": 1.051
+		},
+		{
+			"furserker": 1.0,
+			"ibomancer": 1.095,
+			"yakrusader": 1.058
+		},
+		{
+			"ghoulbloom": 1.0,
+			"ghoulflash": 1.054,
+			"ghoulfrost": 1.003,
+			"ghoulsmash": 0.972
+		},
+		{
+			"ghouldig": 1.0,
+			"ghouldrop": 0.999,
+			"ghoulflame": 0.999,
+			"ghoulseed": 1.017
+		},
+		{
+			"gramtula": 1.0,
+			"prepula": 1.059,
+			"redipula": 1.017,
+			"trapula": 0.986
+		},
+		{
+			"green_bonk": 1.0,
+			"red_bonk": 0.977,
+			"yella_bonk": 0.983
+		},
+		{
+			"gremula": 1.0,
+			"redmula": 1.047,
+			"tramula": 1.045
+		},
+		{
+			"hark": 1.0,
+			"toriz": 1.029
+		},
+		{
+			"herks": 1.0,
+			"torizo": 0.964
+		},
+		{
+			"heroks": 1.0,
+			"torizor": 0.991
+		},
+		{
+			"humbark": 1.0,
+			"pompabear": 1.046
+		},
+		{
+			"kalper": 1.0,
+			"overgrowth": 1.04
+		},
+		{
+			"king_clip": 1.0,
+			"king_drip": 1.029,
+			"king_flame": 1.01,
+			"king_spiky": 1.093
+		},
+		{
+			"li_l_clip": 1.0,
+			"li_l_drip": 1.112,
+			"li_l_flame": 1.018,
+			"li_l_spiky": 1.042,
+			"lil_drip": 1.124
+		},
+		{
+			"li_l_woosh": 1.0,
+			"lil_fwoosh": 0.998,
+			"lil_splish": 0.938,
+			"lil_swoosh": 0.988
+		},
+		{
+			"megabatta": 1.0,
+			"megablam": 1.046,
+			"megaboom": 1.056,
+			"megaslamma": 0.999
+		},
+		{
+			"megabeat": 1.0,
+			"megablow": 0.986,
+			"megabomba": 0.996,
+			"megapuncha": 1.012
+		},
+		{
+			"megabrute": 1.0,
+			"megabuster": 1.01,
+			"megacrush": 1.013,
+			"megasavage": 0.999
+		},
+		{
+			"megania": 1.0,
+			"voidina": 1.001
+		},
+		{
+			"meteor_eldragon": 1.0,
+			"nurture_eldragon": 1.086,
+			"polar_eldragon": 1.032,
+			"pyro_eldragon": 1.086
+		},
+		{
+			"minoeagle": 1.0,
+			"minogull": 0.951,
+			"minohawk": 0.98,
+			"minothrush": 0.945
+		},
+		{
+			"minoeagler": 1.0,
+			"minoguller": 0.998,
+			"minohawker": 0.987,
+			"minothro": 1.01
+		},
+		{
+			"minoeaglet": 1.0,
+			"minogullet": 1.0,
+			"minohawket": 0.987,
+			"minothring": 1.029
+		},
+		{
+			"sharp_ena": 1.0,
+			"sharp_hy": 0.989
+		},
+		{
+			"sir_clip": 1.0,
+			"sir_drip": 0.959,
+			"sir_flame": 1.016,
+			"sir_spiky": 0.87
+		},
+		{
+			"sir_fwoosh": 1.0,
+			"sir_splish": 1.011,
+			"sir_swoosh": 1.063,
+			"sir_woosh": 1.072
+		},
+		{
+			"skelbloom": 1.0,
+			"skeldrip": 1.01,
+			"skelfire": 0.996,
+			"skelme": 0.922
+		},
+		{
+			"skelebloom": 1.0,
+			"skeledrip": 1.088,
+			"skelefire": 1.06,
+			"skeleme": 1.023
+		},
+		{
+			"skulbloom": 1.0,
+			"skuldrip": 1.081,
+			"skulfire": 1.154,
+			"skulme": 0.996
+		},
+		{
+			"smee": 1.0,
+			"smella": 1.002,
+			"smoo": 0.989,
+			"smull": 1.042
+		},
+		{
+			"smelly": 1.0,
+			"smish": 1.019,
+			"smoovie": 0.908,
+			"smulling": 0.972
+		},
+		{
+			"smishee": 1.0,
+			"smullock": 0.992,
+			"smunk": 1.008,
+			"soosoo": 1.019
+		},
+		{
+			"uranger_b": 1.0,
+			"uranger_g": 0.994,
+			"uranger_o": 0.999,
+			"uranger_p": 1.021
+		},
+		{
+			"urscout_b": 1.0,
+			"urscout_g": 0.96,
+			"urscout_o": 0.948,
+			"urscout_p": 1.025
+		}
+	]
+}

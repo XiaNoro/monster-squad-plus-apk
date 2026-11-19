@@ -19,7 +19,7 @@ func _init() -> void:
 			pimg.convert(Image.FORMAT_RGBA8)
 			print("BOSS %s %s" % [v.get_file(), _boss(pimg, v.get_basename() + "_icon.png")])
 			continue
-		var dir := ProjectSettings.globalize_path("res://research/videos/frames_hd/%s/" % v)
+		var dir := ProjectSettings.globalize_path("res://research/videos/%s/" % (v if "/" in v else "frames_hd/" + v))
 		var files := DirAccess.get_files_at(dir)
 		files.sort()
 		var hits := []
@@ -33,9 +33,9 @@ func _init() -> void:
 				var w := img.get_width()
 				var h := img.get_height()
 				var panel := img.get_region(Rect2i(w / 2, int(h * 0.1), w / 2, int(h * 0.85)))
-				panel.save_png(out + "%s_%s.png" % [v, f.get_basename()])
+				panel.save_png(out + "%s_%s.png" % [v.get_file(), f.get_basename()])
 				if boss == "":
-					boss = _boss(panel, out + "%s_boss.png" % v)
+					boss = _boss(panel, out + "%s_boss.png" % v.get_file())
 				if hits.size() >= 2:
 					break
 		print("PANEL %s %s boss: %s" % [v, ",".join(hits), boss])

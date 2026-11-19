@@ -1,17 +1,15 @@
-extends Screen
+﻿extends Screen
 
 const SLOT_IDS := ["ID_leader", "ID_surportA", "ID_surportB", "ID_surportC"]
 const ICON_IDS := ["ID_leaderIcon", "ID_surportAIcon", "ID_surportBIcon", "ID_surportCIcon"]
-const SORTS := ["Level", "Grade", "Element", "Recent"]
+const SORTS := ["Level", "Stars", "Grade", "Element", "Recent"]
 
 var lay: Layout
 var _selected_slot := -1
 var _pick_mode := ""
 var _pick_target := -1
-var _food: Dictionary = {}
 var _sort := 0
 var _pick_bar: Control
-var _feed_button: Button
 var _train := false
 var _sel := -1
 var _selling := false
@@ -21,6 +19,10 @@ var _pick_uid := -1
 var _remove_box: Control
 
 const SELL_MAX := 20
+const ELEMENTS := ["fire", "water", "nature", "normal"]
+
+static var _filter := {"elements": [], "lv30": false, "plus5": false, "search": "", "family": false}
+var _filter_badge: Label
 const PICK_REMOVE := -2
 
 
@@ -32,6 +34,14 @@ func build() -> void:
 	_back_args = args.get("back_args", {})
 	lay.on("ID_btnAlign", _next_sort)
 	lay.on("ID_btnAdd", _buy_slots)
+	var align := lay.node("ID_btnAlign") as Control
+	align.gui_input.connect(func(e: InputEvent): UI.hold(e, _open_filter))
+	_filter_badge = UI.label("FILTER", 15, Color("fff23a"))
+	_filter_badge.add_theme_constant_override("outline_size", 5)
+	_filter_badge.add_theme_color_override("font_outline_color", Color("6a2a00"))
+	_filter_badge.position = Vector2(align.size.x - 52, -10)
+	_filter_badge.mouse_filter = MOUSE_FILTER_IGNORE
+	align.add_child(_filter_badge)
 	if _train:
 		_setup_train()
 	else:
@@ -49,12 +59,9 @@ func build() -> void:
 	var bw := floorf((right - title.size.x - 8.0 - 6.0) / 2.0)
 	_pick_bar = Control.new()
 	_pick_bar.mouse_filter = MOUSE_FILTER_IGNORE
-	_feed_button = UI.button("Feed!", _do_feed, "yellow", Vector2(bw, 46) * 2.0, 34)
 	var cancel := UI.button("Cancel", _cancel_pick, "blue", Vector2(bw, 46) * 2.0, 34)
-	cancel.position.x = bw + 6.0
-	for b in [_feed_button, cancel]:
-		b.scale = Vector2(0.5, 0.5)
-		_pick_bar.add_child(b)
+	cancel.scale = Vector2(0.5, 0.5)
+	_pick_bar.add_child(cancel)
 	_pick_bar.position = Vector2(title.size.x + 8, (title.size.y - 46.0) / 2.0)
 	title.add_child(_pick_bar)
 	_refresh()
@@ -147,7 +154,133 @@ func _switch_team(index: int) -> void:
 
 
 func _next_sort() -> void:
-	_sort = (_sort + 1) % SORTS.size()
+	if UI.was_held():
+		return
+	if _family_sort():
+		_filter.family = false
+	else:
+		_sort = (_sort + 1) % SORTS.size()
+	_refresh()
+
+
+func _family_sort() -> bool:
+	return bool(_filter.family) and not (Tutorial.enabled() and not Tutorial.all_done())
+
+
+func _filtering() -> bool:
+	if Tutorial.enabled() and not Tutorial.all_done():
+		return false
+	return not (_filter.elements as Array).is_empty() or bool(_filter.lv30) or bool(_filter.plus5) or String(_filter.search).strip_edges() != ""
+
+
+func _passes(m: Dictionary) -> bool:
+	var def := DB.monster(m.id)
+	if not (_filter.elements as Array).is_empty() and not String(def.element) in _filter.elements:
+		return false
+	if bool(_filter.lv30) and int(m.level) < DB.MAX_LEVEL:
+		return false
+	if bool(_filter.plus5) and int(m.boost) < DB.MAX_BOOST:
+		return false
+	var q := String(_filter.search).strip_edges().to_lower()
+	return q == "" or q in String(def.name).to_lower()
+
+
+func _open_filter() -> void:
+	if Tutorial.enabled() and not Tutorial.all_done():
+		return
+	Sfx.play("popup_open")
+	var body := VBoxContainer.new()
+	body.add_theme_constant_override("separation", 10)
+	body.add_child(_filter_heading("Element"))
+	var row := HBoxContainer.new()
+	row.add_theme_constant_override("separation", 8)
+	body.add_child(row)
+	for el in ELEMENTS:
+		var b := _filter_toggle(String(el).capitalize(), el in _filter.elements, UI.element_icon(el))
+		b.pressed.connect(func() -> void:
+			var list: Array = _filter.elements
+			if el in list:
+				list.erase(el)
+			else:
+				list.append(el)
+			_style_toggle(b, el in list)
+			_refresh())
+		row.add_child(b)
+	body.add_child(_filter_heading("Level & Boost"))
+	var row2 := HBoxContainer.new()
+	row2.add_theme_constant_override("separation", 8)
+	body.add_child(row2)
+	for key in ["lv30", "plus5"]:
+		var b := _filter_toggle("Lv.%d" % DB.MAX_LEVEL if key == "lv30" else "+%d" % DB.MAX_BOOST, bool(_filter[key]))
+		b.pressed.connect(func() -> void:
+			_filter[key] = not bool(_filter[key])
+			_style_toggle(b, bool(_filter[key]))
+			_refresh())
+		row2.add_child(b)
+	body.add_child(_filter_heading("Sort"))
+	var fam := _filter_toggle("Family", bool(_filter.family))
+	fam.custom_minimum_size.x = 150
+	fam.pressed.connect(func() -> void:
+		_filter.family = not bool(_filter.family)
+		_style_toggle(fam, bool(_filter.family))
+		_refresh())
+	var row3 := HBoxContainer.new()
+	row3.add_child(fam)
+	body.add_child(row3)
+	body.add_child(_filter_heading("Search"))
+	var search := LineEdit.new()
+	search.placeholder_text = "Monster name"
+	search.text = String(_filter.search)
+	search.custom_minimum_size = Vector2(440, 50)
+	search.clear_button_enabled = true
+	search.add_theme_font_size_override("font_size", 22)
+	search.add_theme_color_override("font_color", UI.BROWN)
+	search.add_theme_color_override("font_placeholder_color", Color(0.29, 0.16, 0.04, 0.45))
+	search.add_theme_color_override("caret_color", UI.BROWN)
+	var box := StyleBoxFlat.new()
+	box.bg_color = Color("fff4d6")
+	box.border_color = Color("8a5a2a")
+	box.set_border_width_all(3)
+	box.set_corner_radius_all(10)
+	box.content_margin_left = 12
+	box.content_margin_right = 8
+	search.add_theme_stylebox_override("normal", box)
+	search.add_theme_stylebox_override("focus", box)
+	search.text_changed.connect(func(t: String) -> void:
+		_filter.search = t
+		_refresh())
+	body.add_child(search)
+	UI.dialog(self, "Filter", body, [{"text": "Clear", "color": "blue", "cb": _clear_filter}, {"text": "OK", "color": "green"}])
+
+
+func _filter_heading(text: String) -> Label:
+	var l := UI.label(text, 20, UI.BROWN)
+	l.add_theme_constant_override("outline_size", 0)
+	return l
+
+
+func _filter_toggle(text: String, on: bool, icon: Texture2D = null) -> Button:
+	var b := UI.button(text, func() -> void: pass, "yellow", Vector2(104, 54), 19)
+	if icon != null:
+		b.icon = icon
+		b.expand_icon = false
+		b.add_theme_constant_override("icon_max_width", 26)
+	_style_toggle(b, on)
+	return b
+
+
+func _style_toggle(b: Button, on: bool) -> void:
+	for st in ["normal", "hover", "pressed", "disabled"]:
+		b.add_theme_stylebox_override(st, UI._button_box(UI.BUTTON_FILES["green" if on else "yellow"], st))
+	b.modulate = Color.WHITE if on else Color(0.8, 0.8, 0.8)
+
+
+func _clear_filter() -> void:
+	_filter.elements = []
+	_filter.lv30 = false
+	_filter.plus5 = false
+	_filter.search = ""
+	_filter.family = false
 	_refresh()
 
 
@@ -168,16 +301,7 @@ func _refresh() -> void:
 		lay.set_image("ID_rankImage", Layout.texture("T_rank%s_01.png" % Arena.team_rank(members)))
 
 	var hint := "Monster List"
-	if _pick_mode == "feed":
-		var xp := 0
-		for u in _food:
-			var fm := Save.get_owned(int(u))
-			xp += DB.feed_exp(fm.id, int(fm.level))
-		var gold := DB.feed_cost(Save.get_owned(_pick_target).id) * _food.size()
-		hint = "Feed %d monster%s\n+%s EXP  ·  %s Gold" % [_food.size(), "" if _food.size() == 1 else "s", Screen._thousands(xp), Screen._thousands(gold)]
-		if _food.is_empty():
-			hint = "Select monsters\nto feed"
-	elif _pick_mode != "":
+	if _pick_mode != "":
 		hint = {"awaken": "Pick: Awaken", "boost": "Pick: Boost", "fusion": "Pick: Fusion"}.get(_pick_mode, hint)
 	elif _selected_slot >= 0:
 		hint = "Pick a monster"
@@ -205,9 +329,8 @@ func _refresh() -> void:
 		title.size = Vector2(room.x, h)
 		title.position = Vector2(home.position.x, (box.y - h) / 2.0)
 	_pick_bar.visible = _pick_mode != ""
-	_feed_button.visible = _pick_mode == "feed"
 	lay.show("ID_btnAlign", _pick_mode == "")
-	lay.text("ID_LABEL_4", SORTS[_sort]).add_theme_font_size_override("font_size", 17)
+	lay.text("ID_LABEL_4", "Family" if _family_sort() else SORTS[_sort]).add_theme_font_size_override("font_size", 17)
 	lay.text("ID_numText", str(Save.data.monsters.size()))
 	lay.text("ID_maxText", "/%d" % int(Save.data.inventory_cap))
 
@@ -216,6 +339,10 @@ func _refresh() -> void:
 	grid.add_theme_constant_override("h_separation", 4)
 	grid.add_theme_constant_override("v_separation", 4)
 	var owned: Array = Save.data.monsters.duplicate()
+	var filtering := _filtering()
+	if filtering:
+		owned = owned.filter(_passes)
+	_filter_badge.visible = filtering
 	owned.sort_custom(_compare_owned)
 	_cards.clear()
 	_remove_box = null
@@ -245,10 +372,14 @@ func _refresh() -> void:
 			card.add_child(_select_frame("Select"))
 		if uid == _pick_target:
 			card.modulate = Color(1.4, 1.4, 0.7)
-		elif _food.has(uid):
-			card.modulate = Color(0.6, 1.4, 0.6)
 		card.gui_input.connect(_on_monster_input.bind(uid))
 		grid.add_child(card)
+	if filtering and owned.is_empty():
+		var none := UI.label("No monsters match the filter.
+Hold the sort button to change it.", 19, UI.BROWN)
+		none.add_theme_constant_override("outline_size", 0)
+		none.custom_minimum_size = Vector2(400, 100)
+		grid.add_child(none)
 	lay.list_into("ID_ID_arrayPosition", [grid])
 	if not _train:
 		_show_slot_arrows()
@@ -379,8 +510,6 @@ func _fill_effects(members: Array) -> void:
 		var p := String(DB.monster(members[k].id).passive)
 		if p != "":
 			lines.append("- " + p)
-	if Save.badge_bonus() > 0.0:
-		lines.append("- Badge: team HP & ATK +%d%%" % roundi(Save.badge_bonus() * 100.0))
 	if lines.is_empty():
 		lines.append("- Supports' passives show here")
 	var ids := ["ID_ef1Text_1", "ID_ef2Text_1", "ID_ef3Text_1", "ID_ef3Text_1_1", "ID_ef3Text_1_1_1", "ID_ef3Text_1_1_1_1"]
@@ -410,7 +539,6 @@ func _corner_tag(text: String, color: Color) -> Label:
 func _cancel_pick() -> void:
 	_pick_mode = ""
 	_pick_target = -1
-	_food.clear()
 	_refresh()
 
 
@@ -450,6 +578,9 @@ func _on_slot_input(e: InputEvent, slot: int) -> void:
 		_pick_uid = -1
 		_assign(u, mini(slot, team.size()))
 		return
+	if _selected_slot >= 0 and _selected_slot != slot and _selected_slot < team.size():
+		_assign(int(team[_selected_slot]), mini(slot, team.size()))
+		return
 	_selected_slot = -1 if _selected_slot == slot else slot
 	Sfx.play("click")
 	_refresh()
@@ -466,23 +597,8 @@ func _on_monster_input(e: InputEvent, uid: int) -> void:
 	if not _pressed(e):
 		return
 	_tut_monster(uid)
-	if _pick_mode == "feed":
-		if uid == _pick_target or Save.in_team(uid) or Save.get_owned(uid).locked:
-			UI.toast(self, "Can't use that monster")
-		elif _food.has(uid):
-			_food.erase(uid)
-		else:
-			_food[uid] = true
-		_refresh()
-		return
 	if _pick_mode == "awaken":
 		_confirm_awaken(_pick_target, uid)
-		return
-	if _pick_mode == "boost":
-		_confirm_boost(_pick_target, uid)
-		return
-	if _pick_mode == "fusion":
-		_confirm_fusion(_pick_target, uid)
 		return
 	if _selected_slot >= 0:
 		_assign(uid, _selected_slot)
@@ -678,7 +794,7 @@ func _assign(uid: int, slot: int) -> void:
 	var new_id: String = Save.get_owned(uid).id
 	for i in team.size():
 		if i != slot and int(team[i]) != uid and Save.get_owned(int(team[i])).id == new_id:
-			UI.toast(self, "Each monster in your team must be unique", Color("ff8080"))
+			UI.notice(self, "Cannot select", UI.ONE_TYPE_PER_TEAM)
 			_selected_slot = -1
 			_refresh()
 			return
@@ -715,155 +831,12 @@ func _change_slot(_uid: int, slot: int) -> void:
 	_refresh()
 
 
-func _train_dialog(uid: int) -> void:
-	var m := Save.get_owned(uid)
-	var evo := Save.can_evolve(uid)
-	var lines := VBoxContainer.new()
-	lines.add_child(MonsterDetail._text("Feed: use monsters as exp (gold per material).   Boost: +1 to +5 (5% stats each).", 16))
-	lines.add_child(MonsterDetail._text("Fusion: two Lv30 +5 monsters of one rank → a random monster one rank higher.", 16))
-	lines.add_child(MonsterDetail._text("Evolve: Lv30 +5 with its Lv30 +5 material (free).   Awaken: 6★ only, raises the level cap toward 50.", 16))
-	lines.add_child(MonsterDetail._text("Level %d / %d   ·   %s" % [int(m.level), Save.max_level(m), "Evolve ready!" if evo.ok else "Evolve: " + String(evo.reason)], 16))
-	UI.dialog(self, "Train %s" % _name(uid), lines, [
-		{"text": "Feed", "color": "yellow", "cb": _start_pick.bind("feed", uid)},
-		{"text": "Boost", "color": "blue", "cb": _start_pick.bind("boost", uid)},
-		{"text": "Fusion", "color": "purple", "cb": _start_pick.bind("fusion", uid)},
-		{"text": "Evolve", "color": "yellow" if evo.ok else "blue", "cb": _evolve.bind(uid)},
-		{"text": "Awaken", "color": "purple", "cb": _start_pick.bind("awaken", uid)},
-		{"text": "Close", "color": "blue"},
-	])
-
-
-func _equip_dialog(uid: int) -> void:
-	var m := Save.get_owned(uid)
-	var pet := Save.pet_of(m)
-	var lines := VBoxContainer.new()
-	lines.add_child(MonsterDetail._text("Stones equipped: %d / %d" % [Save.equipped_stones(m).size(), Save.stone_slots(m)], 18))
-	if pet.is_empty():
-		lines.add_child(MonsterDetail._text("Pet: none", 18))
-	else:
-		lines.add_child(MonsterDetail._text("Pet: %s  ·  %s" % [DB.pet(pet.id).name, _pet_text(pet)], 18))
-	UI.dialog(self, "Equip %s" % _name(uid), lines, [
-		{"text": "Stones", "color": "purple", "cb": _stones_dialog.bind(uid)},
-		{"text": "Pet", "color": "yellow", "cb": _pet_dialog.bind(uid)},
-		{"text": "Close", "color": "blue"},
-	])
-
-
-static func _pet_text(pet: Dictionary) -> String:
-	var def := DB.pet(pet.id)
-	var s: Dictionary = def.stats
-	var out := "HP +%d  ATK +%d  DEF +%d  REC +%d" % [int(s.hp), int(s.atk), int(s.def), int(s.rec)]
-	if int(pet.passive) >= 0 and int(pet.passive) < def.passives.size():
-		var p: Dictionary = def.passives[int(pet.passive)]
-		out += "  ·  %s monsters %s +%d%%" % [String(p.element).capitalize(), {"hp": "HP", "atk": "ATK", "def": "DEF", "crit": "Crit"}[p.stat], roundi(float(p.pct) * 100.0)]
-	return out
-
-
 func _pet_dialog(uid: int) -> void:
-	var free := Save.free_pets()
-	if free.is_empty():
-		UI.toast(self, "No spare pets — buy a Pet Cube in Cubes")
-		return
-	var list := VBoxContainer.new()
-	var holder: Array = [null]
-	for pt in free:
-		var pet_uid := int(pt.uid)
-		var cost := Save.pet_equip_cost(pt)
-		var row := HBoxContainer.new()
-		row.add_child(UI.image(DB.pet_texture(pt.id), Vector2(64, 64)))
-		var need: int = DB.PET_LEVEL.get(int(DB.pet(pt.id).stars), 30)
-		row.add_child(MonsterDetail._text("%s %s (needs Lv%d)\n%s" % [DB.pet(pt.id).name, "★".repeat(int(DB.pet(pt.id).stars)), need, _pet_text(pt)], 15))
-		var by_gold := func() -> void:
-			holder[0].queue_free()
-			_equip_pet(uid, pet_uid, false)
-		var by_gems := func() -> void:
-			holder[0].queue_free()
-			_equip_pet(uid, pet_uid, true)
-		row.add_child(UI.button("%s G" % Screen._thousands(int(cost.gold)), by_gold, "yellow", Vector2(130, 52), 16))
-		row.add_child(UI.button("%d gems" % int(cost.gems), by_gems, "purple", Vector2(120, 52), 16))
-		list.add_child(row)
-	var scroll := ScrollContainer.new()
-	scroll.custom_minimum_size = Vector2(860, 380)
-	scroll.add_child(list)
-	holder[0] = UI.dialog(self, "Choose a pet (the current pet is replaced and lost)", scroll, [{"text": "Cancel", "color": "blue"}])
+	main.go("pets", {"uid": uid, "back": "squad", "back_args": {"mode": "train", "uid": uid} if _train else {}})
 
-
-func _equip_pet(uid: int, pet_uid: int, gems: bool) -> void:
-	var r := Save.equip_pet(uid, pet_uid, gems)
-	if not r.ok:
-		UI.toast(self, r.reason, Color("ff8080"))
-	else:
-		Sfx.play("buff")
-		UI.toast(self, "Pet equipped!", UI.GOLD)
 
 func _stones_dialog(uid: int) -> void:
 	main.go("stones", {"uid": uid, "back": "squad", "back_args": {"mode": "train", "uid": uid} if _train else {}})
-
-
-func _stones_dialog_old(uid: int) -> void:
-	var m := Save.get_owned(uid)
-	var body := VBoxContainer.new()
-	body.add_child(MonsterDetail._text("Equipping costs gold; filling an occupied slot destroys the old stone. Removing one costs gold and returns it to the stone box.", 16))
-	var buttons := []
-	for slot in MagicStones.MAX_SLOTS:
-		var st := Save.stone_in_slot(m, slot)
-		var n := slot + 1
-		if slot >= Save.stone_slots(m):
-			body.add_child(MonsterDetail._text("Slot %d: locked" % n, 18))
-			buttons.append({"text": "Unlock %d (%d gems)" % [n, MagicStones.THIRD_SLOT_GEMS], "color": "purple", "cb": _unlock_slot.bind(uid)})
-		elif st.is_empty():
-			body.add_child(MonsterDetail._text("Slot %d: empty" % n, 18))
-			buttons.append({"text": "Fill %d" % n, "color": "yellow", "cb": _pick_stone.bind(uid, slot)})
-		else:
-			body.add_child(MonsterDetail._text("Slot %d: %s  (%s)" % [n, MagicStones.label(st), MagicStones.describe(st)], 18))
-			buttons.append({"text": "Replace %d" % n, "color": "yellow", "cb": _pick_stone.bind(uid, slot)})
-			buttons.append({"text": "Remove %d" % n, "color": "orange", "cb": _unequip.bind(uid, slot)})
-	buttons.append({"text": "Close", "color": "blue"})
-	UI.dialog(self, "%s · Stones" % _name(uid), body, buttons)
-
-
-func _pick_stone(uid: int, slot: int) -> void:
-	var free := Save.free_stones()
-	if free.is_empty():
-		UI.toast(self, "No spare stones — clear Sky Tower floors to find some")
-		return
-	var scroll := ScrollContainer.new()
-	scroll.custom_minimum_size = Vector2(760, 360)
-	var grid := GridContainer.new()
-	grid.columns = 2
-	scroll.add_child(grid)
-	var holder: Array = [null]
-	for st in free:
-		var stone_uid := int(st.uid)
-		var pick := func() -> void:
-			if holder[0] != null:
-				holder[0].queue_free()
-			_equip(uid, slot, stone_uid)
-		grid.add_child(StonesScreen.stone_tile(st, pick))
-	holder[0] = UI.dialog(self, "Choose a stone (equip cost by rank: %s)" % "/".join(MagicStones.EQUIP_COST.map(func(c): return Screen._thousands(c))), scroll, [{"text": "Cancel", "color": "blue"}])
-
-
-func _equip(uid: int, slot: int, stone_uid: int) -> void:
-	var r := Save.equip_stone(uid, slot, stone_uid)
-	if not r.ok:
-		UI.toast(self, r.reason, Color("ff8080"))
-	else:
-		Sfx.play("buff")
-		UI.toast(self, "Stone equipped" + (" (old stone destroyed)" if r.replaced else ""), UI.GOLD)
-	_stones_dialog(uid)
-
-
-func _unequip(uid: int, slot: int) -> void:
-	var r := Save.unequip_stone(uid, slot)
-	if not r.ok:
-		UI.toast(self, r.reason, Color("ff8080"))
-	_stones_dialog(uid)
-
-
-func _unlock_slot(uid: int) -> void:
-	if not Save.unlock_third_slot(uid):
-		UI.toast(self, "Not enough gems", Color("ff8080"))
-	_stones_dialog(uid)
 
 
 func _start_pick(mode: String, uid: int) -> void:
@@ -874,16 +847,12 @@ func _start_pick(mode: String, uid: int) -> void:
 	if mode == "fusion" and not Save.is_maxed(m) and not tutorial_active():
 		_need_maxed(DB.monster(m.id))
 		return
-	if mode in ["boost", "fusion"]:
-		main.go("combine", {"mode": mode, "uid": uid})
+	if mode in ["boost", "fusion", "feed"]:
+		main.go("combine", {"mode": "exp" if mode == "feed" else mode, "uid": uid})
 		return
 	if mode == "awaken" and int(DB.monster(m.id).stars) < 6:
 		UI.toast(self, "Only 6★ monsters can awaken")
 		return
-	if mode == "feed" and int(m.level) >= Save.max_level(m):
-		UI.toast(self, "Already at max level")
-		return
-	_food.clear()
 	if mode == "fusion" and not Save.is_maxed(m):
 		UI.toast(self, "Fusion needs Lv%d +%d" % [DB.MAX_LEVEL, DB.MAX_BOOST])
 		return
@@ -892,27 +861,36 @@ func _start_pick(mode: String, uid: int) -> void:
 	_refresh()
 
 
-func _do_feed() -> void:
-	var r := Save.feed(_pick_target, _food.keys())
-	if not r.ok:
-		UI.toast(self, r.reason, Color("ff8080"))
-		return
-	UI.toast(self, "+%d exp%s" % [int(r.exp), (", +%d levels" % int(r.levels)) if int(r.levels) > 0 else ""], Color("7dff7a"))
-	_food.clear()
-	_cancel_pick()
-
-
 func _confirm_awaken(target: int, material: int) -> void:
 	var p := Save.awaken_preview(target, material)
 	if not p.ok:
 		UI.toast(self, p.reason, Color("ff8080"))
 		return
-	var cap := Save.max_level(Save.get_owned(target))
-	var body := MonsterDetail._text("Use %s to awaken %s?\nLevel cap %d → %d     Cost: %s gold" % [_name(material), _name(target), cap, cap + int(p.gain), Screen._thousands(int(p.cost))], 18)
-	UI.dialog(self, "Awaken", body, [
-		{"text": "Awaken", "color": "purple", "cb": _do_awaken.bind(target, material)},
-		{"text": "Cancel", "color": "blue"},
-	])
+	var t := Save.get_owned(target)
+	var mat := Save.get_owned(material)
+	var d := Layout.load_into(self, "R_d_comTrans", Vector2.ZERO, Layout.SCREEN_H, "popup_open")
+	d.root.z_index = 80
+	d.node("ID_9PATCH_2").mouse_filter = MOUSE_FILTER_STOP
+	var pic := UI.living(DB.battle_sprite(t.id), Vector2(170, 130))
+	pic.position = Vector2(10, 22)
+	d.node("ID_ev1").add_child(pic)
+	for g in 6:
+		d.show("ID_mon1Grade%d" % (g + 1), g < int(DB.monster(t.id).stars))
+	d.text("ID_level", "Lv.%d/%d" % [int(t.level), Save.max_level(t)])
+	d.text("ID_stNum", "+%d" % int(t.boost))
+	d.show("ID_maxLevel", int(t.level) >= Save.max_level(t))
+	var card := UI.monster_card(mat.id, int(mat.level), int(mat.boost), Vector2(92, 92))
+	card.mouse_filter = MOUSE_FILTER_IGNORE
+	d.node("ID_mon1").add_child(card)
+	var l := d.text("ID_baseText", "Max Lv. +%d\nCost: %s gold" % [int(p.gain), Screen._thousands(int(p.cost))])
+	l.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	l.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	l.add_theme_color_override("font_color", UI.BROWN)
+	var root := d.root
+	d.on("ID_btnOk", func():
+		root.queue_free()
+		_do_awaken(target, material))
+	d.on("ID_btnEsc", root.queue_free)
 
 
 func _do_awaken(target: int, material: int) -> void:
@@ -923,59 +901,6 @@ func _do_awaken(target: int, material: int) -> void:
 		Sfx.play("buff_big")
 		UI.toast(self, "Awakened! Level cap %d" % int(r.cap), UI.GOLD)
 	_cancel_pick()
-
-
-func _confirm_boost(target: int, material: int) -> void:
-	var p := Save.boost_preview(target, material)
-	if not p.ok:
-		UI.toast(self, p.reason, Color("ff8080"))
-		return
-	var body := MonsterDetail._text("Use %s to boost %s?\nSuccess rate: %d%%     Cost: %s gold\nBoost PT are earned when a boost fails and add to the next success rate." % [_name(material), _name(target), roundi(float(p.chance) * 100.0), Screen._thousands(int(p.cost))], 18)
-	UI.dialog(self, "Boost", body, [
-		{"text": "Boost", "color": "yellow", "cb": _do_boost.bind(target, material)},
-		{"text": "Cancel", "color": "blue"},
-	])
-
-
-func _do_boost(target: int, material: int) -> void:
-	var r := Save.boost(target, material)
-	if not r.ok:
-		UI.toast(self, r.reason, Color("ff8080"))
-	elif r.success:
-		Sfx.play("buff_big")
-		UI.toast(self, "Boost success!  +%d" % int(r.boost), Color("7dff7a"))
-	else:
-		UI.toast(self, "Boost failed…  Boost PT +%d%%" % int(r.boost_pt), Color("ffb080"))
-	if r.ok and (int(Save.get_owned(target).get("boost", 0)) >= DB.MAX_BOOST or tutorial_active()):
-		_pick_mode = ""
-		_pick_target = -1
-	_refresh()
-	if r.ok:
-		tut_notify("boosted")
-
-
-func _confirm_fusion(a: int, b: int) -> void:
-	var p := Save.fusion_preview(a, b)
-	if not p.ok:
-		UI.toast(self, p.reason, Color("ff8080"))
-		return
-	var body := MonsterDetail._text("Fuse %s and %s into a random %d★ monster?\nBoth will be consumed.     Cost: %s gold" % [_name(a), _name(b), int(p.stars), Screen._thousands(int(p.cost))], 18)
-	UI.dialog(self, "Fusion", body, [
-		{"text": "Fuse", "color": "purple", "cb": _do_fusion.bind(a, b)},
-		{"text": "Cancel", "color": "blue"},
-	])
-
-
-func _do_fusion(a: int, b: int) -> void:
-	var r := Save.fuse(a, b)
-	_pick_mode = ""
-	_pick_target = -1
-	if not r.ok:
-		UI.toast(self, r.reason, Color("ff8080"))
-	else:
-		Sfx.play("buff_big")
-		UI.dialog(self, "Fusion result!", UI.monster_card(r.into, 1, 0, Vector2(220, 220)), [{"text": "OK", "color": "yellow"}])
-	_refresh()
 
 
 func _evolve(uid: int) -> void:
@@ -1014,6 +939,14 @@ func _buy_slots() -> void:
 func _compare_owned(a: Dictionary, b: Dictionary) -> bool:
 	var sa: int = DB.monster(a.id).stars
 	var sb: int = DB.monster(b.id).stars
+	if _family_sort():
+		var da := DB.dex_number(a.id)
+		var db := DB.dex_number(b.id)
+		if da != db:
+			return da < db
+		if int(a.level) != int(b.level):
+			return int(a.level) > int(b.level)
+		return int(a.uid) < int(b.uid)
 	match SORTS[_sort]:
 		"Level":
 			if int(a.level) != int(b.level):
@@ -1025,6 +958,12 @@ func _compare_owned(a: Dictionary, b: Dictionary) -> bool:
 				return ea < eb
 		"Recent":
 			return int(a.uid) > int(b.uid)
+		"Stars":
+			if sa != sb:
+				return sa > sb
+			var ga := DB.compare_grade(a, b)
+			if ga != 0:
+				return ga > 0
 		"Grade":
 			var g := DB.compare_grade(a, b)
 			if g != 0:

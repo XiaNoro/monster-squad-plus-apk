@@ -3,11 +3,14 @@ extends Node
 const DIR := "res://assets/apk/audio/"
 const SOUNDS := {
 	"heal": "skill_heal_base1.ogg",
+	"heal_fire": "skill_heal_fire.ogg",
+	"heal_water": "skill_heal_water.ogg",
+	"heal_nature": "skill_heal_nature.ogg",
 	"buff": "skill_buff_normal.ogg",
 	"buff_big": "skill_buff_heavy.ogg",
 	"debuff": "skill_debuff_03.ogg",
 	"shield": "skill_shield_01.ogg",
-	"cleanse": "skill_purify_01.ogg",
+	"cleanse": "skill_purify_02.ogg",
 	"cast_fire": "f_flametiger_21382_cast.ogg",
 	"cast_water": "w_otter_21447_cast.ogg",
 	"cast_nature": "n_greene_32_cast.ogg",
@@ -28,18 +31,34 @@ const SOUNDS := {
 	"boost_success": "res://assets/sfx/boost_success.ogg",
 	"boost_fail": "res://assets/sfx/boost_fail.ogg",
 	"evolve": "res://assets/sfx/evolve.ogg",
+	"fusion": "res://assets/sfx/fusion.ogg",
 	"quest_complete": "res://assets/sfx/quest_complete.ogg",
 	"exp_count": "res://assets/sfx/exp_count.ogg",
 	"stage_clear": "res://assets/sfx/stage_clear.ogg",
 	"cube_get": "res://assets/sfx/cube_get.ogg",
 	"cube_pickup": "res://assets/sfx/cube_pickup.ogg",
 	"coin": "res://assets/sfx/coin.ogg",}
+const SKILL_SOUNDS := {
+	"triple hit": "f_flametiger_21381", "pepper shot": "f_flametiger_21384", "flaming claws": "w_babytarang_21645",
+	"concentrated venom": "w_otter_21447", "poison ball": "w_otter_21449", "panda stun punch": "w_babytarang_21644",
+	"dark orb": "b_ocpid_21241", "meteor kick": ["w_otter_21447", ""], "hunter's trap": "b_butterfairy_21218",
+	"weak urgent heal": "f_pongpong_100", "total critical up": "f_pongpong_103",
+}
+const RAM_SKILLS := ["strong ram", "swamp needle"]
+const RAM_SOUNDS := {"fire": "f_ogre_21658", "water": "w_ogre_21659", "nature": "n_ogre_21522", "normal": "b_ogre_21296"}
+const SKILL_POOLS := {
+	"fire": ["f_butterfairy_21499", "f_butterfairy_550", "f_chiqueen_4", "f_flametiger_21382", "f_pongpong_100", "f_pongpong_103"],
+	"water": ["w_babytarang_11005", "w_babytarang_21608", "w_butterfairy_21501", "w_butterfairy_551", "w_fisher_23", "w_fisher_26", "w_pongpong_21476", "w_snik_173", "w_winny_21342", "w_winny_21344", "w_winny_21345"],
+	"nature": ["n_butterfairy_21550", "n_butterfairy_552", "n_greene_21247", "n_greene_2", "n_greene_32", "n_pongpong_21477"],
+	"normal": ["b_birdfly_27", "b_birdfly_30", "b_butterfairy_21216", "b_butterfairy_21218", "b_mud_21493", "b_nectar_21280", "b_ocpid_21241", "b_ocpid_21469", "b_ogre_21298", "b_pongpong_21478"],
+}
 const MUSIC_DIR := "res://assets/music/"
 const MUSIC := {
 	"title": "Title.mp3",
 	"lobby": MUSIC_DIR + "lobby.ogg",
 	"sprout": MUSIC_DIR + "sprout.ogg",
 	"lake": MUSIC_DIR + "lake.ogg",
+	"desert": MUSIC_DIR + "desert.ogg",
 	"boneyard": MUSIC_DIR + "boneyard.ogg",
 	"robo": MUSIC_DIR + "robo.ogg",
 	"lake_boss": MUSIC_DIR + "lake_boss.ogg",
@@ -51,7 +70,7 @@ const MUSIC := {
 	"duel": "Battle-pvp.mp3",
 	"league": "Battle-pvp3.mp3",
 }
-const ISLAND_MUSIC := {"sprout_island": "sprout", "lake_island": "lake", "desert_isle": "lake", "moonlight_desert": "lake", "boneyard_island": "boneyard", "robo_island": "robo"}
+const ISLAND_MUSIC := {"sprout_island": "sprout", "lake_island": "lake", "desert_isle": "desert", "moonlight_desert": "desert", "boneyard_island": "boneyard", "robo_island": "robo"}
 const ISLAND_BOSS_MUSIC := {"lake_island": "lake_boss", "moonlight_desert": "moonlight_boss", "dino_gorge": "dino_boss", "robo_island": "robo_boss"}
 const MODE_MUSIC := {"arena": "pvp", "duel": "duel", "league": "league", "tower": "boss"}
 const VOICES := 8
@@ -161,15 +180,76 @@ func _save_settings() -> void:
 	cfg.save(SETTINGS)
 
 
-func play(sound: String) -> AudioStreamPlayer:
+func play(sound: String, db: float = 0.0) -> AudioStreamPlayer:
 	var stream := _stream(SOUNDS.get(sound, ""))
 	if stream == null:
 		return null
 	var p := _players[_next]
 	_next = (_next + 1) % VOICES
 	p.stream = stream
+	p.volume_db = -4.0 + db
 	p.play()
 	return p
+
+
+func play_skill(skill_name: String, element: String, part: String) -> void:
+	var base := skill_sound(skill_name, element, part)
+	var stream := _stream(base + "_" + part + ".ogg")
+	if stream == null and part == "cast":
+		stream = _stream(base + "_cast_voice.ogg")
+	if stream == null:
+		play(part.replace("damage", "hit") + "_" + element)
+		return
+	var p := _players[_next]
+	_next = (_next + 1) % VOICES
+	p.stream = stream
+	p.volume_db = -4.0
+	p.play()
+
+
+func menu_paths() -> Array:
+	var out := []
+	for file in SOUNDS.values() + [MUSIC.lobby]:
+		var path := String(file) if String(file).begins_with("res://") else DIR + String(file)
+		if ResourceLoader.exists(path):
+			out.append(path)
+	return out
+
+
+func battle_paths(quest: Dictionary, island_id: String) -> Array:
+	var out := []
+	for file in SOUNDS.values() + [MUSIC.get(battle_music(quest, island_id, true), ""), MUSIC.lobby]:
+		var path := String(file) if String(file).begins_with("res://") else DIR + String(file)
+		if ResourceLoader.exists(path):
+			out.append(path)
+	return out
+
+
+func skill_paths(skill_name: String, element: String) -> Array:
+	var out := [DIR + String(SOUNDS.get("hit_" + element, ""))]
+	for part in ["cast", "damage"]:
+		var base := skill_sound(skill_name, element, part)
+		for tail in ["_" + part + ".ogg", "_cast_voice.ogg"]:
+			if ResourceLoader.exists(DIR + base + tail):
+				out.append(DIR + base + tail)
+	return out
+
+
+func has_skill_sound(skill_name: String) -> bool:
+	return SKILL_SOUNDS.has(skill_name.to_lower())
+
+
+func skill_sound(skill_name: String, element: String, part: String = "cast") -> String:
+	var key := skill_name.to_lower()
+	var known = SKILL_SOUNDS.get(key, "")
+	if known is Array:
+		known = known[0 if part == "cast" else 1]
+	if known != "":
+		return known
+	if key in RAM_SKILLS:
+		return RAM_SOUNDS.get(element, RAM_SOUNDS.normal)
+	var pool: Array = SKILL_POOLS.get(element, SKILL_POOLS.normal)
+	return pool[absi(hash(skill_name)) % pool.size()]
 
 
 func play_music(track: String) -> void:

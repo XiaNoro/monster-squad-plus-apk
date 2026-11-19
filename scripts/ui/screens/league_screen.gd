@@ -10,10 +10,11 @@ var match_lay: Layout
 var _sel_slot := -1
 var _sort := 0
 var _rival: Dictionary = {}
+var _paid_entry := false
 
 
 func build() -> void:
-	UI.background(self, UI.tex("res://assets/apk/images/Forest_1.png"), 0.3)
+	UI.background(self, UI.tex(LeagueSeasons.bg_path()), 0.3)
 	lay = Layout.load_into(self, "R_pvpGroupEnterPage")
 	add_top_bar("5", "Waiting Room", "hub")
 	lay.text("ID_groupText", "PvP League Team")
@@ -38,7 +39,7 @@ func build() -> void:
 	if not last.is_empty() and not bool(l.get("last_seen", false)):
 		l.last_seen = true
 		Save.save_game()
-		UI.notice(self, "Last Season", "Rank %d with %s Points\n+%d Honor (check your Messages)%s" % [int(last.rank), Screen._thousands(int(last.points)), int(last.honor), ("\n%s badge" % String(last.badge).capitalize()) if String(last.badge) != "" else ""])
+		UI.notice(self, String(last.get("name", "Last Season")), "Rank %d with %s Points\n+%d Honor, +%d Gems (check your Messages)%s%s" % [int(last.rank), Screen._thousands(int(last.points)), int(last.honor), int(last.get("gems", 0)), ("\n%s %s (Badge List)" % [String(last.badge).capitalize(), String(last.name).trim_suffix(" League") + " Badge"]) if String(last.badge) != "" else "", "\nLeague wing on your monsters' names" if int(last.get("wing", 0)) > 0 else ""])
 	if args.has("edit"):
 		_open_editor()
 	elif args.has("match"):
@@ -51,7 +52,7 @@ func _refresh_info() -> void:
 	if not lay.root.visible:
 		return
 	var l := Save.league()
-	var rank := Save.league_rank(l, Arena.week_progress())
+	var rank := Save.league_rank(l, LeagueSeasons.progress())
 	lay.text("ID_rankingText2", ("%d (%.1f%%)" % [rank, 100.0 * rank / float(Arena.RIVALS + 1)]) if int(l.rounds) > 0 else "-")
 	lay.text("ID_scoreText2", "%s Points" % Screen._thousands(int(l.points)))
 	lay.text("ID_winText2", "%d Wins" % int(l.wins))
@@ -72,7 +73,7 @@ func _fill_team(l: Layout, id: String, editing: bool, holder: Control = null) ->
 	var team := _team()
 	var rows := []
 	var row: HBoxContainer
-	for i in Save.LEAGUE_TEAM:
+	for i in LeagueSeasons.team_size():
 		if i % 3 == 0:
 			row = HBoxContainer.new()
 			row.add_theme_constant_override("separation", 0)
@@ -112,8 +113,8 @@ func _group_slot(m: Dictionary, n: int, selected: bool) -> Control:
 
 
 func _open_editor() -> void:
-	if Save.data.monsters.size() < Save.LEAGUE_TEAM:
-		UI.notice(self, "Notice", "You need at least %d monsters for the PvP League." % Save.LEAGUE_TEAM)
+	if Save.data.monsters.size() < LeagueSeasons.team_size():
+		UI.notice(self, "Notice", "You need at least %d monsters for the PvP League." % LeagueSeasons.team_size())
 		return
 	lay.root.visible = false
 	if edit_lay == null:
@@ -131,7 +132,7 @@ func _refresh_editor() -> void:
 	_fill_team(edit_lay, "", true, edit_lay.node("ID_friend").find_child("ID_ID_arrayPosition", true, false))
 	var owned: Array = Save.data.monsters.duplicate()
 	owned.sort_custom(_sorter())
-	var team: Array = _team().map(func(u): return int(u))
+	var team: Array = _team().slice(0, LeagueSeasons.team_size()).map(func(u): return int(u))
 	var cells: Array = [_remove_cell()]
 	for m in owned:
 		var card := UI.monster_card(String(m.id), int(m.level), int(m.boost), Vector2(96, 96))
@@ -209,12 +210,16 @@ func _on_pick(e: InputEvent, uid: int) -> void:
 		return
 	var l := Save.league()
 	var team: Array = l.team.map(func(u): return int(u))
-	if uid in team:
+	var size := LeagueSeasons.team_size()
+	if uid in team.slice(0, size):
 		team.erase(uid)
 	elif _sel_slot >= 0 and _sel_slot < team.size():
 		team[_sel_slot] = uid
 		_sel_slot = -1
-	elif team.size() < Save.LEAGUE_TEAM:
+	elif size == 1:
+		team.erase(uid)
+		team.push_front(uid)
+	elif team.size() < size:
 		team.append(uid)
 	else:
 		UI.toast(self, "Select a team slot to replace")
@@ -268,11 +273,11 @@ static func power_of(m: Dictionary) -> float:
 
 func _ladder() -> Array:
 	var l := Save.league()
-	var progress := Arena.week_progress()
-	var power := Arena.power_of(_owned(l.team)) / 3.0
+	var progress := LeagueSeasons.progress()
+	var power := per_four(_owned(l.team))
 	var out := []
 	for r in Arena.rivals(int(l.season) + 7777):
-		out.append({"name": r.name, "points": Save.LEAGUE_START_POINTS + Arena.rival_points(r, progress), "leader": Arena.rival_team(r, power)[0], "me": false})
+		out.append({"name": r.name, "points": Save.LEAGUE_START_POINTS + Arena.rival_points(r, progress, Save.LEAGUE_SEASON_GAMES), "leader": Arena.rival_team(r, power)[0], "me": false})
 	var mine := _owned(l.team)
 	var lead: Dictionary = {"id": mine[0].id, "level": int(mine[0].level), "boost": int(mine[0].boost)} if not mine.is_empty() else {"id": "firepaw", "level": 1, "boost": 0}
 	out.append({"name": String(Save.data.get("name", "Tamer")), "points": int(l.points), "leader": lead, "me": true})
@@ -320,31 +325,49 @@ func _show_ranks() -> void:
 
 
 static func show_rewards(parent: Control) -> void:
-	var d := Layout.load_into(parent, "R_d_pvpGroupRewardView")
+	var s := LeagueSeasons.season()
+	var d := Layout.load_into(parent, "R_d_pvpLegueRewardView")
 	d.root.z_index = 80
 	d.node("ID_9PATCH_2").mouse_filter = Control.MOUSE_FILTER_STOP
-	for i in Save.LEAGUE_HONOUR.size():
-		d.text("ID_rankText_%d" % (i + 1), String(Save.LEAGUE_HONOUR[i][0]))
-		d.text("ID_honorText_%d" % (i + 1), "%d Points" % int(Save.LEAGUE_HONOUR[i][1]))
-	var t := d.text("ID_timeText", "Rewards can be received once a week. Calculation is made Saturday 00:00 (UTC). Top 10% earn a Gold badge, top 25% Silver and top 50% Bronze.")
+	d.text("ID_titleText", LeagueSeasons.title(s))
+	for i in LeagueSeasons.REWARDS.size():
+		var row: Array = LeagueSeasons.REWARDS[i]
+		d.text("ID_rankText_%d" % (i + 1), String(row[0]))
+		d.text("ID_honorText_%d" % (i + 1), Screen._thousands(int(row[2])))
+		d.text("ID_jemText_%d" % (i + 1), str(int(row[3])))
+		if String(row[4]) != "":
+			var badge := UI.image(LeagueSeasons.badge_texture(int(s.id), String(row[4])), Vector2(146, 146))
+			d.put("ID_badgeImage_%d" % (i + 1), badge, Vector2(146, 146))
+	var t := d.text("ID_timeText", LeagueSeasons.intro(s) + "\n" + LeagueSeasons.end_text(s))
 	t.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	d.hide_all(["ID_btnPage1", "ID_btnPage2"])
-	var pic := UI.image(UI.tex("betaUI00/I_honor_02.png"), Vector2(200, 200))
-	pic.size = Vector2(200, 200)
-	pic.position = Vector2(141, 60)
-	d.node("ID_imageBack").add_child(pic)
+	d.text("ID_monText", "Boosted League Monsters").autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	for k in mini(3, (s.boost as Array).size()):
+		var holder: Control = d.node("ID_monIcon%d" % (k + 1))
+		var card := UI.monster_card(String(s.boost[k]), 1, 0, holder.size)
+		card.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		d.put("ID_monIcon%d" % (k + 1), card)
+	d.text("ID_ruleText", "\n".join(LeagueSeasons.rule_lines(s))).autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	d.hide_all(["ID_btnPage1", "ID_btnPage2", "ID_page_2"])
 	var root := d.root
 	d.on("ID_btnEsc", root.queue_free)
 
 
 func _enter() -> void:
-	var l := Save.league()
-	if _team().size() < Save.LEAGUE_TEAM:
-		UI.notice(self, "Notice", "Register %d monsters with Edit Team first." % Save.LEAGUE_TEAM)
+	if _team().size() < LeagueSeasons.team_size():
+		UI.notice(self, "Notice", "Register %d monsters with Edit Team first." % LeagueSeasons.team_size())
+		return
+	if Save.league_tickets() < Save.LEAGUE_ENTRY and int(Save.data.gold) >= Save.LEAGUE_GOLD_ENTRY:
+		UI.notice(self, "Notice", "1 gem (Solo) / %s Gold (League) will be used as you have no tickets." % Screen._thousands(Save.LEAGUE_GOLD_ENTRY), _pick_rival.bind(true))
 		return
 	if Save.league_tickets() < Save.LEAGUE_ENTRY:
 		UI.notice(self, "Notice", "Not enough Entry Tickets.\n(A ticket recharges every %d minutes.)" % (Save.LEAGUE_TICKET_SECONDS / 60))
 		return
+	_pick_rival(false)
+
+
+func _pick_rival(paid: bool) -> void:
+	_paid_entry = paid
+	var l := Save.league()
 	var rivals := Arena.rivals(int(l.season) + 7777)
 	var rng := RandomNumberGenerator.new()
 	rng.seed = int(l.season) * 31 + int(l.rounds)
@@ -360,8 +383,9 @@ func _show_match() -> void:
 	move_child(match_lay.root, top.root.get_index())
 	_back_target = "league"
 	var l := Save.league()
-	var mine := _owned(l.team)
-	var their := rival_league_team(_rival, Arena.power_of(mine) / 3.0)
+	var size := LeagueSeasons.team_size()
+	var mine := _owned(l.team).slice(0, size)
+	var their := rival_league_team(_rival, per_four(mine), size)
 	var ladder := _ladder()
 	var my_rank := 0
 	var their_rank := 0
@@ -379,6 +403,9 @@ func _show_match() -> void:
 	_photo("ID_photo_1", String(mine[0].id))
 	_photo("ID_photo_2", String(their[0].id))
 	for i in 12:
+		if i >= size:
+			match_lay.hide_all(["ID_myMon%d" % i, "ID_enemyMon%d" % i])
+			continue
 		if i < mine.size():
 			var c := UI.monster_card(String(mine[i].id), int(mine[i].level), int(mine[i].boost), Vector2(92, 92))
 			c.mouse_filter = MOUSE_FILTER_IGNORE
@@ -394,7 +421,7 @@ func _show_match() -> void:
 			q.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 			q.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 			match_lay.put("ID_enemyIcon%d" % i, q)
-	match_lay.on("ID_btnPvpStart", _start.bind(league_specs(l.team), their))
+	match_lay.on("ID_btnPvpStart", _start.bind(league_specs(l.team.slice(0, size)), their))
 
 
 func _photo(id: String, monster_id: String) -> void:
@@ -404,15 +431,22 @@ func _photo(id: String, monster_id: String) -> void:
 
 
 func _start(my_team: Array, their: Array) -> void:
-	if not Save.spend_league_entry():
+	if _paid_entry:
+		if int(Save.data.gold) < Save.LEAGUE_GOLD_ENTRY:
+			UI.notice(self, "Notice", "Not enough Gold.")
+			return
+		Save.data.gold = int(Save.data.gold) - Save.LEAGUE_GOLD_ENTRY
+		Save.save_game()
+	elif not Save.spend_league_entry():
 		UI.notice(self, "Notice", "Not enough Entry Tickets.")
 		return
+	var season := LeagueSeasons.season()
 	main.go("battle", {"quest": {
 		"kind": "league", "key": "league", "title": "PvP League  ·  vs %s" % _rival.name,
 		"rival_name": _rival.name, "rival_skill": float(_rival.skill),
 		"energy": 0, "level": 30, "boss": their[0].id, "enemies": [], "stages": 1,
 		"gold": 0.0, "exp": 0.0, "drops": false, "boss_drop_chance": 0.0, "drop_level": [1, 1], "first_clear_drop": false,
-		"pvp": true, "league_team": my_team, "league_enemy": their,
+		"pvp": true, "league_team": my_team, "league_enemy": their, "season": int(season.id), "bg": String(season.bg),
 	}})
 
 
@@ -432,10 +466,14 @@ static func league_specs(uids: Array) -> Array:
 	return out
 
 
-static func rival_league_team(r: Dictionary, power_per_four: float) -> Array:
+static func per_four(team: Array) -> float:
+	return Arena.power_of(team) * 4.0 / maxf(1.0, team.size())
+
+
+static func rival_league_team(r: Dictionary, power_per_four: float, size: int = Save.LEAGUE_TEAM) -> Array:
 	var out := []
-	for k in 3:
+	for k in ceili(size / 4.0):
 		var variant := r.duplicate()
 		variant.seed = int(r.seed) + k * 101
 		out += Arena.rival_team(variant, power_per_four)
-	return out
+	return out.slice(0, size)

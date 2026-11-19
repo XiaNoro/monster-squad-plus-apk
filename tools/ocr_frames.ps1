@@ -1,7 +1,8 @@
 # OCRs every .jpg/.png in a folder with the built-in Windows OCR engine (no install needed).
-# Writes <folder>/ocr.tsv: file <TAB> recognised text (one line per frame).
-# Usage: powershell -File tools/ocr_frames.ps1 <frames folder>
-param([string]$Dir)
+# Writes <folder>/ocr.tsv: file <TAB> recognised text (one line per frame); with -Lang ko, <folder>/ocr_ko.tsv
+# (that language's OCR pack must be installed).
+# Usage: powershell -File tools/ocr_frames.ps1 <frames folder> [-Lang ko]
+param([string]$Dir, [string]$Lang = '')
 
 Add-Type -AssemblyName System.Runtime.WindowsRuntime
 $null = [Windows.Storage.StorageFile, Windows.Storage, ContentType = WindowsRuntime]
@@ -17,9 +18,14 @@ function Await($op, [Type]$type) {
     $t.Result
 }
 
-$engine = [Windows.Media.Ocr.OcrEngine]::TryCreateFromUserProfileLanguages()
+$null = [Windows.Globalization.Language, Windows.Globalization, ContentType = WindowsRuntime]
+if ($Lang) {
+    $engine = [Windows.Media.Ocr.OcrEngine]::TryCreateFromLanguage([Windows.Globalization.Language]::new($Lang))
+} else {
+    $engine = [Windows.Media.Ocr.OcrEngine]::TryCreateFromUserProfileLanguages()
+}
 if ($null -eq $engine) { throw "No OCR language available" }
-$out = Join-Path $Dir 'ocr.tsv'
+$out = Join-Path $Dir ($(if ($Lang) { "ocr_$Lang.tsv" } else { 'ocr.tsv' }))
 $lines = New-Object System.Collections.Generic.List[string]
 foreach ($f in Get-ChildItem $Dir -File | Where-Object { $_.Extension -in '.jpg', '.png' } | Sort-Object Name) {
     $file = Await ([Windows.Storage.StorageFile]::GetFileFromPathAsync($f.FullName)) ([Windows.Storage.StorageFile])

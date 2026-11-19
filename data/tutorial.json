@@ -1,5 +1,5 @@
 {
-	"_source": "TapGameplay walkthrough parts 1-2 (youtu.be/ygiUgG6qMHI and part 2), read frame by frame. Chapters play once each, in order of their trigger. Step kinds: say (dialogue box, tap to continue), popup (New Island card), focus (dim the screen, bouncing arrow, only the target works).",
+	"_source": "TapGameplay walkthrough parts 1-2 (youtu.be/ygiUgG6qMHI and part 2), read frame by frame. Chapters play once each, in order of their trigger. Step kinds: say (dialogue box, tap to continue), popup (New Island card), focus (dim the screen, bouncing arrow, only the target works). Fusion help (Prisbal) and the boost opener from 4yY7RntZ3xs (@1338, @5210-5248).",
 	"chapters": [
 		{
 			"id": "intro",
@@ -384,7 +384,7 @@
 			"steps": [
 				{
 					"say": "firepaw",
-					"text": "Wow, you explored all of Sprout Island!\nBut Lake Island won't be so easy!\nI'll teach you how to boost your monster's stat.",
+					"text": "Fortify your new monster to make it stronger.\nThis will really help the team.",
 					"face": "happy"
 				},
 				{
@@ -727,36 +727,173 @@
 					"text": "Aim to rank your team up to S++ and make sure\nyou have the right elements and skills.\nRank A monster squad can beat Rank S with the\nright moves!"
 				}
 			]
+		},
+		{
+			"id": "fusion",
+			"screen": "hub",
+			"when": "after:team_rank&maxed",
+			"steps": [
+				{
+					"say": "prisbal",
+					"text": "This is my last evolution stage. That means no\nmore ranks from evolving."
+				},
+				{
+					"say": "prisbal",
+					"text": "However, you could turn me into a totally different monster if you\nfused me with a monster of the same rank."
+				},
+				{
+					"focus": "nav:train"
+				}
+			]
+		},
+		{
+			"id": "fusion_page",
+			"screen": "combine",
+			"when": "after:fusion",
+			"steps": [
+				{
+					"say": "prisbal",
+					"text": "The procedure is almost the same as Evolution.\nYou just need the right material to begin Fusion."
+				},
+				{
+					"say": "prisbal",
+					"text": "If you use a same-ranked monster where you\nwould usually put an evolution material, Fusion\nwill take place."
+				}
+			]
 		}
 	],
 	"boss_lines": {
-		"sky_island:normal:5": {
-			"say": "archwing",
-			"text": "What are you trying to prove? Go back, NOW!"
+		"boneyard_island:normal:1": {
+			"say": "goliem",
+			"text": "You must be strong to make it here.\nBut this place will be your grave!\nAttack, my lizards!"
 		},
-		"sky_island:normal:6": {
-			"say": "doorbot_v3",
-			"text": "ACCESS DENIED. ADMISSION PROHIBITED."
+		"boneyard_island:normal:2": {
+			"say": "ceratops",
+			"text": "I haven't let anyone through so far.\nBe grateful you ran into me!\nI'll show you an easy exit."
 		},
-		"sprout_island:normal:1": {
-			"say": "emberpeep",
-			"text": "Doesn't this seed give you special super powers?\nI must have it!"
+		"boneyard_island:normal:4": {
+			"say": "forina",
+			"text": "You beat up Frivolaze? He was a bit clumsy,\nbut I'm different! Take your time, you'll need it!"
 		},
-		"sprout_island:normal:2": {
-			"say": "mini",
-			"text": "I'll take out any chump that tries to\nmess up MY seed harvest!"
+		"boneyard_island:normal:5": {
+			"say": "derarctus",
+			"text": "I can't believe I have to take matters into\nmy own hands. You punks are really annoying!\nNo one has ever passed this area."
 		},
-		"sprout_island:normal:3": {
-			"say": "raingull",
-			"text": "I can't believe these rookies defeated me.\nI'll get them... AFTER I GET YOU!"
+		"boneyard_island:normal:6": {
+			"say": "yakkelder",
+			"text": "You've made it far enough to be heroes.\nYou just have to make it past one thing..."
 		},
-		"sprout_island:normal:4": {
-			"say": "flutter",
-			"text": "All you can come up with is a rare seed?\nThat thing wouldn't even make a good snack!"
+		"boneyard_island:normal:7": {
+			"say": "parigontix",
+			"text": "I'm safe, as long as I have my Frivolaze\nto protect me. Frivolaze! Go, and destroy them!\nSmash them to bits!"
 		},
-		"sprout_island:normal:5": {
-			"say": "ulmigrand",
-			"text": "It really was a regular seed...\nWhy are you even here?"
+		"boneyard_island:normal:8": {
+			"say": "unacorn",
+			"text": "I'm the mercenary who will settle this!\nAre you sure you don't want to run for your life?\nHave it your way!"
+		},
+		"boneyard_island:normal:10": {
+			"say": "talmag",
+			"text": "You've gotten too far!\nI can't let you get the Seal Piece!\nThis is where your path ends!"
+		},
+		"boneyard_island:normal:11": {
+			"say": "krokodar",
+			"text": "Don't go celebrating yet. Even if you make it\npast me, you'll never survive Dino Gorge!\nFall to the sound of the Wolverin!"
+		},
+		"boneyard_island:normal:12": {
+			"say": "trean",
+			"text": "I'm Trean. No one can defeat me!\nI'll make you regret coming here! HOWOOOOOO!"
+		},
+		"boneyard_island:normal:13": {
+			"say": "goldverin",
+			"text": "So, you've come this far?\nIf you surrender to me right now, I'll take you\nas my pupil. Surrender to the world of Goldverin!"
+		},
+		"boneyard_island:hell:0": {
+			"say": "lavan",
+			"text": "Do you see the buried bones?\nThis will be your resting place.\nRest in peace!"
+		},
+		"boneyard_island:hell:9": {
+			"say": "turan",
+			"text": "Still looking for the piece of the seal?\nHow about begging for your life?!\nFight me, you fool!"
+		},
+		"desert_isle:normal:1": {
+			"say": "frogy",
+			"text": "Oh, look who's here!\nThe swindlers that skipped out on my toll!"
+		},
+		"desert_isle:normal:2": {
+			"say": "hibisquid",
+			"text": "Feeling great, rolling around the hot desert.\nWhy don't you give it a try?"
+		},
+		"desert_isle:normal:3": {
+			"say": "catrikster",
+			"text": "Don't give the desert folk the cold-shoulder.\nYou'll be buried deep in sand."
+		},
+		"desert_isle:normal:4": {
+			"say": "beburn",
+			"text": "We welcome travelers to the oasis.\nThat'll be 1 gems for water."
+		},
+		"desert_isle:normal:5": {
+			"say": "thornles",
+			"text": "The hotter the desert, the better the oasis.\nUnless you can't pay for it, of course."
+		},
+		"desert_isle:normal:6": {
+			"say": "xenocutter",
+			"text": "You dare cause a ruckus around my oasis?!\nGet outta here!"
+		},
+		"desert_isle:normal:7": {
+			"say": "ninja_blue",
+			"text": "The price on water means nothing goes to waste.\nWe're keeping the desert healthy!"
+		},
+		"desert_isle:normal:8": {
+			"say": "pinkey",
+			"text": "The desert nights are unkind. Inexperienced\ntravelers like yourself could get buried!"
+		},
+		"desert_isle:normal:9": {
+			"say": "kabong",
+			"text": "You mess with one of us,\nyou mess with all of us!"
+		},
+		"desert_isle:normal:10": {
+			"say": "grochi",
+			"text": "Who are you to interrupt us?\nWhat happens in the desert stays in the desert."
+		},
+		"dino_gorge:normal:0": {
+			"say": "minohawker",
+			"text": "You reek of destruction!\nLeave this island."
+		},
+		"dino_gorge:normal:1": {
+			"say": "minoguller",
+			"text": "Sometimes, words aren't enough.\nYou're never leaving this island!"
+		},
+		"dino_gorge:normal:2": {
+			"say": "minothro",
+			"text": "Dragons never make the wrong decision.\nRuckus-makers beware!"
+		},
+		"dino_gorge:normal:4": {
+			"say": "ceratops",
+			"text": "It might have been easy to sneak in,\nbut you'll never get out alive."
+		},
+		"dino_gorge:normal:5": {
+			"say": "parigontix",
+			"text": "Thieves! They're after the warehouse!\nThe warehouse is empty? That's ridiculous!"
+		},
+		"dino_gorge:normal:6": {
+			"say": "derarctus",
+			"text": "How dare you allow my noble hands to be sullied?!\nYou vulgar, vile creatures!"
+		},
+		"dino_gorge:normal:7": {
+			"say": "tramasaur",
+			"text": "So, you made it to the Dragons.\nYour flame of terror fizzles out here!"
+		},
+		"dino_gorge:normal:11": {
+			"say": "jadefang",
+			"text": "The thieves ran away, but here YOU are.\nI'll have to make do."
+		},
+		"dino_gorge:normal:12": {
+			"say": "azurefang",
+			"text": "We can rebuild, as long as you're not here.\nUnless we lock you up... Forever!"
+		},
+		"dino_gorge:normal:13": {
+			"say": "rubyfang",
+			"text": "A thief? I know!\nIf it weren't for you, it would have been mine!"
 		},
 		"lake_island:normal:0": {
 			"say": "octo",
@@ -802,6 +939,10 @@
 			"say": "freez",
 			"text": "Stop it! Fine. I'll leave you alone.\nHaha. I can't believe you didn't realize\nI was joking! Ha.. haha..."
 		},
+		"lake_island:normal:11": {
+			"say": "stoneskin",
+			"text": "It's ruined! It's all ruined! I can't let this go!\nI will never forgive you!"
+		},
 		"lake_island:hard:4": {
 			"say": "shivairy",
 			"text": "Check it out! I put some food coloring in this\nwater, and I'm selling it as a supplement.\nBest prank ever!"
@@ -809,26 +950,6 @@
 		"lake_island:hard:6": {
 			"say": "chilairy",
 			"text": "Side-effects? Well, there could be.\nI dunno, I'M not gonna eat it."
-		},
-		"desert_isle:normal:3": {
-			"say": "catrikster",
-			"text": "Don't give the desert folk the cold-shoulder.\nYou'll be buried deep in sand."
-		},
-		"desert_isle:normal:4": {
-			"say": "beburn",
-			"text": "We welcome travelers to the oasis.\nThat'll be 1 gems for water."
-		},
-		"desert_isle:normal:8": {
-			"say": "pinkey",
-			"text": "The desert nights are unkind. Inexperienced\ntravelers like yourself could get buried!"
-		},
-		"desert_isle:normal:9": {
-			"say": "kabong",
-			"text": "You mess with one of us,\nyou mess with all of us!"
-		},
-		"desert_isle:normal:10": {
-			"say": "grochi",
-			"text": "Who are you to interrupt us?\nWhat happens in the desert stays in the desert."
 		},
 		"moonlight_desert:normal:0": {
 			"say": "fimia",
@@ -858,93 +979,93 @@
 			"say": "greentula",
 			"text": "You beat my younger brother?\nLet's see how you handle the real deal.\nThis is for my younger brother!"
 		},
+		"moonlight_desert:normal:8": {
+			"say": "reditula",
+			"text": "Have you heard of a lizard with bloodshot eyes?\nIt's supposed to be a legendary monster that vanished long ago..."
+		},
+		"moonlight_desert:normal:10": {
+			"say": "moonlight",
+			"text": "Who wakes me from my sleep?\nHey! My claws look amazing in the moonlight...\nI'm gonna scratch you up good!"
+		},
 		"moonlight_desert:normal:11": {
 			"say": "iron_bear",
 			"text": "Wh-what have you done?!\nI underestimated you before, but this stops now.\nGet ready for a claw clinic!"
 		},
-		"boneyard_island:normal:1": {
-			"say": "goliem",
-			"text": "You must be strong to make it here.\nBut this place will be your grave!\nAttack, my lizards!"
+		"moonlight_desert:hard:9": {
+			"say": "dratula",
+			"text": "Wow, you're walking around here like it's nothing!\nYou must not be ordinary people. Let's see if you're more ordinary than my teeth!"
 		},
-		"boneyard_island:normal:2": {
-			"say": "ceratops",
-			"text": "I haven't let anyone through so far.\nBe grateful you ran into me!\nI'll show you an easy exit."
+		"robo_island:hard:0": {
+			"say": "king_spiky",
+			"text": "Plundering time is almost over.\nHmm? Who's there?!"
 		},
-		"boneyard_island:normal:4": {
-			"say": "forina",
-			"text": "You beat up Frivolaze? He was a bit clumsy,\nbut I'm different! Take your time, you'll need it!"
+		"robo_island:hard:12": {
+			"say": "metapanzer",
+			"text": "You remembered me.\nWe will not plunder for this battle.\nWe will destroy!"
 		},
-		"boneyard_island:normal:5": {
-			"say": "derarctus",
-			"text": "I can't believe I have to take matters into\nmy own hands. You punks are really annoying!\nNo one has ever passed this area."
+		"sky_island:normal:0": {
+			"say": "urscout_b",
+			"text": "That's far enough. Go back now, for your own sake!"
 		},
-		"boneyard_island:normal:6": {
-			"say": "yakkelder",
-			"text": "You've made it far enough to be heroes.\nYou just have to make it past one thing..."
+		"sky_island:normal:1": {
+			"say": "glintscale",
+			"text": "You want to go higher!? You have to beat me first!"
 		},
-		"boneyard_island:normal:7": {
-			"say": "parigontix",
-			"text": "I'm safe, as long as I have my Frivolaze\nto protect me. Frivolaze! Go, and destroy them!\nSmash them to bits!"
+		"sky_island:normal:2": {
+			"say": "torizo",
+			"text": "It's a long way down. You sure you want to do this?"
 		},
-		"boneyard_island:normal:8": {
+		"sky_island:normal:3": {
 			"say": "unacorn",
-			"text": "I'm the mercenary who will settle this!\nAre you sure you don't want to run for your life?\nHave it your way!"
+			"text": "I bet you won't be able to last much longer!"
 		},
-		"boneyard_island:normal:10": {
-			"say": "talmag",
-			"text": "You've gotten too far!\nI can't let you get the Seal Piece!\nThis is where your path ends!"
+		"sky_island:normal:4": {
+			"say": "swiftclaw",
+			"text": "You've come far. Impressive, but this ends now!"
 		},
-		"boneyard_island:normal:11": {
-			"say": "krokodar",
-			"text": "Don't go celebrating yet. Even if you make it\npast me, you'll never survive Dino Gorge!\nFall to the sound of the Wolverin!"
+		"sky_island:normal:5": {
+			"say": "archwing",
+			"text": "What are you trying to prove? Go back, NOW!"
 		},
-		"boneyard_island:normal:12": {
-			"say": "mantichomp",
-			"text": "I'm Mantichomp. No one can defeat me!\nI'll make you regret coming here! HOWOOOOOO!"
+		"sky_island:normal:6": {
+			"say": "doorbot_v3",
+			"text": "ACCESS DENIED. ADMISSION PROHIBITED."
 		},
-		"boneyard_island:normal:13": {
-			"say": "goldverin",
-			"text": "So, you've come this far?\nIf you surrender to me right now, I'll take you\nas my pupil. Surrender to the world of Goldverin!"
+		"sky_island:hard:6": {
+			"say": "cumulo",
+			"text": "Hmph! I could just blow you away, you know."
 		},
-		"dino_gorge:normal:0": {
-			"say": "minohawker",
-			"text": "You reek of destruction!\nLeave this island."
+		"sky_island:hard:7": {
+			"say": "thundaro",
+			"text": "Rough up here, eh? Wouldn't want to fall, would\nyou?"
 		},
-		"dino_gorge:normal:1": {
-			"say": "minoguller",
-			"text": "Sometimes, words aren't enough.\nYou're never leaving this island!"
+		"sky_island:hell:3": {
+			"say": "unacorn",
+			"text": "I bet you won't be able to last much longer!"
 		},
-		"dino_gorge:normal:2": {
-			"say": "minothro",
-			"text": "Dragons never make the wrong decision.\nRuckus-makers beware!"
+		"sky_island:hell:7": {
+			"say": "morrigan",
+			"text": "I commend your courage, but that won't save you\nnow!"
 		},
-		"dino_gorge:normal:4": {
-			"say": "ceratops",
-			"text": "It might have been easy to sneak in,\nbut you'll never get out alive."
+		"sprout_island:normal:1": {
+			"say": "emberpeep",
+			"text": "Doesn't this seed give you special super powers?\nI must have it!"
 		},
-		"dino_gorge:normal:5": {
-			"say": "parigontix",
-			"text": "Thieves! They're after the warehouse!\nThe warehouse is empty? That's ridiculous!"
+		"sprout_island:normal:2": {
+			"say": "mini",
+			"text": "I'll take out any chump that tries to\nmess up MY seed harvest!"
 		},
-		"dino_gorge:normal:6": {
-			"say": "derarctus",
-			"text": "How dare you allow my noble hands to be sullied?!\nYou vulgar, vile creatures!"
+		"sprout_island:normal:3": {
+			"say": "raingull",
+			"text": "I can't believe these rookies defeated me.\nI'll get them... AFTER I GET YOU!"
 		},
-		"dino_gorge:normal:7": {
-			"say": "tramasaur",
-			"text": "So, you made it to the Dragons.\nYour flame of terror fizzles out here!"
+		"sprout_island:normal:4": {
+			"say": "flutter",
+			"text": "All you can come up with is a rare seed?\nThat thing wouldn't even make a good snack!"
 		},
-		"dino_gorge:normal:12": {
-			"say": "azurefang",
-			"text": "We can rebuild, as long as you're not here.\nUnless we lock you up... Forever!"
-		},
-		"desert_isle:normal:0": {
-			"say": "camhil",
-			"text": "Oh, look who's here!\nThe swindlers that skipped out on my toll!"
-		},
-		"desert_isle:normal:2": {
-			"say": "hibisquid",
-			"text": "Feeling great, rolling around the hot desert.\nWhy don't you give it a try?"
+		"sprout_island:normal:5": {
+			"say": "ulmigrand",
+			"text": "It really was a regular seed...\nWhy are you even here?"
 		}
 	},
 	"monster_lines": {
@@ -954,7 +1075,8 @@
 		"fire_kong": "Material Beans contain greater power\nthan you think, despite being Fusion material.",
 		"grass_kong": "Material Beans contain greater power\nthan you think, despite being Fusion material.",
 		"water_kong": "Material Beans contain greater power\nthan you think, despite being Fusion material.",
-		"no_kong": "Material Beans contain greater power\nthan you think, despite being Fusion material."
+		"no_kong": "Material Beans contain greater power\nthan you think, despite being Fusion material.",
+		"maktron": "Strength determines everything.\nCome and fight me!"
 	},
 	"island_text": {
 		"sprout_island": "Villains are trying to steal the precious seeds on Sprout Island. Please take care of them.",
@@ -967,7 +1089,7 @@
 		"sky_island": "Monsters are trying to escape from the huge door in the sky! You have to stop them before they make it down!"
 	},
 	"island_clear": {
-		"_source": "Footage: Boneyard-14 (part 12 @14:32), Dino-14 (part 25 @4:22) and Sky-8 (Q2NPbbBy8RQ @17:14). Other islands show only the Mission Clear and New Island cards.",
+		"_source": "Footage: Boneyard-14 (part 12 @14:32), Dino-14 (part 25 @4:22) and Sky-8 (Q2NPbbBy8RQ @17:14). Other islands show only the Mission Clear and New Island cards. Sprout, Lake and Desert clears from the Oct 2016 stream 4yY7RntZ3xs (@1036-1058, @3176-3194) and 9n5IxnLvST0 (@1790-1796).",
 		"boneyard_island": {
 			"before": [
 				{
@@ -1004,6 +1126,64 @@
 		},
 		"sky_island": {
 			"clear_text": "We've completely taken over"
+		},
+		"sprout_island": {
+			"before": [
+				{
+					"say": "firepaw",
+					"text": "You solved that problem so easily!\nSee you soon!",
+					"face": "happy"
+				}
+			],
+			"clear_text": "Wow, amazing!",
+			"after": [
+				{
+					"say": "firepaw",
+					"text": "Monsters took over Lake Island."
+				},
+				{
+					"say": "firepaw",
+					"text": "Please save Lake Island from the evil monsters."
+				}
+			],
+			"next_text": "Clear Lake Island"
+		},
+		"lake_island": {
+			"before": [
+				{
+					"say": "firepaw",
+					"text": "You've gotten so powerful.\nSee you next time!",
+					"face": "happy"
+				}
+			],
+			"clear_text": "You did it again!",
+			"after": [
+				{
+					"say": "firepaw",
+					"text": "The desert oasis has been taken over by evil\nmonsters!"
+				},
+				{
+					"say": "firepaw",
+					"text": "Defeat the monsters who took our oasis!"
+				}
+			],
+			"next_text": "Save Desert Isle"
+		},
+		"desert_isle": {
+			"before": [
+				{
+					"say": "firepaw",
+					"text": "That's some great teamwork!\nYou'll be an awesome monster hero someday.",
+					"face": "happy"
+				}
+			],
+			"clear_text": "Nice teamwork!",
+			"after": [
+				{
+					"say": "firepaw",
+					"text": "Find your destiny in the Moonlight Desert.\nBe careful."
+				}
+			]
 		}
 	},
 	"test_friend": {

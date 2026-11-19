@@ -73,9 +73,6 @@ func _show_team(members: Array) -> void:
 		add_child(sprite)
 		move_child(sprite, lay.root.get_index() + 1)
 		UI.add_shadow(self, tex, Rect2(sprite.position, size), sprite.get_index())
-		var bob := sprite.create_tween().set_loops()
-		bob.tween_property(sprite, "position:y", sprite.position.y - 6, 0.9 + 0.1 * i).set_trans(Tween.TRANS_SINE)
-		bob.tween_property(sprite, "position:y", sprite.position.y, 0.9 + 0.1 * i).set_trans(Tween.TRANS_SINE)
 		HubScreen.monster_tag(self, m, feet + Vector2(0, -size.y - 4), i == 0)
 
 

@@ -1,153 +1,886 @@
 {
-	"_source": "The 15 'Weekly Events' calendars Nexon posted on Twitter (@MyMonsterSquad) and Facebook (playmonstersquad), 4 Jul - 16 Oct 2016, plus the long events from the 14 Oct 2016 Facebook post. Each calendar was posted on the Friday before its week. Events start at midnight UTC and last all day. The game repeats the 15 weeks in order. Week 8 (22 Aug) also has the make-up events from the 21 Aug 2016 Facebook post (3x Friend Invite on Fri 26, 3x Gold All Special Islands on Sat 27). Multipliers for boost chance, boost cost and fusion cost are not on the calendars: fusion uses the footage (500k -> 150k), the other two are estimates.",
+	"_source": "The 15 'Weekly Events' calendars Nexon posted on Twitter (@MyMonsterSquad) and Facebook (playmonstersquad), 4 Jul - 16 Oct 2016, plus the long events from the 14 Oct 2016 Facebook post. Each calendar was posted on the Friday before its week. Events start at midnight UTC and last all day. The game repeats the 15 weeks in order. Week 8 (22 Aug) also has the make-up events from the 21 Aug 2016 Facebook post (3x Friend Invite on Fri 26, 3x Gold All Special Islands on Sat 27). Multipliers for boost chance, boost cost and fusion cost are not on the calendars: fusion uses the footage (500k -> 150k), the other two are estimates. The Monthly Quest (King CaoCao on Dino-9 Normal, boss wave + 2 Volcanic Ape, CaoCao captures) is from 20150815_g8F0mQ07MB8 (Aug 2015); the 20% CaoCao capture chance is an estimate.",
 	"first_monday": "2016-07-04",
 	"weeks": [
 		[
-			[{"type": "awaken", "text": "Awakening Bonus"}],
-			[{"type": "cube", "where": "volcano_island", "text": "2x Cube Drop Volcano Island"}],
-			[{"type": "boost_cost", "text": "Boost Cost Decrease"}],
-			[{"type": "gold", "where": "special", "text": "2x Gold All Special Islands"}],
-			[{"type": "cube", "where": "special", "text": "2x Cube Drop All Special Islands"}],
-			[{"type": "energy", "where": "special", "text": "Half Energy All Special Islands"}],
-			[{"type": "fusion_cost", "text": "Fusion Cost Reduction"}]
+			[
+				{
+					"type": "awaken",
+					"text": "Awakening Bonus"
+				}
+			],
+			[
+				{
+					"type": "cube",
+					"where": "volcano_island",
+					"text": "2x Cube Drop Volcano Island"
+				}
+			],
+			[
+				{
+					"type": "boost_cost",
+					"text": "Boost Cost Decrease"
+				}
+			],
+			[
+				{
+					"type": "gold",
+					"where": "special",
+					"text": "2x Gold All Special Islands"
+				}
+			],
+			[
+				{
+					"type": "cube",
+					"where": "special",
+					"text": "2x Cube Drop All Special Islands"
+				}
+			],
+			[
+				{
+					"type": "energy",
+					"where": "special",
+					"text": "Half Energy All Special Islands"
+				}
+			],
+			[
+				{
+					"type": "fusion_cost",
+					"text": "Fusion Cost Reduction"
+				}
+			]
 		],
 		[
-			[{"type": "energy", "where": "boneyard_island", "text": "Half Energy Boneyard Island"}],
-			[{"type": "open", "where": "treasure_island", "text": "Treasure Island Open"}],
-			[{"type": "gold", "where": "story_normal", "text": "2x Gold All Normal Story Islands"}],
-			[{"type": "boost_chance", "text": "Boost Chance Increase"}],
-			[{"type": "cube", "where": "sky_island", "text": "2x Cube Drop Sky Island"}],
-			[{"type": "open", "where": "icicle_island", "text": "Icicle Island Open"}],
-			[{"type": "cube", "where": "deep_ocean_island", "text": "2x Cube Drop Deep Ocean"}]
+			[
+				{
+					"type": "energy",
+					"where": "boneyard_island",
+					"text": "Half Energy Boneyard Island"
+				}
+			],
+			[
+				{
+					"type": "open",
+					"where": "treasure_island",
+					"text": "Treasure Island Open"
+				}
+			],
+			[
+				{
+					"type": "gold",
+					"where": "story_normal",
+					"text": "2x Gold All Normal Story Islands"
+				}
+			],
+			[
+				{
+					"type": "boost_chance",
+					"text": "Boost Chance Increase"
+				}
+			],
+			[
+				{
+					"type": "cube",
+					"where": "sky_island",
+					"text": "2x Cube Drop Sky Island"
+				}
+			],
+			[
+				{
+					"type": "open",
+					"where": "icicle_island",
+					"text": "Icicle Island Open"
+				}
+			],
+			[
+				{
+					"type": "cube",
+					"where": "deep_ocean_island",
+					"text": "2x Cube Drop Deep Ocean"
+				}
+			]
 		],
 		[
-			[{"type": "boost_chance", "text": "Boost Chance Increase"}],
-			[{"type": "lv30_gems", "text": "2x Gems for Monster lvl 30"}],
-			[{"type": "friend_points", "text": "2x Friend Points"}],
-			[{"type": "cube", "where": "material_island", "text": "2x Cube Drop Material Island"}],
-			[{"type": "gold", "where": "dino_gorge", "text": "2x Gold Drop Dino Island"}],
-			[{"type": "open", "where": "training_island", "text": "Training Island Open"}],
-			[{"type": "gold", "where": "all", "text": "2x Gold All Islands"}]
+			[
+				{
+					"type": "boost_chance",
+					"text": "Boost Chance Increase"
+				}
+			],
+			[
+				{
+					"type": "lv30_gems",
+					"text": "2x Gems for Monster lvl 30"
+				}
+			],
+			[
+				{
+					"type": "friend_points",
+					"text": "2x Friend Points"
+				}
+			],
+			[
+				{
+					"type": "cube",
+					"where": "material_island",
+					"text": "2x Cube Drop Material Island"
+				}
+			],
+			[
+				{
+					"type": "gold",
+					"where": "dino_gorge",
+					"text": "2x Gold Drop Dino Island"
+				}
+			],
+			[
+				{
+					"type": "open",
+					"where": "training_island",
+					"text": "Training Island Open"
+				}
+			],
+			[
+				{
+					"type": "gold",
+					"where": "all",
+					"text": "2x Gold All Islands"
+				}
+			]
 		],
 		[
-			[{"type": "open", "where": "jungle_island", "text": "Jungle Island Open"}],
-			[{"type": "cube", "where": "volcano_island", "text": "2x Cube Drop Volcano Island"}],
-			[{"type": "open", "where": "treasure_island", "text": "Treasure Island Open"}],
-			[{"type": "fusion_cost", "text": "Fusion Cost Reduction"}],
-			[{"type": "xp", "where": "all", "text": "2x XP All Islands"}],
-			[{"type": "energy", "where": "story_normal", "text": "Half Energy Normal Story"}],
-			[{"type": "boost_cost", "text": "Boost Cost Decrease"}]
+			[
+				{
+					"type": "open",
+					"where": "jungle_island",
+					"text": "Jungle Island Open"
+				}
+			],
+			[
+				{
+					"type": "cube",
+					"where": "volcano_island",
+					"text": "2x Cube Drop Volcano Island"
+				}
+			],
+			[
+				{
+					"type": "open",
+					"where": "treasure_island",
+					"text": "Treasure Island Open"
+				}
+			],
+			[
+				{
+					"type": "fusion_cost",
+					"text": "Fusion Cost Reduction"
+				}
+			],
+			[
+				{
+					"type": "xp",
+					"where": "all",
+					"text": "2x XP All Islands"
+				}
+			],
+			[
+				{
+					"type": "energy",
+					"where": "story_normal",
+					"text": "Half Energy Normal Story"
+				}
+			],
+			[
+				{
+					"type": "boost_cost",
+					"text": "Boost Cost Decrease"
+				}
+			]
 		],
 		[
-			[{"type": "cube", "where": "sprout_island", "text": "2x Cube Sprout Island"}],
-			[{"type": "cube", "where": "material_island", "text": "2x Cube Drop Material Island"}],
-			[{"type": "gold", "where": "story", "text": "2x Gold All Story Islands"}],
-			[{"type": "boost_chance", "text": "Increase Boost Chance"}],
-			[{"type": "friend_invite", "text": "2x Energy Friend Invite"}],
-			[{"type": "open", "where": "treasure_island", "text": "Treasure Island Open"}],
-			[{"type": "energy", "where": "special", "text": "Half Energy Special Islands"}]
+			[
+				{
+					"type": "cube",
+					"where": "sprout_island",
+					"text": "2x Cube Sprout Island"
+				}
+			],
+			[
+				{
+					"type": "cube",
+					"where": "material_island",
+					"text": "2x Cube Drop Material Island"
+				}
+			],
+			[
+				{
+					"type": "gold",
+					"where": "story",
+					"text": "2x Gold All Story Islands"
+				}
+			],
+			[
+				{
+					"type": "boost_chance",
+					"text": "Increase Boost Chance"
+				}
+			],
+			[
+				{
+					"type": "friend_invite",
+					"text": "2x Energy Friend Invite"
+				}
+			],
+			[
+				{
+					"type": "open",
+					"where": "treasure_island",
+					"text": "Treasure Island Open"
+				}
+			],
+			[
+				{
+					"type": "energy",
+					"where": "special",
+					"text": "Half Energy Special Islands"
+				}
+			]
 		],
 		[
-			[{"type": "boost_cost", "text": "Decrease Boost Cost"}],
-			[{"type": "cube", "where": "special", "text": "2x Cube Special Islands"}],
-			[{"type": "energy", "where": "icicle_island", "text": "Half Energy Icicle Island"}],
-			[{"type": "gold", "where": "desert_isle", "text": "2x Gold Desert Island"}],
-			[{"type": "xp", "where": "all", "text": "2x XP All Islands"}, {"type": "friend_invite", "text": "2x Energy Friend Invite"}],
-			[{"type": "open", "where": "training_island", "text": "Training Island Open"}],
-			[{"type": "energy", "where": "story", "text": "Half Energy Story Islands"}]
+			[
+				{
+					"type": "boost_cost",
+					"text": "Decrease Boost Cost"
+				}
+			],
+			[
+				{
+					"type": "cube",
+					"where": "special",
+					"text": "2x Cube Special Islands"
+				}
+			],
+			[
+				{
+					"type": "energy",
+					"where": "icicle_island",
+					"text": "Half Energy Icicle Island"
+				}
+			],
+			[
+				{
+					"type": "gold",
+					"where": "desert_isle",
+					"text": "2x Gold Desert Island"
+				}
+			],
+			[
+				{
+					"type": "xp",
+					"where": "all",
+					"text": "2x XP All Islands"
+				},
+				{
+					"type": "friend_invite",
+					"text": "2x Energy Friend Invite"
+				}
+			],
+			[
+				{
+					"type": "open",
+					"where": "training_island",
+					"text": "Training Island Open"
+				}
+			],
+			[
+				{
+					"type": "energy",
+					"where": "story",
+					"text": "Half Energy Story Islands"
+				}
+			]
 		],
 		[
-			[{"type": "cube", "where": "story_normal", "text": "2x Cube Normal Story Islands"}],
-			[{"type": "gold", "where": "story_normal", "text": "2x Gold Normal Story Islands"}],
-			[{"type": "energy", "where": "story_normal", "text": "Half Energy Normal Story Islands"}],
-			[{"type": "open", "where": "treasure_island", "text": "Treasure Island Open"}],
-			[{"type": "cube", "where": "special", "text": "2x Cube All Special Islands"}],
-			[{"type": "energy", "where": "special", "text": "Half Energy Special Islands"}],
-			[{"type": "gold", "where": "special", "text": "2x Gold All Special Islands"}]
+			[
+				{
+					"type": "cube",
+					"where": "story_normal",
+					"text": "2x Cube Normal Story Islands"
+				}
+			],
+			[
+				{
+					"type": "gold",
+					"where": "story_normal",
+					"text": "2x Gold Normal Story Islands"
+				}
+			],
+			[
+				{
+					"type": "energy",
+					"where": "story_normal",
+					"text": "Half Energy Normal Story Islands"
+				}
+			],
+			[
+				{
+					"type": "open",
+					"where": "treasure_island",
+					"text": "Treasure Island Open"
+				}
+			],
+			[
+				{
+					"type": "cube",
+					"where": "special",
+					"text": "2x Cube All Special Islands"
+				}
+			],
+			[
+				{
+					"type": "energy",
+					"where": "special",
+					"text": "Half Energy Special Islands"
+				}
+			],
+			[
+				{
+					"type": "gold",
+					"where": "special",
+					"text": "2x Gold All Special Islands"
+				}
+			]
 		],
 		[
-			[{"type": "fusion_cost", "text": "Fusion Cost Reduction"}],
-			[{"type": "energy", "where": "volcano_island", "text": "Half Energy Volcano Island"}],
-			[{"type": "gold", "where": "robo_island", "text": "2x Gold Robo Island"}],
-			[{"type": "open", "where": "elemental_island", "text": "Elemental Island Open"}],
-			[{"type": "cube", "where": "sky_island", "text": "2x Cube Drop Sky Island"}, {"type": "friend_invite", "x": 3, "text": "3x Friend Invite"}],
-			[{"type": "energy", "where": "special", "text": "Half Energy Special Islands"}, {"type": "gold", "where": "special", "x": 3, "text": "3x Gold All Special Islands"}],
-			[{"type": "cube", "where": "story_normal", "text": "2x Cube Normal Story Islands"}]
+			[
+				{
+					"type": "fusion_cost",
+					"text": "Fusion Cost Reduction"
+				}
+			],
+			[
+				{
+					"type": "energy",
+					"where": "volcano_island",
+					"text": "Half Energy Volcano Island"
+				}
+			],
+			[
+				{
+					"type": "gold",
+					"where": "robo_island",
+					"text": "2x Gold Robo Island"
+				}
+			],
+			[
+				{
+					"type": "open",
+					"where": "elemental_island",
+					"text": "Elemental Island Open"
+				}
+			],
+			[
+				{
+					"type": "cube",
+					"where": "sky_island",
+					"text": "2x Cube Drop Sky Island"
+				},
+				{
+					"type": "friend_invite",
+					"x": 3,
+					"text": "3x Friend Invite"
+				}
+			],
+			[
+				{
+					"type": "energy",
+					"where": "special",
+					"text": "Half Energy Special Islands"
+				},
+				{
+					"type": "gold",
+					"where": "special",
+					"x": 3,
+					"text": "3x Gold All Special Islands"
+				}
+			],
+			[
+				{
+					"type": "cube",
+					"where": "story_normal",
+					"text": "2x Cube Normal Story Islands"
+				}
+			]
 		],
 		[
-			[{"type": "open", "where": "icicle_island", "text": "Icicle Island Open"}],
-			[{"type": "cube", "where": "story_normal", "text": "2x Cube Drop Normal Story Islands"}],
-			[{"type": "awaken", "text": "Awakening Level Bonus"}],
-			[{"type": "energy", "where": "boneyard_island", "text": "Half Energy Boneyard Island"}],
-			[{"type": "gold", "where": "story_normal", "text": "2x Gold Normal Story Islands"}],
-			[{"type": "open", "where": "training_island", "text": "Training Island Open"}],
-			[{"type": "gold", "where": "treasure_island", "text": "2x Gold Treasure Island"}]
+			[
+				{
+					"type": "open",
+					"where": "icicle_island",
+					"text": "Icicle Island Open"
+				}
+			],
+			[
+				{
+					"type": "cube",
+					"where": "story_normal",
+					"text": "2x Cube Drop Normal Story Islands"
+				}
+			],
+			[
+				{
+					"type": "awaken",
+					"text": "Awakening Level Bonus"
+				}
+			],
+			[
+				{
+					"type": "energy",
+					"where": "boneyard_island",
+					"text": "Half Energy Boneyard Island"
+				}
+			],
+			[
+				{
+					"type": "gold",
+					"where": "story_normal",
+					"text": "2x Gold Normal Story Islands"
+				}
+			],
+			[
+				{
+					"type": "open",
+					"where": "training_island",
+					"text": "Training Island Open"
+				}
+			],
+			[
+				{
+					"type": "gold",
+					"where": "treasure_island",
+					"text": "2x Gold Treasure Island"
+				}
+			]
 		],
 		[
-			[{"type": "energy", "where": "special", "text": "Half Energy Special Islands"}],
-			[{"type": "gold", "where": "volcano_island", "text": "2x Gold Drop Volcano Island"}],
-			[{"type": "gold", "where": "lake_island", "text": "2x Gold Drop Lake Island"}],
-			[{"type": "boost_chance", "text": "Boost Chance Increased"}],
-			[{"type": "cube", "where": "material_island", "text": "2x Cube Drop Material Island"}],
-			[{"type": "energy", "where": "story_normal", "text": "Half Energy Normal Story Islands"}],
-			[{"type": "open", "where": "training_island", "text": "Training Island Open"}]
+			[
+				{
+					"type": "energy",
+					"where": "special",
+					"text": "Half Energy Special Islands"
+				}
+			],
+			[
+				{
+					"type": "gold",
+					"where": "volcano_island",
+					"text": "2x Gold Drop Volcano Island"
+				}
+			],
+			[
+				{
+					"type": "gold",
+					"where": "lake_island",
+					"text": "2x Gold Drop Lake Island"
+				}
+			],
+			[
+				{
+					"type": "boost_chance",
+					"text": "Boost Chance Increased"
+				}
+			],
+			[
+				{
+					"type": "cube",
+					"where": "material_island",
+					"text": "2x Cube Drop Material Island"
+				}
+			],
+			[
+				{
+					"type": "energy",
+					"where": "story_normal",
+					"text": "Half Energy Normal Story Islands"
+				}
+			],
+			[
+				{
+					"type": "open",
+					"where": "training_island",
+					"text": "Training Island Open"
+				}
+			]
 		],
 		[
-			[{"type": "lv30_gems", "text": "2x Gems Monster Level 30"}],
-			[{"type": "boost_cost", "text": "Boost Cost Decrease"}],
-			[{"type": "open", "where": "treasure_island", "text": "Treasure Island Open"}],
-			[{"type": "cube", "where": "magic_island", "text": "2x Cube Magic Island"}],
-			[{"type": "fusion_cost", "text": "Fusion Cost Reduction"}],
-			[{"type": "gold", "where": "story_normal", "text": "2x Gold Normal Story Islands"}],
-			[{"type": "cube", "where": "robo_island", "text": "2x Cube Robo Island"}]
+			[
+				{
+					"type": "lv30_gems",
+					"text": "2x Gems Monster Level 30"
+				}
+			],
+			[
+				{
+					"type": "boost_cost",
+					"text": "Boost Cost Decrease"
+				}
+			],
+			[
+				{
+					"type": "open",
+					"where": "treasure_island",
+					"text": "Treasure Island Open"
+				}
+			],
+			[
+				{
+					"type": "cube",
+					"where": "magic_island",
+					"text": "2x Cube Magic Island"
+				}
+			],
+			[
+				{
+					"type": "fusion_cost",
+					"text": "Fusion Cost Reduction"
+				}
+			],
+			[
+				{
+					"type": "gold",
+					"where": "story_normal",
+					"text": "2x Gold Normal Story Islands"
+				}
+			],
+			[
+				{
+					"type": "cube",
+					"where": "robo_island",
+					"text": "2x Cube Robo Island"
+				}
+			]
 		],
 		[
-			[{"type": "energy", "where": "moonlight_desert", "text": "Half Energy Moonlight Island"}],
-			[{"type": "gold", "where": "dino_gorge", "text": "2x Gold Dino Island"}],
-			[{"type": "cube", "where": "icicle_island", "text": "2x Cube Drop Icicle Island"}],
-			[{"type": "energy", "where": "boneyard_island", "text": "Half Energy Boneyard Island"}],
-			[{"type": "open", "where": "training_island", "text": "Training Island Open"}],
-			[{"type": "open", "where": "treasure_island", "text": "Treasure Island Open"}],
-			[{"type": "cube", "where": "special", "text": "2x Cube All Special Islands"}]
+			[
+				{
+					"type": "energy",
+					"where": "moonlight_desert",
+					"text": "Half Energy Moonlight Island"
+				}
+			],
+			[
+				{
+					"type": "gold",
+					"where": "dino_gorge",
+					"text": "2x Gold Dino Island"
+				}
+			],
+			[
+				{
+					"type": "cube",
+					"where": "icicle_island",
+					"text": "2x Cube Drop Icicle Island"
+				}
+			],
+			[
+				{
+					"type": "energy",
+					"where": "boneyard_island",
+					"text": "Half Energy Boneyard Island"
+				}
+			],
+			[
+				{
+					"type": "open",
+					"where": "training_island",
+					"text": "Training Island Open"
+				}
+			],
+			[
+				{
+					"type": "open",
+					"where": "treasure_island",
+					"text": "Treasure Island Open"
+				}
+			],
+			[
+				{
+					"type": "cube",
+					"where": "special",
+					"text": "2x Cube All Special Islands"
+				}
+			]
 		],
 		[
-			[{"type": "xp", "where": "all", "text": "2XP All Islands"}],
-			[{"type": "cube", "where": "story_normal", "text": "2x Cube All Normal Story Islands"}],
-			[{"type": "open", "where": "treasure_island", "text": "Treasure Island Open"}],
-			[{"type": "fusion_cost", "text": "Fusion Cost Reduction"}],
-			[{"type": "energy", "where": "story_normal", "text": "Half Energy Normal Story Islands"}],
-			[{"type": "friend_invite", "text": "2x Energy Friend Invite"}],
-			[{"type": "gold", "where": "story_normal", "text": "2x Gold Normal Story Islands"}]
+			[
+				{
+					"type": "xp",
+					"where": "all",
+					"text": "2XP All Islands"
+				}
+			],
+			[
+				{
+					"type": "cube",
+					"where": "story_normal",
+					"text": "2x Cube All Normal Story Islands"
+				}
+			],
+			[
+				{
+					"type": "open",
+					"where": "treasure_island",
+					"text": "Treasure Island Open"
+				}
+			],
+			[
+				{
+					"type": "fusion_cost",
+					"text": "Fusion Cost Reduction"
+				}
+			],
+			[
+				{
+					"type": "energy",
+					"where": "story_normal",
+					"text": "Half Energy Normal Story Islands"
+				}
+			],
+			[
+				{
+					"type": "friend_invite",
+					"text": "2x Energy Friend Invite"
+				}
+			],
+			[
+				{
+					"type": "gold",
+					"where": "story_normal",
+					"text": "2x Gold Normal Story Islands"
+				}
+			]
 		],
 		[
-			[{"type": "energy", "where": "special", "text": "Half Energy Special Islands"}],
-			[{"type": "boost_chance", "text": "Increase Boost Chance"}],
-			[{"type": "gold", "where": "special", "text": "2x Gold Special Islands"}],
-			[{"type": "open", "where": "training_island", "text": "Training Island Open"}],
-			[{"type": "cube", "where": "special", "text": "2x Cube Drop Special Islands"}],
-			[{"type": "lv30_gems", "text": "2x Gems Monster Level 30"}],
-			[{"type": "cube", "where": "sprout_island", "text": "2x Cube Sprout Island"}]
+			[
+				{
+					"type": "energy",
+					"where": "special",
+					"text": "Half Energy Special Islands"
+				}
+			],
+			[
+				{
+					"type": "boost_chance",
+					"text": "Increase Boost Chance"
+				}
+			],
+			[
+				{
+					"type": "gold",
+					"where": "special",
+					"text": "2x Gold Special Islands"
+				}
+			],
+			[
+				{
+					"type": "open",
+					"where": "training_island",
+					"text": "Training Island Open"
+				}
+			],
+			[
+				{
+					"type": "cube",
+					"where": "special",
+					"text": "2x Cube Drop Special Islands"
+				}
+			],
+			[
+				{
+					"type": "lv30_gems",
+					"text": "2x Gems Monster Level 30"
+				}
+			],
+			[
+				{
+					"type": "cube",
+					"where": "sprout_island",
+					"text": "2x Cube Sprout Island"
+				}
+			]
 		],
 		[
-			[{"type": "gold", "where": "story_normal", "text": "2x Gold All Normal Story Islands"}],
-			[{"type": "energy", "where": "story_normal", "text": "Half Energy All Normal Story Islands"}],
-			[{"type": "open", "where": "treasure_island", "text": "Treasure Island Open"}],
-			[{"type": "energy", "where": "boneyard_island", "text": "Half Energy Boneyard Island"}],
-			[{"type": "cube", "where": "spirit_island", "text": "2x Cube Drop Spirit Island"}],
-			[{"type": "fusion_cost", "text": "Fusion Cost Reduction"}],
-			[{"type": "gold", "where": "treasure_island", "text": "2x Gold Drop Treasure Island"}]
+			[
+				{
+					"type": "gold",
+					"where": "story_normal",
+					"text": "2x Gold All Normal Story Islands"
+				}
+			],
+			[
+				{
+					"type": "energy",
+					"where": "story_normal",
+					"text": "Half Energy All Normal Story Islands"
+				}
+			],
+			[
+				{
+					"type": "open",
+					"where": "treasure_island",
+					"text": "Treasure Island Open"
+				}
+			],
+			[
+				{
+					"type": "energy",
+					"where": "boneyard_island",
+					"text": "Half Energy Boneyard Island"
+				}
+			],
+			[
+				{
+					"type": "cube",
+					"where": "spirit_island",
+					"text": "2x Cube Drop Spirit Island"
+				}
+			],
+			[
+				{
+					"type": "fusion_cost",
+					"text": "Fusion Cost Reduction"
+				}
+			],
+			[
+				{
+					"type": "gold",
+					"where": "treasure_island",
+					"text": "2x Gold Drop Treasure Island"
+				}
+			]
 		]
 	],
 	"limited": [
-		{"from": "10-18", "to": "11-01", "events": [{"type": "open", "where": "treasure_island", "text": "Treasure Island Open"}, {"type": "gold", "where": "treasure_island", "x": 3, "text": "3x Gold on Treasure Island"}]},
-		{"from": "10-21", "to": "11-30", "events": [{"type": "cube", "where": "special", "x": 4, "text": "4x Cube Drop for Special Islands"}]},
-		{"from": "10-24", "to": "11-07", "events": [{"type": "awaken", "text": "Awakening Bonus"}]},
-		{"from": "11-01", "to": "11-18", "events": [{"type": "lv30_gems", "x": 3, "text": "3x Gems for Monster lvl 30"}]},
-		{"from": "10-13", "to": "11-08", "events": [{"type": "open", "where": "halloween_island", "text": "Happy Halloween Island Open"}]}
+		{
+			"from": "10-18",
+			"to": "11-01",
+			"events": [
+				{
+					"type": "open",
+					"where": "treasure_island",
+					"text": "Treasure Island Open"
+				},
+				{
+					"type": "gold",
+					"where": "treasure_island",
+					"x": 3,
+					"text": "3x Gold on Treasure Island"
+				}
+			]
+		},
+		{
+			"from": "10-21",
+			"to": "11-30",
+			"events": [
+				{
+					"type": "cube",
+					"where": "special",
+					"x": 4,
+					"text": "4x Cube Drop for Special Islands"
+				}
+			]
+		},
+		{
+			"from": "10-24",
+			"to": "11-07",
+			"events": [
+				{
+					"type": "awaken",
+					"text": "Awakening Bonus"
+				}
+			]
+		},
+		{
+			"from": "11-01",
+			"to": "11-18",
+			"events": [
+				{
+					"type": "lv30_gems",
+					"x": 3,
+					"text": "3x Gems for Monster lvl 30"
+				}
+			]
+		},
+		{
+			"from": "10-13",
+			"to": "11-08",
+			"events": [
+				{
+					"type": "open",
+					"where": "halloween_island",
+					"text": "Happy Halloween Island Open"
+				}
+			]
+		},
+		{
+			"from": "12-05",
+			"to": "12-31",
+			"events": [
+				{
+					"type": "open",
+					"where": "holiday_island",
+					"text": "Holiday Island Open"
+				}
+			]
+		},
+		{
+			"from": "02-05",
+			"to": "03-01",
+			"events": [
+				{
+					"type": "open",
+					"where": "candy_island",
+					"text": "Candy Island Open"
+				}
+			]
+		},
+		{
+			"from": "08-01",
+			"to": "08-31",
+			"events": [
+				{
+					"type": "monthly",
+					"where": "dino_gorge",
+					"difficulty": "normal",
+					"stage": 8,
+					"boss": "king_caocao",
+					"boss_wave": [
+						"volcanic_ape",
+						"volcanic_ape"
+					],
+					"drop": "caocao",
+					"drop_chance": 0.2,
+					"say": "Fools! You're too late.\nThe warehouse is already empty!",
+					"text": "Monthly Quest: King CaoCao (Dino-9)"
+				}
+			]
+		}
 	],
 	"effects": {
-		"gold": 2.0, "cube": 2.0, "xp": 2.0, "energy": 0.5, "lv30_gems": 2.0, "friend_points": 2.0, "friend_invite": 2.0,
-		"boost_chance": 1.5, "boost_cost": 0.5, "fusion_cost": 0.3
+		"gold": 2.0,
+		"cube": 2.0,
+		"xp": 2.0,
+		"energy": 0.5,
+		"lv30_gems": 2.0,
+		"friend_points": 2.0,
+		"friend_invite": 2.0,
+		"boost_chance": 1.5,
+		"boost_cost": 0.5,
+		"fusion_cost": 0.3
 	},
-	"event_only": ["halloween_island"]
+	"event_only": [
+		"halloween_island",
+		"holiday_island",
+		"candy_island"
+	]
 }

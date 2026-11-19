@@ -7,6 +7,8 @@ signal _notified(name: String)
 const DATA := "res://data/tutorial.json"
 const GUIDES := ["firepaw", "mini", "goldbat", "wamiami", "rookie", "g_drank", "shinoblue"]
 const CARD_PANELS := {"quest": 1, "clear": 2, "island": 3}
+const FIREWORK_SIZE := 260.0
+const FIREWORK_GAP := 0.25
 
 static var _data: Dictionary = {}
 static var _debug_used := false
@@ -106,6 +108,8 @@ static func _condition(when: String, ctx: Dictionary) -> bool:
 			return bool(ctx.get("mission_ready", false))
 		"mission_done":
 			return bool(state().get("mission_done", false))
+		"maxed":
+			return Save.data.monsters.any(func(m): return int(m.level) >= DB.MAX_LEVEL and String(DB.monster(String(m.id)).get("evolves_into", "")) == "" and not bool(DB.monster(String(m.id)).get("material", false)))
 		"special":
 			return parts.size() == 2 and String(ctx.get("special", "")) == parts[1]
 	return false
@@ -245,12 +249,15 @@ func _run() -> void:
 
 
 func _pause(on: bool) -> void:
+	if on and get_parent() != null:
+		get_parent().move_child(self, -1)
 	if screen.has_method("set_tutorial_pause"):
 		screen.set_tutorial_pause(on)
 
 
 func _event(name: String) -> void:
 	if _fired.has(name) or _skip_events:
+		_fired.erase(name)
 		return
 	if screen.has_method("tutorial_event_started"):
 		screen.tutorial_event_started(name)
@@ -258,6 +265,7 @@ func _event(name: String) -> void:
 	while true:
 		var got: String = await _notified
 		if got == name:
+			_fired.erase(name)
 			return
 		if got == "victory":
 			_jump_to = "victory"
@@ -303,13 +311,7 @@ func _say(who: String, text: String, guide: bool = true) -> void:
 
 
 func _confirm_skip() -> void:
-	var body := UI.label("Skip the rest of the tutorial?", 22, UI.BROWN)
-	body.add_theme_constant_override("outline_size", 0)
-	var d := UI.dialog(self, "Skip", body, [
-		{"text": "Skip", "color": "purple", "cb": _skip_now},
-		{"text": "Keep going", "color": "blue"},
-	])
-	d.z_index = 99
+	UI.confirm(self, "Notice", "Skip the rest of the tutorial?", _skip_now).z_index = 99
 
 
 func _skip_now() -> void:
@@ -335,6 +337,26 @@ func _next_press(c: Control) -> InputEvent:
 	if is_instance_valid(c):
 		c.gui_input.disconnect(cb)
 	return holder[0]
+
+
+func _fireworks(panel: Control) -> void:
+	var rect := panel.get_global_rect()
+	var spots := [Vector2(0.08, 0.15), Vector2(0.92, 0.2), Vector2(0.2, 0.85), Vector2(0.85, 0.8)]
+	var panel_id := panel.get_instance_id()
+	var host_id := get_instance_id()
+	var z := panel.z_index + 1
+	for k in spots.size():
+		get_tree().create_timer(FIREWORK_GAP * k).timeout.connect(func():
+			var host := instance_from_id(host_id) as Control
+			if host == null or instance_from_id(panel_id) == null:
+				return
+			var at := rect.position + rect.size * Vector2(spots[k]) - host.get_global_rect().position
+			var fx := FrameFx.play(host, "ui_fireworks_1", at, Vector2.ONE * FIREWORK_SIZE, 24.0)
+			if fx != null:
+				fx.z_index = z
+				var m := CanvasItemMaterial.new()
+				m.blend_mode = CanvasItemMaterial.BLEND_MODE_ADD
+				fx.material = m)
 
 
 func _card(st: Dictionary, kind: String) -> void:
@@ -396,6 +418,8 @@ func _card(st: Dictionary, kind: String) -> void:
 			s["mission_done"] = false
 			Save.save_game()
 	Sfx.play("buff_big")
+	if kind in ["clear", "island"]:
+		_fireworks(lay.node("ID_9PATCH_%d" % n))
 	var holder: Array = [false]
 	lay.on("ID_btnOk" + suffix, func(): holder[0] = true)
 	if autoplay or autosay > 0.0:
@@ -420,6 +444,10 @@ func _focus(name: String) -> void:
 	if autoplay or autosay > 0.0:
 		_autotap.call_deferred(target, name)
 	await get_tree().process_frame
+	await get_tree().process_frame
+	if not is_instance_valid(target):
+		return
+	_scroll_into_view(target)
 	await get_tree().process_frame
 	var rect := target.get_global_rect()
 	var layer := FocusLayer.new()
@@ -452,6 +480,14 @@ func _focus(name: String) -> void:
 		_notified.disconnect(on_note)
 	if is_instance_valid(layer):
 		layer.queue_free()
+
+
+static func _scroll_into_view(target: Control) -> void:
+	var p := target.get_parent()
+	while p != null:
+		if p is ScrollContainer:
+			(p as ScrollContainer).ensure_control_visible(target)
+		p = p.get_parent()
 
 
 func _skip_button(layer: Control, avoid: Rect2, cb: Callable) -> void:

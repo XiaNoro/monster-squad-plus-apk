@@ -6,7 +6,7 @@
 # research/bin/deno.exe solves YouTube's stream-URL challenge.
 param([string]$cookies = "")
 $root = "research/videos"
-$auth = @("--js-runtimes", "deno:research/bin/deno.exe", "--remote-components", "ejs:github")
+$auth = @("--js-runtimes", "deno:" + (Resolve-Path "research/bin/deno.exe").Path, "--remote-components", "ejs:github")
 if ($cookies -ne "") { $auth += @("--cookies", $cookies) }
 $out = "$root/video_hd"
 $frames = "$root/frames_hd"

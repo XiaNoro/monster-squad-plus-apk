@@ -12,13 +12,15 @@ var _lv30: Dictionary = {}
 
 
 func build() -> void:
-	_brown_background()
+	brown_background()
 	lay = Layout.load_into(self, "B_monBookPage")
 	add_top_bar("2", "Index", "hub")
 	for f in TABS:
 		lay.on(TABS[f], _set_filter.bind(f))
 	lay.on("ID_btnAlign", _next_sort)
-	lay.text("ID_exText", "You will get 3~15 Gems every time you get a monster to Lv. 30 for the first time!")
+	var hint := lay.text("ID_exText", "You will get 3~15 Gems in your Mailbox every time you get a monster to Lv. 30 for the first time!")
+	UI.fit_text(hint, 18, 13, hint.get_meta("area").x)
+	hint.set_deferred("size", hint.get_meta("area"))
 	_number_monsters()
 	_lv30 = Save.data.get("maxed", {}).duplicate()
 	for m in Save.data.monsters:
@@ -29,51 +31,9 @@ func build() -> void:
 		_show_detail(String(args.detail))
 
 
-func _brown_background() -> void:
-	var g := Gradient.new()
-	g.set_color(0, Color("5e4433"))
-	g.set_color(1, Color("3a281b"))
-	var gt := GradientTexture2D.new()
-	gt.gradient = g
-	gt.fill = GradientTexture2D.FILL_RADIAL
-	gt.fill_from = Vector2(0.5, 0.45)
-	gt.fill_to = Vector2(1.1, 1.1)
-	var bg := TextureRect.new()
-	bg.texture = gt
-	bg.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-	bg.stretch_mode = TextureRect.STRETCH_SCALE
-	bg.set_anchors_and_offsets_preset(PRESET_FULL_RECT)
-	bg.mouse_filter = MOUSE_FILTER_IGNORE
-	add_child(bg)
-
-
 func _number_monsters() -> void:
-	var bases := DB.ids_where(func(m): return String(m.evolves_from) == "")
-	bases.sort_custom(_family_order)
-	var n := 1
-	for b in bases:
-		var id: String = b
-		var guard := 0
-		while id != "" and not _number.has(id) and guard < 8:
-			_number[id] = n
-			n += 1
-			id = String(DB.monster(id).get("evolves_into", ""))
-			guard += 1
 	for id in DB.monsters:
-		if not _number.has(id):
-			_number[id] = n
-			n += 1
-
-
-static func _family_order(a: String, b: String) -> bool:
-	var ma := DB.monster(a)
-	var mb := DB.monster(b)
-	var order := ["fire", "water", "nature", "normal"]
-	if ma.element != mb.element:
-		return order.find(ma.element) < order.find(mb.element)
-	if int(ma.stars) != int(mb.stars):
-		return int(ma.stars) < int(mb.stars)
-	return String(ma.name) < String(mb.name)
+		_number[id] = DB.dex_number(id)
 
 
 func _set_filter(f: String) -> void:

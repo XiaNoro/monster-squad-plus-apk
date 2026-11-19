@@ -3,10 +3,11 @@ extends RefCounted
 
 const PLAYER := 0
 const ENEMY := 1
-const BASE_ATTACK_INTERVAL := 1.6
+const BASE_ATTACK_INTERVAL := 1.5
+const ATTACK_DELAY_MAX := 1.0
 const BASE_CRIT := 0.05
-const BASE_CRIT_DMG := 0.5
-const HP_SCALE := 3.0
+const BASE_CRIT_DMG := 1.0
+const HP_SCALE := 1.0
 
 var side: int
 var slot: int
@@ -16,6 +17,7 @@ var element: String
 var level: int
 var is_leader := false
 var is_boss := false
+var pet_id := ""
 
 var max_hp := 1.0
 var hp := 1.0
@@ -25,7 +27,10 @@ var skills: Array = []
 var support: Dictionary = {}
 var support_timer := 0.0
 var attack_timer := 0.0
+var ranged := false
 var skill_timer := 0.0
+var target: BattleUnit
+var planned: Dictionary = {}
 var cooldown_mult := 1.0
 var extra_max_mp := 0.0
 var traits: Array = []
@@ -53,6 +58,7 @@ static func create(p_side: int, p_slot: int, id: String, p_level: int, boost: in
 	u.base.rec = float(st.rec)
 	u.skills = def.skills
 	u.support = def.support_skill
+	u.ranged = SkillFx.ranged(id)
 	return u
 
 

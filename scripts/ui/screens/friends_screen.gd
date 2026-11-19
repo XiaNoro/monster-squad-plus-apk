@@ -144,17 +144,11 @@ func _request(p: Dictionary, s: Layout) -> void:
 
 
 func _remove(p: Dictionary) -> void:
-	var body := UI.label("Remove %s from your friends?" % p.name, 22, UI.BROWN)
-	body.add_theme_constant_override("outline_size", 0)
-	UI.dialog(self, "Friends", body, [
-		{"text": "Remove", "color": "purple", "cb": _do_remove.bind(p)},
-		{"text": "Cancel", "color": "blue"},
-	])
+	UI.confirm(self, "Notice", "Would you like to delete\n[%s]\nfrom the friends list?" % p.name, _do_remove.bind(p))
 
 
 func _do_remove(p: Dictionary) -> void:
-	Save.data.friends = Save.data.friends.filter(func(f): return String(f.name) != String(p.name))
-	Save.save_game()
+	Friends.remove_friend(String(p.name))
 	_set_tab("friends")
 
 

@@ -1,0 +1,73 @@
+name: Android build
+
+on:
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: Publish the APK as a release
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+env:
+  GODOT_VERSION: 4.7.2
+
+jobs:
+  android:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    defaults:
+      run:
+        shell: bash -eo pipefail {0}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Install Godot and Android template
+        run: |
+          base=https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable
+          curl -sSfL -o godot.zip "$base/Godot_v${GODOT_VERSION}-stable_linux.x86_64.zip"
+          unzip -q godot.zip
+          mv "Godot_v${GODOT_VERSION}-stable_linux.x86_64" godot
+          curl -sSfL -o templates.tpz "$base/Godot_v${GODOT_VERSION}-stable_export_templates.tpz"
+          unzip -q templates.tpz templates/android_release.zip templates/android_debug.zip templates/version.txt
+          dest="$HOME/.local/share/godot/export_templates/$(cat templates/version.txt)"
+          mkdir -p "$dest"
+          mv templates/* "$dest/"
+          rm -rf godot.zip templates.tpz templates
+          minor=$(echo "$GODOT_VERSION" | cut -d. -f1,2)
+          mkdir -p "$HOME/.config/godot"
+          printf '[gd_resource type="EditorSettings" format=3]\n\n[resource]\nexport/android/android_sdk_path = "%s"\nexport/android/java_sdk_path = "%s"\n' \
+            "$ANDROID_SDK_ROOT" "$JAVA_HOME" > "$HOME/.config/godot/editor_settings-$minor.tres"
+
+      - name: Export APK
+        env:
+          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
+          GODOT_ANDROID_KEYSTORE_RELEASE_USER: ${{ secrets.KEYSTORE_ALIAS }}
+          GODOT_ANDROID_KEYSTORE_RELEASE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+        run: |
+          export GODOT_ANDROID_KEYSTORE_RELEASE_PATH="$RUNNER_TEMP/release.keystore"
+          echo "$KEYSTORE_BASE64" | base64 -d > "$GODOT_ANDROID_KEYSTORE_RELEASE_PATH"
+          ./godot --headless --path . --import || true
+          version=$(sed -n 's/^version\/name="\(.*\)"/\1/p' export_presets.cfg | head -n 1)
+          echo "VERSION=$version" >> "$GITHUB_ENV"
+          mkdir -p build
+          ./godot --headless --path . --export-release Android "build/MonsterSquadPlus-$version.apk"
+          rm -f "$GODOT_ANDROID_KEYSTORE_RELEASE_PATH"
+          test -s "build/MonsterSquadPlus-$version.apk"
+          ls -l build
+
+      - name: Publish release
+        if: ${{ inputs.publish }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release delete "apk-$VERSION" --yes --cleanup-tag || true
+          gh release create "apk-$VERSION" "build/MonsterSquadPlus-$VERSION.apk" \
+            --title "Android $VERSION" --notes "Built from ${GITHUB_SHA::7}."

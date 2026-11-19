@@ -2,7 +2,7 @@ class_name Arena
 extends RefCounted
 
 const MAX_TOKENS := 10
-const TOKEN_SECONDS := 600
+const TOKEN_SECONDS := 3600
 const GEM_ENTRY := 1
 const RIVALS := 99
 const WEEK_SECONDS := 604800
@@ -11,7 +11,7 @@ const ENTRY_GOAL := 51
 const ENTRY_GOAL_GEMS := 30
 const HONOUR_TIERS := [[0.01, 500], [0.05, 350], [0.10, 250], [0.25, 150], [0.50, 80]]
 const WIN_POINTS := 20
-const LOSS_POINTS := 12
+const LOSS_POINTS := 22
 
 const SYLLABLES := ["ka", "ro", "mi", "zen", "lu", "tor", "shi", "nyx", "bel", "dra", "po", "kin", "vee", "max", "ryu", "nol", "ash", "tia", "gor", "eon"]
 
@@ -78,8 +78,8 @@ static func rivals(week: int) -> Array:
 	return out
 
 
-static func rival_points(r: Dictionary, week_progress: float) -> int:
-	var games: float = float(r.activity) * 120.0 * week_progress
+static func rival_points(r: Dictionary, week_progress: float, games_per_period: float = 120.0) -> int:
+	var games: float = float(r.activity) * games_per_period * week_progress
 	var win_rate: float = 0.3 + 0.5 * float(r.skill)
 	return maxi(0, int(games * (win_rate * WIN_POINTS - (1.0 - win_rate) * LOSS_POINTS)))
 
@@ -98,9 +98,18 @@ static func rival_team(r: Dictionary, player_power: float) -> Array:
 		if _max_squad_power(s) >= target:
 			break
 	var pool := DB.ids_where(func(m): return int(m.stars) == stars and not m.material and m.skills.size() >= 2)
+	var weights := pick_weights()
+	var popular := pool.filter(func(id): return weights.has(id))
 	var team := []
+	var used := {}
 	for i in 4:
-		team.append({"id": pool[rng.randi() % pool.size()], "level": 1, "boost": 0})
+		var id := ""
+		for attempt in 20:
+			id = _weighted(popular, weights, rng) if popular.size() >= 4 else pool[rng.randi() % pool.size()]
+			if not used.has(id):
+				break
+		used[id] = true
+		team.append({"id": id, "level": 1, "boost": 0})
 	for step in 200:
 		if power_of(team) >= target:
 			break
@@ -113,6 +122,25 @@ static func rival_team(r: Dictionary, player_power: float) -> Array:
 
 
 static var _max_power_cache: Dictionary = {}
+static var _pick_weights: Dictionary = {}
+
+
+static func pick_weights() -> Dictionary:
+	if _pick_weights.is_empty():
+		_pick_weights = JSON.parse_string(FileAccess.get_file_as_string("res://data/arena_picks.json")).picks
+	return _pick_weights
+
+
+static func _weighted(ids: Array, weights: Dictionary, rng: RandomNumberGenerator) -> String:
+	var total := 0.0
+	for id in ids:
+		total += float(weights[id])
+	var roll := rng.randf() * total
+	for id in ids:
+		roll -= float(weights[id])
+		if roll <= 0.0:
+			return id
+	return ids[ids.size() - 1]
 
 
 static func _max_squad_power(stars: int) -> float:
@@ -132,7 +160,9 @@ static func points_for(win: bool, rival_skill: float) -> int:
 
 
 const RANK_REWARDS := [["1st", 1, 300], ["2nd~10th", 10, 250], ["11th~50th", 50, 200], ["Within 1%", 0.01, 160], ["Within 10%", 0.10, 120], ["Within 20%", 0.20, 80], ["Within 30%", 0.30, 60], ["Within 50%", 0.50, 40]]
-const ROUND_REWARDS := [["More than 51 Rounds", 51, 30], ["41~50 Rounds", 41, 20], ["31~40 Rounds", 31, 15], ["21~30 Rounds", 21, 10], ["11~20 Rounds", 11, 5], ["Less than 10 Rounds", 0, 0]]
+const ROUND_REWARDS := [["More than 51 Rounds", 51, 30], ["41~50 Rounds", 41, 25], ["31~40 Rounds", 31, 20], ["21~30 Rounds", 21, 15], ["11~20 Rounds", 11, 10], ["Less than 10 Rounds", 0, 5]]
+const LUCKY_REWARDS := [["Win1", "energy", 1000], ["Win2", "gold", 100000], ["Win3", "cube", 1]]
+const LUCKY_CHANCE := 0.01
 
 
 static func honour_for_rank(rank: int, total: int) -> int:
@@ -143,6 +173,14 @@ static func honour_for_rank(rank: int, total: int) -> int:
 		if lim is float and float(rank) / float(total) <= float(lim):
 			return int(t[2])
 	return 0
+
+
+static func lucky_draw() -> Array:
+	var won := []
+	for t in LUCKY_REWARDS:
+		if randf() < LUCKY_CHANCE:
+			won.append(t)
+	return won
 
 
 static func entry_gems(rounds: int) -> int:

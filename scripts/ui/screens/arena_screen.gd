@@ -2,6 +2,7 @@ class_name ArenaScreen
 extends Screen
 
 const SHOWN_RANKS := 50
+const ELEMENT_ORBS := {"fire": "fire", "water": "water", "nature": "natural", "normal": "balance"}
 
 var lay: Layout
 var match_lay: Layout
@@ -36,7 +37,7 @@ func build() -> void:
 	if not last.is_empty() and not bool(a.get("last_seen", false)):
 		a.last_seen = true
 		Save.save_game()
-		UI.notice(self, "Last Week's Rank", "Rank %d with %s Points\n+%d Honor   +%d Gems" % [int(last.rank), Screen._thousands(int(last.points)), int(last.honor), int(last.gems)])
+		UI.notice(self, "Last Week's Rank", _last_week_text(last))
 	if args.has("match"):
 		_enter()
 
@@ -148,7 +149,12 @@ func _show_last_week() -> void:
 	if last.is_empty():
 		UI.notice(self, "Last Week's Rank", "You didn't take part in the arena last week.")
 	else:
-		UI.notice(self, "Last Week's Rank", "Rank %d with %s Points\n+%d Honor   +%d Gems" % [int(last.rank), Screen._thousands(int(last.points)), int(last.honor), int(last.gems)])
+		UI.notice(self, "Last Week's Rank", _last_week_text(last))
+
+
+static func _last_week_text(last: Dictionary) -> String:
+	var lucky: Array = last.get("lucky", [])
+	return "Rank %d with %s Points\n+%d Honor   +%d Gems%s" % [int(last.rank), Screen._thousands(int(last.points)), int(last.honor), int(last.gems), "" if lucky.is_empty() else "\nLucky Chest %s! (check your Messages)" % ", ".join(lucky)]
 
 
 func _show_my_rank() -> void:
@@ -172,12 +178,24 @@ static func show_rewards(parent: Control) -> void:
 	for i in Arena.ROUND_REWARDS.size():
 		d.text("ID_roundText_%d" % (i + 1), String(Arena.ROUND_REWARDS[i][0]))
 		d.text("ID_crystalText_%d" % (i + 1), str(int(Arena.ROUND_REWARDS[i][2])))
+	for id in ["ID_timeText", "ID_imageTitle"]:
+		var l := d.node(id) as Label
+		l.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		l.set_deferred("size", l.get_meta("area"))
 	d.text("ID_timeText", "Rewards can be received once a week. Calculation will be made Saturday 00:00 and is sent straight away.")
-	(d.node("ID_timeText") as Label).autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	d.show("ID_luckyChest", false)
-	var pic := UI.image(UI.tex("betaUI00/I_honor_02.png"), Vector2(200, 200))
-	pic.size = Vector2(200, 200)
-	pic.position = Vector2(137, 60)
+	for i in Arena.LUCKY_REWARDS.size():
+		var t: Array = Arena.LUCKY_REWARDS[i]
+		d.text("ID_win%dText" % (i + 1), String(t[0]))
+		d.text("ID_win%dTextReward" % (i + 1), Screen._thousands(int(t[2])))
+	for i in 2:
+		var slot: Control = d.node("ID_ID_arrayPosition_%d" % (i + 1))
+		var pic := UI.image(UI.tex("res://assets/ui/arena_%s_banner.png" % ["gems", "lucky"][i]), slot.size, TextureRect.STRETCH_SCALE)
+		pic.size = slot.size
+		slot.add_child(pic)
+		d.show("ID_imageText_%d" % (i + 1), false)
+	var pic := UI.image(UI.tex("betaUI00/I_honor_02.png"), Vector2(180, 180))
+	pic.size = Vector2(180, 180)
+	pic.position = Vector2(151, 98)
 	d.node("ID_imageBack").add_child(pic)
 	var page := func(n: int) -> void:
 		d.show("ID_page_1", n == 1)
@@ -195,6 +213,13 @@ func _enter() -> void:
 	if Save.team_members().is_empty():
 		UI.notice(self, "Notice", "Your squad is empty!")
 		return
+	if Save.arena_tokens() <= 0 and int(Save.data.gems) >= Arena.GEM_ENTRY:
+		UI.notice(self, "Notice", "%d gem (Solo) / %s Gold (League) will be used as you have no tickets." % [Arena.GEM_ENTRY, Screen._thousands(Save.LEAGUE_GOLD_ENTRY)], _spend_and_match)
+		return
+	_spend_and_match()
+
+
+func _spend_and_match() -> void:
 	if not Save.spend_arena_entry():
 		UI.notice(self, "Notice", "Not enough Entry Tickets.\n(A ticket recharges every %d minutes.)" % (Arena.TOKEN_SECONDS / 60))
 		return
@@ -208,7 +233,7 @@ func _show_match() -> void:
 	if match_lay != null:
 		match_lay.root.queue_free()
 	if match_bg == null:
-		UI.background(self, UI.tex("res://assets/apk/images/Forest_1.png"))
+		UI.background(self, UI.tex(LeagueSeasons.bg_path()))
 		match_bg = get_child(get_child_count() - 1)
 		move_child(match_bg, 1)
 	match_lay = Layout.load_into(self, "R_pvpStartPage")
@@ -261,17 +286,30 @@ func _fill_side(l: Layout, side: String, player: String, team: Array) -> void:
 	var art := UI.living(DB.battle_sprite(String(leader.id)), Vector2(230, 170), side == "2")
 	art.position = Vector2(-115, -128)
 	holder.add_child(art)
-	var crown := UI.image(UI.tex("betaUI00/I_leader_01.png"), Vector2(26, 22))
-	crown.size = Vector2(26, 22)
-	crown.position = Vector2(-128, -206)
+	var orb := UI.image(UI.tex("betaUI00/A_%s_03.png" % ELEMENT_ORBS.get(String(def.element), "balance")), Vector2(30, 30))
+	orb.size = Vector2(30, 30)
+	orb.position = Vector2(-134, -196)
+	holder.add_child(orb)
+	var crown := UI.image(UI.tex("betaUI00/I_leader_01.png"), Vector2(24, 20))
+	crown.size = Vector2(24, 20)
+	crown.position = Vector2(-131, -214)
 	holder.add_child(crown)
-	var lv := UI.label("Lv.%d  %s" % [int(leader.level), String(def.name)], 18, UI.GOLD)
-	lv.position = Vector2(-100, -192)
-	lv.size = Vector2(230, 26)
-	holder.add_child(lv)
-	var sub := UI.label("+%d  %s" % [int(leader.get("boost", 0)), "★".repeat(int(def.stars))], 17, Color("ffd84a"))
-	sub.position = Vector2(-128, -166)
-	sub.size = Vector2(250, 24)
+	var line := HBoxContainer.new()
+	line.add_theme_constant_override("separation", 6)
+	line.position = Vector2(-102, -195)
+	line.add_child(UI.label("Lv.%d" % int(leader.level), 18, Color("ffa22e")))
+	line.add_child(UI.label(String(def.name), 18, UI.CREAM))
+	holder.add_child(line)
+	var sub := HBoxContainer.new()
+	sub.add_theme_constant_override("separation", 0)
+	sub.position = Vector2(-136, -167)
+	var plus := UI.label("+%d" % int(leader.get("boost", 0)), 18, Color("7cc8ff"))
+	plus.custom_minimum_size.x = 30
+	sub.add_child(plus)
+	for i in int(def.stars):
+		var st := UI.image(UI.tex("betaGacha00/star01.png"), Vector2(24, 24))
+		st.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+		sub.add_child(st)
 	holder.add_child(sub)
 	for k in 5:
 		if k < def.skills.size():
@@ -330,6 +368,7 @@ static func arena_quest(r: Dictionary, power: float) -> Dictionary:
 	return {
 		"kind": "arena",
 		"key": "arena",
+		"bg": "arena_cave",
 		"title": "Arena  ·  vs %s" % r.name,
 		"rival_name": r.name, "rival_skill": float(r.skill),
 		"energy": 0, "level": int(team[0].level), "boss": team[0].id, "enemies": [],

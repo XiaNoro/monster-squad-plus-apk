@@ -257,6 +257,26 @@ static func living(texture: Texture2D, box: Vector2, flip: bool = false) -> Cont
 	return holder
 
 
+static func pet_buddy(pet_id: String, box: Vector2, flip := false) -> Control:
+	var tex := DB.pet_texture(pet_id)
+	var holder := Control.new()
+	holder.size = box
+	holder.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	var drawn := box
+	if tex != null and tex.get_width() > 0:
+		drawn = tex.get_size() * minf(box.x / tex.get_width(), box.y / tex.get_height())
+	var art := image(tex, drawn)
+	art.size = drawn
+	art.position = (box - drawn) / 2.0
+	art.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	art.flip_h = flip
+	holder.add_child(art)
+	var bob := art.create_tween().set_loops()
+	bob.tween_property(art, "position:y", art.position.y - box.y * 0.08, 1.1).set_trans(Tween.TRANS_SINE)
+	bob.tween_property(art, "position:y", art.position.y, 1.1).set_trans(Tween.TRANS_SINE)
+	return holder
+
+
 static func background(parent: Control, texture: Texture2D, dim: float = 0.0) -> void:
 	var bg := image(texture, Vector2.ZERO, TextureRect.STRETCH_KEEP_ASPECT_COVERED)
 	bg.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
@@ -269,15 +289,16 @@ static func background(parent: Control, texture: Texture2D, dim: float = 0.0) ->
 		parent.add_child(shade)
 
 
-static func fit_text(l: Label, max_size: int, min_size: int) -> void:
+static func fit_text(l: Label, max_size: int, min_size: int, width: float = -1.0) -> void:
 	l.clip_text = false
 	l.autowrap_mode = TextServer.AUTOWRAP_OFF
+	var w := width if width > 0.0 else l.size.x
 	var font := l.get_theme_font("font")
 	var s := max_size
-	while s > min_size and font.get_string_size(l.text, HORIZONTAL_ALIGNMENT_LEFT, -1, s).x > l.size.x:
+	while s > min_size and font.get_string_size(l.text, HORIZONTAL_ALIGNMENT_LEFT, -1, s).x > w:
 		s -= 1
 	l.add_theme_font_size_override("font_size", s)
-	if font.get_string_size(l.text, HORIZONTAL_ALIGNMENT_LEFT, -1, s).x > l.size.x:
+	if font.get_string_size(l.text, HORIZONTAL_ALIGNMENT_LEFT, -1, s).x > w:
 		l.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		l.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 
@@ -314,7 +335,7 @@ static func monster_card(id: String, level: int = 0, boost: int = 0, size: Vecto
 	else:
 		var back := _fill(tex("betaUI00/B_monEmpty_06.png"))
 		box.add_child(back)
-		var pic := _fill(DB.battle_sprite(id))
+		var pic := _fill(DB.icon(id))
 		pic.position = Vector2(6, 10)
 		pic.size = Vector2(80, 72)
 		box.add_child(pic)
@@ -393,7 +414,22 @@ static func toast(parent: Control, text: String, color: Color = CREAM) -> void:
 	tw.tween_callback(l.queue_free)
 
 
-static func dialog(parent: Control, title: String, body: Control, buttons: Array) -> Control:
+static func _frame(image: String, inset: Rect2i, content: Vector4i) -> StyleBoxTexture:
+	var sb := StyleBoxTexture.new()
+	sb.texture = Layout.texture(image)
+	var ts := sb.texture.get_size()
+	sb.texture_margin_left = inset.position.x
+	sb.texture_margin_top = inset.position.y
+	sb.texture_margin_right = maxi(0, int(ts.x) - inset.position.x - inset.size.x)
+	sb.texture_margin_bottom = maxi(0, int(ts.y) - inset.position.y - inset.size.y)
+	sb.content_margin_left = content.x
+	sb.content_margin_top = content.y
+	sb.content_margin_right = content.z
+	sb.content_margin_bottom = content.w
+	return sb
+
+
+static func dialog(parent: Control, title: String, body: Control, buttons: Array, ribbon := false) -> Control:
 	var overlay := ColorRect.new()
 	overlay.color = Color(0, 0, 0, 0.6)
 	overlay.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
@@ -402,18 +438,43 @@ static func dialog(parent: Control, title: String, body: Control, buttons: Array
 	var center := CenterContainer.new()
 	center.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	overlay.add_child(center)
+	var outer := PanelContainer.new()
+	outer.add_theme_stylebox_override("panel", _frame("9_Back_19.png", Rect2i(50, 50, 2, 2), Vector4i(12, 12, 12, 16)))
+	center.add_child(outer)
+	var stack := VBoxContainer.new()
+	stack.add_theme_constant_override("separation", 0 if ribbon else 4)
+	outer.add_child(stack)
+	var t := label(title, 32 if ribbon else 30, Color("fff23a") if ribbon else Color8(255, 220, 125))
+	t.add_theme_color_override("font_outline_color", Color("6a2a00") if ribbon else Color8(80, 40, 0))
+	t.add_theme_constant_override("outline_size", 8 if ribbon else 6)
+	if ribbon:
+		var r := image(Layout.texture("K_ribon_01.png"), Vector2(0, 76), TextureRect.STRETCH_SCALE)
+		r.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		t.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		t.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+		t.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+		t.offset_bottom = -10
+		r.add_child(t)
+		stack.add_child(r)
+	else:
+		var tab := PanelContainer.new()
+		tab.add_theme_stylebox_override("panel", _frame("9_frame_04.png", Rect2i(32, 0, 2, 56), Vector4i(30, 4, 30, 6)))
+		tab.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
+		tab.add_child(t)
+		var pad := MarginContainer.new()
+		pad.add_theme_constant_override("margin_left", 10)
+		pad.add_child(tab)
+		stack.add_child(pad)
 	var panel := PanelContainer.new()
-	panel.add_theme_stylebox_override("panel", _box("betaUI00/9_Back_01.png", 40, 34))
-	center.add_child(panel)
+	panel.add_theme_stylebox_override("panel", _frame("9_Back_01.png", Rect2i(84, 126, 2, 2), Vector4i(28, 24, 28, 22)))
+	stack.add_child(panel)
 	var v := VBoxContainer.new()
-	v.add_theme_constant_override("separation", 14)
+	v.add_theme_constant_override("separation", 18)
 	panel.add_child(v)
-	var t := label(title, 28, GOLD)
-	t.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	v.add_child(t)
 	v.add_child(body)
 	var row := HBoxContainer.new()
 	row.alignment = BoxContainer.ALIGNMENT_CENTER
+	row.add_theme_constant_override("separation", 12)
 	v.add_child(row)
 	for b in buttons:
 		var cb: Callable = b.get("cb", Callable())
@@ -476,6 +537,17 @@ static func inventory_full(parent: Control, on_train: Callable) -> Control:
 	for l in root.find_children("ID_LABEL_5", "Label", true, false):
 		(l as Label).text = "Go Train"
 	return root
+
+
+static func stone_box_full(parent: Control, on_stones: Callable) -> Control:
+	var root := confirm(parent, "Stone Box Full", "Not enough inventory slots.\nEquip or Sell Magic Stones to free up slots.", on_stones)
+	for l in root.find_children("ID_LABEL_5", "Label", true, false):
+		(l as Label).text = "Go Stones"
+	return root
+
+
+const ONE_TYPE_PER_TEAM := "Can only place one type of
+Monster into one team."
 
 
 static func confirm(parent: Control, title: String, text: String, on_ok: Callable) -> Control:

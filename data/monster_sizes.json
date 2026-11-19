@@ -1,0 +1,2473 @@
+{
+	"_about": "Sprite sizes measured from footage. sizes (battle, tools/scan_monster_sizes.py) and lobby (tools/scan_lobby_sizes.py) give the full height of assets/monsters_cut/<id>.png in widths of the normal HP bar's visible green as filmed on 16:9 screens, where the game stretches its 1066-wide layout 1.0675x wider (so one unit is 81 x 1.0675 layout px tall, BattleUnitView.SIZE_PX). role_scale and lobby_scale.leader multiply it for bosses and leaders; lobby_scale.from_battle turns a battle size into a lobby size. guess (tools/guess_monster_sizes.py) estimates the rest from their evolution line and star rating; shared gives recolours of one creature (data/monster_variants.json) one body size and overrides the rest.",
+	"role_scale": {
+		"ally": 0.996,
+		"boss": 1.008,
+		"leader": 1.088
+	},
+	"sizes": {
+		"amethoid": {
+			"h": 1.948,
+			"n": 10,
+			"spread": 0.014
+		},
+		"amiyom": {
+			"h": 1.969,
+			"n": 3,
+			"spread": 0.082
+		},
+		"antlad": {
+			"h": 1.503,
+			"n": 6,
+			"spread": 0.003
+		},
+		"antlar": {
+			"h": 1.938,
+			"n": 3,
+			"spread": 0.009
+		},
+		"antlid": {
+			"h": 1.681,
+			"n": 3,
+			"spread": 0.009
+		},
+		"aquabella": {
+			"h": 2.137,
+			"n": 5,
+			"spread": 0.043
+		},
+		"aquavis": {
+			"h": 2.242,
+			"n": 9,
+			"spread": 0.027
+		},
+		"arch_bern": {
+			"h": 2.498,
+			"n": 37,
+			"spread": 0.016
+		},
+		"armorin": {
+			"h": 2.247,
+			"n": 3,
+			"spread": 0.008
+		},
+		"b_fruit": {
+			"h": 1.043,
+			"n": 3,
+			"spread": 0.038
+		},
+		"balrak": {
+			"h": 2.238,
+			"n": 4,
+			"spread": 0.003
+		},
+		"beetorking": {
+			"h": 1.549,
+			"n": 8,
+			"spread": 0.027
+		},
+		"bern": {
+			"h": 1.5,
+			"n": 3,
+			"spread": 0.008
+		},
+		"bloomasher": {
+			"h": 1.961,
+			"n": 6,
+			"spread": 0.028
+		},
+		"bloomion": {
+			"h": 1.473,
+			"n": 10,
+			"spread": 0.013
+		},
+		"bloomstool": {
+			"h": 1.59,
+			"n": 4,
+			"spread": 0.029
+		},
+		"blu_antlad": {
+			"h": 1.329,
+			"n": 6,
+			"spread": 0.004
+		},
+		"blu_antlar": {
+			"h": 1.863,
+			"n": 98,
+			"spread": 0.053
+		},
+		"blue_bonk": {
+			"h": 1.16,
+			"n": 8,
+			"spread": 0.033
+		},
+		"bud_antlad": {
+			"h": 1.481,
+			"n": 5,
+			"spread": 0.036
+		},
+		"bud_antlar": {
+			"h": 1.866,
+			"n": 10,
+			"spread": 0.016
+		},
+		"bud_antlid": {
+			"h": 1.762,
+			"n": 42,
+			"spread": 0.021
+		},
+		"camhil": {
+			"h": 2.0,
+			"n": 23,
+			"spread": 0.025
+		},
+		"catrik": {
+			"h": 1.495,
+			"n": 4,
+			"spread": 0.032
+		},
+		"charismew": {
+			"h": 2.032,
+			"n": 4,
+			"spread": 0.009
+		},
+		"charmew": {
+			"h": 1.719,
+			"n": 10,
+			"spread": 0.011
+		},
+		"chilairy": {
+			"h": 1.936,
+			"n": 10,
+			"spread": 0.012
+		},
+		"chocopinky": {
+			"h": 2.237,
+			"n": 21,
+			"spread": 0.018
+		},
+		"cinderpeep": {
+			"h": 1.576,
+			"n": 6,
+			"spread": 0.007
+		},
+		"conelle": {
+			"h": 1.85,
+			"n": 11,
+			"spread": 0.024
+		},
+		"conellia": {
+			"h": 1.99,
+			"n": 4,
+			"spread": 0.034
+		},
+		"conie": {
+			"h": 1.622,
+			"n": 4,
+			"spread": 0.004
+		},
+		"crabay": {
+			"h": 1.491,
+			"n": 10,
+			"spread": 0.058
+		},
+		"crabcoon": {
+			"h": 1.294,
+			"n": 6,
+			"spread": 0.015
+		},
+		"crablaze": {
+			"h": 1.491,
+			"n": 9,
+			"spread": 0.119
+		},
+		"crablu": {
+			"h": 1.298,
+			"n": 4,
+			"spread": 0.091
+		},
+		"craboth": {
+			"h": 1.508,
+			"n": 7,
+			"spread": 0.042
+		},
+		"crabshade": {
+			"h": 1.324,
+			"n": 9,
+			"spread": 0.029
+		},
+		"crabterror": {
+			"h": 1.64,
+			"n": 6,
+			"spread": 0.027
+		},
+		"craburn": {
+			"h": 1.351,
+			"n": 3,
+			"spread": 0.008
+		},
+		"cutiepinky": {
+			"h": 2.176,
+			"n": 5,
+			"spread": 0.005
+		},
+		"cutiepong": {
+			"h": 1.517,
+			"n": 33,
+			"spread": 0.006
+		},
+		"dawnspec": {
+			"h": 1.351,
+			"n": 11,
+			"spread": 0.013
+		},
+		"dawnspook": {
+			"h": 1.481,
+			"n": 22,
+			"spread": 0.055
+		},
+		"dera": {
+			"h": 1.527,
+			"n": 9,
+			"spread": 0.013
+		},
+		"derakon": {
+			"h": 1.933,
+			"n": 8,
+			"spread": 0.012
+		},
+		"derpcap": {
+			"h": 1.698,
+			"n": 9,
+			"spread": 0.009
+		},
+		"derpstool": {
+			"h": 1.551,
+			"n": 17,
+			"spread": 0.02
+		},
+		"donni": {
+			"h": 1.515,
+			"n": 24,
+			"spread": 0.013
+		},
+		"doomba": {
+			"h": 1.66,
+			"n": 4,
+			"spread": 0.011
+		},
+		"doorbot_v2": {
+			"h": 2.158,
+			"n": 17,
+			"spread": 0.006
+		},
+		"dratula": {
+			"h": 1.787,
+			"n": 42,
+			"spread": 0.077
+		},
+		"dumbird": {
+			"h": 1.461,
+			"n": 5,
+			"spread": 0.003
+		},
+		"earthion": {
+			"h": 1.402,
+			"n": 6,
+			"spread": 0.017
+		},
+		"espina": {
+			"h": 2.136,
+			"n": 4,
+			"spread": 0.03
+		},
+		"fairy_reindeer": {
+			"h": 1.906,
+			"n": 5,
+			"spread": 0.011
+		},
+		"fenny": {
+			"h": 1.406,
+			"n": 107,
+			"spread": 0.013
+		},
+		"ferdog": {
+			"h": 2.025,
+			"n": 42,
+			"spread": 0.039
+		},
+		"feril": {
+			"h": 1.707,
+			"n": 20,
+			"spread": 0.059
+		},
+		"fimi": {
+			"h": 1.845,
+			"n": 5,
+			"spread": 0.055
+		},
+		"fimia": {
+			"h": 1.955,
+			"n": 3,
+			"spread": 0.127
+		},
+		"finosaur": {
+			"h": 1.719,
+			"n": 14,
+			"spread": 0.025
+		},
+		"firbal": {
+			"h": 1.356,
+			"n": 9,
+			"spread": 0.028
+		},
+		"fire_bat": {
+			"h": 2.261,
+			"n": 17,
+			"spread": 0.019
+		},
+		"fire_bit": {
+			"h": 1.181,
+			"n": 20,
+			"spread": 0.032
+		},
+		"fire_genie": {
+			"h": 1.601,
+			"n": 32,
+			"spread": 0.031
+		},
+		"fire_kong": {
+			"h": 1.25,
+			"n": 31,
+			"spread": 0.027
+		},
+		"firepaw": {
+			"h": 1.623,
+			"n": 171,
+			"spread": 0.054
+		},
+		"firukis": {
+			"h": 2.43,
+			"n": 23,
+			"spread": 0.065
+		},
+		"fiyum": {
+			"h": 1.885,
+			"n": 13,
+			"spread": 0.039
+		},
+		"flambal": {
+			"h": 1.59,
+			"n": 5,
+			"spread": 0.001
+		},
+		"flame_kong": {
+			"h": 1.619,
+			"n": 3,
+			"spread": 0.008
+		},
+		"flame_steed": {
+			"h": 1.908,
+			"n": 3,
+			"spread": 0.038
+		},
+		"flamell": {
+			"h": 1.623,
+			"n": 14,
+			"spread": 0.03
+		},
+		"flaree": {
+			"h": 2.026,
+			"n": 5,
+			"spread": 0.023
+		},
+		"flarell": {
+			"h": 1.465,
+			"n": 14,
+			"spread": 0.122
+		},
+		"flarepaw": {
+			"h": 1.857,
+			"n": 6,
+			"spread": 0.004
+		},
+		"flobal": {
+			"h": 1.433,
+			"n": 9,
+			"spread": 0.012
+		},
+		"forina": {
+			"h": 1.525,
+			"n": 10,
+			"spread": 0.022
+		},
+		"forinas": {
+			"h": 1.892,
+			"n": 30,
+			"spread": 0.028
+		},
+		"friby": {
+			"h": 1.271,
+			"n": 19,
+			"spread": 0.033
+		},
+		"frost_bot": {
+			"h": 1.917,
+			"n": 3,
+			"spread": 0.012
+		},
+		"g_fruit": {
+			"h": 1.026,
+			"n": 7,
+			"spread": 0.045
+		},
+		"ghouldig": {
+			"h": 2.068,
+			"n": 13,
+			"spread": 0.022
+		},
+		"glacion": {
+			"h": 1.401,
+			"n": 12,
+			"spread": 0.013
+		},
+		"grand_bang": {
+			"h": 1.711,
+			"n": 24,
+			"spread": 0.033
+		},
+		"grand_bomb": {
+			"h": 1.62,
+			"n": 3,
+			"spread": 0.021
+		},
+		"grass_kong": {
+			"h": 1.262,
+			"n": 32,
+			"spread": 0.027
+		},
+		"greebat": {
+			"h": 1.858,
+			"n": 4,
+			"spread": 0.135
+		},
+		"greebi": {
+			"h": 1.473,
+			"n": 3,
+			"spread": 0.03
+		},
+		"green_bonk": {
+			"h": 1.314,
+			"n": 7,
+			"spread": 0.055
+		},
+		"greenspec": {
+			"h": 1.326,
+			"n": 7,
+			"spread": 0.011
+		},
+		"greenspook": {
+			"h": 1.604,
+			"n": 21,
+			"spread": 0.016
+		},
+		"gremula": {
+			"h": 1.715,
+			"n": 10,
+			"spread": 0.053
+		},
+		"groch": {
+			"h": 1.543,
+			"n": 89,
+			"spread": 0.034
+		},
+		"grochei": {
+			"h": 1.992,
+			"n": 7,
+			"spread": 0.021
+		},
+		"grochiss": {
+			"h": 1.828,
+			"n": 95,
+			"spread": 0.011
+		},
+		"grumairy": {
+			"h": 1.895,
+			"n": 8,
+			"spread": 0.016
+		},
+		"grumelle": {
+			"h": 1.74,
+			"n": 13,
+			"spread": 0.027
+		},
+		"harm_hound": {
+			"h": 2.196,
+			"n": 3,
+			"spread": 0.015
+		},
+		"hibisq": {
+			"h": 1.638,
+			"n": 4,
+			"spread": 0.229
+		},
+		"ibi": {
+			"h": 1.83,
+			"n": 64,
+			"spread": 0.019
+		},
+		"ibisking": {
+			"h": 2.131,
+			"n": 3,
+			"spread": 0.006
+		},
+		"ibismash": {
+			"h": 1.908,
+			"n": 26,
+			"spread": 0.023
+		},
+		"ice_crush": {
+			"h": 1.886,
+			"n": 3,
+			"spread": 0.013
+		},
+		"ice_unee": {
+			"h": 1.775,
+			"n": 4,
+			"spread": 0.017
+		},
+		"infernopaw": {
+			"h": 1.881,
+			"n": 144,
+			"spread": 0.022
+		},
+		"iron_bear": {
+			"h": 2.207,
+			"n": 34,
+			"spread": 0.042
+		},
+		"jadehide": {
+			"h": 1.96,
+			"n": 30,
+			"spread": 0.014
+		},
+		"jag_bot": {
+			"h": 1.961,
+			"n": 5,
+			"spread": 0.011
+		},
+		"jel": {
+			"h": 1.244,
+			"n": 9,
+			"spread": 0.021
+		},
+		"jelliking": {
+			"h": 1.942,
+			"n": 10,
+			"spread": 0.014
+		},
+		"jellio": {
+			"h": 1.43,
+			"n": 30,
+			"spread": 0.044
+		},
+		"kabong": {
+			"h": 1.413,
+			"n": 5,
+			"spread": 0.008
+		},
+		"king_drip": {
+			"h": 1.721,
+			"n": 14,
+			"spread": 0.008
+		},
+		"king_spiky": {
+			"h": 1.668,
+			"n": 36,
+			"spread": 0.051
+		},
+		"kroko": {
+			"h": 1.55,
+			"n": 4,
+			"spread": 0.016
+		},
+		"krokod": {
+			"h": 1.691,
+			"n": 248,
+			"spread": 0.008
+		},
+		"krokodar": {
+			"h": 1.932,
+			"n": 3,
+			"spread": 0.002
+		},
+		"lavatron": {
+			"h": 2.234,
+			"n": 13,
+			"spread": 0.05
+		},
+		"lavion": {
+			"h": 1.467,
+			"n": 4,
+			"spread": 0.021
+		},
+		"leaf_genie": {
+			"h": 1.518,
+			"n": 5,
+			"spread": 0.01
+		},
+		"leavbal": {
+			"h": 1.45,
+			"n": 10,
+			"spread": 0.004
+		},
+		"li_l_clip": {
+			"h": 1.296,
+			"n": 3,
+			"spread": 0.013
+		},
+		"li_l_drip": {
+			"h": 1.283,
+			"n": 3,
+			"spread": 0.017
+		},
+		"lucky": {
+			"h": 1.978,
+			"n": 5,
+			"spread": 0.013
+		},
+		"mantichomp": {
+			"h": 2.262,
+			"n": 3,
+			"spread": 0.026
+		},
+		"manticlaw": {
+			"h": 1.842,
+			"n": 29,
+			"spread": 0.014
+		},
+		"mantiroar": {
+			"h": 2.281,
+			"n": 11,
+			"spread": 0.009
+		},
+		"marell": {
+			"h": 1.403,
+			"n": 7,
+			"spread": 0.079
+		},
+		"marshowl": {
+			"h": 1.596,
+			"n": 4,
+			"spread": 0.014
+		},
+		"mayn": {
+			"h": 1.412,
+			"n": 108,
+			"spread": 0.046
+		},
+		"memew": {
+			"h": 1.558,
+			"n": 5,
+			"spread": 0.048
+		},
+		"metapanzer": {
+			"h": 2.27,
+			"n": 20,
+			"spread": 0.008
+		},
+		"mini": {
+			"h": 1.588,
+			"n": 35,
+			"spread": 0.014
+		},
+		"minoeagler": {
+			"h": 1.912,
+			"n": 3,
+			"spread": 0.008
+		},
+		"minohawker": {
+			"h": 1.957,
+			"n": 7,
+			"spread": 0.029
+		},
+		"moonk": {
+			"h": 1.799,
+			"n": 5,
+			"spread": 0.096
+		},
+		"moonknight_legendary": {
+			"h": 2.235,
+			"n": 4,
+			"spread": 0.01
+		},
+		"moss_bit": {
+			"h": 1.5,
+			"n": 23,
+			"spread": 0.032
+		},
+		"nightspec": {
+			"h": 1.32,
+			"n": 20,
+			"spread": 0.033
+		},
+		"nightspook": {
+			"h": 1.525,
+			"n": 4,
+			"spread": 0.014
+		},
+		"ninchan": {
+			"h": 1.105,
+			"n": 6,
+			"spread": 0.055
+		},
+		"o_drank": {
+			"h": 1.437,
+			"n": 11,
+			"spread": 0.062
+		},
+		"p_drank": {
+			"h": 1.579,
+			"n": 7,
+			"spread": 0.064
+		},
+		"p_fruit": {
+			"h": 1.19,
+			"n": 13,
+			"spread": 0.034
+		},
+		"pandar": {
+			"h": 1.789,
+			"n": 9,
+			"spread": 0.012
+		},
+		"panzer": {
+			"h": 1.683,
+			"n": 11,
+			"spread": 0.023
+		},
+		"pari": {
+			"h": 1.56,
+			"n": 7,
+			"spread": 0.035
+		},
+		"pentacorn": {
+			"h": 2.18,
+			"n": 116,
+			"spread": 0.016
+		},
+		"pheona": {
+			"h": 1.701,
+			"n": 201,
+			"spread": 0.03
+		},
+		"picore": {
+			"h": 1.483,
+			"n": 4,
+			"spread": 0.082
+		},
+		"pinkey": {
+			"h": 1.656,
+			"n": 10,
+			"spread": 0.05
+		},
+		"plum_bat": {
+			"h": 2.027,
+			"n": 8,
+			"spread": 0.028
+		},
+		"plum_bun": {
+			"h": 1.736,
+			"n": 3,
+			"spread": 0.035
+		},
+		"pollion": {
+			"h": 1.256,
+			"n": 3,
+			"spread": 0.014
+		},
+		"ponee": {
+			"h": 1.482,
+			"n": 11,
+			"spread": 0.006
+		},
+		"pragon": {
+			"h": 1.983,
+			"n": 11,
+			"spread": 0.032
+		},
+		"pretula": {
+			"h": 1.664,
+			"n": 5,
+			"spread": 0.016
+		},
+		"prisbal": {
+			"h": 1.259,
+			"n": 4,
+			"spread": 0.098
+		},
+		"punchpuppy": {
+			"h": 1.568,
+			"n": 63,
+			"spread": 0.007
+		},
+		"raingull": {
+			"h": 1.362,
+			"n": 3,
+			"spread": 0.018
+		},
+		"red_antlad": {
+			"h": 1.464,
+			"n": 3,
+			"spread": 0.008
+		},
+		"red_antlar": {
+			"h": 1.952,
+			"n": 37,
+			"spread": 0.031
+		},
+		"red_antlid": {
+			"h": 1.765,
+			"n": 27,
+			"spread": 0.05
+		},
+		"red_bonk": {
+			"h": 1.139,
+			"n": 41,
+			"spread": 0.05
+		},
+		"reditula": {
+			"h": 1.771,
+			"n": 15,
+			"spread": 0.055
+		},
+		"redmula": {
+			"h": 1.781,
+			"n": 16,
+			"spread": 0.032
+		},
+		"rockion": {
+			"h": 1.278,
+			"n": 8,
+			"spread": 0.006
+		},
+		"rokk": {
+			"h": 1.837,
+			"n": 3,
+			"spread": 0.02
+		},
+		"rokliad": {
+			"h": 2.196,
+			"n": 58,
+			"spread": 0.009
+		},
+		"rookie": {
+			"h": 1.764,
+			"n": 4,
+			"spread": 0.059
+		},
+		"rubat": {
+			"h": 1.862,
+			"n": 7,
+			"spread": 0.008
+		},
+		"ruburak": {
+			"h": 1.931,
+			"n": 4,
+			"spread": 0.014
+		},
+		"rubyfang": {
+			"h": 2.269,
+			"n": 3,
+			"spread": 0.085
+		},
+		"saint_bern": {
+			"h": 2.294,
+			"n": 22,
+			"spread": 0.016
+		},
+		"sea_geist": {
+			"h": 1.938,
+			"n": 22,
+			"spread": 0.081
+		},
+		"seaspec": {
+			"h": 1.346,
+			"n": 22,
+			"spread": 0.028
+		},
+		"seaspook": {
+			"h": 1.593,
+			"n": 15,
+			"spread": 0.029
+		},
+		"sharp_hy": {
+			"h": 1.584,
+			"n": 3,
+			"spread": 0.003
+		},
+		"shivairy": {
+			"h": 1.996,
+			"n": 17,
+			"spread": 0.016
+		},
+		"shivelle": {
+			"h": 1.993,
+			"n": 6,
+			"spread": 0.015
+		},
+		"sir_clip": {
+			"h": 1.683,
+			"n": 9,
+			"spread": 0.016
+		},
+		"sir_drip": {
+			"h": 1.573,
+			"n": 40,
+			"spread": 0.019
+		},
+		"sir_flame": {
+			"h": 1.627,
+			"n": 22,
+			"spread": 0.033
+		},
+		"sir_spiky": {
+			"h": 1.421,
+			"n": 4,
+			"spread": 0.053
+		},
+		"skuldrip": {
+			"h": 1.777,
+			"n": 4,
+			"spread": 0.006
+		},
+		"sliby": {
+			"h": 1.078,
+			"n": 10,
+			"spread": 0.038
+		},
+		"sliming": {
+			"h": 1.14,
+			"n": 7,
+			"spread": 0.018
+		},
+		"smee": {
+			"h": 1.217,
+			"n": 38,
+			"spread": 0.071
+		},
+		"smella": {
+			"h": 1.201,
+			"n": 31,
+			"spread": 0.063
+		},
+		"smelly": {
+			"h": 1.537,
+			"n": 5,
+			"spread": 0.02
+		},
+		"smish": {
+			"h": 1.571,
+			"n": 20,
+			"spread": 0.057
+		},
+		"smishee": {
+			"h": 1.274,
+			"n": 38,
+			"spread": 0.031
+		},
+		"smoo": {
+			"h": 1.206,
+			"n": 43,
+			"spread": 0.051
+		},
+		"smoovie": {
+			"h": 1.379,
+			"n": 21,
+			"spread": 0.04
+		},
+		"smull": {
+			"h": 1.272,
+			"n": 19,
+			"spread": 0.036
+		},
+		"smulling": {
+			"h": 1.359,
+			"n": 23,
+			"spread": 0.039
+		},
+		"smullock": {
+			"h": 1.304,
+			"n": 6,
+			"spread": 0.002
+		},
+		"smunk": {
+			"h": 1.366,
+			"n": 20,
+			"spread": 0.038
+		},
+		"soosoo": {
+			"h": 1.31,
+			"n": 22,
+			"spread": 0.092
+		},
+		"spike_bonk": {
+			"h": 1.683,
+			"n": 31,
+			"spread": 0.044
+		},
+		"spooker": {
+			"h": 1.254,
+			"n": 5,
+			"spread": 0.01
+		},
+		"spooki": {
+			"h": 1.197,
+			"n": 38,
+			"spread": 0.022
+		},
+		"spooking": {
+			"h": 1.779,
+			"n": 185,
+			"spread": 0.013
+		},
+		"spookloak": {
+			"h": 1.529,
+			"n": 3,
+			"spread": 0.0
+		},
+		"stabking": {
+			"h": 2.229,
+			"n": 4,
+			"spread": 0.04
+		},
+		"stoneskin": {
+			"h": 2.158,
+			"n": 8,
+			"spread": 0.018
+		},
+		"stormgull": {
+			"h": 1.577,
+			"n": 7,
+			"spread": 0.056
+		},
+		"strang": {
+			"h": 2.038,
+			"n": 5,
+			"spread": 0.01
+		},
+		"stumpy": {
+			"h": 1.939,
+			"n": 11,
+			"spread": 0.025
+		},
+		"surak": {
+			"h": 1.682,
+			"n": 9,
+			"spread": 0.061
+		},
+		"surakan": {
+			"h": 1.851,
+			"n": 4,
+			"spread": 0.007
+		},
+		"talmag": {
+			"h": 2.046,
+			"n": 415,
+			"spread": 0.012
+		},
+		"taran": {
+			"h": 1.921,
+			"n": 3,
+			"spread": 0.029
+		},
+		"thorni": {
+			"h": 1.771,
+			"n": 85,
+			"spread": 0.026
+		},
+		"titan_foot": {
+			"h": 2.277,
+			"n": 60,
+			"spread": 0.015
+		},
+		"toomba": {
+			"h": 2.149,
+			"n": 7,
+			"spread": 0.021
+		},
+		"tornido": {
+			"h": 1.563,
+			"n": 15,
+			"spread": 0.027
+		},
+		"trama": {
+			"h": 1.557,
+			"n": 47,
+			"spread": 0.032
+		},
+		"tramix": {
+			"h": 1.837,
+			"n": 28,
+			"spread": 0.039
+		},
+		"tramula": {
+			"h": 1.767,
+			"n": 17,
+			"spread": 0.022
+		},
+		"treant": {
+			"h": 1.857,
+			"n": 10,
+			"spread": 0.012
+		},
+		"trimiri": {
+			"h": 1.944,
+			"n": 5,
+			"spread": 0.011
+		},
+		"tryant": {
+			"h": 2.264,
+			"n": 11,
+			"spread": 0.008
+		},
+		"turan": {
+			"h": 2.137,
+			"n": 8,
+			"spread": 0.021
+		},
+		"twinblaze": {
+			"h": 2.3,
+			"n": 7,
+			"spread": 0.037
+		},
+		"twirly": {
+			"h": 1.544,
+			"n": 26,
+			"spread": 0.052
+		},
+		"ultrang": {
+			"h": 2.253,
+			"n": 4,
+			"spread": 0.002
+		},
+		"unacorn": {
+			"h": 1.952,
+			"n": 25,
+			"spread": 0.011
+		},
+		"unee": {
+			"h": 1.526,
+			"n": 6,
+			"spread": 0.008
+		},
+		"urscout_p": {
+			"h": 1.74,
+			"n": 5,
+			"spread": 0.008
+		},
+		"void_genie": {
+			"h": 1.656,
+			"n": 46,
+			"spread": 0.022
+		},
+		"walion": {
+			"h": 1.21,
+			"n": 3,
+			"spread": 0.021
+		},
+		"wami": {
+			"h": 1.809,
+			"n": 16,
+			"spread": 0.004
+		},
+		"water_genie": {
+			"h": 1.637,
+			"n": 19,
+			"spread": 0.011
+		},
+		"whimptor": {
+			"h": 1.681,
+			"n": 9,
+			"spread": 0.021
+		},
+		"whynoceros": {
+			"h": 1.877,
+			"n": 10,
+			"spread": 0.042
+		},
+		"yakka": {
+			"h": 1.647,
+			"n": 7,
+			"spread": 0.015
+		},
+		"yakkadin": {
+			"h": 1.993,
+			"n": 102,
+			"spread": 0.009
+		},
+		"yaknight": {
+			"h": 2.179,
+			"n": 6,
+			"spread": 0.033
+		},
+		"yella_bonk": {
+			"h": 1.282,
+			"n": 25,
+			"spread": 0.031
+		}
+	},
+	"lobby": {
+		"abyssik": {
+			"h": 2.105,
+			"n": 10
+		},
+		"anubis": {
+			"h": 2.277,
+			"n": 130
+		},
+		"arch_bern": {
+			"h": 2.3,
+			"n": 25
+		},
+		"armorin": {
+			"h": 1.974,
+			"n": 4
+		},
+		"azurefang": {
+			"h": 2.315,
+			"n": 38
+		},
+		"balrak": {
+			"h": 2.038,
+			"n": 4
+		},
+		"blu_antlar": {
+			"h": 1.664,
+			"n": 3
+		},
+		"ceratops": {
+			"h": 1.98,
+			"n": 10
+		},
+		"charismew": {
+			"h": 1.82,
+			"n": 9
+		},
+		"charmew": {
+			"h": 1.525,
+			"n": 4
+		},
+		"chilchilla": {
+			"h": 1.988,
+			"n": 8
+		},
+		"chocopinky": {
+			"h": 2.019,
+			"n": 17
+		},
+		"colossiron": {
+			"h": 2.046,
+			"n": 34
+		},
+		"cpt_lubu": {
+			"h": 2.355,
+			"n": 6
+		},
+		"creemag": {
+			"h": 2.093,
+			"n": 11
+		},
+		"cupi": {
+			"h": 1.178,
+			"n": 5
+		},
+		"cupido": {
+			"h": 1.543,
+			"n": 5
+		},
+		"dark_hawk": {
+			"h": 2.169,
+			"n": 5
+		},
+		"darkera": {
+			"h": 2.226,
+			"n": 3
+		},
+		"drakan": {
+			"h": 2.235,
+			"n": 4
+		},
+		"dusa": {
+			"h": 1.486,
+			"n": 17
+		},
+		"e_magnus": {
+			"h": 2.094,
+			"n": 3
+		},
+		"explodion": {
+			"h": 2.142,
+			"n": 31
+		},
+		"fenny": {
+			"h": 1.226,
+			"n": 20
+		},
+		"feroah": {
+			"h": 2.047,
+			"n": 4
+		},
+		"finosaur": {
+			"h": 1.597,
+			"n": 9
+		},
+		"firepaw": {
+			"h": 1.432,
+			"n": 23
+		},
+		"firukis": {
+			"h": 2.19,
+			"n": 49
+		},
+		"flame_kong": {
+			"h": 1.463,
+			"n": 14
+		},
+		"flame_sprite": {
+			"h": 2.061,
+			"n": 7
+		},
+		"forin": {
+			"h": 1.187,
+			"n": 19
+		},
+		"forina": {
+			"h": 1.361,
+			"n": 20
+		},
+		"fortina": {
+			"h": 1.883,
+			"n": 30
+		},
+		"furion": {
+			"h": 2.028,
+			"n": 5
+		},
+		"furserker": {
+			"h": 2.088,
+			"n": 26
+		},
+		"ghouldig": {
+			"h": 1.861,
+			"n": 6
+		},
+		"ghoulflash": {
+			"h": 2.177,
+			"n": 9
+		},
+		"glintfang": {
+			"h": 2.161,
+			"n": 53
+		},
+		"granubis": {
+			"h": 2.234,
+			"n": 31
+		},
+		"greengeist": {
+			"h": 1.893,
+			"n": 3
+		},
+		"groch": {
+			"h": 1.406,
+			"n": 5
+		},
+		"grochei": {
+			"h": 1.808,
+			"n": 5
+		},
+		"grumelle": {
+			"h": 1.61,
+			"n": 3
+		},
+		"harm_hound": {
+			"h": 2.011,
+			"n": 5
+		},
+		"ibizard": {
+			"h": 1.976,
+			"n": 3
+		},
+		"ibomancer": {
+			"h": 2.191,
+			"n": 43
+		},
+		"infernopaw": {
+			"h": 1.656,
+			"n": 7
+		},
+		"iron_bear": {
+			"h": 1.908,
+			"n": 8
+		},
+		"irongiant": {
+			"h": 1.967,
+			"n": 20
+		},
+		"ironite": {
+			"h": 1.923,
+			"n": 7
+		},
+		"jack_o_paw": {
+			"h": 1.699,
+			"n": 4
+		},
+		"jadehide": {
+			"h": 1.703,
+			"n": 46
+		},
+		"jelliking": {
+			"h": 1.955,
+			"n": 3
+		},
+		"jellio": {
+			"h": 1.336,
+			"n": 5
+		},
+		"jelliton": {
+			"h": 1.546,
+			"n": 4
+		},
+		"kaolycan": {
+			"h": 2.212,
+			"n": 12
+		},
+		"koonga": {
+			"h": 2.039,
+			"n": 35
+		},
+		"krokod": {
+			"h": 1.52,
+			"n": 11
+		},
+		"lavatron": {
+			"h": 2.498,
+			"n": 9
+		},
+		"magnus": {
+			"h": 2.133,
+			"n": 4
+		},
+		"maktron": {
+			"h": 2.166,
+			"n": 13
+		},
+		"manebear": {
+			"h": 2.091,
+			"n": 21
+		},
+		"manticlaw": {
+			"h": 1.625,
+			"n": 35
+		},
+		"mantiroar": {
+			"h": 2.077,
+			"n": 16
+		},
+		"metapanzer": {
+			"h": 2.172,
+			"n": 108
+		},
+		"meteo": {
+			"h": 1.353,
+			"n": 18
+		},
+		"midnight": {
+			"h": 1.928,
+			"n": 6
+		},
+		"mini": {
+			"h": 1.499,
+			"n": 5
+		},
+		"nalano": {
+			"h": 1.99,
+			"n": 6
+		},
+		"narkissa": {
+			"h": 2.101,
+			"n": 5
+		},
+		"necro_horn": {
+			"h": 1.984,
+			"n": 4
+		},
+		"neutrus": {
+			"h": 2.09,
+			"n": 10
+		},
+		"nightmare": {
+			"h": 1.835,
+			"n": 3
+		},
+		"octoring": {
+			"h": 1.534,
+			"n": 3
+		},
+		"pandabond": {
+			"h": 2.192,
+			"n": 15
+		},
+		"pentacorn": {
+			"h": 1.969,
+			"n": 47
+		},
+		"pheona": {
+			"h": 1.478,
+			"n": 21
+		},
+		"pretula": {
+			"h": 1.506,
+			"n": 21
+		},
+		"punchpuppy": {
+			"h": 1.393,
+			"n": 4
+		},
+		"red_bonk": {
+			"h": 1.063,
+			"n": 6
+		},
+		"redipula": {
+			"h": 2.002,
+			"n": 5
+		},
+		"rokliad": {
+			"h": 1.982,
+			"n": 13
+		},
+		"roonga": {
+			"h": 1.847,
+			"n": 13
+		},
+		"rubyfang": {
+			"h": 2.061,
+			"n": 25
+		},
+		"rubyhide": {
+			"h": 1.622,
+			"n": 4
+		},
+		"shade": {
+			"h": 1.617,
+			"n": 4
+		},
+		"skulfire": {
+			"h": 1.892,
+			"n": 4
+		},
+		"slayergal": {
+			"h": 1.971,
+			"n": 13
+		},
+		"spooki": {
+			"h": 1.097,
+			"n": 15
+		},
+		"spooking": {
+			"h": 1.592,
+			"n": 49
+		},
+		"stoneheart": {
+			"h": 1.993,
+			"n": 33
+		},
+		"stoneskin": {
+			"h": 1.781,
+			"n": 20
+		},
+		"talmag": {
+			"h": 1.812,
+			"n": 57
+		},
+		"titan_foot": {
+			"h": 2.231,
+			"n": 8
+		},
+		"toomba": {
+			"h": 1.912,
+			"n": 4
+		},
+		"tornido": {
+			"h": 1.371,
+			"n": 19
+		},
+		"trang": {
+			"h": 1.561,
+			"n": 4
+		},
+		"trapula": {
+			"h": 1.896,
+			"n": 9
+		},
+		"tryant": {
+			"h": 2.026,
+			"n": 12
+		},
+		"twinblaze": {
+			"h": 1.997,
+			"n": 8
+		},
+		"ultimi": {
+			"h": 2.567,
+			"n": 12
+		},
+		"unacorn": {
+			"h": 1.743,
+			"n": 12
+		},
+		"uranger_p": {
+			"h": 1.947,
+			"n": 5
+		},
+		"vengens": {
+			"h": 2.084,
+			"n": 50
+		},
+		"wami": {
+			"h": 1.614,
+			"n": 13
+		},
+		"whalking": {
+			"h": 2.07,
+			"n": 6
+		},
+		"whynoceros": {
+			"h": 1.627,
+			"n": 46
+		},
+		"xenolancer": {
+			"h": 1.934,
+			"n": 13
+		},
+		"yakkadin": {
+			"h": 1.749,
+			"n": 3
+		}
+	},
+	"lobby_scale": {
+		"leader": 1.221,
+		"from_battle": 0.894
+	},
+	"guess": {
+		"ami": 1.579,
+		"amia": 1.74,
+		"angelami": 2.3,
+		"ant_monarch": 2.3,
+		"ant_queen": 2.056,
+		"anuk": 1.895,
+		"anuka": 2.172,
+		"aqua_bit": 1.648,
+		"aqua_spirit": 2.056,
+		"aquacron": 2.313,
+		"aquahopper": 2.3,
+		"aquik": 2.059,
+		"aqus": 1.738,
+		"aqusa": 1.992,
+		"archwing": 2.3,
+		"armin_coral": 2.3,
+		"armor_bonk": 1.873,
+		"astral_eldragon": 2.056,
+		"auqus": 1.947,
+		"ayn": 1.325,
+		"azurescale": 2.138,
+		"balro": 1.733,
+		"balrog": 1.987,
+		"bammi": 1.56,
+		"banana_dragon": 2.3,
+		"banany": 1.759,
+		"banasnack": 1.781,
+		"banasnake": 2.056,
+		"barktor": 1.961,
+		"beat_maker": 2.3,
+		"beauty_chosun": 2.056,
+		"bebeto": 1.781,
+		"beblaze": 2.056,
+		"beburn": 1.759,
+		"becinder": 1.56,
+		"beetort": 1.465,
+		"beetortle": 1.852,
+		"belle": 1.337,
+		"big_bern": 1.832,
+		"blacky": 1.781,
+		"blaze_bot": 2.052,
+		"bloomcap": 1.8,
+		"blossom_knight": 2.3,
+		"blue_dragongod": 2.3,
+		"blue_rock": 1.358,
+		"bluebella": 1.924,
+		"bonk_druid": 1.97,
+		"bonk_pyro": 2.01,
+		"bonk_scion": 1.585,
+		"brickett": 1.646,
+		"brioche": 2.056,
+		"bud_knight": 2.056,
+		"budding": 1.56,
+		"burdon": 1.781,
+		"burtle": 1.287,
+		"bw_ghosts": 2.3,
+		"camilla": 2.056,
+		"cammount": 2.113,
+		"caocao": 2.056,
+		"cap_ninja": 1.462,
+		"catrikster": 1.724,
+		"centaur": 2.056,
+		"ceratoking": 2.701,
+		"ceratopson": 2.378,
+		"ceres": 1.781,
+		"chibi_lorel": 1.759,
+		"chil": 1.725,
+		"chilla": 1.978,
+		"chocomew": 1.759,
+		"cold_eldrake": 1.56,
+		"coldrake": 2.3,
+		"crown_bear": 1.885,
+		"crueltee": 2.044,
+		"cumulo": 2.056,
+		"cupion": 1.585,
+		"cute_donni": 1.74,
+		"damage_dog": 1.914,
+		"danica": 1.759,
+		"dark_ena": 2.081,
+		"dark_hy": 2.065,
+		"dark_knight": 2.3,
+		"dark_kong": 1.834,
+		"dark_monk": 2.102,
+		"dark_stump": 2.279,
+		"darkra": 1.868,
+		"darkrake": 2.3,
+		"darkteim": 2.141,
+		"demon_mallow": 2.3,
+		"deramax": 2.77,
+		"derastorm": 2.44,
+		"dimbo": 2.056,
+		"doonga": 1.8,
+		"doorbot_v1": 1.848,
+		"doorbot_v3": 2.335,
+		"doorbot_x": 2.652,
+		"dragomi": 2.366,
+		"drakoon": 2.147,
+		"drop_bonk": 1.392,
+		"dullbeak": 1.696,
+		"e_pink_bean": 2.056,
+		"e_zakum": 1.781,
+		"elit_centaur": 2.3,
+		"emberpeep": 1.788,
+		"eris": 2.056,
+		"esper": 1.842,
+		"espika": 2.398,
+		"evil_ena": 2.364,
+		"evil_hy": 2.345,
+		"evil_mallow": 2.056,
+		"expert_joun": 2.056,
+		"femme_fatale_chosun": 2.3,
+		"fino": 1.576,
+		"finosaurus": 1.992,
+		"fire_bun": 1.677,
+		"fire_eldrake": 1.56,
+		"fire_pony": 1.702,
+		"fire_sprite": 2.029,
+		"firrel": 1.56,
+		"firub": 1.839,
+		"firuba": 2.108,
+		"flame_eldragon": 2.3,
+		"flame_hy": 1.802,
+		"flame_knight": 2.3,
+		"flapper": 1.759,
+		"flare_eldragon": 2.056,
+		"flarrel": 1.759,
+		"flaruus": 2.14,
+		"flitsplish": 1.56,
+		"flutsplash": 1.759,
+		"flutter": 1.56,
+		"freeze_bot": 2.095,
+		"friming": 1.484,
+		"frivolad": 1.781,
+		"frivolaze": 2.056,
+		"frivolycan": 2.3,
+		"frogprince": 1.56,
+		"frogy": 1.759,
+		"frost_ena": 1.816,
+		"frostcap": 1.759,
+		"froststool": 1.56,
+		"frozen_eldragon": 1.781,
+		"garden_spirit": 2.3,
+		"gateau": 2.3,
+		"general_joun": 2.3,
+		"giant_foot": 2.201,
+		"gingar": 1.759,
+		"glacial_eldragon": 2.056,
+		"glintscale": 2.121,
+		"goldbat": 1.358,
+		"goldverin": 2.402,
+		"granuk": 1.849,
+		"granuka": 2.12,
+		"griffling": 1.781,
+		"griffpup": 1.759,
+		"grochi": 1.709,
+		"growth": 1.781,
+		"guardhunt": 1.687,
+		"guardwolf": 1.859,
+		"gusdon": 2.056,
+		"hallomew": 1.759,
+		"hark": 1.781,
+		"herks": 2.056,
+		"heroks": 2.3,
+		"hibisquid": 1.837,
+		"hotspa_ape": 2.056,
+		"humbanaut": 2.3,
+		"humbark": 1.781,
+		"humbath": 2.056,
+		"ice_cube": 1.619,
+		"ice_unacorn": 2.037,
+		"ici": 1.781,
+		"icikel": 2.056,
+		"imhotep": 2.056,
+		"imuki": 2.056,
+		"jack": 1.781,
+		"jackoblack": 2.056,
+		"jackolantern": 2.3,
+		"jadescale": 2.144,
+		"jiangshi": 2.056,
+		"jinglbelle": 1.522,
+		"jumbo": 2.3,
+		"kabash": 1.736,
+		"kabi": 1.374,
+		"kabloom": 1.972,
+		"kaios": 2.056,
+		"kairax": 2.3,
+		"kairos": 1.781,
+		"kalper": 2.056,
+		"kanga": 2.056,
+		"kangard": 2.3,
+		"kangy": 1.781,
+		"kaowolf": 2.132,
+		"karos": 1.781,
+		"katadon": 2.3,
+		"kayn": 1.906,
+		"kepros": 2.3,
+		"keros": 2.056,
+		"king_caocao": 2.3,
+		"kora": 1.794,
+		"krokodin": 2.235,
+		"leaf_spirit": 2.056,
+		"leoaurora": 2.3,
+		"leortus": 2.056,
+		"li_l_woosh": 1.56,
+		"lightning_spirit": 2.3,
+		"lil_flame": 1.544,
+		"lil_fwoosh": 1.56,
+		"lil_splish": 1.56,
+		"lil_swoosh": 1.358,
+		"limbo": 1.781,
+		"lowe": 1.783,
+		"lubu": 2.227,
+		"luxhopper": 2.3,
+		"madusa": 2.209,
+		"maglavan": 1.832,
+		"magroon": 2.1,
+		"mandrake": 2.3,
+		"marshmallow": 1.759,
+		"mauve_rock": 1.358,
+		"megabatta": 2.056,
+		"megabeat": 1.781,
+		"megablam": 2.056,
+		"megablow": 1.781,
+		"megabomba": 1.781,
+		"megaboom": 2.056,
+		"megabrute": 2.3,
+		"megabuster": 2.3,
+		"megacrush": 2.3,
+		"megania": 2.056,
+		"megapuncha": 1.781,
+		"megasavage": 2.3,
+		"megaslamma": 2.056,
+		"melfy": 1.781,
+		"meteor_eldragon": 1.759,
+		"meteorik": 1.822,
+		"mewceleste": 1.781,
+		"mewcelexia": 2.056,
+		"mewer": 1.56,
+		"mewgalaxia": 2.3,
+		"mewshine": 1.759,
+		"midusa": 1.945,
+		"mimi": 1.872,
+		"mini_coral": 1.759,
+		"minoeagle": 2.173,
+		"minoeaglet": 1.72,
+		"minogull": 2.17,
+		"minogullet": 1.718,
+		"minohawk": 2.154,
+		"minohawket": 1.704,
+		"minothring": 1.732,
+		"minothrush": 2.189,
+		"moon_bunny": 1.781,
+		"moon_hare": 2.056,
+		"moon_king": 2.3,
+		"moonbright": 2.3,
+		"moonknight_epic": 2.02,
+		"moonlight": 2.056,
+		"moonstar": 1.781,
+		"morrigan": 2.3,
+		"moss_bat": 1.988,
+		"moss_bun": 1.734,
+		"mossmasher": 1.667,
+		"mr_jolly": 2.431,
+		"nadri": 1.56,
+		"nadrian": 1.759,
+		"naladdin": 2.468,
+		"nalino": 1.896,
+		"naomi": 2.064,
+		"nascent_eldrake": 1.56,
+		"native_eldragon": 2.056,
+		"naturia_eldragon": 2.3,
+		"naturus": 2.056,
+		"necro_corn": 1.892,
+		"necro_kid": 1.716,
+		"necro_moncer": 2.463,
+		"neo_eldragon": 1.781,
+		"nereid_lorel": 2.056,
+		"nimby": 1.759,
+		"nindori": 1.157,
+		"ninja_blue": 1.759,
+		"noxhopper": 2.3,
+		"nurture_eldragon": 1.759,
+		"nymph_lorel": 1.781,
+		"obelisis": 2.3,
+		"oceanik": 1.796,
+		"octo": 1.383,
+		"octoqueen": 1.989,
+		"octovia": 1.574,
+		"oonga": 1.633,
+		"overgrowth": 2.056,
+		"owlder": 1.804,
+		"pan": 2.3,
+		"pandonin": 2.083,
+		"pandy": 1.621,
+		"pangy": 1.56,
+		"panzerplus": 1.984,
+		"patchuus": 2.367,
+		"patragon": 2.669,
+		"patrox": 2.35,
+		"pecore": 1.796,
+		"permbear": 2.049,
+		"phantom_mallow": 1.781,
+		"pheonatrix": 2.245,
+		"pheornas": 1.977,
+		"pink_bean": 2.3,
+		"plossom": 2.3,
+		"plum_bit": 1.587,
+		"polar_eldragon": 1.759,
+		"pompabear": 1.788,
+		"popobud": 2.056,
+		"popochy": 1.781,
+		"precore": 2.04,
+		"puchy": 1.759,
+		"pufbal": 1.153,
+		"purimula": 1.99,
+		"purpleback": 2.131,
+		"pyro_eldragon": 1.759,
+		"rean": 1.515,
+		"ribinbelle": 1.678,
+		"roklam": 1.961,
+		"rollergor": 1.71,
+		"rollin_coral": 1.781,
+		"roost": 2.056,
+		"rubyscale": 2.11,
+		"rudolph": 2.141,
+		"rushin_coral": 2.056,
+		"sap_bot": 2.114,
+		"screechey": 1.859,
+		"seruus": 2.284,
+		"shaaaaark": 2.3,
+		"shaaark": 2.056,
+		"shaark": 1.781,
+		"shadow": 1.999,
+		"sharpbeak": 1.728,
+		"shelltor": 2.227,
+		"shinoblue": 1.781,
+		"sir_fwoosh": 1.358,
+		"sir_splish": 1.759,
+		"sir_swoosh": 1.759,
+		"sir_woosh": 1.759,
+		"siren_lorel": 2.3,
+		"skelbloom": 1.916,
+		"skeldrip": 2.023,
+		"skelebloom": 2.112,
+		"skeledrip": 2.23,
+		"skelefire": 2.334,
+		"skeleme": 2.106,
+		"skelfire": 2.118,
+		"skelme": 1.91,
+		"slime_king": 2.056,
+		"smash_bot": 2.057,
+		"spa_ape": 1.781,
+		"spinecap": 1.759,
+		"spinestool": 1.56,
+		"spriby": 1.283,
+		"st_mew": 1.781,
+		"stabbr": 1.781,
+		"stabeak": 1.981,
+		"star_eldrake": 1.56,
+		"stellar_eldragon": 2.3,
+		"stingr": 1.759,
+		"stone_bear": 1.71,
+		"stonn": 1.635,
+		"stormy": 1.781,
+		"stumper": 2.068,
+		"swiftclaw": 2.056,
+		"swordgal": 1.966,
+		"taddy": 1.56,
+		"tallie": 1.787,
+		"tane": 1.704,
+		"terahopper": 2.3,
+		"thornles": 1.609,
+		"thornton": 2.034,
+		"thundaro": 2.3,
+		"tobiak": 1.759,
+		"tobio": 1.56,
+		"torch_eldragon": 1.781,
+		"toriz": 1.781,
+		"torizo": 2.056,
+		"torizor": 2.3,
+		"torni": 1.364,
+		"tramacron": 2.413,
+		"tramarex": 2.74,
+		"trean": 1.67,
+		"trimi": 1.565,
+		"trimia": 1.724,
+		"tundra_eldragon": 2.3,
+		"turanga": 2.399,
+		"turto_granpa": 1.781,
+		"turto_kaiser": 2.056,
+		"turto_monarch": 2.3,
+		"turto_papa": 1.759,
+		"tutankha": 1.781,
+		"twinbark": 1.767,
+		"twinbite": 2.025,
+		"ullie": 1.622,
+		"ulmigrand": 1.759,
+		"ulmigros": 1.56,
+		"ultraroost": 2.3,
+		"undine": 2.3,
+		"verdens": 1.781,
+		"void_eldragon": 1.781,
+		"void_knight": 2.056,
+		"voidina": 2.056,
+		"volcanic_ape": 2.3,
+		"volt_spirit": 2.056,
+		"voxus": 1.962,
+		"vulcus": 1.786,
+		"wabering": 1.56,
+		"waby": 1.283,
+		"wamia": 1.977,
+		"wamiami": 2.267,
+		"water_ponee": 1.612,
+		"wave_maker": 2.3,
+		"wetfy": 1.781,
+		"wetnia": 2.056,
+		"whalduke": 2.035,
+		"whalgent": 1.775,
+		"whammi": 1.759,
+		"whirluus": 2.142,
+		"whirly": 1.763,
+		"whylie": 1.683,
+		"wini": 1.798,
+		"wolverin": 1.901,
+		"wynasheros": 2.191,
+		"xenocutter": 1.851,
+		"zakum": 2.056,
+		"zayn": 1.662
+	},
+	"guess_rule": {
+		"evolution_step": 1.143,
+		"family_weight": 0.7,
+		"usual": {
+			"1": 1.283,
+			"2": 1.56,
+			"3": 1.759,
+			"4": 1.781,
+			"5": 2.056,
+			"6": 2.3,
+			"material": 1.358
+		}
+	},
+	"shared": {
+		"amethoid": 1.948,
+		"antlad": 1.495,
+		"antlar": 1.921,
+		"antlid": 1.769,
+		"anubis": 2.542,
+		"anuk": 1.832,
+		"anuka": 1.997,
+		"aqua_bat": 2.007,
+		"aqua_bit": 1.61,
+		"aqua_bun": 1.831,
+		"aquahopper": 2.265,
+		"aquarell": 1.604,
+		"aquavis": 2.247,
+		"aqus": 1.8,
+		"aqusa": 2.063,
+		"armor_bonk": 2.123,
+		"astral_eldragon": 1.985,
+		"auqus": 1.865,
+		"azurefang": 2.507,
+		"azurehide": 1.886,
+		"azurescale": 2.112,
+		"b_drank": 1.525,
+		"b_fruit": 1.083,
+		"beat_maker": 2.284,
+		"blacky": 1.792,
+		"blaze_bot": 2.086,
+		"bloomasher": 1.961,
+		"bloomion": 1.422,
+		"blu_antlad": 1.441,
+		"blu_antlar": 1.879,
+		"blu_antlid": 1.762,
+		"blue_rock": 1.35,
+		"bonk_druid": 1.97,
+		"bonk_pyro": 1.983,
+		"brambal": 1.63,
+		"brickett": 1.621,
+		"bud_antlad": 1.489,
+		"bud_antlar": 1.908,
+		"bud_antlid": 1.762,
+		"bud_bonk": 1.81,
+		"burn_bonk": 1.862,
+		"burn_bot": 1.907,
+		"bushell": 1.654,
+		"ceratoking": 2.733,
+		"ceratops": 2.215,
+		"ceratopson": 2.421,
+		"cero": 1.509,
+		"cetrop": 1.836,
+		"chilairy": 1.966,
+		"chilelle": 1.895,
+		"chilellia": 2.093,
+		"chilie": 1.655,
+		"cold_eldrake": 1.589,
+		"conairy": 1.926,
+		"conelle": 1.858,
+		"conellia": 1.99,
+		"conie": 1.622,
+		"crabay": 1.494,
+		"crabcoon": 1.301,
+		"crablaze": 1.628,
+		"crablu": 1.286,
+		"craboth": 1.505,
+		"crabshade": 1.317,
+		"crabterror": 1.492,
+		"craburn": 1.37,
+		"cubat": 1.946,
+		"cubi": 1.447,
+		"cuburak": 1.882,
+		"dark_ena": 2.093,
+		"dark_hy": 2.053,
+		"darkrake": 2.333,
+		"dawngeist": 1.874,
+		"dawnspec": 1.351,
+		"dawnspook": 1.48,
+		"dera": 1.527,
+		"derakon": 1.917,
+		"deramax": 2.566,
+		"derarctus": 2.297,
+		"derastorm": 2.366,
+		"doomba": 1.675,
+		"dratula": 1.787,
+		"dripbal": 1.325,
+		"earthion": 1.429,
+		"evil_ena": 2.315,
+		"evil_hy": 2.396,
+		"ferdog": 2.061,
+		"feril": 1.715,
+		"feroah": 2.297,
+		"fire_eldrake": 1.506,
+		"fire_kong": 1.258,
+		"firion": 1.274,
+		"firub": 1.921,
+		"firuba": 2.131,
+		"firukis": 2.435,
+		"flame_eldragon": 2.405,
+		"flame_hy": 1.766,
+		"flame_kong": 1.619,
+		"flamell": 1.623,
+		"flamus": 2.296,
+		"flare_eldragon": 2.029,
+		"flaree": 2.026,
+		"flarell": 1.445,
+		"flaruus": 1.863,
+		"flobal": 1.433,
+		"freez": 2.007,
+		"freeze_bot": 2.069,
+		"freezr": 2.249,
+		"frost_bot": 1.964,
+		"frost_ena": 1.854,
+		"frostcap": 1.772,
+		"froststool": 1.562,
+		"frozen_eldragon": 1.776,
+		"furrior": 2.079,
+		"furserker": 2.287,
+		"g_drank": 1.569,
+		"g_fruit": 1.026,
+		"ghoulbloom": 2.31,
+		"ghouldig": 2.068,
+		"ghouldrop": 2.066,
+		"ghoulflame": 2.066,
+		"ghoulflash": 2.435,
+		"ghoulfrost": 2.317,
+		"ghoulseed": 2.103,
+		"ghoulsmash": 2.246,
+		"glacial_eldragon": 2.126,
+		"glacion": 1.432,
+		"glintfang": 2.417,
+		"glinthide": 1.912,
+		"glintscale": 2.129,
+		"goliath": 2.156,
+		"goliem": 2.144,
+		"gramtula": 2.176,
+		"granubis": 2.455,
+		"granuk": 1.773,
+		"granuka": 2.097,
+		"grass_kong": 1.254,
+		"greebat": 1.876,
+		"greebi": 1.473,
+		"greeburak": 1.923,
+		"green_bonk": 1.304,
+		"greengeist": 2.093,
+		"greenspec": 1.324,
+		"greenspook": 1.605,
+		"greentula": 1.644,
+		"gremula": 1.701,
+		"grumairy": 1.895,
+		"grumelle": 1.74,
+		"grumellia": 1.986,
+		"grumie": 1.759,
+		"hark": 1.756,
+		"herks": 2.094,
+		"heroks": 2.31,
+		"hotblok": 1.926,
+		"humbark": 1.745,
+		"ibi": 1.821,
+		"ibisking": 2.124,
+		"ibismash": 1.913,
+		"ibizard": 2.204,
+		"ibomancer": 2.504,
+		"ice_crush": 1.881,
+		"ice_cube": 1.623,
+		"jadefang": 2.51,
+		"jadehide": 1.899,
+		"jadescale": 2.136,
+		"jag_bot": 1.915,
+		"kalper": 2.016,
+		"king_clip": 1.599,
+		"king_drip": 1.646,
+		"king_flame": 1.615,
+		"king_spiky": 1.748,
+		"lavan": 2.108,
+		"lavatron": 2.224,
+		"lavion": 1.439,
+		"leavbal": 1.45,
+		"li_l_clip": 1.225,
+		"li_l_drip": 1.362,
+		"li_l_flame": 1.247,
+		"li_l_spiky": 1.276,
+		"li_l_woosh": 1.562,
+		"lil_drip": 1.377,
+		"lil_fwoosh": 1.558,
+		"lil_splish": 1.465,
+		"lil_swoosh": 1.543,
+		"luxhopper": 2.202,
+		"magicrell": 1.597,
+		"mandrake": 2.268,
+		"marell": 1.422,
+		"mauve_rock": 1.366,
+		"megabatta": 2.011,
+		"megabeat": 1.785,
+		"megablam": 2.103,
+		"megablow": 1.76,
+		"megabomba": 1.777,
+		"megaboom": 2.123,
+		"megabrute": 2.289,
+		"megabuster": 2.311,
+		"megacrush": 2.318,
+		"megania": 2.055,
+		"megapuncha": 1.806,
+		"megasavage": 2.286,
+		"megaslamma": 2.009,
+		"melfy": 1.77,
+		"meteor_eldragon": 1.662,
+		"minoeagle": 2.24,
+		"minoeagler": 1.947,
+		"minoeaglet": 1.719,
+		"minogull": 2.13,
+		"minoguller": 1.943,
+		"minogullet": 1.719,
+		"minohawk": 2.195,
+		"minohawker": 1.922,
+		"minohawket": 1.697,
+		"minothring": 1.769,
+		"minothro": 1.967,
+		"minothrush": 2.117,
+		"mossmasher": 1.663,
+		"nascent_eldrake": 1.635,
+		"native_eldragon": 2.084,
+		"naturell": 1.763,
+		"naturia_eldragon": 2.15,
+		"neo_eldragon": 1.786,
+		"neutrus": 2.338,
+		"nightgeist": 1.992,
+		"nightspec": 1.346,
+		"nightspook": 1.486,
+		"no_kong": 1.258,
+		"nono_kong": 1.617,
+		"noxhopper": 2.354,
+		"nurture_eldragon": 1.805,
+		"o_drank": 1.446,
+		"o_fruit": 1.133,
+		"overgrowth": 2.097,
+		"p_drank": 1.569,
+		"p_fruit": 1.133,
+		"pari": 1.51,
+		"parigontix": 2.177,
+		"patchee": 2.34,
+		"patchuus": 2.337,
+		"patragon": 2.768,
+		"patrox": 2.472,
+		"plum_bat": 2.027,
+		"plum_bit": 1.625,
+		"plum_bun": 1.736,
+		"polar_eldragon": 1.715,
+		"pollion": 1.233,
+		"pompabear": 1.825,
+		"pragon": 1.983,
+		"prepula": 2.305,
+		"pretula": 1.671,
+		"prism_kong": 1.617,
+		"pyro_eldragon": 1.805,
+		"red_antlad": 1.441,
+		"red_antlar": 1.921,
+		"red_antlid": 1.762,
+		"red_bonk": 1.274,
+		"redipula": 2.213,
+		"reditula": 1.732,
+		"redmula": 1.781,
+		"river_kong": 1.617,
+		"rockion": 1.278,
+		"rokk": 1.906,
+		"rubat": 1.845,
+		"rubi": 1.437,
+		"ruburak": 1.931,
+		"rubyfang": 2.43,
+		"rubyhide": 1.875,
+		"rubyscale": 2.127,
+		"sap_bot": 2.14,
+		"sapphburak": 1.916,
+		"sapphibat": 1.969,
+		"sapphibi": 1.463,
+		"sapphiroid": 1.973,
+		"sea_geist": 1.96,
+		"seaspec": 1.346,
+		"seaspook": 1.671,
+		"seed_bot": 1.991,
+		"seree": 2.223,
+		"seruus": 2.313,
+		"sharp_ena": 1.602,
+		"sharp_hy": 1.584,
+		"shivairy": 1.958,
+		"shivelle": 1.888,
+		"shivellia": 2.168,
+		"shivvie": 1.731,
+		"sir_clip": 1.637,
+		"sir_drip": 1.57,
+		"sir_flame": 1.663,
+		"sir_fwoosh": 1.648,
+		"sir_spiky": 1.424,
+		"sir_splish": 1.666,
+		"sir_swoosh": 1.752,
+		"sir_woosh": 1.766,
+		"skelbloom": 2.037,
+		"skeldrip": 2.058,
+		"skelebloom": 2.085,
+		"skeledrip": 2.269,
+		"skelefire": 2.21,
+		"skeleme": 2.133,
+		"skelfire": 2.029,
+		"skelme": 1.878,
+		"skulbloom": 1.739,
+		"skuldrip": 1.88,
+		"skulfire": 2.007,
+		"skulme": 1.732,
+		"smash_bot": 1.865,
+		"smee": 1.218,
+		"smella": 1.221,
+		"smelly": 1.528,
+		"smish": 1.557,
+		"smishee": 1.3,
+		"smoo": 1.205,
+		"smoovie": 1.387,
+		"smull": 1.269,
+		"smulling": 1.485,
+		"smullock": 1.29,
+		"smunk": 1.31,
+		"soosoo": 1.325,
+		"spike_bonk": 1.683,
+		"spinecap": 1.746,
+		"spinestool": 1.558,
+		"star_eldrake": 1.532,
+		"stellar_eldragon": 2.229,
+		"stoneheart": 2.24,
+		"stoneskin": 2.158,
+		"stonn": 1.649,
+		"swirell": 1.399,
+		"terahopper": 2.336,
+		"toomba": 2.144,
+		"torban": 2.255,
+		"torch_eldragon": 1.848,
+		"toriz": 1.807,
+		"torizo": 2.019,
+		"torizor": 2.29,
+		"trama": 1.631,
+		"tramacron": 2.371,
+		"tramarex": 2.708,
+		"tramasaur": 2.261,
+		"tramix": 1.899,
+		"tramula": 1.778,
+		"trapula": 2.146,
+		"tundra_eldragon": 2.376,
+		"uranger_b": 2.133,
+		"uranger_g": 2.12,
+		"uranger_o": 2.131,
+		"uranger_p": 2.178,
+		"urscout_b": 1.698,
+		"urscout_g": 1.63,
+		"urscout_o": 1.609,
+		"urscout_p": 1.74,
+		"void_eldragon": 1.753,
+		"voidina": 2.057,
+		"voxus": 1.962,
+		"vulcus": 1.803,
+		"walion": 1.21,
+		"water_kong": 1.234,
+		"waturus": 2.313,
+		"wave_maker": 2.316,
+		"whirlee": 2.028,
+		"whirluus": 2.203,
+		"woods_kong": 1.625,
+		"yakka": 1.638,
+		"yakkadin": 1.942,
+		"yakkelder": 2.118,
+		"yaknight": 2.185,
+		"yakrusader": 2.42,
+		"yella_bonk": 1.282
+	}
+}

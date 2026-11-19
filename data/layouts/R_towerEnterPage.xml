@@ -2,7 +2,7 @@
 <root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ElementNode type="NinePatch" elementID="ID_floorList" anchorX="0" anchorY="0" positionX="36" positionY="8" z="0" scaleX="1" scaleY="1" imageName="9_Back_01.png" ninePatchSize="{488,560}" ninePatchInset="{{84,126},{2,2}}">
     <ElementNode type="NinePatch" elementID="ID_9PATCH_5_1" anchorX="0" anchorY="0" positionX="34" positionY="96" z="1" scaleX="1" scaleY="1" imageName="9_Back_02.png" ninePatchSize="{420,372}" ninePatchInset="{{15,15},{2,2}}">
-      <ElementNode type="Image" elementID="ID_background" anchorX="0" anchorY="0" positionX="6" positionY="6" z="0" scaleX="1.25" scaleY="1.25" imageName="ground_02.png" />
+      <ElementNode type="Image" elementID="ID_background" anchorX="0" anchorY="0" positionX="6" positionY="6" z="0" scaleX="0.625" scaleY="0.625" imageName="ground_02.png" />
       <ElementNode type="NinePatch" elementID="ID_slide_1" anchorX="0" anchorY="0" positionX="394" positionY="14" z="0" scaleX="1" scaleY="1" imageName="9_slide_01.png" ninePatchSize="{10,348}" ninePatchInset="{{0,5},{10,2}}">
         <ElementNode type="NinePatch" elementID="ID_bar_1" anchorX="0" anchorY="0" positionX="0" positionY="0" z="0" scaleX="1" scaleY="1" imageName="9_slide_02.png" ninePatchSize="{10,348}" ninePatchInset="{{0,5},{10,2}}" />
       </ElementNode>

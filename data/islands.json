@@ -85,7 +85,10 @@
 							"smee",
 							"smoo",
 							"smull",
-							"smelly"
+							"smelly",
+							"brambal",
+							"flobal",
+							"prisbal"
 						],
 						"name": "Sprout-5",
 						"orig": {
@@ -137,7 +140,8 @@
 							"flambal",
 							"flobal",
 							"brambal",
-							"prisbal"
+							"prisbal",
+							"firbal"
 						],
 						"name": "Sprout-1",
 						"orig": {
@@ -317,9 +321,25 @@
 							"dripbal",
 							"leavbal",
 							"pufbal",
-							"b_fruit"
+							"b_fruit",
+							"octo",
+							"smoo",
+							"prisbal",
+							"flobal"
 						],
-						"name": "Sprout-3"
+						"name": "Sprout-3",
+						"orig": {
+							"boss": "mini",
+							"enemies": [
+								"mini",
+								"firbal",
+								"dripbal",
+								"leavbal",
+								"pufbal",
+								"b_fruit"
+							],
+							"drops": []
+						}
 					},
 					{
 						"boss": "raingull",
@@ -330,7 +350,13 @@
 							"smee",
 							"smoo",
 							"smull",
-							"smelly"
+							"smelly",
+							"octo",
+							"prisbal",
+							"smish",
+							"brambal",
+							"b_fruit",
+							"flambal"
 						],
 						"name": "Sprout-4",
 						"orig": {
@@ -355,7 +381,11 @@
 							"smee",
 							"smoo",
 							"smull",
-							"smelly"
+							"smelly",
+							"flambal",
+							"prisbal",
+							"flobal",
+							"grumelle"
 						],
 						"name": "Sprout-5",
 						"orig": {
@@ -380,7 +410,9 @@
 							"smee",
 							"smoo",
 							"smull",
-							"smelly"
+							"smelly",
+							"raingull",
+							"conelle"
 						],
 						"name": "Sprout-6",
 						"orig": {
@@ -455,7 +487,13 @@
 							"green_bonk",
 							"donni"
 						],
-						"boss_wave": ["donni", "donni", "donni", "donni", "donni"],
+						"boss_wave": [
+							"donni",
+							"donni",
+							"donni",
+							"donni",
+							"donni"
+						],
 						"name": "Lake-4",
 						"orig": {
 							"boss": "tobio",
@@ -478,9 +516,22 @@
 							"yella_bonk",
 							"red_bonk",
 							"blue_bonk",
-							"green_bonk"
+							"green_bonk",
+							"sliming"
 						],
-						"name": "Lake-5"
+						"name": "Lake-5",
+						"orig": {
+							"boss": "burn_bonk",
+							"enemies": [
+								"burn_bonk",
+								"shivvie",
+								"yella_bonk",
+								"red_bonk",
+								"blue_bonk",
+								"green_bonk"
+							],
+							"drops": []
+						}
 					},
 					{
 						"boss": "burn_bonk",
@@ -490,9 +541,22 @@
 							"yella_bonk",
 							"red_bonk",
 							"blue_bonk",
-							"green_bonk"
+							"green_bonk",
+							"g_fruit"
 						],
-						"name": "Lake-6"
+						"name": "Lake-6",
+						"orig": {
+							"boss": "burn_bonk",
+							"enemies": [
+								"burn_bonk",
+								"grumie",
+								"yella_bonk",
+								"red_bonk",
+								"blue_bonk",
+								"green_bonk"
+							],
+							"drops": []
+						}
 					},
 					{
 						"boss": "burn_bonk",
@@ -502,9 +566,25 @@
 							"yella_bonk",
 							"red_bonk",
 							"blue_bonk",
-							"green_bonk"
+							"green_bonk",
+							"p_fruit",
+							"bloomasher",
+							"rokk",
+							"b_fruit"
 						],
-						"name": "Lake-7"
+						"name": "Lake-7",
+						"orig": {
+							"boss": "burn_bonk",
+							"enemies": [
+								"burn_bonk",
+								"chilie",
+								"yella_bonk",
+								"red_bonk",
+								"blue_bonk",
+								"green_bonk"
+							],
+							"drops": []
+						}
 					},
 					{
 						"boss": "burn_bonk",
@@ -528,7 +608,11 @@
 							"pollion",
 							"rockion",
 							"bloomion",
-							"earthion"
+							"earthion",
+							"dawnspec",
+							"spike_bonk",
+							"friby",
+							"nightspec"
 						],
 						"name": "Lake-9",
 						"orig": {
@@ -582,7 +666,13 @@
 							"pollion",
 							"rockion",
 							"bloomion",
-							"earthion"
+							"earthion",
+							"nightspec",
+							"seaspook",
+							"sliby",
+							"dawnspec",
+							"dawnspook",
+							"friby"
 						],
 						"name": "Lake-11",
 						"orig": {
@@ -610,7 +700,14 @@
 							"pollion",
 							"rockion",
 							"bloomion",
-							"earthion"
+							"earthion",
+							"nightspec",
+							"sliby",
+							"seaspec",
+							"lavion",
+							"friby",
+							"dawnspook",
+							"p_fruit"
 						],
 						"name": "Lake-12",
 						"orig": {
@@ -680,7 +777,13 @@
 							"green_bonk",
 							"donni"
 						],
-						"boss_wave": ["donni", "donni", "donni", "donni", "donni"],
+						"boss_wave": [
+							"donni",
+							"donni",
+							"donni",
+							"donni",
+							"donni"
+						],
 						"name": "Lake-4",
 						"orig": {
 							"boss": "tobio",
@@ -904,7 +1007,13 @@
 							"blue_bonk",
 							"green_bonk"
 						],
-						"boss_wave": ["donni", "donni", "donni", "donni", "donni"],
+						"boss_wave": [
+							"donni",
+							"donni",
+							"donni",
+							"donni",
+							"donni"
+						],
 						"name": "Lake-4"
 					},
 					{
@@ -915,9 +1024,22 @@
 							"yella_bonk",
 							"red_bonk",
 							"blue_bonk",
-							"green_bonk"
+							"green_bonk",
+							"o_fruit"
 						],
-						"name": "Lake-5"
+						"name": "Lake-5",
+						"orig": {
+							"boss": "burn_bonk",
+							"enemies": [
+								"burn_bonk",
+								"shivvie",
+								"yella_bonk",
+								"red_bonk",
+								"blue_bonk",
+								"green_bonk"
+							],
+							"drops": []
+						}
 					},
 					{
 						"boss": "burn_bonk",
@@ -927,9 +1049,22 @@
 							"yella_bonk",
 							"red_bonk",
 							"blue_bonk",
-							"green_bonk"
+							"green_bonk",
+							"g_fruit"
 						],
-						"name": "Lake-6"
+						"name": "Lake-6",
+						"orig": {
+							"boss": "burn_bonk",
+							"enemies": [
+								"burn_bonk",
+								"grumie",
+								"yella_bonk",
+								"red_bonk",
+								"blue_bonk",
+								"green_bonk"
+							],
+							"drops": []
+						}
 					},
 					{
 						"boss": "burn_bonk",
@@ -951,9 +1086,28 @@
 							"yella_bonk",
 							"red_bonk",
 							"blue_bonk",
-							"green_bonk"
+							"green_bonk",
+							"friby",
+							"o_drank",
+							"seaspec",
+							"dawnspec",
+							"p_fruit",
+							"glacion",
+							"nightspec"
 						],
-						"name": "Lake-8"
+						"name": "Lake-8",
+						"orig": {
+							"boss": "burn_bonk",
+							"enemies": [
+								"burn_bonk",
+								"conie",
+								"yella_bonk",
+								"red_bonk",
+								"blue_bonk",
+								"green_bonk"
+							],
+							"drops": []
+						}
 					},
 					{
 						"boss": "brickett",
@@ -965,7 +1119,9 @@
 							"pollion",
 							"rockion",
 							"bloomion",
-							"earthion"
+							"earthion",
+							"dawnspook",
+							"nightspec"
 						],
 						"name": "Lake-9",
 						"orig": {
@@ -992,7 +1148,12 @@
 							"pollion",
 							"rockion",
 							"bloomion",
-							"earthion"
+							"earthion",
+							"nightspec",
+							"seaspec",
+							"greenspec",
+							"friby",
+							"glacion"
 						],
 						"name": "Lake-10",
 						"orig": {
@@ -1019,7 +1180,12 @@
 							"pollion",
 							"rockion",
 							"bloomion",
-							"earthion"
+							"earthion",
+							"friby",
+							"nightspec",
+							"glacion",
+							"dawnspec",
+							"lavion"
 						],
 						"name": "Lake-11",
 						"orig": {
@@ -1085,7 +1251,10 @@
 							"craburn",
 							"crablu",
 							"crabcoon",
-							"crabshade"
+							"crabshade",
+							"craboth",
+							"crabay",
+							"crabterror"
 						],
 						"name": "Desert-1",
 						"orig": {
@@ -1110,7 +1279,9 @@
 							"craburn",
 							"crablu",
 							"crabcoon",
-							"crabshade"
+							"crabshade",
+							"camhil",
+							"craboth"
 						],
 						"name": "Desert-2",
 						"orig": {
@@ -1136,7 +1307,11 @@
 							"craburn",
 							"crablu",
 							"crabcoon",
-							"crabshade"
+							"crabshade",
+							"crabay",
+							"crablaze",
+							"craboth",
+							"crabterror"
 						],
 						"name": "Desert-3",
 						"orig": {
@@ -1174,9 +1349,26 @@
 							"antlad",
 							"red_antlad",
 							"blu_antlad",
-							"bud_antlad"
+							"bud_antlad",
+							"craboth",
+							"red_antlid",
+							"crabay",
+							"blu_antlid"
 						],
-						"name": "Desert-5"
+						"name": "Desert-5",
+						"orig": {
+							"boss": "antlar",
+							"enemies": [
+								"antlar",
+								"becinder",
+								"o_drank",
+								"antlad",
+								"red_antlad",
+								"blu_antlad",
+								"bud_antlad"
+							],
+							"drops": []
+						}
 					},
 					{
 						"boss": "thornles",
@@ -1187,9 +1379,26 @@
 							"antlad",
 							"red_antlad",
 							"blu_antlad",
-							"bud_antlad"
+							"bud_antlad",
+							"crabay",
+							"bud_antlid",
+							"craboth",
+							"red_antlar"
 						],
-						"name": "Desert-6"
+						"name": "Desert-6",
+						"orig": {
+							"boss": "thornles",
+							"enemies": [
+								"thornles",
+								"antlar",
+								"g_drank",
+								"antlad",
+								"red_antlad",
+								"blu_antlad",
+								"bud_antlad"
+							],
+							"drops": []
+						}
 					},
 					{
 						"boss": "xenocutter",
@@ -1213,9 +1422,26 @@
 							"antlad",
 							"red_antlad",
 							"blu_antlad",
-							"bud_antlad"
+							"bud_antlad",
+							"red_antlar",
+							"antlid",
+							"bud_antlid",
+							"bud_antlar"
 						],
-						"name": "Desert-8"
+						"name": "Desert-8",
+						"orig": {
+							"boss": "ninja_blue",
+							"enemies": [
+								"ninja_blue",
+								"antlar",
+								"b_drank",
+								"antlad",
+								"red_antlad",
+								"blu_antlad",
+								"bud_antlad"
+							],
+							"drops": []
+						}
 					},
 					{
 						"boss": "pinkey",
@@ -1227,7 +1453,9 @@
 							"nightspec",
 							"seaspec",
 							"greenspec",
-							"memew"
+							"memew",
+							"camhil",
+							"seaspook"
 						],
 						"name": "Desert-9",
 						"orig": {
@@ -1254,7 +1482,8 @@
 							"nightspec",
 							"seaspec",
 							"greenspec",
-							"memew"
+							"memew",
+							"seaspook"
 						],
 						"name": "Desert-10",
 						"orig": {
@@ -1442,9 +1671,23 @@
 							"antlad",
 							"red_antlad",
 							"blu_antlad",
-							"bud_antlad"
+							"bud_antlad",
+							"bud_antlid"
 						],
-						"name": "Desert-6"
+						"name": "Desert-6",
+						"orig": {
+							"boss": "thornles",
+							"enemies": [
+								"thornles",
+								"antlar",
+								"g_drank",
+								"antlad",
+								"red_antlad",
+								"blu_antlad",
+								"bud_antlad"
+							],
+							"drops": []
+						}
 					},
 					{
 						"boss": "xenocutter",
@@ -1620,7 +1863,8 @@
 							"craburn",
 							"crablu",
 							"crabcoon",
-							"crabshade"
+							"crabshade",
+							"mayn"
 						],
 						"name": "Desert-2",
 						"orig": {
@@ -1646,7 +1890,10 @@
 							"craburn",
 							"crablu",
 							"crabcoon",
-							"crabshade"
+							"crabshade",
+							"blu_antlar",
+							"crabay",
+							"crabterror"
 						],
 						"name": "Desert-3",
 						"orig": {
@@ -1710,9 +1957,24 @@
 							"antlad",
 							"red_antlad",
 							"blu_antlad",
-							"bud_antlad"
+							"bud_antlad",
+							"blu_antlid",
+							"blu_antlar"
 						],
-						"name": "Desert-7"
+						"name": "Desert-7",
+						"orig": {
+							"boss": "xenocutter",
+							"enemies": [
+								"xenocutter",
+								"antlar",
+								"p_drank",
+								"antlad",
+								"red_antlad",
+								"blu_antlad",
+								"bud_antlad"
+							],
+							"drops": []
+						}
 					},
 					{
 						"boss": "ninja_blue",
@@ -1820,7 +2082,8 @@
 							"seaspec",
 							"greenspec",
 							"memew",
-							"pinkey"
+							"pinkey",
+							"screechey"
 						],
 						"name": "Desert-12",
 						"orig": {
@@ -1870,9 +2133,25 @@
 							"nightspec",
 							"yella_bonk",
 							"red_bonk",
-							"antlad"
+							"antlad",
+							"greenspec",
+							"conairy",
+							"antlar",
+							"armor_bonk"
 						],
-						"name": "Moonlight-2"
+						"name": "Moonlight-2",
+						"orig": {
+							"boss": "bonk_pyro",
+							"enemies": [
+								"bonk_pyro",
+								"wami",
+								"nightspec",
+								"yella_bonk",
+								"red_bonk",
+								"antlad"
+							],
+							"drops": []
+						}
 					},
 					{
 						"boss": "bonk_scion",
@@ -1882,9 +2161,24 @@
 							"feril",
 							"seaspec",
 							"red_bonk",
-							"firbal"
+							"firbal",
+							"ferdog",
+							"crabshade",
+							"flambal"
 						],
-						"name": "Moonlight-3"
+						"name": "Moonlight-3",
+						"orig": {
+							"boss": "bonk_scion",
+							"enemies": [
+								"bonk_scion",
+								"trimi",
+								"feril",
+								"seaspec",
+								"red_bonk",
+								"firbal"
+							],
+							"drops": []
+						}
 					},
 					{
 						"boss": "bonk_druid",
@@ -1929,7 +2223,9 @@
 							"conie",
 							"dawnspec",
 							"red_antlad",
-							"memew"
+							"memew",
+							"shivairy",
+							"dawnspook"
 						],
 						"name": "Moonlight-7",
 						"orig": {
@@ -1952,9 +2248,21 @@
 							"greentula",
 							"ulmigros",
 							"feril",
-							"yella_bonk"
+							"yella_bonk",
+							"spike_bonk"
 						],
-						"name": "Moonlight-8"
+						"name": "Moonlight-8",
+						"orig": {
+							"boss": "armor_bonk",
+							"enemies": [
+								"armor_bonk",
+								"greentula",
+								"ulmigros",
+								"feril",
+								"yella_bonk"
+							],
+							"drops": []
+						}
 					},
 					{
 						"boss": "ulmigrand",
@@ -1963,19 +2271,43 @@
 							"reditula",
 							"ulmigros",
 							"feril",
-							"dawnspec"
+							"dawnspec",
+							"dawnspook"
 						],
-						"name": "Moonlight-9"
+						"name": "Moonlight-9",
+						"orig": {
+							"boss": "ulmigrand",
+							"enemies": [
+								"ulmigrand",
+								"reditula",
+								"ulmigros",
+								"feril",
+								"dawnspec"
+							],
+							"drops": []
+						}
 					},
 					{
-						"boss": "armor_bonk",
+						"boss": "dratula",
 						"enemies": [
-							"armor_bonk",
 							"dratula",
+							"armor_bonk",
 							"prisbal",
-							"crabshade"
+							"crabshade",
+							"smee"
 						],
-						"name": "Moonlight-10"
+						"name": "Moonlight-10",
+						"orig": {
+							"boss": "armor_bonk",
+							"enemies": [
+								"armor_bonk",
+								"dratula",
+								"prisbal",
+								"crabshade"
+							],
+							"drops": []
+						},
+						"boss_fixed": true
 					},
 					{
 						"boss": "moonstar",
@@ -2076,15 +2408,30 @@
 						"name": "Moonlight-5"
 					},
 					{
-						"boss": "cupi",
+						"boss": "cupion",
 						"enemies": [
+							"cupion",
 							"cupi",
 							"red_antlar",
 							"greenspec",
 							"antlad",
-							"red_antlad"
+							"red_antlad",
+							"antlar",
+							"greenspook"
 						],
-						"name": "Moonlight-6"
+						"name": "Moonlight-6",
+						"orig": {
+							"boss": "cupi",
+							"enemies": [
+								"cupi",
+								"red_antlar",
+								"greenspec",
+								"antlad",
+								"red_antlad"
+							],
+							"drops": []
+						},
+						"boss_fixed": true
 					},
 					{
 						"boss": "ulmigrand",
@@ -2218,9 +2565,23 @@
 							"nightspec",
 							"yella_bonk",
 							"red_bonk",
-							"antlad"
+							"antlad",
+							"nightspook",
+							"armor_bonk"
 						],
-						"name": "Moonlight-2"
+						"name": "Moonlight-2",
+						"orig": {
+							"boss": "bonk_pyro",
+							"enemies": [
+								"bonk_pyro",
+								"wami",
+								"nightspec",
+								"yella_bonk",
+								"red_bonk",
+								"antlad"
+							],
+							"drops": []
+						}
 					},
 					{
 						"boss": "bonk_scion",
@@ -2230,9 +2591,24 @@
 							"feril",
 							"seaspec",
 							"red_bonk",
-							"firbal"
+							"firbal",
+							"flambal",
+							"bonk_pyro",
+							"ferdog"
 						],
-						"name": "Moonlight-3"
+						"name": "Moonlight-3",
+						"orig": {
+							"boss": "bonk_scion",
+							"enemies": [
+								"bonk_scion",
+								"trimi",
+								"feril",
+								"seaspec",
+								"red_bonk",
+								"firbal"
+							],
+							"drops": []
+						}
 					},
 					{
 						"boss": "bonk_druid",
@@ -2242,9 +2618,23 @@
 							"doomba",
 							"conie",
 							"red_bonk",
-							"crabshade"
+							"crabshade",
+							"ferdog",
+							"crabterror"
 						],
-						"name": "Moonlight-4"
+						"name": "Moonlight-4",
+						"orig": {
+							"boss": "bonk_druid",
+							"enemies": [
+								"bonk_druid",
+								"ami",
+								"doomba",
+								"conie",
+								"red_bonk",
+								"crabshade"
+							],
+							"drops": []
+						}
 					},
 					{
 						"boss": "antlar",
@@ -2253,9 +2643,22 @@
 							"octovia",
 							"camhil",
 							"seaspec",
-							"antlad"
+							"antlad",
+							"red_bonk",
+							"flambal"
 						],
-						"name": "Moonlight-5"
+						"name": "Moonlight-5",
+						"orig": {
+							"boss": "antlar",
+							"enemies": [
+								"antlar",
+								"octovia",
+								"camhil",
+								"seaspec",
+								"antlad"
+							],
+							"drops": []
+						}
 					},
 					{
 						"boss": "cupi",
@@ -2524,9 +2927,9 @@
 						"boss_fixed": true
 					},
 					{
-						"boss": "mantichomp",
+						"boss": "manticlaw",
 						"enemies": [
-							"mantichomp",
+							"manticlaw",
 							"dullbeak",
 							"surak",
 							"ibi",
@@ -2584,9 +2987,23 @@
 							"cero",
 							"trama",
 							"pari",
-							"dera"
+							"dera",
+							"smishee"
 						],
-						"name": "Boneyard-1"
+						"name": "Boneyard-1",
+						"orig": {
+							"boss": "red_antlar",
+							"enemies": [
+								"red_antlar",
+								"hotblok",
+								"rokk",
+								"cero",
+								"trama",
+								"pari",
+								"dera"
+							],
+							"drops": []
+						}
 					},
 					{
 						"boss": "red_antlar",
@@ -2597,9 +3014,23 @@
 							"cero",
 							"trama",
 							"pari",
-							"dera"
+							"dera",
+							"mossmasher"
 						],
-						"name": "Boneyard-2"
+						"name": "Boneyard-2",
+						"orig": {
+							"boss": "red_antlar",
+							"enemies": [
+								"red_antlar",
+								"ice_crush",
+								"bloomasher",
+								"cero",
+								"trama",
+								"pari",
+								"dera"
+							],
+							"drops": []
+						}
 					},
 					{
 						"boss": "red_antlar",
@@ -2685,9 +3116,20 @@
 							"whirly",
 							"ponee",
 							"mossmasher",
-							"rockion"
+							"rockion",
+							"bloomasher"
 						],
-						"name": "Boneyard-9"
+						"name": "Boneyard-9",
+						"orig": {
+							"boss": "whirly",
+							"enemies": [
+								"whirly",
+								"ponee",
+								"mossmasher",
+								"rockion"
+							],
+							"drops": []
+						}
 					},
 					{
 						"boss": "surakan",
@@ -2696,9 +3138,21 @@
 							"tane",
 							"surak",
 							"red_antlid",
-							"bud_antlid"
+							"bud_antlid",
+							"crabay"
 						],
-						"name": "Boneyard-10"
+						"name": "Boneyard-10",
+						"orig": {
+							"boss": "surakan",
+							"enemies": [
+								"surakan",
+								"tane",
+								"surak",
+								"red_antlid",
+								"bud_antlid"
+							],
+							"drops": []
+						}
 					},
 					{
 						"boss": "fino",
@@ -2740,9 +3194,9 @@
 						"boss_fixed": true
 					},
 					{
-						"boss": "mantichomp",
+						"boss": "manticlaw",
 						"enemies": [
-							"mantichomp",
+							"manticlaw",
 							"dullbeak",
 							"surak",
 							"ibi",
@@ -2771,7 +3225,9 @@
 							"dullbeak",
 							"wolverin",
 							"feril",
-							"doomba"
+							"doomba",
+							"fino",
+							"red_antlar"
 						],
 						"name": "Boneyard-14",
 						"orig": {
@@ -2880,9 +3336,20 @@
 							"antlar",
 							"yakkadin",
 							"ibi",
-							"cero"
+							"cero",
+							"reditula"
 						],
-						"name": "Boneyard-7"
+						"name": "Boneyard-7",
+						"orig": {
+							"boss": "antlar",
+							"enemies": [
+								"antlar",
+								"yakkadin",
+								"ibi",
+								"cero"
+							],
+							"drops": []
+						}
 					},
 					{
 						"boss": "bud_antlar",
@@ -2901,9 +3368,22 @@
 							"whirly",
 							"ponee",
 							"mossmasher",
-							"rockion"
+							"rockion",
+							"bloomasher",
+							"crabay",
+							"red_antlar"
 						],
-						"name": "Boneyard-9"
+						"name": "Boneyard-9",
+						"orig": {
+							"boss": "whirly",
+							"enemies": [
+								"whirly",
+								"ponee",
+								"mossmasher",
+								"rockion"
+							],
+							"drops": []
+						}
 					},
 					{
 						"boss": "surakan",
@@ -2924,9 +3404,22 @@
 							"ullie",
 							"red_antlid",
 							"trama",
-							"friby"
+							"friby",
+							"tramix"
 						],
-						"name": "Boneyard-11"
+						"name": "Boneyard-11",
+						"orig": {
+							"boss": "fino",
+							"enemies": [
+								"fino",
+								"red_antlar",
+								"ullie",
+								"red_antlid",
+								"trama",
+								"friby"
+							],
+							"drops": []
+						}
 					},
 					{
 						"boss": "kroko",
@@ -2937,7 +3430,8 @@
 							"trama",
 							"pari",
 							"dera",
-							"ullie"
+							"ullie",
+							"pragon"
 						],
 						"name": "Boneyard-12",
 						"orig": {
@@ -2954,18 +3448,33 @@
 						}
 					},
 					{
-						"boss": "mantichomp",
-						"boss_fixed": true,
+						"boss": "trean",
 						"enemies": [
+							"trean",
 							"mantichomp",
 							"dullbeak",
 							"rean",
 							"surak",
 							"ibi",
 							"yakka",
-							"dumbird"
+							"dumbird",
+							"ibismash"
 						],
-						"name": "Boneyard-13"
+						"name": "Boneyard-13",
+						"orig": {
+							"boss": "mantichomp",
+							"enemies": [
+								"mantichomp",
+								"dullbeak",
+								"rean",
+								"surak",
+								"ibi",
+								"yakka",
+								"dumbird"
+							],
+							"drops": []
+						},
+						"boss_fixed": true
 					},
 					{
 						"boss": "dullbeak",
@@ -2973,9 +3482,22 @@
 							"dullbeak",
 							"wolverin",
 							"feril",
-							"doomba"
+							"doomba",
+							"red_antlar",
+							"tramix",
+							"cero"
 						],
-						"name": "Boneyard-14"
+						"name": "Boneyard-14",
+						"orig": {
+							"boss": "dullbeak",
+							"enemies": [
+								"dullbeak",
+								"wolverin",
+								"feril",
+								"doomba"
+							],
+							"drops": []
+						}
 					}
 				]
 			}
@@ -3105,9 +3627,23 @@
 							"surakan",
 							"tobiak",
 							"ibi",
-							"yakka"
+							"yakka",
+							"pretula",
+							"gremula",
+							"ferdog"
 						],
-						"name": "Dino-10"
+						"name": "Dino-10",
+						"orig": {
+							"boss": "burdon",
+							"enemies": [
+								"burdon",
+								"surakan",
+								"tobiak",
+								"ibi",
+								"yakka"
+							],
+							"drops": []
+						}
 					},
 					{
 						"boss": "glinthide",
@@ -3115,9 +3651,21 @@
 							"glinthide",
 							"dratula",
 							"tobiak",
-							"ibi"
+							"ibi",
+							"ferdog",
+							"ibismash"
 						],
-						"name": "Dino-11"
+						"name": "Dino-11",
+						"orig": {
+							"boss": "glinthide",
+							"enemies": [
+								"glinthide",
+								"dratula",
+								"tobiak",
+								"ibi"
+							],
+							"drops": []
+						}
 					},
 					{
 						"boss": "jadehide",
@@ -3135,9 +3683,21 @@
 							"azurehide",
 							"pretula",
 							"tobiak",
-							"doomba"
+							"doomba",
+							"derakon",
+							"dera"
 						],
-						"name": "Dino-13"
+						"name": "Dino-13",
+						"orig": {
+							"boss": "azurehide",
+							"enemies": [
+								"azurehide",
+								"pretula",
+								"tobiak",
+								"doomba"
+							],
+							"drops": []
+						}
 					},
 					{
 						"boss": "rubyhide",
@@ -3145,9 +3705,23 @@
 							"rubyhide",
 							"reditula",
 							"tobiak",
-							"feril"
+							"feril",
+							"trama",
+							"ibi",
+							"ferdog",
+							"redmula"
 						],
-						"name": "Dino-14"
+						"name": "Dino-14",
+						"orig": {
+							"boss": "rubyhide",
+							"enemies": [
+								"rubyhide",
+								"reditula",
+								"tobiak",
+								"feril"
+							],
+							"drops": []
+						}
 					}
 				]
 			},
@@ -3164,7 +3738,20 @@
 							"wabering",
 							"budding"
 						],
-						"name": "Dino-1"
+						"name": "Dino-1",
+						"orig": {
+							"boss": "tobiak",
+							"enemies": [
+								"tobiak",
+								"minohawket",
+								"sliming",
+								"friming",
+								"wabering",
+								"budding"
+							],
+							"drops": []
+						},
+						"waves": 4
 					},
 					{
 						"boss": "tobiak",
@@ -3186,9 +3773,29 @@
 							"sliming",
 							"friming",
 							"wabering",
-							"budding"
+							"budding",
+							"smulling",
+							"smoo",
+							"smull",
+							"smish",
+							"dera",
+							"smoovie",
+							"derakon",
+							"nadri"
 						],
-						"name": "Dino-3"
+						"name": "Dino-3",
+						"orig": {
+							"boss": "tobiak",
+							"enemies": [
+								"tobiak",
+								"minothring",
+								"sliming",
+								"friming",
+								"wabering",
+								"budding"
+							],
+							"drops": []
+						}
 					},
 					{
 						"boss": "tobiak",
@@ -3198,9 +3805,24 @@
 							"sliming",
 							"friming",
 							"wabering",
-							"budding"
+							"budding",
+							"twirly",
+							"smoo",
+							"smoovie"
 						],
-						"name": "Dino-4"
+						"name": "Dino-4",
+						"orig": {
+							"boss": "tobiak",
+							"enemies": [
+								"tobiak",
+								"minoeaglet",
+								"sliming",
+								"friming",
+								"wabering",
+								"budding"
+							],
+							"drops": []
+						}
 					},
 					{
 						"boss": "cetrop",
@@ -3223,9 +3845,23 @@
 							"cero",
 							"trama",
 							"pari",
-							"dera"
+							"dera",
+							"beetort"
 						],
-						"name": "Dino-6"
+						"name": "Dino-6",
+						"orig": {
+							"boss": "pragon",
+							"enemies": [
+								"pragon",
+								"tobiak",
+								"burtle",
+								"cero",
+								"trama",
+								"pari",
+								"dera"
+							],
+							"drops": []
+						}
 					},
 					{
 						"boss": "derakon",
@@ -3235,9 +3871,23 @@
 							"cero",
 							"trama",
 							"pari",
-							"dera"
+							"dera",
+							"pragon",
+							"cetrop"
 						],
-						"name": "Dino-7"
+						"name": "Dino-7",
+						"orig": {
+							"boss": "derakon",
+							"enemies": [
+								"derakon",
+								"tobiak",
+								"cero",
+								"trama",
+								"pari",
+								"dera"
+							],
+							"drops": []
+						}
 					},
 					{
 						"boss": "tramix",
@@ -3253,15 +3903,29 @@
 						"name": "Dino-8"
 					},
 					{
-						"boss": "kangy",
+						"boss": "kangard",
 						"enemies": [
+							"kangard",
 							"kangy",
 							"grand_bang",
 							"tobiak",
 							"feril",
-							"doomba"
+							"doomba",
+							"yakkadin"
 						],
-						"name": "Dino-9"
+						"name": "Dino-9",
+						"orig": {
+							"boss": "kangy",
+							"enemies": [
+								"kangy",
+								"grand_bang",
+								"tobiak",
+								"feril",
+								"doomba"
+							],
+							"drops": []
+						},
+						"boss_fixed": true
 					},
 					{
 						"boss": "burdon",
@@ -3327,9 +3991,28 @@
 							"sliming",
 							"friming",
 							"wabering",
-							"budding"
+							"budding",
+							"smoo",
+							"smee",
+							"smish",
+							"smull",
+							"smelly",
+							"smoovie",
+							"smella"
 						],
-						"name": "Dino-1"
+						"name": "Dino-1",
+						"orig": {
+							"boss": "tobiak",
+							"enemies": [
+								"tobiak",
+								"minohawket",
+								"sliming",
+								"friming",
+								"wabering",
+								"budding"
+							],
+							"drops": []
+						}
 					},
 					{
 						"boss": "tobiak",
@@ -3339,9 +4022,27 @@
 							"sliming",
 							"friming",
 							"wabering",
-							"budding"
+							"budding",
+							"smoo",
+							"smee",
+							"smull",
+							"dumbird",
+							"smella"
 						],
-						"name": "Dino-2"
+						"name": "Dino-2",
+						"orig": {
+							"boss": "tobiak",
+							"enemies": [
+								"tobiak",
+								"minogullet",
+								"sliming",
+								"friming",
+								"wabering",
+								"budding"
+							],
+							"drops": []
+						},
+						"waves": 4
 					},
 					{
 						"boss": "tobiak",
@@ -3351,9 +4052,27 @@
 							"sliming",
 							"friming",
 							"wabering",
-							"budding"
+							"budding",
+							"smoovie",
+							"smulling",
+							"smish",
+							"smelly",
+							"smella",
+							"smoo"
 						],
-						"name": "Dino-3"
+						"name": "Dino-3",
+						"orig": {
+							"boss": "tobiak",
+							"enemies": [
+								"tobiak",
+								"minothring",
+								"sliming",
+								"friming",
+								"wabering",
+								"budding"
+							],
+							"drops": []
+						}
 					},
 					{
 						"boss": "tobiak",
@@ -3363,9 +4082,28 @@
 							"sliming",
 							"friming",
 							"wabering",
-							"budding"
+							"budding",
+							"smee",
+							"smoo",
+							"smoovie",
+							"smelly",
+							"smull",
+							"smella",
+							"smish"
 						],
-						"name": "Dino-4"
+						"name": "Dino-4",
+						"orig": {
+							"boss": "tobiak",
+							"enemies": [
+								"tobiak",
+								"minoeaglet",
+								"sliming",
+								"friming",
+								"wabering",
+								"budding"
+							],
+							"drops": []
+						}
 					},
 					{
 						"boss": "cetrop",
@@ -3429,15 +4167,31 @@
 						"name": "Dino-9"
 					},
 					{
-						"boss": "whimptor",
+						"boss": "shelltor",
 						"enemies": [
+							"shelltor",
 							"whimptor",
 							"surakan",
 							"tobiak",
 							"ibi",
-							"yakka"
+							"yakka",
+							"grand_bang",
+							"surak",
+							"ferdog"
 						],
-						"name": "Dino-10"
+						"name": "Dino-10",
+						"orig": {
+							"boss": "whimptor",
+							"enemies": [
+								"whimptor",
+								"surakan",
+								"tobiak",
+								"ibi",
+								"yakka"
+							],
+							"drops": []
+						},
+						"boss_fixed": true
 					},
 					{
 						"boss": "glinthide",
@@ -3445,19 +4199,46 @@
 							"glinthide",
 							"dratula",
 							"tobiak",
-							"ibi"
+							"ibi",
+							"marshowl",
+							"ibismash"
 						],
-						"name": "Dino-11"
+						"name": "Dino-11",
+						"orig": {
+							"boss": "glinthide",
+							"enemies": [
+								"glinthide",
+								"dratula",
+								"tobiak",
+								"ibi"
+							],
+							"drops": []
+						}
 					},
 					{
-						"boss": "jadehide",
+						"boss": "jadefang",
 						"enemies": [
+							"jadefang",
 							"jadehide",
 							"greentula",
 							"tobiak",
-							"yakka"
+							"yakka",
+							"ibi",
+							"yakkadin",
+							"pragon"
 						],
-						"name": "Dino-12"
+						"name": "Dino-12",
+						"orig": {
+							"boss": "jadehide",
+							"enemies": [
+								"jadehide",
+								"greentula",
+								"tobiak",
+								"yakka"
+							],
+							"drops": []
+						},
+						"boss_fixed": true
 					},
 					{
 						"boss": "azurehide",
@@ -3465,19 +4246,58 @@
 							"azurehide",
 							"pretula",
 							"tobiak",
-							"doomba"
+							"doomba",
+							"dera",
+							"gremula"
 						],
-						"name": "Dino-13"
+						"name": "Dino-13",
+						"orig": {
+							"boss": "azurehide",
+							"enemies": [
+								"azurehide",
+								"pretula",
+								"tobiak",
+								"doomba"
+							],
+							"drops": []
+						}
 					},
 					{
-						"boss": "rubyhide",
+						"boss": "rubyfang",
 						"enemies": [
+							"rubyfang",
 							"rubyhide",
 							"reditula",
 							"tobiak",
-							"feril"
+							"feril",
+							"ferdog",
+							"trama",
+							"yakka",
+							"redmula",
+							"ibi",
+							"grand_bang",
+							"doomba",
+							"gremula",
+							"yakkadin",
+							"dratula",
+							"pretula",
+							"tramix",
+							"surakan",
+							"toriz",
+							"ibismash"
 						],
-						"name": "Dino-14"
+						"name": "Dino-14",
+						"orig": {
+							"boss": "rubyhide",
+							"enemies": [
+								"rubyhide",
+								"reditula",
+								"tobiak",
+								"feril"
+							],
+							"drops": []
+						},
+						"boss_fixed": true
 					}
 				]
 			}
@@ -3497,9 +4317,21 @@
 							"smash_bot",
 							"king_spiky",
 							"sir_spiky",
-							"sir_drip"
+							"sir_drip",
+							"li_l_drip"
 						],
-						"name": "Robo-1"
+						"name": "Robo-1",
+						"orig": {
+							"boss": "smash_bot",
+							"enemies": [
+								"smash_bot",
+								"king_spiky",
+								"sir_spiky",
+								"sir_drip"
+							],
+							"drops": []
+						},
+						"waves": 4
 					},
 					{
 						"boss": "blaze_bot",
@@ -3618,7 +4450,7 @@
 						"name": "Robo-11"
 					},
 					{
-						"boss": "rokliad",
+						"boss": "torizor",
 						"drops": [
 							"rollergor",
 							"king_spiky",
@@ -3628,6 +4460,7 @@
 							"sir_drip"
 						],
 						"enemies": [
+							"torizor",
 							"rokliad",
 							"rollergor",
 							"king_spiky",
@@ -3636,7 +4469,29 @@
 							"sir_spiky",
 							"sir_drip"
 						],
-						"name": "Robo-12"
+						"name": "Robo-12",
+						"orig": {
+							"boss": "rokliad",
+							"enemies": [
+								"rokliad",
+								"rollergor",
+								"king_spiky",
+								"king_drip",
+								"jag_bot",
+								"sir_spiky",
+								"sir_drip"
+							],
+							"drops": [
+								"rollergor",
+								"king_spiky",
+								"king_drip",
+								"jag_bot",
+								"sir_spiky",
+								"sir_drip"
+							]
+						},
+						"waves": 4,
+						"boss_fixed": true
 					},
 					{
 						"boss": "metapanzer",
@@ -3647,9 +4502,26 @@
 							"king_clip",
 							"burn_bot",
 							"sir_flame",
-							"sir_drip"
+							"sir_drip",
+							"spooking",
+							"king_drip",
+							"king_spiky"
 						],
-						"name": "Robo-13"
+						"name": "Robo-13",
+						"orig": {
+							"boss": "metapanzer",
+							"enemies": [
+								"metapanzer",
+								"panzer",
+								"king_flame",
+								"king_clip",
+								"burn_bot",
+								"sir_flame",
+								"sir_drip"
+							],
+							"drops": []
+						},
+						"waves": 4
 					},
 					{
 						"boss": "maktron",
@@ -3660,9 +4532,24 @@
 							"king_drip",
 							"jag_bot",
 							"sir_spiky",
-							"sir_drip"
+							"sir_drip",
+							"king_flame"
 						],
-						"name": "Robo-14"
+						"name": "Robo-14",
+						"orig": {
+							"boss": "maktron",
+							"enemies": [
+								"maktron",
+								"maglavan",
+								"king_spiky",
+								"king_drip",
+								"jag_bot",
+								"sir_spiky",
+								"sir_drip"
+							],
+							"drops": []
+						},
+						"waves": 4
 					}
 				]
 			},
@@ -3807,6 +4694,7 @@
 							],
 							"drops": []
 						},
+						"waves": 4,
 						"boss_drop": 0.05,
 						"boss_fixed": true
 					},
@@ -3819,7 +4707,8 @@
 							"king_drip",
 							"jag_bot",
 							"sir_spiky",
-							"sir_drip"
+							"sir_drip",
+							"picore"
 						],
 						"name": "Robo-12",
 						"orig": {
@@ -3834,6 +4723,7 @@
 							],
 							"drops": []
 						},
+						"waves": 4,
 						"boss_drop": 0.05,
 						"boss_fixed": true
 					},
@@ -4159,9 +5049,23 @@
 							"greentula",
 							"dratula",
 							"sapphiroid",
-							"blue_rock"
+							"blue_rock",
+							"glacion",
+							"soosoo"
 						],
-						"name": "Sky-3"
+						"name": "Sky-3",
+						"orig": {
+							"boss": "reditula",
+							"enemies": [
+								"reditula",
+								"pretula",
+								"greentula",
+								"dratula",
+								"sapphiroid",
+								"blue_rock"
+							],
+							"drops": []
+						}
 					},
 					{
 						"boss": "reditula",
@@ -4197,9 +5101,25 @@
 							"chilairy",
 							"griffpup",
 							"amethoid",
-							"mauve_rock"
+							"mauve_rock",
+							"oceanik",
+							"stoneheart",
+							"wamia"
 						],
-						"name": "Sky-6"
+						"name": "Sky-6",
+						"orig": {
+							"boss": "conairy",
+							"enemies": [
+								"conairy",
+								"shivairy",
+								"grumairy",
+								"chilairy",
+								"griffpup",
+								"amethoid",
+								"mauve_rock"
+							],
+							"drops": []
+						}
 					},
 					{
 						"boss": "ami",
@@ -4210,9 +5130,23 @@
 							"wami",
 							"nimby",
 							"sapphiroid",
-							"blue_rock"
+							"blue_rock",
+							"doorbot_v2"
 						],
-						"name": "Sky-7"
+						"name": "Sky-7",
+						"orig": {
+							"boss": "ami",
+							"enemies": [
+								"ami",
+								"fimi",
+								"trimi",
+								"wami",
+								"nimby",
+								"sapphiroid",
+								"blue_rock"
+							],
+							"drops": []
+						}
 					},
 					{
 						"boss": "ami",
@@ -4223,9 +5157,24 @@
 							"wami",
 							"nimby",
 							"sapphiroid",
-							"blue_rock"
+							"blue_rock",
+							"ici",
+							"icikel"
 						],
-						"name": "Sky-8"
+						"name": "Sky-8",
+						"orig": {
+							"boss": "ami",
+							"enemies": [
+								"ami",
+								"fimi",
+								"trimi",
+								"wami",
+								"nimby",
+								"sapphiroid",
+								"blue_rock"
+							],
+							"drops": []
+						}
 					}
 				]
 			},
@@ -4267,16 +5216,31 @@
 						"name": "Sky-3"
 					},
 					{
-						"boss": "spooki",
+						"boss": "unacorn",
 						"enemies": [
+							"unacorn",
 							"spooki",
 							"jel",
 							"rean",
 							"oonga",
 							"amethoid",
-							"mauve_rock"
+							"mauve_rock",
+							"king_spiky"
 						],
-						"name": "Sky-4"
+						"name": "Sky-4",
+						"orig": {
+							"boss": "spooki",
+							"enemies": [
+								"spooki",
+								"jel",
+								"rean",
+								"oonga",
+								"amethoid",
+								"mauve_rock"
+							],
+							"drops": []
+						},
+						"boss_fixed": true
 					},
 					{
 						"boss": "hotblok",
@@ -4363,9 +5327,30 @@
 							"smish",
 							"smoovie",
 							"smulling",
-							"mauve_rock"
+							"mauve_rock",
+							"pinkey",
+							"amethoid",
+							"ami"
 						],
-						"name": "Sky-2"
+						"name": "Sky-2",
+						"orig": {
+							"boss": "glintscale",
+							"enemies": [
+								"glintscale",
+								"smelly",
+								"smish",
+								"smoovie",
+								"smulling",
+								"mauve_rock"
+							],
+							"drops": [
+								"smelly",
+								"smish",
+								"smoovie",
+								"smulling",
+								"mauve_rock"
+							]
+						}
 					},
 					{
 						"boss": "torizo",
@@ -4470,9 +5455,32 @@
 							"mossmasher",
 							"stonn",
 							"sapphiroid",
-							"blue_rock"
+							"blue_rock",
+							"redmula"
 						],
-						"name": "Sky-7"
+						"name": "Sky-7",
+						"orig": {
+							"boss": "doorbot_v3",
+							"enemies": [
+								"doorbot_v3",
+								"doorbot_v1",
+								"brickett",
+								"ice_cube",
+								"mossmasher",
+								"stonn",
+								"sapphiroid",
+								"blue_rock"
+							],
+							"drops": [
+								"doorbot_v1",
+								"brickett",
+								"ice_cube",
+								"mossmasher",
+								"stonn",
+								"sapphiroid",
+								"blue_rock"
+							]
+						}
 					},
 					{
 						"boss": "doorbot_x",

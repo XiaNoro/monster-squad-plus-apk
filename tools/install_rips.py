@@ -1,7 +1,8 @@
 # Installs matched rips (research/sprites_rip/<video>/matches.json, after the OVERRIDES below) as battle
 # sprites in assets/monsters_cut/<id>.png, mirrored to face the same way as the art they replace. The old
 # sprites are copied to research/monsters_cut_pre_rip/ first (once), so this can be undone or re-run.
-# PICKS replaces the matcher entirely for a set (only the listed rips are installed).
+# PICKS replaces the matcher entirely for a set (only the listed rips are installed). FLIP lists monsters whose
+# old art faced the wrong way, so their rip is turned back round.
 # Usage: python tools/install_rips.py <video id>
 import sys, os, json, shutil
 import numpy as np
@@ -17,6 +18,7 @@ OVERRIDES = {
     "Av0_PQeZR7Y": {17: None, 18: None, 19: "krokodin", 26: None, 31: "blue_dragongod", 32: None, 51: None, 70: "chilchilla"},
     "forest_reveals": {1: None, 2: "jelliking", 3: None},
 }
+FLIP = {"kaios", "darkrake", "patragon", "thundaro", "elit_centaur"}
 PICKS = {
     "batch2": {1: "shaaark", 2: "espina", 3: "kanga", 4: "kabash", 8: "twinblaze", 9: "grumairy",
                10: "conellia", 11: "trimi", 12: "fino", 13: "puchy", 17: "sir_fwoosh", 18: "mimi", 19: "swordgal",
@@ -66,6 +68,8 @@ def main():
             f = feats(load(os.path.join(DIR, m["file"])))
             if score(f, feats(old[:, ::-1])) < score(f, feats(old)):
                 rip = rip[:, ::-1]
+        if mid in FLIP:
+            rip = rip[:, ::-1]
         cv2.imwrite(dst, np.ascontiguousarray(rip))
         done[mid] = m["file"]
     json.dump(done, open(os.path.join(DIR, "installed.json"), "w"), indent=1)

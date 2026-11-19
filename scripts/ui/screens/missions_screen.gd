@@ -1,6 +1,8 @@
 class_name MissionsScreen
 extends Screen
 
+signal closed
+
 const TABS := {"daily": "ID_tapBtn1", "weekly": "ID_tapBtn2", "endless": "ID_tapBtn3", "event": "ID_tapBtn4"}
 
 var tab := "daily"
@@ -9,12 +11,18 @@ var lay: Layout
 
 
 func build() -> void:
-	UI.background(self, UI.tex("res://assets/apk/images/Forest_1.png"))
+	if args.get("overlay", false):
+		var dim := ColorRect.new()
+		dim.color = Color(0, 0, 0, 0.6)
+		dim.set_anchors_and_offsets_preset(PRESET_FULL_RECT)
+		add_child(dim)
+	else:
+		UI.background(self, UI.tex("res://assets/apk/images/Forest_1.png"))
 	lay = Layout.load_into(self, "R_d_dailyQuest")
 	tab = args.get("tab", "daily")
 	for t in TABS:
 		lay.on(TABS[t], _set_tab.bind(t))
-	lay.on("ID_btnEsc", func(): main.go("hub"))
+	lay.on("ID_btnEsc", _close)
 	lay.on("ID_btnOk", _receive_all)
 	lay.text("ID_LABEL_4", "Event")
 	if tab == "attendance":
@@ -23,6 +31,23 @@ func build() -> void:
 	_refresh()
 	_ticker()
 	Tutorial.maybe_start(self, "missions")
+
+
+static func open_over(parent: Screen, start_tab: String = "daily") -> MissionsScreen:
+	var m := MissionsScreen.new()
+	m.main = parent.main
+	m.args = {"tab": start_tab, "overlay": true}
+	m.z_index = 60
+	parent.add_child(m)
+	return m
+
+
+func _close() -> void:
+	if args.get("overlay", false):
+		closed.emit()
+		queue_free()
+	else:
+		main.go("hub")
 
 
 func tutorial_target(name: String) -> Control:

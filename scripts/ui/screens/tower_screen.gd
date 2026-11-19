@@ -258,13 +258,7 @@ func _buy_ticket() -> void:
 	if Save.tower_tickets() >= SkyTower.MAX_TICKETS:
 		UI.toast(self, "Your tickets are full")
 		return
-	var body := UI.label("Buy 1 Sky Tower ticket for %d gems?\nFloors entered with a bought ticket have a lower Drop List." % SkyTower.TICKET_GEMS, 20, UI.BROWN)
-	body.add_theme_constant_override("outline_size", 0)
-	body.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	UI.dialog(self, "Ticket", body, [
-		{"text": "Buy", "color": "purple", "cb": _do_buy},
-		{"text": "Cancel", "color": "blue"},
-	])
+	UI.confirm(self, "Notice", "Buy 1 Sky Tower ticket for %d gems?\nFloors entered with a bought ticket have a lower Drop List." % SkyTower.TICKET_GEMS, _do_buy)
 
 
 func _do_buy() -> void:
@@ -282,6 +276,9 @@ func _enter() -> void:
 		return
 	if Save.team_members().is_empty():
 		UI.toast(self, "Your squad is empty!")
+		return
+	if Save.stone_box_full():
+		UI.stone_box_full(self, main.go.bind("stones", {"back": "tower"}))
 		return
 	var q := SkyTower.enter(floor_sel)
 	if q.is_empty():

@@ -150,7 +150,7 @@ func _confirm_squad() -> void:
 	if _picked.is_empty():
 		UI.notice(self, "Notice", "Select the monsters for your squad.")
 		return
-	var body := "Enter %s with %d monster(s)?\nThe squad can't be changed until the island resets." % [raid.name, _picked.size()]
+	var body := "Squad formation complete?\n(Current Squad: %d / %d)" % [_picked.size(), Raids.PICK]
 	var d := Layout.load_into(self, "R_d_conform_2button")
 	d.root.z_index = 80
 	d.node("ID_9PATCH_2").mouse_filter = MOUSE_FILTER_STOP
@@ -183,7 +183,12 @@ func _build_lobby(today: Dictionary) -> void:
 		if alive.has(int(u)) and _party.size() < Raids.PARTY:
 			_party.append(int(u))
 	if _party.is_empty():
-		_party = alive.slice(0, Raids.PARTY)
+		var kinds := {}
+		for u in alive:
+			var kind: String = Save.get_owned(int(u)).id
+			if not kinds.has(kind) and _party.size() < Raids.PARTY:
+				kinds[kind] = true
+				_party.append(int(u))
 	_refresh_lobby()
 	var room := int(today.room)
 	var done := bool(today.done)
@@ -282,6 +287,10 @@ func _toggle_party(uid: int) -> void:
 	if Save.raid_hp(uid) <= 0.0:
 		UI.notice(self, "Notice", "This monster was knocked out.\nIt can fight again tomorrow.")
 		return
+	var kind: String = Save.get_owned(uid).id
+	if not _party.has(uid) and _party.any(func(u): return Save.get_owned(int(u)).id == kind):
+		UI.notice(self, "Cannot select", UI.ONE_TYPE_PER_TEAM)
+		return
 	if _party.has(uid):
 		_party.erase(uid)
 	elif _party.size() < Raids.PARTY:
@@ -349,6 +358,9 @@ func _fight() -> void:
 		return
 	if _party.is_empty():
 		UI.notice(self, "Notice", "Tap monsters on the left to form a party.")
+		return
+	if Save.inventory_full():
+		UI.inventory_full(self, func(): main.go("squad", {"mode": "train"}))
 		return
 	var q := Raids.room_quest(raid, int(today.room))
 	main.go("battle", {"quest": q, "party": _party.duplicate()})

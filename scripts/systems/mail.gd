@@ -56,7 +56,8 @@ static func refresh() -> void:
 		friends.shuffle()
 		for f in friends.slice(0, FRIEND_GIFTS - 1):
 			send(String(f.name), {"fp": Friends.FP_FRIEND}, "Sent you Friend Points!")
-		send(xia, {"fp": Friends.FP_FRIEND}, "Sent you Friend Points!")
+		if Friends.is_friend(xia):
+			send(xia, {"fp": Friends.FP_FRIEND}, "Sent you Friend Points!")
 		changed = true
 	if changed:
 		Save.save_game()

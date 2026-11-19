@@ -12,6 +12,7 @@ const SCREENS := {
 	"battle": "res://scripts/ui/screens/battle_screen.gd",
 	"tower": "res://scripts/ui/screens/tower_screen.gd",
 	"stones": "res://scripts/ui/screens/stones_screen.gd",
+	"pets": "res://scripts/ui/screens/pets_screen.gd",
 	"raid": "res://scripts/ui/screens/raid_screen.gd",
 	"arena": "res://scripts/ui/screens/arena_screen.gd",
 	"missions": "res://scripts/ui/screens/missions_screen.gd",
@@ -21,6 +22,7 @@ const SCREENS := {
 	"friends": "res://scripts/ui/screens/friends_screen.gd",
 	"combine": "res://scripts/ui/screens/combine_screen.gd",
 	"visit": "res://scripts/ui/screens/visit_screen.gd",
+	"badges": "res://scripts/ui/screens/badges_screen.gd",
 }
 
 var current: Control
@@ -32,6 +34,8 @@ var ticker: ChatTicker
 
 func _ready() -> void:
 	theme = UI.get_theme()
+	_fit_window()
+	get_window().size_changed.connect(_fit_window)
 	set_anchors_and_offsets_preset(PRESET_FULL_RECT)
 	get_tree().node_added.connect(_on_node_added)
 	if not OS.has_feature("mobile"):
@@ -83,6 +87,9 @@ func _ready() -> void:
 		if arg == "--test-auto":
 			Save.data.auto = true
 			Save.data.speed = 2
+		if arg == "--test-repeat":
+			Save.data.auto = true
+			Save.data.auto_repeat = true
 		if arg.begins_with("--test-tower="):
 			Save.data.tower_floor = maxi(int(Save.data.tower_floor), int(arg.trim_prefix("--test-tower=")) - 1)
 			start = "battle"
@@ -204,6 +211,8 @@ func _unhandled_key_input(e: InputEvent) -> void:
 
 
 func back() -> void:
+	if is_instance_valid(_busy):
+		return
 	if dev_menu != null and dev_menu.visible:
 		dev_menu.close()
 		return
@@ -247,6 +256,18 @@ var _resize_timer: Timer
 var _built_width := 0.0
 
 
+func _fit_window() -> void:
+	var win := Vector2(get_window().size)
+	if win.y <= 0.0:
+		return
+	var aspect := win.x / win.y
+	var want := Vector2i(roundi(maxf(Layout.DESIGN_W, Layout.SCREEN_H * aspect / Layout.WIDEN)), int(Layout.SCREEN_H))
+	var mode := Window.CONTENT_SCALE_ASPECT_IGNORE if aspect >= Layout.DESIGN_W / Layout.SCREEN_H else Window.CONTENT_SCALE_ASPECT_EXPAND
+	if get_window().content_scale_size != want or get_window().content_scale_aspect != mode:
+		get_window().content_scale_size = want
+		get_window().content_scale_aspect = mode
+
+
 func _relayout() -> void:
 	var w := get_viewport_rect().size.x
 	if absf(w - _built_width) < 1.0:
@@ -257,16 +278,53 @@ func _relayout() -> void:
 	go(current_name, current_args)
 
 
-const SLIDE_TIME := 0.28
+const SLIDE_TIME := 0.2
+const BUSY_DIM := 0.5
+const BUSY_TURN := 0.9
 const NO_SLIDE := ["battle", "title", "layout"]
 
 var _history: Array = []
+var _busy: Control
+
+
+func busy(seconds: float, linger: float = 0.0) -> void:
+	if is_instance_valid(_busy):
+		_busy.queue_free()
+	var dim := ColorRect.new()
+	dim.color = Color(0, 0, 0, BUSY_DIM)
+	dim.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	dim.mouse_filter = Control.MOUSE_FILTER_STOP
+	dim.z_index = 95
+	var sp := TextureRect.new()
+	sp.texture = UI.tex("betaUI00/I_indicator_01.png")
+	sp.size = sp.texture.get_size()
+	sp.pivot_offset = sp.size / 2.0
+	sp.position = (size - sp.size) / 2.0
+	sp.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	dim.add_child(sp)
+	add_child(dim)
+	create_tween().bind_node(sp).set_loops().tween_property(sp, "rotation", TAU, BUSY_TURN).from(0.0)
+	_busy = dim
+	await get_tree().create_timer(seconds).timeout
+	if not is_instance_valid(dim):
+		return
+	if linger > 0.0:
+		get_tree().create_timer(linger).timeout.connect(dim.queue_free)
+	else:
+		dim.queue_free()
+
+
+static func _deep(screen: String, a: Dictionary) -> bool:
+	return screen == "islands" and (String(a.get("island", "")) != "" or String(a.get("special", "")) != "")
 
 
 func go(screen: String, args: Dictionary = {}) -> void:
 	var old := current
 	var old_name := current_name
 	var back := _history.has(screen)
+	var same := screen == old_name and _deep(screen, args) == _deep(old_name, current_args)
+	if screen == old_name and not same:
+		back = _deep(old_name, current_args)
 	if back:
 		_history = _history.slice(0, _history.find(screen) + 1)
 	else:
@@ -284,15 +342,32 @@ func go(screen: String, args: Dictionary = {}) -> void:
 	if not screen in ["title", "battle"]:
 		Sfx.play_music("lobby")
 	add_child(s)
+	LevelReward.show_pending.call_deferred(s, screen)
 	if old == null:
 		return
-	if screen == old_name or NO_SLIDE.has(screen) or NO_SLIDE.has(old_name):
+	if same or NO_SLIDE.has(screen) or NO_SLIDE.has(old_name):
 		old.queue_free()
 		return
 	old.process_mode = Node.PROCESS_MODE_DISABLED
-	var w := size.x
-	s.position.x = -w if back else w
-	var tw := create_tween().set_parallel().set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
-	tw.tween_property(s, "position:x", 0.0, SLIDE_TIME)
-	tw.tween_property(old, "position:x", w if back else -w, SLIDE_TIME)
+	var from := -size.x if back else size.x
+	var bar: Control = s.top.root if s.top != null else null
+	var bar_x := bar.position.x if bar != null else 0.0
+	if bar != null and old is Screen and (old as Screen).top != null:
+		(old as Screen).top.root.visible = false
+	var screen_id := s.get_instance_id()
+	var bar_id := bar.get_instance_id() if bar != null else 0
+	var slide := func(x: float):
+		var page := instance_from_id(screen_id) as Control
+		if page == null:
+			return
+		page.position.x = x
+		if bar_id == 0:
+			return
+		var top_bar := instance_from_id(bar_id) as Control
+		if top_bar != null:
+			top_bar.position.x = bar_x - x
+	slide.call(from)
+	var tw := create_tween().set_parallel()
+	tw.tween_method(slide, from, 0.0, SLIDE_TIME)
+	tw.tween_property(old, "position:x", -from, SLIDE_TIME)
 	tw.chain().tween_callback(old.queue_free)

@@ -142,7 +142,7 @@
                 "pinkey"
             ],
             "desc": "What horrors wait in this dark abode?\nForm an elite unit to fight the darkness!\nA or higher rank team required!",
-            "source": "Rooms 3/4/9/11 confirmed from Stage popups in O_vswiNtdIc."
+            "source": "All 12 rooms confirmed from Stage popups in nQ32vaLy-Ms and SdhIA5LxZ4c."
         },
         {
             "id": "ruined_village",
@@ -249,7 +249,8 @@
                 "trang",
                 "dark_kong"
             ],
-            "desc": "Fight off monsters wandering in Ruined Village and get new monsters!\nA+ or higher rank team required!"
+            "desc": "Fight off monsters wandering in Ruined Village and get new monsters!\nA+ or higher rank team required!",
+            "source": "Rooms 1-10 and 12 confirmed from Stage popups in Qp42mJw2Syo."
         },
         {
             "id": "beauty_or_the_beast",
@@ -342,7 +343,17 @@
                 "yakkadin",
                 "yakkelder"
             ],
-            "source": "Rooms 3/4/5/8/9/10/11 and cube drops (Guardhunt, Toomba, Ferdog, Yakkadin, Torban, Ibismash, Ibisking) confirmed in _zWGX1aXmsc."
+            "source": "All 12 rooms confirmed from Stage popups in FxyWvAnt-Wo. Cube drops (Guardhunt, Toomba, Ferdog, Yakkadin, Torban, Ibismash, Ibisking) confirmed in _zWGX1aXmsc.",
+            "desc": "This island is home to violent beasts, but if you go into the forest, you might meet the island's beautiful mistress.",
+            "lines": {
+                "4": "Who dares to challenge me and my razor sharp\nfangs?!",
+                "5": "So you want to meet the mistress of the forest? Well,\nit's me! See my pretty hair?!",
+                "7": "To be honest, I haven't met the mistress, either. I\nheard she's pretty, though.",
+                "8": "Are you the fool who's searching for the mistress?",
+                "9": "What, is my forest different from what you\nexpected?",
+                "11": "A smart woman knows never to bare her fangs in\npublic.",
+                "12": "Just because you're cute doesn't mean I'll show you\nany mercy."
+            }
         },
         {
             "id": "pharaohs_curse",
@@ -379,8 +390,8 @@
                 [
                     "evil_hy",
                     "evil_hy",
-                    "skelfire",
-                    "skelfire"
+                    "skelefire",
+                    "skelefire"
                 ],
                 [
                     "tutankha",
@@ -427,7 +438,9 @@
                 "sharp_hy",
                 "sharp_ena",
                 "tutankha"
-            ]
+            ],
+            "desc": "Sealed Pharaoh has awakened after thousands of years. Discover the secret of Pyramid.",
+            "source": "Rooms 1 and 3-12 confirmed from Stage popups in X8sy1M0ylBo and syrrRJrXYU8."
         },
         {
             "id": "fire_spirits_cave",

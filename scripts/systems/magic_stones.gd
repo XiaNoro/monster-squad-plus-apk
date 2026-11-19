@@ -30,13 +30,16 @@ const STAT_NAMES := {"atk": "Offense", "hp": "Max HP", "def": "Defense", "rec": 
 const CRAFT_COST := [0, 1000, 2000, 5000, 12000, 35000, 70000]
 const EQUIP_COST := [1000, 2000, 3000, 10000, 25000, 50000, 80000]
 const UNEQUIP_COST := [1000, 2000, 3000, 10000, 40000, 60000, 80000]
+const SELL_PRICE := [200, 500, 1000, 3000, 8000, 20000, 50000]
 const CRAFT_COUNT := [0, 2, 3, 4, 4, 6, 2]
 const CRAFT_FLOOR := [0, 0, 0, 9, 15, 25, 0]
 const SPLUS_FLOOR := {"destruction": 35, "vitality": 36, "thunder": 37, "clarity": 38, "blessed": 39, "spirit": 40, "bravery": 41, "steel": 42, "windfury": 43, "time": 44}
 const DEFAULT_SLOTS := 2
 const MAX_SLOTS := 3
 const THIRD_SLOT_GEMS := 60
-const START_STONE_CAP := 30
+const START_STONE_CAP := 24
+const STONE_SLOT_STEP := 12
+const STONE_SLOT_GEMS := 60
 
 
 static func label(stone: Dictionary) -> String:

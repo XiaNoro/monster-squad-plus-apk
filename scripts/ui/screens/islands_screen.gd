@@ -1,7 +1,12 @@
-extends Screen
+﻿extends Screen
 
 const LAND_STEP := 318.0
 const PAGE_SCROLL := 636.0
+const MAP_OPEN_SCALE := 2.4
+const LAND_WAIT := 0.3
+const LINE_DOWN := Vector2(-30, -60)
+const LINE_UP := Vector2(-93, -56)
+const NAME_INK := Color8(40, 26, 0)
 const MAP_TABS := {"story": "ID_btnStory", "special": "ID_btnSpecial", "raid": "ID_btnTechnical"}
 const FIELD_TABS := {"normal": "ID_tapBtn1", "hard": "ID_tapBtn2", "hell": "ID_tapBtn3"}
 const CHAIN_UNLOCK_FIELD := 9
@@ -84,6 +89,7 @@ var _drag_dist := 0.0
 var _field_art: TextureRect
 var _stage_slots: Array = []
 var _sea: ShaderMaterial
+var _lines: Array = []
 static var _map_scroll: Dictionary = {}
 static var _rounded: ShaderMaterial
 
@@ -145,6 +151,34 @@ func _setup_map() -> void:
 		if land != null:
 			land.gui_input.connect(_on_map_input)
 	area.get_parent().move_child(area, 0)
+	_setup_lines()
+
+
+func _setup_lines() -> void:
+	var first := strip.node("ID_IMAGE_1") as TextureRect
+	if first == null or first.texture == null:
+		return
+	var holder := first.get_parent() as Control
+	var inv := holder.get_global_transform().affine_inverse()
+	for n in range(1, 30):
+		var here := strip.node("ID_landNameLabel%d" % n)
+		var next := strip.node("ID_landNameLabel%d" % (n + 1))
+		if here == null or next == null:
+			break
+		var line := strip.node("ID_IMAGE_%d" % n) as TextureRect
+		if line == null:
+			line = first.duplicate()
+			holder.add_child(line)
+		var down := n % 2 == 1
+		line.texture = Layout.texture("K_line_01.png" if down else "K_line_02.png")
+		line.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		line.size = line.texture.get_size() / 2.0
+		if down:
+			line.position = inv * (here.get_global_transform() * Vector2(here.size.x, here.size.y / 2.0)) + LINE_DOWN
+		else:
+			line.position = inv * (next.get_global_transform() * Vector2(0.0, next.size.y / 2.0)) + LINE_UP
+		holder.move_child(line, 0)
+		_lines.append(line)
 
 
 func _set_tab(t: String) -> void:
@@ -170,11 +204,58 @@ func _show_map() -> void:
 		land.visible = n < entries.size()
 		if land.visible:
 			_fill_land(i, entries[n])
+	for n in _lines.size():
+		_lines[n].visible = n + 1 < entries.size()
 	_strip_w = LAND_STEP * entries.size() + 40.0
 	_apply_scroll()
 
 
+func _glint(btn: Control, on: bool) -> void:
+	for c in btn.get_children():
+		if c is Glint:
+			c.visible = on
+			return
+	if on:
+		btn.add_child(Glint.new())
+
+
+class Glint extends Control:
+	const TIME := 0.7
+	const RADIUS := 34.0
+	var _t := 0.0
+	var _wait := 0.0
+
+	func _ready() -> void:
+		mouse_filter = Control.MOUSE_FILTER_IGNORE
+		_next()
+
+	func _next() -> void:
+		_t = 0.0
+		_wait = randf_range(0.5, 2.5)
+		var p := get_parent() as Control
+		position = Vector2(randf_range(0.12, 0.88) * p.size.x, randf_range(0.3, 0.9) * p.size.y)
+
+	func _process(delta: float) -> void:
+		_t += delta
+		if _t > _wait + TIME:
+			_next()
+		queue_redraw()
+
+	func _draw() -> void:
+		var k := (_t - _wait) / TIME
+		if k <= 0.0 or k >= 1.0:
+			return
+		var s := sin(k * PI)
+		var r := RADIUS * s
+		var c := Color(1, 1, 1, 0.95 * s)
+		draw_set_transform(Vector2.ZERO, k * 0.9, Vector2.ONE)
+		draw_colored_polygon([Vector2(r, 0), Vector2(0, r * 0.14), Vector2(-r, 0), Vector2(0, -r * 0.14)], c)
+		draw_colored_polygon([Vector2(r * 0.14, 0), Vector2(0, r), Vector2(-r * 0.14, 0), Vector2(0, -r)], c)
+		draw_circle(Vector2.ZERO, r * 0.22, c)
+
+
 func _fill_land(i: int, e: Dictionary) -> void:
+	_glint(strip.node("ID_btnLand%d" % i), tab == "story" and Save.is_island_unlocked(e.id, "normal"))
 	if tab == "raid":
 		_fill_raid_land(i, e)
 		return
@@ -191,19 +272,19 @@ func _fill_land(i: int, e: Dictionary) -> void:
 		art = DB.island_art("material_island" if not story else "sprout_island")
 		btn.self_modulate = Color(0.85, 0.95, 1.1)
 	btn.texture_normal = art
-	var fit := minf(1.0, minf(340.0 / art.get_width(), 260.0 / art.get_height()))
+	var fit := minf(0.5, minf(340.0 / art.get_width(), 260.0 / art.get_height()))
 	btn.size = art.get_size() * fit
-	btn.position = Vector2((340.0 - btn.size.x) / 2.0, 290.0 - btn.size.y)
+	btn.position = Vector2((340.0 - btn.size.x) / 2.0, 285.0 - btn.size.y)
 	btn.modulate = Color.WHITE if unlocked and open else Color(0.6, 0.6, 0.65)
 	for c in btn.pressed.get_connections():
 		btn.pressed.disconnect(c.callable)
 	btn.pressed.connect(_pick_land.bind(e.id))
 	var name_label := strip.text("ID_landNameText%d" % i, String(e.name))
-	name_label.add_theme_color_override("font_color", UI.CREAM)
-	name_label.add_theme_constant_override("outline_size", 5)
-	name_label.add_theme_color_override("font_outline_color", Color(0.2, 0.1, 0.0))
+	name_label.add_theme_color_override("font_color", NAME_INK)
 	strip.show("ID_shadow%d" % i, false)
 	strip.show("ID_lock%d" % i, story and not unlocked)
+	if story and unlocked:
+		_open_once(i, String(e.id))
 	strip.show("ID_btnOpenT_%d" % i, false)
 	var gem_open := strip.node("ID_btnOpen%d" % i) as BaseButton
 	gem_open.visible = not story and not open
@@ -275,7 +356,7 @@ func _fill_raid_land(i: int, r: Dictionary) -> void:
 	btn.texture_normal = art
 	var fit := minf(300.0 / art.get_width(), 250.0 / art.get_height())
 	btn.size = art.get_size() * fit
-	btn.position = Vector2((340.0 - btn.size.x) / 2.0, 290.0 - btn.size.y)
+	btn.position = Vector2((340.0 - btn.size.x) / 2.0, 285.0 - btn.size.y)
 	btn.modulate = Color.WHITE
 	for c in btn.get_children():
 		if c is RaidLock:
@@ -286,9 +367,7 @@ func _fill_raid_land(i: int, r: Dictionary) -> void:
 		btn.pressed.disconnect(c.callable)
 	btn.pressed.connect(_pick_raid.bind(String(r.id), btn))
 	var name_label := strip.text("ID_landNameText%d" % i, String(r.name))
-	name_label.add_theme_color_override("font_color", UI.CREAM)
-	name_label.add_theme_constant_override("outline_size", 5)
-	name_label.add_theme_color_override("font_outline_color", Color(0.2, 0.1, 0.0))
+	name_label.add_theme_color_override("font_color", NAME_INK)
 	strip.show("ID_shadow%d" % i, false)
 	strip.show("ID_lock%d" % i, false)
 	strip.show("ID_btnOpenT_%d" % i, false)
@@ -319,6 +398,23 @@ func _pick_raid(id: String, btn: Control) -> void:
 		shade.gui_input.connect(func(e: InputEvent):
 			if UI.pressed(e):
 				d.queue_free())
+
+
+func _open_once(i: int, id: String) -> void:
+	if not Save.data.has("islands_opened"):
+		Save.data.islands_opened = DB.islands.filter(func(isl): return Save.is_island_unlocked(isl.id, "normal")).map(func(isl): return String(isl.id))
+		Save.save_game()
+		return
+	if Array(Save.data.islands_opened).has(id):
+		return
+	Save.data.islands_opened.append(id)
+	Save.save_game()
+	var lock := strip.node("ID_lock%d" % i) as Control
+	var holder := lock.get_parent() as Control
+	var fx := FrameFx.play(holder, "ui_mapopen_1", lock.position + lock.size / 2.0, Vector2.ONE * maxf(lock.size.x, lock.size.y) * MAP_OPEN_SCALE, 20.0)
+	if fx != null:
+		fx.z_index = lock.z_index + 1
+	Sfx.play("popup_open")
 
 
 func _unlock_raid(id: String, btn: Control) -> void:
@@ -354,9 +450,13 @@ func _pick_land(id: String) -> void:
 		if not Save.special_available(DB.special(id)):
 			_offer_unlock(id)
 			return
-	_open_field()
-	tut_notify("island:" + id)
-	Tutorial.maybe_start(self, "field", {"special": special_id})
+	if tutorial_active():
+		_open_field()
+		tut_notify("island:" + id)
+		Tutorial.maybe_start(self, "field", {"special": special_id})
+		return
+	await main.busy(LAND_WAIT, Main.SLIDE_TIME)
+	main.go("islands", {"tab": tab, "island": island_id, "special": special_id, "difficulty": difficulty})
 
 
 func _offer_unlock(id: String) -> void:
@@ -589,6 +689,7 @@ func _field_slot(q: Dictionary, name_text: String, cleared: bool, playable: bool
 	if not ResourceLoader.exists(strip):
 		strip = "res://assets/fields/%s.png" % where
 	if ResourceLoader.exists(strip):
+		(s.node("ID_fieldImage") as TextureRect).expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 		s.set_image("ID_fieldImage", load(strip))
 	if _rounded == null:
 		var sh := Shader.new()
@@ -596,8 +697,12 @@ func _field_slot(q: Dictionary, name_text: String, cleared: bool, playable: bool
 		_rounded = ShaderMaterial.new()
 		_rounded.shader = sh
 	s.node("ID_fieldImage").material = _rounded
-	s.show("ID_reward", Events.affects(where, String(q.get("difficulty", ""))))
+	var monthly := Events.monthly(where, String(q.get("difficulty", "")), int(q.get("stage_index", -1)))
+	s.show("ID_reward", Events.affects(where, String(q.get("difficulty", ""))) or not monthly.is_empty())
 	Events.tag(s.node("ID_reward"), where, String(q.get("difficulty", "")))
+	if not monthly.is_empty():
+		s.node("ID_reward").set_meta("event_tip", "★ " + String(monthly.text))
+		s.node("ID_reward").tooltip_text = "★ " + String(monthly.text)
 	var boss_card := UI.monster_card(q.boss, 0, 0, Vector2(92, 92))
 	boss_card.mouse_filter = MOUSE_FILTER_IGNORE
 	s.put("ID_monIcon", boss_card)

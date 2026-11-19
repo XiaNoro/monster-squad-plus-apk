@@ -14,6 +14,7 @@ var special_islands: Array = []
 var raids: Array = []
 var pets: Array = []
 var tips: Array = []
+var sprite_sizes: Dictionary = {}
 
 var _avg_base_by_stars: Dictionary = {}
 var _avg_growth_by_stars: Dictionary = {}
@@ -33,12 +34,48 @@ func _ready() -> void:
 	raids = _load_json("res://data/raids.json").raids
 	pets = _load_json("res://data/pets.json")
 	tips = _load_json("res://data/tips.json").tips
+	if FileAccess.file_exists("res://data/monster_sizes.json"):
+		sprite_sizes = _load_json("res://data/monster_sizes.json")
 	_merge_footage_quotes()
 	_compute_fallbacks()
 
 
 func monster(id: String) -> Dictionary:
 	return monsters.get(id, {})
+
+
+var _dex: Dictionary = {}
+
+
+func dex_number(id: String) -> int:
+	if _dex.is_empty():
+		var bases := ids_where(func(m): return String(m.get("evolves_from", "")) == "")
+		bases.sort_custom(_family_order)
+		var n := 1
+		for b in bases:
+			var cur: String = b
+			var guard := 0
+			while cur != "" and not _dex.has(cur) and guard < 8:
+				_dex[cur] = n
+				n += 1
+				cur = String(monster(cur).get("evolves_into", ""))
+				guard += 1
+		for m in monsters:
+			if not _dex.has(m):
+				_dex[m] = n
+				n += 1
+	return int(_dex.get(id, 9999))
+
+
+func _family_order(a: String, b: String) -> bool:
+	var ma := monster(a)
+	var mb := monster(b)
+	var order := ["fire", "water", "nature", "normal"]
+	if ma.element != mb.element:
+		return order.find(ma.element) < order.find(mb.element)
+	if int(ma.stars) != int(mb.stars):
+		return int(ma.stars) < int(mb.stars)
+	return String(ma.name) < String(mb.name)
 
 
 const GRADES := ["C", "B", "A", "S", "S+"]
@@ -166,6 +203,9 @@ const BOOST_COST := [
 const FUSION_COST := {1: 1000, 2: 20000, 3: 50000, 4: 100000, 5: 500000}
 const AWAKEN_MAX := 50
 const AWAKEN_GOLD_PER_CAP := 5000
+const AWAKEN_EXP_GROWTH := 1.166
+const FEED_EXP := [2, 9, 34, 130, 333, 460]
+const FEED_COST := [300, 1000, 2500, 5000, 10000, 20000]
 const PET_LEVEL := {1: 30, 2: 33, 3: 35, 4: 30}
 
 
@@ -173,17 +213,29 @@ func exp_to_next(level: int, stars: int) -> int:
 	var row: Array = EXP_TABLE[clampi(stars, 1, 6) - 1]
 	if level < 30:
 		return int(row[level - 1])
-	return int(float(row[28]) * (1.0 + 0.1 * (level - 29)))
+	return int(float(row[28]) * pow(AWAKEN_EXP_GROWTH, level - 29))
+
+
+func _boost_diff(target_id: String, material_id: String) -> int:
+	var t := monster(target_id)
+	var m := monster(material_id)
+	var diff: int = int(t.stars) - int(m.stars)
+	var aim: Dictionary = m.get("boost_for", {})
+	if not aim.is_empty() and String(aim.element) == String(t.element) and int(aim.stars) == int(t.stars):
+		diff = mini(diff, 1)
+	return clampi(diff, 0, 5)
 
 
 func boost_chance(target_id: String, material_id: String) -> float:
-	var diff: int = int(monster(target_id).stars) - int(monster(material_id).stars)
-	return BOOST_CHANCE[clampi(diff, 0, 5)]
+	if bool(monster(material_id).get("boost_fail", false)):
+		return 0.0
+	return BOOST_CHANCE[_boost_diff(target_id, material_id)]
 
 
 func boost_pt_on_fail(target_id: String, material_id: String) -> int:
-	var diff: int = int(monster(target_id).stars) - int(monster(material_id).stars)
-	return BOOST_PT[clampi(diff, 0, 5)]
+	if bool(monster(material_id).get("boost_fail", false)):
+		return 0
+	return BOOST_PT[_boost_diff(target_id, material_id)]
 
 
 func boost_cost(target_id: String, current_boost: int) -> int:
@@ -195,18 +247,11 @@ func fusion_cost(stars: int) -> int:
 
 
 func feed_exp(id: String, level: int) -> int:
-	var stars: int = clampi(int(monster(id).stars), 1, 6)
-	var spent := 0
-	for l in range(1, mini(level, 30)):
-		spent += int(EXP_TABLE[stars - 1][l - 1])
-	return 30 * stars + spent / 2
+	return maxi(1, roundi(FEED_EXP[clampi(int(monster(id).stars), 1, 6) - 1] * (0.5 + level / 60.0)))
 
 
 func feed_cost(target_id: String) -> int:
-	return 120 * int(monster(target_id).stars)
-
-func lv30_gems(stars: int) -> int:
-	return {1: 1, 2: 2, 3: 3, 4: 5, 5: 10, 6: 15}.get(stars, 1)
+	return FEED_COST[clampi(int(monster(target_id).stars), 1, 6) - 1]
 
 
 func evolve_cost(_id: String) -> int:
@@ -216,32 +261,54 @@ func evolve_cost(_id: String) -> int:
 func portrait(id: String) -> Texture2D:
 	if _portraits.has(id):
 		return _portraits[id]
-	var path := "res://assets/monsters/%s.webp" % id
-	if not ResourceLoader.exists(path):
-		path = "res://assets/monsters/%s.png" % id
-	var tex: Texture2D = load(path) if ResourceLoader.exists(path) else _get_placeholder()
+	var path := portrait_path(id)
+	var tex: Texture2D = load(path) if path != "" else _get_placeholder()
 	_portraits[id] = tex
 	return tex
+
+
+func portrait_path(id: String) -> String:
+	for ext in ["webp", "png"]:
+		var path := "res://assets/monsters/%s.%s" % [id, ext]
+		if ResourceLoader.exists(path):
+			return path
+	return ""
 
 
 func icon(id: String) -> Texture2D:
 	var key := "icon:" + id
 	if _portraits.has(key):
 		return _portraits[key]
-	var tex: Texture2D = null
-	for ext in ["png", "webp", "jpg"]:
-		var path := "res://assets/icons/%s.%s" % [id, ext]
-		if ResourceLoader.exists(path):
-			tex = load(path)
-			break
-	if tex == null:
-		tex = battle_sprite(id)
+	var path := icon_path(id)
+	var tex: Texture2D = load(path) if path != "" else _mirrored(battle_sprite(id))
 	_portraits[key] = tex
 	return tex
 
 
+func _mirrored(t: Texture2D) -> Texture2D:
+	var img := t.get_image()
+	if img == null:
+		return t
+	if img.is_compressed():
+		img.decompress()
+	img.flip_x()
+	return ImageTexture.create_from_image(img)
+
+
+func icon_path(id: String) -> String:
+	var key := "icon_path:" + id
+	if not _portraits.has(key):
+		_portraits[key] = ""
+		for ext in ["png", "webp", "jpg"]:
+			var path := "res://assets/icons/%s.%s" % [id, ext]
+			if ResourceLoader.exists(path):
+				_portraits[key] = path
+				break
+	return _portraits[key]
+
+
 func has_icon(id: String) -> bool:
-	return icon(id) != battle_sprite(id)
+	return icon_path(id) != ""
 
 
 func skill_icon(icon_file: String) -> Texture2D:
@@ -262,6 +329,14 @@ func island_art(id: String) -> Texture2D:
 	return null
 
 
+func sprite_paths(id: String) -> Array:
+	var cut := "res://assets/monsters_cut/%s.png" % id
+	return [cut] if ResourceLoader.exists(cut) else [portrait_path(id)]
+
+
+const FACES_LEFT := ["imuki", "blue_dragongod"]
+
+
 func battle_sprite(id: String) -> Texture2D:
 	var key := "cut:" + id
 	if _portraits.has(key):
@@ -270,6 +345,12 @@ func battle_sprite(id: String) -> Texture2D:
 	var tex: Texture2D
 	if ResourceLoader.exists(path):
 		tex = load(path)
+		if id in FACES_LEFT:
+			var img := tex.get_image()
+			if img.is_compressed():
+				img.decompress()
+			img.flip_x()
+			tex = ImageTexture.create_from_image(img)
 	else:
 		var card := portrait(id)
 		var atlas := AtlasTexture.new()
@@ -279,6 +360,31 @@ func battle_sprite(id: String) -> Texture2D:
 		tex = atlas
 	_portraits[key] = tex
 	return tex
+
+
+func sprite_height(id: String, role: String) -> float:
+	var s: Dictionary = sprite_sizes.get("sizes", {}).get(id, {})
+	var h := float(s.get("h", 0.0))
+	var lobby: Dictionary = sprite_sizes.get("lobby", {}).get(id, {})
+	if s.is_empty() and not lobby.is_empty():
+		h = float(lobby.h) / float(sprite_sizes.get("lobby_scale", {}).get("from_battle", 1.0))
+	if h <= 0.0:
+		h = float(sprite_sizes.get("guess", {}).get(id, 0.0))
+	h = float(sprite_sizes.get("shared", {}).get(id, h))
+	return h * float(sprite_sizes.get("role_scale", {}).get(role, 1.0))
+
+
+func lobby_height(id: String, leader: bool) -> float:
+	var scale: Dictionary = sprite_sizes.get("lobby_scale", {})
+	var lead := float(scale.get("leader", 1.0)) if leader else 1.0
+	if sprite_sizes.get("shared", {}).has(id):
+		return float(sprite_sizes.shared[id]) * float(scale.get("from_battle", 1.0)) * lead
+	var s: Dictionary = sprite_sizes.get("lobby", {}).get(id, {})
+	if not s.is_empty():
+		return float(s.h) * lead
+	var b: Dictionary = sprite_sizes.get("sizes", {}).get(id, {})
+	var h := float(b.get("h", sprite_sizes.get("guess", {}).get(id, 0.0)))
+	return h * float(scale.get("from_battle", 1.0)) * lead
 
 
 func element_color(element: String) -> Color:

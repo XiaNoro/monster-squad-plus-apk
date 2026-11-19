@@ -21,10 +21,14 @@ const CUBE_TEXT := {
 	"pet_rare": "A 4 star pet can be earned. It can be equipped when monster Lv is 45+",
 }
 const MYSTERY_COST := 50
+const HIGHLIGHT_SCALE := Vector2(1.333, 1.212)
 const MYSTERY_SIZE := 50
 const MYSTERY_MIX := {5: 5, 4: 15, 3: 25}
-const MYSTERY_RESET_GOLD := 200
+const MYSTERY_RESET_GOLD := 100
 const MYSTERY_FREE_RESET := 30
+const MB_BREATHE := 0.015
+const MB_SWAY := 0.01
+const MB_GLINTS := [Vector2(0.07, 0.2), Vector2(0.9, 0.16), Vector2(0.31, 0.13), Vector2(0.63, 0.46), Vector2(0.96, 0.72)]
 const MYSTERY_ROTATION := ["lightning_spirit", "pink_bean", "narkissa", "void_knight", "anubis", "dark_knight", "undine", "garden_spirit"]
 const CURRENCY_NAME := {"gold": "Gold", "gems": "Gems", "honor": "Honour", "fp": "Friend Points"}
 const TABS := {"hot": "ID_btnRecomT", "cube": "ID_btnCubeT_1", "energy": "ID_btnEnergy", "gem": "ID_btnCrystalT", "gold": "ID_btnGoldlT", "misc": "ID_btnItemT", "honor": "ID_btnHonor"}
@@ -76,9 +80,13 @@ func _migrate_starter_cube() -> void:
 		Save.save_game()
 
 
+const EVOLVED_FROM_STARS := 3
+const CUBE_MATERIALS := ["goldbat"]
+
+
 func _build_pools() -> void:
 	for s in range(1, 7):
-		_pools[s] = DB.ids_where(func(m): return int(m.stars) == s and not m.material and (m.evolves_from == "" or int(m.stars) >= 5))
+		_pools[s] = DB.ids_where(func(m): return int(m.stars) == s and ((not m.material and (m.evolves_from == "" or int(m.stars) >= EVOLVED_FROM_STARS)) or String(m.id) in CUBE_MATERIALS))
 
 
 func _show_tab(t: String) -> void:
@@ -209,7 +217,21 @@ func _card(it: Dictionary) -> Control:
 	var btn := s.node("ID_btnSlot") as BaseButton
 	btn.pressed.connect(_confirm.bind(it))
 	_cards[String(it.id)] = btn
+	if String(it.get("badge", "")) != "":
+		_highlight(s.node("ID_frameSize"))
 	return s.root
+
+
+func _highlight(frame: Control) -> void:
+	var fx := FrameFx.play(frame, "ui_itemShop_01", frame.size / 2.0, frame.size * HIGHLIGHT_SCALE, 15.0)
+	if fx == null:
+		return
+	fx.loop = true
+	fx.stretch_mode = TextureRect.STRETCH_SCALE
+	fx.z_index = 1
+	var m := CanvasItemMaterial.new()
+	m.blend_mode = CanvasItemMaterial.BLEND_MODE_ADD
+	fx.material = m
 
 
 func _item_art(it: Dictionary, area: Vector2) -> Control:
@@ -487,15 +509,30 @@ static func slots_art(area: Vector2) -> Control:
 
 
 static func offer_slots(parent: Control, full: bool = false, on_done: Callable = Callable()) -> void:
+	var price := slot_price()
+	var grow := func() -> bool:
+		if int(Save.data.gems) < price:
+			return false
+		Save.data.gems = int(Save.data.gems) - price
+		Save.data.inventory_cap = int(Save.data.inventory_cap) + SLOT_STEP
+		Save.save_game()
+		return true
+	offer_purchase(parent, "%d Inventory Slots" % SLOT_STEP, slots_art(Vector2(208, 210)),
+		"Your Monster Box is full!
+Would you like to make a purchase?" if full else "Would you like to make a purchase?",
+		"Expand your inventory by %d slots and collect more Monsters." % SLOT_STEP, price, grow,
+		func() -> String: return "Your monster box now holds %d monsters." % int(Save.data.inventory_cap), on_done)
+
+
+static func offer_purchase(parent: Control, item: String, art: Control, base: String, detail: String, price: int, apply: Callable, done_text: Callable, on_done: Callable = Callable()) -> void:
 	var d := Layout.load_into(parent, "R_d_buy2")
 	d.root.z_index = 85
 	d.node("ID_9PATCH_2").mouse_filter = Control.MOUSE_FILTER_STOP
 	d.text("ID_titleText", "Item purchase")
-	d.text("ID_itemName", "%d Inventory Slots" % SLOT_STEP)
+	d.text("ID_itemName", item)
 	d.show("ID_itemImage", false)
-	d.put("ID_9PATCH_3", slots_art(Vector2(208, 210)), Vector2(208, 210))
-	var texts := {"ID_baseText": "Your Monster Box is full!\nWould you like to make a purchase?" if full else "Would you like to make a purchase?",
-		"ID_detailText": "Expand your inventory by %d slots and collect more Monsters." % SLOT_STEP}
+	d.put("ID_9PATCH_3", art, Vector2(208, 210))
+	var texts := {"ID_baseText": base, "ID_detailText": detail}
 	for id in texts:
 		var l := d.node(id) as Label
 		l.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
@@ -508,20 +545,16 @@ static func offer_slots(parent: Control, full: bool = false, on_done: Callable =
 	for k in DIALOG_PRICE:
 		d.show(DIALOG_PRICE[k][0], k == "gems")
 	d.show("ID_priceCash_W", false)
-	var price := slot_price()
 	d.text("ID_priceCrystalText", str(price))
 	d.text("ID_LABEL_5", "Purchase")
 	var root := d.root
 	var buy := func() -> void:
 		root.queue_free()
-		if int(Save.data.gems) < price:
+		if not bool(apply.call()):
 			UI.notice(parent, "Notice", "Not enough Gems.")
 			return
-		Save.data.gems = int(Save.data.gems) - price
-		Save.data.inventory_cap = int(Save.data.inventory_cap) + SLOT_STEP
-		Save.save_game()
 		Sfx.play("buff_big")
-		UI.notice(parent, "Notice", "Your monster box now holds %d monsters." % int(Save.data.inventory_cap), on_done)
+		UI.notice(parent, "Notice", String(done_text.call()), on_done)
 	d.on("ID_btnOk", buy)
 	d.on("ID_btnEsc", root.queue_free)
 
@@ -600,12 +633,34 @@ static func _on_stair(b: Control, id: String, grow := Vector2(1.0, 0.72)) -> voi
 	var size := box
 	if tex != null and tex.get_width() > 0:
 		size = tex.get_size() * minf(box.x / tex.get_width(), box.y / tex.get_height())
-	var art := UI.image(tex, size, TextureRect.STRETCH_SCALE)
-	art.size = size
-	art.position = Vector2(b.size.x / 2.0 - size.x / 2.0, stair.position.y + stair.size.y * 0.36 - size.y)
+	var art := UI.idle_art(tex, size)
+	art.position += Vector2(b.size.x / 2.0 - size.x / 2.0, stair.position.y + stair.size.y * 0.36 - size.y)
 	art.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	art.add_to_group("mb_art")
+	if art.material is ShaderMaterial:
+		(art.material as ShaderMaterial).set_shader_parameter("breath", MB_BREATHE)
+		(art.material as ShaderMaterial).set_shader_parameter("sway", MB_SWAY)
 	b.add_child(art)
+
+
+static func _glints(back: Control) -> void:
+	for at in MB_GLINTS:
+		var g := UI.image(UI.tex("betaGacha00/u_Highlight_01.png"), Vector2(72, 72))
+		g.size = Vector2(72, 72)
+		g.pivot_offset = g.size / 2.0
+		g.position = back.size * (at as Vector2) - g.size / 2.0
+		g.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		g.modulate.a = 0.0
+		g.scale = Vector2(0.3, 0.3)
+		back.add_child(g)
+		var tw := g.create_tween().set_loops()
+		tw.tween_interval(randf_range(0.6, 2.6))
+		tw.tween_property(g, "modulate:a", 1.0, 0.25)
+		tw.parallel().tween_property(g, "scale", Vector2.ONE, 0.25).set_ease(Tween.EASE_OUT)
+		tw.parallel().tween_property(g, "rotation", PI / 4.0, 0.6)
+		tw.tween_property(g, "modulate:a", 0.0, 0.35)
+		tw.parallel().tween_property(g, "scale", Vector2(0.3, 0.3), 0.35)
+		tw.tween_callback(g.set_rotation.bind(0.0))
 
 
 func _mystery_slot() -> Control:
@@ -633,6 +688,7 @@ func _mystery_slot() -> Control:
 	back.patch_margin_right = 20
 	back.patch_margin_top = 20
 	back.patch_margin_bottom = 20
+	_glints(back)
 	s.show("ID_mon3", false)
 	for i in 5:
 		var b := s.node("ID_9BUTTON_mon5_%d" % (i + 1)) as BaseButton

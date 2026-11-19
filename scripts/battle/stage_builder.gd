@@ -5,12 +5,13 @@ const STAGES_PER_QUEST := [2, 3, 4, 4, 4, 5, 5, 4]
 const SPECIAL_STAGES := 3
 const DIFF_LEVEL_BONUS := {"normal": 0, "hard": 6, "hell": 12}
 const DIFF_REWARD_MULT := {"normal": 1.0, "hard": 1.85, "hell": 2.7}
-const DIFF_STAT_MULT := {"normal": 1.0, "hard": 1.2, "hell": 1.5}
-const DIFF_MULT_PER_ISLAND := {"normal": 0.0, "hard": 0.05, "hell": 0.1}
+const DIFF_STAT_MULT := {"normal": 1.2, "hard": 1.45, "hell": 1.7}
+const DIFF_MULT_PER_ISLAND := {"normal": 0.05, "hard": 0.05, "hell": 0.1}
+const ATK_BONUS_SHARE := 0.5
 const FIRST_CLEAR_GEMS := [2, 3, 4, 4, 4, 7, 7, 7]
 const ISLAND_CLEAR_GEMS := [10, 20, 20, 40, 60, 100, 120, 150]
 const DROP_CHANCE := 0.12
-const BOSS_DROP_CHANCE := {"normal": 0.3, "hard": 0.4, "hell": 0.5}
+const BOSS_DROP_CHANCE := 0.05
 const SPECIAL_BOSS_DROP_CHANCE := 0.35
 const STAGE_BACKDROPS := {
 	"sprout_island": [[3, "sprout_trail"], [6, "sprout_meadow"]],
@@ -57,6 +58,12 @@ static func story_quest(island: Dictionary, difficulty: String, stage_index: int
 	if footage_boss != "" and footage_boss != boss and not DB.monster(footage_boss).is_empty() and not bool(stage.get("boss_fixed", false)):
 		boss = footage_boss
 		enemies = stage.enemies.filter(func(e): return e != boss)
+	var monthly := Events.monthly(String(island.id), difficulty, stage_index)
+	var drop_pool: Array = stage.get("drops", [])
+	if not monthly.is_empty():
+		boss = String(monthly.boss)
+		if not drop_pool.is_empty():
+			drop_pool = drop_pool + [boss]
 	return {
 		"kind": "story",
 		"key": "%s/%s/%d" % [island.id, difficulty, stage_index],
@@ -67,17 +74,19 @@ static func story_quest(island: Dictionary, difficulty: String, stage_index: int
 		"boss": boss,
 		"enemies": enemies,
 		"hp_mult": stat_mult,
-		"atk_mult": stat_mult,
+		"atk_mult": 1.0 + (stat_mult - 1.0) * ATK_BONUS_SHARE,
 		"boost": DB.MAX_BOOST if difficulty == "hell" else 0,
 		"stages": int(stage.get("waves", stage_count(order, stage_index))),
-		"boss_wave": stage.get("boss_wave", []),
+		"boss_wave": monthly.get("boss_wave", stage.get("boss_wave", [])),
+		"say": String(monthly.get("say", "")),
+		"boss_drop_id": String(monthly.get("drop", "")),
 		"gold": (330.0 + 250.0 * order + 8.0 * stage_index) * mult * gold_mult,
 		"exp": (50.0 + 17.0 * order + 2.0 * stage_index) * mult * Events.mult("xp", island.id, difficulty),
 		"drops": true,
-		"boss_drop_chance": float(stage.get("boss_drop", BOSS_DROP_CHANCE.get(difficulty, 0.3))),
+		"boss_drop_chance": float(monthly.get("drop_chance", stage.get("boss_drop", BOSS_DROP_CHANCE))),
 		"drop_mult": Events.mult("cube", island.id, difficulty),
 		"drop_level": [1, 1],
-		"drop_pool": stage.get("drops", []),
+		"drop_pool": drop_pool,
 		"first_clear_drop": false,
 	}
 
@@ -101,7 +110,7 @@ static func special_quest(special: Dictionary, index: int) -> Dictionary:
 		"say": String(q.get("say", "")),
 		"rare": q.get("rare", []),
 		"hp_mult": DIFF_STAT_MULT.get(tab, 1.0),
-		"atk_mult": DIFF_STAT_MULT.get(tab, 1.0),
+		"atk_mult": 1.0 + (DIFF_STAT_MULT.get(tab, 1.0) - 1.0) * ATK_BONUS_SHARE,
 		"boost": DB.MAX_BOOST if tab == "hell" else 0,
 		"enemies": q.enemies,
 		"wave_pools": q.get("wave_pools", []),
@@ -218,4 +227,6 @@ static func roll_kill(quest: Dictionary, state: Dictionary, id: String, first_cl
 	if is_boss:
 		state.boss_dropped = true
 	var lv: Array = quest.drop_level
+	if is_boss and String(quest.get("boss_drop_id", "")) != "":
+		id = String(quest.boss_drop_id)
 	return {"id": id, "level": rng.randi_range(int(lv[0]), int(lv[1]))}

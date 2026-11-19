@@ -18,14 +18,25 @@ func build() -> void:
 	mode = String(args.get("mode", "boost"))
 	uid = int(args.get("uid", -1))
 	UI.brown_background(self)
-	lay = Layout.load_into(self, "R_comStrengthPage" if mode == "boost" else "R_comEvolutionPage")
-	add_top_bar("2", {"boost": "Boost", "evolve": "Evolution", "fusion": "Fusion"}[mode], "squad")
+	lay = Layout.load_into(self, {"boost": "R_comStrengthPage", "exp": "R_comExpPage"}.get(mode, "R_comEvolutionPage"))
+	add_top_bar("2", {"boost": "Boost", "exp": "Level Boost", "evolve": "Evolution", "fusion": "Fusion"}[mode], "squad")
 	_back_args = {"mode": "train", "uid": uid}
 	if mode == "boost":
 		lay.on("ID_btnComSt", _do_boost)
 		lay.hide_all(["ID_eventTag_St", "ID_IMAGE_2"])
 		lay.text("ID_LABEL_3", "Select Material")
 		_setup_boost_panel()
+	elif mode == "exp":
+		lay.on("ID_btnComSt", _do_exp)
+		lay.hide_all(["ID_eventTag_St"])
+		lay.text("ID_LABEL_3", "Select Material")
+		lay.text("ID_titleName", "Level Boost")
+		lay.text("ID_LABEL_6", "Cost")
+		lay.text("ID_LABEL_5", "EXP Boost")
+		lay.text("ID_LABEL_1", "Matl")
+		var ex := lay.text("ID_TextEx", "Please select a monster to use for level boost.")
+		ex.add_theme_color_override("font_color", UI.BROWN)
+		ex.add_theme_constant_override("outline_size", 0)
 	else:
 		lay.hide_all(["ID_eventTag_Fu", "ID_eventTag_Ev", "ID_btnChange", "ID_Crystal"])
 		lay.show("ID_btnComFu", mode == "fusion")
@@ -189,7 +200,9 @@ func _refresh() -> void:
 		var blocked := Save.in_team(u) or bool(m.locked) or (mode == "evolve" and not _valid_material(m))
 		if blocked:
 			card.modulate = Color(0.45, 0.45, 0.45)
-		if _picked.has(u):
+		if _picked.has(u) and mode == "exp":
+			card.add_child(_select_frame())
+		elif _picked.has(u):
 			var f := NinePatchRect.new()
 			f.texture = Layout.texture("9_frame_03.png")
 			f.patch_margin_left = 12
@@ -215,10 +228,12 @@ func _refresh() -> void:
 		empty.mouse_filter = MOUSE_FILTER_IGNORE
 		grid.add_child(empty)
 	lay.list_into("ID_ID_arrayPosition", [grid])
-	lay.text("ID_numText", "%d / %d" % [_picked.size(), _need()] if mode == "evolve" else str(list.size()))
+	lay.text("ID_numText", "%d / %d" % [_picked.size(), _need()] if mode == "evolve" else str(_picked.size() if mode == "exp" else list.size()))
 	lay.text("ID_LABEL_4", SORTS[_sort])
 	if mode == "boost":
 		_fill_boost(t)
+	elif mode == "exp":
+		_fill_exp(t)
 	else:
 		_fill_evolution(t)
 
@@ -256,6 +271,11 @@ func _on_pick(e: InputEvent, u: int, blocked: bool) -> void:
 		return
 	if _picked.has(u):
 		_picked.erase(u)
+	elif mode == "exp":
+		if int(Save.exp_after(_target(), _picked_exp()).level) >= Save.max_level(_target()):
+			UI.toast(self, "Max level reached")
+			return
+		_picked.append(u)
 	else:
 		_picked.clear()
 		_picked.append(u)
@@ -296,6 +316,78 @@ func _fill_boost(t: Dictionary) -> void:
 	lay.text("ID_LABEL_4", SORTS[_sort])
 	var b := lay.node("ID_btnComSt") as BaseButton
 	(b.get_child(0) as CanvasItem).modulate = Color.WHITE if not _picked.is_empty() and int(t.boost) < DB.MAX_BOOST else Color(0.2, 0.22, 0.42)
+
+
+func _picked_exp() -> int:
+	var xp := 0
+	for u in _picked:
+		var m := Save.get_owned(int(u))
+		xp += DB.feed_exp(m.id, int(m.level))
+	return xp
+
+
+func _select_frame() -> Control:
+	var f := NinePatchRect.new()
+	f.texture = Layout.texture("9_frame_03.png")
+	f.patch_margin_left = 12
+	f.patch_margin_right = 12
+	f.patch_margin_top = 12
+	f.patch_margin_bottom = 12
+	f.size = Vector2(96, 96)
+	f.mouse_filter = MOUSE_FILTER_IGNORE
+	var l := UI.label("Select", 24, Color("fff6a0"))
+	l.size = Vector2(96, 96)
+	l.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	l.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	f.add_child(l)
+	return f
+
+
+func _fill_exp(t: Dictionary) -> void:
+	var counts := [0, 0, 0, 0, 0, 0]
+	for u in _picked:
+		counts[clampi(int(DB.monster(Save.get_owned(int(u)).id).stars), 1, 6) - 1] += 1
+	for s in 6:
+		lay.text("ID_textMalt%d" % (s + 1), "x%03d" % counts[s])
+	var after := Save.exp_after(t, _picked_exp())
+	_gauge(1, int(t.level), float(Save.exp_after(t, 0).ratio))
+	_gauge(2, int(after.level), float(after.ratio))
+	lay.text("ID_goldText", str(DB.feed_cost(t.id) * _picked.size()))
+	var b := lay.node("ID_btnComSt") as BaseButton
+	(b.get_child(0) as CanvasItem).modulate = Color.WHITE if not _picked.is_empty() else Color(0.2, 0.22, 0.42)
+
+
+func _gauge(i: int, level: int, ratio: float) -> void:
+	lay.text("ID_lvText%d" % i, "Lv.%d" % level)
+	lay.text("ID_expText%d" % i, "%.1f%%" % (ratio * 100.0))
+	var bar := lay.node("ID_expGraph%d" % i) as Control
+	if not bar.has_meta("full"):
+		bar.set_meta("full", bar.size.x)
+	bar.size.x = float(bar.get_meta("full")) * ratio
+	bar.visible = ratio > 0.0
+
+
+func _do_exp() -> void:
+	if _picked.is_empty():
+		UI.notice(self, "Notice", "Please select a monster to use for level boost.")
+		return
+	var cost := DB.feed_cost(_target().id) * _picked.size()
+	if int(Save.data.gold) < cost:
+		UI.notice(self, "Notice", "Not enough Gold.")
+		return
+	UI.confirm(self, "Level Boost", "%d material monster(s) will disappear.\nCost: %s Gold" % [_picked.size(), Screen._thousands(cost)], _exp_now)
+
+
+func _exp_now() -> void:
+	var r := Save.feed(uid, _picked)
+	_picked.clear()
+	_refresh()
+	if not r.ok:
+		UI.notice(self, "Notice", String(r.reason))
+		return
+	Sfx.play("buff_big")
+	UI.toast(self, "+%d EXP%s" % [int(r.exp), (", +%d Lv" % int(r.levels)) if int(r.levels) > 0 else ""], UI.GOLD)
+	LevelReward.show_pending(self, main.current_name)
 
 
 func _card_art(l: Layout, m: Dictionary, root_id: String = "ID_ev1") -> void:
@@ -551,14 +643,47 @@ func _do_fusion() -> void:
 	if _picked.is_empty():
 		UI.toast(self, "Pick a partner first")
 		return
+	var p := Save.fusion_preview(uid, int(_picked[0]))
+	if not bool(p.get("ok", false)):
+		UI.notice(self, "Fusion", String(p.get("reason", "Can't fuse")))
+		return
+	var ids := [String(_target().id), String(Save.get_owned(int(_picked[0])).id)]
+	var d := Layout.load_into(self, "R_d_comEvolution")
+	d.root.z_index = 80
+	d.node("ID_9PATCH_2").mouse_filter = MOUSE_FILTER_STOP
+	d.text("ID_titleText", "Fusion")
+	for k in 2:
+		var card := UI.monster_card(ids[k], 0, 0, Vector2(92, 92))
+		card.mouse_filter = MOUSE_FILTER_IGNORE
+		d.put("ID_monFrame%d" % (k + 1), card)
+	var random := UI.label("?\nRandom", 20, UI.BROWN)
+	random.add_theme_constant_override("outline_size", 0)
+	random.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	random.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	d.put("ID_monFrame3", random)
+	var l := d.text("ID_baseText", "Existing monsters will disappear.\nExpected random result.")
+	l.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	l.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	l.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	l.add_theme_color_override("font_color", UI.BROWN)
+	l.add_theme_font_size_override("font_size", 21)
+	var root := d.root
+	d.on("ID_btnOk", _fuse_now.bind(root, ids))
+	d.on("ID_btnEsc", root.queue_free)
+
+
+func _fuse_now(root: Control, ids: Array) -> void:
+	root.queue_free()
+	var seen: Dictionary = Save.data.owned.duplicate()
 	var r := Save.fuse(uid, int(_picked[0]))
 	if not r.ok:
 		UI.notice(self, "Fusion", String(r.reason))
 		return
+	var fresh := not seen.has(String(r.into))
 	_picked.clear()
 	uid = int(r.uid)
 	_back_args = {"mode": "train", "uid": uid}
-	CubeReveal.show_monster(self, String(r.into), [{"text": "OK", "color": "green", "cb": _refresh}])
+	CubeReveal.fuse(self, ids, String(r.into), fresh, [{"text": "OK", "color": "green", "cb": _refresh}])
 
 
 func tutorial_target(name: String) -> Control:

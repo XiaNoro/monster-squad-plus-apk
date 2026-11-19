@@ -18,7 +18,7 @@ Open the folder in Godot 4.7 and press **F5**. The main scene is `scenes/main.ts
 Debug flags (pass after `--`):
 - `--screen=<title|starter|hub|islands|squad|cubes|book|battle>` opens a screen directly.
 - `--test-save` uses a throwaway save (`user://test_save.json`) with a starter squad.
-- `--test-auto` turns on auto battle at x4.
+- `--test-auto` turns on auto battle at x4. `--test-repeat` turns on Auto Repeat.
 - `--test-team=id,id,...` and `--test-level=N` set the test squad.
 - `--test-special=<island_id>:<quest>` plays a special-island quest directly.
 - `--test-tower=<floor>` plays a Sky Tower floor directly. `--test-raid=<raid_id>:<room>` fills the box and fights a raid room. `--test-arena=<rival index>` fights an arena rival. `--test-stones` adds sample stones, and `--test-log` prints each battle's result.
@@ -34,7 +34,7 @@ scripts/ui/         UI kit, screens, battle visuals
 data/               monsters.json, islands.json (generated)
 assets/apk/         assets from the APK      assets/monsters*/  wiki portraits + cutouts
 tools/              data pipeline (not shipped)  tests/  balance simulation
-research/           raw dumps: wiki, APK, protos, reddit (not shipped)
+research/           raw dumps: wiki, APK, protos, reddit, videos (not shipped; a junction to F:\monster-squad+\research)
 ```
 
 ## Video research tools
@@ -66,10 +66,13 @@ godot --headless --path . res://tests/sim_battle.tscn               # balance re
   - **Battle:** sky/tower backdrop and the `battleUnlimited` Fever bar above MP. Each room counts down from 1:30 under a skull; a "time_limit" boss room has 1:00. Stone boxes drop from enemies (black, purple and red `H_cube_03-05`) and collect by the timer. Pause shows the original forfeit warning.
   - **Fever:** 0-100, kept between runs (`tower_fever`), about +6 per enemy-skill hit and +0.25 per basic hit. Tap the Fever tile over the leader for 10 s (real time) of 0-MP leader skills.
   - **Rewards:** the original tower card (`ID_9PATCH_tech` in `R_d_reward`): time, gold, "First Clear Reward" ticket ×1 and boxes, then "Open Cube" reveals each stone (RANK X).
-  - **Confirmed floors** (`data/tower_floors.json`): bosses and Drop Lists for floors 6, 15, 24, 27–34, 46, 49 and 50, and the room enemies of 46, 49 and 50, read from 1080p footage. `tools/tower_panels.gd` finds the floor page in a video's frames and names the boss; `tools/match_art.gd` names a monster from any crop. Other floors stay procedural.
+  - **Confirmed floors** (`data/tower_floors.json`): bosses for 47 of 50 floors (16, 21 and 38 have no footage and stay procedural) and Drop Lists for all 50: 47 read from footage by `tools/scan_tower_drops.py` (report in `research/videos/tower_drops.md`, checked by eye), 16, 21 and 38 filled from the 5-floor pattern. Room enemies: exact rooms for 46, 49 and 50, and an enemy pool (only monsters named for certain) for 33 more floors that rooms are drawn from. `tools/tower_panels.gd` finds the floor page in a video's frames (`<folder>/<id>` for frames outside frames_hd) and names the boss; `tools/match_art.gd` names a monster from any crop; `tools/scan_tower_rooms.py` finds tower battles per floor and room and suggests enemy ids.
   - **Tickets:** 5 max, 1 every 2 h, refunded on a first clear, or bought for 30 gems. A floor entered on a bought ticket has a lower Drop List (as a player described). Unlocks after Moonlight Desert.
 - **Magic Stone icons** (`assets/stone_icons/`): the original artwork for all 10 types. Eight come from the M.Stone list in 1080p footage (`research/videos/frames_tower/icons/hd_up`); Steel and Spirit, whose stack counts overlap the art there, come from the 2015 Sky Tower Drop List upscaled 4× (Real-ESRGAN). `tools/stone_icons.gd` (`-- --src=<dir>`) removes the slot, badges and counts. Drawn smaller at low ranks, as in the original.
 - **Magic Stones** (`scripts/systems/magic_stones.gd`): 10 types, ranks E to S+, and I/II/III variants from rank B. Crafting, equipping and the 3rd slot use the wiki's costs.
+  - **Stone box:** starts at 24; the **+** on either stone page buys "Expand Stone Slots" (60 gems, +12, from footage). Stones show as stacks with counts. **Sell** (the original pot) opens `R_d_sellStone1` with a quantity picker on both the monster's Stone page and the hub **Craft M. Stone** page (selling from the hub page is new, not in the original). Craft M. Stone previews the stone you will make, shows "Can craft: N", and its ALL button filters by rank.
+- **Team presets:** 5 saved teams (Team 1–5 tabs on the Team screen and the Arena waiting room, which the original layouts already had); older saves with 3 get two empty ones added.
+- **Monster list filter** (not in the original): hold the sort button on the Team or Train list for Element (Fire/Water/Nature/Normal), Lv.30, +5, a name search and a **Family** sort (evolution lines grouped in Book order, base to final; tapping the sort button turns it off); a FILTER tag shows while one is on (kept until the game closes, off during the tutorial).
 - **Training** uses the wiki's exact tables:
   - the EXP table
   - Boost odds (80/40/20/10/5%), Boost PT and costs
@@ -101,14 +104,14 @@ godot --headless --path . res://tests/sim_battle.tscn               # balance re
   Coral, Hard ×70 → Turto Papa, Hell ×50 → Chibi Lorel, and Explore Halloween Island (Normal) 1 ×40 →
   energy (amount estimated at 20). Friends have the original **Send Friend Points** buttons (once per friend per day), which
   the "Send Friend Points." daily counts.
-- **2016 weekly events** (`data/events.json`, `scripts/systems/events.gd`): the 15 real "Weekly Events" calendars (4 Jul – 16 Oct 2016, from Nexon's Twitter and Facebook), repeated in order from midnight UTC, plus the Oct–Nov 2016 long events each year. They change gold, cube drops, XP, energy, boost chance/cost, fusion cost, Lv30 gems, friend points and awakening, and open Training/Treasure Island (event-only, as in 2016). Hot Time on the hub shows the next 7 days and which week of the 15 is running. Week 8 includes the 26–27 Aug 2016 make-up events (3x Friend Invite, 3x Gold Special Islands). Friend Invite events multiply the energy a new friend mails you (5 base). `--test-date=YYYY-MM-DD` fakes the date. **Deep Ocean Island** (Sundays; bosses from the wiki, rest estimated). **Elemental Island** (costs gems, Red Cube drops), **loading screens** with the original tips and monster quotes, a 3-slot team until Sprout Island, and unique species per team.
+- **2016 weekly events** (`data/events.json`, `scripts/systems/events.gd`): the 15 real "Weekly Events" calendars (4 Jul – 16 Oct 2016, from Nexon's Twitter and Facebook), repeated in order from midnight UTC, plus the Oct–Nov 2016 long events each year. They change gold, cube drops, XP, energy, boost chance/cost, fusion cost, Lv30 gems, friend points and awakening, and open Training/Treasure Island (event-only, as in 2016). Hot Time on the hub shows the next 7 days and which week of the 15 is running. Week 8 includes the 26–27 Aug 2016 make-up events (3x Friend Invite, 3x Gold Special Islands). Friend Invite events multiply the energy a new friend mails you (5 base). `--test-date=YYYY-MM-DD` fakes the date. **Deep Ocean Island** (Sundays; bosses from the wiki, rest estimated). **Elemental Island** (costs gems, Red Cube drops), **loading screens** with the original tips and monster quotes, a 3-slot team until Sprout Island, and unique species per team (squad and raid party show the original "Cannot select" popup). **Monthly Quest** (1-31 Aug): Dino-9 Normal becomes King CaoCao + 2 Volcanic Ape and drops CaoCao, as in Aug 2015.
 - **Raids** (`data/raids.json`, `scripts/systems/raids.gd`): the wiki's four (Mansion of Madness, Ruined Village, Beauty or the Beast, Pharaoh's Curse, with exact room line-ups), plus the four 2016 **Spirit raids** (Fire Spirit's Cave, Nature Spirit's Forest, Undine's Ocean, Volt's Castle), whose bosses are immune to status effects. Nature, Undine and Volt line-ups, bosses, drops and island art come from the 2016 raid videos (`tools/raid_scan.gd` matches the Stage popups against the icons, `tools/raid_island_art.gd` cuts the islands). Islands sit in chains until you spend the day's key on one (chain-break animation in `scripts/ui/raid_lock.gd`). You lock in 20 monsters and fight 12 rooms with parties of 5. HP and knock-outs carry over, bosses enrage every 20 s, and big gold, no EXP.
 - **Visit & duels** (`visit_screen.gd`, original `R_friendMain`): the Visit button on a friend (and on any arena leaderboard row) opens their island with their team, Team Rank/Type and last week's challenge rank. Friends can be challenged with Request duel: a 2:00 PvP battle with the duel HUD and pause ("Give up and leave duel?"), ending in "Match Won!"; the day's first win gives 10 FP. Friends only store a leader, so their other three monsters are generated from their name.
 - **Pause** uses the original `R_d_pause` variants: Pause → Stop Quest → "Give up any gold and cubes and leave?" for quests, "Give up and leave match?" for Arena/League, the duel version, and the Sky Tower forfeit.
 - **Hot Time:** the hub's HOT TIME! button opens the original "Hot time Benefits" list (`R_d_hotTime`) for today; This Week shows the weekly schedule.
 - **Messages** (`scripts/systems/mail.gd`, `scripts/ui/mail_box.gd`): the hub envelope opens the original `R_d_message` box (`R_messageSlotTM` for Team Monster, `R_messageSlotFr` for friends, max 50). Tap a gift to receive it (`R_d_message3`) or Receive All. A welcome gift arrives once, up to 5 friends send Friend Points each day, and PvP League season honour is delivered here. "NEW" shows on the envelope while mail is waiting.
 - **Grade sort** orders by the monster's class (S+ > S > A > B > C), then stars and level (Team, Train, Boost, League editor).
-- **Arena** (`scripts/systems/arena.gd`): a weekly ladder of 99 simulated rivals whose squads scale to yours. The enemy leader spends MP like a player. Tokens are 10 max, 1 every 10 min (or 1 gem). 51 entries a week pay 30 gems, the top 50% earn Honour, and the Honour Cube summons 4–6★. Battles last 2:00 with the original VS HUD; the Team 1–3 tabs on the VS page switch squads, and a 5 s PvP loading screen (`scripts/ui/loading_screen.gd`) plays after VS. Won battles end with a slow-motion final hit, and leaving any win shows a 5 s loading screen.
+- **Arena** (`scripts/systems/arena.gd`): a weekly ladder of 99 simulated rivals whose squads scale to yours. Rivals pick unique monsters weighted by how often each one shows up on other players' duel screens in footage (`data/arena_picks.json`; Pentacorn, Azurefang and Explodion lead the 6★). The enemy leader spends MP like a player. Tokens are 10 max, 1 every 60 min as in late 2015–2016 (or 1 gem, after the original "1 gem (Solo) / 10000 Gold (League)" notice). Solo battles use the purple bone cave (`arena_cave`), friend duels the lava cave (`duel_cave`). 51 entries a week pay 30 gems, the top 50% earn Honour, and the Honour Cube summons 4–6★. Battles last 2:00 with the original VS HUD; the Team 1–3 tabs on the VS page switch squads, and a 5 s PvP loading screen (`scripts/ui/loading_screen.gd`) plays after VS. Won battles end with a slow-motion final hit, and leaving any win shows a 5 s loading screen.
 
 ## What's reconstructed vs. original
 
@@ -116,18 +119,22 @@ These come straight from the original game, via the wiki and the APK: monster st
 
 Fitted to **gameplay footage** (OCR of 11,000+ walkthrough frames): gold, EXP and gem rewards, stages per quest, starting resources, and boost, fusion and evolution rules.
 
+Read from the original's native code (`research/libgame.so`, notes in `research/videos/findings.md`, scripts in `research/re_libgame`) and its `DuelInit.plist`: the damage formula `ATK x skill% x (1 - DEF / (DEF + 600))` with no random spread, crits at x2, heals from REC, damage over time every 1.5 s ignoring DEF, raw HP, MP starting full, 20% HP back between stages with buffs cleared, one monster attacking at a time, story enemies never landing crits, who attacks whom (leader keeps its target, the others pick at random, enemies go for the leader 30% of the time), how enemies choose and wind up skills, and where monsters stand for each team size.
+
 These are **our own tuning**, because the server-side numbers are lost:
 - enemy levels per stage and the wave composition
 - the drop rates
 - the exp curve and boost odds by star difference
-- the HP scaling (`BattleUnit.HP_SCALE`) and boss multipliers
+- the boss multipliers, and each monster's attack speed, crit rate and MP regen (per-monster values were server data)
 - MP regen rate and gacha odds
 
 The original only animated monsters with its own sprite animations, which were lost. Here, monsters are static cutouts with tween-based attack and hit animations.
 
 ## Tutorial
 
-A new account plays the original first-time tutorial, rebuilt from the TapGameplay walkthrough
+A new account names itself, then picks its first monster on the original `R_d_startMonster` screen
+(Pheona / Jellio / Dusa / Burdon, "?" opens the APK detail card with skill tips, "Are you sure?" confirm;
+Oct 2016 footage tDVCi74HsAs). The pick leads the team with Firepaw beside it. Then it plays the original first-time tutorial, rebuilt from the TapGameplay walkthrough
 (parts 1-2) frame by frame. All dialogue, boss lines, island texts and the test friend XiaNoro are
 in `data/tutorial.json`; `scripts/ui/tutorial.gd` plays it (dialogue band from `R_d_tutorial.xml`,
 "New Island!" card, dimmed focus steps with the bouncing APK pointer, Skip button). Chapters:
@@ -155,13 +162,18 @@ Monster cube lists the stage's monsters. `--test-autosay=<sec>` advances dialogu
 Also added for it: the ready page (`R_readyPage`), friends (`R_friendBackPage`, offline generated
 players, once-a-day borrow, friend points, Friendship Cube = 200 FP), the cube opening
 (`cube*_open_*` frames, rarity title, stars, NEW), the loading card (`battleLoadingPage2`), the
-"Quest Successful!" card (`R_d_reward`), tap-to-cast support skills, x1.0 / x1.4 speed (the original's two), the battle HUD from `battleBeta.xml` with the `battleIndicator*` HP bars, and team
+"Quest Successful!" card (`R_d_reward`), tap-to-cast support skills, x1.0 / fast speed (fast is x1.4 when playing by hand and x1.5 with Auto on, as in 2016 footage), Auto Repeat (`ID_BUTTON_AUTO_r_on/off` under Auto: after a story or special win it opens the cubes, presses Again and Go with the first free friend; it stops on a loss, no energy or a full box), the battle HUD from `battleBeta.xml` with the `battleIndicator*` HP bars, and team
 slots unlocking after Sprout-3 and Sprout-6.
 
 - `--test-newgame` fresh account · `--test-tutauto` plays the whole tutorial by itself (log lines
   start with `TUT`) · `--test-tutdone=intro,map` · `--test-cleared=sprout_island:3` ·
   `--test-reveal=<id>` · `--test-instawin`. Dev menu (F1) has Skip / Replay tutorial and +200 FP.
 - `tools/dialog_lines.ps1`, `tools/frame_sheet.ps1`: OCR dialogue lines / contact sheets from footage.
+- `tools/scan_special_drops.py`: reads special-island drop-list popups (grid fitted from the OK button, title bar
+  OCR'd on its own) and post-battle captures in all footage, and compares them with `data/special_islands.json`
+  (`research/videos/special_drops.md`).
+- `tools/scan_cube_ticker.py`: collects the hub ticker ("Obtained X from Cube / by Fusion / by Evolving") from all
+  footage OCR and checks it against the cube pools (`research/videos/cube_ticker.md`).
 
 ## Raid and Arena
 
@@ -171,9 +183,9 @@ PARTY, party of 5, "Stage n / 12" + GO, the 12-skull road; tap a skull for `R_d_
 Raid island art for Mansion / Ruined Village / Beauty from the wiki; spirit raids use the spirit's sprite.
 The hub's Arena opens `R_d_selectAnArena` (Arena / PvP League). Arena is `R_pvpEnterPage` (Overall / Friend
 rank, Weekly Match Info, 10 tickets, View Reward = `R_d_pvpRewardView`), then `R_pvpStartPage` vs a matched
-rival (the ticket is spent on matching; leaving the VS room or giving up in battle shows the original
+rival (Solo View Reward page 2 matches VTsRTlDRXXw: Entry Reward 30/25/20/15/10/5 gems, Lucky Chest Win1 1,000 energy / Win2 100,000 gold / Win3 Red Cube, each drawn with a 1% chance per week (odds invented), banner art cut from that video; the ticket is spent on matching; leaving the VS room or giving up in battle shows the original
 "Leaving now will be considered forfeit" notice and counts as a loss), and `R_d_pvpResult` (WIN / DRAW / LOSE) after the fight. Weekly honour follows the original table.
-PvP League (checked against 2015 footage): `R_pvpGroupEnterPage` waiting room (12 `R_pvpGroupSlot` cards, League
+PvP League (checked against 2015 footage) runs weekly themed seasons (`scripts/systems/league_seasons.gd`, reset Saturday midnight UTC like Solo; a 2016 stream is titled "weekly league"): each week has a name, island backdrop (also used behind both waiting rooms), Boosted League Monsters, rules and a team size. Six weeks are copied from footage: Sprout Island (8 vs 8, HP/REC/DEF modifiers), Desert Island, Dino Gorge, Robo Island, Volcano Isle (8 vs 8, Flame Steed +2500) and the 1 vs 1 League (one monster each, Mewer, "No Rule!!"); the other six are invented in the same style. View Reward is the original `R_d_pvpLegueRewardView` (title with dates, end date, rank table with badge/wing/Honor/gems: 1st 1,500/100 down to 76th–100th 150/15). Each League has its own badge (gold for 1st, silver for 2nd~3rd, bronze for 4th~10th, as in the original top three reward rows); the hub's rosette button opens the original Badge List (`R_BadgeBookPage`, gold/silver/bronze counts, badge points 3/2/1 invented) and `R_d_badgeView`. Badge art for Sprout, Desert, 1 vs 1, Dino Gorge, Robo and Volcano is cut from footage (`assets/badges`; Robo silver/bronze recoloured from gold); the six invented weeks use the APK's generic shields. Badges give no stats. The wing earned at the end of a season (K_rank_01–07 for 1st down to 51st–75th) is shown behind the element orb of every team monster's name on the hub (`B_monsterTag` ID_pvpRank), as in Jan 2016 footage. League battles use support skills only (no MP skills, as in the 1 vs 1 footage); the first support fires 75–160% of its cooldown in, and its name shows as a small caption under the caster. Tickets 1 per 30 min, Enter costs 2, or 10,000 gold with none. `R_pvpGroupEnterPage` waiting room (12 `R_pvpGroupSlot` cards, League
 Match Info, 10 tickets, Enter Arena = 2 tickets), `R_pvpGroupEditPage` (Remove / sort / Team Auto; tap a team slot,
 then a monster), `R_pvpStartPageGr` (their first 4 shown, 8 hidden), the 12-monster `R_d_pvpResult`, View All Rank
 (`R_d_pvpRankGr`) and View Reward (`R_d_pvpGroupRewardView`, honour 300/250/200/160/120/80/60/40 + badges).
@@ -183,7 +195,7 @@ then a monster), `R_pvpStartPageGr` (their first 4 shown, 8 hidden), the 12-mons
 
 `scripts/ui/screens/cubes_screen.gd` on the original `R_shopPage` (Hot / Cube / Energy / Gem / Gold /
 Misc / Honor tabs, `R_shopSlot` cards, `R_d_buy2` "Item purchase" box), checked against 2016 footage.
-Hot is the Mystery Box (`R_shopSlotLT`): featured + 4 monsters on gold stairs; Draw opens `R_d_lotteryTable` (featured monster on the gold stair, ticked once drawn; the 50 prizes shown as icons, dimmed until drawn, as in the 2015 videos XuRSRB_sws8 and n5dnu2B1vPw), and View Details opens `R_d_lotteryTableReward` (Total x/50, featured + 3). Random Pick 1 50 gems, Random Pick 10 500 gems. The banner's 5 monsters are fixed for the week; Reset Box ("Reset Box success.") refills the box with a different one of them as the featured monster and costs 200 gold doubling with every paid reset that week (6,400 → 12,800 → 25,600 in tMHf6pD2JiY), free once 30 are drawn (0 at 30+/50 in n5dnu2B1vPw). The box holds the featured monster, 4 other ★5-6 (the 3 under View Details), 5 ★5, 15 ★4 and 25 ★3, shuffled.
+Hot is the Mystery Box (`R_shopSlotLT`): featured + 4 monsters on gold stairs; Draw opens `R_d_lotteryTable` (featured monster on the gold stair, ticked once drawn; the 50 prizes shown as icons, dimmed until drawn, as in the 2015 videos XuRSRB_sws8 and n5dnu2B1vPw), and View Details opens `R_d_lotteryTableReward` (Total x/50, featured + 3). Random Pick 1 50 gems, Random Pick 10 500 gems. The banner's 5 monsters are fixed for the week; Reset Box ("Reset Box success.") refills the box with a different one of them as the featured monster and costs 100 gold doubling with every paid reset that week (100 and 200 in RYKrWYyQHx4/9vQhHHu8btA, 6,400 → 12,800 → 25,600 in tMHf6pD2JiY, up to 102,400), free once 30 are drawn (0 at 30+/50 in n5dnu2B1vPw). The box holds the featured monster, 4 other ★5-6 (the 3 under View Details), 5 ★5, 15 ★4 and 25 ★3, shuffled.
 Earned cubes open free at the front of the Cube tab. Misc sells box slots and 2× EXP / Drop boosts
 (`Save.add_item_boost`); Honor has the weekly Special Monster ★5 / Material ★5 / Monster ★4. Gem packs
 are shown but can't be bought offline. Debug: `--arg=tab:cube --arg=buy:blue` presses a card.
@@ -227,13 +239,19 @@ attendance (`R_d_attendance`), Adventure map and stage lists (`R_islandChoicePag
 
 ## Not yet done
 
-- Remaining screens still use the code-built UI: Store, Monster Book, Sky Tower, Magic Stones,
-  battle HUD and result dialogs, training dialogs, title (layouts exist for all)
-- 12 monster portraits are still missing (7 were recovered from footage loading screens; `tools/frame_portraits.gd`)
-- Friendship Island (needs FP from friends)
+- Every screen runs on the original layouts. Popups with no original layout (Sky Tower floor-clear list, stone-type
+  choice, Credits, Profile Picture) are assembled from the original popup pieces (`UI.dialog`: 9_Back_19 frame,
+  9_frame_04 title tab or the K_ribon_01 ribbon, 9_Back_01 panel); yes/no questions use R_d_conform_2button
+- Monsters are still single images: idle breathing, the attack dash and 1v1 spacing are measured from footage
+  (findings.md "Battle motion"), but the original per-part animations are lost. Battle sprites draw through
+  `scripts/ui/body_warp.gdshader` (feet-anchored bend, squash and spring wobble) for idle (1.0 s breath, slowed
+  from the 0.73 s in footage by choice), walk, attack dash, hit, cast, death and revive. `tests/anim_preview.tscn`
+  compares the old rigid motion with the warp
+- Every monster has battle art and a card. 11 have no framed loading-screen portrait (unused in game; `tools/frame_portraits.gd`
+  recovers them from footage), and Drakan / Ultraroost cards use their battle art instead of a 92px icon.
 - `tools/install_manual.py [dir]` installs hand-cut art from Desktop/ManualAssets (Monsters -> assets/monsters_cut,
   pets -> assets/pets, Mstones `<grade><colour>stone.png` -> assets/stone_icons/<type>_<grade>.png).
-- `tools/patch_islands.py` / `tools/patch_specials.py` apply footage corrections to the island data (re-run after build_db.gd).
+- `tools/patch_islands.py` / `tools/patch_specials.py` apply footage corrections to the island data (re-run after build_db.gd). `tools/patch_footage_lines.py` adds special-island boss lines, footage bosses and drop lists, raid descriptions and raid room lines (`raids.json` "lines", spoken at the start of that room); run it after patch_specials.py. `tools/make_map_art.py` redraws the map's dotted paths and gold name banner (CDN-only images) from a footage frame. `tools/make_icons.py <id>...` builds a card icon for a monster that has none. `tools/patch_tower_rooms.py` sets Sky Tower enemy pools, bosses and drop lists read from footage. `tools/fix_wiki_data.py` also estimates missing Lv1/Lv30 stats from the closest same-grade monsters and marks them `stats_estimated`.
   `tools/segment_stages.py`, `tools/boss_sheets.ps1`, `tools/icon_sheet.py`, `tools/find_dialogue.py` and
   `tools/location_check.py` help verify stages against walkthrough footage and wiki locations.
 - `tools/cut_sfx.ps1 <video id> <start> <len> <name>` cuts and normalises a sound into assets/sfx.

@@ -4,11 +4,22 @@ extends RefCounted
 signal battle_event(e: Dictionary)
 
 const MP_REGEN := 8.0
-const DOT_TICK := 1.0
-const SHIELD_PER_STAGE := 0.08
-const DEF_FACTOR := 0.5
+const DOT_TICK := 1.5
+const DOT_PER_STAGE := 0.09
+const POISON_PER_STAGE := 0.015
+const SHIELD_PER_STAGE := 0.1
+const DEF_HALF := 600.0
+const START_MP := 1.0
+const PVP_HP_WEIGHT := 3.0
+const LEADER_TARGET_PRIORITY := 0.3
+const WIND_UP_PER_MP := 0.1
+const BOSS_ALERT := 2.0
+const AI_WEIGHT_ATTACK := 50
+const AI_WEIGHTS := {"damage": 50, "buff": 100, "debuff": 100, "dot": 50, "stun": 50, "silence": 50, "time_bomb": 50, "shield": 50, "reflect": 50, "lifesteal": 50, "immune": 50, "provoke": 50}
 const ENEMY_SKILL_INTERVAL := Vector2(7.0, 11.0)
 const BOSS_SKILL_INTERVAL := Vector2(5.0, 8.0)
+const SUPPORT_START := Vector2(0.4, 0.8)
+const LEAGUE_SUPPORT_START := Vector2(0.75, 1.6)
 const TIME_LIMIT := 900.0
 const BOSS_HP_MULT := 2.0
 const BOSS_ATK_MULT := 1.15
@@ -16,7 +27,10 @@ const FEVER_MAX := 100.0
 const FEVER_PER_HIT := 0.25
 const FEVER_PER_SKILL_HIT := 6.0
 const FEVER_SECONDS := 10.0
-const WAVE_HEAL := 0.1
+const ATTACK_LOCK_RANGED := 0.6
+const ATTACK_LOCK_MELEE := 0.9
+const LEADER_OPEN := 0.3
+const WAVE_HEAL := 0.2
 
 var allies: Array[BattleUnit] = []
 var enemies: Array[BattleUnit] = []
@@ -46,6 +60,7 @@ var enemy_mp := 0.0
 var enemy_max_mp := 100.0
 var enemy_mp_regen := 1.0
 var league := false
+var season: Dictionary = {}
 var ally_bench: Array = []
 var enemy_bench: Array = []
 var ally_total := 0
@@ -57,6 +72,8 @@ var infinite_mp := false
 var _rng := RandomNumberGenerator.new()
 var _dot_clock := 0.0
 var _wave_delay := 0.0
+var _attack_lock := 0.0
+var _attack_queue: Array[BattleUnit] = []
 var hold := 0.0
 
 
@@ -71,19 +88,28 @@ func setup(team: Array, wave_specs: Array, seed_value: int = 0) -> void:
 		u.is_leader = i == 0
 		_apply_stones(u, t.get("stones", {}))
 		_apply_pet_stats(u, t.get("pet", {}))
-		u.support_timer = float(u.support.get("cooldown", 12.0)) * _rng.randf_range(0.4, 0.8)
+		_apply_season(u)
+		u.support_timer = _support_start(u)
 		u.attack_timer = _rng.randf_range(0.2, 0.8)
 		allies.append(u)
 	_apply_passives(allies)
 	_apply_pet_passives(allies, team)
+	if pvp:
+		for u in allies:
+			_pvp_weight(u)
 	for i in team.size():
 		if team[i].has("hp_ratio"):
 			allies[i].hp = allies[i].max_hp * clampf(float(team[i].hp_ratio), 0.01, 1.0)
 	var leader := allies[0]
 	max_mp = float(DB.monster(leader.monster_id).stats.mp) + leader.extra_max_mp
-	mp = max_mp * 0.3
+	mp = max_mp * START_MP
 	waves = wave_specs
 	_next_wave()
+
+
+func _support_start(u: BattleUnit) -> float:
+	var r := LEAGUE_SUPPORT_START if league else SUPPORT_START
+	return float(u.support.get("cooldown", 12.0)) * _rng.randf_range(r.x, r.y)
 
 
 func leader() -> BattleUnit:
@@ -132,13 +158,12 @@ func step(dt: float) -> void:
 		for u in allies + enemies:
 			_tick_dots(u)
 
+	var gauges_run := _attack_lock <= 0.0
+	_attack_lock = maxf(0.0, _attack_lock - dt)
 	for u in allies:
 		if not u.can_act():
 			continue
-		u.attack_timer -= dt
-		if u.attack_timer <= 0.0:
-			u.attack_timer += u.attack_interval()
-			_basic_attack(u)
+		_fill_gauge(u, dt, gauges_run)
 		if (league or not u.is_leader) and u.can_cast():
 			var was_ready := u.support_timer <= 0.0
 			u.support_timer -= dt
@@ -156,10 +181,7 @@ func step(dt: float) -> void:
 			_tick_traits(u, dt)
 		if not u.can_act():
 			continue
-		u.attack_timer -= dt
-		if u.attack_timer <= 0.0:
-			u.attack_timer += u.attack_interval()
-			_basic_attack(u)
+		_fill_gauge(u, dt, gauges_run)
 		if pvp:
 			if (league or not u.is_leader) and u.can_cast():
 				u.support_timer -= dt
@@ -167,12 +189,12 @@ func step(dt: float) -> void:
 					u.support_timer = float(u.support.get("cooldown", 12.0)) * u.cooldown_mult
 					_cast(u, u.support, "support")
 			continue
-		if u.can_cast() and not u.skills.is_empty():
-			u.skill_timer -= dt
-			if u.skill_timer <= 0.0:
-				var r := BOSS_SKILL_INTERVAL if u.is_boss else ENEMY_SKILL_INTERVAL
-				u.skill_timer = _rng.randf_range(r.x, r.y)
-				_cast(u, u.skills[_rng.randi() % u.skills.size()], "enemy_skill")
+		u.skill_timer -= dt
+
+	if _attack_lock <= 0.0:
+		var next := _pop_attacker()
+		if next != null:
+			_take_turn(next)
 
 	if auto_skills and not league:
 		_auto_cast()
@@ -182,6 +204,103 @@ func step(dt: float) -> void:
 		_league_reinforce()
 
 	_check_end()
+
+
+func _fill_gauge(u: BattleUnit, dt: float, running: bool) -> void:
+	if running and u.attack_timer > 0.0:
+		u.attack_timer -= dt
+	if u.attack_timer <= 0.0 and not _attack_queue.has(u):
+		_attack_queue.append(u)
+
+
+func _pop_attacker() -> BattleUnit:
+	while not _attack_queue.is_empty():
+		var u: BattleUnit = _attack_queue.pop_front()
+		if u.can_act() and (allies.has(u) or enemies.has(u)):
+			return u
+	return null
+
+
+func _take_turn(u: BattleUnit) -> void:
+	var skill := u.planned
+	u.planned = {}
+	if not skill.is_empty() and u.can_cast():
+		var r := BOSS_SKILL_INTERVAL if u.is_boss else ENEMY_SKILL_INTERVAL
+		u.skill_timer = _rng.randf_range(r.x, r.y)
+		_attack_lock = ATTACK_LOCK_RANGED
+		_cast(u, skill, "enemy_skill")
+	else:
+		_attack_lock = ATTACK_LOCK_RANGED if u.ranged else ATTACK_LOCK_MELEE
+		_basic_attack(u)
+	u.attack_timer = u.attack_interval() + _rng.randf_range(0.0, BattleUnit.ATTACK_DELAY_MAX)
+	if u.side == BattleUnit.ENEMY and not pvp and u.alive():
+		_plan_enemy(u)
+
+
+func _plan_enemy(u: BattleUnit) -> void:
+	if u.skills.is_empty() or u.skill_timer > 0.0 or not u.can_cast():
+		return
+	var picks: Array = [{}]
+	var weights: Array = [AI_WEIGHT_ATTACK]
+	for s in u.skills:
+		var w := _skill_weight(u, s)
+		if w > 0:
+			picks.append(s)
+			weights.append(w)
+	var total := 0
+	for w in weights:
+		total += int(w)
+	var roll := int(_rng.randf() * total)
+	var pick: Dictionary = {}
+	for i in picks.size():
+		roll -= int(weights[i])
+		if roll < 0:
+			pick = picks[i]
+			break
+	if pick.is_empty():
+		return
+	u.planned = pick
+	u.attack_timer = maxf(float(pick.get("mp", 0)) * WIND_UP_PER_MP, BOSS_ALERT if u.is_boss else 0.0)
+	_emit({"kind": "wind_up", "unit": u, "skill": pick, "time": u.attack_timer})
+
+
+func _skill_weight(u: BattleUnit, skill: Dictionary) -> int:
+	var effects: Array = skill.get("effects", [])
+	if effects.is_empty() or _wasted(u, skill):
+		return 0
+	var mine := living(u.side)
+	var foes := living(BattleUnit.PLAYER if u.side == BattleUnit.ENEMY else BattleUnit.ENEMY)
+	match String(effects[0].type):
+		"heal":
+			var low := 100.0
+			for a in mine:
+				low = minf(low, a.hp_ratio() * 100.0)
+			return maxi(0, 50 - int(low) * 3)
+		"dispel", "shield_break":
+			for f in foes:
+				if f.shield > 0.0 or f.statuses.any(func(x): return x.type in ["buff", "reflect", "immune"]):
+					return 100
+			return 0
+		"cleanse":
+			for a in mine:
+				if a.statuses.any(func(x): return x.type in ["debuff", "dot", "stun", "silence", "time_bomb"]):
+					return 100
+			return 0
+		"revive":
+			return 100
+	return int(AI_WEIGHTS.get(String(effects[0].type), 50))
+
+
+func _open_wave() -> void:
+	_attack_queue.clear()
+	_attack_lock = 0.0
+	var lead := leader()
+	if lead == null or not lead.alive():
+		return
+	for u in allies + enemies:
+		if u != lead and u.alive():
+			u.attack_timer = maxf(u.attack_timer, LEADER_OPEN + _rng.randf_range(0.2, 0.9))
+	lead.attack_timer = LEADER_OPEN
 
 
 func cast_leader_skill(index: int) -> bool:
@@ -265,6 +384,8 @@ func _next_wave() -> void:
 	if wave_index > 0 and wave_heal > 0.0:
 		for a in living(BattleUnit.PLAYER):
 			a.hp = minf(a.max_hp, a.hp + a.max_hp * wave_heal)
+			a.statuses.clear()
+			a.shield = 0.0
 	var specs: Array = waves[wave_index]
 	for i in specs.size():
 		var s: Dictionary = specs[i]
@@ -273,7 +394,8 @@ func _next_wave() -> void:
 		if pvp:
 			u.is_leader = i == 0
 			_apply_stones(u, s.get("stones", {}))
-			u.support_timer = float(u.support.get("cooldown", 12.0)) * _rng.randf_range(0.4, 0.8)
+			_apply_season(u)
+			u.support_timer = _support_start(u)
 		if u.is_boss:
 			u.max_hp *= BOSS_HP_MULT
 			u.hp = u.max_hp
@@ -292,8 +414,11 @@ func _next_wave() -> void:
 		enemies.append(u)
 	if pvp and not enemies.is_empty():
 		_apply_passives(enemies)
+		for u in enemies:
+			_pvp_weight(u)
 		enemy_max_mp = float(DB.monster(enemies[0].monster_id).stats.mp) + enemies[0].extra_max_mp
-		enemy_mp = enemy_max_mp * 0.3
+		enemy_mp = enemy_max_mp * START_MP
+	_open_wave()
 	_emit({"kind": "wave", "index": wave_index, "count": waves.size()})
 
 
@@ -350,7 +475,7 @@ func _cast(caster: BattleUnit, skill: Dictionary, source: String) -> void:
 				_add_status(caster, {"type": "lifesteal", "pct": float(e.pct), "time": float(e.duration)})
 			"shield":
 				for t in targets:
-					t.shield = maxf(t.shield, caster.max_hp * SHIELD_PER_STAGE * float(e.stage) + caster.stat("rec") * float(e.stage))
+					t.shield = maxf(t.shield, caster.max_hp * SHIELD_PER_STAGE * float(e.stage))
 					t.shield_time = float(e.duration)
 					_emit({"kind": "status", "unit": t, "status": "shield"})
 			"buff":
@@ -416,11 +541,11 @@ func _deal_damage(attacker: BattleUnit, target: BattleUnit, mult: float, source:
 	if not target.alive():
 		return 0.0
 	var raw := attacker.stat("atk") * mult * DB.element_mult(attacker.element, target.element)
-	var crit := _rng.randf() < attacker.stat("crit")
+	var crit := (pvp or attacker.side == BattleUnit.PLAYER) and _rng.randf() < attacker.stat("crit")
 	if crit:
 		raw *= 1.0 + attacker.stat("crit_dmg")
-	raw *= _rng.randf_range(0.92, 1.08)
-	var dmg := maxf(1.0, raw - target.stat("def") * DEF_FACTOR)
+	var def := maxf(0.0, target.stat("def"))
+	var dmg := maxf(1.0, raw * (1.0 - def / (def + DEF_HALF)))
 	var absorbed := 0.0
 	if target.side == BattleUnit.PLAYER and fever_enabled and not fever_active:
 		fever = minf(FEVER_MAX, fever + (FEVER_PER_HIT if source == "attack" else FEVER_PER_SKILL_HIT))
@@ -428,8 +553,9 @@ func _deal_damage(attacker: BattleUnit, target: BattleUnit, mult: float, source:
 		absorbed = minf(target.shield, dmg)
 		target.shield -= absorbed
 		dmg -= absorbed
+	var before := target.hp
 	target.hp = maxf(0.0, target.hp - dmg)
-	_emit({"kind": "damage", "unit": target, "from": attacker, "amount": dmg, "absorbed": absorbed, "crit": crit, "source": source})
+	_emit({"kind": "damage", "unit": target, "from": attacker, "amount": dmg, "lost": before - target.hp, "absorbed": absorbed, "crit": crit, "source": source})
 	var reflect := target.status_value("reflect", "pct")
 	if reflect > 0.0 and attacker.alive() and source != "reflect":
 		var back := dmg * reflect
@@ -447,7 +573,7 @@ func _heal(caster: BattleUnit, target: BattleUnit, mult: float, source: String) 
 	if amount <= 0.0:
 		return
 	target.hp += amount
-	_emit({"kind": "heal", "unit": target, "amount": amount, "source": source})
+	_emit({"kind": "heal", "unit": target, "amount": amount, "source": source, "from": caster})
 
 
 func _check_death(u: BattleUnit) -> void:
@@ -472,10 +598,10 @@ func _add_status(u: BattleUnit, s: Dictionary) -> void:
 		var o: Dictionary = u.statuses[i]
 		if o.type == s.type and o.get("stat", "") == s.get("stat", "") and o.get("kind", "") == s.get("kind", ""):
 			u.statuses[i] = s
-			_emit({"kind": "status", "unit": u, "status": s.type})
+			_emit({"kind": "status", "unit": u, "status": s.type, "stat": s.get("stat", ""), "fresh": false})
 			return
 	u.statuses.append(s)
-	_emit({"kind": "status", "unit": u, "status": s.type})
+	_emit({"kind": "status", "unit": u, "status": s.type, "stat": s.get("stat", ""), "fresh": true})
 
 
 func _tick_statuses(u: BattleUnit, dt: float) -> void:
@@ -503,15 +629,22 @@ func _tick_dots(u: BattleUnit) -> void:
 	for s in u.statuses:
 		if s.type != "dot":
 			continue
-		var dmg := float(s.power) * 0.06 * float(s.stage)
+		var dmg := float(s.power) * DOT_PER_STAGE * float(s.stage)
 		if s.kind == "poison":
-			dmg = maxf(dmg, u.max_hp * 0.01 * float(s.stage))
+			dmg = maxf(dmg, u.max_hp * POISON_PER_STAGE * float(s.stage))
 		u.hp = maxf(0.0, u.hp - dmg)
 		_emit({"kind": "damage", "unit": u, "from": null, "amount": dmg, "absorbed": 0.0, "crit": false, "source": s.kind})
 	_check_death(u)
 
 
-func _pick_enemy_of(u: BattleUnit) -> BattleUnit:
+func team_target() -> BattleUnit:
+	var lead := leader()
+	if lead == null:
+		return null
+	return _sticky_target(lead)
+
+
+func _sticky_target(u: BattleUnit) -> BattleUnit:
 	var foes := living(BattleUnit.ENEMY if u.side == BattleUnit.PLAYER else BattleUnit.PLAYER)
 	if foes.is_empty():
 		return null
@@ -519,10 +652,25 @@ func _pick_enemy_of(u: BattleUnit) -> BattleUnit:
 		if f.has_status("provoke"):
 			return f
 	if u.side == BattleUnit.PLAYER and focus != null and focus.alive():
-		return focus
-	if u.side == BattleUnit.PLAYER:
-		foes.sort_custom(func(a, b): return a.hp < b.hp)
-		return foes[0]
+		u.target = focus
+	if u.target == null or not u.target.alive() or not foes.has(u.target):
+		u.target = foes[_rng.randi() % foes.size()]
+	return u.target
+
+
+func _pick_enemy_of(u: BattleUnit) -> BattleUnit:
+	if u.is_leader:
+		return _sticky_target(u)
+	var foes := living(BattleUnit.ENEMY if u.side == BattleUnit.PLAYER else BattleUnit.PLAYER)
+	if foes.is_empty():
+		return null
+	for f in foes:
+		if f.has_status("provoke"):
+			return f
+	if u.side == BattleUnit.ENEMY and not pvp:
+		var lead := leader()
+		if lead != null and lead.alive() and _rng.randf() < LEADER_TARGET_PRIORITY:
+			return lead
 	return foes[_rng.randi() % foes.size()]
 
 
@@ -663,6 +811,16 @@ func _emit(e: Dictionary) -> void:
 	battle_event.emit(e)
 
 
+func _pvp_weight(u: BattleUnit) -> void:
+	u.max_hp *= PVP_HP_WEIGHT
+	u.hp = u.max_hp
+
+
+func _apply_season(u: BattleUnit) -> void:
+	if not season.is_empty():
+		LeagueSeasons.apply(u, season)
+
+
 func _apply_stones(u: BattleUnit, b: Dictionary) -> void:
 	if b.is_empty():
 		return
@@ -724,6 +882,7 @@ func _tick_traits(u: BattleUnit, dt: float) -> void:
 func _apply_pet_stats(u: BattleUnit, pet: Dictionary) -> void:
 	if pet.is_empty():
 		return
+	u.pet_id = String(pet.get("id", ""))
 	var st: Dictionary = pet.stats
 	u.max_hp += float(st.get("hp", 0)) * BattleUnit.HP_SCALE
 	u.hp = u.max_hp
@@ -751,8 +910,9 @@ func _apply_pet_passives(units: Array, team: Array) -> void:
 					u.base[p.stat] *= 1.0 + float(p.pct)
 
 
-func setup_league(team: Array, enemy_team: Array, seed_value: int = 0) -> void:
+func setup_league(team: Array, enemy_team: Array, seed_value: int = 0, league_season: Dictionary = {}) -> void:
 	league = true
+	season = league_season
 	pvp = true
 	time_limit = 120.0
 	ally_total = team.size()
@@ -777,6 +937,8 @@ func _league_reinforce() -> void:
 			var u := BattleUnit.create(side, i, s.id, int(s.level), int(s.get("boost", 0)))
 			_apply_stones(u, s.get("stones", {}))
 			_apply_pet_stats(u, s.get("pet", {}))
+			_apply_season(u)
+			_pvp_weight(u)
 			u.support_timer = float(u.support.get("cooldown", 12.0)) * _rng.randf_range(0.3, 0.6)
 			u.attack_timer = _rng.randf_range(0.3, 0.8)
 			field[i] = u

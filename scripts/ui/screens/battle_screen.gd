@@ -1,30 +1,75 @@
-extends Screen
+﻿extends Screen
 
-const ALLY_SPOTS := [Vector2(450, 320), Vector2(290, 205), Vector2(160, 330), Vector2(290, 445)]
-const ALLY_SPOTS_5 := [Vector2(460, 320), Vector2(305, 195), Vector2(165, 270), Vector2(165, 400), Vector2(305, 455)]
+const ALLY_SPOTS := [Vector2(373, 316), Vector2(252, 184), Vector2(137, 326), Vector2(245, 470)]
+const ALLY_SPOTS_5 := [Vector2(432, 320), Vector2(286, 195), Vector2(155, 270), Vector2(155, 400), Vector2(286, 455)]
 const ENEMY_LAYOUTS := [
-	[Vector2(782, 293)],
-	[Vector2(799, 209), Vector2(897, 395)],
-	[Vector2(782, 293), Vector2(942, 182), Vector2(942, 413)],
-	[Vector2(782, 293), Vector2(915, 178), Vector2(1048, 293), Vector2(915, 417)],
-	[Vector2(782, 306), Vector2(888, 182), Vector2(1039, 244), Vector2(1039, 400), Vector2(888, 457)],
-	[Vector2(755, 240), Vector2(755, 391), Vector2(888, 164), Vector2(888, 315), Vector2(888, 466), Vector2(1030, 240), Vector2(1030, 391)],
+	[Vector2(734, 293)],
+	[Vector2(750, 209), Vector2(842, 395)],
+	[Vector2(734, 293), Vector2(884, 182), Vector2(884, 413)],
+	[Vector2(734, 293), Vector2(859, 178), Vector2(983, 293), Vector2(859, 417)],
+	[Vector2(734, 306), Vector2(833, 182), Vector2(975, 244), Vector2(975, 400), Vector2(833, 457)],
+	[Vector2(708, 240), Vector2(708, 391), Vector2(833, 164), Vector2(833, 315), Vector2(833, 466), Vector2(967, 240), Vector2(967, 391)],
 ]
-const ENEMY_SPOTS_4 := [Vector2(782, 293), Vector2(915, 178), Vector2(1048, 293), Vector2(915, 417)]
-const BOSS_SPOT := Vector2(773, 298)
+const BOSS_SPOT := Vector2(725, 298)
 const BOSS_MINION_LAYOUTS := [
-	[Vector2(986, 293)],
-	[Vector2(942, 169), Vector2(942, 435)],
-	[Vector2(924, 164), Vector2(924, 440), Vector2(1057, 302)],
-	[Vector2(906, 164), Vector2(1048, 240), Vector2(1048, 395), Vector2(906, 453)],
-	[Vector2(888, 151), Vector2(888, 457), Vector2(986, 266), Vector2(986, 391), Vector2(1075, 169), Vector2(1075, 320), Vector2(1075, 471)],
+	[Vector2(925, 293)],
+	[Vector2(884, 169), Vector2(884, 435)],
+	[Vector2(867, 164), Vector2(867, 440), Vector2(992, 302)],
+	[Vector2(850, 164), Vector2(983, 240), Vector2(983, 395), Vector2(850, 453)],
+	[Vector2(833, 151), Vector2(833, 457), Vector2(925, 266), Vector2(925, 391), Vector2(1009, 169), Vector2(1009, 320), Vector2(1009, 471)],
 ]
+const DUEL_INIT_USER := {
+	1: [Vector2(308, 224)],
+	2: [Vector2(347, 208), Vector2(177, 343)],
+	3: [Vector2(375, 257), Vector2(197, 143), Vector2(197, 387)],
+	4: [Vector2(375, 257), Vector2(248, 114), Vector2(140, 257), Vector2(248, 405)],
+	5: [Vector2(375, 257), Vector2(284, 114), Vector2(140, 179), Vector2(140, 331), Vector2(284, 405)],
+}
+const DUEL_INIT_ENEMY := {
+	1: [Vector2(812, 224)],
+	2: [Vector2(774, 208), Vector2(944, 343)],
+	3: [Vector2(745, 257), Vector2(924, 387), Vector2(923, 142)],
+	4: [Vector2(745, 257), Vector2(872, 405), Vector2(980, 257), Vector2(872, 114)],
+	5: [Vector2(745, 257), Vector2(836, 405), Vector2(980, 331), Vector2(980, 179), Vector2(836, 114)],
+}
+const DUEL_INIT_H := 640.0
+const ENEMY_SHIFT := -13.0
+const PVP_MIRROR := 1107.0
+const DUEL_SPOT := Vector2(280, 316)
+const PVP_SCALE := 0.88
+const LEADER_BOX := Vector2(165, 145)
+const ALLY_BOX := Vector2(125, 110)
+const SHOOT_AT := 0.2
+const CUT_IN := 0.75
+const ULTIMATE_MP := 150.0
+const BAND_FILL := 352.0 / 680.0
+const BAND_MID := 351.5 / 680.0
+const BASIC_HIT_DB := -7.0
+const MELEE_CONTACT := 0.12
+const FEVER_GLOW := 128.0 / 46.0
 const INTRO_WALK := 1.3
 const WAVE_WALK := 0.6
 const BOX_GROUND_TIME := 1.2
-const SPEEDS := [1.0, 1.5]
+const SPEEDS := [1.0, 1.4]
+const AUTO_FAST := 1.5
+const AUTO_REPEAT_WAIT := 3.0
+const AUTO_REPEAT_REVEAL := 3.0
 const CONTINUE_GEMS := 10
 const MAX_STEP := 0.05
+const REWARD_CUBE_ROW := 4
+const BADGE_SIZE := 34.0
+const BADGE_POP := 1.2
+const BADGE_BIG := 1.0
+const SUPPORT_QUEUE_MS := 1000
+const BADGE_DIM := 0.62
+const BADGE_GLOW := 3.3
+const BADGE_BURST := 3.5
+const REWARD_STEP := 0.0228
+const REWARD_POP := [0.0, 0.78, 0.91, 1.035, 0.98, 0.92, 0.875, 0.89, 0.94, 0.98, 0.97, 0.95, 0.935, 0.95, 0.97, 0.99, 1.0]
+const REWARD_RIBBON := [Vector2(1.0, 1.067), Vector2(0.517, 1.279), Vector2(0.67, 1.173), Vector2(0.806, 1.077), Vector2(0.943, 0.99),
+	Vector2(1.094, 0.885), Vector2(1.234, 0.788), Vector2(1.159, 0.865), Vector2(1.103, 0.923), Vector2(1.051, 0.981), Vector2(0.979, 1.038),
+	Vector2(0.963, 1.048), Vector2(0.987, 1.029), Vector2(1.005, 1.0), Vector2(1.028, 0.971), Vector2(1.047, 0.942), Vector2(1.035, 0.962),
+	Vector2(1.021, 0.981), Vector2(1.003, 1.0), Vector2(0.987, 1.01), Vector2(0.983, 1.0), Vector2(0.992, 1.0), Vector2(0.998, 1.0), Vector2.ONE]
 
 var engine: BattleEngine
 var island: Dictionary
@@ -48,14 +93,23 @@ var _speed_index := 0
 var _paused := false
 var _finished := false
 var _last_hit_sound := 0.0
+var _cast_skill: Dictionary = {}
+var _fx_skill: Dictionary = {}
+var _fx_lead: Dictionary = {}
+var _hit_due: Dictionary = {}
+var _clock := 0.0
 var _gold_label: Label
 var _rewards: Dictionary = {}
 var _gold_collected := 0
 var _gold_per_kill := 0
 var _enemies_left := 0
 var _fever_bar: Range
+var _fever_flames: Array = []
+var _fever_bar_fx: FrameFx
 var _fever_label: Label
 var _fever_button: BaseButton
+var _fever_glow: FrameFx
+var _fever_stage := 0
 var _tower_stones: Array = []
 var _box_at: Dictionary = {}
 var _kill_count := 0
@@ -67,6 +121,8 @@ var _live_drops: Array = []
 var _friend: Dictionary = {}
 var _tut_paused := false
 var _ready_badges: Dictionary = {}
+var _skill_badges: Dictionary = {}
+var _support_queue: Dictionary = {}
 var _hints: Array = []
 var _boss_spoken := false
 var _victory_pending := false
@@ -77,6 +133,8 @@ var _bg_x := 0.0
 var _ground_boxes: Array = []
 var _boxes_in_air := 0
 var _cleared := false
+var _repeat_popup: Control
+var _win_repeat: Callable
 
 
 func build() -> void:
@@ -169,20 +227,33 @@ func build() -> void:
 			_drop_quest.first_clear_drop = true
 		_drop_state = StageBuilder.drop_state(_drop_quest)
 	if quest.kind == "league":
-		engine.setup_league(quest.league_team, quest.league_enemy)
+		engine.setup_league(quest.league_team, quest.league_enemy, 0, LeagueSeasons.season(int(quest.season)) if quest.has("season") else {})
 	else:
 		engine.setup(team, waves)
-	var spots: Array = ALLY_SPOTS_5 if engine.allies.size() > 4 else ALLY_SPOTS
+	var ids := {}
 	for u in engine.allies:
-		_add_view(u, spots[u.slot], Vector2(165, 145) if u.is_leader else Vector2(125, 110))
+		ids[u.monster_id] = true
+	for sp in quest.get("league_enemy", []) + waves.reduce(func(a, w): return a + w, []):
+		if sp is Dictionary and String(sp.get("id", "")) != "":
+			ids[String(sp.id)] = true
+	Preloader.request(SkillFx.battle_paths(ids.keys()) + Preloader.monster_paths(ids.keys(), true) + Sfx.battle_paths(quest, String(island.id)) + Layout.image_paths(["battleIndicatorNormal", "battleIndicatorBoss", "R_d_fieldFailure", "R_d_reward", "R_d_pvpResult", "R_d_pause", "R_d_giveUp"]))
+	var spots: Array = ALLY_SPOTS_5 if engine.allies.size() > 4 else ALLY_SPOTS
+	var own: Array = DUEL_INIT_USER.get(engine.allies.size(), [])
+	for u in engine.allies:
+		var box: Vector2 = LEADER_BOX if u.is_leader else ALLY_BOX
+		var spot: Vector2 = spots[u.slot]
+		if not engine.pvp and u.slot < own.size():
+			spot = _feet_spot(own[u.slot], box, 0.0)
+		_add_view(u, DUEL_SPOT if _duel() else spot, box)
 	_refresh_hud()
 	_show_loading()
 
 
 func _process(delta: float) -> void:
+	_clock += delta
 	if _finished or _paused or _tut_paused:
 		return
-	var remaining: float = delta * SPEEDS[_speed_index]
+	var remaining: float = delta * _speed()
 	while remaining > 0.0 and engine.result == "":
 		var dt := minf(MAX_STEP, remaining)
 		engine.step(dt)
@@ -216,43 +287,105 @@ func tutorial_event_started(name: String) -> void:
 
 
 func _refresh_ready_badges() -> void:
-	for u in engine.allies:
+	var target := engine.team_target() if engine.result == "" else null
+	for u in engine.enemies:
+		var ev: BattleUnitView = views.get(u)
+		if ev != null:
+			ev.set_charge(_charge(u))
+			ev.set_targeted(u == target)
+	for u in engine.allies + engine.enemies:
 		var v: BattleUnitView = views.get(u)
-		if v == null:
+		if v == null or (u.side == BattleUnit.ENEMY and not engine.pvp):
+			continue
+		if u.side == BattleUnit.PLAYER:
+			v.set_charge(_charge(u))
+		if u.is_leader or u.support.is_empty():
 			continue
 		var ready := engine.support_ready(u)
-		v.set_charge(_charge(u, ready))
-		var badge: TextureRect = _ready_badges.get(u)
-		if ready and badge == null:
-			var sup: Dictionary = u.support
+		var badge: TextureRect = _skill_badges.get(u)
+		if badge == null:
 			var t := DB.skill_icon(String(DB.monster(u.monster_id).get("support_skill", {}).get("icon", "")))
-			badge = UI.image(t if t != null else UI.tex("betaHud00/IconLeader.png"), Vector2(40, 40))
-			badge.size = Vector2(40, 40)
-			badge.position = Vector2(-22, v.size.y * 0.25)
-			badge.pivot_offset = Vector2(20, 20)
+			badge = UI.image(t if t != null else UI.tex("betaHud00/IconLeader.png"), Vector2(BADGE_SIZE, BADGE_SIZE))
+			badge.size = Vector2(BADGE_SIZE, BADGE_SIZE)
+			badge.position = Vector2(-BADGE_SIZE * 0.55, v.size.y * 0.25)
+			badge.pivot_offset = badge.size / 2.0
+			badge.material = _badge_mat()
+			badge.mouse_filter = Control.MOUSE_FILTER_STOP
+			badge.gui_input.connect(_on_badge_input.bind(v))
 			v.add_child(badge)
-			var tw := badge.create_tween().set_loops()
-			tw.tween_property(badge, "scale", Vector2(1.15, 1.15), 0.35)
-			tw.tween_property(badge, "scale", Vector2.ONE, 0.35)
+			_skill_badges[u] = badge
+		badge.visible = u.alive()
+		var full := float(u.support.get("cooldown", 12.0)) * u.cooldown_mult
+		var charged := u.support_timer <= 0.0 and u.alive()
+		var mat := badge.material as ShaderMaterial
+		mat.set_shader_parameter("fill", 1.0 - clampf(u.support_timer / maxf(0.01, full), 0.0, 1.0))
+		mat.set_shader_parameter("dim", BADGE_DIM if charged and not ready else 1.0)
+		if charged != bool(badge.get_meta("big", false)):
+			badge.set_meta("big", charged)
+			var pop: Tween = badge.get_meta("pop") if badge.has_meta("pop") else null
+			if pop != null and pop.is_valid():
+				pop.kill()
+			badge.scale = Vector2.ONE
+			_badge_glow(u, v, badge, charged)
+			if charged:
+				pop = badge.create_tween()
+				pop.tween_property(badge, "scale", Vector2.ONE * BADGE_POP, 2.0 * REWARD_STEP)
+				pop.tween_property(badge, "scale", Vector2.ONE * BADGE_BIG, 3.0 * REWARD_STEP)
+				badge.set_meta("pop", pop)
+		if ready and _support_queue.has(u):
+			_support_queue.erase(u)
+			_cast_support(u)
+			ready = false
+		elif Time.get_ticks_msec() > int(_support_queue.get(u, 1 << 62)):
+			_support_queue.erase(u)
+		if ready:
 			_ready_badges[u] = badge
-		elif not ready and badge != null:
-			badge.queue_free()
+		else:
 			_ready_badges.erase(u)
 	_refresh_hints()
 
 
-func _charge(u: BattleUnit, ready: bool) -> float:
-	if u.is_leader:
-		if engine.fever_active:
-			return 1.0
-		var cheapest := INF
-		for s in u.skills:
-			cheapest = minf(cheapest, float(s.mp))
-		return clampf(engine.mp / cheapest, 0.0, 1.0) if cheapest < INF and cheapest > 0.0 else 0.0
-	if ready:
-		return 1.0
-	var full := float(u.support.get("cooldown", 12.0)) * u.cooldown_mult
-	return clampf(1.0 - u.support_timer / full, 0.0, 0.99) if full > 0.0 else 0.0
+func _badge_glow(u: BattleUnit, v: BattleUnitView, badge: TextureRect, on: bool) -> void:
+	var old: FrameFx = badge.get_meta("glow") if badge.has_meta("glow") else null
+	if is_instance_valid(old):
+		old.queue_free()
+	badge.remove_meta("glow")
+	if not on or not u.alive():
+		return
+	var glow := FrameFx.play(v, "ui_battleicon_" + String(SkillFx.LETTER.get(u.element, "k")), badge.position + badge.size / 2.0, Vector2.ONE * BADGE_SIZE * BADGE_GLOW, 15.0)
+	if glow == null:
+		return
+	glow.loop = true
+	glow.z_index = badge.z_index
+	v.move_child(glow, badge.get_index())
+	badge.set_meta("glow", glow)
+
+
+func _badge_burst(u: BattleUnit) -> void:
+	var badge: TextureRect = _skill_badges.get(u)
+	var v: BattleUnitView = views.get(u)
+	if badge == null or v == null:
+		return
+	var fx := FrameFx.play(v, "ui_battleicon_use", badge.position + badge.size / 2.0, Vector2.ONE * BADGE_SIZE * BADGE_BURST, 24.0)
+	if fx != null:
+		var m := CanvasItemMaterial.new()
+		m.blend_mode = CanvasItemMaterial.BLEND_MODE_ADD
+		fx.material = m
+
+
+static func _badge_mat() -> ShaderMaterial:
+	if _badge_shader == null:
+		_badge_shader = Shader.new()
+		_badge_shader.code = "shader_type canvas_item;\nuniform float fill = 1.0;\nuniform float dim = 1.0;\nvoid fragment() {\n\tvec4 c = texture(TEXTURE, UV) * COLOR;\n\tfloat lum = dot(c.rgb, vec3(0.299, 0.587, 0.114));\n\tvec3 grey = mix(c.rgb, vec3(lum), 0.7) * 0.55;\n\tCOLOR = vec4(mix(c.rgb, grey, step(UV.y, 1.0 - fill)) * dim, c.a);\n}"
+	var m := ShaderMaterial.new()
+	m.shader = _badge_shader
+	return m
+
+
+func _charge(u: BattleUnit) -> float:
+	if not u.can_act():
+		return 0.0
+	return clampf(1.0 - u.attack_timer / maxf(0.01, u.attack_interval()), 0.0, 1.0)
 
 
 func _refresh_hints() -> void:
@@ -284,7 +417,13 @@ func _show_loading() -> void:
 	if quest.kind == "special" and DB.special(String(quest.special_id)).has("promo"):
 		kind = "island:" + String(quest.special_id)
 	var overlay := LoadingScreen.make(self, kind)
-	await get_tree().create_timer(LoadingScreen._wait(LoadingScreen.SECONDS if pvp else 1.8)).timeout
+	var start := Time.get_ticks_msec()
+	await Preloader.wait(get_tree(), 8.0)
+	for sheet in ["DF_normal", "DF_criticalN", "DF_heal", "DF_poison", "figure01small"]:
+		BattleUnitView._df_glyphs(sheet)
+	var left := LoadingScreen._wait(LoadingScreen.SECONDS if pvp else 1.8) - (Time.get_ticks_msec() - start) / 1000.0
+	if left > 0.0:
+		await get_tree().create_timer(left).timeout
 	overlay.fade()
 	await overlay.done
 	_paused = false
@@ -299,7 +438,7 @@ func _pve() -> bool:
 func _intro() -> void:
 	if not _pve():
 		return
-	var t := INTRO_WALK / float(SPEEDS[_speed_index])
+	var t := INTRO_WALK / _speed()
 	engine.hold = INTRO_WALK
 	_march(t)
 	for u in views:
@@ -363,7 +502,10 @@ func _build_hud() -> void:
 	hud.on("ID_BUTTON_AUTO", _toggle_auto)
 	hud.on("ID_BUTTON_STOP", _toggle_auto)
 	hud.on("ID_BUTTON_speed1.0", _toggle_speed)
+	hud.on("ID_BUTTON_speed1.4", _toggle_speed)
 	hud.on("ID_BUTTON_speed1.5", _toggle_speed)
+	hud.on("ID_BUTTON_AUTO_r_off", _ask_auto_repeat)
+	hud.on("ID_BUTTON_AUTO_r_on", _stop_auto_repeat)
 	_time_label = hud.text("ID_LABEL_TIME", "00 : 00")
 	_wave_label = hud.text("ID_LABEL_STAGE", "")
 	_gold_label = hud.text("ID_LABEL_1", "0")
@@ -465,6 +607,7 @@ func _build_hud() -> void:
 
 static var _round_shader: Shader
 static var _frame_shader: Shader
+static var _badge_shader: Shader
 
 
 static func _skill_face(t: Texture2D) -> Texture2D:
@@ -502,10 +645,10 @@ func _arena_hud() -> void:
 	hud.show("ID_vsMark")
 	hud.text("ID_txtUserName", String(Save.data.get("name", "Tamer"))).horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
 	hud.text("ID_txtUserName_2", String(quest.get("rival_name", "Rival"))).horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
-	hud.put("ID_photo", HubScreen.profile_pic(HubScreen.profile_id(), Vector2(72, 72)))
+	hud.put("ID_photo", HubScreen.profile_pic(HubScreen.profile_id(), hud.node("ID_photo").size))
 	var rival: Array = quest.fixed_waves[0] if quest.has("fixed_waves") else []
 	if not rival.is_empty():
-		hud.put("ID_photo_2", HubScreen.profile_pic(String(rival[0].id), Vector2(72, 72)))
+		hud.put("ID_photo_2", HubScreen.profile_pic(String(rival[0].id), hud.node("ID_photo_2").size))
 
 
 func _skill_color(s: Dictionary) -> String:
@@ -550,11 +693,84 @@ func _refresh_hud() -> void:
 		var shown := engine.fever_left / BattleEngine.FEVER_SECONDS * BattleEngine.FEVER_MAX if engine.fever_active else engine.fever
 		_fever_bar.value = shown
 		_fever_label.text = "FEVER!" if engine.fever_active else "%d/%d" % [int(engine.fever), int(BattleEngine.FEVER_MAX)]
-		_fever_button.visible = engine.fever >= BattleEngine.FEVER_MAX and not engine.fever_active and engine.result == ""
+		var full := engine.fever >= BattleEngine.FEVER_MAX
+		_fever_button.visible = full and not engine.fever_active and engine.result == ""
+		var stage := 0
+		if engine.fever > 0.0 and not engine.fever_active and engine.result == "":
+			stage = 3 if full else (2 if engine.fever >= BattleEngine.FEVER_MAX * 0.5 else 1)
+		if stage != _fever_stage:
+			_set_fever_glow(stage)
+		var burning := engine.fever_active and engine.result == ""
+		if burning != not _fever_flames.is_empty():
+			_set_fever_flames(burning)
+		var bar_lit := (full or engine.fever_active) and engine.result == ""
+		if bar_lit != is_instance_valid(_fever_bar_fx):
+			_set_fever_bar_fx(bar_lit)
 	hud.show("ID_BUTTON_AUTO", not engine.auto_skills)
 	hud.show("ID_BUTTON_STOP", engine.auto_skills)
-	hud.show("ID_BUTTON_speed1.0", _speed_index == 0 and not quest.kind in ["arena", "duel"])
-	hud.show("ID_BUTTON_speed1.5", _speed_index == 1 and not quest.kind in ["arena", "duel"])
+	var speed_shown: bool = not quest.kind in ["arena", "duel"]
+	hud.show("ID_BUTTON_speed1.0", _speed_index == 0 and speed_shown)
+	hud.show("ID_BUTTON_speed1.4", _speed_index == 1 and not engine.auto_skills and speed_shown)
+	hud.show("ID_BUTTON_speed1.5", _speed_index == 1 and engine.auto_skills and speed_shown)
+	var repeatable := _repeatable()
+	hud.show("ID_BUTTON_AUTO_r_off", repeatable and not _auto_repeat())
+	hud.show("ID_BUTTON_AUTO_r_on", repeatable and _auto_repeat())
+
+func _set_fever_flames(on: bool) -> void:
+	for fx in _fever_flames:
+		if is_instance_valid(fx):
+			fx.queue_free()
+	_fever_flames.clear()
+	if not on:
+		return
+	var screen := get_viewport_rect().size
+	for mirrored in [false, true]:
+		var fx := FrameFx.play(self, "ui_ingame_fever_1", screen / 2.0, screen, 15.0)
+		if fx == null:
+			return
+		fx.loop = true
+		fx.flip_h = mirrored
+		fx.stretch_mode = TextureRect.STRETCH_SCALE
+		fx.z_index = 5
+		var m := CanvasItemMaterial.new()
+		m.blend_mode = CanvasItemMaterial.BLEND_MODE_ADD
+		fx.material = m
+		_fever_flames.append(fx)
+
+
+func _set_fever_bar_fx(on: bool) -> void:
+	if is_instance_valid(_fever_bar_fx):
+		_fever_bar_fx.queue_free()
+	_fever_bar_fx = null
+	if not on:
+		return
+	var r := _fever_bar.get_global_rect()
+	var holder := _fever_bar.get_parent() as Control
+	var local := r.position - holder.get_global_rect().position
+	_fever_bar_fx = FrameFx.play(holder, "ui_bar_fever_1", local + r.size / 2.0, r.size * Vector2(1.12, 1.6), 15.0)
+	if _fever_bar_fx != null:
+		_fever_bar_fx.loop = true
+		_fever_bar_fx.stretch_mode = TextureRect.STRETCH_SCALE
+		var m := CanvasItemMaterial.new()
+		m.blend_mode = CanvasItemMaterial.BLEND_MODE_ADD
+		_fever_bar_fx.material = m
+
+
+func _set_fever_glow(stage: int) -> void:
+	_fever_stage = stage
+	if is_instance_valid(_fever_glow):
+		_fever_glow.queue_free()
+	if stage == 0:
+		return
+	var card := Vector2(84, 84)
+	_fever_glow = FrameFx.play(hud.root, "ui_icn_fever_%d" % stage, _fever_button.position + card / 2.0, card * FEVER_GLOW, 15.0)
+	if _fever_glow != null:
+		_fever_glow.loop = true
+		_fever_glow.z_index = 1
+		var m := CanvasItemMaterial.new()
+		m.blend_mode = CanvasItemMaterial.BLEND_MODE_ADD
+		_fever_glow.material = m
+
 
 func _cast(i: int) -> void:
 	if not engine.cast_leader_skill(i):
@@ -587,6 +803,66 @@ func _toggle_auto() -> void:
 func _toggle_speed() -> void:
 	_speed_index = (_speed_index + 1) % SPEEDS.size()
 	Save.data.speed = _speed_index
+
+
+func _speed() -> float:
+	if _speed_index == 0:
+		return SPEEDS[0]
+	return AUTO_FAST if engine.auto_skills else SPEEDS[1]
+
+
+func _repeatable() -> bool:
+	return quest.kind in ["story", "special"] and not tutorial_active()
+
+
+func _auto_repeat() -> bool:
+	return bool(Save.data.get("auto_repeat", false))
+
+
+func _ask_auto_repeat() -> void:
+	if is_instance_valid(_repeat_popup):
+		return
+	_repeat_popup = UI.confirm(self, "Auto Repeat", "Repeat this quest automatically?\nIt stops when you run out of energy, your box is full or the quest fails.", func():
+		Save.data.auto_repeat = true
+		engine.auto_skills = true
+		Save.data.auto = true
+		Save.save_game()
+		if _win_repeat.is_valid():
+			_win_repeat.call())
+
+
+func _raise_repeat_popup() -> void:
+	if is_instance_valid(_repeat_popup):
+		move_child(_repeat_popup, -1)
+
+
+func _close_repeat_popup() -> void:
+	if is_instance_valid(_repeat_popup):
+		_repeat_popup.queue_free()
+
+
+func _stop_auto_repeat() -> void:
+	Save.data.auto_repeat = false
+	Save.save_game()
+
+
+func _repeat_after_win(caught: Array, fresh: Array, buttons: Array, card: Layout, again: Callable) -> void:
+	var t := Timer.new()
+	t.one_shot = true
+	add_child(t)
+	t.start(AUTO_REPEAT_WAIT)
+	await t.timeout
+	if not _auto_repeat():
+		return
+	if not caught.is_empty():
+		if not is_instance_valid(card.root):
+			return
+		_open_reward_cubes(card, caught, fresh, buttons)
+		t.start(AUTO_REPEAT_REVEAL + 0.15 * caught.size())
+		await t.timeout
+		if not _auto_repeat():
+			return
+	again.call()
 
 
 func _pause() -> void:
@@ -640,6 +916,8 @@ func _pause() -> void:
 func _cubes_so_far() -> int:
 	if not _drop_state.is_empty():
 		return _live_drops.size()
+	if quest.kind == "tower":
+		return _box_at.keys().filter(func(k): return int(k) <= _kill_count).size()
 	return roundi(float(engine.kills.size()) * StageBuilder.DROP_CHANCE)
 
 
@@ -758,6 +1036,70 @@ func _retreat() -> void:
 		main.go("islands", {"island": island.id, "difficulty": difficulty})
 
 
+func _cut_in(u: BattleUnit) -> void:
+	var view := get_viewport_rect().size
+	var layer := Control.new()
+	layer.mouse_filter = MOUSE_FILTER_IGNORE
+	layer.z_index = 60
+	add_child(layer)
+	layer.size = view
+	var dim := ColorRect.new()
+	dim.color = Color(0, 0, 0, 0.45)
+	dim.size = view
+	dim.mouse_filter = MOUSE_FILTER_IGNORE
+	layer.add_child(dim)
+	var full := view.y * 0.46
+	var mid := view.y * 0.47
+	var band := Control.new()
+	band.clip_contents = true
+	band.mouse_filter = MOUSE_FILTER_IGNORE
+	band.position = Vector2(0, mid - 2.0)
+	band.size = Vector2(view.x, 4.0)
+	layer.add_child(band)
+	var fill_h := full / BAND_FILL
+	var fill := FrameFx.play(band, "SBackP_1", Vector2.ZERO, Vector2(view.x, fill_h), 12.0)
+	if fill != null:
+		fill.loop = true
+		fill.z_index = 0
+		fill.stretch_mode = TextureRect.STRETCH_SCALE
+		fill.anchor_top = 0.5
+		fill.anchor_bottom = 0.5
+		fill.offset_left = 0.0
+		fill.offset_right = view.x
+		fill.offset_top = -fill_h * BAND_MID
+		fill.offset_bottom = fill_h * (1.0 - BAND_MID)
+	var enemy := u.side == BattleUnit.ENEMY
+	var tex := DB.battle_sprite(u.monster_id)
+	var art_h := full * 1.25
+	var art_w := art_h * tex.get_width() / maxf(1.0, tex.get_height())
+	var art := UI.image(tex, Vector2(art_w, art_h), TextureRect.STRETCH_KEEP_ASPECT)
+	art.size = Vector2(art_w, art_h)
+	art.flip_h = enemy
+	var x0 := view.x - art_w * 0.9 if enemy else -art_w * 0.1
+	var y0 := full * 0.5 - art_h * 0.5 + full * 0.12
+	art.position = Vector2(x0 + (40.0 if enemy else -40.0), y0 - (full - 4.0) / 2.0)
+	band.add_child(art)
+	var tw := band.create_tween().set_parallel(true)
+	tw.tween_property(band, "position:y", mid - full / 2.0, 0.14).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	tw.tween_property(band, "size:y", full, 0.14).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	tw.tween_property(art, "position", Vector2(x0, y0), 0.2).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	var bubble := UI.image(UI.tex("res://assets/ui/alert_bubble.png"), Vector2(64, 66))
+	bubble.size = Vector2(64, 66)
+	bubble.position = Vector2((view.x - art_w * 0.55 - 70.0) if enemy else (art_w * 0.62), mid - full / 2.0 - 10.0)
+	bubble.visible = false
+	layer.add_child(bubble)
+	var seq := layer.create_tween()
+	seq.tween_interval(0.35)
+	seq.tween_callback(func():
+		bubble.visible = true
+		bubble.pivot_offset = bubble.size / 2.0
+		bubble.scale = Vector2(0.3, 0.3)
+		bubble.create_tween().tween_property(bubble, "scale", Vector2.ONE, 0.1).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT))
+	seq.tween_interval(CUT_IN - 0.47)
+	seq.tween_property(layer, "modulate:a", 0.0, 0.12)
+	seq.tween_callback(layer.queue_free)
+
+
 func _show_banner(text: String, color: Color = UI.GOLD) -> void:
 	_banner.text = text
 	_banner.add_theme_color_override("font_color", color)
@@ -770,10 +1112,23 @@ func _show_banner(text: String, color: Color = UI.GOLD) -> void:
 func _add_view(u: BattleUnit, pos: Vector2, sprite_size: Vector2) -> void:
 	var v := BattleUnitView.new()
 	field.add_child(v)
-	v.setup(u, pos, sprite_size)
+	v.setup(u, pos + Vector2((get_viewport_rect().size.x - Layout.DESIGN_W) / 2.0, 0), sprite_size, PVP_SCALE if engine.pvp else 1.0)
 	v.tapped.connect(_on_unit_tapped)
 	views[u] = v
 	_sort_views()
+
+
+func _feet_spot(p: Vector2, box: Vector2, shift: float) -> Vector2:
+	return Vector2(p.x + shift, DUEL_INIT_H - p.y - box.y / 2.0)
+
+
+func _duel() -> bool:
+	return quest.kind == "league" and engine.allies.size() == 1
+
+
+func _pvp_spot(slot: int) -> Vector2:
+	var a: Vector2 = DUEL_SPOT if _duel() else ALLY_SPOTS[slot % ALLY_SPOTS.size()]
+	return Vector2(PVP_MIRROR - a.x, a.y)
 
 
 func _sort_views() -> void:
@@ -788,15 +1143,28 @@ func _sort_views() -> void:
 
 func _on_unit_tapped(v: BattleUnitView) -> void:
 	if v.unit.side == BattleUnit.PLAYER:
-		if engine.cast_support(v.unit):
-			tut_notify("support:any")
-			tut_notify("support_used")
+		var u := v.unit
+		if engine.support_ready(u):
+			_cast_support(u)
+		elif engine.manual_supports and not u.is_leader and u.alive() and not u.support.is_empty() and u.support_timer <= 0.0:
+			_support_queue[u] = Time.get_ticks_msec() + SUPPORT_QUEUE_MS
 		return
 	if not v.unit.alive():
 		return
 	engine.set_focus(v.unit)
 	for u in views:
 		views[u].set_targeted(u == engine.focus)
+
+
+func _on_badge_input(e: InputEvent, v: BattleUnitView) -> void:
+	if UI.pressed(e):
+		_on_unit_tapped(v)
+
+
+func _cast_support(u: BattleUnit) -> void:
+	if engine.cast_support(u):
+		tut_notify("support:any")
+		tut_notify("support_used")
 
 
 func _on_event(e: Dictionary) -> void:
@@ -808,45 +1176,90 @@ func _on_event(e: Dictionary) -> void:
 			if v == null:
 				return
 			var from: BattleUnit = e.get("from")
+			if from != null and views.has(from) and e.source in ["attack", "skill"]:
+				e["incoming"] = float(e.get("lost", e.amount))
+				v.incoming += float(e.incoming)
+			if from != null and e.source == "attack" and views.has(from) and SkillFx.ranged(from.monster_id):
+				var shooter: BattleUnitView = views[from]
+				shooter.lunge(v.home + v.size / 2.0)
+				var wait := SHOOT_AT + SkillFx.flight(shooter, v)
+				_hit_due[e.unit] = maxf(float(_hit_due.get(e.unit, 0.0)), _clock + wait)
+				get_tree().create_timer(SHOOT_AT).timeout.connect(func():
+					if is_instance_valid(v) and is_instance_valid(shooter):
+						SkillFx.shoot(field, shooter, v, from.element))
+				get_tree().create_timer(wait).timeout.connect(_show_damage.bind(e, v))
+				return
 			if from != null and e.source == "attack" and views.has(from):
-				views[from].lunge(v.position + v.size / 2.0)
-			if float(e.amount) > 0.0:
-				v.hit(bool(e.crit))
-				var icon: Texture2D = null
-				if from != null and DB.element_mult(from.element, e.unit.element) > 1.0:
-					icon = UI.element_icon(from.element)
-				v.damage_number(int(e.amount), bool(e.crit), icon, e.unit.side == BattleUnit.PLAYER)
-			if float(e.absorbed) > 0.0:
-				v.float_text("Shield", Color("9fd8ff"), 18)
-			if from != null and (e.source == "skill" or e.crit):
-				_hit_sound(from.element)
+				views[from].lunge(v.home + v.size / 2.0, true, v.size.x)
+				_hit_due[e.unit] = maxf(float(_hit_due.get(e.unit, 0.0)), _clock + MELEE_CONTACT)
+				get_tree().create_timer(MELEE_CONTACT).timeout.connect(func():
+					if is_instance_valid(v) and views.has(from):
+						SkillFx.attack(field, views[from], v, from.element)
+					_show_damage(e, v))
+				return
+			elif from != null and e.source == "skill" and views.has(from):
+				var wait := SkillFx.hit(field, views[from], v, String(_fx_skill.get(from, "")), from.element, float(_fx_lead.get(from, 0.0)))
+				_hit_due[e.unit] = maxf(float(_hit_due.get(e.unit, 0.0)), _clock + wait)
+				get_tree().create_timer(wait).timeout.connect(_show_damage.bind(e, v))
+				return
+			elif from == null and float(e.amount) > 0.0:
+				SkillFx.tick(field, v, String(e.source))
+			_show_damage(e, v)
 		"heal":
 			var v: BattleUnitView = views.get(e.unit)
 			if v != null:
-				v.float_text("+%d" % int(e.amount), Color("7dff7a"), 22)
+				v.damage_number(int(e.amount), "heal")
 				v.pulse(Color(0.7, 1.6, 0.7))
+				var hf: BattleUnit = e.get("from")
+				if hf != null and e.source == "skill":
+					var heal_name := String(_fx_skill.get(hf, ""))
+					get_tree().create_timer(float(_fx_lead.get(hf, 0.0)) + 0.01).timeout.connect(func():
+						if is_instance_valid(v):
+							SkillFx.land(field, v, heal_name, hf.element))
 		"status":
 			var v: BattleUnitView = views.get(e.unit)
 			if v != null and e.status == "shield":
 				v.pulse(Color(0.8, 1.2, 1.8))
+			if v != null and bool(e.get("fresh", true)):
+				SkillFx.apply(field, v, String(e.status), String(e.get("stat", "")))
 		"skill":
 			_on_skill(e)
+		"wind_up":
+			var wv: BattleUnitView = views.get(e.unit)
+			if wv != null and e.unit.is_boss:
+				wv.warn(minf(float(e.time), BattleEngine.BOSS_ALERT))
+		_:
+			_on_other_event(e)
+
+
+func _show_damage(e: Dictionary, v: BattleUnitView) -> void:
+	if not is_instance_valid(v):
+		return
+	v.incoming = maxf(0.0, v.incoming - float(e.get("incoming", 0.0)))
+	var from: BattleUnit = e.get("from")
+	if float(e.amount) > 0.0:
+		v.hit(bool(e.crit))
+		var icon: Texture2D = null
+		if from != null and DB.element_mult(from.element, e.unit.element) > 1.0:
+			icon = UI.element_icon(from.element)
+		var kind := "crit" if e.crit else ("burn" if e.source == "burn" else ("dot" if BattleUnitView.DOT_COLORS.has(e.source) else "normal"))
+		v.damage_number(int(e.amount), kind, icon)
+	if float(e.absorbed) > 0.0:
+		v.float_text("Shield", Color("9fd8ff"), 18)
+	if from != null and (e.source == "skill" or e.crit):
+		_hit_sound(from, String(_cast_skill.get(from, "")) if e.source == "skill" else "")
+	elif from != null and e.source == "attack":
+		_hit_sound(from, "", BASIC_HIT_DB)
+
+
+func _on_other_event(e: Dictionary) -> void:
+	match String(e.kind):
 		"death":
-			var v: BattleUnitView = views.get(e.unit)
-			if v != null:
-				v.die()
-			if e.unit.side == BattleUnit.ENEMY:
-				if v != null:
-					_last_kill = v.position + v.size * 0.5
-				_collect_gold(v)
-				_kill_count += 1
-				if _box_at.has(_kill_count):
-					_drop_box(v, SkyTower.box_texture(_tower_stones[int(_box_at[_kill_count])]))
-				elif not _drop_state.is_empty():
-					var d := StageBuilder.roll_kill(_drop_quest, _drop_state, e.unit.monster_id, _first_clear, rng)
-					if not d.is_empty():
-						_live_drops.append(d)
-						_drop_box(v, UI.tex("betaHud00/H_cube_0%d.png" % clampi(int(DB.monster(d.id).stars) - 1, 0, 5)))
+			var left := float(_hit_due.get(e.unit, 0.0)) - _clock
+			if left > 0.0:
+				get_tree().create_timer(left).timeout.connect(_show_death.bind(e))
+			else:
+				_show_death(e)
 		"revive":
 			var rv: BattleUnitView = views.get(e.unit)
 			if rv != null:
@@ -864,33 +1277,72 @@ func _on_event(e: Dictionary) -> void:
 				if old.side == ru.side and old.slot == ru.slot and not old.alive():
 					views[old].queue_free()
 					views.erase(old)
-			var spot: Vector2 = ALLY_SPOTS[ru.slot] if ru.side == BattleUnit.PLAYER else ENEMY_SPOTS_4[ru.slot]
-			_add_view(ru, spot, Vector2(125, 110))
+			var spot: Vector2 = ALLY_SPOTS[ru.slot] if ru.side == BattleUnit.PLAYER else _pvp_spot(ru.slot)
+			_add_view(ru, spot, ALLY_BOX)
 		"support_ready":
 			if e.unit.side == BattleUnit.PLAYER:
 				tut_notify("support_ready")
 		"wave_clear":
-			_show_banner("Stage clear!")
 			_cleared = true
 			_after_clear()
 		"end":
 			_cleared = true
-			_collect_boxes(0.35)
-			_on_end(String(e.result))
+			_end_after_hits(String(e.result))
+
+
+func _end_after_hits(result: String) -> void:
+	while _hits_pending():
+		await get_tree().process_frame
+		if not is_inside_tree():
+			return
+	_collect_boxes(0.35)
+	_on_end(result)
+
+
+func _show_death(e: Dictionary) -> void:
+	if not is_inside_tree():
+		return
+	var v: BattleUnitView = views.get(e.unit)
+	if v != null and not is_instance_valid(v):
+		v = null
+	if v != null and not e.unit.alive():
+		v.die()
+	if e.unit.side == BattleUnit.ENEMY:
+		if v != null:
+			_last_kill = v.position + v.size * 0.5
+		_collect_gold(v)
+		_kill_count += 1
+		if _box_at.has(_kill_count):
+			_drop_box(v, SkyTower.box_texture(_tower_stones[int(_box_at[_kill_count])]))
+		elif not _drop_state.is_empty():
+			var d := StageBuilder.roll_kill(_drop_quest, _drop_state, e.unit.monster_id, _first_clear, rng)
+			if not d.is_empty():
+				_live_drops.append(d)
+				_drop_box(v, UI.tex("betaHud00/H_cube_0%d.png" % clampi(int(DB.monster(d.id).stars) - 1, 0, 5)))
 
 
 func _after_clear() -> void:
-	if _boxes_in_air > 0 or not _ground_boxes.is_empty():
-		engine.hold = 99.0
-		while _boxes_in_air > 0:
-			await get_tree().process_frame
-			if not is_inside_tree():
-				return
+	engine.hold = 99.0
+	while _hits_pending():
+		await get_tree().process_frame
+		if not is_inside_tree():
+			return
+	_show_banner("Stage clear!")
+	while _boxes_in_air > 0 or _hits_pending() or views.values().any(func(v): return is_instance_valid(v) and v.dying()):
+		await get_tree().process_frame
+		if not is_inside_tree():
+			return
+	if not _ground_boxes.is_empty():
 		var n := _ground_boxes.size()
 		_collect_boxes(0.3)
 		await get_tree().create_timer(0.75 + 0.18 * n).timeout
-		engine.hold = 0.0
-	_march(1.2 / float(SPEEDS[_speed_index]))
+	engine.hold = 0.0
+	_march(1.2 / _speed())
+
+
+func _hits_pending() -> bool:
+	var now := _clock
+	return _hit_due.values().any(func(t): return float(t) > now - 0.05)
 
 
 func _spawn_wave() -> void:
@@ -910,8 +1362,19 @@ func _spawn_wave() -> void:
 		normal_spots = BOSS_MINION_LAYOUTS[clampi(count - 2, 0, BOSS_MINION_LAYOUTS.size() - 1)]
 	var body := Vector2(140, 124) if count <= 5 else Vector2(130, 115)
 	var k := 0
+	var theirs: Array = DUEL_INIT_ENEMY.get(count, [])
+	var next_spot := 1 if has_boss else 0
 	for u in engine.enemies:
-		if u.is_boss:
+		if engine.pvp and u.slot < ALLY_SPOTS.size():
+			_add_view(u, _pvp_spot(u.slot), LEADER_BOX if u.is_leader else ALLY_BOX)
+		elif not theirs.is_empty():
+			var box := Vector2(230, 200) if u.is_boss else body
+			var at := 0
+			if not u.is_boss:
+				at = next_spot
+				next_spot += 1
+			_add_view(u, _feet_spot(theirs[mini(at, theirs.size() - 1)], box, ENEMY_SHIFT), box)
+		elif u.is_boss:
 			_add_view(u, BOSS_SPOT, Vector2(230, 200))
 		else:
 			_add_view(u, normal_spots[k % normal_spots.size()], body)
@@ -921,16 +1384,18 @@ func _spawn_wave() -> void:
 		if engine.wave_index == 0:
 			views[u].position = views[u].home + Vector2(_walk_offset(), 0)
 		else:
-			views[u].enter_from(Vector2(_walk_offset(), 0), WAVE_WALK / float(SPEEDS[_speed_index]))
+			views[u].enter_from(Vector2(_walk_offset(), 0), WAVE_WALK / _speed())
 	if engine.wave_index > 0 and _pve():
 		engine.hold = WAVE_WALK
-		_alert_enemies(WAVE_WALK / float(SPEEDS[_speed_index]))
+		_alert_enemies(WAVE_WALK / _speed())
 	if has_boss:
 		Sfx.play_music(Sfx.battle_music(quest, String(island.id), true))
 		_show_banner("BOSS!", Color("ff6a50"))
 		call_deferred("_boss_line")
 	else:
 		_show_banner("Stage %d" % (engine.wave_index + 1))
+		if quest.kind == "raid":
+			call_deferred("_boss_line")
 
 
 func _scroll_backdrop(tex: Texture2D, flip_tex: Texture2D = null) -> void:
@@ -966,8 +1431,15 @@ func _boss_line() -> void:
 	if _boss_spoken:
 		return
 	var text := ""
-	if quest.kind == "story" and stage_index >= Save.cleared_stages(island.id, difficulty):
-		text = String(Tutorial.boss_line(island.id, difficulty, stage_index).get("text", ""))
+	if quest.kind == "story" and String(quest.get("say", "")) != "":
+		text = String(quest.say)
+	elif quest.kind == "story" and stage_index >= Save.cleared_stages(island.id, difficulty):
+		var line := Tutorial.boss_line(island.id, difficulty, stage_index)
+		text = String(line.get("text", ""))
+		if text == "" or String(line.get("say", quest.boss)) != String(quest.boss):
+			text = Tutorial.monster_line(String(quest.boss))
+	elif quest.kind == "raid":
+		text = String(Raids.raid(String(quest.raid_id)).get("lines", {}).get(str(int(quest.room) + 1), ""))
 	elif quest.kind == "special" and not Save.data.special_clears.has(quest.key):
 		text = String(quest.get("say", ""))
 		if text == "":
@@ -1009,29 +1481,53 @@ func _on_skill(e: Dictionary) -> void:
 	var u: BattleUnit = e.unit
 	var s: Dictionary = e.skill
 	var v: BattleUnitView = views.get(u)
-	if v != null:
-		v.pulse(Color(1.6, 1.4, 0.8))
+	_fx_skill[u] = String(s.name)
+	_fx_lead.erase(u)
+	if e.source == "support":
+		_badge_burst(u)
+	if v != null and e.source == "leader" and float(s.get("mp", 0.0)) >= ULTIMATE_MP:
+		_fx_lead[u] = CUT_IN
+		engine.hold = maxf(engine.hold, CUT_IN * _speed())
+		_cut_in(u)
+		var skill_name := String(s.name)
+		get_tree().create_timer(CUT_IN).timeout.connect(func():
+			if is_instance_valid(v):
+				v.cast()
+				SkillFx.cast(field, v, skill_name, u.element))
+	elif v != null:
+		v.cast()
+		SkillFx.cast(field, v, String(s.name), u.element)
 	if e.source == "leader":
 		_show_banner(s.name)
+	elif v != null and quest.kind == "league":
+		v.caption(s.name)
 	elif v != null:
 		v.float_text(s.name, Color("ffd36a") if u.side == BattleUnit.PLAYER else Color("ff9a7a"), 18)
 	var kind := _skill_color(s)
+	if kind != "orange" and Sfx.has_skill_sound(String(s.name)):
+		Sfx.play_skill(String(s.name), u.element, "cast")
+		get_tree().create_timer(0.25).timeout.connect(Sfx.play_skill.bind(String(s.name), u.element, "damage"))
+		return
 	match kind:
 		"yellow":
-			Sfx.play("heal")
+			Sfx.play("heal_" + u.element if Sfx.SOUNDS.has("heal_" + u.element) else "heal")
 		"blue":
 			Sfx.play("buff")
 		"purple":
 			Sfx.play("debuff")
 		_:
-			Sfx.play("cast_" + u.element)
+			_cast_skill[u] = String(s.name)
+			Sfx.play_skill(String(s.name), u.element, "cast")
 
 
-func _hit_sound(element: String) -> void:
+func _hit_sound(from: BattleUnit, skill_name: String, db: float = 0.0) -> void:
 	var now := Time.get_ticks_msec() / 1000.0
 	if now - _last_hit_sound > 0.08:
 		_last_hit_sound = now
-		Sfx.play("hit_" + element)
+		if skill_name != "":
+			Sfx.play_skill(skill_name, from.element, "damage")
+		else:
+			Sfx.play("hit_" + from.element, db)
 
 
 func _on_end(result: String) -> void:
@@ -1154,14 +1650,11 @@ func _win() -> void:
 		Save.data.best_times[quest.key] = engine.time
 	var caught := []
 	var fresh := []
-	var lost := 0
+	var owned_before: Dictionary = Save.data.owned.duplicate()
 	for d in _live_drops:
-		if Save.inventory_full():
-			lost += 1
-		else:
-			fresh.append(not Save.data.owned.has(d.id))
-			Save.add_monster(d.id, int(d.level))
-			caught.append(d.id)
+		fresh.append(not owned_before.has(d.id))
+		Save.add_monster(d.id, int(d.level))
+		caught.append(d.id)
 	var fp_gain := Friends.record_use(_friend)
 	var red_cube: bool = rng.randf() < float(quest.get("red_cube_chance", 0.0))
 	if red_cube:
@@ -1198,11 +1691,13 @@ func _win() -> void:
 		r.show(k, false)
 	r.show(["ID_none", "ID_one", "ID_two", "ID_three"][shown], true)
 	var cube_ids := {1: ["ID_IMAGE_5"], 2: ["ID_IMAGE_6", "ID_IMAGE_7"], 3: ["ID_IMAGE_8", "ID_IMAGE_9", "ID_IMAGE_10"]}
+	var cubes := []
 	for k in shown:
 		var star := int(DB.monster(caught[k]).stars)
 		r.set_image(cube_ids[shown][k], UI.tex("betaHud00/H_cube_0%d.png" % clampi(star - 1, 0, 5)))
+		cubes.append(r.node(cube_ids[shown][k]))
 	if caught.size() > 3:
-		r.text("ID_baseText", "+%d more" % (caught.size() - 3))
+		cubes = _spread_cubes(r, caught)
 	var opening := not caught.is_empty()
 	r.show("ID_btnOk", opening)
 	r.hide_all(["ID_btnNext", "ID_btnAgain", "ID_btnEsc"] if opening else [])
@@ -1211,15 +1706,24 @@ func _win() -> void:
 	r.on("ID_btnNext", _leave_win(_play.bind(index + 1)))
 	r.on("ID_btnAgain", _leave_win(_play.bind(index)))
 	r.on("ID_btnEsc", _leave_win(_retreat))
+	if _repeatable():
+		_win_repeat = _repeat_after_win.bind(caught, fresh, buttons, r, _leave_win(_play.bind(index)))
+		if _auto_repeat():
+			_win_repeat.call()
+	_raise_repeat_popup()
+	_reward_anim(r.node("ID_titleRibon"), Vector2.ZERO, REWARD_RIBBON, 1)
+	_reward_anim(r.node("ID_IMAGE_3"), Vector2.ZERO, REWARD_POP, 15)
+	_reward_anim(r.node("ID_IMAGE_2"), Vector2.ZERO, REWARD_POP, 18)
+	for k in cubes.size():
+		_reward_anim(cubes[k], Vector2(0.5, 0.5), REWARD_POP, 33 + 4 * k)
+	for id in ["ID_btnOk", "ID_btnNext", "ID_btnAgain", "ID_btnEsc"]:
+		if r.node(id).visible:
+			_reward_anim(r.node(id), Vector2(0.5, 0.5), [1.0] + REWARD_POP.slice(1), 44 + 4 * maxi(0, cubes.size() - 1))
 	var notes := []
 	if red_cube:
 		notes.append("A RED CUBE dropped! Open it in the Store.")
-	if lost > 0:
-		notes.append("%d cube(s) lost — your monster box is full!" % lost)
 	for k in notes.size():
 		UI.toast(self, notes[k], UI.GOLD)
-	if lost > 0 and not tutorial_active():
-		CubesScreen.offer_slots(self, true)
 	Sfx.play("quest_complete")
 
 
@@ -1242,10 +1746,12 @@ func _exp_count(before: Array, ups: Array) -> void:
 			if u.monster_id == m.id and not used.has(u) and views.has(u) and u.alive():
 				used[u] = true
 				var target := _exp_pct(m) + 100.0 * int(ups[k])
-				bars.append({"v": views[u], "from": float(before[k]), "to": target, "lv": int(m.level) - int(ups[k]), "ups": int(ups[k]), "shown": 0})
+				bars.append({"v": views[u], "from": float(before[k]), "to": target, "lv": int(m.level) - int(ups[k]), "ups": int(ups[k]), "shown": 0, "cap": Save.max_level(m)})
 				break
 	if bars.is_empty():
 		return
+	for badge in _skill_badges.values():
+		badge.visible = false
 	for b in bars:
 		(b.v as BattleUnitView).show_exp(int(b.lv), float(b.from))
 	Sfx.fade_music(0.4)
@@ -1266,7 +1772,7 @@ func _exp_count(before: Array, ups: Array) -> void:
 				if t - ding > 0.2:
 					ding = t
 					Sfx.play("buff_big")
-			var pct := minf(100.0, p - 100.0 * gained)
+			var pct := 100.0 if int(b.lv) + gained >= int(b.cap) else minf(100.0, p - 100.0 * gained)
 			(b.v as BattleUnitView).show_exp(int(b.lv) + gained, pct)
 		await get_tree().process_frame
 		t += get_process_delta_time()
@@ -1275,65 +1781,65 @@ func _exp_count(before: Array, ups: Array) -> void:
 	await get_tree().create_timer(0.6).timeout
 
 
+func _reward_anim(c: Control, anchor: Vector2, frames: Array, at: int) -> void:
+	var base := c.scale
+	var pivot := Vector2(anchor.x * c.size.x, (1.0 - anchor.y) * c.size.y)
+	c.position -= pivot * (Vector2.ONE - base)
+	c.pivot_offset = pivot
+	c.visible = false
+	var steps: Array = frames.map(func(f): return base * (f as Vector2 if f is Vector2 else Vector2.ONE * float(f)))
+	var tw := c.create_tween()
+	tw.tween_interval(at * REWARD_STEP)
+	tw.tween_callback(func():
+		c.scale = steps[0]
+		c.visible = true)
+	for s in steps.slice(1):
+		tw.tween_property(c, "scale", s, REWARD_STEP)
+
+
+func _spread_cubes(r: Layout, caught: Array) -> Array:
+	var base: Control = r.node("ID_cube3_1")
+	var holder := base.get_parent()
+	var cubes := []
+	for id in ["ID_cube3_1", "ID_cube3_2", "ID_cube3_3"]:
+		r.show(id, false)
+	var n := caught.size()
+	var back := 0 if n <= REWARD_CUBE_ROW else n / 2
+	var front := n - back
+	var even := back == front
+	var step := 436.0 / (front + (0.5 if even else 0.0))
+	var sc := minf(0.62 if back > 0 else 1.0, step / 122.0)
+	var shift := -step / 4.0 if even else 0.0
+	var lift := 50.0 * sc
+	var drop := 45.0 - 42.0 * sc
+	for k in n:
+		var in_back := k < back
+		var i := k if in_back else k - back
+		var count := back if in_back else front
+		var x := 218.0 + (i - (count - 1) / 2.0) * step + shift + (step / 2.0 if in_back and even else 0.0)
+		var c := base.duplicate() as Control
+		c.visible = true
+		c.scale = Vector2(sc, sc)
+		var y := base.position.y
+		if back > 0:
+			y += drop - (lift if in_back else 0.0)
+		c.position = Vector2(x - 58.0 * sc, y)
+		if in_back:
+			c.modulate = Color(0.85, 0.85, 0.85)
+		(c.get_child(0) as TextureRect).texture = UI.tex("betaHud00/H_cube_0%d.png" % clampi(int(DB.monster(caught[k]).stars) - 1, 0, 5))
+		holder.add_child(c)
+		cubes.append(c.get_child(0))
+	return cubes
+
+
 func _open_reward_cubes(card: Layout, caught: Array, fresh: Array, buttons: Array) -> void:
 	card.root.queue_free()
-	var best := 1
-	for id in caught:
-		best = maxi(best, int(DB.monster(id).stars))
-	var kind := "blue" if best <= 2 else ("yellow" if best <= 4 else "red")
-	CubeReveal.play(self, kind, caught, fresh, buttons, false, false, _bg_tex)
+	CubeReveal.catch(self, caught, fresh, buttons, _bg_tex)
 
-
-func _stat_box(icon: String, value: String, badge: String = "") -> Control:
-	var box := PanelContainer.new()
-	box.custom_minimum_size = Vector2(118, 104)
-	var sb := StyleBoxFlat.new()
-	sb.bg_color = Color("a8683a")
-	sb.set_corner_radius_all(10)
-	box.add_theme_stylebox_override("panel", sb)
-	var v := VBoxContainer.new()
-	v.alignment = BoxContainer.ALIGNMENT_CENTER
-	v.add_theme_constant_override("separation", 2)
-	box.add_child(v)
-	v.add_child(UI.image(UI.tex(icon), Vector2(44, 44)))
-	var l := UI.label(value, 24)
-	l.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	v.add_child(l)
-	if badge != "":
-		var b := UI.label(badge, 16, Color("ff6a50"))
-		b.position = Vector2(4, 0)
-		box.add_child(b)
-	return box
-
-
-func _cube_row(caught: Array) -> Control:
-	var col := VBoxContainer.new()
-	col.alignment = BoxContainer.ALIGNMENT_CENTER
-	if caught.is_empty():
-		var none := _result_line("[No Cubes Obtained]")
-		none.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-		col.add_child(none)
-		return col
-	var row := HBoxContainer.new()
-	row.alignment = BoxContainer.ALIGNMENT_CENTER
-	col.add_child(row)
-	for id in caught:
-		var cube := UI.image(UI.tex("betaHud00/H_cube_0%d.png" % clampi(int(DB.monster(id).stars) - 1, 0, 5)), Vector2(90, 90))
-		cube.pivot_offset = Vector2(45, 45)
-		row.add_child(cube)
-	var open := UI.button("Open Cube" + ("s" if caught.size() > 1 else ""), func(): _open_cubes(row, caught), "yellow", Vector2(200, 56), 20)
-	col.add_child(open)
-	return col
-
-
-func _open_cubes(row: HBoxContainer, caught: Array) -> void:
-	for c in row.get_children():
-		c.queue_free()
-	for id in caught:
-		row.add_child(UI.monster_card(id, 1, 0, Vector2(96, 96)))
-	Sfx.play("buff")
 
 func _lose() -> void:
+	Save.data.auto_repeat = false
+	_close_repeat_popup()
 	var d := Layout.load_into(self, "R_d_fieldFailure")
 	d.root.z_index = 80
 	for g in ["ID_9PATCH_Slot4", "ID_9PATCH_Slot5", "ID_9PATCH_tower", "ID_gamePause_tower2"]:
@@ -1392,7 +1898,7 @@ func _continue() -> void:
 	for u in engine.allies:
 		var v: BattleUnitView = views[u]
 		v.modulate.a = 1.0
-		v.sprite.scale = Vector2.ONE
+		v.reset_pose()
 	_finished = false
 
 
@@ -1410,6 +1916,10 @@ func _play(index: int) -> void:
 		var floor := index + 1
 		if floor > int(Save.data.tower_floor) + 1:
 			_retreat()
+			return
+		if Save.stone_box_full():
+			main.go("tower", {"floor": floor})
+			UI.stone_box_full(main.current, main.go.bind("stones", {"back": "tower"}))
 			return
 		var tq := SkyTower.enter(floor)
 		if tq.is_empty():
@@ -1433,6 +1943,8 @@ func _play(index: int) -> void:
 	var a := {"island": island.id, "difficulty": difficulty, "stage": index, "quest": next}
 	if quest.kind == "special":
 		a = {"special": quest.special_id, "quest": next, "difficulty": String(next.tab) if String(next.tab) != "" else "normal"}
+	if _auto_repeat():
+		a["repeat"] = true
 	main.go("ready", a)
 
 func _result_line(text: String) -> Label:
@@ -1451,12 +1963,8 @@ func _win_tower() -> void:
 	if new_best:
 		Save.data.best_times[quest.key] = engine.time
 	var got := []
-	var lost := 0
 	for st in _tower_stones:
-		if Save.stone_box_full():
-			lost += 1
-		else:
-			got.append(Save.add_stone(st))
+		got.append(Save.add_stone(st))
 	Save.save_game()
 
 	var r := Layout.load_into(self, "R_d_reward")
@@ -1491,8 +1999,6 @@ func _win_tower() -> void:
 	r.on("ID_btnOk_1", func():
 		r.root.queue_free()
 		_reveal_stones(got, 0, floor))
-	if lost > 0:
-		UI.toast(self, "%d stone(s) lost — your stone box is full!" % lost, Color("ff8080"))
 	Sfx.play("buff_big")
 
 
@@ -1510,7 +2016,7 @@ func _reveal_stones(got: Array, i: int, floor: int) -> void:
 			row.add_child(StonesScreen.stone_icon(st, 64))
 			row.add_child(_result_line("%s\n%s" % [MagicStones.label(st), MagicStones.describe(st)]))
 			list.add_child(row)
-		UI.dialog(self, "Floor %d Cleared!" % floor, list, buttons)
+		UI.dialog(self, "Floor %d Cleared!" % floor, list, buttons, true)
 		return
 	var st: Dictionary = got[i]
 	var shade := ColorRect.new()
@@ -1558,35 +2064,53 @@ func _end_raid(won: bool) -> void:
 	var gold := int(_rewards.gold) if won else 0
 	Save.data.gold = int(Save.data.gold) + gold
 	Save.record_raid_room(_raid_hp(), won, gold)
-	var caught := []
-	if won:
-		for id in Raids.roll_drops(r, room, rng):
-			if not Save.inventory_full():
-				Save.add_monster(id, 1)
-				caught.append(id)
-	Save.save_game()
 	if not won:
+		Save.save_game()
 		_raid_failed(r, room)
 		return
-	var body := VBoxContainer.new()
-	body.add_theme_constant_override("separation", 10)
-	var fallen := 0
-	for a in engine.allies:
-		if not a.alive():
-			fallen += 1
-	if won:
-		var boxes := HBoxContainer.new()
-		boxes.alignment = BoxContainer.ALIGNMENT_CENTER
-		boxes.add_child(_stat_box("betaHud00/H_clock_02.png", UI.format_time(int(engine.time))))
-		boxes.add_child(_stat_box("betaHud00/H_money_02.png", Screen._thousands(gold)))
-		body.add_child(boxes)
-		body.add_child(_cube_row(caught))
-	else:
-		body.add_child(_result_line("The party was defeated. Send in other monsters to retry this room."))
-	if fallen > 0:
-		body.add_child(_result_line("%d monster(s) knocked out — they can't fight again today." % fallen))
-	var title := "Raid cleared!" if won and room == Raids.ROOMS - 1 else ("Stage %d cleared!" % (room + 1) if won else "Stage failed")
-	UI.dialog(self, title, body, [{"text": "Continue", "color": "yellow", "cb": _leave_win(main.go.bind("raid")) if won else func(): main.go("raid")}])
+	var best := float(Save.data.best_times.get(quest.key, 0.0))
+	var new_best := best <= 0.0 or engine.time < best
+	if new_best:
+		Save.data.best_times[quest.key] = engine.time
+	var caught := []
+	var fresh := []
+	for id in Raids.roll_drops(r, room, rng):
+		fresh.append(not Save.data.owned.has(id))
+		Save.add_monster(id, 1)
+		caught.append(id)
+	Save.save_game()
+
+	var lobby := _leave_win(main.go.bind("raid"))
+	var p := Layout.load_into(self, "R_d_reward")
+	p.root.z_index = 50
+	p.show("ID_9PATCH_2", false)
+	p.node("ID_9PATCH_tech").mouse_filter = MOUSE_FILTER_STOP
+	p.text("ID_timeText_1", "%02d:%02d" % [int(engine.time) / 60, int(engine.time) % 60])
+	p.show("ID_new_1", new_best)
+	p.text("ID_goldText_1", Screen._thousands(gold))
+	p.hide_all(["ID_double2_1", "ID_eventTag_G_1", "ID_fieldFirst_1", "ID_none_1", "ID_two_1", "ID_three_1", "ID_btnAgain_1", "ID_btnEsc_1", "ID_btnNext_1"])
+	p.show("ID_one_1", true)
+	var opening := not caught.is_empty()
+	p.show("ID_IMAGE_5_1", opening)
+	p.show("ID_btnOk_1", opening)
+	Sfx.play("quest_complete")
+	if opening:
+		p.set_image("ID_IMAGE_5_1", UI.tex("betaHud00/H_cube_0%d.png" % clampi(int(DB.monster(caught[0]).stars) - 1, 0, 5)))
+		_reward_anim(p.node("ID_IMAGE_5_1"), Vector2(0.5, 0.5), REWARD_POP, 15)
+		_reward_anim(p.node("ID_btnOk_1"), Vector2(0.5, 0.5), [1.0] + REWARD_POP.slice(1), 26)
+		p.on("ID_btnOk_1", func():
+			p.root.queue_free()
+			CubeReveal.catch(self, caught, fresh, [{"text": "Next", "color": "blue", "cb": lobby}], _bg_tex))
+		return
+	var left := [false]
+	var go := func():
+		if not left[0]:
+			left[0] = true
+			lobby.call()
+	p.node("ID_9PATCH_tech").gui_input.connect(func(e: InputEvent):
+		if UI.tapped(e):
+			go.call())
+	get_tree().create_timer(2.5).timeout.connect(go)
 
 func _raid_failed(r: Dictionary, room: int) -> void:
 	var vw := get_viewport_rect().size

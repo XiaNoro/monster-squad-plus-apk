@@ -20,6 +20,12 @@ const CHAIN := [
 		"text": "[Quest] Explore Lake-12", "event": "stage:lake_island/11", "goal": 3, "reward": {"monster": "talmag"},
 		"done": "Thank you! If you don't mind, may I join you?",
 	},
+	{
+		"id": "camhil1", "who": "camhil", "after": "cleared:lake_island",
+		"ask": "The desert has no room for weak monsters. Are\nyou brave enough to explore Desert Isle 7 times?",
+		"text": "[Quest] Explore Desert Island", "event": "island:desert_isle", "goal": 7, "reward": {"gold": 10000},
+		"done": "Not bad! You might survive the desert after all.",
+	},
 ]
 const DEFEAT := [
 	"Oh no! Did your team get annihilated for the first\ntime? Well, adventure doesn't come easily! Cheer up!",
@@ -28,6 +34,8 @@ const DEFEAT := [
 	"Wait, do you already know?\nYou can use your skills automatically if you battle in a dungeon\nyou've already explored.",
 	"Auto-combat's basic battle speed is 1.5x faster than manual\ncombat.\nOf course, you can increase the battle speed for manual combat\nanytime.",
 	"Have you had enough time to get over your defeat?\nEven though you lost a battle, you're coming away\nstronger than before!",
+	"Go back over the islands you've already explored.\nYou'll gain tons of EXP, gold, and monsters along the way!",
+	"This area will be super easy if you just keep\nfortifying, evolving, and fusing!",
 ]
 
 

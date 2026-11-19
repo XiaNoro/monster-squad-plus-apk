@@ -69,6 +69,8 @@ static func floor_quest(floor: int) -> Dictionary:
 		trait_ids.append(t.id)
 	var past15 := maxi(0, floor - 15)
 	var info := known(floor)
+	if info.has("enemies"):
+		enemies = info.enemies.duplicate()
 	var boss: String = String(info.get("boss", boss_pool[rng.randi() % boss_pool.size()]))
 	var q := {
 		"kind": "tower",

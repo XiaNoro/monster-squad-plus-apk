@@ -69,6 +69,13 @@ static func on_day(unix: int) -> Array:
 	return out
 
 
+static func monthly(island_id: String, difficulty: String, stage_index: int) -> Dictionary:
+	for e in today():
+		if String(e.type) == "monthly" and String(e.where) == island_id and String(e.difficulty) == difficulty and int(e.stage) == stage_index:
+			return e
+	return {}
+
+
 static func now() -> int:
 	var shift := int(Save.data.get("event_shift", 0)) * 86400
 	for a in OS.get_cmdline_user_args():
@@ -128,7 +135,7 @@ static func effect(type: String) -> float:
 
 static func affects(island_id: String, difficulty: String = "") -> bool:
 	for e in today():
-		if String(e.type) in ["gold", "cube", "xp", "energy", "open"] and String(e.get("where", "")) != "all" and _covers(String(e.get("where", "")), island_id, difficulty):
+		if _shown(e, difficulty) and String(e.get("where", "")) != "all" and _covers(String(e.get("where", "")), island_id, difficulty):
 			return true
 	return false
 
@@ -141,7 +148,11 @@ static func describe(island_id: String, difficulty: String = "") -> String:
 
 
 static func current(island_id: String, difficulty: String = "") -> Array:
-	return today().filter(func(e): return String(e.type) in ["gold", "cube", "xp", "energy", "open"] and _covers(String(e.get("where", "")), island_id, difficulty))
+	return today().filter(func(e): return _shown(e, difficulty) and _covers(String(e.get("where", "")), island_id, difficulty))
+
+
+static func _shown(e: Dictionary, difficulty: String) -> bool:
+	return String(e.type) in ["gold", "cube", "xp", "energy", "open"] or (String(e.type) == "monthly" and difficulty == "")
 
 
 static func popup_text(island_id: String) -> String:
@@ -149,7 +160,7 @@ static func popup_text(island_id: String) -> String:
 	var hours := ceili((86400 - now() % 86400) / 3600.0)
 	for e in current(island_id):
 		var x := float(e.get("x", data().get("effects", {}).get(String(e.type), 2.0)))
-		var label: String = {"gold": "%sX Gold Drop ▲", "cube": "%sX Cube Drop ▲", "xp": "%sX EXP ▲", "energy": "Energy Cost ▼", "open": "Island Open"}[String(e.type)]
+		var label: String = {"gold": "%sX Gold Drop ▲", "cube": "%sX Cube Drop ▲", "xp": "%sX EXP ▲", "energy": "Energy Cost ▼", "open": "Island Open", "monthly": "Monthly Quest"}[String(e.type)]
 		if label.contains("%s"):
 			label = label % str(snappedf(x, 0.1)).trim_suffix(".0")
 		lines.append("%s\n(%dHrs remaining)" % [label, hours])

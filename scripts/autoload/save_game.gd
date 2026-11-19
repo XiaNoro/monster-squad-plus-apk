@@ -4,6 +4,8 @@ signal changed
 
 var save_path := "user://save.json"
 const VERSION := 1
+const EXPORT_EXT := "mssave"
+const EXPORT_KEY := "o1Nn9WWrvc0SlA4_XdrTwz71TG4BRh6xmZx_iySZG7U"
 const ENERGY_REGEN_SECONDS := 180
 const ENERGY_REFILL_GEMS := 5
 const START_ENERGY_CAP := 40
@@ -28,6 +30,13 @@ func load_game() -> void:
 			reset()
 			for k in parsed:
 				data[k] = parsed[k]
+			data.team = _uids(data.team)
+			data.teams = data.teams.map(_uids)
+			while data.teams.size() < TEAM_PRESETS:
+				data.teams.append([])
+			if data.league.has("team"):
+				data.league.team = _uids(data.league.team)
+			_drop_unknown()
 			if not parsed.has("tutorial"):
 				data.erase("tutorial")
 				Tutorial.skip_all()
@@ -36,6 +45,34 @@ func load_game() -> void:
 			_tick_energy()
 			return
 	reset()
+
+
+func _drop_unknown() -> void:
+	var gone := []
+	for m in data.monsters:
+		if not DB.monsters.has(String(m.get("id", ""))):
+			gone.append(int(m.get("uid", -1)))
+	if gone.is_empty():
+		return
+	for uid in gone:
+		remove_monster(uid)
+	var keep := func(u): return not int(u) in gone
+	if data.league.has("team"):
+		data.league.team = data.league.team.filter(keep)
+	for k in ["picked", "party"]:
+		if data.raid.get(k) is Array:
+			data.raid[k] = data.raid[k].filter(keep)
+	if data.team.is_empty() and not data.monsters.is_empty():
+		set_team([int(data.monsters[0].uid)])
+	push_warning("Removed %d monsters with unknown ids from the save" % gone.size())
+
+
+static func _uids(list: Array) -> Array:
+	var out := []
+	for u in list:
+		if not int(u) in out:
+			out.append(int(u))
+	return out
 
 
 func reset() -> void:
@@ -53,6 +90,7 @@ func reset() -> void:
 		"arena_stamp": Time.get_unix_time_from_system(),
 		"honor": 0,
 		"league": {},
+		"badges": {},
 		"raid_cleared": {},
 		"tower_floor": 0,
 		"tower_tickets": SkyTower.MAX_TICKETS,
@@ -72,7 +110,7 @@ func reset() -> void:
 		"next_uid": 1,
 		"monsters": [],
 		"team": [],
-		"teams": [[], [], []],
+		"teams": [[], [], [], [], []],
 		"team_index": 0,
 		"progress": {},
 		"seen": {},
@@ -85,10 +123,10 @@ func reset() -> void:
 	}
 
 
-func start_new_game() -> void:
+func start_new_game(starter: String = "pheona") -> void:
 	reset()
 	var team := []
-	for id in ["firepaw", "rookie"]:
+	for id in [starter, "firepaw"]:
 		team.append(int(add_monster(id, 1).uid))
 	set_team(team)
 	Tutorial.begin_new_game()
@@ -99,6 +137,35 @@ func start_new_game() -> void:
 func save_game() -> void:
 	var f := FileAccess.open(save_path, FileAccess.WRITE)
 	f.store_string(JSON.stringify(data, "\t"))
+	changed.emit()
+
+
+func export_to(path: String) -> bool:
+	save_game()
+	var f := FileAccess.open_encrypted_with_pass(path, FileAccess.WRITE, EXPORT_KEY)
+	if f == null:
+		return false
+	f.store_string(JSON.stringify(data))
+	f.close()
+	return true
+
+
+func read_export(path: String) -> Dictionary:
+	var f := FileAccess.open_encrypted_with_pass(path, FileAccess.READ, EXPORT_KEY)
+	if f == null:
+		return {}
+	var parsed: Variant = JSON.parse_string(f.get_as_text())
+	if parsed is Dictionary and int(parsed.get("version", 0)) == VERSION and parsed.get("monsters") is Array:
+		return parsed
+	return {}
+
+
+func import_save(saved: Dictionary) -> void:
+	export_to(save_path.get_basename() + "_before_load." + EXPORT_EXT)
+	var f := FileAccess.open(save_path, FileAccess.WRITE)
+	f.store_string(JSON.stringify(saved, "\t"))
+	f.close()
+	load_game()
 	changed.emit()
 
 
@@ -159,7 +226,7 @@ func team_size() -> int:
 	return TEAM_SIZE - 1 if cleared >= 3 else TEAM_SIZE - 2
 
 
-const TEAM_PRESETS := 3
+const TEAM_PRESETS := 5
 
 
 func set_team(uids: Array) -> void:
@@ -217,7 +284,6 @@ func exp_after(m: Dictionary, amount: int) -> Dictionary:
 
 
 func grant_exp(m: Dictionary, amount: int) -> int:
-	var stars: int = DB.monster(m.id).stars
 	var r := exp_after(m, amount)
 	var gained := int(r.level) - int(m.level)
 	m.level = int(r.level)
@@ -228,7 +294,7 @@ func grant_exp(m: Dictionary, amount: int) -> int:
 		if not data.maxed.has(m.id):
 			data.maxed[m.id] = true
 			track("lv30")
-			data.gems = int(data.gems) + roundi(DB.lv30_gems(stars) * Events.effect("lv30_gems"))
+			LevelReward.reached(m)
 	return gained
 
 
@@ -254,6 +320,8 @@ func boost_preview(target_uid: int, material_uid: int) -> Dictionary:
 	if mat.locked or in_team(material_uid):
 		return {"ok": false, "reason": "Material is locked or in the team"}
 	var chance := minf(1.0, DB.boost_chance(target.id, mat.id) * Events.effect("boost_chance") + float(target.get("boost_pt", 0)) / 200.0)
+	if bool(DB.monster(mat.id).get("boost_fail", false)):
+		chance = 0.0
 	if dev("dev_boost_100"):
 		chance = 1.0
 	return {"ok": true, "chance": chance, "cost": roundi(DB.boost_cost(target.id, int(target.boost)) * Events.effect("boost_cost"))}
@@ -394,6 +462,8 @@ func free_pets() -> Array:
 
 
 func pet_of(m: Dictionary) -> Dictionary:
+	if int(m.get("uid", -1)) < 0:
+		return {}
 	for p in data.pets:
 		if int(p.get("on", -1)) == int(m.uid):
 			return p
@@ -433,13 +503,27 @@ func equip_pet(monster_uid: int, pet_uid: int, use_gems: bool) -> Dictionary:
 	return {"ok": true, "replaced": not old.is_empty()}
 
 
+func pet_sell_price(pet: Dictionary) -> int:
+	return 1000 * int(DB.pet(pet.id).stars)
+
+
+func sell_pet(pet_uid: int) -> int:
+	for p in data.pets:
+		if int(p.uid) == pet_uid and int(p.get("on", -1)) < 0:
+			var price := pet_sell_price(p)
+			data.pets.erase(p)
+			data.gold = int(data.gold) + price
+			return price
+	return 0
+
+
 func pet_spec(m: Dictionary) -> Dictionary:
 	var pet := pet_of(m)
 	if pet.is_empty():
 		return {}
 	var def := DB.pet(pet.id)
 	var passive: Dictionary = def.passives[int(pet.passive)] if int(pet.passive) >= 0 and int(pet.passive) < def.passives.size() else {}
-	return {"stats": def.stats, "passive": passive}
+	return {"id": String(pet.id), "stats": def.stats, "passive": passive}
 
 
 func can_evolve(uid: int) -> Dictionary:
@@ -494,7 +578,9 @@ func evolve(uid: int) -> Dictionary:
 	return {"ok": true, "into": m.id}
 
 func sell_price(m: Dictionary) -> int:
-	return 100 * int(DB.monster(m.id).stars) * int(DB.monster(m.id).stars) + 20 * int(m.level)
+	if DB.monster(m.id).has("sell_price"):
+		return int(DB.monster(m.id).sell_price)
+	return 100 *int(DB.monster(m.id).stars) * int(DB.monster(m.id).stars) + 20 * int(m.level)
 
 
 func sell(uid: int) -> int:
@@ -698,6 +784,52 @@ func add_stone(stone: Dictionary) -> Dictionary:
 	return st
 
 
+func sell_stone(uid: int) -> int:
+	var st := get_stone(uid)
+	if st.is_empty() or int(st.get("on", -1)) >= 0:
+		return 0
+	var price: int = MagicStones.SELL_PRICE[clampi(int(st.rank), 0, MagicStones.SELL_PRICE.size() - 1)]
+	data.stones.erase(st)
+	data.gold = int(data.gold) + price
+	save_game()
+	return price
+
+
+func sell_stones(uids: Array) -> int:
+	var gold := 0
+	for uid in uids:
+		var st := get_stone(int(uid))
+		if st.is_empty() or int(st.get("on", -1)) >= 0:
+			continue
+		gold += int(MagicStones.SELL_PRICE[clampi(int(st.rank), 0, MagicStones.SELL_PRICE.size() - 1)])
+		data.stones.erase(st)
+	if gold > 0:
+		data.gold = int(data.gold) + gold
+		save_game()
+	return gold
+
+
+func expand_stone_box() -> bool:
+	if int(data.gems) < MagicStones.STONE_SLOT_GEMS:
+		return false
+	data.gems = int(data.gems) - MagicStones.STONE_SLOT_GEMS
+	data.stone_cap = int(data.stone_cap) + MagicStones.STONE_SLOT_STEP
+	save_game()
+	return true
+
+
+func stone_stacks(stones: Array) -> Array:
+	var by_key := {}
+	var out := []
+	for st in stones:
+		var k := "%s|%d|%d" % [st.type, int(st.rank), int(st.get("variant", 0))]
+		if not by_key.has(k):
+			by_key[k] = {"key": k, "stone": st, "uids": []}
+			out.append(by_key[k])
+		by_key[k].uids.append(int(st.uid))
+	return out
+
+
 func get_stone(uid: int) -> Dictionary:
 	for st in data.stones:
 		if int(st.uid) == uid:
@@ -749,6 +881,8 @@ func stone_slots(m: Dictionary) -> int:
 
 
 func equipped_stones(m: Dictionary) -> Array:
+	if int(m.get("uid", -1)) < 0:
+		return []
 	return data.stones.filter(func(st): return int(st.get("on", -1)) == int(m.uid))
 
 
@@ -846,9 +980,15 @@ func start_raid(raid_id: String, uids: Array) -> bool:
 	if not has_raid_key() and not (raid_unlocked(raid_id) and raid_needs_squad()):
 		return false
 	var hp := {}
+	var party := []
+	var kinds := {}
 	for u in uids:
 		hp[str(u)] = 1.0
-	data.raid = {"date": _today(), "id": raid_id, "picked": uids.duplicate(), "hp": hp, "room": 0, "done": false, "gold": 0, "party": uids.slice(0, Raids.PARTY)}
+		var kind: String = get_owned(int(u)).get("id", "")
+		if not kinds.has(kind) and party.size() < Raids.PARTY:
+			kinds[kind] = true
+			party.append(u)
+	data.raid = {"date": _today(), "id": raid_id, "picked": uids.duplicate(), "hp": hp, "room": 0, "done": false, "gold": 0, "party": party}
 	save_game()
 	return true
 
@@ -920,7 +1060,11 @@ func _settle_arena_week(a: Dictionary) -> Dictionary:
 	var gems := Arena.entry_gems(int(a.entries))
 	data.honor = int(data.honor) + honour
 	data.gems = int(data.gems) + gems
-	return {"rank": rank, "points": int(a.points), "honor": honour, "gems": gems}
+	var lucky := []
+	for t in Arena.lucky_draw():
+		Mail.send(Mail.TEAM, {String(t[1]): "red" if t[1] == "cube" else int(t[2])}, "Lucky Chest %s!" % String(t[0]), true)
+		lucky.append(String(t[0]))
+	return {"rank": rank, "points": int(a.points), "honor": honour, "gems": gems, "lucky": lucky}
 
 
 func arena_rank(a: Dictionary, progress: float) -> int:
@@ -1090,11 +1234,13 @@ const LEAGUE_TEAM := 12
 const LEAGUE_TICKETS := 10
 const LEAGUE_TICKET_SECONDS := 1800
 const LEAGUE_ENTRY := 2
+const LEAGUE_GOLD_ENTRY := 10000
 const LEAGUE_START_POINTS := 1000
+const LEAGUE_SEASON_GAMES := 120.0
 
 
 func league() -> Dictionary:
-	var week := Arena.week_id()
+	var week := LeagueSeasons.index()
 	var l: Dictionary = data.league
 	if l.is_empty() or int(l.get("season", -1)) != week:
 		var summary := {}
@@ -1109,35 +1255,25 @@ func league() -> Dictionary:
 
 func _settle_league(l: Dictionary) -> Dictionary:
 	var rank := league_rank(l, 1.0)
-	var pct := float(rank) / float(Arena.RIVALS + 1)
-	var honour := league_honour(rank, pct)
+	var prize := LeagueSeasons.reward_for(rank)
+	var honour: int = prize[0]
+	var name := String(LeagueSeasons.season(int(l.season)).name)
 	if honour > 0:
-		Mail.send(Mail.TEAM, {"honor": honour}, "PvP League reward: finished rank %d" % rank, true)
-	var badge := "gold" if pct <= 0.1 else ("silver" if pct <= 0.25 else ("bronze" if pct <= 0.5 else ""))
-	data.badge = badge
-	return {"rank": rank, "points": int(l.points), "honor": honour, "badge": badge}
-
-
-const LEAGUE_HONOUR := [["1st", 300], ["2nd~10th", 250], ["11th~50th", 200], ["Within 1%", 160], ["Within 10%", 120], ["Within 20%", 80], ["Within 30%", 60], ["Within 50%", 40]]
-
-
-func league_honour(rank: int, pct: float) -> int:
-	if rank == 1:
-		return 300
-	if rank <= 10:
-		return 250
-	if rank <= 50:
-		return 200
-	for row in [[0.01, 160], [0.1, 120], [0.2, 80], [0.3, 60], [0.5, 40]]:
-		if pct <= float(row[0]):
-			return int(row[1])
-	return 0
+		Mail.send(Mail.TEAM, {"honor": honour}, "%s reward: finished rank %d" % [name, rank], true)
+	if int(prize[1]) > 0:
+		Mail.send(Mail.TEAM, {"gems": int(prize[1])}, "%s reward: finished rank %d" % [name, rank], true)
+	var badge := String(prize[2])
+	if badge != "":
+		var key := LeagueSeasons.badge_key(int(l.season), badge)
+		data.badges[key] = int(data.badges.get(key, 0)) + 1
+	data.wing = int(prize[3])
+	return {"rank": rank, "points": int(l.points), "honor": honour, "gems": int(prize[1]), "badge": badge, "wing": int(prize[3]), "name": name}
 
 
 func league_rank(l: Dictionary, progress: float) -> int:
 	var rank := 1
 	for r in Arena.rivals(int(l.season) + 7777):
-		if LEAGUE_START_POINTS + Arena.rival_points(r, progress) > int(l.points):
+		if LEAGUE_START_POINTS + Arena.rival_points(r, progress, LEAGUE_SEASON_GAMES) > int(l.points):
 			rank += 1
 	return rank
 
@@ -1180,6 +1316,3 @@ func record_league(win: bool, rival_skill: float) -> int:
 	save_game()
 	return delta
 
-
-func badge_bonus() -> float:
-	return {"gold": 0.05, "silver": 0.03, "bronze": 0.02}.get(String(data.get("badge", "")), 0.0)

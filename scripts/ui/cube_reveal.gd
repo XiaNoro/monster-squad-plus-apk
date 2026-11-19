@@ -1,12 +1,18 @@
 class_name CubeReveal
 extends Control
 
+const FRAME_SCALE := 2.0
 const SERIES := {"blue": "cube", "yellow": "cube02", "red": "cube05", "honor": "cube07", "honor5": "cube07", "black": "cube08", "pet": "petcube01", "pet_rare": "petcube02"}
 const RARITY := {1: "common", 2: "uncommon", 3: "rare", 4: "superrare", 5: "epic", 6: "legendary"}
 const QUEUE_ICONS := {"blue": "betaHud00/H_cube_00.png", "yellow": "betaHud00/H_cube_01.png", "red": "betaHud00/H_cube_02.png", "honor": "betaHud00/H_cube_01.png", "honor5": "betaHud00/H_cube_01.png", "pet": "betaHud00/H_petcube_01.png", "pet_rare": "betaHud00/H_petcube_02.png"}
 const MBLUR := {"blue": "cube_mblur_00", "yellow": "cube_mblur_01", "red": "cube05_mblur_01", "honor": "cube07_mblur_01", "honor5": "cube07_mblur_01", "black": "cube08_mblur_01", "pet": "petcube_mblur_01", "pet_rare": "petcube_mblur_02"}
 const BUBBLES := 4
 const CUBE_W := 340.0
+const STEP := 0.0228
+const CATCH_GAP := 420.0
+const CATCH_FEET := 429.0
+const CATCH_ROWS := [285.0, 488.0]
+const CATCH_BUTTONS := {"Next Field": "ID_btnNext", "Again": "ID_btnAgain", "Leave": "ID_btnEsc"}
 
 var cube_kind := "blue"
 var items: Array = []
@@ -17,6 +23,7 @@ var _stage: Control
 var done := false
 var no_cube := false
 var evolve_from: Array = []
+var intro_sound := "evolve"
 var backdrop: Texture2D
 var _white: ColorRect
 
@@ -25,9 +32,14 @@ static func show_monster(parent: Control, id: String, btns: Array) -> CubeReveal
 	return play(parent, "blue", [id], [true], btns, false, true)
 
 
-static func evolve(parent: Control, from_ids: Array, into: String, fresh: bool, btns: Array) -> CubeReveal:
+static func fuse(parent: Control, from_ids: Array, into: String, fresh: bool, btns: Array) -> CubeReveal:
+	return evolve(parent, from_ids, into, fresh, btns, "fusion")
+
+
+static func evolve(parent: Control, from_ids: Array, into: String, fresh: bool, btns: Array, sound := "evolve") -> CubeReveal:
 	var r := CubeReveal.new()
 	r.evolve_from = from_ids
+	r.intro_sound = sound
 	r.items.append({"id": into, "new": fresh})
 	r.buttons = btns
 	r.set_anchors_and_offsets_preset(PRESET_FULL_RECT)
@@ -35,7 +47,29 @@ static func evolve(parent: Control, from_ids: Array, into: String, fresh: bool, 
 	r.mouse_filter = MOUSE_FILTER_STOP
 	parent.add_child(r)
 	r._run()
+	_announce(parent, [into], "by Fusion" if sound == "fusion" else "by Evolving")
 	return r
+
+
+static func catch(parent: Control, got: Array, new_flags: Array, btns: Array, bg: Texture2D) -> CubeReveal:
+	var r := CubeReveal.new()
+	r.backdrop = bg
+	for i in got.size():
+		r.items.append({"id": got[i], "new": bool(new_flags[i]) if i < new_flags.size() else false})
+	r.buttons = btns
+	r.set_anchors_and_offsets_preset(PRESET_FULL_RECT)
+	r.z_index = 70
+	r.mouse_filter = MOUSE_FILTER_STOP
+	parent.add_child(r)
+	r._catch()
+	_announce(parent, got, "from Cube")
+	return r
+
+
+static func _announce(parent: Control, ids: Array, source: String) -> void:
+	var scr := parent as Screen
+	if scr != null and scr.main != null and scr.main.ticker != null:
+		scr.main.ticker.player_got(ids, source)
 
 
 static func play(parent: Control, kind: String, got: Array, new_flags: Array, btns: Array, pets: bool = false, skip_cube: bool = false, bg: Texture2D = null) -> CubeReveal:
@@ -52,6 +86,8 @@ static func play(parent: Control, kind: String, got: Array, new_flags: Array, bt
 	r.mouse_filter = MOUSE_FILTER_STOP
 	parent.add_child(r)
 	r._run()
+	if not pets:
+		_announce(parent, got, "from Cube")
 	return r
 
 
@@ -78,96 +114,66 @@ func _wait(t: float) -> void:
 		left -= get_process_delta_time()
 
 
-func _rays() -> ColorRect:
-	var rays := ColorRect.new()
-	rays.color = Color("4f9ee8")
-	rays.set_anchors_and_offsets_preset(PRESET_FULL_RECT)
-	rays.mouse_filter = MOUSE_FILTER_IGNORE
-	add_child(rays)
-	for k in 7:
-		var beam := ColorRect.new()
-		beam.color = Color(0.75, 0.9, 1.0, 0.14 + 0.06 * (k % 3))
-		beam.size = Vector2(60 + 30 * (k % 3), 2000)
-		beam.position = Vector2(k * 180 - 40, -600)
-		beam.mouse_filter = MOUSE_FILTER_IGNORE
-		rays.add_child(beam)
-		var tw := beam.create_tween().set_loops()
-		tw.tween_property(beam, "modulate:a", 0.4, 0.6 + 0.1 * k)
-		tw.tween_property(beam, "modulate:a", 1.0, 0.6 + 0.1 * k)
-	return rays
-
-
 func _evolve_intro() -> void:
-	var snd := Sfx.play("evolve")
-	var rays := _rays()
+	var snd := Sfx.play(intro_sound)
 	var vw := get_viewport_rect().size
-	var c := vw / 2.0
-	var open := _frames("03")
-	var idle := _frames("01")
-	var cube := TextureRect.new()
-	cube.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-	cube.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-	cube.size = Vector2(560, 560)
-	cube.position = c - cube.size / 2.0
-	cube.pivot_offset = cube.size / 2.0
-	cube.mouse_filter = MOUSE_FILTER_IGNORE
-	cube.texture = open[open.size() - 1] if not open.is_empty() else null
-	cube.scale = Vector2(0.3, 0.3)
-	add_child(cube)
-	cube.create_tween().tween_property(cube, "scale", Vector2.ONE, 0.25).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	var c := vw / 2.0 + Vector2(0, 30)
+	var rays := _stripes()
+	rays.modulate = Color(0.4, 0.46, 0.7, 0.0)
+	var fade := rays.create_tween()
+	fade.tween_property(rays, "modulate:a", 1.0, 0.15)
+	fade.tween_property(rays, "modulate", Color.WHITE, 0.25)
+	await _wait(0.15)
+	var cube := _cube(c)
+	await _rise(cube, c, true)
+	_flash(0.35, 0.2)
+	for f in _frames("03"):
+		cube.texture = f
+		await _wait(0.035)
 	var mons: Array[TextureRect] = []
 	for k in evolve_from.size():
 		var tex := DB.battle_sprite(String(evolve_from[k]))
-		var box := Vector2(200, 170)
+		var box := Vector2(250, 205)
 		var drawn := tex.get_size() * minf(box.x / tex.get_width(), box.y / tex.get_height()) if tex != null and tex.get_width() > 0 else box
 		var m := UI.image(tex, drawn)
 		m.size = drawn
 		m.pivot_offset = drawn / 2.0
-		var side := -1.0 if k == 0 else 1.0
-		m.position = Vector2(c.x + side * 170.0 - drawn.x / 2.0, c.y - 40.0 - drawn.y / 2.0)
-		if k == 0:
-			m.flip_h = true
-		m.modulate.a = 0.0
+		var side := -1.0 if k % 2 == 0 else 1.0
+		m.flip_h = side > 0.0
+		var spot := Vector2(c.x + side * (300.0 + 130.0 * floorf(k / 2.0)) - drawn.x / 2.0, c.y + 150.0 - drawn.y)
+		m.position = spot + Vector2(side * (vw.x * 0.5 + drawn.x), 0)
 		add_child(m)
 		mons.append(m)
-		m.create_tween().tween_property(m, "modulate:a", 1.0, 0.15)
+		var slide := m.create_tween()
+		slide.tween_method(func(x: float): m.position = (spot + Vector2(side * (vw.x * 0.5 + drawn.x), 0)).lerp(spot, x) + Vector2(0, -absf(sin(x * PI * 3.0)) * 14.0), 0.0, 1.0, 0.38).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 	await _wait(0.75)
 	for k in mons.size():
 		var m := mons[k]
 		var start := m.position
-		var end := c - m.size / 2.0 + Vector2(0, 10)
+		var end := c - m.size / 2.0 + Vector2(0, -40)
+		var hop := 0.5
 		var tw := m.create_tween().set_parallel()
-		tw.tween_method(func(t: float): m.position = start.lerp(end, t) + Vector2(0, -150.0 * sin(t * PI)), 0.0, 1.0, 0.5 + 0.12 * k).set_trans(Tween.TRANS_SINE)
-		tw.tween_property(m, "scale", Vector2(0.35, 0.35), 0.5 + 0.12 * k).set_delay(0.15)
-		tw.chain().tween_property(m, "modulate:a", 0.0, 0.12)
-	await _wait(0.7)
-	_sparkles(c, 10)
+		tw.tween_method(func(x: float): m.position = start.lerp(end, x) + Vector2(0, -200.0 * sin(x * PI)), 0.0, 1.0, hop).set_delay(0.09 * k)
+		tw.tween_property(m, "scale", Vector2(0.25, 0.25), hop * 0.7).set_delay(0.09 * k + hop * 0.3).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
+		tw.chain().tween_property(m, "modulate:a", 0.0, 0.08)
+	await _wait(0.5 + 0.09 * (mons.size() - 1))
+	_sparkles(c - Vector2(0, 30), 12, Vector2(150, 110))
+	var open := _frames("03")
 	for i in range(open.size() - 1, -1, -1):
 		cube.texture = open[i]
-		await _wait(0.06)
-	var t := 0.0
-	var i := 0
-	while t < 1.8 and not _skip:
-		if not idle.is_empty():
-			cube.texture = idle[i % idle.size()]
-		i += 1
-		if i % 6 == 0:
-			_sparkles(c, 3)
-		await _wait(0.07)
-		t += 0.07
-	for f in open:
-		cube.texture = f
-		await _wait(0.04)
+		await _wait(0.05)
+	cube.scale = Vector2(1.08, 0.92)
+	cube.create_tween().tween_property(cube, "scale", Vector2.ONE, 0.35).set_trans(Tween.TRANS_ELASTIC).set_ease(Tween.EASE_OUT)
+	_sparkles(c, 8, Vector2(CUBE_W * 0.5, CUBE_W * 0.4))
+	var bob := cube.create_tween().set_loops()
+	bob.tween_property(cube, "position:y", cube.position.y - 8.0, 0.45).set_trans(Tween.TRANS_SINE)
+	bob.tween_property(cube, "position:y", cube.position.y, 0.45).set_trans(Tween.TRANS_SINE)
+	await _animate(cube, _frames("01"), 1.15, 1, c)
+	bob.kill()
 	if _skip and snd != null:
 		snd.stop()
-	var flash := ColorRect.new()
-	flash.color = Color.WHITE
-	flash.set_anchors_and_offsets_preset(PRESET_FULL_RECT)
-	flash.mouse_filter = MOUSE_FILTER_IGNORE
-	add_child(flash)
-	flash.create_tween().tween_property(flash, "modulate:a", 0.0, 0.45)
+	await _pop(cube, c, 1.0)
 	rays.queue_free()
-	cube.queue_free()
 	for m in mons:
 		m.queue_free()
 
@@ -193,6 +199,7 @@ func _run() -> void:
 		await _evolve_intro()
 		_skip = false
 		_scene()
+		_fade_white(0.18, 0.35)
 		var h := await _reveal(items[0], true)
 		_buttons(h, get_viewport_rect().size.y - 84.0)
 		return
@@ -245,6 +252,179 @@ func _run() -> void:
 	await _summary()
 
 
+func _catch() -> void:
+	var vw := get_viewport_rect().size
+	var black := ColorRect.new()
+	black.color = Color.BLACK
+	black.set_anchors_and_offsets_preset(PRESET_FULL_RECT)
+	black.mouse_filter = MOUSE_FILTER_IGNORE
+	add_child(black)
+	var stripe := FrameFx.frames("u_bluebackstripe_01")
+	for side in 2:
+		var band := TextureRect.new()
+		band.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		band.stretch_mode = TextureRect.STRETCH_SCALE
+		band.texture = stripe[0] if not stripe.is_empty() else null
+		band.flip_h = side == 1
+		band.size = Vector2(vw.x / 2.0, 29.0)
+		band.position = Vector2(side * vw.x / 2.0, vw.y / 2.0 - 14.5)
+		black.add_child(band)
+	Sfx.play("cube_open")
+	await _wait(5 * STEP)
+	black.queue_free()
+	var rays := _stripes()
+	await _wait(0.3)
+	var c := vw / 2.0
+	var cube := _cube(c)
+	await _rise(cube, c, true)
+	await _wait(0.3)
+	_flash(0.7, 0.2)
+	cube.queue_free()
+	rays.queue_free()
+	_skip = false
+	_scene(0.19)
+	var holder := Control.new()
+	holder.set_anchors_and_offsets_preset(PRESET_FULL_RECT)
+	holder.mouse_filter = MOUSE_FILTER_IGNORE
+	add_child(holder)
+	var spots := _catch_spots(items.size(), vw)
+	var mons := []
+	var plan := []
+	for i in items.size():
+		var feet: Vector2 = spots[i].feet
+		var k: float = spots[i].k
+		var light := Control.new()
+		light.mouse_filter = MOUSE_FILTER_IGNORE
+		holder.add_child(light)
+		holder.move_child(light, 0)
+		_spot(light, feet, 300.0 * k, 520.0 * k, 0.14)
+		var title_at := maxi(16 + 5 * i, 7 * i + 9)
+		plan.append([7 * i, func(): mons.append(_catch_burst(holder, items[i], feet, k))])
+		plan.append([title_at, _catch_title.bind(holder, items[i], feet, k)])
+		plan.append([title_at + 12, _catch_stars.bind(holder, items[i], feet, k)])
+		plan.append([title_at + 15, func(): _glint(holder, feet + Vector2(-mons[i].size.x * 0.22, -mons[i].size.y * 0.5))])
+	plan.append([maxi(16 + 5 * (items.size() - 1), 7 * (items.size() - 1) + 9) + 32, _catch_buttons.bind(holder)])
+	plan.sort_custom(func(a, b): return a[0] < b[0])
+	var t := 0.0
+	for p in plan:
+		while not _skip and t < float(p[0] - 1) * STEP:
+			await get_tree().process_frame
+			t += get_process_delta_time()
+		(p[1] as Callable).call()
+
+
+func _catch_spots(n: int, vw: Vector2) -> Array:
+	var per_row := n if n <= 3 else ceili(n / 2.0)
+	var rows := ceili(float(n) / per_row)
+	var gap := minf(CATCH_GAP, (vw.x - 140.0) / per_row)
+	var k := minf(gap / CATCH_GAP, 0.75 if rows > 1 else 1.0)
+	var out := []
+	for i in n:
+		var r := i / per_row
+		var in_row := mini(per_row, n - r * per_row)
+		var x := vw.x / 2.0 + (i % per_row - (in_row - 1) / 2.0) * gap
+		out.append({"feet": Vector2(x, CATCH_FEET if rows == 1 else CATCH_ROWS[r]), "k": k})
+	return out
+
+
+func _catch_burst(holder: Control, it: Dictionary, feet: Vector2, k: float) -> Control:
+	var tex: Texture2D = _info(it).tex
+	var tall := DB.sprite_height(String(it.id), "ally") * BattleUnitView.SIZE_PX * k
+	var drawn := fit(tex, Vector2(250, 200) * k)
+	if tall > 0.0 and tex != null and tex.get_height() > 0:
+		drawn = tex.get_size() * (tall / tex.get_height())
+	var frames := FrameFx.frames("u_lightburst_01")
+	var dome := TextureRect.new()
+	dome.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	dome.stretch_mode = TextureRect.STRETCH_SCALE
+	dome.mouse_filter = MOUSE_FILTER_IGNORE
+	dome.material = _add_mat()
+	dome.size = Vector2(480, 600) * 1.61 * k
+	dome.pivot_offset = Vector2(221, 322) * 1.61 * k
+	dome.position = feet - dome.pivot_offset
+	holder.add_child(dome)
+	var mon := _monster(holder, it, tex, feet, drawn)
+	if frames.is_empty():
+		dome.queue_free()
+	else:
+		dome.texture = frames[0]
+		var tw := dome.create_tween()
+		tw.tween_property(dome, "scale", Vector2(1.1, 1.1), 4 * STEP)
+		for f in range(1, frames.size()):
+			tw.tween_callback(func(): dome.texture = frames[f])
+			tw.tween_interval(STEP)
+		tw.tween_callback(dome.queue_free)
+	var sparks := FrameFx.play(holder, "u_particleburst_01", feet - Vector2(0, 40) * k, Vector2(400, 267) * 0.9 * k, 20)
+	if sparks != null:
+		sparks.material = _add_mat()
+	return mon
+
+
+func _catch_title(holder: Control, it: Dictionary, feet: Vector2, k: float) -> void:
+	var tex := UI.tex("betaGacha00/%s.png" % RARITY.get(clampi(int(_info(it).stars), 1, 6), "common"))
+	var title := UI.image(tex, Vector2.ZERO, TextureRect.STRETCH_SCALE)
+	title.size = tex.get_size() * 0.9 * k
+	title.position = Vector2(feet.x, feet.y - 196.0 * k) - title.size / 2.0
+	title.pivot_offset = title.size / 2.0
+	holder.add_child(title)
+	_slam(title, 2.6, 4 * STEP)
+	if it.new:
+		var nt := UI.tex("betaGacha00/new01.png")
+		var nw := UI.image(nt, Vector2.ZERO, TextureRect.STRETCH_SCALE)
+		nw.size = nt.get_size() * 0.9 * k
+		nw.position = Vector2(feet.x, feet.y - 284.0 * k) - nw.size / 2.0
+		nw.pivot_offset = nw.size / 2.0
+		nw.rotation = deg_to_rad(-20)
+		holder.add_child(nw)
+		_slam(nw, 2.6, 4 * STEP)
+	Sfx.play("buff")
+
+
+func _catch_stars(holder: Control, it: Dictionary, feet: Vector2, k: float) -> void:
+	var stars := int(_info(it).stars)
+	var st_tex := UI.tex("betaGacha00/star01.png")
+	var sz := st_tex.get_size() * 0.72 * k
+	for s in stars:
+		var st := UI.image(st_tex, Vector2.ZERO, TextureRect.STRETCH_SCALE)
+		st.size = sz
+		st.pivot_offset = sz / 2.0
+		var end := Vector2(feet.x + (s - (stars - 1) / 2.0) * 50.6 * k, feet.y - 241.0 * k) - sz / 2.0
+		st.position = end + Vector2(sz.x * 0.7, -sz.y * 0.25)
+		st.scale = Vector2(2.3, 2.3)
+		st.modulate.a = 0.0
+		holder.add_child(st)
+		var tw := st.create_tween().set_parallel()
+		tw.tween_property(st, "position", end, 4 * STEP).set_delay(2 * STEP * s).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
+		tw.tween_property(st, "scale", Vector2.ONE, 4 * STEP).set_delay(2 * STEP * s).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
+		tw.tween_property(st, "modulate:a", 1.0, 3 * STEP).set_delay(2 * STEP * s)
+	Sfx.play("click")
+
+
+func _catch_buttons(holder: Control) -> void:
+	var lay := Layout.load_into(holder, "R_cubeOpen")
+	lay.show("ID_btnShare", false)
+	lay.show("ID_txttuch", false)
+	var shown := []
+	for id in CATCH_BUTTONS.values():
+		lay.show(id, false)
+	for b in buttons:
+		var id: String = CATCH_BUTTONS.get(String(b.text), "")
+		if id == "":
+			continue
+		lay.show(id, true)
+		lay.on(id, _press.bind(b.get("cb", Callable())))
+		shown.append(lay.node(id))
+	if shown.is_empty():
+		lay.root.queue_free()
+		_buttons(holder, get_viewport_rect().size.y - 84.0)
+		return
+	var vw := get_viewport_rect().size
+	for j in shown.size():
+		var c: Control = shown[j]
+		c.global_position = global_position + Vector2(vw.x / 2.0 + (j - (shown.size() - 1) / 2.0) * 240.0, 563.0) - c.size / 2.0
+	done = true
+
+
 func _stripes() -> Control:
 	var back := ColorRect.new()
 	back.color = Color("2a6fd0")
@@ -273,7 +453,7 @@ func _stripes() -> Control:
 	return back
 
 
-func _scene() -> void:
+func _scene(shade: float = 0.62) -> void:
 	if _stage != null:
 		return
 	_stage = Control.new()
@@ -283,8 +463,11 @@ func _scene() -> void:
 	move_child(_stage, 0)
 	var bg := UI.image(backdrop if backdrop != null else UI.tex("res://assets/apk/images/Forest_1.png"), Vector2.ZERO, TextureRect.STRETCH_KEEP_ASPECT_COVERED)
 	bg.set_anchors_and_offsets_preset(PRESET_FULL_RECT)
-	bg.modulate = Color(0.62, 0.62, 0.62) if backdrop != null else Color(0.3, 0.5, 0.36)
+	bg.modulate = Color(shade, shade, shade) if backdrop != null else Color(0.3, 0.5, 0.36) * shade / 0.62
+	bg.modulate.a = 1.0
 	_stage.add_child(bg)
+	if shade < 0.62:
+		return
 	var vig := TextureRect.new()
 	vig.texture = _vignette_tex()
 	vig.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
@@ -294,11 +477,11 @@ func _scene() -> void:
 	_stage.add_child(vig)
 
 
-func _spot(parent: Control, feet: Vector2, w: float, h: float) -> void:
+func _spot(parent: Control, feet: Vector2, w: float, h: float, beam: float = 0.42) -> void:
 	var cone := UI.image(UI.tex("betaGacha00/MapMask01.png"), Vector2.ZERO, TextureRect.STRETCH_SCALE)
 	cone.size = Vector2(w / 0.47, h / 0.35)
 	cone.position = Vector2(feet.x - cone.size.x * 0.505, feet.y + h * 0.15 - h - cone.size.y * 0.22)
-	cone.modulate = Color(0.3, 0.95, 0.5, 0.42)
+	cone.modulate = Color(0.3, 0.95, 0.5, beam)
 	cone.material = _add_mat()
 	parent.add_child(cone)
 	var glow := TextureRect.new()
@@ -413,7 +596,7 @@ func _cube(at: Vector2) -> TextureRect:
 	cube.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	cube.stretch_mode = TextureRect.STRETCH_SCALE
 	cube.texture = idle[0] if not idle.is_empty() else null
-	var src: Vector2 = cube.texture.get_size() if cube.texture != null else Vector2(480, 320)
+	var src: Vector2 = cube.texture.get_size() / FRAME_SCALE if cube.texture != null else Vector2(480, 320)
 	cube.size = src * (CUBE_W / (140.0 if src.x >= 400.0 else 190.0))
 	cube.pivot_offset = cube.size / 2.0
 	cube.position = at - cube.size / 2.0
@@ -422,19 +605,20 @@ func _cube(at: Vector2) -> TextureRect:
 	return cube
 
 
-func _rise(cube: TextureRect, at: Vector2) -> void:
+func _rise(cube: TextureRect, at: Vector2, from_top: bool = false) -> void:
 	cube.visible = false
 	var tex := UI.tex("betaGacha00/%s.png" % MBLUR.get(cube_kind, "cube_mblur_00"))
 	var blur := UI.image(tex, Vector2.ZERO, TextureRect.STRETCH_SCALE)
 	var w := CUBE_W * (0.9 if is_pet else 1.0)
 	blur.size = Vector2(w, w * tex.get_height() / tex.get_width()) if tex != null else Vector2(w, w * 1.6)
-	blur.position = Vector2(at.x - blur.size.x / 2.0, get_viewport_rect().size.y + 20.0)
+	blur.position = Vector2(at.x - blur.size.x / 2.0, -blur.size.y - 20.0 if from_top else get_viewport_rect().size.y + 20.0)
+	blur.flip_v = from_top
 	add_child(blur)
 	blur.create_tween().tween_property(blur, "position:y", at.y - blur.size.y / 2.0, 0.14).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 	await _wait(0.14)
 	blur.queue_free()
 	cube.visible = true
-	cube.scale = Vector2(0.86, 1.16)
+	cube.scale = Vector2(1.16, 0.86) if from_top else Vector2(0.86, 1.16)
 	cube.create_tween().tween_property(cube, "scale", Vector2.ONE, 0.4).set_trans(Tween.TRANS_ELASTIC).set_ease(Tween.EASE_OUT)
 
 

@@ -2,6 +2,8 @@
 # Run after tools/build_db.gd (safe to re-run): python tools/fix_wiki_data.py [--write]
 import copy
 import json
+import math
+from collections import Counter
 import os
 import re
 import statistics
@@ -13,6 +15,7 @@ PATH = os.path.join(ROOT, "data", "monsters.json")
 raw = open(PATH, encoding="utf-8").read()
 M = json.loads(raw)
 log = []
+ESTIMATE_MAX_GAP = 0.5
 
 
 def note(mid, what):
@@ -107,6 +110,26 @@ def describe(effects):
     return "; ".join(out)
 
 
+def icon_for(effects):
+    kinds = {e["type"]: e for e in effects}
+    group = any(e.get("target") in ("all_enemies", "all_allies") for e in effects)
+    suffix = " All.png" if group else ".png"
+    if "dot" in kinds:
+        return kinds["dot"]["kind"].capitalize() + suffix
+    if "stun" in kinds:
+        return "Stun + Attack All.png" if group and "damage" in kinds else "Stun.png"
+    if "heal" in kinds:
+        return "Attack + Heal.png" if "damage" in kinds else "Heal" + suffix
+    if "debuff" in kinds:
+        stat = STAT_TEXT.get(kinds["debuff"]["stat"], "ATK")
+        return "Attack + DEF Down.png" if "damage" in kinds and stat == "DEF" else "%s Down%s" % (stat, suffix)
+    if "buff" in kinds:
+        return "%s Up%s" % (STAT_TEXT.get(kinds["buff"]["stat"], "ATK"), suffix)
+    if "shield" in kinds:
+        return "Shield" + suffix
+    return "Attack_All.png" if group else "Attack.png"
+
+
 def fix_skill(mid, s, label):
     tag = re.search(r"\s*\[(\d+)\]$", s.get("name", ""))
     if tag:
@@ -126,6 +149,9 @@ def fix_skill(mid, s, label):
     if s.get("icon") in ICON_FIXES:
         s["icon"] = ICON_FIXES[s["icon"]]
         note(mid, "%s icon -> %s" % (label, s["icon"]))
+    if not s.get("icon") and s.get("effects"):
+        s["icon"] = icon_for(s["effects"])
+        note(mid, "%s %r: icon picked from its effects: %s" % (label, s.get("name"), s["icon"]))
     if not d and s.get("effects"):
         s["description"] = describe(s["effects"])
         note(mid, "%s %r: described as %r" % (label, s.get("name"), s["description"]))
@@ -209,9 +235,12 @@ def fix_evolutions():
         ids = [s["monster"] for s in t]
         if mid in ids:
             i = ids.index(mid)
-            if i + 1 < len(t) and t[i]["material"] in M and m.get("evolve_material", "") not in M:
+            if i + 1 < len(t) and t[i]["material"] in M:
                 set_field(mid, "evolve_material", t[i]["material"])
                 set_field(mid, "evolve_quantity", t[i]["quantity"])
+            elif i + 1 == len(t) and not m.get("evolves_into"):
+                set_field(mid, "evolve_material", "")
+                set_field(mid, "evolve_quantity", 1)
 
 
 def tier_stats():
@@ -264,6 +293,77 @@ def fix_material_flags():
             M[mid]["material"] = False
 
 
+def sk(name, icon, mp, effects, desc=""):
+    return {"name": name, "icon": icon, "mp": mp, "effects": effects, "description": desc or describe(effects)}
+
+
+def sup(name, icon, effects, desc=""):
+    return {"name": name, "icon": icon, "cooldown": 12.0, "effects": effects, "description": desc or describe(effects)}
+
+
+# Icons read off monster cards in footage (research/videos/findings.md, "Skill pass"); names in quotes on the card
+# tooltips are real, the rest are placeholders in the game's own naming style.
+FOOTAGE_SKILLS = {
+    "elit_centaur": ([
+        sk("Stun Strike", "Stun.png", 60, [dmg("enemy", 1.5), stun("enemy", 3.0)]),
+        sk("Centaur Rush", "Attack All.png", 100, [dmg("all_enemies", 1.2)]),
+        sk("Piercing poison", "Poison All.png", 100, [dot("poison", 2, "all_enemies"), debuff("def", "all_enemies", 0.3, 10.0)], "Inflicts Poison 2stage, DEF Down"),
+        sk("Basic Speed Down", "Speed Down.png", 40, [debuff("speed", "enemy", 0.25, 20.0)]),
+    ], sup("Poison Arrow", "Poison All.png", [dmg("enemy", 1.0), dot("poison", 1, "all_enemies")])),
+    "lightning_spirit": ([
+        sk("Volt Charge", "ATK Up.png", 40, [buff("atk", "leader", 0.5, 20.0)]),
+        sk("Thunder Storm", "Stun + Attack All.png", 150, [dmg("all_enemies", 1.5), stun("all_enemies", 2.0, 0.3)]),
+        sk("Spirit Heal", "Heal.png", 60, [heal("most_hurt", 2.0)]),
+        sk("Call Lightning", "Bleed.png", 100, [dmg("enemy", 3.0), dot("bleed", 2, "enemy")], "Attack with 300% ATK; inflicts Stage 2 Bleed"),
+    ], sup("Lightning Bite", "Bleed.png", [dmg("enemy", 1.5), dot("bleed", 1, "enemy")])),
+    "void_genie": ([
+        sk("Basic Speed Down", "Speed Down.png", 40, [debuff("speed", "enemy", 0.25, 20.0)]),
+        sk("Genie Storm", "Attack All.png", 100, [dmg("all_enemies", 1.2)]),
+        sk("Basic Total ATK Down", "ATK Down All.png", 100, [debuff("atk", "all_enemies", 0.25, 20.0)]),
+        sk("Void Punch", "Attack.png", 60, [dmg("enemy", 2.5)]),
+    ], sup("Void Punch", "Attack.png", [dmg("enemy", 1.5)])),
+    "blue_dragongod": ([
+        sk("Dragon Blessing", "Heal All.png", 60, [heal("all_allies", 1.5)]),
+        sk("Dragon Roar", "ATK Up All.png", 100, [buff("atk", "all_allies", 0.5, 20.0)]),
+        sk("Dragon Scale Barrier", "Shield All.png", 100, [shield("all_allies", 3, 15.0)]),
+        sk("Frozen Storm", "Freeze All.png", 150, [dmg("all_enemies", 1.8), dot("freeze", 2, "all_enemies")]),
+    ], sup("Dragon Scale Barrier", "Shield All.png", [shield("all_allies", 1, 10.0)])),
+    "skulme": ([
+        sk("Quick Heal", "Heal.png", 40, [heal("most_hurt", 1.5)]),
+        sk("Bone Toss", "Attack.png", 40, [dmg("enemy", 2.0)]),
+    ], sup("Bone Toss", "Attack.png", [dmg("enemy", 1.5)])),
+}
+
+
+def footage_skills():
+    for mid, (skills, support) in FOOTAGE_SKILLS.items():
+        if mid in M and not M[mid].get("skills"):
+            M[mid]["skills"] = copy.deepcopy(skills)
+            M[mid]["support_skill"] = copy.deepcopy(support)
+            note(mid, "skills from footage card: %s" % ", ".join(s["name"] for s in skills))
+    for s in M["e_zakum"]["skills"] + [M["e_zakum"]["support_skill"]]:
+        if s["name"] == "Zakum Leech" and s["effects"][0]["mult"] != 2.0:
+            s["effects"][0]["mult"] = 2.0
+            s["description"] = "Attacks with 200% ATK; Heal HP (REC 100%)"
+            note("e_zakum", "Zakum Leech 200% from footage card (RYKrWYyQHx4 0126)")
+    for s in M["flame_knight"]["skills"]:
+        if s["name"] == "Piercing fire" and not s.get("icon"):
+            s["icon"] = "Attack + DEF Down.png"
+            note("flame_knight", "Piercing fire icon from footage card")
+    if int(M["blue_dragongod"]["stats"].get("hp", 0)) == 0:
+        set_field("blue_dragongod", "stats", {"hp": 4079, "atk": 565, "def": 187, "rec": 658, "mp": 240})
+    set_field("blue_dragongod", "passive", "All Monsters' ATK + 50%")
+    set_field("blue_dragongod", "passive_effect", {"element": "all", "pct": 0.5, "stat": "atk"})
+    if not M["blue_dragongod"].get("location"):
+        set_field("blue_dragongod", "location", "Mystery Box")
+    set_field("caocao", "location", "Temple of Four Elements (hell)")
+    set_field("flame_knight", "passive", "Increases Fire Monsters' ATK by 50%")
+    set_field("flame_knight", "passive_effect", {"element": "fire", "pct": 0.5, "stat": "atk"})
+    for mid, p in (("aqua_spirit", 40), ("undine", 45)):
+        set_field(mid, "passive", "Increases Water Monsters' ATK by %d%%" % p)
+        set_field(mid, "passive_effect", {"element": "water", "pct": p / 100, "stat": "atk"})
+
+
 def fill_missing_skills():
     before = len(log)
     for mid, m in M.items():
@@ -284,13 +384,253 @@ def fill_missing_skills():
         fill_missing_skills()
 
 
+FOOTAGE_STATS = {
+    "ceratoking": {"stats_max": {"hp": 4725, "atk": 665}},
+    "darkrake": {"stats_max": {"hp": 3014, "atk": 1033}},
+    "flame_eldragon": {"stats_max": {"hp": 4833, "atk": 733}},
+    "glacial_eldragon": {"stats_max": {"hp": 3407, "atk": 477}},
+    "native_eldragon": {"stats_max": {"hp": 3614, "atk": 473}},
+    "voidina": {"stats_max": {"hp": 2284, "atk": 753}},
+    "e_pink_bean": {"stats_max": {"hp": 2838, "atk": 595}},
+    "ceres": {"stats_max": {"hp": 1370, "atk": 615, "def": 46, "rec": 341}},
+    "burdon": {"stats_max": {"hp": 2286, "atk": 318, "def": 99, "rec": 556}},
+    "e_zakum": {"stats": {"hp": 1798, "atk": 290, "def": 122, "rec": 364}, "stats_max": {"hp": 2581, "atk": 348, "def": 122, "rec": 625}},
+    "gusdon": {"stats": {"hp": 2432}},
+    "kangard": {"stats_max": {"hp": 2733, "atk": 871, "def": 52, "rec": 519}},
+    "jackolantern": {"stats_max": {"atk": 840}},
+    "flame_sprite": {"stats_max": {"rec": 643}},
+    "twinblaze": {"stats": {"atk": 498}},
+    "zayn": {"stats_max": {"atk": 290}},
+    "charmew": {"stats_max": {"hp": 3128, "atk": 447, "rec": 686}},
+    "stoneheart": {"stats_max": {"hp": 2849, "atk": 423, "rec": 602}},
+    "drakoon": {"stats_max": {"hp": 3575, "atk": 550, "def": 165, "rec": 633}},
+}
+
+
+def footage_stats():
+    for mid, fields in FOOTAGE_STATS.items():
+        for key, vals in fields.items():
+            M[mid][key].update(vals)
+        note(mid, "stats from footage cards: %s" % fields)
+
+
+# Loading-screen lines read off footage (research/videos/frames*/*/ocr.tsv).
+FOOTAGE_QUOTES = {
+    "ant_queen": "I am the queen of ant army.",
+    "aqua_bat": "You are not welcome here!",
+    "aquacron": "I am colder than ice baby!",
+    "aquahopper": "Beyond the power of Lv. 30!",
+    "aquarell": "Don't be surprised if I disappear.",
+    "aqusa": "Prepare for mummification.",
+    "banana_dragon": "This is my true form!",
+    "banasnake": "Do not eat the banana peel.",
+    "beblaze": "Less yapping, more slapping!",
+    "beetortle": "I may be small, but I dream big.",
+    "blossom_knight": "Feel the wrath of my blossoming sword",
+    "bluebella": "Enough drops of water'll make a hole in a stone.",
+    "bud_knight": "Careful! The flowers haven't bloomed yet",
+    "centaur": "All heroes are born from me",
+    "ceratoking": "An ancient power is slowly rising!",
+    "chilla": "You'll never win if you don't try hard.",
+    "cumulo": "I'll blow you out like a candle if you come near me!",
+    "damage_dog": "If you can punch, you can be punched.",
+    "dark_ena": "There's no escaping my icy gaze!",
+    "dark_knight": "I dwell in the darkest place",
+    "darkrake": "When I stare into the abyss, the abyss stares back at me",
+    "deramax": "A new ice age begins!",
+    "derastorm": "A new ice age begins!",
+    "drakan": "I am the hardest shield ever.",
+    "drakoon": "Are you looking for stronger power?",
+    "elit_centaur": "I am the master of all heroes",
+    "evil_ena": "There's no escaping my icy gaze!",
+    "evil_hy": "The fire in my eyes is enough to burn you!",
+    "expert_joun": "I am the mighty spear master!",
+    "fire_genie": "I'm Fire genie",
+    "fire_sprite": "I am the flame of ancient.",
+    "flame_eldragon": "I will burn everything with the ancient fire!",
+    "flame_sprite": "My fire is everlasting!",
+    "flamell": "Want to see a magic trick?",
+    "forinas": "Enchanting, aren't I?",
+    "frivolaze": "What can you sacrifice for your dreams?",
+    "frivolycan": "What can you sacrifice for your dreams?",
+    "gateau": "What is your favorite sweet?",
+    "ghouldrop": "Brrrrrrrrr...",
+    "ghoulflame": "Buuuuurns...",
+    "ghoulfrost": "Brrrrrrrrr...",
+    "glacial_eldragon": "I live beneath the deep blue",
+    "goliath": "With patience, the thirsty root breaks stone.",
+    "granubis": "Let me guide you after death.",
+    "granuka": "Let me guide you after death.",
+    "grochiss": "We're in this together, no matter what!",
+    "gusdon": "If ya don't got brains, use brawn instead!",
+    "humbath": "You think I can't beat you?",
+    "iron_bear": "These claws of mine? Might want to avoid them.",
+    "kaios": "We are chained by fate, you and I.",
+    "kalper": "You could wait, but when will chance come again?",
+    "leaf_genie": "I'm Leaf genie",
+    "leaf_spirit": "Listen to the whispers of life",
+    "lightning_spirit": "Lightning is the most powerful weapon to illuminate the darkness",
+    "luxhopper": "Beyond the power of Lv. 30!",
+    "magroon": "Punch! Punch! Punch with the fire in my heart!",
+    "mandrake": "Feel the power of the great nature!",
+    "megacrush": "The terror begins.",
+    "megania": "I will protect nature with my iron antlers.",
+    "megaslamma": "I. Will. Destroy. You.",
+    "minohawk": "Chaos! Destruction! Oblivion!",
+    "minothrush": "Face oblivion!",
+    "moss_bat": "Silence, intruder!",
+    "native_eldragon": "Finally... I've awaken from the unknown jungle.",
+    "naturia_eldragon": "Beware! The Deep forest is very dangerous.",
+    "noxhopper": "Beyond the power of Lv. 30!",
+    "patrox": "You'll pay for abusing Mother Nature!",
+    "roklam": "The earth will be here long after you're gone.",
+    "rudolph": "We give presents to good kids!",
+    "slime_king": "One must eat to become strong.",
+    "stabeak": "Try me. I dare ya.",
+    "stellar_eldragon": "My power will send everything to the next dimension!",
+    "stoneheart": "When you look into darkness, it often looks back.",
+    "thornton": "Stand on your own two legs!",
+    "torizo": "Ride the winds with me.",
+    "tramacron": "Do you feel that? It's the heat of my breath!",
+    "tundra_eldragon": "Beware! The deep sea is very cold.",
+    "turto_kaiser": "Life begins at one hundred years old.",
+    "ultrang": "I'm not the giving tree.",
+    "ultraroost": "Eat chicken not me!",
+    "undine": "I'm beautiful and dangerous as a deep lake",
+    "uranger_g": "You can take on the world with a friend.",
+    "void_genie": "I'm Void genie",
+    "void_knight": "Darkness is my strength",
+    "voidina": "I come from a deep space",
+    "volt_spirit": "I'm a spirit that controls lightning.",
+    "water_genie": "I'm Water genie",
+    "wetnia": "I am cold blooded.",
+}
+
+
+def footage_quotes():
+    for mid, q in FOOTAGE_QUOTES.items():
+        if mid in M and not M[mid].get("quote"):
+            M[mid]["quote"] = q
+            note(mid, "quote from loading screen")
+
+
+def fill_stats_from_recolours():
+    keys = ("hp", "atk", "def", "rec")
+    groups = {}
+    for mid, m in M.items():
+        if m.get("material") or int(m["stats"].get("hp", 0)) <= 0:
+            continue
+        groups.setdefault((m["stars"],) + tuple(int(m["stats"][k]) for k in keys), []).append(mid)
+    for ids in groups.values():
+        votes = Counter(tuple(int(M[x]["stats_max"][k]) for k in keys) for x in ids if int(M[x]["stats_max"].get("hp", 0)) > 0)
+        if not votes:
+            continue
+        top, n = votes.most_common(1)[0]
+        if len(votes) > 1 and (n < 3 or n < 0.75 * sum(votes.values())):
+            continue
+        src = next(x for x in ids if tuple(int(M[x]["stats_max"][k]) for k in keys) == top)
+        for mid in ids:
+            cur = tuple(int(M[mid]["stats_max"].get(k, 0)) for k in keys)
+            if cur == top or "stats_max" in FOOTAGE_STATS.get(mid, {}):
+                continue
+            M[mid]["stats_max"].update(dict(zip(keys, top)))
+            note(mid, "Lv30 stats %s -> %s, as most of its recolours (%s)" % (cur, top, src) if cur[0] > 0 else "had no Lv30 stats; copied from %s (same Lv1 stats)" % src)
+
+
+def reset_estimates():
+    for m in M.values():
+        if m.pop("stats_estimated", None):
+            for part in m.pop("stats_estimated_parts"):
+                for k in ("hp", "atk", "rec"):
+                    m[part][k] = 0
+
+
+def estimate_missing_stats():
+    keys = ("hp", "atk", "rec")
+    def has(m, part):
+        return int((m.get(part) or {}).get("hp", 0)) > 0
+
+    real = [m for m in M.values() if not m.get("material") and all(int((m.get(p) or {}).get(k, 0)) > 0 for p in ("stats", "stats_max") for k in keys)]
+    variants = json.load(open(os.path.join(ROOT, "data", "monster_variants.json"), encoding="utf-8"))["groups"]
+
+    def nearest(m, part, n=3):
+        def gap(x):
+            return sum(math.log(m[part][k] / x[part][k]) ** 2 for k in keys if int(m[part].get(k, 0)) > 0)
+        pool = sorted((x for x in real if x["stars"] == m["stars"]), key=gap)[:n]
+        return pool, gap(pool[0])
+
+    def mark(mid, part, how):
+        m = M[mid]
+        m["stats_estimated"] = True
+        m.setdefault("stats_estimated_parts", []).append(part)
+        note(mid, "%s estimated (%s): %s" % ("Lv1" if part == "stats" else "Lv30", how, [m[part][k] for k in keys]))
+
+    def step(a, b):
+        out = {}
+        for k in keys + ("def",):
+            r = [M[x["evolves_into"]]["stats"][k] / x["stats"][k] for x in real
+                 if x["stars"] == a and x.get("evolves_into") in M and M[x["evolves_into"]]["stars"] == b
+                 and has(M[x["evolves_into"]], "stats") and x["stats"][k] > 0]
+            out[k] = statistics.median(r)
+        return out
+
+    for mid, m in sorted(M.items()):
+        if has(m, "stats") or m.get("material"):
+            continue
+        group = next((g for g in variants if mid in g), {})
+        same = [M[x] for x in group if x != mid and x in M and has(M[x], "stats") and M[x]["stars"] == m["stars"]]
+        up, down = M.get(m.get("evolves_into") or ""), M.get(m.get("evolves_from") or "")
+        if all(int(m["stats_max"].get(k, 0)) > 0 for k in keys):
+            pool, _ = nearest(m, "stats_max")
+            for k in keys:
+                m["stats"][k] = round(m["stats_max"][k] / statistics.median(x["stats_max"][k] / x["stats"][k] for x in pool))
+            how = "Lv30 stats worked back through %s" % ", ".join(x["id"] for x in pool)
+        elif same:
+            for k in keys + ("def",):
+                m["stats"][k] = round(statistics.median(x["stats"][k] for x in same))
+            how = "median of its recolours %s" % ", ".join(x["id"] for x in same)
+        elif up and down and has(up, "stats") and has(down, "stats"):
+            for k in keys + ("def",):
+                m["stats"][k] = round(math.sqrt(up["stats"][k] * down["stats"][k]))
+            how = "midpoint of %s and %s" % (down["id"], up["id"])
+        elif up and has(up, "stats"):
+            r = step(m["stars"], up["stars"])
+            for k in keys + ("def",):
+                m["stats"][k] = round(up["stats"][k] / r[k])
+            how = "%s divided by the usual %d-to-%d-star evolution gain" % (up["id"], m["stars"], up["stars"])
+        else:
+            continue
+        if int(m["stats"].get("def", 0)) <= 0:
+            m["stats"]["def"] = round(statistics.median(x["stats"]["def"] for x in real if x["stars"] == m["stars"]))
+        mark(mid, "stats", how)
+
+    for mid, m in sorted(M.items()):
+        todo = [k for k in keys if int(m["stats_max"].get(k, 0)) <= 0]
+        if not has(m, "stats") or not todo or m.get("material"):
+            continue
+        pool, gap = nearest(m, "stats")
+        if gap > ESTIMATE_MAX_GAP:
+            continue
+        for k in todo:
+            m["stats_max"][k] = round(m["stats"][k] * statistics.median(x["stats_max"][k] / x["stats"][k] for x in pool))
+        if int(m["stats_max"].get("def", 0)) <= 0:
+            m["stats_max"]["def"] = m["stats"]["def"]
+        mark(mid, "stats_max", "growth of the closest %d-star profiles %s" % (m["stars"], ", ".join(x["id"] for x in pool)))
+
+
 fix_material_flags()
 for mid, m in M.items():
     if m.get("material"):
         continue
     fix_passive(mid, m)
 fix_evolutions()
+reset_estimates()
 fix_stats()
+footage_stats()
+fill_stats_from_recolours()
+estimate_missing_stats()
+footage_quotes()
+footage_skills()
 fill_missing_skills()
 for mid, m in M.items():
     for i, s in enumerate(m.get("skills", [])):

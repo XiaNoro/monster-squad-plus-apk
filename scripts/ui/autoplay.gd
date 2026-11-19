@@ -40,7 +40,7 @@ func _process(delta: float) -> void:
 		return
 	if s.tutorial != null and is_instance_valid(s.tutorial):
 		return
-	for c in s.get_children():
+	for c in s.find_children("*", "", true, false):
 		if c is Tutorial:
 			return
 	match main.current_name:
@@ -59,6 +59,9 @@ func _process(delta: float) -> void:
 				s._start_story(mini(Save.cleared_stages(s.island_id, "normal"), DB.island(s.island_id).difficulties.normal.stages.size() - 1))
 		"ready":
 			Save.data.energy = maxi(int(Save.data.energy), int(Save.data.energy_cap))
+			if Save.inventory_full():
+				Save.data.inventory_cap = int(Save.data.inventory_cap) + 20
+				print("TUT   box full - added 20 slots")
 			var e: Array = s._entries()
 			for f in e:
 				if not Friends.used_today(f):
@@ -131,6 +134,9 @@ func _battle(s: Variant) -> void:
 					return
 	if s.engine.result == "lose":
 		print("TUT   lost ", s.quest.get("title", ""), " - training the team")
+		var owned: Array = Save.data.monsters.filter(func(m): return not DB.monster(String(m.id)).get("material", false))
+		owned.sort_custom(func(a, b): return Arena.power_of([a]) > Arena.power_of([b]))
+		Save.set_team(owned.map(func(m): return int(m.uid)))
 		for m in Save.team_members():
 			m.level = mini(DB.MAX_LEVEL, int(m.level) + 3)
 		s._retreat()
