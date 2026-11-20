@@ -602,8 +602,16 @@ func _build_hud() -> void:
 		var title := UI.label(String(quest.title).split("  ·  ")[0] if quest.kind == "raid" else String(quest.title), 18, UI.GOLD)
 		title.add_theme_constant_override("outline_size", 5)
 		title.add_theme_color_override("font_outline_color", Color(0.12, 0.06, 0.0))
-		title.position = Vector2(14, 80)
 		hud.root.add_child(title)
+		_place_title.call_deferred(title)
+
+func _place_title(title: Label) -> void:
+	title.size = title.get_minimum_size()
+	var under := _wave_label.get_global_rect()
+	var text_h := _wave_label.get_minimum_size().y * _wave_label.get_global_transform().get_scale().y
+	var at := Vector2(under.get_center().x - title.size.x / 2.0, under.get_center().y + text_h / 2.0 - 4.0)
+	title.position = at - hud.root.global_position
+
 
 static var _round_shader: Shader
 static var _frame_shader: Shader
@@ -2063,7 +2071,10 @@ func _end_raid(won: bool) -> void:
 	var room := int(quest.room)
 	var gold := int(_rewards.gold) if won else 0
 	Save.data.gold = int(Save.data.gold) + gold
+	var cap_before := int(Save.data.energy_cap)
 	Save.record_raid_room(_raid_hp(), won, gold)
+	if int(Save.data.energy_cap) > cap_before:
+		UI.toast(self, "First clear! Max energy +%d" % (int(Save.data.energy_cap) - cap_before))
 	if not won:
 		Save.save_game()
 		_raid_failed(r, room)

@@ -23,6 +23,7 @@ const ELEMENTS := ["fire", "water", "nature", "normal"]
 
 static var _filter := {"elements": [], "lv30": false, "plus5": false, "search": "", "family": false}
 var _filter_badge: Label
+static var _quick := {"stars": [1, 2], "material": true, "lv1": false, "keep_one": true}
 const PICK_REMOVE := -2
 
 
@@ -651,6 +652,11 @@ func _setup_train() -> void:
 	lay.text("ID_LABEL_1_1", "Train")
 	lay.on("ID_btnSell_1", _confirm_sell)
 	lay.text("ID_maxText_1", "/ %d" % SELL_MAX)
+	var sell_box: Control = lay.node("ID_sell")
+	var quick := UI.button("Q/ Select", _open_quick_sell, "green", Vector2(140, 52), 21)
+	var pill: Control = lay.node("ID_title_1")
+	quick.position = Vector2(sell_box.size.x - quick.custom_minimum_size.x - 26, pill.position.y + (pill.size.y - quick.custom_minimum_size.y) / 2.0)
+	sell_box.add_child(quick)
 	var team: Array = Save.data.team
 	_sel = int(team[0]) if not team.is_empty() else (int(Save.data.monsters[0].uid) if not Save.data.monsters.is_empty() else -1)
 	if args.has("uid"):
@@ -732,6 +738,7 @@ func _select_frame(text: String) -> Control:
 	f.patch_margin_bottom = 12
 	f.size = Vector2(96, 96)
 	f.mouse_filter = MOUSE_FILTER_IGNORE
+	f.set_meta("pick_frame", true)
 	var l := UI.label(text, 24, Color("fff6a0"))
 	l.size = Vector2(96, 96)
 	l.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
@@ -755,7 +762,20 @@ func _toggle_sell(uid: int) -> void:
 		_sell_pick.erase(uid)
 	elif _sell_pick.size() < SELL_MAX:
 		_sell_pick[uid] = true
-	_refresh()
+	_sell_changed([uid])
+
+
+func _sell_changed(uids: Array) -> void:
+	for u in uids:
+		var card: Control = _cards.get(int(u))
+		if card == null:
+			continue
+		for c in card.get_children():
+			if c.has_meta("pick_frame"):
+				c.queue_free()
+		if _sell_pick.has(int(u)):
+			card.add_child(_select_frame("Sell"))
+	_refresh_sell()
 
 
 func _refresh_sell() -> void:
@@ -765,7 +785,15 @@ func _refresh_sell() -> void:
 	for u in _sell_pick:
 		var m := Save.get_owned(int(u))
 		total += Save.sell_price(m)
-		icons.add_child(UI.monster_card(m.id, int(m.level), int(m.boost), Vector2(76, 76)))
+		var card := UI.monster_card(m.id, int(m.level), int(m.boost), Vector2(76, 76))
+		card.mouse_filter = MOUSE_FILTER_STOP
+		card.mouse_default_cursor_shape = CURSOR_POINTING_HAND
+		card.gui_input.connect(func(e: InputEvent) -> void:
+			if UI.tapped(e):
+				Sfx.play("click")
+				_sell_pick.erase(u)
+				_sell_changed.call_deferred([u]))
+		icons.add_child(card)
 	lay.text("ID_numberText", "%02d" % _sell_pick.size())
 	lay.text("ID_numberText_1", Screen._thousands(total))
 	lay.show("ID_PushText", _sell_pick.is_empty())
@@ -774,6 +802,103 @@ func _refresh_sell() -> void:
 	for c in holder.get_children():
 		c.queue_free()
 	holder.add_child(icons)
+
+
+func _quick_matches() -> Array:
+	var best := {}
+	for m in Save.data.monsters:
+		var b: Dictionary = best.get(m.id, {})
+		if b.is_empty() or int(m.level) > int(b.level) or (int(m.level) == int(b.level) and int(m.boost) > int(b.boost)):
+			best[m.id] = m
+	var league: Array = Save.data.get("league", {}).get("team", [])
+	var out := []
+	for m in Save.data.monsters:
+		var def := DB.monster(m.id)
+		var uid := int(m.uid)
+		var kind: bool = int(def.stars) in _quick.stars or (bool(_quick.material) and bool(def.get("material", false)))
+		if not kind or _sell_pick.has(uid):
+			continue
+		if m.locked or Save.in_team(uid) or league.has(uid):
+			continue
+		if int(m.level) >= DB.MAX_LEVEL or int(m.boost) >= DB.MAX_BOOST:
+			continue
+		if not Save.equipped_stones(m).is_empty() or not Save.pet_of(m).is_empty():
+			continue
+		if bool(_quick.lv1) and int(m.level) > 1:
+			continue
+		if bool(_quick.keep_one) and int(best[m.id].uid) == uid and not bool(def.get("material", false)):
+			continue
+		out.append(m)
+	out.sort_custom(func(a, b): return Save.sell_price(a) < Save.sell_price(b))
+	return out
+
+
+func _open_quick_sell() -> void:
+	Sfx.play("popup_open")
+	var body := VBoxContainer.new()
+	body.add_theme_constant_override("separation", 10)
+	var info := UI.label("", 19, UI.BROWN)
+	info.add_theme_constant_override("outline_size", 0)
+	var update := func() -> void:
+		var found := _quick_matches()
+		var gold := 0
+		for m in found.slice(0, SELL_MAX - _sell_pick.size()):
+			gold += Save.sell_price(m)
+		info.text = "Matches: %d     Gold: %s" % [found.size(), Screen._thousands(gold)]
+	body.add_child(_filter_heading("Stars"))
+	var row := HBoxContainer.new()
+	row.add_theme_constant_override("separation", 8)
+	body.add_child(row)
+	for n in [1, 2, 3, 4]:
+		var b := _filter_toggle("%d★" % n, n in _quick.stars)
+		b.pressed.connect(func() -> void:
+			var list: Array = _quick.stars
+			if n in list:
+				list.erase(n)
+			else:
+				list.append(n)
+			_style_toggle(b, n in list)
+			update.call())
+		row.add_child(b)
+	body.add_child(_filter_heading("Options"))
+	var row2 := HBoxContainer.new()
+	row2.add_theme_constant_override("separation", 8)
+	body.add_child(row2)
+	for key in ["material", "lv1", "keep_one"]:
+		var b := _filter_toggle({"material": "Materials", "lv1": "Lv.1 only", "keep_one": "Keep 1 each"}[key], bool(_quick[key]))
+		b.custom_minimum_size.x = 140
+		b.pressed.connect(func() -> void:
+			_quick[key] = not bool(_quick[key])
+			_style_toggle(b, bool(_quick[key]))
+			update.call())
+		row2.add_child(b)
+	var note := UI.label("Never picks locked, team, Lv.%d or +%d monsters,\nor ones with a Magic Stone or pet." % [DB.MAX_LEVEL, DB.MAX_BOOST], 15, Color(0.29, 0.16, 0.04, 0.75))
+	note.add_theme_constant_override("outline_size", 0)
+	body.add_child(note)
+	body.add_child(info)
+	update.call()
+	UI.dialog(self, "Quick Select", body, [{"text": "Clear", "color": "blue", "cb": _clear_sell}, {"text": "Select", "color": "green", "cb": _quick_select}])
+
+
+func _quick_select() -> void:
+	var found := _quick_matches()
+	var room := SELL_MAX - _sell_pick.size()
+	if found.is_empty() or room <= 0:
+		UI.toast(self, "No monsters match" if found.is_empty() else "Already %d selected" % SELL_MAX)
+		return
+	var added := []
+	for m in found.slice(0, room):
+		_sell_pick[int(m.uid)] = true
+		added.append(int(m.uid))
+	var left := found.size() - mini(room, found.size())
+	UI.toast(self, "%d selected" % _sell_pick.size() + (", %d more match" % left if left > 0 else ""))
+	_sell_changed(added)
+
+
+func _clear_sell() -> void:
+	var was := _sell_pick.keys()
+	_sell_pick.clear()
+	_sell_changed(was)
 
 
 func _confirm_sell() -> void:

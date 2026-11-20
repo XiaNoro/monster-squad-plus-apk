@@ -189,6 +189,8 @@ static func fill(lay: Layout, uid: int, screen: Control, given: Dictionary = {})
 		var who := "All" if String(pp.get("element", "all")) in ["all", ""] else String(pp.element).capitalize()
 		pet_line = "- [Pet] Increases %s Monsters' %s by %d%%" % [who, {"hp": "HP", "atk": "ATK", "def": "DEF", "crit": "Crit"}.get(pp.stat, pp.stat), roundi(float(pp.pct) * 100.0)]
 	lay.text("ID_TextEff1_1", pet_line)
+	for id in ["ID_TextEff1", "ID_TextEff1_1"]:
+		_fit_line(lay.node(id) as Label)
 
 	lay.hide_all(["ID_popup_fusion_lock", "ID_fusion_lock"])
 	lay.text("ID_LABEL_6", "Evolve" if String(def.evolves_into) != "" else "Fusion")
@@ -314,3 +316,15 @@ static func _skill(lay: Layout, screen: Control, holder_id: String, icon_file: S
 	holder.add_child(r)
 
 
+
+
+static func _fit_line(l: Label) -> void:
+	var box := l.get_parent() as Control
+	if box == null:
+		return
+	if not l.has_meta("base_fs"):
+		l.set_meta("base_fs", l.get_theme_font_size("font_size"))
+	l.autowrap_mode = TextServer.AUTOWRAP_OFF
+	var w := box.size.x - l.position.x - 12.0
+	UI.fit_text(l, int(l.get_meta("base_fs")), 14, w)
+	l.size.x = w

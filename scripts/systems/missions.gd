@@ -7,10 +7,10 @@ const DAILY := [
 	{"id": "d_boost", "text": "Boost any Monsters!", "event": "boost", "goal": 5, "reward": {"gold": 5000}},
 	{"id": "d_store", "text": "Open a Cube at Store", "event": "store_cube", "goal": 1, "reward": {"energy": 20}},
 	{"id": "d_tower", "text": "Claim the Sky Tower.", "event": "tower", "goal": 3, "reward": {"cube": "blue"}},
-	{"id": "d_fp", "text": "Send Friend Points.", "event": "send_fp", "goal": 1, "reward": {"gems": 1}},
+	{"id": "d_fp", "text": "Send Friend Points.", "event": "send_fp", "goal": 1, "reward": {"gems": 5}},
 	{"id": "d_lv30", "text": "Achieve Monster Lv.30.", "event": "reach30", "goal": 1, "reward": {"gold": 10000}},
 ]
-const DAILY_ALL := {"gems": 1, "cube": "blue"}
+const DAILY_ALL := {"gems": 25, "cube": "blue"}
 const WEEKLY := [
 	{"id": "w_elemental", "text": "Explore Elemental Island (Special Island)", "event": "special:elemental_island", "goal": 10, "reward": {"cube": "red"}},
 	{"id": "w_evolve", "text": "Evolve the monster!", "event": "evolve", "goal": 2, "reward": {"gold": 50000}},

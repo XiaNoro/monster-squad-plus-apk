@@ -7,6 +7,7 @@ const RARITY := {1: "common", 2: "uncommon", 3: "rare", 4: "superrare", 5: "epic
 const QUEUE_ICONS := {"blue": "betaHud00/H_cube_00.png", "yellow": "betaHud00/H_cube_01.png", "red": "betaHud00/H_cube_02.png", "honor": "betaHud00/H_cube_01.png", "honor5": "betaHud00/H_cube_01.png", "pet": "betaHud00/H_petcube_01.png", "pet_rare": "betaHud00/H_petcube_02.png"}
 const MBLUR := {"blue": "cube_mblur_00", "yellow": "cube_mblur_01", "red": "cube05_mblur_01", "honor": "cube07_mblur_01", "honor5": "cube07_mblur_01", "black": "cube08_mblur_01", "pet": "petcube_mblur_01", "pet_rare": "petcube_mblur_02"}
 const BUBBLES := 4
+const PAGE := 10
 const CUBE_W := 340.0
 const STEP := 0.0228
 const CATCH_GAP := 420.0
@@ -835,15 +836,17 @@ func _glint(parent: Control, at: Vector2) -> void:
 	tw.tween_callback(g.queue_free)
 
 
-func _summary() -> void:
+func _summary(start := 0) -> void:
 	var holder := Control.new()
 	holder.set_anchors_and_offsets_preset(PRESET_FULL_RECT)
 	holder.mouse_filter = MOUSE_FILTER_IGNORE
 	add_child(holder)
 	var vw := get_viewport_rect().size
-	var n := items.size()
-	var cols := n if n <= 5 else ceili(n / 2.0)
-	var rows := ceili(float(n) / cols)
+	var page := items.slice(start, start + PAGE)
+	var n := page.size()
+	var paged := items.size() > PAGE
+	var cols := 5 if paged else (n if n <= 5 else ceili(n / 2.0))
+	var rows := 2 if paged else ceili(float(n) / cols)
 	var slot := minf(240.0, (vw.x - 40.0) / cols)
 	var feet_y: Array = [vw.y * 0.6] if rows == 1 else [vw.y * 0.39, vw.y * 0.76]
 	var box := Vector2(slot * 0.82, vw.y * (0.2 if rows > 1 else 0.3))
@@ -854,7 +857,7 @@ func _summary() -> void:
 		var k := i % cols
 		var in_row := mini(cols, n - r * cols)
 		var feet := Vector2(vw.x / 2.0 - in_row * slot / 2.0 + slot / 2.0 + k * slot, feet_y[r])
-		var it: Dictionary = items[i]
+		var it: Dictionary = page[i]
 		var info := _info(it)
 		var light := Control.new()
 		light.set_anchors_and_offsets_preset(PRESET_FULL_RECT)
@@ -872,7 +875,29 @@ func _summary() -> void:
 		await _badges(holder, it, int(info.stars), Vector2(feet.x + (starsz * 0.5 if it.new else 0.0), feet.y - box.y - starsz * 2.3), starsz, slot * 0.92, true)
 		await _wait(0.08)
 	await _wait(0.5)
-	_buttons(holder, vw.y - 84.0)
+	if paged:
+		var pages := ceili(float(items.size()) / PAGE)
+		var num := UI.label("%d / %d" % [start / PAGE + 1, pages], 24, Color.WHITE)
+		num.position = Vector2(vw.x - 120.0, vw.y - 60.0)
+		holder.add_child(num)
+	if start + PAGE < items.size():
+		_next_page(holder, start + PAGE, vw.y - 84.0)
+	else:
+		_buttons(holder, vw.y - 84.0)
+
+
+func _next_page(holder: Control, next: int, y: float) -> void:
+	var row := HBoxContainer.new()
+	row.alignment = BoxContainer.ALIGNMENT_CENTER
+	row.size = Vector2(get_viewport_rect().size.x, 80)
+	row.position = Vector2(0, y)
+	holder.add_child(row)
+	row.add_child(UI.button("Next", func() -> void:
+		done = false
+		_skip = false
+		holder.queue_free()
+		_summary(next), "orange", Vector2(220, 76), 26))
+	done = true
 
 
 func _buttons(parent: Control, y: float) -> void:

@@ -9,6 +9,9 @@ const EXPORT_KEY := "o1Nn9WWrvc0SlA4_XdrTwz71TG4BRh6xmZx_iySZG7U"
 const ENERGY_REGEN_SECONDS := 180
 const ENERGY_REFILL_GEMS := 5
 const START_ENERGY_CAP := 40
+const ENERGY_CAP_PER_CLEAR := 2
+const TOWER_FLOORS_PER_CAP := 5
+const RAID_FIRST_CLEAR_CAP := 10
 const TEAM_SIZE := 4
 const START_INVENTORY := 60
 
@@ -42,6 +45,7 @@ func load_game() -> void:
 				Tutorial.skip_all()
 			if not data.monsters.is_empty():
 				Friends.ensure_defaults()
+			data.energy_cap = maxi(int(data.energy_cap), earned_energy_cap())
 			_tick_energy()
 			return
 	reset()
@@ -674,6 +678,18 @@ func cleared_stages(island_id: String, difficulty: String) -> int:
 	return int(data.progress.get(island_id, {}).get(difficulty, 0))
 
 
+func earned_energy_cap() -> int:
+	var cap := START_ENERGY_CAP + int(data.tower_floor) / TOWER_FLOORS_PER_CAP
+	for id in data.raid_cleared:
+		if int(data.raid_cleared[id]) > 0:
+			cap += RAID_FIRST_CLEAR_CAP
+	for island in DB.islands:
+		for d in island.difficulties:
+			if cleared_stages(island.id, d) >= island.difficulties[d].stages.size():
+				cap += ENERGY_CAP_PER_CLEAR
+	return cap
+
+
 func is_island_unlocked(island_id: String, difficulty: String) -> bool:
 	var idx := -1
 	for i in DB.islands.size():
@@ -700,8 +716,8 @@ func mark_stage_cleared(island_id: String, difficulty: String, stage_index: int)
 		data.progress[island_id][difficulty] = stage_index + 1
 		var island := DB.island(island_id)
 		var total: int = island.difficulties[difficulty].stages.size()
-		if stage_index + 1 == total and difficulty != "normal":
-			data.energy_cap = int(data.energy_cap) + 1
+		if stage_index + 1 == total:
+			data.energy_cap = int(data.energy_cap) + ENERGY_CAP_PER_CLEAR
 		return true
 	return false
 
@@ -772,6 +788,7 @@ func spend_ticket() -> bool:
 func mark_floor_cleared(floor: int) -> bool:
 	if floor <= int(data.tower_floor):
 		return false
+	data.energy_cap = int(data.energy_cap) + floor / TOWER_FLOORS_PER_CAP - int(data.tower_floor) / TOWER_FLOORS_PER_CAP
 	data.tower_floor = floor
 	data.tower_tickets = int(data.tower_tickets) + 1
 	return true
@@ -1018,6 +1035,8 @@ func record_raid_room(hp_by_uid: Dictionary, won: bool, gold: int) -> void:
 		r.room = int(r.room) + 1
 		if int(r.room) >= Raids.ROOMS:
 			r.done = true
+			if int(data.raid_cleared.get(r.id, 0)) == 0:
+				data.energy_cap = int(data.energy_cap) + RAID_FIRST_CLEAR_CAP
 			data.raid_cleared[r.id] = int(data.raid_cleared.get(r.id, 0)) + 1
 	if raid_alive().is_empty():
 		r.done = true

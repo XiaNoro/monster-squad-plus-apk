@@ -220,5 +220,50 @@ func _ready() -> void:
 	check(Save.expand_stone_box() and int(Save.data.stone_cap) == 36 and int(Save.data.gems) == 70, "Expand Stone Slots costs 60 gems for 12 slots")
 	check(Save.expand_stone_box() and int(Save.data.stone_cap) == 48 and not Save.expand_stone_box() and int(Save.data.stone_cap) == 48, "expanding needs 60 gems")
 
+	Save.data.progress = {}
+	Save.data.energy_cap = Save.START_ENERGY_CAP
+	var cap_island: Dictionary = DB.islands[0]
+	var hard_n: int = cap_island.difficulties.hard.stages.size()
+	for i in hard_n - 1:
+		Save.mark_stage_cleared(cap_island.id, "hard", i)
+	check(int(Save.data.energy_cap) == 40, "a half-cleared Hard island gives no energy cap")
+	Save.mark_stage_cleared(cap_island.id, "hard", hard_n - 1)
+	check(int(Save.data.energy_cap) == 42 and Save.earned_energy_cap() == 42, "clearing a Hard island adds 2 energy cap")
+	Save.mark_stage_cleared(cap_island.id, "hard", hard_n - 1)
+	check(int(Save.data.energy_cap) == 42, "re-clearing the last stage adds nothing")
+	var norm_n: int = cap_island.difficulties.normal.stages.size()
+	for i in norm_n:
+		Save.mark_stage_cleared(cap_island.id, "normal", i)
+	check(int(Save.data.energy_cap) == 44 and Save.earned_energy_cap() == 44, "clearing a Normal island adds 2 energy cap")
+	var all_clears := 0
+	for isl in DB.islands:
+		all_clears += isl.difficulties.size()
+	check(Save.START_ENERGY_CAP + 2 * all_clears == 88, "every island cleared on every difficulty gives 88 energy cap")
+
+	Save.data.progress = {}
+	Save.data.tower_floor = 0
+	Save.data.energy_cap = Save.START_ENERGY_CAP
+	for fl in range(1, 5):
+		Save.mark_floor_cleared(fl)
+	check(int(Save.data.energy_cap) == 40, "Sky Tower floors 1-4 give no energy cap")
+	Save.mark_floor_cleared(5)
+	check(int(Save.data.energy_cap) == 41, "Sky Tower floor 5 adds 1 energy cap")
+	Save.mark_floor_cleared(5)
+	check(int(Save.data.energy_cap) == 41, "re-clearing floor 5 adds nothing")
+	for fl in range(6, SkyTower.FLOORS + 1):
+		Save.mark_floor_cleared(fl)
+	check(int(Save.data.energy_cap) == 50 and Save.earned_energy_cap() == 50, "all 50 Sky Tower floors give +10 energy cap")
+
+	Save.data.tower_floor = 0
+	Save.data.raid_cleared = {}
+	Save.data.energy_cap = Save.START_ENERGY_CAP
+	var raid_id: String = Raids.all()[0].id
+	for run in 2:
+		Save.data.raid = {"date": Save._today(), "id": raid_id, "picked": [], "hp": {}, "room": Raids.ROOMS - 1, "done": false, "gold": 0, "party": []}
+		Save.record_raid_room({}, true, 0)
+		check(int(Save.data.energy_cap) == 50 and int(Save.data.raid_cleared[raid_id]) == run + 1, "raid clear %d leaves energy cap at 50" % (run + 1))
+	check(Save.earned_energy_cap() == 50, "a raid's first clear counts once")
+	Save.data.raid = {}
+
 	print("\n%s (%d failures)" % ["ALL PASSED" if failures == 0 else "FAILED", failures])
 	get_tree().quit(1 if failures > 0 else 0)
