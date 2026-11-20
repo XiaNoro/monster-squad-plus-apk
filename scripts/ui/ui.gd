@@ -8,6 +8,9 @@ const GOLD := Color("ffdc55")
 const CREAM := Color("fff4d6")
 const BROWN := Color("4a2a0a")
 
+const TIP_WIDTH := 460.0
+const TIP_COLUMNS := 48
+const TIP_SECONDS := 5.0
 const TAP_SLOP := 18.0
 const HOLD_TIME := 0.45
 const IDLE_PAD := Vector2(0.1, 0.08)
@@ -40,6 +43,7 @@ static var _down := Vector2.INF
 static var _hold_id := 0
 static var _hold_at := Vector2.INF
 static var _held := false
+static var _tip: Control
 
 
 static func pressed(e: InputEvent) -> bool:
@@ -89,13 +93,89 @@ static func was_held() -> bool:
 
 
 static func tip(c: Control, text: String) -> void:
-	c.tooltip_text = text
+	c.tooltip_text = wrap_tip(text)
 	if c.mouse_filter == Control.MOUSE_FILTER_IGNORE:
 		c.mouse_filter = Control.MOUSE_FILTER_PASS
 	c.gui_input.connect(func(e: InputEvent):
-		if tapped(e) and c.is_inside_tree():
-			var top := c.get_tree().current_scene as Control
-			toast(top if top else c, text))
+		if tapped(e):
+			show_tip(c, text))
+
+
+static func wrap_tip(text: String) -> String:
+	var out := []
+	for para in text.split("\n"):
+		var line := ""
+		for word in para.split(" ", false):
+			if line != "" and line.length() + 1 + word.length() > TIP_COLUMNS:
+				out.append(line)
+				line = word
+			else:
+				line = word if line == "" else line + " " + word
+		out.append(line)
+	return "\n".join(out)
+
+
+static func _wrap_px(text: String, font: Font, fs: int, width: float) -> String:
+	var out := []
+	for para in text.split("\n"):
+		var line := ""
+		for word in para.split(" ", false):
+			var next := word if line == "" else line + " " + word
+			if line != "" and font.get_string_size(next, HORIZONTAL_ALIGNMENT_LEFT, -1, fs).x > width:
+				out.append(line)
+				line = word
+			else:
+				line = next
+		out.append(line)
+	return "\n".join(out)
+
+
+static func close_tip() -> void:
+	if is_instance_valid(_tip):
+		_tip.queue_free()
+	_tip = null
+
+
+static func show_tip(anchor: Control, text: String) -> void:
+	close_tip()
+	if not anchor.is_inside_tree():
+		return
+	var root := anchor.get_tree().current_scene as Control
+	if root == null:
+		return
+	var view := root.get_viewport_rect().size
+	var catcher := Control.new()
+	catcher.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	catcher.mouse_filter = Control.MOUSE_FILTER_STOP
+	catcher.z_index = 120
+	catcher.gui_input.connect(func(e: InputEvent):
+		if pressed(e):
+			close_tip())
+	var panel := PanelContainer.new()
+	panel.theme_type_variation = "TooltipPanel"
+	panel.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	var l := Label.new()
+	l.theme_type_variation = "TooltipLabel"
+	panel.add_child(l)
+	catcher.add_child(panel)
+	root.add_child(catcher)
+	_tip = catcher
+	l.text = _wrap_px(text, l.get_theme_font("font"), l.get_theme_font_size("font_size"), minf(TIP_WIDTH, view.x - 40.0))
+	var size := panel.get_combined_minimum_size()
+	panel.size = size
+	var r := anchor.get_global_rect()
+	var pos := Vector2(r.position.x, r.end.y + 8.0)
+	if pos.y + size.y > view.y - 8.0:
+		pos.y = r.position.y - size.y - 8.0
+	pos.x = clampf(pos.x, 8.0, maxf(8.0, view.x - size.x - 8.0))
+	pos.y = clampf(pos.y, 8.0, maxf(8.0, view.y - size.y - 8.0))
+	panel.position = pos
+	var tw := catcher.create_tween()
+	tw.tween_interval(TIP_SECONDS)
+	tw.tween_property(panel, "modulate:a", 0.0, 0.3)
+	tw.tween_callback(func():
+		if _tip == catcher:
+			close_tip())
 
 
 static func tex(path: String) -> Texture2D:

@@ -563,8 +563,8 @@ func _build_hud() -> void:
 		mp.position = Vector2(8, 58)
 		b.add_child(mp)
 		var desc := "%s: %s" % [s.name, s.description]
-		b.tooltip_text = desc
-		b.gui_input.connect(func(e: InputEvent): UI.hold(e, func(): UI.toast(self, desc)))
+		b.tooltip_text = UI.wrap_tip(desc)
+		b.gui_input.connect(func(e: InputEvent): UI.hold(e, func(): UI.show_tip(b, desc)))
 		b.pressed.connect(func():
 			if UI.was_held():
 				return

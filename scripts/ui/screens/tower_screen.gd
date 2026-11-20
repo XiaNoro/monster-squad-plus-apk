@@ -193,8 +193,7 @@ func _skill_icon(holder: String, icon_file: String, text: String) -> void:
 	var r := UI.image(t, Vector2(40, 40))
 	r.size = Vector2(40, 40)
 	r.mouse_filter = MOUSE_FILTER_STOP
-	r.tooltip_text = text
-	r.gui_input.connect(func(e): if UI.tapped(e): UI.toast(self, text))
+	UI.tip(r, text)
 	lay.put(holder, r)
 
 
@@ -212,8 +211,7 @@ func _refresh_info() -> void:
 		var icon := StonesScreen.stone_icon(st, 92)
 		icon.mouse_filter = MOUSE_FILTER_STOP
 		var text := "%s\n%s" % [MagicStones.label(st), MagicStones.describe(st)]
-		icon.tooltip_text = text
-		icon.gui_input.connect(func(e): if UI.tapped(e): UI.toast(self, text.replace("\n", "  ·  ")))
+		UI.tip(icon, text)
 		holder.add_child(icon)
 	var boss: Control = lay.node("ID_bossIcon")
 	for c in boss.get_children():

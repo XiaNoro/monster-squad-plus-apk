@@ -217,14 +217,8 @@ func _book_skill(d: Layout, holder: String, icon_file: String, text: String) -> 
 	var r := UI.image(t, Vector2(74, 74))
 	r.size = Vector2(74, 74)
 	r.mouse_filter = MOUSE_FILTER_STOP
-	r.tooltip_text = text
-	r.gui_input.connect(_skill_tap.bind(text))
 	d.put(holder, r)
-
-
-func _skill_tap(e: InputEvent, text: String) -> void:
-	if UI.pressed(e):
-		UI.toast(self, text)
+	UI.tip(r, text)
 
 
 func _close_detail(e: InputEvent, dim: Control) -> void:
