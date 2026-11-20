@@ -35,8 +35,9 @@ const TABS := {"hot": "ID_btnRecomT", "cube": "ID_btnCubeT_1", "energy": "ID_btn
 const CARD_PRICE := {"gems": ["ID_crystal", "ID_priceText1"], "gold": ["ID_gold", "ID_priceText2"], "fp": ["ID_friendPoint", "ID_priceText3"], "cash": ["ID_cash_d", "ID_priceText5"], "honor": ["ID_honor", "ID_priceText6"]}
 const DIALOG_PRICE := {"gems": ["ID_priceCrystal", "ID_priceCrystalText"], "gold": ["ID_priceGold", "ID_priceGoldText"], "fp": ["ID_pricePoint", "ID_pricePointText"], "cash": ["ID_priceCash_D", "ID_priceCash_DText"], "honor": ["ID_priceHonor", "ID_priceHonorText"]}
 const GOLD_PACKS := [[10000, 10], [20000, 20], [50000, 50], [90000, 90]]
-const GEM_PACKS := [["Gem Bucket(S)", 20, 3], ["Gem Bucket(M)", 50, 10], ["Gem Bucket(L)", 100, 20], ["Gem Chest(S)", 200, 50], ["Gem Chest(M)", 500, 125], ["Gem Chest(L)", 1000, 300]]
+const GEM_PACKS := [["Gem Bucket(M)", 50, 10], ["Gem Bucket(L)", 100, 20], ["Gem Chest(S)", 200, 50], ["Gem Chest(M)", 500, 125], ["Gem Chest(L)", 1000, 300]]
 const ENERGY_PACKS := [[40, 10], [80, 20], [120, 30]]
+const GOLD_GEMS := [20, 3, 80000]
 
 var lay: Layout
 var _tab := "hot"
@@ -139,6 +140,9 @@ func _items(t: String) -> Array:
 				out.append({"id": "energy_%d" % int(p[0]), "name": "%d Energy" % int(p[0]), "icon": UI.tex("betaUI00/I_energy_02.png"), "count": "+%d" % int(p[0]),
 					"desc": "Adds %d energy. Energy can go over the maximum." % int(p[0]), "currency": "gems", "price": int(p[1]), "buy": _add_energy.bind(int(p[0]))})
 		"gem":
+			out.append({"id": "gold_gems", "name": "Gem Bucket(S)", "icon": UI.tex("betaUI00/I_crystal_03.png"), "count": "%d+%d" % [GOLD_GEMS[0], GOLD_GEMS[1]], "daily": true,
+				"desc": "%d gems + %d bonus gems for gold.\nOnce a day." % [GOLD_GEMS[0], GOLD_GEMS[1]], "currency": "gold", "price": GOLD_GEMS[2],
+				"check": _gold_gems_room, "buy": _buy_gold_gems})
 			for p in GEM_PACKS:
 				out.append({"id": "gems_%d" % int(p[1]), "name": String(p[0]), "icon": UI.tex("betaUI00/I_crystal_03.png"), "count": "%d+%d" % [int(p[1]), int(p[2])],
 					"desc": "%d gems + %d bonus gems." % [int(p[1]), int(p[2])], "currency": "cash", "price": 0, "price_text": "Off", "buy": _no_cash})
@@ -211,6 +215,8 @@ func _card(it: Dictionary) -> Control:
 		timer = "Active: %s left" % _duration(Save.item_boost_left(String(it.timer)))
 	elif it.get("weekly", false):
 		timer = "Closes in %d day(s)" % _days_to_week_end()
+	elif it.get("daily", false):
+		timer = "Bought today" if _gold_gems_room() != "" else "Once a day"
 	if timer != "":
 		s.show("ID_eventTime")
 		s.text("ID_timeText", timer)
@@ -381,6 +387,18 @@ func _add_energy(n: int) -> void:
 	Save.save_game()
 	Sfx.play("buff_big")
 	UI.notice(self, "Notice", "%d energy added." % n)
+
+
+func _gold_gems_room() -> String:
+	return "You can buy this once a day. Come back tomorrow." if String(Save.data.get("gold_gems_day", "")) == Save._today() else ""
+
+
+func _buy_gold_gems() -> void:
+	Save.data.gold_gems_day = Save._today()
+	Save.data.gems = int(Save.data.gems) + GOLD_GEMS[0] + GOLD_GEMS[1]
+	Save.save_game()
+	Sfx.play("buff_big")
+	UI.notice(self, "Notice", "%d gems added." % (GOLD_GEMS[0] + GOLD_GEMS[1]))
 
 
 func _add_gold(n: int) -> void:
