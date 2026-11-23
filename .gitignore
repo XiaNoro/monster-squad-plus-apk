@@ -8,3 +8,4 @@
 *.jks
 export_credentials.cfg
 __pycache__/
+tests/skill_tip_probe.gd.uid

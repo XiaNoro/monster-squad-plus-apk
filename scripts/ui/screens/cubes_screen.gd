@@ -26,6 +26,7 @@ const MYSTERY_SIZE := 50
 const MYSTERY_MIX := {5: 5, 4: 15, 3: 25}
 const MYSTERY_RESET_GOLD := 100
 const MYSTERY_FREE_RESET := 30
+const MYSTERY_RESET_CAP := 30000
 const MB_BREATHE := 0.015
 const MB_SWAY := 0.01
 const MB_GLINTS := [Vector2(0.07, 0.2), Vector2(0.9, 0.16), Vector2(0.31, 0.13), Vector2(0.63, 0.46), Vector2(0.96, 0.72)]
@@ -628,7 +629,7 @@ func _reset_cost() -> int:
 	var st := _box_state()
 	if Array(st.opened).size() >= MYSTERY_FREE_RESET:
 		return 0
-	return MYSTERY_RESET_GOLD * int(pow(2, int(st.get("resets", 0))))
+	return min(MYSTERY_RESET_GOLD * int(pow(2, int(st.get("resets", 0)))), MYSTERY_RESET_CAP) # added a hard cap on how high the gold cost goes
 
 
 static func _on_stair(b: Control, id: String, grow := Vector2(1.0, 0.72)) -> void:
